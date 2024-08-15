@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<semantic:EClassProxy
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:semantic="semantic"
+    xsi:schemaLocation="semantic semantic.ecore"
+    name="MoistureSensor">
+  <idFeatures
+      xsi:type="ecore:EAttribute"
+      href="example.ecore#//SensorA/idA"/>
+  <idFeatures
+      xsi:type="ecore:EAttribute"
+      href="example.ecore#//SensorB/sensorId"/>
+  <attributes
+      name="admin">
+    <proxyRef
+        href="AdminService.xmi#/"/>
+  </attributes>
+  <attributes
+      name="tree">
+    <proxyRef
+        href="TreeService.xmi#/"/>
+  </attributes>
+  <attributes
+      name="data">
+    <proxyRef
+        href="DataProxy.xmi#/"/>
+  </attributes>
+</semantic:EClassProxy>

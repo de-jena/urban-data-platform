@@ -7,6 +7,8 @@ pluginManagement {
     mavenCentral()
     gradlePluginPortal()
   }
-  rootProject.name="de.jena.udp"
+  rootProject.name="de.jena.broker"
 }
-
+plugins {
+  id 'biz.aQute.bnd.workspace'
+}

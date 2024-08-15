@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<semantic:EClassProxy xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:semantic="semantic" xsi:schemaLocation="semantic semantic.ecore" name="data">
+  <sourceObject xsi:type="semantic:EFeatureProxy" name="value">
+    <sourceObject xsi:type="semantic:MetadataProxy" key="unit" namespace="sensinact">
+      <semantic xsi:type="semantic:DefaultValue" defaultValue="%"/>
+      <valueFeatures xsi:type="ecore:EAttribute" href="example.ecore#//SensorA/unit"/>
+    </sourceObject>
+    <srcFeatures xsi:type="ecore:EAttribute" href="example.ecore#//SensorB/valueB"/>
+    <srcFeatures xsi:type="ecore:EAttribute" href="example.ecore#//SensorA/valueA"/>
+  </sourceObject>
+</semantic:EClassProxy>
