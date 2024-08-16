@@ -1,0 +1,29 @@
+name: license fix
+
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main , snapshot ]
+  pull_request:
+    branches: [ main , snapshot ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Fix License Header
+        uses: apache/skywalking-eyes/header@main
+        with:
+          mode: fix
+      - name: Apply Changes
+        uses: EndBug/add-and-commit@v9
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          author_name: License Bot
+          author_email: license_bot@github.com
+          message: 'Automatic application of license header'
