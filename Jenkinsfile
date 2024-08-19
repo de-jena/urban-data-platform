@@ -80,7 +80,7 @@ pipeline  {
 			steps  {
 				echo "I am preparing docker: ${env.GIT_BRANCH}"
 				
-				dir("backend") {
+				dir("docker") {
 					sh "./gradlew prepareDocker --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2"
 				}
 			}
