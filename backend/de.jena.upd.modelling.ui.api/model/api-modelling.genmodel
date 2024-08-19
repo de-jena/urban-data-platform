@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/de.jena.upd.modelling.ui.api/src" modelPluginID="de.jena.upd.modelling.ui.api"
+    modelName="api-modelling" rootExtendsInterface="" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" suppressGenModelAnnotations="false"
+    copyrightFields="false" publicConstructors="true" operationReflection="true" importOrganizing="true"
+    oSGiCompatible="true">
+  <foreignModel>api-modelling.ecore</foreignModel>
+  <genPackages prefix="ModellingApi" basePackage="de.jena.upd.modelling.ui.api" resource="XMI"
+      disposableProviderFactory="true" ecorePackage="api-modelling.ecore#/">
+    <genDataTypes ecoreDataType="api-modelling.ecore#//EWebApplicationException"/>
+    <genDataTypes ecoreDataType="api-modelling.ecore#//EResponse"/>
+    <genClasses image="false" ecoreClass="api-modelling.ecore#//EPackageResource">
+      <genOperations ecoreOperation="api-modelling.ecore#//EPackageResource/load">
+        <genParameters ecoreParameter="api-modelling.ecore#//EPackageResource/load/ePackageUri"/>
+      </genOperations>
+      <genOperations ecoreOperation="api-modelling.ecore#//EPackageResource/loadAll"/>
+      <genOperations ecoreOperation="api-modelling.ecore#//EPackageResource/save">
+        <genParameters ecoreParameter="api-modelling.ecore#//EPackageResource/save/ePackage"/>
+      </genOperations>
+      <genOperations ecoreOperation="api-modelling.ecore#//EPackageResource/delete">
+        <genParameters ecoreParameter="api-modelling.ecore#//EPackageResource/delete/ePackageUri"/>
+      </genOperations>
+      <genOperations ecoreOperation="api-modelling.ecore#//EPackageResource/exists">
+        <genParameters ecoreParameter="api-modelling.ecore#//EPackageResource/exists/ePackageUri"/>
+      </genOperations>
+      <genOperations ecoreOperation="api-modelling.ecore#//EPackageResource/saveAll">
+        <genParameters ecoreParameter="api-modelling.ecore#//EPackageResource/saveAll/ePackage"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="api-modelling.ecore#//EObjectResource">
+      <genOperations ecoreOperation="api-modelling.ecore#//EObjectResource/load">
+        <genParameters ecoreParameter="api-modelling.ecore#//EObjectResource/load/eClassUri"/>
+        <genParameters ecoreParameter="api-modelling.ecore#//EObjectResource/load/id"/>
+      </genOperations>
+      <genOperations ecoreOperation="api-modelling.ecore#//EObjectResource/loadAll">
+        <genParameters ecoreParameter="api-modelling.ecore#//EObjectResource/loadAll/eClassUri"/>
+        <genParameters ecoreParameter="api-modelling.ecore#//EObjectResource/loadAll/projection"/>
+      </genOperations>
+      <genOperations ecoreOperation="api-modelling.ecore#//EObjectResource/save">
+        <genParameters ecoreParameter="api-modelling.ecore#//EObjectResource/save/eObject"/>
+      </genOperations>
+      <genOperations ecoreOperation="api-modelling.ecore#//EObjectResource/delete">
+        <genParameters ecoreParameter="api-modelling.ecore#//EObjectResource/delete/eClassUri"/>
+        <genParameters ecoreParameter="api-modelling.ecore#//EObjectResource/delete/id"/>
+      </genOperations>
+      <genOperations ecoreOperation="api-modelling.ecore#//EObjectResource/exists">
+        <genParameters ecoreParameter="api-modelling.ecore#//EObjectResource/exists/eClassUri"/>
+        <genParameters ecoreParameter="api-modelling.ecore#//EObjectResource/exists/id"/>
+      </genOperations>
+      <genOperations ecoreOperation="api-modelling.ecore#//EObjectResource/saveAll">
+        <genParameters ecoreParameter="api-modelling.ecore#//EObjectResource/saveAll/eObjects"/>
+      </genOperations>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

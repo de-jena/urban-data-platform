@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="modellingApi" nsURI="https://models.jena.de/udp/modelling/api/1.0"
+    nsPrefix="modellingApi">
+  <eAnnotations source="Version">
+    <details key="value" value="1.0"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="EPackageResource" abstract="true" interface="true">
+    <eAnnotations source="jakarta.ws.rs.Path">
+      <details key="value" value="/epackage"/>
+    </eAnnotations>
+    <eOperations name="load" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EPackage"
+        eExceptions="#//EWebApplicationException">
+      <eAnnotations source="jakarta.ws.rs.GET"/>
+      <eParameters name="ePackageUri" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="loadAll" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        eExceptions="#//EWebApplicationException">
+      <eAnnotations source="jakarta.ws.rs.GET"/>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Returns a List of Package URIs"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="save" eType="#//EResponse">
+      <eAnnotations source="jakarta.ws.rs.POST"/>
+      <eParameters name="ePackage" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EPackage"/>
+    </eOperations>
+    <eOperations name="delete" eType="#//EResponse" eExceptions="#//EWebApplicationException">
+      <eAnnotations source="jakarta.ws.rs.DELETE"/>
+      <eParameters name="ePackageUri" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="exists" eType="#//EResponse" eExceptions="#//EWebApplicationException">
+      <eAnnotations source="jakarta.ws.rs.HEAD"/>
+      <eParameters name="ePackageUri" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="saveAll" eType="#//EResponse">
+      <eAnnotations source="jakarta.ws.rs.POST"/>
+      <eParameters name="ePackage" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EPackage"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="EWebApplicationException" instanceClassName="jakarta.ws.rs.WebApplicationException"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="EResponse" instanceClassName="jakarta.ws.rs.core.Response"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EObjectResource" abstract="true" interface="true">
+    <eAnnotations source="jakarta.ws.rs.Path">
+      <details key="value" value="/eobject"/>
+    </eAnnotations>
+    <eOperations name="load" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+        eExceptions="#//EWebApplicationException">
+      <eAnnotations source="jakarta.ws.rs.GET"/>
+      <eParameters name="eClassUri" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="loadAll" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+        eExceptions="#//EWebApplicationException">
+      <eAnnotations source="jakarta.ws.rs.GET"/>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Returns all EObjects found of the requrested EClass type. If no projection is set, all Objects will be returned with all their Features."/>
+      </eAnnotations>
+      <eParameters name="eClassUri" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="projection" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A Whitelist of Attributes used as Projection for the returning EObjects. The ID Features will always be included. "/>
+        </eAnnotations>
+      </eParameters>
+    </eOperations>
+    <eOperations name="save" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject">
+      <eAnnotations source="jakarta.ws.rs.POST"/>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Returns the saved EObject with only the ID feature set."/>
+      </eAnnotations>
+      <eParameters name="eObject" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+    </eOperations>
+    <eOperations name="delete" eType="#//EResponse" eExceptions="#//EWebApplicationException">
+      <eAnnotations source="jakarta.ws.rs.DELETE"/>
+      <eParameters name="eClassUri" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="exists" eType="#//EResponse" eExceptions="#//EWebApplicationException">
+      <eAnnotations source="jakarta.ws.rs.HEAD"/>
+      <eParameters name="eClassUri" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="saveAll" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject">
+      <eAnnotations source="jakarta.ws.rs.POST"/>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Returns the saved EObjects with only the ID feature set."/>
+      </eAnnotations>
+      <eParameters name="eObjects" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+    </eOperations>
+  </eClassifiers>
+</ecore:EPackage>
