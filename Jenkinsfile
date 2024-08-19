@@ -67,7 +67,7 @@ pipeline  {
 				echo "I am building app on branch: ${env.GIT_BRANCH}"
 
 				dir("backend") {
-					sh "./gradlew :de.jena.udp.sensinact.runtime:export.de.jena.udp.sensinact.runtime.docker --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2"
+					sh "./gradlew :de.jena.upd.sensinact.runtime:export.de.jena.upd.sensinact.runtime.docker --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2"
 				}
 			}
 		}
