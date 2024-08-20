@@ -29,8 +29,12 @@ subprojects {
 }
 
 // Disable bnd plugin built-in task 'testOSGi' and register custom task for testing
-gradle.startParameter.excludedTaskNames += "testOSGi"
-
+//gradle.startParameter.excludedTaskNames += "testOSGi"
+tasks.whenTaskAdded {task ->
+    if(task.name.contains("testOSGi")) {
+        task.enabled = false
+    }
+}
 tasks.register('itest'){
   subprojects.each { sp ->
     sp.tasks.each { t -> 
