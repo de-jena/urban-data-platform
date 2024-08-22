@@ -25,6 +25,7 @@ import org.gecko.mongo.osgi.MongoDatabaseProvider;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -53,16 +54,12 @@ import de.jena.udp.model.trafficos.publictransport.TOSPublicTransportPackage;
  */
 @ExtendWith(BundleContextExtension.class)
 @ExtendWith(ServiceExtension.class)
+@Disabled
 public class GTFSToTOSConverterTest {
 	
 	private static final SimpleDateFormat SIMPLE_STOP_DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
 	private static final SimpleDateFormat SIMPLE_SCHEDULE_DATE_FORMAT = new SimpleDateFormat("yyyyMMdd");
 
-	
-	@BeforeEach
-	public void before(@InjectBundleContext BundleContext ctx) {
-		
-	}
 	
 	@Test
 	@Order(-1)

@@ -27,6 +27,7 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.osgi.service.cm.ConfigurationAdmin;
+import org.osgi.service.cm.annotations.RequireConfigurationAdmin;
 import org.osgi.test.common.annotation.InjectService;
 import org.osgi.test.common.service.ServiceAware;
 import org.osgi.test.junit5.context.BundleContextExtension;
@@ -43,6 +44,7 @@ import de.dim.trafficos.publictransport.apis.gtfs.GTFSDownloadService;
  */
 @ExtendWith(BundleContextExtension.class)
 @ExtendWith(ServiceExtension.class)
+@RequireConfigurationAdmin
 public class GTFSDownloadServiceTest {
 	
 	@InjectService
