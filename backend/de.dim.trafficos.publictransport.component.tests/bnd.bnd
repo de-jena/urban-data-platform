@@ -12,7 +12,8 @@ Test-Cases: ${classes;HIERARCHY_INDIRECTLY_ANNOTATED;org.junit.platform.commons.
 	de.jena.udp.trafficos.common.model,\
 	org.gecko.mongo.osgi.component,\
 	org.mongodb.mongo-java-driver,\
-	org.gecko.emf.mongo.component
+	org.gecko.emf.mongo.component,\
+	org.osgi.service.cm
 
 Require-Capability: osgi.extender;filter:='(osgi.extender=osgi.configurator)'	
 Private-Package: de.dim.trafficos.publictransport.component.tests
