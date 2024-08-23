@@ -25,6 +25,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.osgi.service.cm.annotations.RequireConfigurationAdmin;
 import org.osgi.test.common.annotation.InjectService;
 import org.osgi.test.common.service.ServiceAware;
 import org.osgi.test.junit5.context.BundleContextExtension;
@@ -57,6 +58,7 @@ import de.jena.udp.model.trafficos.publictransport_api.Schedule;
 @ExtendWith(BundleContextExtension.class)
 @ExtendWith(ServiceExtension.class)
 //@ExtendWith(ConfigurationExtension.class)
+@RequireConfigurationAdmin
 public class PTApiScheduleServiceTest {
 	
 	

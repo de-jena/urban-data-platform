@@ -16,7 +16,8 @@ Bundle-Version: 1.0.0.SNAPSHOT
 	de.jena.udp.trafficos.publictransport.model,\
 	org.gecko.emf.mongo.api,\
 	org.gecko.mongo.osgi.component,\
-	org.mongodb.mongo-java-driver
+	org.mongodb.mongo-java-driver,\
+	org.osgi.service.cm;version=latest
 	
 -privatepackage: de.dim.trafficos.publictransport.api.component.tests.helper
 Require-Capability: osgi.extender;filter:='(osgi.extender=osgi.configurator)'	
