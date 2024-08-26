@@ -1,6 +1,7 @@
 Test-Cases: ${classes;HIERARCHY_INDIRECTLY_ANNOTATED;org.junit.platform.commons.annotation.Testable;CONCRETE}
 
--dependson: de.dim.trafficos.publictransport.component
+-dependson: de.dim.trafficos.publictransport.component,\
+	de.dim.trafficos.gtfs.tests.config
 
 -library: \
 	enableOSGi-Test,\
