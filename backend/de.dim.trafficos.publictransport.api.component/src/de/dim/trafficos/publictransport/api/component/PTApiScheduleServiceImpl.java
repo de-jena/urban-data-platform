@@ -108,27 +108,25 @@ public class PTApiScheduleServiceImpl implements PTApiScheduleService {
 		return constructApiSchedule(scheduleSearchService.searchScheduleByDayAndStopNames(day, stopNames), day);
 	}
 	
-	@SuppressWarnings("unchecked")
 	private List<Schedule> constructApiSchedule(List<PTSchedule> schedules, LocalDate day) {
 		if(schedules == null || schedules.isEmpty()) {
 			return Collections.emptyList();
 		}
-		List<Schedule> apiSchedules = (List<Schedule>) modelTransformator.doTransformation(schedules);
+		List<Schedule> apiSchedules = modelTransformator.doTransformations(schedules);
 		apiSchedules.forEach(schedule -> {
 			constructApiSchedule(schedule, day);
 		});
 		return apiSchedules;
 	}
 	
-	@SuppressWarnings("unchecked")
 	private Schedule constructApiSchedule(PTSchedule schedule, LocalDate day) {
-		Schedule apiSchedule = (Schedule) modelTransformator.doTransformation(schedule);
+		Schedule apiSchedule = modelTransformator.doTransformation(schedule);
 		List<PTTimetableEntry> ttEntries = timetableEntrySearchService.searchTimetableEntryBySchedule(apiSchedule.getScheduleId());
-		List<ScheduleEntry> apiEntries = (List<ScheduleEntry>) modelTransformator.doTransformation(ttEntries);
+		List<ScheduleEntry> apiEntries = modelTransformator.doTransformations(ttEntries);
 		
 		List<String> stopIds = ttEntries.stream().map(e -> e.getRefStopId()).toList();
 		List<PTStop> stops = stopSearchService.searchStopByStopId(stopIds.toArray(size -> new String[size]));
-		List<StopInformation> apiStops = (List<StopInformation>) modelTransformator.doTransformation(stops);
+		List<StopInformation> apiStops = modelTransformator.doTransformations(stops);
 		apiEntries.forEach(e -> {
 			e.setRefStop(apiStops.stream().filter(s -> e.getRefStopId().equals(s.getStopId())).findFirst().orElse(null));
 			e.setArrivalScheduled(PTApiHelper.adjustTimeToUTCZone(day, e.getArrivalScheduled()));
@@ -138,14 +136,13 @@ public class PTApiScheduleServiceImpl implements PTApiScheduleService {
 		return apiSchedule;
 	}
 	
-	@SuppressWarnings("unchecked")
 	private void constructApiSchedule(Schedule apiSchedule, LocalDate day) {
 		List<PTTimetableEntry> ttEntries = timetableEntrySearchService.searchTimetableEntryBySchedule(apiSchedule.getScheduleId());
-		List<ScheduleEntry> apiEntries = (List<ScheduleEntry>) modelTransformator.doTransformation(ttEntries);
+		List<ScheduleEntry> apiEntries = modelTransformator.doTransformations(ttEntries);
 		
 		List<String> stopIds = ttEntries.stream().map(e -> e.getRefStopId()).toList();
 		List<PTStop> stops = stopSearchService.searchStopByStopId(stopIds.toArray(size -> new String[size]));
-		List<StopInformation> apiStops = (List<StopInformation>) modelTransformator.doTransformation(stops);
+		List<StopInformation> apiStops = modelTransformator.doTransformations(stops);
 		apiEntries.forEach(e -> {
 			e.setRefStop(apiStops.stream().filter(s -> e.getRefStopId().equals(s.getStopId())).findFirst().orElse(null));
 			e.setArrivalScheduled(PTApiHelper.adjustTimeToUTCZone(day, e.getArrivalScheduled()));

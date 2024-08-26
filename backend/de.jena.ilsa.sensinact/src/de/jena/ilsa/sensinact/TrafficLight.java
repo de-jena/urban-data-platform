@@ -161,7 +161,7 @@ public class TrafficLight {
 			resource.load(new ByteArrayInputStream(message.payload().array()), Collections.emptyMap());
 			TLConfiguration configuration = (TLConfiguration) resource.getContents().get(0);
 
-			Provider provider = (Provider) traf.doTransformation(configuration);
+			Provider provider = traf.doTransformation(configuration);
 			Promise<?> promise = sensiNact.pushUpdate(provider);
 			promise.onFailure(e -> logger.log(Level.ERROR, "Error while pushing configuration to sensinact.", e));
 		} catch (IOException e) {

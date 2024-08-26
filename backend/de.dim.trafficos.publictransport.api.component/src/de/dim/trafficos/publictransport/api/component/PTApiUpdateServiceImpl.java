@@ -73,12 +73,11 @@ public class PTApiUpdateServiceImpl implements PTApiUpdateService {
 	 * (non-Javadoc)
 	 * @see de.dim.trafficos.publictransport.apis.PTApiUpdateService#getLatestUpdatesByType(de.jena.udp.model.trafficos.publictransport.PTUpdateValueType)
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public List<Update> getLatestUpdatesByType(PTUpdateValueType updateType) {
 		List<PTUpdate> updates = updateSearchService.getLatestUpdatesByType(updateType);
 		if(updates.isEmpty()) return Collections.emptyList();
-		return (List<Update>) modelTransformator.doTransformation(updates);
+		return modelTransformator.doTransformations(updates);
 	}
 
 }

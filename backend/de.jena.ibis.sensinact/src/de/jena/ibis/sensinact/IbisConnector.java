@@ -135,7 +135,7 @@ public class IbisConnector {
 		String deviceType = topicSplit[0];
 		String deviceId = topicSplit[1];
 		
-		IbisDevice device = (IbisDevice) transformator.doTransformation(eo);
+		IbisDevice device = transformator.doTransformation(eo);
 		device.setId(deviceId);
 		IbisAdmin ibisAdmin = IbisSensinactFactory.eINSTANCE.createIbisAdmin();
 		ibisAdmin.setDeviceType(deviceType);
