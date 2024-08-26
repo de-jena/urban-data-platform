@@ -40,9 +40,13 @@ pipeline  {
 				echo "I am running integration tests on branch: ${env.GIT_BRANCH}"
 
 				dir("backend") {
-					sh "./gradlew  testOSGi --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2"
-	
-					junit testResults: '**/generated/test-reports/**/*.xml', allowEmptyResults: true
+					script {
+						try {
+	                        sh './gradlew clean testOSGi --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2 --no-daemon' //run a gradle task
+	                    } finally {
+	                        junit testResults: '**/generated/test-reports/testOSGi/TEST-*.xml', skipPublishingChecks: true, allowEmptyResults: true //make the junit test results available in any case (success & failure)
+	                    }
+                    }
 				}
 
 			}
