@@ -1,11 +1,6 @@
 /*
  * build Gradle build script
  */
-import aQute.bnd.gradle.Export
-
-configurations {
-  bundles
-}
 
 task prepareDocker(){
 	def stageDir = file('content')
@@ -23,24 +18,9 @@ task prepareDocker(){
 	        rename("de.jena.upd.sensinact.runtime.docker.jar", "de.jena.upd.sensinact.runtime.jar")
 	    }
 	    copy {
-	        from new File../../backend/de.jena.sensinact.5g.runtime/runtime/")
+	        from new File("../../backend/de.jena.sensinact.5g.runtime/runtime/")
 	        into new File(stageDir, "runtime")
 	    }
     }
 }
 
-/*
- * Executing docker image build. Copy everything to the right places
- */
-task buildDocker(type:Exec, dependsOn: prepareDocker){
-	
-	workingDir '.'
-    def tag = "scj/udp-broker:latest"
-	executable "docker"
-
-	args "build", "-f", "Dockerfile", ".", "-t", tag
-	
-	doFirst{
-		println "Building docker image " + tag
-	}
-}
