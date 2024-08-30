@@ -88,4 +88,10 @@
       <eParameters name="eObjects" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
     </eOperations>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EPackageWrapper">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nsUri" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ePackage" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EPackage"
+        containment="true"/>
+  </eClassifiers>
 </ecore:EPackage>

@@ -1,0 +1,12 @@
+{
+  	":configurator:resource-version": 1,
+	":configurator:symbolicname": "de.jena.udp.modelling",
+	":configurator:version": "0.0.0",
+  
+	"EMFMongoRepositoryConfigurator~modelling": {
+	    "mongo.instances": "modelling",
+		"modelling.baseUris" : "mongodb://mongodb/",
+		"modelling.databases" : "modelling",
+		"modelling.modelling.repoType" : "PROTOTYPE"
+	}
+}

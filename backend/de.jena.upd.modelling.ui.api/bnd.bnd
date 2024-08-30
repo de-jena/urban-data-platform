@@ -9,7 +9,7 @@ src: src, src-gen
 	model/api-modelling.genmodel;\
 		generate=geckoEMF;\
 		genmodel=model/api-modelling.genmodel;\
-		output=src
+		output=src-gen
 		
 # Add this attribute to find some logging information
 #		logfile=test.log;\
@@ -19,6 +19,19 @@ src: src, src-gen
 # Bundle Annotations		
 -includeresource.model: model=model
 
+-includeresource: \
+	 OSGI-INF/configurator/=config/
+Require-Capability: osgi.extender;filter:='(osgi.extender=osgi.configurator)'
+
 Bundle-Version: 1.0.0.SNAPSHOT
 
--buildpath: jakarta.ws.rs-api
+-buildpath: \
+	jakarta.ws.rs-api,\
+	org.gecko.emf.json,\
+	org.osgi.service.jakartars,\
+	io.swagger.core.v3.swagger-annotations.jakarta,\
+	org.gecko.emf.repository.api,\
+	org.gecko.emf.repository.mongo,\
+	org.gecko.emf.rest.jakartars,\
+	org.osgi.service.cm,\
+	org.osgi.service.http.whiteboard
