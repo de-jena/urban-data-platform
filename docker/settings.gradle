@@ -1,3 +1,4 @@
 pluginManagement {
-  rootProject.name="de.jena.broker"
+  rootProject.name="de.jena.udp"
 }
+include(':broker')

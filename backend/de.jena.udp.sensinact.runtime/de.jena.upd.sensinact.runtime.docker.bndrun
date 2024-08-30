@@ -1,4 +1,4 @@
--include: de.jena.sensinact.udp.runtime.base.bndrun
+-include: de.jena.upd.sensinact.runtime.base.bndrun
 
 -runproperties.docker: \
 	logback.configurationFile=file:/opt/sensinact/runtime/etc/logback.xml,\
@@ -6,4 +6,4 @@
 	org.apache.felix.configadmin.plugin.interpolation.secretsdir=/opt/sensinact/runtime/secrets
 
 -runbundles.docker:\
-	 de.jena.sensinact.udp.runtime.config.docker
+	 de.jena.udp.sensinact.runtime.config.docker
