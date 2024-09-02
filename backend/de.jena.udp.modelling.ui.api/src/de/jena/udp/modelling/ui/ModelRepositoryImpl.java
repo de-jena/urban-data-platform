@@ -11,7 +11,7 @@
  * Contributors:
  *     Data In Motion - initial API and implementation
  */
-package de.jena.upd.modelling.ui;
+package de.jena.udp.modelling.ui;
 
 import java.lang.System.Logger;
 import java.lang.System.Logger.Level;
