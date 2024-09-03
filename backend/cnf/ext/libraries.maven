@@ -1,6 +1,7 @@
 org.geckoprojects.emf:org.gecko.emf.osgi.bnd.library.workspace:6.2.0
+org.geckoprojects.emf:org.gecko.emf.osgi.example.model.basic:6.2.0
 org.geckoprojects.emf.utils:org.gecko.emf.util.jakartars.bnd.library.workspace:2.3.0
-org.geckoprojects.emf.persistence:org.gecko.emf.repository.bnd.library.workspace:6.1.0
+org.geckoprojects.emf.persistence:org.gecko.emf.repository.bnd.library.workspace:6.2.0-SNAPSHOT
 org.eclipse.osgi-technology.rest:org.eclipse.osgitech.rest.bnd.library:1.2.2
 org.geckoprojects.search:org.gecko.emf.search.bnd.project.library:1.2.0
 org.geckoprojects.search:org.gecko.search.bnd.library:1.4.0

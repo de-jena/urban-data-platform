@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.gecko.emf.json.annotation.RequireEMFJson;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
+import org.osgi.service.component.annotations.ReferenceScope;
 import org.osgi.service.component.annotations.ServiceScope;
 import org.osgi.service.jakartars.whiteboard.propertytypes.JakartarsApplicationSelect;
 import org.osgi.service.jakartars.whiteboard.propertytypes.JakartarsResource;
@@ -48,7 +49,7 @@ public class EPackageResourceImpl implements EPackageResource {
 
 	public static final String COMPONENT_NAME = "EPackageResource";
 	
-	@Reference
+	@Reference(scope = ReferenceScope.PROTOTYPE_REQUIRED)
 	private ModelRepository repo;
 
 	@GET

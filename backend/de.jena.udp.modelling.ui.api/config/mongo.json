@@ -4,9 +4,9 @@
 	":configurator:version": "0.0.0",
   
 	"EMFMongoRepositoryConfigurator~modelling": {
-	    "mongo.instances": "modelling",
-		"modelling.baseUris" : "mongodb://mongodb/",
-		"modelling.databases" : "modelling",
-		"modelling.modelling.repoType" : "PROTOTYPE"
+	    "mongo.instances": "de.jena",
+		"de.jena.baseUris" : "mongodb://mongodb/",
+		"de.jena.databases" : "modelling",
+		"de.jena.modelling.repoType" : "PROTOTYPE"
 	}
 }
