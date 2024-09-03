@@ -8,6 +8,7 @@ pipeline  {
 
 	tools {
 		jdk 'OpenJDK17'
+		nodejs 'NodeJS22'
 	}
 
 	options {
@@ -22,7 +23,33 @@ pipeline  {
 			}
 		}
 
-		stage('App build') {
+		stage('5G Democlient build') {
+
+			steps {
+				echo "I am building 5G Demo client on branch: ${env.GIT_BRANCH}"
+
+				dir("frontend/5gDemo") {
+					sh "npm install"
+					sh "npm run build"
+					sh "zip -r 5gDemo-dist.zip dist"
+				}				
+			}
+		}
+
+		stage('Modelling UI build') {
+
+			steps {
+				echo "I am building Modelling UI client on branch: ${env.GIT_BRANCH}"
+
+				dir("frontend/model-ui") {
+					sh "npm install"
+					sh "npm run build"
+					sh "zip -r model-ui-dist.zip dist"
+				}				
+			}
+		}
+		
+		stage('Backend build') {
 
 			steps {
 				echo "I am building app on branch: ${env.GIT_BRANCH}"
