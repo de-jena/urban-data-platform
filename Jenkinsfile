@@ -40,10 +40,10 @@ pipeline  {
 			steps {
 				echo "I am building Modelling UI client on branch: ${env.GIT_BRANCH}"
 
-//				dir("frontend/model-ui") {
-//					sh "npm install"
-//					sh "npm run build"
-//				}				
+				dir("frontend/model-ui") {
+					sh "npm install"
+					sh "npm run build-only"
+				}				
 			}
 		}
 		
