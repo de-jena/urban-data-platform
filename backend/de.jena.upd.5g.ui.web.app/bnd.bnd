@@ -1,0 +1,6 @@
+-includeresource: \
+	content=-../../frontend/5gDemo/dist
+-buildpath: \
+	org.osgi.annotation.bundle,\
+	org.osgi.service.component.annotations,\
+	org.osgi.service.http.whiteboard

@@ -24,7 +24,6 @@ import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.ServiceScope;
 import org.osgi.service.http.context.ServletContextHelper;
 import org.osgi.service.http.whiteboard.propertytypes.HttpWhiteboardContext;
-import org.osgi.service.http.whiteboard.propertytypes.HttpWhiteboardContextSelect;
 
 @Component(service = ServletContextHelper.class, scope = ServiceScope.SINGLETON)
 @HttpWhiteboardContext(name = "default", path = "/*")

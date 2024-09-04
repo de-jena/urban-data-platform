@@ -31,7 +31,6 @@ pipeline  {
 				dir("frontend/5gDemo") {
 					sh "npm install"
 					sh "npm run build"
-					sh "zip -r 5gDemo-dist.zip dist"
 				}				
 			}
 		}
@@ -44,7 +43,6 @@ pipeline  {
 				dir("frontend/model-ui") {
 					sh "npm install"
 					sh "npm run build"
-					sh "zip -r model-ui-dist.zip dist"
 				}				
 			}
 		}
