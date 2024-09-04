@@ -42,7 +42,7 @@ import jakarta.ws.rs.core.Response;
 @RequireEMFJson
 @JakartarsResource
 @Component(name = EPackageResourceImpl.COMPONENT_NAME, service = EPackageResource.class, scope = ServiceScope.PROTOTYPE)
-@JakartarsApplicationSelect("(id=updui)")
+@JakartarsApplicationSelect("(applicationId=updui)")
 @Path("/epackage")
 public class EPackageResourceImpl implements EPackageResource {
 	private static final Logger LOGGER = System.getLogger(EPackageResourceImpl.class.getName());
