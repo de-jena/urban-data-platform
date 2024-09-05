@@ -64,6 +64,7 @@ public class EPackageResourceImpl implements EPackageResource {
 	@Override
 	public EPackage load(@PathParam("ePackageUri") String ePackageUri) throws WebApplicationException {
 		LOGGER.log(Level.DEBUG, "Load package {0}", ePackageUri);
+		
 		return repo.loadEPackage(ePackageUri);
 	}
 

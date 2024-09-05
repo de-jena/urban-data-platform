@@ -2,8 +2,10 @@ Test-Cases: ${classes;HIERARCHY_INDIRECTLY_ANNOTATED;org.junit.platform.commons.
 
 -library: enableOSGi-Test,\
 	enable-emf
-	
-src: src
+
+-includeresource: \
+	 OSGI-INF/configurator/=config/	
+Require-Capability: osgi.extender;filter:='(osgi.extender=osgi.configurator)'
 
 # sets the usually required buildpath using the bnd library, you can extend it with the normal -buildpath to your liking
 -buildpath: \
@@ -11,7 +13,10 @@ src: src
 	org.osgi.service.jakartars,\
 	jakarta.ws.rs-api,\
 	org.gecko.emf.osgi.example.model.basic;version=latest,\
-	de.jena.udp.modelling.ui.api
+	de.jena.udp.modelling.ui.api,\
+	org.gecko.mongo.osgi.api,\
+	org.gecko.emf.repository.mongo,\
+	org.mongodb.mongo-java-driver
 	
 
 Bundle-Version: 1.0.0.SNAPSHOT

@@ -34,4 +34,14 @@ Bundle-Version: 1.0.0.SNAPSHOT
 	org.gecko.emf.repository.mongo,\
 	org.gecko.emf.rest.jakartars,\
 	org.osgi.service.cm,\
-	org.osgi.service.http.whiteboard
+	org.osgi.service.http.whiteboard,\
+	io.swagger.core.v3.swagger-jaxrs2.jakarta,\
+	jakarta.servlet-api,\
+	org.apache.felix.http.servlet-api
+	
+#,\
+#	io.swagger.core.v3.swagger-integration.jakarta,\
+#	io.swagger.core.v3.swagger-core.jakarta,\
+#	io.swagger.core.v3.swagger-models.jakarta,\
+#	com.fasterxml.jackson.core.jackson-core,\
+#	com.fasterxml.jackson.core.jackson-databind

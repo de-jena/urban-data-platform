@@ -7,5 +7,11 @@
 		"sensinact.baseUris" : "mongodb://mongodb/",
 		"sensinact.databases" : "sensinact", 
 		"sensinact.sensinact.repoType" : "PROTOTYPE" 
+	},
+	"EMFMongoRepositoryConfigurator~modelling": {
+	    "mongo.instances": "de.jena",
+		"de.jena.baseUris" : "mongodb://mongodb/",
+		"de.jena.databases" : "modelling",
+		"de.jena.modelling.repoType" : "PROTOTYPE"
 	}
 }

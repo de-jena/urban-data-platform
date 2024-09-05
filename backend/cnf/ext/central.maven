@@ -62,7 +62,8 @@ org.apache.felix:org.apache.felix.webconsole.plugins.packageadmin:1.1.0
 org.apache.felix:org.apache.felix.webconsole.plugins.scriptconsole:1.0.2
 org.apache.felix:org.apache.felix.webconsole.plugins.subsystems:0.1.0
 org.apache.felix:org.apache.felix.webconsole.plugins.useradmin:1.0.2
-biz.aQute:biz.aQute.gogo.commands.provider:1.10.0
+#biz.aQute:biz.aQute.gogo.commands.provider:1.10.0
+biz.aQute:biz.aQute.gogo.commands.provider:1.11.0-SNAPSHOT
 org.owasp.encoder:encoder:1.2.3
 
 

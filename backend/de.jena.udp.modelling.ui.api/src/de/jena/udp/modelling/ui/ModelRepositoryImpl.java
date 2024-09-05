@@ -40,11 +40,6 @@ import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.component.annotations.ReferenceScope;
 import org.osgi.service.component.annotations.ServiceScope;
 
-/**
- * 
- * @author grune
- * @since Aug 30, 2024
- */
 @Component(scope = ServiceScope.PROTOTYPE)
 @RequireMongoEMFRepository
 public class ModelRepositoryImpl implements ModelRepository {
@@ -103,6 +98,10 @@ public class ModelRepositoryImpl implements ModelRepository {
 
 	@Override
 	public EPackage loadEPackage(String ePackageUri) {
+		EPackage ePackage = repo.getResourceSet().getPackageRegistry().getEPackage(ePackageUri);
+		if(ePackage != null) {
+			return ePackage;
+		}
 		return repo.getEObject(EcorePackage.Literals.EPACKAGE, ePackageUri, OPTIONS);
 	}
 
@@ -124,7 +123,7 @@ public class ModelRepositoryImpl implements ModelRepository {
 
 	@Override
 	public EPackage deleteEPackage(String ePackageUri) {
-		EPackage ePackage = loadEPackage(ePackageUri);
+		EPackage ePackage = repo.getEObject(EcorePackage.Literals.EPACKAGE, ePackageUri, OPTIONS);
 		if(ePackage == null) {
 			return null;
 		}

@@ -2,13 +2,10 @@
 
 -runrequires: \
 	bnd.identity;id='de.jena.udp.modelling.ui.api.test',\
-	bnd.identity;id='de.jena.udp.modelling.ui.api',\
 	bnd.identity;id='slf4j.simple',\
 	bnd.identity;id='org.apache.felix.configadmin.plugin.interpolation',\
 	bnd.identity;id='org.apache.felix.configadmin',\
-	bnd.identity;id='biz.aQute.gogo.commands.provider',\
-	bnd.identity;id='org.apache.felix.gogo.runtime',\
-	bnd.identity;id='org.apache.felix.gogo.shell'
+	bnd.identity;id='biz.aQute.gogo.commands.provider'
 	
 -runbundles.test: \
 	de.jena.udp.modelling.ui.api.test;version=snapshot
@@ -88,9 +85,9 @@
 	org.apache.felix.configadmin;version='[1.9.26,1.9.27)',\
 	org.apache.felix.configadmin.plugin.interpolation;version='[1.2.8,1.2.9)',\
 	org.gecko.emf.repository.api;version='[9.3.1,9.3.2)',\
-	biz.aQute.gogo.commands.provider;version='[1.10.0,1.10.1)',\
 	org.apache.felix.gogo.runtime;version='[1.1.6,1.1.7)',\
-	org.apache.felix.gogo.shell;version='[1.1.4,1.1.5)',\
 	assertj-core;version='[3.24.2,3.24.3)',\
 	net.bytebuddy.byte-buddy;version='[1.14.9,1.14.10)',\
-	org.gecko.emf.osgi.example.model.basic;version='[6.2.0,6.2.1)'
+	org.gecko.emf.osgi.example.model.basic;version='[6.2.0,6.2.1)',\
+	biz.aQute.bnd.util;version='[7.0.0,7.0.1)',\
+	biz.aQute.gogo.commands.provider;version='[1.11.0,1.11.1)'
