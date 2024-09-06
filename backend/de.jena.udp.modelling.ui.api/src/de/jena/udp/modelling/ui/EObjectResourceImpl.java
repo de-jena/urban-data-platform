@@ -42,7 +42,7 @@ import jakarta.ws.rs.core.Response;
 @RequireEMFJson
 @Component(name = EObjectResourceImpl.COMPONENT_NAME, service = EObjectResource.class, scope = ServiceScope.PROTOTYPE)
 @JakartarsResource
-@JakartarsApplicationSelect("(applicationId=updui)")
+@JakartarsApplicationSelect("(applicationId=modelling-api)")
 @Path("/eobject")
 public class EObjectResourceImpl implements EObjectResource {
 	private static final Logger LOGGER = System.getLogger(EObjectResourceImpl.class.getName());

@@ -31,6 +31,7 @@
 	org.eclipse.sensinact.gateway.southbound.mqtt.mqtt-client,\
 	org.eclipse.sensinact.gateway.southbound.mqtt.mqtt-device-factory,\
 	org.eclipse.sensinact.gateway.southbound.virtual.virtual-temperature-sensor,\
-	org.locationtech.spatial4j
+	org.locationtech.spatial4j,\
+	org.apache.felix.http.jetty
 	
 -workingset: udp_runtime

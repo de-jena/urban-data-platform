@@ -3,7 +3,6 @@
 	org.osgi.service.component.annotations,\
 	org.osgi.service.http.whiteboard,\
 	org.osgi.service.cm,\
-	org.apache.felix.http.jetty;version=latest,\
 	com.fasterxml.jackson.core.jackson-core,\
 	com.fasterxml.jackson.core.jackson-databind,\
 	de.jena.icesensor.api;version=latest,\

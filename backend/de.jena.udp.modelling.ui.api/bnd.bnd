@@ -19,10 +19,6 @@ src: src, src-gen
 # Bundle Annotations		
 -includeresource.model: model=model
 
--includeresource: \
-	 OSGI-INF/configurator/=config/
-Require-Capability: osgi.extender;filter:='(osgi.extender=osgi.configurator)'
-
 Bundle-Version: 1.0.0.SNAPSHOT
 
 -buildpath: \

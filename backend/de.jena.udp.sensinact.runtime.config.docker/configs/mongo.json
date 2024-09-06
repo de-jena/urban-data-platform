@@ -3,13 +3,14 @@
   
 	"EMFMongoRepositoryConfigurator~sensinact": 
   	{
-	    "mongo.instances": "sensinact",
-		"sensinact.baseUris": "mongodb://mongodb1:29019/,mongodb://mongodb2:29018/,mongodb://mongodb3:29017/",
-		"sensinact.baseUris.env": "MONGO_BASE_URI",
-		"sensinact.databases" : "sensinact", 
-		"sensinact.user.env": "MONGO_USERNAME",
-		"sensinact.password.env": "MONGO_PASSWORD",
-		"sensinact.authSource": "admin", 
-		"sensinact.sensinact.repoType" : "PROTOTYPE" 
+	    "mongo.instances": "de.jena",
+		"de.jena.baseUris": "mongodb://mongodb1:29019/,mongodb://mongodb2:29018/,mongodb://mongodb3:29017/",
+		"de.jena.baseUris.env": "MONGO_BASE_URI",
+		"de.jena.databases" : "udp,modelling", 
+		"de.jena.user.env": "MONGO_USERNAME",
+		"de.jena.password.env": "MONGO_PASSWORD",
+		"de.jena.authSource": "admin", 
+		"de.jena.udp.repoType" : "PROTOTYPE",
+		"de.jena.modelling.repoType" : "PROTOTYPE" 
 	}
 }

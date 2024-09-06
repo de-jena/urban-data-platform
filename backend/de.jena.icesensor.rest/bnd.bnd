@@ -1,5 +1,4 @@
 -buildpath: \
-	org.apache.felix.http.jetty,\
 	org.apache.commons.io,\
 	jakarta.ws.rs-api,\
 	de.jena.icesensor.model;version=latest,\

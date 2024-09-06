@@ -2,9 +2,9 @@ Test-Cases: ${classes;HIERARCHY_INDIRECTLY_ANNOTATED;org.junit.platform.commons.
 
 -library: enableOSGi-Test,\
 	enable-emf
-
+	
 -includeresource: \
-	 OSGI-INF/configurator/=config/	
+	 OSGI-INF/configurator/=config/
 Require-Capability: osgi.extender;filter:='(osgi.extender=osgi.configurator)'
 
 # sets the usually required buildpath using the bnd library, you can extend it with the normal -buildpath to your liking

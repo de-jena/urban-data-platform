@@ -19,9 +19,9 @@ import org.osgi.service.jakartars.whiteboard.propertytypes.JakartarsName;
 
 import jakarta.ws.rs.core.Application;
 
-@Component(name = UrbanDataPlatformApplication.COMPONENT_NAME, service = Application.class, property = {"emf=true", "applicationId=updui"})
-@JakartarsApplicationBase("/modelling-ui")
-@JakartarsName("Model Ui Application")
+@Component(name = UrbanDataPlatformApplication.COMPONENT_NAME, service = Application.class, property = {"emf=true", "applicationId=modelling-api"})
+@JakartarsApplicationBase("/modelling-api")
+@JakartarsName("Model API Application")
 public class UrbanDataPlatformApplication extends Application {
 
 	public static final String COMPONENT_NAME = "UrbanDataPlatformApplication";
