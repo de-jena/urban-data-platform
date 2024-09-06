@@ -10,7 +10,6 @@
  * Contributors:
  *     Data In Motion - initial API and implementation
  */
-
 package de.jena.udp.five.g.ui.web.app;
 
 import java.net.URL;
