@@ -2,6 +2,6 @@
 
 exports[`BNavbarDropdown render correctly 1`] = `
 <div class="navbar-item has-dropdown"><a aria-haspopup="true" tabindex="0" class="navbar-link"></a>
-    <div class="navbar-dropdown"></div>
+  <div class="navbar-dropdown"></div>
 </div>
 `;
