@@ -1,3 +1,5 @@
+-init: \
+	${system-allow-fail; npm run build-only --prefix ../../frontend/model-ui/}
 -includeresource: \
 	content=-../../frontend/model-ui/dist
 -buildpath: \
