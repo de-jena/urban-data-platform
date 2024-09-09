@@ -100,7 +100,7 @@ public class ModelRepositoryImpl implements ModelRepository {
 	public EPackage loadEPackage(String ePackageUri) {
 		EPackage ePackage = repo.getResourceSet().getPackageRegistry().getEPackage(ePackageUri);
 		if(ePackage != null) {
-			return ePackage;
+			return EcoreUtil.copy(ePackage);
 		}
 		return repo.getEObject(EcorePackage.Literals.EPACKAGE, ePackageUri, OPTIONS);
 	}
