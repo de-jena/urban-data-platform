@@ -97,19 +97,22 @@ export default class StreamTreeC extends Vue {
 
   query_changed(new_query_params: any,force=false) {
     if ( (force || this.oldEnabledCategories!=new_query_params.enabledCategories)) {
-      let array_of_key_to_select = new_query_params.enabledCategories.split(',');
-      this.treeData.forEach((node: any) => {
-        if (array_of_key_to_select.includes(node.key)) {
-          this.selectedNodesKeys[node.key] = node._data;
-          node.active = true;
+      if(new_query_params.enabledCategories){
+        let array_of_key_to_select = new_query_params.enabledCategories.split(',');
+        this.treeData.forEach((node: any) => {
+          if (array_of_key_to_select.includes(node.key)) {
+            this.selectedNodesKeys[node.key] = node._data;
+            node.active = true;
+          }
+        })
+        let emit: any = [];
+        for (let key in this.selectedNodesKeys) {
+          emit = emit.concat(this.selectedNodesKeys[key])
         }
-      })
-      let emit: any = [];
-      for (let key in this.selectedNodesKeys) {
-        emit = emit.concat(this.selectedNodesKeys[key])
+        this.oldEnabledCategories = new_query_params.enabledCategories;
+        this.$emit('selection', emit)
       }
-      this.oldEnabledCategories = new_query_params.enabledCategories;
-      this.$emit('selection', emit)
+
     }
   }
 

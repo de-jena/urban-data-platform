@@ -163,11 +163,13 @@ self.addEventListener("message", evt => {
   }
 
 const cleanUp=()=>{
+     console.log('clean up')
   for (const things in state.features) {
     for (const id in state.features[things].features) {
 
-      if (state.features[things].features[id].properties.inTime + conf.cleanIterval < new Date().getTime()) {
-        delete state.features[things][id];
+      if (state.features[things].features[id].properties.inTime + conf.cleanIterval <= new Date().getTime()) {
+        delete state.features[things].features[id];
+        console.log('clean up '+id)
       }
     }
   }
