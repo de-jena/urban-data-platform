@@ -1,0 +1,19 @@
+Test-Cases: ${classes;HIERARCHY_INDIRECTLY_ANNOTATED;org.junit.platform.commons.annotation.Testable;CONCRETE}
+
+-library: enableOSGi-Test,\
+	enable-emf
+
+Require-Capability: osgi.extender;filter:='(osgi.extender=osgi.configurator)'
+
+# sets the usually required buildpath using the bnd library, you can extend it with the normal -buildpath to your liking
+-buildpath: \
+	org.osgi.framework;version=latest,\
+	jakarta.ws.rs-api,\
+	de.jena.udp.modelling.ui.api,\
+	org.gecko.emf.osgi.example.model.basic,\
+	org.gecko.emf.repository.api
+	
+Private-Package: de.jena.udp.modelling.ui.api
+
+Bundle-Version: 1.0.0.SNAPSHOT
+
