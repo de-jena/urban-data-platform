@@ -229,6 +229,7 @@ export default class DatastreamsV extends Vue {
         evt.data.configs[key].features = Object.values(evt.data.configs[key].features);
       }
       this.viewports = evt.data.configs;
+      this.observationsGeoJsonMqtt = null;
       this.observationsGeoJsonMqtt = evt.data.features;
 
       /*this.observationsGeoJsonMqtt =  {
@@ -594,14 +595,14 @@ export default class DatastreamsV extends Vue {
       };
     };
   }
-
+  private myRenderer = L.canvas({ padding: 0.5 });
   get pointToLayer() {
     return (feature: any, latlng: any) => {
-
       let div = document.createElement("div");
       let inner = document.createElement("div");
       let icon = document.createElement("div");
       icon.classList.add('icon');
+      icon.classList.add('custom_marker_icon');
       div.classList.add('marker');
       inner.classList.add('inner');
       div.append(inner);
@@ -649,7 +650,7 @@ export default class DatastreamsV extends Vue {
         icon.innerHTML = innerHTML;
       }
 
-      return new L.Marker(latlng, {
+      return L.marker(latlng, {
         icon:
           L.divIcon({className: 'my-div-icon', html: div})
       });
