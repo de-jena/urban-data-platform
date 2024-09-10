@@ -4,3 +4,8 @@ generated/
 .metadata
 bin/
 bin_test/
+frontend/*/node_modules
+frontend/*/dist/*
+frontend/*/dist
+/frontend/5gDemo/dist/
+/frontend/model-ui/dist/
