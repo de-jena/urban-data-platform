@@ -11,7 +11,7 @@
  * Contributors:
  *     Data In Motion - initial API and implementation
  */
-package de.jena.udp.modelling.ui;
+package org.gecko.emf.osgi.mocktest;
 
 import static org.mockito.ArgumentMatchers.argThat;
 

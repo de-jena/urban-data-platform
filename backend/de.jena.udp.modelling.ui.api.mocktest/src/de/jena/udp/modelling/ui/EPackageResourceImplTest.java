@@ -13,8 +13,8 @@
  */
 package de.jena.udp.modelling.ui;
 
-import static de.jena.udp.modelling.ui.EMFArgumentMatchers.eqEObject;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.gecko.emf.osgi.mocktest.EMFArgumentMatchers.eqEObject;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;

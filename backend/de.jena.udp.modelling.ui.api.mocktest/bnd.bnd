@@ -11,9 +11,8 @@ Require-Capability: osgi.extender;filter:='(osgi.extender=osgi.configurator)'
 	jakarta.ws.rs-api,\
 	de.jena.udp.modelling.ui.api,\
 	org.gecko.emf.osgi.example.model.basic,\
-	org.gecko.emf.repository.api
+	org.gecko.emf.repository.api,\
+	org.gecko.emf.osgi.mocktest
 	
-Private-Package: de.jena.udp.modelling.ui.api
-
 Bundle-Version: 1.0.0.SNAPSHOT
 
