@@ -1,0 +1,49 @@
+;;Domain Documentation;
+EClass : ARequest;;A request object containing all information about request paramters that are needed.;
+;EAttribute : requestId;Identifier for this request. Each request gets an own unique identifier;
+;EAttribute : consumerId;Identifier for the caller / the requestor, that is the consumer of the service;
+;EReference : config;'The anonymization-model configuration / setup parameters
+';
+;EAttribute : srcUri;'The source URI from where the request was sent
+';
+;EAttribute : contentType;'The expected content type
+';
+EClass : AResponse;;A response object containing all information about a result and its meta data;
+;EAttribute : requestId;The correlated request id, this reponse belongs to.;
+;EReference : config;The configuration this result based upon.;
+;EAttribute : type;The response type / kind;
+;EAttribute : statusMessage;The status message of a response. It contains human readable information, like error messages;
+;EAttribute : resultUri;An URI under which the result, anonymized data set is available;
+;EAttribute : resultContentType;The content type for the resulting data set;
+;EAttribute : elapsedTime;The actual runtime in ms.;
+;EAttribute : remainingTime;The remaining runtime in ms.;
+EEnum : ResponseType;;Defines the type of a response;
+EClass : ADryRunResponse;;A response object containing all information about a dry run execution. It onlöy contains meta data and not result data.;
+;EAttribute : estCalcTime;The estimated runtime in ms.;
+EClass : AModelConfiguration;;A configuration object for an anonymization model. ;
+;EAttribute : strategy;;
+;EReference : features;A list of column specifica configuration for this anonymization model.;
+EClass : AFeatureConfiguration;;A column / field specific configuration object for an anonymization model. ;
+;EAttribute : name;The name / identifier of a field or column;
+;EAttribute : type;'The feature type information (Date, Time, Number, String)
+';
+;EAttribute : strategy;A strategy how to interpret this field in the anonymization process.;
+EClass : AnonymizationService;;;
+EClass : IDMTModel;;Example of a concrete implementation specific anonymization model configuration for the IDMT algorythm;
+;EAttribute : k;Datensatzbasiert;
+;EReference : regGrad;Datensatzbasiert;
+;EAttribute : noisy;Datensatzbasiert;
+EClass : IDMTFeature;;;
+;EAttribute : age;;
+EEnum : RegularizerType;;;
+EEnum : GradType;;;
+EClass : RegularizerGrad;;;
+;EAttribute : reg;;
+;EAttribute : grad;;
+EEnum : ModelStrategyType;;A strategy enumeration, how to handle a configuration. This stategy defines, how the column should be handled as well.;
+EEnum : ComputeDistanceType;;;
+EEnum : FeatureStrategyType;;A strategy enumeration, how to interpret a field / column in the anonymization process.;
+EDataType : ResultPromise;;;
+EEnum : AnonymizationServiceLifeCycleState;;;
+EClass : AnonymizationServiceDescription;;Example of a custom implementation of an anonymization service description.;
+EClass : ArxModel;;Example configurtion for the ARX Library;

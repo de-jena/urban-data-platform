@@ -1,0 +1,45 @@
+{
+  "eClass" : "http://jena.de/service/1.0#//ServiceDescription",
+  "serviceId" : "32fc0b61-b638-4ea3-9bbd-437f0ab801ca",
+  "providerId" : "FHIDMTnode01",
+  "name" : "AnonymizationService",
+  "vendor" : "Fraunhofer IDMT",
+  "sourceUri" : "mqtt://mqtt.jena.de:8883/jena",
+  "contentType" : "application/json",
+  "serviceType" : "http://jena.de/idmt/1.0#//AnonymizationService",
+  "operation" : [ {
+    "operationId" : "3da72938-c966-4f1e-8d0f-18cc894e9364",
+    "name" : "doAnonymizationDryRun",
+    "operationRequestUri" : "mqtt://mqtt.jena.de:8883/jena/anonymization/dryRun/req/FHIDMTnode01",
+    "operationResponseUri" : "${prefix}/anonymization/dryRun/resp/${consumerId}/${requestId}",
+    "operationType" : "http://jena.de/idmt/1.0#//AnonymizationService/doAnonymizationDryRun"
+  }, {
+    "operationId" : "8b235eab-f48d-4872-bc55-2ac946fd7d3a",
+    "name" : "doAnonymization",
+    "operationRequestUri" : "mqtt://mqtt.jena.de:8883/jena/anonymization/sync/req/FHIDMTnode01",
+    "operationResponseUri" : "${prefix}/anonymization/sync/resp/${consumerId}/${requestId}",
+    "operationType" : "http://jena.de/idmt/1.0#//AnonymizationService/doAnonymization"
+  }, {
+    "operationId" : "2c9a7693-7176-42e4-8ead-16732b36279d",
+    "name" : "doAnonymizationAsync",
+    "operationRequestUri" : "mqtt://mqtt.jena.de:8883/jena/anonymization/async/req/FHIDMTnode01",
+    "operationResponseUri" : "${prefix}/anonymization/async/resp/${consumerId}/${requestId}",
+    "operationType" : "http://jena.de/idmt/1.0#//AnonymizationService/doAnonymizationAsync"
+  }, {
+    "operationId" : "1494d6c0-da0b-49d0-9fa9-9875c77ff3fa",
+    "name" : "doAnonymizationImmediateAsync",
+    "operationRequestUri" : "mqtt://mqtt.jena.de:8883/jena/anonymization/immediate/req/FHIDMTnode01",
+    "operationResponseUri" : "${prefix}/anonymization/immediate/resp/${consumerId}/${requestId}",
+    "operationType" : "http://jena.de/idmt/1.0#//AnonymizationService/doAnonymizationImmediateAsync"
+  }, {
+    "operationId" : "b14ea1fb-ea88-4b55-87d4-dddd868f1ce5",
+    "name" : "cancelRequest",
+    "operationRequestUri" : "mqtt://mqtt.jena.de:8883/jena/anonymization/cancel/FHIDMTnode01/${requestId}",
+    "operationType" : "http://jena.de/idmt/1.0#//AnonymizationService/cancelRequest"
+  }, {
+    "operationId" : "69dd12fc-f751-47bb-a026-829f04337619",
+    "name" : "getRequestStatus",
+    "operationResponseUri" : "${prefix}/anonymization/status/${consumerId}/${requestId}",
+    "operationType" : "http://jena.de/idmt/1.0#//AnonymizationService/getRequestStatus"
+  } ]
+}

@@ -1,0 +1,27 @@
+{
+  "_type" : "http://jena.de/idmt/1.0#//AResponse",
+  "requestId" : "f9564ef1-e5e1-4b2a-a03f-1246c80c9013",
+  "config" : {
+    "_type" : "http://jena.de/idmt/1.0#//IDMTModel",
+    "features" : [ {
+      "_type" : "http://jena.de/idmt/1.0#//IDMTFeature",
+      "name" : "age",
+      "type" : "Number"
+    }, {
+      "_type" : "http://jena.de/idmt/1.0#//IDMTFeature",
+      "name" : "firstName",
+      "type" : "String",
+      "strategy" : "IGNORE"
+    } ],
+    "k" : [ 42 ],
+    "regGrad" : [ {
+      "reg" : "regularizor",
+      "grad" : "grad_anti"
+    } ],
+    "noisy" : [ true ]
+  },
+  "type" : "ASYNC_CANCELLED",
+  "statusMessage" : "77%",
+  "elapsedTime" : 145,
+  "remainingTime" : 42
+}

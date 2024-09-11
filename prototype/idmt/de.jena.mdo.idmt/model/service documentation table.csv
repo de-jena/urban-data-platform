@@ -1,0 +1,29 @@
+;;Domain Documentation;
+EClass : ServiceDescription;;An abstract service description;
+;EAttribute : serviceId;;
+;EAttribute : providerId;The identifier for the service provider;
+;EAttribute : name;;
+;EAttribute : vendor;;
+;EAttribute : rank;;
+;EAttribute : sourceUri;;
+;EAttribute : contentType;;
+;EReference : operation;;
+;EAttribute : lifeCycleState;;
+;EReference : serviceClass;;
+EEnum : ServiceLifeCycleState;;;
+EClass : ServiceOperationDescription;;A response object containing all information about a result and its meta data;
+;EAttribute : operationId;The correlated request id, this reponse belongs to.;
+;EAttribute : name;;
+;EReference : serviceDescription;;
+;EAttribute : operationRequestUri;The Uri to listen ;
+;EAttribute : operationResponseUri;;
+;EReference : operation;;
+EClass : DiscoveryProviderService;;'Method to announce a service providing a service description and a corresponding service lifecycle. This needs to implemented by a service provider.
+
+New service description or their changes or removals should published to topic
+<prefix>/services';
+EClass : DiscoveryConsumerService;;'The consumer side to retrieve a service description. Service consumer implement this interface, to listen for service changes.
+
+Consumers should listen to topic:
+<prefix>/services
+to get informed about service descriptions';

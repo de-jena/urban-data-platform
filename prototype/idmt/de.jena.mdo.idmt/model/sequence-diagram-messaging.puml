@@ -1,0 +1,108 @@
+@startuml
+actor Jena as J
+actor Fraunhofer as FH
+
+== Announce a service as service provider: ==
+
+autonumber
+FH->J: <prefix>/services::ServiceDescription::ANOUNCE
+note right of FH
+Activate when Python service is ready
+end note
+activate J
+activate FH
+
+== Anonymization - Dry run: ==
+autonumber 1
+J->FH: <prefix>/anonymization/dryrun/req/<providerId>::ARequest
+activate J
+activate FH
+note right of FH
+AnonymizationService::doAnonymizationDryRun
+end note
+FH-->J: <prefix>/anonymization/dryrun/resp/<consumerId>[/<requestId>]::ADryRunResponse::DRY_RESPONSE
+deactivate FH
+deactivate J
+
+== Anonymization - Synchronous Call: ==
+
+autonumber 1
+J->FH: <prefix>/anonymization/sync/req/<providerId>::ARequest
+activate J
+activate FH
+note right of FH
+AnonymizationService::doAnonymization
+end note
+FH-->J: <prefix>/anonymization/sync/resp/<consumerId>[/<requestId>]::AResponse::DEFAULT
+deactivate FH
+deactivate J
+
+== Anonymization - Asynchronous Call: ==
+
+autonumber 1
+J->FH: <prefix>/anonymization/async/req/<providerId>::ARequest doAnonymization
+activate FH
+J-->J: ResultPromise<AResponse>
+activate J
+note right of FH
+AnonymizationService::doAnonymizationAsync
+end note 
+FH-->J: <prefix>/anonymization/async/resp/<consumerId>[/<requestId>]::AResponse::DEFAULT
+deactivate FH
+J-->J: resolve with AResponse::DEFAULT
+deactivate J
+note right of J
+Promise resolve handling is a client/consumer - only operation
+end note
+
+== Anonymization Immediate - Asynchronous Call: ==
+
+autonumber 1
+J->FH:  <prefix>/anonymization/immediate/req/<providerId>::ARequest
+activate J
+activate FH
+note right of FH
+AnonymizationService::doAnonymizationImmediate
+end note 
+FH-->J: <prefix>/anonymization/immediate/resp/<consumerId>[/<requestId>]::AResponse::ASYNC_RUNNING
+deactivate J
+
+FH-->J: <prefix>/anonymization/status/<consumerId>/<requestId>::AResponse::ASYNC_RUNNING
+
+FH-->J: <prefix>/anonymization/status/<consumerId>/<requestId>::AResponse::ASYNC_RESPONSE
+deactivate FH
+
+== Cancel Request - Asynchronous Call: ==
+
+autonumber 1
+J->FH:  <prefix>/anonymization/immediate/req/<providerId>::ARequest
+activate J
+activate FH
+note right of FH
+AnonymizationService::doAnonymizationImmediate
+end note 
+FH-->J: <prefix>/anonymization/immediate/resp/<consumerId>[/<requestId>]::AResponse::ASYNC_RUNNING
+deactivate J
+
+FH-->J: <prefix>/anonymization/status/<consumerId>/<requestId>::AResponse::ASYNC_RUNNING
+
+J->FH: <prefix>/anonymization/cancel/<providerId>/<requestId>::ARequest cancelRequest
+J-->J: ResultPromise<AResponse>
+FH-->J: <prefix>/anonymization/status/<consumerId>/<requestId>::AResponse::ASYNC_CANCELLED
+deactivate FH
+activate J
+J-->J: resolve with AResponse::ASYNC_CANCELLED
+deactivate J
+note right of J
+Promise resolve handling is a client/consumer - only operation
+end note
+
+== Announce service removal as service provider: ==
+
+note right of FH
+De-activate when Python service will go away (pre shutdown)
+end note
+FH->J: <prefix>/services::ServiceDescription::REMOVE
+deactivate J
+deactivate FH
+@enduml

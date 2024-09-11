@@ -1,0 +1,25 @@
+{
+  "eClass" : "http://jena.de/idmt/1.0#//ADryRunResponse",
+  "requestId" : "78d51e52-5a01-4a10-a80d-9c9582713575",
+  "config" : {
+    "eClass" : "http://jena.de/idmt/1.0#//IDMTModel",
+    "features" : [ {
+      "eClass" : "http://jena.de/idmt/1.0#//IDMTFeature",
+      "name" : "age",
+      "type" : "Number"
+    }, {
+      "eClass" : "http://jena.de/idmt/1.0#//IDMTFeature",
+      "name" : "firstName",
+      "type" : "String",
+      "strategy" : "IGNORE"
+    } ],
+    "k" : [ 42 ],
+    "regGrad" : [ {
+      "reg" : "regularizor",
+      "grad" : "grad_anti"
+    } ],
+    "noisy" : [ true ]
+  },
+  "type" : "EClassURi",
+  "estCalcTime" : 1440
+}

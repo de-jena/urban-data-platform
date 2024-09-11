@@ -1,0 +1,11 @@
+-runfw: org.apache.felix.framework;version='[7.0.3,7.0.3]'
+-runee: JavaSE-1.8
+-runrequires: bnd.identity;id='tech.units.indriya'
+-runbundles: \
+	jakarta.annotation-api;version='[2.1.1,2.1.2)',\
+	jakarta.inject.jakarta.inject-api;version='[1.0.5,1.0.6)',\
+	jakarta.inject.jakarta.inject-api;version='[2.0.1,2.0.2)',\
+	javax.measure.unit-api;version='[2.1.0,2.1.1)',\
+	tech.units.indriya;version='[2.1.0,2.1.1)',\
+	uom-lib-common;version='[2.1.0,2.1.1)'
+-runblacklist: bnd.identity;id='javax.measure.unit-api';version:Version='2.1.0'

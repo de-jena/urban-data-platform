@@ -1,0 +1,71 @@
+@startuml
+actor Jena as J
+actor Fraunhofer as FH
+
+== Dry Run - Synchronous Call: ==
+
+autonumber
+J->FH: doAnonymizationDryRun
+activate J
+activate FH
+FH-->J: ADryRunResponse::DRY_RESPONSE
+deactivate FH
+deactivate J
+
+== Anonymization - Synchronous Call: ==
+
+autonumber 1
+J->FH: doAnonymization
+activate J
+activate FH
+FH-->J: AResponse::DEFAULT
+deactivate FH
+deactivate J
+
+== Anonymization - Asynchronous Call: ==
+
+autonumber 1
+J->FH: doAnonymization
+activate FH
+FH-->J: ResultPromise<AResponse>
+activate J
+FH-->J: resolve with AResponse::DEFAULT
+deactivate J
+deactivate FH
+
+== Anonymization Immediate - Asynchronous Call: ==
+
+autonumber 1
+J->FH: doAnonymizationImmediate
+activate FH
+note right of FH
+Response can immediately return results or provide information containing the current progress status 
+end note 
+FH-->J: AResponse::ASYNC_RUNNING
+
+J->FH: getRequestStatus
+FH-->J: AResponse::ASYNC_RUNNING
+
+
+J->FH: getRequestStatus
+FH-->J: AResponse::ASYNC_RESPONSE
+deactivate FH
+
+== Cancel Request - Asynchronous Call: ==
+
+autonumber 1
+J->FH: doAnonymizationImmediate
+activate FH
+note right of FH
+Response can immediately return results or provide information containing the current progress status 
+end note 
+FH-->J: AResponse::ASYNC_RUNNING
+
+J->FH: cancelRequest
+FH-->J: ResultPromise<AResponse>
+activate J
+FH-->J: resolve with AResponse::ASYNC_CANCELLED
+
+deactivate J
+deactivate FH
+@enduml

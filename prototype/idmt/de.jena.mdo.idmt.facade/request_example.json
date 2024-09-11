@@ -1,0 +1,26 @@
+{
+  "_type" : "http://jena.de/idmt/1.0#//ARequest",
+  "requestId" : "604348a8-c4db-427b-8c13-dbd1543d6013",
+  "consumerId" : "JENAsensinact",
+  "config" : {
+    "_type" : "http://jena.de/idmt/1.0#//IDMTModel",
+    "features" : [ {
+      "_type" : "http://jena.de/idmt/1.0#//IDMTFeature",
+      "name" : "age",
+      "type" : "Number"
+    }, {
+      "_type" : "http://jena.de/idmt/1.0#//IDMTFeature",
+      "name" : "firstName",
+      "type" : "String",
+      "strategy" : "IGNORE"
+    } ],
+    "k" : [ 42 ],
+    "regGrad" : [ {
+      "reg" : "regularizor",
+      "grad" : "grad_anti"
+    } ],
+    "noisy" : [ true ]
+  },
+  "srcUri" : "mqtt://mqtt.jena.de:8883/jena/sensinact",
+  "contentType" : "application/json"
+}

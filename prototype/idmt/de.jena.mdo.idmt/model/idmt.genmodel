@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/de.jena.mdo.idmt/src" modelPluginID="de.jena.mdo.idmt"
+    modelName="idmt" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="17.0" suppressGenModelAnnotations="false"
+    copyrightFields="false" usedGenPackages="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"
+    operationReflection="true" importOrganizing="true" oSGiCompatible="true">
+  <foreignModel>idmt.ecore</foreignModel>
+  <foreignModel>service.ecore</foreignModel>
+  <genPackages prefix="Idmt" basePackage="de.jena.mdo.idmt" resource="XMI" disposableProviderFactory="true"
+      fileExtensions="idmt" ecorePackage="idmt.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="idmt.ecore#//ResponseType">
+      <genEnumLiterals ecoreEnumLiteral="idmt.ecore#//ResponseType/DEFAULT"/>
+      <genEnumLiterals ecoreEnumLiteral="idmt.ecore#//ResponseType/DRY_RESPONSE"/>
+      <genEnumLiterals ecoreEnumLiteral="idmt.ecore#//ResponseType/ASYNC_RESPONSE"/>
+      <genEnumLiterals ecoreEnumLiteral="idmt.ecore#//ResponseType/ASYNC_RUNNING"/>
+      <genEnumLiterals ecoreEnumLiteral="idmt.ecore#//ResponseType/ASYNC_CANCELLED"/>
+      <genEnumLiterals ecoreEnumLiteral="idmt.ecore#//ResponseType/ERROR"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="idmt.ecore#//RegularizerType">
+      <genEnumLiterals ecoreEnumLiteral="idmt.ecore#//RegularizerType/DEFAULT"/>
+      <genEnumLiterals ecoreEnumLiteral="idmt.ecore#//RegularizerType/REGULARIZOR"/>
+      <genEnumLiterals ecoreEnumLiteral="idmt.ecore#//RegularizerType/ANTI"/>
+      <genEnumLiterals ecoreEnumLiteral="idmt.ecore#//RegularizerType/MINUS"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="idmt.ecore#//GradType">
+      <genEnumLiterals ecoreEnumLiteral="idmt.ecore#//GradType/F"/>
+      <genEnumLiterals ecoreEnumLiteral="idmt.ecore#//GradType/REG"/>
+      <genEnumLiterals ecoreEnumLiteral="idmt.ecore#//GradType/ANTI"/>
+      <genEnumLiterals ecoreEnumLiteral="idmt.ecore#//GradType/MINUS"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="idmt.ecore#//ModelStrategyType">
+      <genEnumLiterals ecoreEnumLiteral="idmt.ecore#//ModelStrategyType/PER_DATASET"/>
+      <genEnumLiterals ecoreEnumLiteral="idmt.ecore#//ModelStrategyType/PER_COLUMN_IGNORE"/>
+      <genEnumLiterals ecoreEnumLiteral="idmt.ecore#//ModelStrategyType/PER_COLUMN_AS_IS"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="idmt.ecore#//ComputeDistanceType">
+      <genEnumLiterals ecoreEnumLiteral="idmt.ecore#//ComputeDistanceType/DISTANCE_SQUARED"/>
+      <genEnumLiterals ecoreEnumLiteral="idmt.ecore#//ComputeDistanceType/DISTANCE_DIFFERENCE"/>
+      <genEnumLiterals ecoreEnumLiteral="idmt.ecore#//ComputeDistanceType/DISTANCE_CATEGORICAL_50"/>
+      <genEnumLiterals ecoreEnumLiteral="idmt.ecore#//ComputeDistanceType/DISTANCE_CATEGORICAL_100"/>
+      <genEnumLiterals ecoreEnumLiteral="idmt.ecore#//ComputeDistanceType/DISTANCE_CATEGORICAL_200"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="idmt.ecore#//FeatureStrategyType">
+      <genEnumLiterals ecoreEnumLiteral="idmt.ecore#//FeatureStrategyType/ANONYMIZE"/>
+      <genEnumLiterals ecoreEnumLiteral="idmt.ecore#//FeatureStrategyType/IGNORE"/>
+      <genEnumLiterals ecoreEnumLiteral="idmt.ecore#//FeatureStrategyType/DO_NOT_ANONYMIZE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="idmt.ecore#//AnonymizationServiceLifeCycleState">
+      <genEnumLiterals ecoreEnumLiteral="idmt.ecore#//AnonymizationServiceLifeCycleState/ANNOUNCE"/>
+      <genEnumLiterals ecoreEnumLiteral="idmt.ecore#//AnonymizationServiceLifeCycleState/CHANGE"/>
+      <genEnumLiterals ecoreEnumLiteral="idmt.ecore#//AnonymizationServiceLifeCycleState/REMOVE"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="idmt.ecore#//ResultPromise">
+      <genTypeParameters ecoreTypeParameter="idmt.ecore#//ResultPromise/T"/>
+    </genDataTypes>
+    <genClasses ecoreClass="idmt.ecore#//ARequest">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idmt.ecore#//ARequest/requestId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idmt.ecore#//ARequest/consumerId"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference idmt.ecore#//ARequest/config"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idmt.ecore#//ARequest/srcUri"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idmt.ecore#//ARequest/contentType"/>
+    </genClasses>
+    <genClasses ecoreClass="idmt.ecore#//AResponse">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idmt.ecore#//AResponse/requestId"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference idmt.ecore#//AResponse/config"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idmt.ecore#//AResponse/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idmt.ecore#//AResponse/statusMessage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idmt.ecore#//AResponse/resultUri"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idmt.ecore#//AResponse/resultContentType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idmt.ecore#//AResponse/elapsedTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idmt.ecore#//AResponse/remainingTime"/>
+    </genClasses>
+    <genClasses ecoreClass="idmt.ecore#//ADryRunResponse">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idmt.ecore#//ADryRunResponse/estCalcTime"/>
+    </genClasses>
+    <genClasses ecoreClass="idmt.ecore#//AModelConfiguration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idmt.ecore#//AModelConfiguration/strategy"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference idmt.ecore#//AModelConfiguration/features"/>
+    </genClasses>
+    <genClasses ecoreClass="idmt.ecore#//AFeatureConfiguration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idmt.ecore#//AFeatureConfiguration/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idmt.ecore#//AFeatureConfiguration/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idmt.ecore#//AFeatureConfiguration/strategy"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="idmt.ecore#//AnonymizationService">
+      <genOperations ecoreOperation="idmt.ecore#//AnonymizationService/doAnonymizationDryRun">
+        <genParameters ecoreParameter="idmt.ecore#//AnonymizationService/doAnonymizationDryRun/request"/>
+      </genOperations>
+      <genOperations ecoreOperation="idmt.ecore#//AnonymizationService/doAnonymization">
+        <genParameters ecoreParameter="idmt.ecore#//AnonymizationService/doAnonymization/request"/>
+      </genOperations>
+      <genOperations ecoreOperation="idmt.ecore#//AnonymizationService/doAnonymizationAsync">
+        <genParameters ecoreParameter="idmt.ecore#//AnonymizationService/doAnonymizationAsync/request"/>
+      </genOperations>
+      <genOperations ecoreOperation="idmt.ecore#//AnonymizationService/doAnonymizationImmediateAsync">
+        <genParameters ecoreParameter="idmt.ecore#//AnonymizationService/doAnonymizationImmediateAsync/request"/>
+      </genOperations>
+      <genOperations ecoreOperation="idmt.ecore#//AnonymizationService/cancelRequest">
+        <genParameters ecoreParameter="idmt.ecore#//AnonymizationService/cancelRequest/providerId"/>
+        <genParameters ecoreParameter="idmt.ecore#//AnonymizationService/cancelRequest/requestId"/>
+      </genOperations>
+      <genOperations ecoreOperation="idmt.ecore#//AnonymizationService/getRequestStatus">
+        <genParameters ecoreParameter="idmt.ecore#//AnonymizationService/getRequestStatus/request"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="idmt.ecore#//IDMTModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idmt.ecore#//IDMTModel/k"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference idmt.ecore#//IDMTModel/regGrad"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idmt.ecore#//IDMTModel/noisy"/>
+    </genClasses>
+    <genClasses ecoreClass="idmt.ecore#//IDMTFeature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idmt.ecore#//IDMTFeature/age"/>
+    </genClasses>
+    <genClasses ecoreClass="idmt.ecore#//RegularizerGrad">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idmt.ecore#//RegularizerGrad/reg"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idmt.ecore#//RegularizerGrad/grad"/>
+    </genClasses>
+    <genClasses ecoreClass="idmt.ecore#//AnonymizationServiceDescription"/>
+    <genClasses ecoreClass="idmt.ecore#//ArxModel"/>
+  </genPackages>
+  <genPackages prefix="Service" basePackage="de.jena.service.remote" disposableProviderFactory="true"
+      ecorePackage="service.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="service.ecore#//ServiceLifeCycleState">
+      <genEnumLiterals ecoreEnumLiteral="service.ecore#//ServiceLifeCycleState/ANNOUNCE"/>
+      <genEnumLiterals ecoreEnumLiteral="service.ecore#//ServiceLifeCycleState/CHANGE"/>
+      <genEnumLiterals ecoreEnumLiteral="service.ecore#//ServiceLifeCycleState/REMOVE"/>
+    </genEnums>
+    <genClasses ecoreClass="service.ecore#//ServiceDescription">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute service.ecore#//ServiceDescription/serviceId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute service.ecore#//ServiceDescription/providerId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute service.ecore#//ServiceDescription/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute service.ecore#//ServiceDescription/vendor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute service.ecore#//ServiceDescription/rank"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute service.ecore#//ServiceDescription/sourceUri"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute service.ecore#//ServiceDescription/contentType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute service.ecore#//ServiceDescription/lifeCycleState"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute service.ecore#//ServiceDescription/serviceType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference service.ecore#//ServiceDescription/serviceClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference service.ecore#//ServiceDescription/operation"/>
+    </genClasses>
+    <genClasses ecoreClass="service.ecore#//ServiceOperationDescription">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute service.ecore#//ServiceOperationDescription/operationId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute service.ecore#//ServiceOperationDescription/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute service.ecore#//ServiceOperationDescription/operationRequestUri"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute service.ecore#//ServiceOperationDescription/operationResponseUri"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference service.ecore#//ServiceOperationDescription/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute service.ecore#//ServiceOperationDescription/operationType"/>
+    </genClasses>
+    <genClasses ecoreClass="service.ecore#//DiscoveryProviderService">
+      <genOperations ecoreOperation="service.ecore#//DiscoveryProviderService/announce">
+        <genParameters ecoreParameter="service.ecore#//DiscoveryProviderService/announce/description"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="service.ecore#//DiscoveryConsumerService">
+      <genOperations ecoreOperation="service.ecore#//DiscoveryConsumerService/onServiceAnnounced">
+        <genParameters ecoreParameter="service.ecore#//DiscoveryConsumerService/onServiceAnnounced/description"/>
+      </genOperations>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

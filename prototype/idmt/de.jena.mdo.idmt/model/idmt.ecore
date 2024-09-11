@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="idmt" nsURI="http://jena.de/idmt/1.0" nsPrefix="idmt">
+  <eAnnotations source="Version">
+    <details key="value" value="1.0"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="basePackage" value="de.jena.mdo.idmt"/>
+    <details key="complianceLevel" value="17.0"/>
+    <details key="fileExtensions" value="idmt"/>
+    <details key="oSGiCompatible" value="true"/>
+    <details key="resource" value="XMI"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="ARequest">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A request object containing all information about request paramters that are needed."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestId" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" iD="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Identifier for this request. Each request gets an own unique identifier"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="consumerId" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Identifier for the caller / the requestor, that is the consumer of the service"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="config" eType="#//AModelConfiguration"
+        containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The anonymization-model configuration / setup parameters&#xA;"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="srcUri" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The source URI from where the request was sent&#xA;"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="contentType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="application/csv">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The expected content type&#xA;"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AResponse">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A response object containing all information about a result and its meta data"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestId" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" iD="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The correlated request id, this reponse belongs to."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="config" eType="#//AModelConfiguration"
+        containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The configuration this result based upon."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//ResponseType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The response type / kind"/>
+      </eAnnotations>
+      <eAnnotations source="Codec">
+        <details key="eClassUri" value="http://gecko/address#//Person"/>
+        <details key="identityInfo"/>
+        <details key="typeInfop"/>
+        <details key="name"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="statusMessage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The status message of a response. It contains human readable information, like error messages"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resultUri" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="An URI under which the result, anonymized data set is available"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resultContentType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="application/csv">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The content type for the resulting data set"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="elapsedTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The actual runtime in ms."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="remainingTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The remaining runtime in ms."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ResponseType">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Defines the type of a response"/>
+    </eAnnotations>
+    <eLiterals name="DEFAULT">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Default response for a synchronous or asynchronous call"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="DRY_RESPONSE" value="1" literal="DRY_RESPONSE">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Reponse for a dry run request"/>
+      </eAnnotations>
+      <eAnnotations source="Codec">
+        <details key="mappedEClassUri" value="http://gecko/address#//Person"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ASYNC_RESPONSE" value="2">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Response for an asynchropnous call that returned intermediate information immediately. This response type can be used for very long running operations. The information can be used to get the request status using the corresponding operation"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ASYNC_RUNNING" value="3">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Response for an asynchropnous call that returned intermediate information immediately. This response type can be used for very long running operations and status request. It indicates, that the process is still running. If the result finished the ASYNC RESPONSE will be provided."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ASYNC_CANCELLED" value="4">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Response for an asynchropnous call that returned intermediate information immediately. This response type can be used for very long running operations and status request. It indicates, that the process is still running. If the result finished the ASYNC RESPONSE will be provided."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ERROR" value="10"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ADryRunResponse" eSuperTypes="#//AResponse">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A response object containing all information about a dry run execution. It onlöy contains meta data and not result data."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="estCalcTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The estimated runtime in ms."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AModelConfiguration">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A configuration object for an anonymization model. "/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="strategy" eType="#//ModelStrategyType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="features" upperBound="-1"
+        eType="#//AFeatureConfiguration" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A list of column specifica configuration for this anonymization model."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AFeatureConfiguration">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A column / field specific configuration object for an anonymization model. "/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The name / identifier of a field or column"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The feature type information (Date, Time, Number, String)&#xA;"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="strategy" eType="#//FeatureStrategyType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A strategy how to interpret this field in the anonymization process."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AnonymizationService" abstract="true"
+      interface="true">
+    <eOperations name="doAnonymizationDryRun" lowerBound="1" eType="#//ADryRunResponse">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Return a best guessing for the runtime of this anonymization process. This method returns immediatly.&#xA;&#xA;Request Topic:&#xA;&lt;prefix>/anonymization/dryRun/req&#xA;Response Topic:&#xA;&lt;prefix>/anonymization/dryRun/resp"/>
+      </eAnnotations>
+      <eAnnotations source="Service">
+        <details key="requestUri" value="${prefix}/anonymization/dryRun/req/${providerId}"/>
+        <details key="responseUri" value="${prefix}/anonymization/dryRun/resp/${consumerId}/${requestId}"/>
+      </eAnnotations>
+      <eParameters name="request" lowerBound="1" eType="#//ARequest"/>
+    </eOperations>
+    <eOperations name="doAnonymization" lowerBound="1" eType="#//AResponse">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Executes an anonymization process synchronously. This call is blocking and only returns once the execution finished. Even on error this method returns a result, that contains the corresponding error information.&#xA;&#xA;Request Topic:&#xA;&lt;prefix>/anonymization/sync/req&#xA;Response Topic:&#xA;&lt;prefix>/anonymization/sync/resp"/>
+      </eAnnotations>
+      <eAnnotations source="Service">
+        <details key="requestUri" value="${prefix}/anonymization/sync/req/${providerId}"/>
+        <details key="responseUri" value="${prefix}/anonymization/sync/resp/${consumerId}/${requestId}"/>
+      </eAnnotations>
+      <eParameters name="request" lowerBound="1" eType="#//ARequest"/>
+    </eOperations>
+    <eOperations name="doAnonymizationAsync" lowerBound="1">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Executes an anonymization process asynchronously. This call is non-blocking and returns immediately with a promise. Once the execution is finished, the promise resolves with the result. If an error occurs this method also resolves with  a result, that contains the corresponding error information.&#xA;&#xA;Request Topic:&#xA;&lt;prefix>/anonymization/async/req&#xA;Response Topic:&#xA;&lt;prefix>/anonymization/async/resp"/>
+      </eAnnotations>
+      <eAnnotations source="Service">
+        <details key="requestUri" value="${prefix}/anonymization/async/req/${providerId}"/>
+        <details key="responseUri" value="${prefix}/anonymization/async/resp/${consumerId}/${requestId}"/>
+      </eAnnotations>
+      <eGenericType eClassifier="#//ResultPromise">
+        <eTypeArguments eClassifier="#//AResponse"/>
+      </eGenericType>
+      <eParameters name="request" lowerBound="1" eType="#//ARequest"/>
+    </eOperations>
+    <eOperations name="doAnonymizationImmediateAsync" lowerBound="1" eType="#//AResponse">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Executes an anonymization process asynchronously. This call is non-blocking and returns immediately with a result object. The response object contains intermediate information. These information can be used to get the current request status, using the corresponding operation.&#xA;&#xA;Request Topic:&#xA;&lt;prefix>/anonymization/immediate/req&#xA;Response Topic:&#xA;&lt;prefix>/anonymization/immediate/resp"/>
+      </eAnnotations>
+      <eAnnotations source="Service">
+        <details key="requestUri" value="${prefix}/anonymization/immediate/req/${providerId}"/>
+        <details key="responseUri" value="${prefix}/anonymization/immediate/resp/${consumerId}/${requestId}"/>
+      </eAnnotations>
+      <eParameters name="request" lowerBound="1" eType="#//ARequest"/>
+    </eOperations>
+    <eOperations name="cancelRequest">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Cancels a current request. The response is returned as soon as cancellation was executed either successfully or not.&#xA;&#xA;Topic:&#xA;&lt;prefix>/anonymization/immediate/cancel"/>
+      </eAnnotations>
+      <eAnnotations source="Service">
+        <details key="requestUri" value="${prefix}/anonymization/cancel/${providerId}/${requestId}"/>
+      </eAnnotations>
+      <eGenericType eClassifier="#//ResultPromise">
+        <eTypeArguments eClassifier="#//AResponse"/>
+      </eGenericType>
+      <eParameters name="providerId" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="requestId" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="getRequestStatus" eType="#//AResponse">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="When a immediate asynchronous call was executed a result is returned immediately even if the operation is still in progress. The get information about the running operation, this method can be called.&#xA;&#xA;Topic:&#xA;&lt;prefix>/anonymization/immediate/status"/>
+      </eAnnotations>
+      <eAnnotations source="Service">
+        <details key="responseUri" value="${prefix}/anonymization/status/${consumerId}/${requestId}"/>
+      </eAnnotations>
+      <eParameters name="request" lowerBound="1" eType="#//ARequest"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IDMTModel" eSuperTypes="#//AModelConfiguration">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Example of a concrete implementation specific anonymization model configuration for the IDMT algorythm"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="k" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="3">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Datensatzbasiert"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="regGrad" lowerBound="1"
+        upperBound="-1" eType="#//RegularizerGrad" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Datensatzbasiert"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="noisy" lowerBound="1" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Datensatzbasiert"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IDMTFeature" eSuperTypes="#//AFeatureConfiguration">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="age" lowerBound="1" upperBound="-1"
+        eType="#//ComputeDistanceType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="RegularizerType">
+    <eLiterals name="DEFAULT" literal="regularizor_default"/>
+    <eLiterals name="REGULARIZOR" value="1" literal="regularizor"/>
+    <eLiterals name="ANTI" value="2" literal="regularizor_anti"/>
+    <eLiterals name="MINUS" value="3" literal="regularizor_minus"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="GradType">
+    <eLiterals name="F" literal="grad_f"/>
+    <eLiterals name="REG" value="1" literal="grad_reg"/>
+    <eLiterals name="ANTI" value="2" literal="grad_anti"/>
+    <eLiterals name="MINUS" value="3" literal="grad_minus"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RegularizerGrad">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reg" lowerBound="1" eType="#//RegularizerType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="grad" lowerBound="1" eType="#//GradType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ModelStrategyType">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A strategy enumeration, how to handle a configuration. This stategy defines, how the column should be handled as well."/>
+    </eAnnotations>
+    <eLiterals name="PER_DATASET">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The whole dataset resp. model configuration has priority. It is applied to all fields / column in the dataset. Column specific configruation overwrite this general setup."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="PER_COLUMN_IGNORE" value="1">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The whole dataset resp. model configuration is completely ignored. Only the column specific configruation are taken into account. Columns in the dataset that have no configuration are ignored"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="PER_COLUMN_AS_IS" value="1">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The whole dataset resp. model configuration is completely ignored. Only the column specific configruation are taken into account. Columns in the dataset that have no configuration are ignored"/>
+      </eAnnotations>
+    </eLiterals>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ComputeDistanceType">
+    <eLiterals name="DISTANCE_SQUARED" literal="compute_distance_squared"/>
+    <eLiterals name="DISTANCE_DIFFERENCE" value="1" literal="compute_distance_difference"/>
+    <eLiterals name="DISTANCE_CATEGORICAL_50" value="2" literal="compute_distance_categorical_50"/>
+    <eLiterals name="DISTANCE_CATEGORICAL_100" value="3" literal="compute_distance_categorical_100"/>
+    <eLiterals name="DISTANCE_CATEGORICAL_200" value="4" literal="compute_distance_categorical_200"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="FeatureStrategyType">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A strategy enumeration, how to interpret a field / column in the anonymization process."/>
+    </eAnnotations>
+    <eLiterals name="ANONYMIZE">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Anonymize this field / column"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="IGNORE" value="1">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Ignore this column. This can be used for deny listing a column."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="DO_NOT_ANONYMIZE" value="2" literal="DO_NOT_ANONYMIZE">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Take this column as it is. This can be used for deny listing a column from anonymization."/>
+      </eAnnotations>
+    </eLiterals>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="ResultPromise" instanceClassName="org.osgi.util.promise.Promise">
+    <eTypeParameters name="T">
+      <eBounds eClassifier="#//AResponse"/>
+    </eTypeParameters>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="AnonymizationServiceLifeCycleState">
+    <eLiterals name="ANNOUNCE"/>
+    <eLiterals name="CHANGE" value="1"/>
+    <eLiterals name="REMOVE" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AnonymizationServiceDescription" eSuperTypes="service.ecore#//ServiceDescription">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Example of a custom implementation of an anonymization service description."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ArxModel" eSuperTypes="#//AModelConfiguration">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Example configurtion for the ARX Library"/>
+    </eAnnotations>
+  </eClassifiers>
+</ecore:EPackage>
