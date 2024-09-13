@@ -35,7 +35,7 @@ import jakarta.ws.rs.DELETE;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
-import jakarta.ws.rs.PathParam;
+import jakarta.ws.rs.QueryParam;
 import jakarta.ws.rs.WebApplicationException;
 import jakarta.ws.rs.core.Response;
 
@@ -59,17 +59,17 @@ public class EPackageResourceImpl implements EPackageResource {
 	}
 
 	@GET
-	@Path("load/{ePackageUri}")
+	@Path("load")
 	@Operation(description = "Loads and returns an EPackage for an specified ePackageUri.")
 	@Override
-	public EPackage load(@PathParam("ePackageUri") String ePackageUri) throws WebApplicationException {
+	public EPackage load(@QueryParam("ePackageUri") String ePackageUri) throws WebApplicationException {
 		LOGGER.log(Level.DEBUG, "Load package {0}", ePackageUri);
 		
 		return repo.loadEPackage(ePackageUri);
 	}
 
 	@GET
-	@Path("loadall/{ePackageUri}")
+	@Path("loadall")
 	@Operation(description = "Loads and returns all EPackage for an specified ePackageUri.")
 	@Override
 	public EList<String> loadAll() throws WebApplicationException {
@@ -78,7 +78,7 @@ public class EPackageResourceImpl implements EPackageResource {
 	}
 
 	@POST
-	@Path("save/")
+	@Path("save")
 	@Operation(description = "Saves an EObject.")
 	@Override
 	public Response save(EPackage ePackage) {
@@ -88,10 +88,10 @@ public class EPackageResourceImpl implements EPackageResource {
 	}
 
 	@POST
-	@Path("saveall/")
+	@Path("saveall")
 	@Operation(description = "Saves a list of Epackages.")
 	@Override
-	public Response saveAll(EList<EPackage> ePackages) {
+	public Response saveAll(@QueryParam("ePackages") EList<EPackage> ePackages) {
 		LOGGER.log(Level.DEBUG, "Save {0} ePackages.", ePackages.size());
 		List<EPackage> old = new ArrayList<>();
 		for (EPackage ePackage : ePackages) {	
@@ -104,20 +104,20 @@ public class EPackageResourceImpl implements EPackageResource {
 	}
 	
 	@DELETE
-	@Path("delete/{ePackageUri}")
+	@Path("delete")
 	@Operation(description = "Deletes an ePackage with an specified ePackageUri.")
 	@Override
-	public Response delete(String ePackageUri) throws WebApplicationException {
+	public Response delete(@QueryParam("ePackageUri") String ePackageUri) throws WebApplicationException {
 		LOGGER.log(Level.DEBUG, "Delete ePackage.{0}", ePackageUri);
 		EPackage previous = repo.deleteEPackage(ePackageUri);
 		return Response.ok(previous).build();
 	}
 
 	@GET
-	@Path("exists/{ePackageUri}")
+	@Path("exists")
 	@Operation(description = "Check existens of an EObject with an specified eClassUri and id.")
 	@Override
-	public Response exists(String ePackageUri) throws WebApplicationException {
+	public Response exists(@QueryParam("ePackageUri") String ePackageUri) throws WebApplicationException {
 		boolean exists = repo.existEPackage(ePackageUri);
 		return Response.accepted(exists).build();
 	}

@@ -60,10 +60,10 @@ public class EObjectResourceImpl implements EObjectResource {
 	}
 
 	@GET
-	@Path("load/{eClassUri}/{id}")
+	@Path("load/{id}")
 	@Operation(description = "Loads and returns an EObject for an specified eClassUri and id.")
 	@Override
-	public EObject load(@PathParam("eClassUri") String eClassUri, @PathParam("id") String id)
+	public EObject load(@QueryParam("eClassUri") String eClassUri, @PathParam("id") String id)
 			throws WebApplicationException {
 		EClassifier eClassifier = getEClassifier(eClassUri);
 		if (eClassifier instanceof EClass eClass) {
@@ -82,28 +82,28 @@ public class EObjectResourceImpl implements EObjectResource {
 	}
 
 	@GET
-	@Path("loadall/{eClassUri}")
+	@Path("loadall")
 	@Operation(description = "Loads and returns a list of EObject for an specified eClassUri.")
 	@Override
-	public EList<EObject> loadAll(@PathParam("eClassUri") String eClassUri,
+	public EList<EObject> loadAll(@QueryParam("eClassUri") String eClassUri,
 			@QueryParam("projection") EList<String> projections) throws WebApplicationException {
 		return repo.loadAll(eClassUri, projections);
 	}
 
 	@POST
-	@Path("save/")
+	@Path("save")
 	@Operation(description = "Saves an EObject.")
 	@Override
-	public EObject save(EObject eObject) {
+	public EObject save(@QueryParam("eObject") EObject eObject) {
 		repo.save(eObject);
 		return eObject;
 	}
 
 	@POST
-	@Path("saveall/")
+	@Path("saveall")
 	@Operation(description = "Saves a list of EObjects.")
 	@Override
-	public EList<EObject> saveAll(EList<EObject> eObjects) {
+	public EList<EObject> saveAll(@QueryParam("eObjects") EList<EObject> eObjects) {
 		for (EObject eObject : eObjects) {
 			repo.save(eObject);
 		}
@@ -111,10 +111,10 @@ public class EObjectResourceImpl implements EObjectResource {
 	}
 
 	@DELETE
-	@Path("delete/{eClassUri}/{id}")
+	@Path("delete/{id}")
 	@Operation(description = "Deletes an EObject with an specified eClassUri and id.")
 	@Override
-	public Response delete(@PathParam("eClassUri") String eClassUri, @PathParam("id") String id)
+	public Response delete(@QueryParam("eClassUri") String eClassUri, @PathParam("id") String id)
 			throws WebApplicationException {
 		EClassifier eClassifier = getEClassifier(eClassUri);
 		if (eClassifier instanceof EClass eClass) {
@@ -131,10 +131,10 @@ public class EObjectResourceImpl implements EObjectResource {
 	}
 
 	@GET
-	@Path("exists/{eClassUri}/{id}")
+	@Path("exists{id}")
 	@Operation(description = "Check existens of an EObject with an specified eClassUri and id.")
 	@Override
-	public Response exists(@PathParam("eClassUri") String eClassUri, @PathParam("id") String id)
+	public Response exists(@QueryParam("eClassUri") String eClassUri, @PathParam("id") String id)
 			throws WebApplicationException {
 		EClassifier eClassifier = getEClassifier(eClassUri);
 		if (eClassifier instanceof EClass eClass) {

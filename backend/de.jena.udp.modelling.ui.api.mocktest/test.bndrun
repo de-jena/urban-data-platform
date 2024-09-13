@@ -101,4 +101,6 @@
 	biz.aQute.gogo.commands.provider;version='[1.11.0,1.11.1)',\
 	org.apache.felix.configadmin.plugin.interpolation;version='[1.2.8,1.2.9)',\
 	org.apache.felix.gogo.runtime;version='[1.1.6,1.1.7)',\
-	org.apache.felix.configadmin;version='[1.9.26,1.9.27)'
+	org.apache.felix.configadmin;version='[1.9.26,1.9.27)',\
+	assertj-core;version='[3.24.2,3.24.3)',\
+	org.gecko.emf.osgi.mocktest;version=snapshot

@@ -33,7 +33,7 @@ import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.gecko.emf.osgi.example.model.basic.BasicPackage;
-import org.gecko.emf.repository.EMFRepository;
+import org.gecko.emf.repository.query.QueryRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -61,7 +61,7 @@ public class EPackageResourceImplTest {
 	private static final Map<String, EAttribute> OPTIONS = Collections.singletonMap("OVERWRITE_PRIMARY_KEY_EATTRIBUTE",
 			EcorePackage.Literals.EPACKAGE__NS_URI);
 	private static final BasicPackage bp = BasicPackage.eINSTANCE;
-	private ServiceRegistration<EMFRepository> repoRegistration;
+	private ServiceRegistration<QueryRepository> repoRegistration;
 	@InjectBundleContext
 	BundleContext bundleCtx;
 	@Mock
@@ -70,20 +70,20 @@ public class EPackageResourceImplTest {
 	private Registry registry;
 
 	@BeforeEach
-	public void before(@InjectBundleContext BundleContext ctx, @Mock EMFRepository repoMock) {
+	public void before(@InjectBundleContext BundleContext ctx, @Mock QueryRepository repoMock) {
 		Dictionary<String, Object> options = new Hashtable<>();
 		options.put(Constants.SERVICE_RANKING, Integer.valueOf(1000));
 		options.put("repo_id", "de.jena.modelling");
 
-		repoRegistration = ctx.registerService(EMFRepository.class, new PrototypeServiceFactory<EMFRepository>() {
+		repoRegistration = ctx.registerService(QueryRepository.class, new PrototypeServiceFactory<QueryRepository>() {
 			@Override
-			public EMFRepository getService(Bundle bundle, ServiceRegistration<EMFRepository> registration) {
+			public QueryRepository getService(Bundle bundle, ServiceRegistration<QueryRepository> registration) {
 				return repoMock;
 			}
 
 			@Override
-			public void ungetService(Bundle bundle, ServiceRegistration<EMFRepository> registration,
-					EMFRepository service) {
+			public void ungetService(Bundle bundle, ServiceRegistration<QueryRepository> registration,
+					QueryRepository service) {
 			}
 		}, options);
 	}
@@ -94,7 +94,7 @@ public class EPackageResourceImplTest {
 	}
 
 	@Test
-	void testSave(@InjectService EMFRepository repo, @InjectService EPackageResource pr) {
+	void testSave(@InjectService QueryRepository repo, @InjectService EPackageResource pr) {
 		pr.save(bp);
 
 		verify(repo).save(eqEObject(bp), eq(OPTIONS));
@@ -102,7 +102,7 @@ public class EPackageResourceImplTest {
 	}
 
 	@Test
-	void testSaveAll(@InjectService EMFRepository repo, @InjectService EPackageResource pr) {
+	void testSaveAll(@InjectService QueryRepository repo, @InjectService EPackageResource pr) {
 		Response response = pr.saveAll(ECollections.asEList(bp, EcorePackage.eINSTANCE));
 
 		assertThat(response.getEntity()).isInstanceOf(EList.class).asList().size().isEqualTo(2);
@@ -114,7 +114,7 @@ public class EPackageResourceImplTest {
 	}
 
 	@Test
-	void testLoadFromRegistry(@InjectService EMFRepository repo, @InjectService EPackageResource pr) {
+	void testLoadFromRegistry(@InjectService QueryRepository repo, @InjectService EPackageResource pr) {
 		when(repo.getResourceSet()).thenReturn(rs);
 		when(rs.getPackageRegistry()).thenReturn(registry);
 		when(registry.getEPackage(bp.getNsURI())).thenReturn(bp);
@@ -125,7 +125,7 @@ public class EPackageResourceImplTest {
 	}
 
 	@Test
-	void testLoadFromRepo(@InjectService EMFRepository repo, @InjectService EPackageResource pr) {
+	void testLoadFromRepo(@InjectService QueryRepository repo, @InjectService EPackageResource pr) {
 		when(repo.getResourceSet()).thenReturn(rs);
 		when(rs.getPackageRegistry()).thenReturn(registry);
 		when(registry.getEPackage(bp.getNsURI())).thenReturn(null);
@@ -136,14 +136,14 @@ public class EPackageResourceImplTest {
 	}
 
 	@Test
-	void testLoadAll(@InjectService EMFRepository repo, @InjectService EPackageResource pr) {
+	void testLoadAll(@InjectService QueryRepository repo, @InjectService EPackageResource pr) {
 		pr.loadAll();
 
 		verify(repo).getAllEObjects(eq(EcorePackage.Literals.EPACKAGE), eq(OPTIONS));
 	}
 
 	@Test
-	void testDelete(@InjectService EMFRepository repo, @InjectService EPackageResource pr) {
+	void testDelete(@InjectService QueryRepository repo, @InjectService EPackageResource pr) {
 		when(repo.getEObject(EcorePackage.Literals.EPACKAGE, bp.getNsURI(), OPTIONS)).thenReturn(bp);
 		
 		Response response = pr.delete(bp.getNsURI());
@@ -154,7 +154,7 @@ public class EPackageResourceImplTest {
 	}
 	
 	@Test
-	void testExist(@InjectService EMFRepository repo, @InjectService EPackageResource pr) {
+	void testExist(@InjectService QueryRepository repo, @InjectService EPackageResource pr) {
 		when(repo.getResourceSet()).thenReturn(rs);
 		when(rs.getPackageRegistry()).thenReturn(registry);
 		when(registry.getEPackage(bp.getNsURI())).thenReturn(null);

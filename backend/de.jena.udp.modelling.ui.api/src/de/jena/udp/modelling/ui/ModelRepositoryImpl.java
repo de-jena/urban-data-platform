@@ -31,7 +31,6 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.gecko.emf.repository.EMFRepository;
 import org.gecko.emf.repository.mongo.annotations.RequireMongoEMFRepository;
 import org.gecko.emf.repository.query.IQueryBuilder;
 import org.gecko.emf.repository.query.QueryRepository;
@@ -49,7 +48,7 @@ public class ModelRepositoryImpl implements ModelRepository {
 	private static final Map<String, EAttribute> OPTIONS = Collections.singletonMap("OVERWRITE_PRIMARY_KEY_EATTRIBUTE", EcorePackage.Literals.EPACKAGE__NS_URI);
 
 	@Reference(target = "(repo_id=de.jena.modelling)", scope = ReferenceScope.PROTOTYPE_REQUIRED)
-	private EMFRepository repo;
+	private QueryRepository repo;
 	
 	@Override
 	public EClassifier getEClassifier(String eClassifierUri) {
@@ -64,7 +63,7 @@ public class ModelRepositoryImpl implements ModelRepository {
 	public EList<EObject> loadAll(String eClassUri, List<String> projections) {
 		EClassifier eClassifier = getEClassifier(eClassUri);
 		if (eClassifier instanceof EClass eClass) {
-			IQueryBuilder query = ((QueryRepository) repo).createQueryBuilder();
+			IQueryBuilder query = repo.createQueryBuilder();
 			
 			for (EStructuralFeature structuralFeature : eClass.getEAllStructuralFeatures()) {
 				if(projections.contains(structuralFeature.getName())) {
@@ -72,7 +71,7 @@ public class ModelRepositoryImpl implements ModelRepository {
 				}
 			}
 			
-			List<EObject> eObject = ((QueryRepository) repo).getEObjectsByQuery(eClass, query.build());
+			List<EObject> eObject = repo.getEObjectsByQuery(eClass, query.build());
 			if (eObject.isEmpty()) {
 				return ECollections.emptyEList();
 			}
