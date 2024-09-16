@@ -1,0 +1,5 @@
+paho-mqtt == 1.6.1
+pyecoregen == 0.5.0
+configparser == 7.1.0
+flask ==  3.0.3
+flask_mqtt == 1.2.1

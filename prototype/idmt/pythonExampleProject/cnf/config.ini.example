@@ -1,0 +1,13 @@
+[MQTT]
+client_id = AclientId
+clean_session = yes
+username = example_user
+password = example_password
+host = example.de
+port = 1883
+
+[SERVICE]
+prefix = quark
+providerId = banane
+requestId = a123
+consumerId = a123
