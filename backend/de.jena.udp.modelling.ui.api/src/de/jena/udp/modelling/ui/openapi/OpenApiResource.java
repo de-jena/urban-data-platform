@@ -58,7 +58,7 @@ import jakarta.ws.rs.core.UriInfo;
 @Component(name = OpenApiResource.COMPONENT_NAME, service = OpenApiResource.class, scope = ServiceScope.PROTOTYPE)
 @JakartarsResource
 @HttpWhiteboardResource(pattern = "/swagger/*", prefix = "/swagger")
-@JakartarsApplicationSelect("(applicationId=updui)")
+@JakartarsApplicationSelect("(applicationId=modelling-api)")
 @Path("/openapi.{type:json|yaml}")
 public class OpenApiResource extends BaseOpenApiResource {
 

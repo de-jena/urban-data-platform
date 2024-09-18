@@ -5,7 +5,7 @@
   	{
 	    "mongo.instances": "de.jena",
 		"de.jena.baseUris" : "mongodb://mongodb/",
-		"de.jena.databases" : "udp, modelling", 
+		"de.jena.databases" : "udp,modelling", 
 		"de.jena.udp.repoType" : "PROTOTYPE", 
 		"de.jena.modelling.repoType" : "PROTOTYPE" 
 	}
