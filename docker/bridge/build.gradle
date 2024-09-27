@@ -1,0 +1,25 @@
+/*
+ * build Gradle build script
+ */
+
+task prepareDocker(){
+	def stageDir = file('content')
+	def runtimeDir = new File(stageDir, 'runtime')
+	doFirst {
+		stageDir.deleteDir()
+    }
+    doLast {
+		println "Prepare Docker build"
+		stageDir.mkdirs()
+	     // copy all necessary files to  build/docker/ dir
+    	copy {
+	        from new File("../../backend/de.jena.mqttbridge.runtime/generated/distributions/executable/mqttbridge.jar")
+	        into stageDir
+	        rename("mqttbridge.jar", "de.jena.mqttbridge.runtime.jar")
+	    }
+	    copy {
+	        from new File("../../backend/de.jena.mqttbridge.runtime/runtime/")
+	        into new File(stageDir, "runtime")
+	    }
+    }
+}

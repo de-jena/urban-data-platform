@@ -2,3 +2,4 @@ pluginManagement {
   rootProject.name="de.jena.udp"
 }
 include(':broker')
+include(':bridge')
