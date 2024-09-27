@@ -22,6 +22,7 @@ import org.eclipse.emf.common.util.ECollections;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EPackage;
 import org.gecko.emf.json.annotation.RequireEMFJson;
+import org.gecko.emf.rest.annotations.RequireEMFMessageBodyReaderWriter;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.component.annotations.ReferenceScope;
@@ -43,6 +44,7 @@ import jakarta.ws.rs.core.Response;
 @JakartarsResource
 @Component(name = EPackageResourceImpl.COMPONENT_NAME, service = EPackageResource.class, scope = ServiceScope.PROTOTYPE)
 @JakartarsApplicationSelect("(applicationId=modelling-api)")
+@RequireEMFMessageBodyReaderWriter
 @Path("/epackage")
 public class EPackageResourceImpl implements EPackageResource {
 	private static final Logger LOGGER = System.getLogger(EPackageResourceImpl.class.getName());
