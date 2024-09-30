@@ -67,6 +67,18 @@ pipeline  {
 				}				
 			}
 		}
+
+		stage('DAANSE Dashboard UI build') {
+
+			steps {
+				echo "I am building Modelling UI client on branch: ${env.GIT_BRANCH}"
+
+				dir("legacy.dashboard.client") {
+					sh "npm install"
+					sh "npm run build-only"
+				}				
+			}
+		}
 		
 		stage('Backend build') {
 
