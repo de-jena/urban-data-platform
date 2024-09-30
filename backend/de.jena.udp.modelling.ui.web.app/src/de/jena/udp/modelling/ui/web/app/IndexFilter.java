@@ -51,8 +51,6 @@ public class IndexFilter implements Filter {
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
 
-		System.err.println("======================= FILTER CALLED");
-		
 		if (request instanceof HttpServletRequest) {
 			((HttpServletResponse) response).sendRedirect("index.html");
 		}
