@@ -1,9 +1,9 @@
 -init: \
-	${system-allow-fail; npm run build-only --prefix ../../frontend/model-ui/}
+	${system-allow-fail; npm run build-only --prefix ../../../legacy.dashboard.client/}
 	
 -includeresource: \
-	content=-../../frontend/model-ui/dist
-	
+	content=-../../../legacy.dashboard.client/dist,\
+	content/configs=configs
 -buildpath: \
 	org.osgi.annotation.bundle,\
 	org.osgi.service.component.annotations,\

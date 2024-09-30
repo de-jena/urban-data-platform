@@ -34,6 +34,7 @@ import org.gecko.emf.osgi.constants.EMFNamespaces;
 import org.gecko.osgi.messaging.Message;
 import org.gecko.osgi.messaging.MessagingService;
 import org.gecko.qvt.osgi.api.ModelTransformator;
+import org.osgi.annotation.bundle.Requirement;
 import org.osgi.service.component.ComponentServiceObjects;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
@@ -51,6 +52,7 @@ import de.jena.udp.model.trafficos.trafficlight.TLSignalState;
 
 @RequireEMFJson
 @Component
+@Requirement(namespace = "osgi.identity", filter = "(osgi.identity=de.jena.ilsa.sensinact.mmt)")
 public class TrafficLight {
 
 	private static final Logger logger = System.getLogger(TrafficLight.class.getName());
