@@ -16,19 +16,40 @@ pipeline  {
 	}
 
 	stages {
-		stage('clean workspace and checkout') {
+		stage('clean workspace') {
 			steps {
 				deleteDir()
-				checkout scm
 			}
 		}
-
+		stage('Checkout') {
+			steps {
+				// Get UDP from GitHub
+				checkout([  
+				           $class: 'GitSCM', 
+				           branches: [[name: 'refs/heads/main']], 
+				           doGenerateSubmoduleConfigurations: false, 
+				           extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'udp']], 
+				           submoduleCfg: [], 
+				           userRemoteConfigs: [[url: 'https://github.com/de-jena/urban-data-platform.git']]
+				       ])
+				// Get DAANSE from GitHub
+				checkout([  
+				           $class: 'GitSCM', 
+				           branches: [[name: 'refs/heads/main']], 
+				           doGenerateSubmoduleConfigurations: false, 
+				           extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'legacy.dashboard.client']], 
+				           submoduleCfg: [], 
+				           userRemoteConfigs: [[url: 'https://github.com/eclipse-daanse/legacy.dashboard.client.git']]
+				       ])
+		       }
+		}
+		
 		stage('5G Democlient build') {
 
 			steps {
 				echo "I am building 5G Demo client on branch: ${env.GIT_BRANCH}"
 
-				dir("frontend/5gDemo") {
+				dir("udp/frontend/5gDemo") {
 					sh "npm install"
 					sh "npm run build"
 				}				
@@ -40,7 +61,7 @@ pipeline  {
 			steps {
 				echo "I am building Modelling UI client on branch: ${env.GIT_BRANCH}"
 
-				dir("frontend/model-ui") {
+				dir("udp/frontend/model-ui") {
 					sh "npm install"
 					sh "npm run build-only"
 				}				
@@ -52,7 +73,7 @@ pipeline  {
 			steps {
 				echo "I am building app on branch: ${env.GIT_BRANCH}"
 
-				dir("backend") {
+				dir("udp/backend") {
 					sh "./gradlew clean build -x testOSGi --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2"
 				}				
 
@@ -64,7 +85,7 @@ pipeline  {
 			steps {
 				echo "I am running integration tests on branch: ${env.GIT_BRANCH}"
 
-//				dir("backend") {
+//				dir("udp/backend") {
 //					script {
 //						try {
 //	                        sh './gradlew testOSGi --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2 --no-daemon' //run a gradle task
@@ -82,7 +103,7 @@ pipeline  {
 			steps {
 				echo "I am building app on branch: ${env.GIT_BRANCH}"
 
-				dir("backend") {
+				dir("udp/backend") {
 					sh "./gradlew :de.jena.udp.sensinact.runtime:resolve.de.jena.upd.sensinact.runtime.base --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2"
 				}
 			}
@@ -95,7 +116,7 @@ pipeline  {
 			steps {
 				echo "I am building app on branch: ${env.GIT_BRANCH}"
 
-				dir("backend") {
+				dir("udp/backend") {
 					sh "./gradlew :de.jena.udp.sensinact.runtime:export.de.jena.upd.sensinact.runtime.docker --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2"
 				}
 			}
@@ -106,7 +127,7 @@ pipeline  {
             steps {
                 echo "I am building app on branch: ${env.GIT_BRANCH}"
 
-				dir("backend") {
+				dir("udp/backend") {
                     sh "./gradlew :de.jena.mqttbridge.runtime:resolve.mqttbridge --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2"
                 }
             }
@@ -119,7 +140,7 @@ pipeline  {
             steps {
                 echo "I am building app on branch: ${env.GIT_BRANCH}"
 
-				dir("backend") {
+				dir("udp/backend") {
                     sh "./gradlew :de.jena.mqttbridge.runtime:export.mqttbridge --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2"
                 }
             }
@@ -132,7 +153,7 @@ pipeline  {
 			steps  {
 				echo "I am preparing docker: ${env.GIT_BRANCH}"
 				
-				dir("docker") {
+				dir("udp/docker") {
 					sh "./gradlew prepareDocker --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2"
 				}
 			}
@@ -148,7 +169,7 @@ pipeline  {
 				echo "I am building and publishing a docker image on branch: ${env.GIT_BRANCH}"
 
 //				step([$class: 'DockerBuilderPublisher',
-//				      dockerFileDirectory: 'docker/broker',
+//				      dockerFileDirectory: 'udp/docker/broker',
 //							cloud: 'docker',
 //							tagsString: """registry-git.jena.de/scj/udp-broker:latest
 //                                        registry-git.jena.de/scj/udp-broker:0.1.0.${VERSION}""",
@@ -156,7 +177,7 @@ pipeline  {
 //							pushCredentialsId: 'github-jena'])
 
 				step([$class: 'DockerBuilderPublisher',
-				      dockerFileDirectory: 'docker/broker',
+				      dockerFileDirectory: 'udp/docker/broker',
 							cloud: 'docker',
 							tagsString: """devel.data-in-motion.biz:6000/scj/udp-broker:latest
 							            devel.data-in-motion.biz:6000/scj/udp-broker:0.1.0.${VERSION}""",
@@ -171,7 +192,7 @@ pipeline  {
             steps  {
                 echo "I am building and publishing a docker image on branch: ${env.GIT_BRANCH}"
 //                step([$class: 'DockerBuilderPublisher',
-//                    dockerFileDirectory: 'docker/bridge',
+//                    dockerFileDirectory: 'udp/docker/bridge',
 //                             cloud: 'docker',
 //                             tagsString: """registry-git.jena.de/scj/mqtt-bridge:latest
 //                                         registry-git.jena.de/scj/mqtt-bridge:0.1.0.${VERSION}""",
@@ -179,7 +200,7 @@ pipeline  {
 //                             pushCredentialsId: 'github-jena'])
 
                 step([$class: 'DockerBuilderPublisher',
-                      dockerFileDirectory: 'docker/bridge',
+                      dockerFileDirectory: 'udp/docker/bridge',
                             cloud: 'docker',
                             tagsString: """devel.data-in-motion.biz:6000/scj/mqtt-bridge:latest
                                         devel.data-in-motion.biz:6000/scj/mqtt-bridge:0.1.0.${VERSION}""",
