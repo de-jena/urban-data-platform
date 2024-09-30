@@ -28,6 +28,9 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.sensinact.core.push.DataUpdate;
 import org.eclipse.sensinact.core.push.dto.GenericDto;
+import org.eclipse.sensinact.gateway.geojson.Coordinates;
+import org.eclipse.sensinact.gateway.geojson.Point;
+import org.eclipse.sensinact.model.core.provider.Admin;
 import org.eclipse.sensinact.model.core.provider.Provider;
 import org.gecko.emf.json.annotation.RequireEMFJson;
 import org.gecko.emf.osgi.constants.EMFNamespaces;
@@ -47,12 +50,13 @@ import org.osgi.util.pushstream.PushEvent.EventType;
 import org.osgi.util.pushstream.PushStream;
 
 import de.jena.ilsa.sensinact.model.ilsa.IlsaPackage;
+import de.jena.udp.model.geojson.GeoJSON;
 import de.jena.udp.model.trafficos.trafficlight.TLConfiguration;
 import de.jena.udp.model.trafficos.trafficlight.TLSignalState;
 
 @RequireEMFJson
-@Component
 @Requirement(namespace = "osgi.identity", filter = "(osgi.identity=de.jena.ilsa.sensinact.mmt)")
+@Component(name = "TrafficLightComponent")
 public class TrafficLight {
 
 	private static final Logger logger = System.getLogger(TrafficLight.class.getName());
@@ -164,6 +168,9 @@ public class TrafficLight {
 			TLConfiguration configuration = (TLConfiguration) resource.getContents().get(0);
 
 			Provider provider = traf.doTransformation(configuration);
+			Admin admin = provider.getAdmin();
+			Point location = getLocation(configuration);
+			admin.setLocation(location);
 			Promise<?> promise = sensiNact.pushUpdate(provider);
 			promise.onFailure(e -> logger.log(Level.ERROR, "Error while pushing configuration to sensinact.", e));
 		} catch (IOException e) {
@@ -171,6 +178,15 @@ public class TrafficLight {
 		} finally {
 			serviceObjects.ungetService(resourceSet);
 		}
+	}
+
+	private Point getLocation(TLConfiguration configuration) {
+		GeoJSON geoJson = configuration.getGeoJson();
+		Point location = new Point();
+		location.coordinates = new Coordinates();
+		location.coordinates.longitude = geoJson.getBbox()[0];
+		location.coordinates.latitude = geoJson.getBbox()[1];
+		return location;
 	}
 
 }

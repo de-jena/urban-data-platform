@@ -20,6 +20,7 @@
 	org.eclipse.emfcloud.emfjson-jackson,\
 	org.gecko.qvt.osgi.api,\
 	de.jena.udp.trafficos.common.model,\
-	de.jena.ilsa.sensinact.model
+	de.jena.ilsa.sensinact.model,\
+	org.eclipse.sensinact.gateway.core.geo-json
 	
 -library: enable-emf
