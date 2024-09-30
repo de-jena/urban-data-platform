@@ -66,11 +66,12 @@ import de.jena.traficam.sensinact.model.traficamprovider.TraficamProvider;
 import de.jena.traficam.sensinact.model.traficamprovider.TraficamproviderFactory;
 
 @RequireEMFJson
-@Component(immediate = true)
+@Component(name = "TrafiCamComponent")
 public class TrafiCam {
 
 	private static final Logger logger = System.getLogger(TrafiCam.class.getName());
 
+	private static final String CONFIG_TOPIC = "5g/config/traficam/";
 	private static final String TOPIC = "5g/traficam/";
 
 	@Reference
@@ -86,6 +87,8 @@ public class TrafiCam {
 			.synchronizedMap(new HashMap<>());
 	private Map<String, CamConfig> configs = new HashMap<>();
 
+	private PushStream<Message> configSubscription;
+
 	@Activate
 	public void activate() {
 		Map<String, Object> pushOptions = Map.of(PushStreamConstants.PROP_BUFFER_SIZE, 3200,
@@ -97,6 +100,8 @@ public class TrafiCam {
 		try {
 			subscription = messaging.subscribe(TOPIC + "#", messagingContext);
 			subscription.forEachEvent(this::handle);
+			configSubscription = messaging.subscribe(CONFIG_TOPIC + "#", messagingContext);
+			configSubscription.forEachEvent(this::handleConfig);
 		} catch (Exception e) {
 			logger.log(Level.ERROR, "Error subscribing mqtt {0}.\n{1}", TOPIC, e);
 		}
@@ -106,7 +111,26 @@ public class TrafiCam {
 	@Deactivate
 	private void deactivate() {
 		subscription.close();
+		configSubscription.close();
 		sources.values().forEach(m -> m.values().forEach(s -> s.close()));
+	}
+
+	private long handleConfig(PushEvent<? extends Message> event) {
+		EventType type = event.getType();
+		switch (type) {
+		case CLOSE:
+			logger.log(Level.INFO, "PushStream closed.");
+			break;
+		case DATA:
+			onConfig(event.getData());
+			break;
+		case ERROR:
+			event.getFailure().printStackTrace();
+			break;
+		default:
+			break;
+		}
+		return 0;
 	}
 
 	private long handle(PushEvent<? extends Message> event) {
@@ -125,6 +149,13 @@ public class TrafiCam {
 			break;
 		}
 		return 0;
+	}
+
+	private void onConfig(Message message) {
+		String topic = message.topic();
+		String[] split = topic.split("/");
+		String camId = split[3];
+		updateConfig(message, camId);
 	}
 
 	private void onMessage(Message message) {
@@ -163,7 +194,7 @@ public class TrafiCam {
 							BinaryResourceImpl resource = new BinaryResourceImpl();
 							resource.load(new ByteArrayInputStream(message.payload().array()), Collections.emptyMap());
 							EList<EObject> contents = resource.getContents();
-							if (contents.size() == 0) {
+							if (contents.isEmpty()) {
 								logger.log(Level.WARNING, "Can't load Traficam from {0}.", message);
 								continue;
 							}
