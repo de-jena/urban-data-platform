@@ -10,7 +10,7 @@
  * Contributors:
  *     Data In Motion - initial API and implementation
  */
-package de.jena.udp.modelling.ui.web.app;
+package de.jena.udp.dashboard.edit.web.app;
 
 import java.io.IOException;
 import java.util.Map;
