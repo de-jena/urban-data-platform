@@ -51,7 +51,6 @@ import org.gecko.emf.osgi.annotation.require.RequireEMF;
 @JakartarsResource
 @Component(name = EPackageResourceImpl.COMPONENT_NAME, service = EPackageResource.class, scope = ServiceScope.PROTOTYPE)
 @JakartarsApplicationSelect("(applicationId=modelling-api)")
-@RequireEMFMessageBodyReaderWriter
 @Path("/epackage")
 @RequireEMF
 @RequireEMFMessageBodyReaderWriter
@@ -86,9 +85,9 @@ public class EPackageResourceImpl implements EPackageResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Operation(description = "Loads and returns all EPackage for an specified ePackageUri.")
 	@Override
-	public List<String> loadAll() throws WebApplicationException {
+	public EList<String> loadAll() throws WebApplicationException {
 		LOGGER.log(Level.DEBUG, "Load all EPackages.");
-		return Collections.unmodifiableList(repo.loadAllEPackages());
+		return ECollections.toEList(repo.loadAllEPackages());
 	}
 
 	@POST
