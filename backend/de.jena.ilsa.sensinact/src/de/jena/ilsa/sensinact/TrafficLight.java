@@ -182,6 +182,9 @@ public class TrafficLight {
 
 	private Point getLocation(TLConfiguration configuration) {
 		GeoJSON geoJson = configuration.getGeoJson();
+		if (geoJson == null || geoJson.getBbox() == null) {
+			return null;
+		}
 		Point location = new Point();
 		location.coordinates = new Coordinates();
 		location.coordinates.longitude = geoJson.getBbox()[0];
