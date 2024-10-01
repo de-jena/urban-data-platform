@@ -1,8 +1,8 @@
 -dependson: de.jena.udp.dashboard.edit.web.app
 	
 -includeresource: \
-	content=-../../../legacy.dashboard.client/dist,\
-	content/configs=configs
+	content=-../../../legacy.dashboard.client/dist
+	
 -buildpath: \
 	org.osgi.annotation.bundle,\
 	org.osgi.service.component.annotations,\

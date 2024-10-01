@@ -12,7 +12,7 @@
 		"org.apache.felix.http.debug" : true
 	},
 	"JakartarsServletWhiteboardRuntimeComponent~udprest": {
-		"jersey.jakartars.whiteboard.name": "",
+		"jersey.jakartars.whiteboard.name": "udprest",
 		"jersey.context.path": "rest",
 		"osgi.http.whiteboard.target": "(rest=true)"
 	}

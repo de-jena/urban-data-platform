@@ -61,7 +61,8 @@ public class DashboardViewerConfigurator {
 			String path = config.path().startsWith(PATH_SEPARATOR) ? config.path() : PATH_SEPARATOR + config.path();
 			path = path.endsWith(PATH_SEPARATOR) ? path.substring(0, path.length() - 2) : path;
 			props.put(HttpWhiteboardConstants.HTTP_WHITEBOARD_CONTEXT_PATH, "/html" + path);
-			config(props, ContentTypeServletContextHelper.COMPONENT_NAME);
+			props.put("configFile", config.configFile());
+			config(props, DashboardViewerContext.COMPONENT_NAME);
 
 			props = new Hashtable<>();
 			props.put(HttpWhiteboardConstants.HTTP_WHITEBOARD_CONTEXT_SELECT,

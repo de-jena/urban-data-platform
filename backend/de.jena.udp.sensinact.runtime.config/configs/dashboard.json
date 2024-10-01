@@ -1,9 +1,0 @@
-{
-  ":configurator:resource-version": 1,
-
-	"DashboardViewerConfigurator~test1":
-	{
-		"path" : "dashboardview",
-		"configFile" : "http://"
-	}
-}

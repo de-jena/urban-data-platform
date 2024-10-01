@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sensinactBase:Sensinact xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:sensinactBase="https://eclipse.org/sensinact/default" xmlns:sensinactMetadata="https://eclipse.org/sensinact/core/metadata/1.0" id="sensiNact">
+  <admin friendlyName="sensiNact" modelPackageUri="https://eclipse.org/sensinact/default" model="sensinact">
+    <metadata>
+      <key xsi:type="ecore:EAttribute" href="https://eclipse.org/sensinact/core/provider/1.0#//Admin/friendlyName"/>
+      <value xsi:type="sensinactMetadata:ResourceMetadata" timestamp="2024-10-01T14:19:27.685511794Z" originalName="friendlyName"/>
+    </metadata>
+    <metadata>
+      <key xsi:type="ecore:EAttribute" href="https://eclipse.org/sensinact/core/provider/1.0#//Admin/modelPackageUri"/>
+      <value xsi:type="sensinactMetadata:ResourceMetadata" timestamp="2024-10-01T14:19:27.685511794Z" originalName="modelPackageUri"/>
+    </metadata>
+    <metadata>
+      <key xsi:type="ecore:EAttribute" href="https://eclipse.org/sensinact/core/provider/1.0#//Admin/model"/>
+      <value xsi:type="sensinactMetadata:ResourceMetadata" timestamp="2024-10-01T14:19:27.685511794Z" originalName="model"/>
+    </metadata>
+  </admin>
+  <system version="0.1" started="2024-10-01T14:19:27.685511794Z">
+    <metadata>
+      <key xsi:type="sensinactMetadata:ResourceAttribute" href="https://eclipse.org/sensinact/default#//System/version"/>
+      <value xsi:type="sensinactMetadata:ResourceMetadata" timestamp="2024-10-01T14:19:27.685511794Z"/>
+    </metadata>
+    <metadata>
+      <key xsi:type="sensinactMetadata:ResourceAttribute" href="https://eclipse.org/sensinact/default#//System/started"/>
+      <value xsi:type="sensinactMetadata:ResourceMetadata" timestamp="2024-10-01T14:19:27.685511794Z"/>
+    </metadata>
+  </system>
+</sensinactBase:Sensinact>

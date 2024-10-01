@@ -12,8 +12,12 @@
  */
 package de.jena.udp.dashboard.viewer.web.app;
 
+import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 import org.osgi.framework.BundleContext;
 import org.osgi.service.component.annotations.Activate;
@@ -22,25 +26,47 @@ import org.osgi.service.component.annotations.ConfigurationPolicy;
 import org.osgi.service.component.annotations.ServiceScope;
 import org.osgi.service.http.context.ServletContextHelper;
 
-@Component(name="DashboardViewerContext", service = ServletContextHelper.class, scope = ServiceScope.SINGLETON, configurationPolicy = ConfigurationPolicy.REQUIRE)
-//@HttpWhiteboardContext(name = "upd-dashboard", path = "/html/dashboard")
-public class ContentTypeServletContextHelper extends ServletContextHelper {
-	public static final String COMPONENT_NAME = "DashboardViewerContext";
+import de.jena.udp.dashboard.viewer.web.app.DashboardViewerConfigurator.Config;
 
-	
+@Component(name = "DashboardViewerContext", service = ServletContextHelper.class, scope = ServiceScope.SINGLETON, configurationPolicy = ConfigurationPolicy.REQUIRE)
+//@HttpWhiteboardContext(name = "upd-dashboard", path = "/html/dashboard")
+public class DashboardViewerContext extends ServletContextHelper {
+	public static final String COMPONENT_NAME = "DashboardViewerContext";
+	private Config config;
+
 	@Activate
-	public ContentTypeServletContextHelper(final BundleContext ctx) {
+	public DashboardViewerContext(final BundleContext ctx, Config config) {
 		super(ctx.getBundle());
+		this.config = config;
+
 	}
 
 	@Override
 	public String getMimeType(String name) {
-		if(name.indexOf('.') != -1 ) {
+		if (name.indexOf('.') != -1) {
 			return MIME.get(name.substring(name.lastIndexOf(".")));
 		}
 		return null;
 	}
-	
+
+	@Override
+	public URL getResource(String name) {
+		if (name.endsWith("configs/dashboard.json")) {
+			if (Objects.nonNull(url)) {
+				return url;
+			}
+			String configFile = config.configFile();
+			try {
+				url = new File(configFile).toURI().toURL();
+				return url;
+			} catch (MalformedURLException e) {
+				System.err.println("error creating URL from " + configFile);
+				return super.getResource(name);
+			}
+		}
+		return super.getResource(name);
+	}
+
 	@SuppressWarnings("serial")
 	private static final Map<String, String> MIME = new HashMap<String, String>() {
 		{
@@ -110,5 +136,6 @@ public class ContentTypeServletContextHelper extends ServletContextHelper {
 			put(".7z", "application/x-7z-compressed");
 		}
 	};
+	private URL url;
 
 }

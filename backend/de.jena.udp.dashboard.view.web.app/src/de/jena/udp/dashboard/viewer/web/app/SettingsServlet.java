@@ -39,48 +39,23 @@ public class SettingsServlet extends HttpServlet {
 	private static final String CONFIG_JSON = """
 			(function(window) {
 			    window.__env = window.__env || {};
-
 			    window.__env.settings = {
 			        "initWithConfigurationURI": {
 			            enabled:true,
-			            url:"http://localhost:8080/udp/html/dashboardview/configs/irgnendnenname.json"
+			            url:"configs/dashboard.json"
 			        },
 			        "viewmodeByDefault":true,
-
-
 			    };
 
 			})(this);
 						""";
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see jakarta.servlet.http.HttpServlet#doGet(jakarta.servlet.http.
-	 * HttpServletRequest, jakarta.servlet.http.HttpServletResponse)
-	 */
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		System.out.println("hallo");
 		resp.setContentType("application/javascript");
 		resp.setStatus(200);
-		String config = CONFIG_JSON.formatted(getEnv("INFO_CHECK_URI"), getEnv("INFO_BASE_URI"));
+		String config = CONFIG_JSON;
 		resp.getOutputStream().print(config);
-	}
-
-	/**
-	 * @param string
-	 * @return
-	 */
-	private Object getEnv(String key) {
-		String env = System.getenv(key);
-		if (env == null) {
-			env = System.getProperty(key);
-		}
-		if (env == null) {
-			return "null";
-		}
-		return "\"" + env + "\"";
 	}
 
 }

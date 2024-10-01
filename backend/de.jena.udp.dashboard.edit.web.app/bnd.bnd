@@ -1,12 +1,17 @@
 -init: \
 	${system-allow-fail; npm run build-only --prefix ../../../legacy.dashboard.client/}
 	
+	
 -includeresource: \
 	content=-../../../legacy.dashboard.client/dist,\
-	content/configs=configs
+	content/config=config
+
 -buildpath: \
 	org.osgi.annotation.bundle,\
 	org.osgi.service.component.annotations,\
 	org.osgi.service.http.whiteboard,\
 	org.osgi.framework,\
-	jakarta.servlet-api
+	jakarta.ws.rs-api,\
+	jakarta.servlet-api,\
+	org.osgi.service.jakartars,\
+	org.osgi.service.cm

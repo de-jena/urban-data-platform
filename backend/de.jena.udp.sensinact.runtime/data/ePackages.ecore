@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:sensinactMetadata="https://eclipse.org/sensinact/core/metadata/1.0"
+    name="base" nsURI="https://eclipse.org/sensinact/default" nsPrefix="sensinactBase">
+  <eClassifiers xsi:type="ecore:EClass" name="Sensinact" eSuperTypes="https://eclipse.org/sensinact/core/provider/1.0#//Provider">
+    <eAnnotations source="metadata">
+      <contents xsi:type="sensinactMetadata:AnnotationMetadata" timestamp="2024-10-01T14:19:27.685511794Z"/>
+    </eAnnotations>
+    <eAnnotations source="model">
+      <details key="name" value="sensinact"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="sensinactMetadata:ServiceReference" name="system"
+        eType="ecore:EClass data/ePackages.ecore#//System" containment="true" timestamp="2024-10-01T14:19:27.685511794Z"
+        locked="false" originalName="system"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="System" eSuperTypes="https://eclipse.org/sensinact/core/provider/1.0#//Service">
+    <eAnnotations source="metadata">
+      <contents xsi:type="sensinactMetadata:AnnotationMetadata" timestamp="2024-10-01T14:19:27.685511794Z"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="sensinactMetadata:ResourceAttribute" name="version"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" timestamp="2024-10-01T14:19:27.685511794Z"
+        locked="false" originalName="version"/>
+    <eStructuralFeatures xsi:type="sensinactMetadata:ResourceAttribute" name="started"
+        eType="ecore:EDataType https://eclipse.org/sensinact/core/provider/1.0#//EInstant"
+        timestamp="2024-10-01T14:19:27.685511794Z" locked="false" originalName="started"/>
+  </eClassifiers>
+</ecore:EPackage>

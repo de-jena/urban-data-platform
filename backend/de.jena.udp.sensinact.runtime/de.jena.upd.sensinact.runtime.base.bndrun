@@ -97,9 +97,9 @@
 	org.eclipse.ocl.common;version='[1.19.0,1.19.1)';startlevel=940,\
 	org.eclipse.ocl.ecore;version='[3.19.0,3.19.1)';startlevel=950,\
 	org.eclipse.ocl.fragment;version='[2.0.0,2.0.1)';startlevel=960,\
-	org.eclipse.osgitech.rest;version='[1.2.2,1.2.3)';startlevel=970,\
-	org.eclipse.osgitech.rest.servlet.whiteboard;version='[1.2.2,1.2.3)';startlevel=980,\
-	org.eclipse.osgitech.rest.sse;version='[1.2.2,1.2.3)';startlevel=990,\
+	org.eclipse.osgitech.rest;version='[1.2.3,1.2.4)';startlevel=970,\
+	org.eclipse.osgitech.rest.servlet.whiteboard;version='[1.2.3,1.2.4)';startlevel=980,\
+	org.eclipse.osgitech.rest.sse;version='[1.2.3,1.2.4)';startlevel=990,\
 	org.eclipse.paho.client.mqttv3;version='[1.2.5,1.2.6)';startlevel=1000,\
 	org.eclipse.paho.mqttv5.client;version='[1.2.6,1.2.7)';startlevel=1010,\
 	org.eclipse.parsson.jakarta.json;version='[1.1.5,1.1.6)';startlevel=1020,\
