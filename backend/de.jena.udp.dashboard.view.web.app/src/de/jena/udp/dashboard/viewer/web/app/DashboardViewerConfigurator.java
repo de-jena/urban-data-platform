@@ -73,6 +73,11 @@ public class DashboardViewerConfigurator {
 					"(" + HttpWhiteboardConstants.HTTP_WHITEBOARD_CONTEXT_NAME + "=" + contextName + ")");
 			config(props, DashboardViewerIndexFilter.COMPONENT_NAME);
 
+			props = new Hashtable<>();
+			props.put(HttpWhiteboardConstants.HTTP_WHITEBOARD_CONTEXT_SELECT,
+					"(" + HttpWhiteboardConstants.HTTP_WHITEBOARD_CONTEXT_NAME + "=" + contextName + ")");
+			config(props, SettingsServlet.COMPONENT_NAME);
+
 			LOGGER.log(Level.DEBUG, "Registering dashboard {0}", config.path());
 		} catch (IOException e) {
 			LOGGER.log(Level.ERROR, "Error registering dashboard {0}", config.path(), e);
