@@ -96,6 +96,7 @@ com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:${jackson.version}
 com.fasterxml.jackson.module:jackson-module-jaxb-annotations:${jackson.version}
 com.fasterxml.jackson.jakarta.rs:jackson-jakarta-rs-base:${jackson.version}
 com.fasterxml.jackson.jakarta.rs:jackson-jakarta-rs-json-provider:${jackson.version}
+com.fasterxml.jackson.module:jackson-module-jakarta-xmlbind-annotations:${jackson.version}
 
 org.apache.felix:org.apache.felix.http.jetty:5.0.0
 jakarta.servlet:jakarta.servlet-api:5.0.0

@@ -69,6 +69,7 @@ public class OpenApiResource extends BaseOpenApiResource {
 	private Application app;
 
 	@Context
+	
 	private ServletConfig config;
 
 	@GET

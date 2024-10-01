@@ -16,10 +16,12 @@ package de.jena.udp.modelling.ui;
 import java.lang.System.Logger;
 import java.lang.System.Logger.Level;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import org.eclipse.emf.common.util.ECollections;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.gecko.emf.json.annotation.RequireEMFJson;
 import org.gecko.emf.rest.annotations.RequireEMFMessageBodyReaderWriter;
@@ -32,20 +34,28 @@ import org.osgi.service.jakartars.whiteboard.propertytypes.JakartarsResource;
 
 import de.jena.upd.modelling.ui.api.modellingApi.EPackageResource;
 import io.swagger.v3.oas.annotations.Operation;
+import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.DELETE;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
+import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.QueryParam;
 import jakarta.ws.rs.WebApplicationException;
+import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
+import org.gecko.emf.rest.annotations.RequireEMFMessageBodyReaderWriter;
+import org.gecko.emf.osgi.annotation.require.RequireEMF;
 
-@RequireEMFJson
+
 @JakartarsResource
 @Component(name = EPackageResourceImpl.COMPONENT_NAME, service = EPackageResource.class, scope = ServiceScope.PROTOTYPE)
 @JakartarsApplicationSelect("(applicationId=modelling-api)")
 @RequireEMFMessageBodyReaderWriter
 @Path("/epackage")
+@RequireEMF
+@RequireEMFMessageBodyReaderWriter
+@RequireEMFJson
 public class EPackageResourceImpl implements EPackageResource {
 	private static final Logger LOGGER = System.getLogger(EPackageResourceImpl.class.getName());
 
@@ -62,6 +72,7 @@ public class EPackageResourceImpl implements EPackageResource {
 
 	@GET
 	@Path("load")
+	@Produces(MediaType.APPLICATION_XML)
 	@Operation(description = "Loads and returns an EPackage for an specified ePackageUri.")
 	@Override
 	public EPackage load(@QueryParam("ePackageUri") String ePackageUri) throws WebApplicationException {
@@ -72,15 +83,18 @@ public class EPackageResourceImpl implements EPackageResource {
 
 	@GET
 	@Path("loadall")
+	@Produces(MediaType.APPLICATION_JSON)
 	@Operation(description = "Loads and returns all EPackage for an specified ePackageUri.")
 	@Override
-	public EList<String> loadAll() throws WebApplicationException {
+	public List<String> loadAll() throws WebApplicationException {
 		LOGGER.log(Level.DEBUG, "Load all EPackages.");
-		return ECollections.toEList(repo.loadAllEPackages());
+		return Collections.unmodifiableList(repo.loadAllEPackages());
 	}
 
 	@POST
 	@Path("save")
+	@Consumes("application/xmi")
+	@Produces("application/xmi")
 	@Operation(description = "Saves an EObject.")
 	@Override
 	public Response save(EPackage ePackage) {
@@ -123,5 +137,7 @@ public class EPackageResourceImpl implements EPackageResource {
 		boolean exists = repo.existEPackage(ePackageUri);
 		return Response.accepted(exists).build();
 	}
+
+	
 
 }
