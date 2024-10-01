@@ -1,0 +1,11 @@
+-dependson: de.jena.udp.dashboard.edit.web.app
+	
+-includeresource: \
+	content=-../../../legacy.dashboard.client/dist,\
+	content/configs=configs
+-buildpath: \
+	org.osgi.annotation.bundle,\
+	org.osgi.service.component.annotations,\
+	org.osgi.service.http.whiteboard,\
+	org.osgi.framework,\
+	jakarta.servlet-api
