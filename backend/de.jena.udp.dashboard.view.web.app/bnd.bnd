@@ -8,4 +8,5 @@
 	org.osgi.service.component.annotations,\
 	org.osgi.service.http.whiteboard,\
 	org.osgi.framework,\
-	jakarta.servlet-api
+	jakarta.servlet-api,\
+	org.apache.felix.configadmin

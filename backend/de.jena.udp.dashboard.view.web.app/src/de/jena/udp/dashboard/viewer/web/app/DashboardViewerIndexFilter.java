@@ -19,7 +19,6 @@ import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.ConfigurationPolicy;
 import org.osgi.service.component.annotations.ServiceScope;
-import org.osgi.service.http.whiteboard.propertytypes.HttpWhiteboardContextSelect;
 import org.osgi.service.http.whiteboard.propertytypes.HttpWhiteboardFilterRegex;
 
 import jakarta.servlet.Filter;
@@ -33,16 +32,16 @@ import jakarta.servlet.http.HttpServletResponse;
 
 @HttpWhiteboardFilterRegex({ "/?", "/" })
 //@HttpWhiteboardContextSelect("(osgi.http.whiteboard.context.name=upd-modelling)")
-@Component(name = IndexFilter.COMPONENT_NAME, service = Filter.class, scope = ServiceScope.PROTOTYPE , configurationPolicy = ConfigurationPolicy.REQUIRE)
-public class IndexFilter implements Filter {
+@Component(name = DashboardViewerIndexFilter.COMPONENT_NAME, service = Filter.class, scope = ServiceScope.PROTOTYPE , configurationPolicy = ConfigurationPolicy.REQUIRE)
+public class DashboardViewerIndexFilter implements Filter {
 
-	public static final String COMPONENT_NAME = "DashboardIndexFilter";
+	public static final String COMPONENT_NAME = "DashboardViewerIndexFilter";
 
 	/**
 	 * Creates a new instance.
 	 */
 	@Activate
-	public IndexFilter(Map<String, Object> props) {
+	public DashboardViewerIndexFilter(Map<String, Object> props) {
 	}
 	
 	public void init(FilterConfig filterConfig) throws ServletException {

@@ -15,7 +15,6 @@ package de.jena.udp.dashboard.viewer.web.app;
 
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.ConfigurationPolicy;
-import org.osgi.service.http.whiteboard.propertytypes.HttpWhiteboardContextSelect;
 import org.osgi.service.http.whiteboard.propertytypes.HttpWhiteboardResource;
 
 /**
@@ -23,10 +22,11 @@ import org.osgi.service.http.whiteboard.propertytypes.HttpWhiteboardResource;
  * @author Juergen Albert
  * @since 20 Mar 2023
  */
-@Component(service = DashboardViewerHttpResource.class, configurationPolicy = ConfigurationPolicy.REQUIRE)
+@Component(name=DashboardViewerHttpResource.COMPONENT_NAME, service = DashboardViewerHttpResource.class, configurationPolicy = ConfigurationPolicy.REQUIRE)
 @HttpWhiteboardResource(prefix = "/content", pattern = "/*")
 //@HttpWhiteboardContextSelect("(osgi.http.whiteboard.context.name=upd-dashboard)")
 public class DashboardViewerHttpResource {
+	public static final String COMPONENT_NAME = "DashboardViewerHttpResource";
 
 	
 }

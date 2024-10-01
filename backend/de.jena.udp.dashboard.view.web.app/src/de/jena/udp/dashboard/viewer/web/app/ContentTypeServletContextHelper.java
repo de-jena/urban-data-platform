@@ -12,10 +12,8 @@
  */
 package de.jena.udp.dashboard.viewer.web.app;
 
-import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 import org.osgi.framework.BundleContext;
 import org.osgi.service.component.annotations.Activate;
@@ -23,11 +21,11 @@ import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.ConfigurationPolicy;
 import org.osgi.service.component.annotations.ServiceScope;
 import org.osgi.service.http.context.ServletContextHelper;
-import org.osgi.service.http.whiteboard.propertytypes.HttpWhiteboardContext;
 
 @Component(name="DashboardViewerContext", service = ServletContextHelper.class, scope = ServiceScope.SINGLETON, configurationPolicy = ConfigurationPolicy.REQUIRE)
 //@HttpWhiteboardContext(name = "upd-dashboard", path = "/html/dashboard")
 public class ContentTypeServletContextHelper extends ServletContextHelper {
+	public static final String COMPONENT_NAME = "DashboardViewerContext";
 
 	
 	@Activate
@@ -35,24 +33,6 @@ public class ContentTypeServletContextHelper extends ServletContextHelper {
 		super(ctx.getBundle());
 	}
 
-	/* 
-	 * (non-Javadoc)
-	 * @see org.osgi.service.http.context.ServletContextHelper#getResource(java.lang.String)
-	 */
-	@Override
-	public URL getResource(String name) {
-		return super.getResource(name);
-	}
-
-	/* 
-	 * (non-Javadoc)
-	 * @see org.osgi.service.http.context.ServletContextHelper#getResourcePaths(java.lang.String)
-	 */
-	@Override
-	public Set<String> getResourcePaths(String path) {
-		return super.getResourcePaths(path);
-	}
-	
 	@Override
 	public String getMimeType(String name) {
 		if(name.indexOf('.') != -1 ) {

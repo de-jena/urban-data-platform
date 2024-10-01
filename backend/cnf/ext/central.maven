@@ -79,13 +79,6 @@ commons-io:commons-io:2.6
 org.apache.felix:org.apache.felix.framework:7.0.5
 org.yaml:snakeyaml:2.3
 
-
-# MQTT
-org.gecko.ma:org.gecko.adapter.amqp:2.2.0-SNAPSHOT
-org.geckoprojects.messaging:org.gecko.osgi.messaging:3.2.0-SNAPSHOT
-#org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.6
-
-
 com.fasterxml.jackson.core:jackson-annotations:${jackson.version}
 com.fasterxml.jackson.core:jackson-core:${jackson.version}
 com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:${jackson.version}

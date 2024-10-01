@@ -12,10 +12,8 @@
  */
 package de.jena.udp.dashboard.edit.web.app;
 
-import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 import org.osgi.framework.BundleContext;
 import org.osgi.service.component.annotations.Activate;
@@ -34,24 +32,6 @@ public class ContentTypeServletContextHelper extends ServletContextHelper {
 		super(ctx.getBundle());
 	}
 
-	/* 
-	 * (non-Javadoc)
-	 * @see org.osgi.service.http.context.ServletContextHelper#getResource(java.lang.String)
-	 */
-	@Override
-	public URL getResource(String name) {
-		return super.getResource(name);
-	}
-
-	/* 
-	 * (non-Javadoc)
-	 * @see org.osgi.service.http.context.ServletContextHelper#getResourcePaths(java.lang.String)
-	 */
-	@Override
-	public Set<String> getResourcePaths(String path) {
-		return super.getResourcePaths(path);
-	}
-	
 	@Override
 	public String getMimeType(String name) {
 		if(name.indexOf('.') != -1 ) {
