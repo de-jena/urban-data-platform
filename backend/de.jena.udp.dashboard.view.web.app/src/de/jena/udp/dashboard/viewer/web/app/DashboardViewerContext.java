@@ -28,7 +28,7 @@ import org.osgi.service.http.context.ServletContextHelper;
 
 import de.jena.udp.dashboard.viewer.web.app.DashboardViewerConfigurator.Config;
 
-@Component(name = "DashboardViewerContext", service = ServletContextHelper.class, scope = ServiceScope.SINGLETON, configurationPolicy = ConfigurationPolicy.REQUIRE)
+@Component(name = DashboardViewerContext.COMPONENT_NAME, service = ServletContextHelper.class, scope = ServiceScope.SINGLETON, configurationPolicy = ConfigurationPolicy.REQUIRE)
 //@HttpWhiteboardContext(name = "upd-dashboard", path = "/html/dashboard")
 public class DashboardViewerContext extends ServletContextHelper {
 	public static final String COMPONENT_NAME = "DashboardViewerContext";

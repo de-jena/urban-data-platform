@@ -14,6 +14,8 @@
 package de.jena.udp.dashboard.viewer.web.app;
 
 import java.io.IOException;
+import java.lang.System.Logger;
+import java.lang.System.Logger.Level;
 
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.ConfigurationPolicy;
@@ -33,6 +35,8 @@ import jakarta.servlet.http.HttpServletResponse;
 @Component(name = SettingsServlet.COMPONENT_NAME, service = Servlet.class, configurationPolicy = ConfigurationPolicy.REQUIRE)
 @HttpWhiteboardServletPattern("/config/settings.js")
 public class SettingsServlet extends HttpServlet {
+	private static final Logger LOGGER = System.getLogger(SettingsServlet.class.getName());
+
 	public static final String COMPONENT_NAME = "SettingsServlet";
 
 	private static final long serialVersionUID = 8664175649706859137L;
@@ -51,11 +55,14 @@ public class SettingsServlet extends HttpServlet {
 						""";
 
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException {
 		resp.setContentType("application/javascript");
 		resp.setStatus(200);
-		String config = CONFIG_JSON;
-		resp.getOutputStream().print(config);
+		try {
+			resp.getOutputStream().print(CONFIG_JSON);
+		} catch (IOException e) {
+			LOGGER.log(Level.ERROR, () -> "Error writing settings.", e);
+		}
 	}
 
 }

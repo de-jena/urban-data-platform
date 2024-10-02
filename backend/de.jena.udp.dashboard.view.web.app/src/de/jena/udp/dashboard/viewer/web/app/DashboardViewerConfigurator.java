@@ -34,12 +34,14 @@ import org.osgi.service.http.whiteboard.HttpWhiteboardConstants;
  * @author Juergen Albert
  * @since 1 Oct 2024
  */
-@Component(name = "DashboardViewerConfigurator", configurationPolicy = ConfigurationPolicy.REQUIRE)
+@Component(name = DashboardViewerConfigurator.COMPONENT_NAME, configurationPolicy = ConfigurationPolicy.REQUIRE)
 public class DashboardViewerConfigurator {
-
+	
+	public static final String COMPONENT_NAME = "DashboardViewerConfigurator";
+	
 	private static final Logger LOGGER = System.getLogger(DashboardViewerConfigurator.class.getName());
 	private static final String PATH_SEPARATOR = "/";
-
+	
 	public static @interface Config {
 		String path();
 

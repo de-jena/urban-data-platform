@@ -17,6 +17,8 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.System.Logger;
+import java.lang.System.Logger.Level;
 import java.util.Hashtable;
 
 import org.osgi.service.cm.Configuration;
@@ -44,37 +46,51 @@ import jakarta.ws.rs.core.Response;
 @Component(service = SaveResource.class, scope = ServiceScope.PROTOTYPE)
 @JakartarsResource
 @JakartarsApplicationSelect("(applicationId=dashboardRest)")
-@Path("/")
+@Path("")
 public class SaveResource {
+	private static final Logger LOGGER = System.getLogger(SaveResource.class.getName());
 
 	@Reference
 	private ConfigurationAdmin configAdmin;
 
 	@GET
-	@Path("/hello")
+	@Path("hello")
 	@Produces(MediaType.TEXT_PLAIN)
 	public String hello() {
 		return "Hello";
 	}
 
 	@POST
-	@Path("/release/{path}")
+	@Path("release/{path}")
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response release(@PathParam("path") String path, InputStream stream) throws IOException {
-		byte[] bytes = stream.readAllBytes();
-		String dir = System.getProperty("user.dir", "/tmp");
-		File p = new File(dir + "/dashboards/");
-		p.mkdirs();
-		File file = new File(p, path + ".json");
-		try (FileOutputStream os = new FileOutputStream(file)) {
-			os.write(bytes);
+		String filePath;
+		try {
+			byte[] bytes = stream.readAllBytes();
+			String dir = System.getProperty("user.dir", "/tmp");
+			File file = new File(dir + "/dashboards/" + path + ".json");
+			file.getParentFile().mkdirs();
+			try (FileOutputStream os = new FileOutputStream(file)) {
+				os.write(bytes);
+			}
+			filePath = file.getAbsolutePath();
+		} catch (IOException e) {
+			LOGGER.log(Level.ERROR, () -> "Error writing file.", e);
+			return Response.serverError().entity(e).build();
 		}
-		Hashtable<String, Object> props = new Hashtable<>();
-		props.put("path", path);
-		props.put("configFile", file.getAbsolutePath());
-		Configuration configuration = configAdmin.getFactoryConfiguration("DashboardViewerConfigurator", path, "?");
-		configuration.updateIfDifferent(props);
 
-		return Response.ok().build();
+		try {
+			Hashtable<String, Object> props = new Hashtable<>();
+			props.put("path", path);
+			props.put("configFile", filePath);
+			Configuration configuration = configAdmin.getFactoryConfiguration("DashboardViewerConfigurator", path, "?");
+			configuration.updateIfDifferent(props);
+			return Response.ok().build();
+		} catch (IOException e) {
+			LOGGER.log(Level.ERROR, () -> "Error updating configuration for DashboardViewerConfigurator.", e);
+			return Response.serverError().entity(e).build();
+		}
+
 	}
+
 }
