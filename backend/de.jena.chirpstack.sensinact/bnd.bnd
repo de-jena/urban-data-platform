@@ -5,4 +5,10 @@ Require-Capability: \
 -buildpath: \
 	org.osgi.service.cm,\
 	org.osgi.service.component.annotations,\
-	org.osgi.service.metatype.annotations
+	org.osgi.service.metatype.annotations,\
+	org.eclipse.sensinact.gateway.core.api,\
+	de.jena.chirpstack.moisture.model,\
+	org.eclipse.sensinact.gateway.core.geo-json,\
+	org.eclipse.sensinact.gateway.core.models.provider,\
+	org.eclipse.emf.common,\
+	org.eclipse.emf.ecore

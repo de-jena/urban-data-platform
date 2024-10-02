@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
+import org.eclipse.sensinact.model.core.provider.Admin;
 import org.eclipse.sensinact.model.core.provider.Provider;
 import org.eclipse.sensinact.model.core.provider.Service;
 
@@ -108,6 +109,28 @@ public class ChirpstackMoistureSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ChirpstackMoisturePackage.WATERING_AREA: {
+				WateringArea wateringArea = (WateringArea)theEObject;
+				T result = caseWateringArea(wateringArea);
+				if (result == null) result = caseProvider(wateringArea);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ChirpstackMoisturePackage.MOISTURE_STATUS: {
+				MoistureStatus moistureStatus = (MoistureStatus)theEObject;
+				T result = caseMoistureStatus(moistureStatus);
+				if (result == null) result = caseService(moistureStatus);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ChirpstackMoisturePackage.WATERING_AREA_ADMIN: {
+				WateringAreaAdmin wateringAreaAdmin = (WateringAreaAdmin)theEObject;
+				T result = caseWateringAreaAdmin(wateringAreaAdmin);
+				if (result == null) result = caseAdmin(wateringAreaAdmin);
+				if (result == null) result = caseService(wateringAreaAdmin);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -173,6 +196,51 @@ public class ChirpstackMoistureSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Watering Area</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Watering Area</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseWateringArea(WateringArea object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Moisture Status</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Moisture Status</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMoistureStatus(MoistureStatus object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Watering Area Admin</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Watering Area Admin</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseWateringAreaAdmin(WateringAreaAdmin object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Provider</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -199,6 +267,21 @@ public class ChirpstackMoistureSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseService(Service object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Admin</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Admin</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAdmin(Admin object) {
 		return null;
 	}
 

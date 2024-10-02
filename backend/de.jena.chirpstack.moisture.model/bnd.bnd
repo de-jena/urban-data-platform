@@ -18,4 +18,6 @@
 
 Bundle-Version: 1.0.0.SNAPSHOT
 
--buildpath: org.eclipse.sensinact.gateway.core.models.provider
+-buildpath: \
+	org.eclipse.sensinact.gateway.core.models.provider,\
+	org.eclipse.sensinact.gateway.core.geo-json
