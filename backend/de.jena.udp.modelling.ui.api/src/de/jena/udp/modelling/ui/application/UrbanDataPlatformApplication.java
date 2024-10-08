@@ -18,6 +18,9 @@ import org.osgi.service.jakartars.whiteboard.propertytypes.JakartarsApplicationB
 import org.osgi.service.jakartars.whiteboard.propertytypes.JakartarsName;
 
 import jakarta.ws.rs.core.Application;
+import java.util.Set;
+
+import org.glassfish.jersey.jackson.JacksonFeature;
 
 @Component(name = UrbanDataPlatformApplication.COMPONENT_NAME, service = Application.class, property = {"emf=true", "applicationId=modelling-api"})
 @JakartarsApplicationBase("/modelling-api")
@@ -25,4 +28,9 @@ import jakarta.ws.rs.core.Application;
 public class UrbanDataPlatformApplication extends Application {
 
 	public static final String COMPONENT_NAME = "UrbanDataPlatformApplication";
+	
+	@Override
+	public Set<Class<?>> getClasses() {
+		return Set.of(JacksonFeature.class);
+	}
 }
