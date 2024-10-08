@@ -22,6 +22,8 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.sensinact.gateway.geojson.GeoJsonObject;
+
 import org.eclipse.sensinact.model.core.provider.impl.ServiceImpl;
 
 /**
@@ -32,31 +34,52 @@ import org.eclipse.sensinact.model.core.provider.impl.ServiceImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.jena.chirpstack.moisture.model.moisture.impl.MoistureStatusImpl#getStatus <em>Status</em>}</li>
+ *   <li>{@link de.jena.chirpstack.moisture.model.moisture.impl.MoistureStatusImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link de.jena.chirpstack.moisture.model.moisture.impl.MoistureStatusImpl#getObservedArea <em>Observed Area</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class MoistureStatusImpl extends ServiceImpl implements MoistureStatus {
 	/**
-	 * The default value of the '{@link #getStatus() <em>Status</em>}' attribute.
+	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getStatus()
+	 * @see #getValue()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int STATUS_EDEFAULT = 0;
+	protected static final Integer VALUE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getStatus() <em>Status</em>}' attribute.
+	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getStatus()
+	 * @see #getValue()
 	 * @generated
 	 * @ordered
 	 */
-	protected int status = STATUS_EDEFAULT;
+	protected Integer value = VALUE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getObservedArea() <em>Observed Area</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getObservedArea()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final GeoJsonObject OBSERVED_AREA_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getObservedArea() <em>Observed Area</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getObservedArea()
+	 * @generated
+	 * @ordered
+	 */
+	protected GeoJsonObject observedArea = OBSERVED_AREA_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -83,8 +106,8 @@ public class MoistureStatusImpl extends ServiceImpl implements MoistureStatus {
 	 * @generated
 	 */
 	@Override
-	public int getStatus() {
-		return status;
+	public Integer getValue() {
+		return value;
 	}
 
 	/**
@@ -93,11 +116,34 @@ public class MoistureStatusImpl extends ServiceImpl implements MoistureStatus {
 	 * @generated
 	 */
 	@Override
-	public void setStatus(int newStatus) {
-		int oldStatus = status;
-		status = newStatus;
+	public void setValue(Integer newValue) {
+		Integer oldValue = value;
+		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackMoisturePackage.MOISTURE_STATUS__STATUS, oldStatus, status));
+			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackMoisturePackage.MOISTURE_STATUS__VALUE, oldValue, value));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public GeoJsonObject getObservedArea() {
+		return observedArea;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setObservedArea(GeoJsonObject newObservedArea) {
+		GeoJsonObject oldObservedArea = observedArea;
+		observedArea = newObservedArea;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackMoisturePackage.MOISTURE_STATUS__OBSERVED_AREA, oldObservedArea, observedArea));
 	}
 
 	/**
@@ -108,8 +154,10 @@ public class MoistureStatusImpl extends ServiceImpl implements MoistureStatus {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ChirpstackMoisturePackage.MOISTURE_STATUS__STATUS:
-				return getStatus();
+			case ChirpstackMoisturePackage.MOISTURE_STATUS__VALUE:
+				return getValue();
+			case ChirpstackMoisturePackage.MOISTURE_STATUS__OBSERVED_AREA:
+				return getObservedArea();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -122,8 +170,11 @@ public class MoistureStatusImpl extends ServiceImpl implements MoistureStatus {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ChirpstackMoisturePackage.MOISTURE_STATUS__STATUS:
-				setStatus((Integer)newValue);
+			case ChirpstackMoisturePackage.MOISTURE_STATUS__VALUE:
+				setValue((Integer)newValue);
+				return;
+			case ChirpstackMoisturePackage.MOISTURE_STATUS__OBSERVED_AREA:
+				setObservedArea((GeoJsonObject)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -137,8 +188,11 @@ public class MoistureStatusImpl extends ServiceImpl implements MoistureStatus {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ChirpstackMoisturePackage.MOISTURE_STATUS__STATUS:
-				setStatus(STATUS_EDEFAULT);
+			case ChirpstackMoisturePackage.MOISTURE_STATUS__VALUE:
+				setValue(VALUE_EDEFAULT);
+				return;
+			case ChirpstackMoisturePackage.MOISTURE_STATUS__OBSERVED_AREA:
+				setObservedArea(OBSERVED_AREA_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -152,8 +206,10 @@ public class MoistureStatusImpl extends ServiceImpl implements MoistureStatus {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ChirpstackMoisturePackage.MOISTURE_STATUS__STATUS:
-				return status != STATUS_EDEFAULT;
+			case ChirpstackMoisturePackage.MOISTURE_STATUS__VALUE:
+				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+			case ChirpstackMoisturePackage.MOISTURE_STATUS__OBSERVED_AREA:
+				return OBSERVED_AREA_EDEFAULT == null ? observedArea != null : !OBSERVED_AREA_EDEFAULT.equals(observedArea);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -168,8 +224,10 @@ public class MoistureStatusImpl extends ServiceImpl implements MoistureStatus {
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (status: ");
-		result.append(status);
+		result.append(" (value: ");
+		result.append(value);
+		result.append(", observedArea: ");
+		result.append(observedArea);
 		result.append(')');
 		return result.toString();
 	}

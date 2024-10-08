@@ -17,11 +17,10 @@ import de.jena.chirpstack.moisture.model.moisture.ChirpstackMoistureFactory;
 import de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage;
 import de.jena.chirpstack.moisture.model.moisture.Device;
 import de.jena.chirpstack.moisture.model.moisture.Dragino;
+import de.jena.chirpstack.moisture.model.moisture.MoistureSensor;
 import de.jena.chirpstack.moisture.model.moisture.MoistureStatus;
 import de.jena.chirpstack.moisture.model.moisture.Sensor;
 import de.jena.chirpstack.moisture.model.moisture.Soil;
-import de.jena.chirpstack.moisture.model.moisture.WateringArea;
-import de.jena.chirpstack.moisture.model.moisture.WateringAreaAdmin;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -72,7 +71,7 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass wateringAreaEClass = null;
+	private EClass moistureSensorEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -80,13 +79,6 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 	 * @generated
 	 */
 	private EClass moistureStatusEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass wateringAreaAdminEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -387,8 +379,8 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 	 * @generated
 	 */
 	@Override
-	public EClass getWateringArea() {
-		return wateringAreaEClass;
+	public EClass getMoistureSensor() {
+		return moistureSensorEClass;
 	}
 
 	/**
@@ -397,8 +389,8 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWateringArea_Name() {
-		return (EAttribute)wateringAreaEClass.getEStructuralFeatures().get(0);
+	public EAttribute getMoistureSensor_Name() {
+		return (EAttribute)moistureSensorEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -407,8 +399,8 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 	 * @generated
 	 */
 	@Override
-	public EReference getWateringArea_Status() {
-		return (EReference)wateringAreaEClass.getEStructuralFeatures().get(1);
+	public EReference getMoistureSensor_Status() {
+		return (EReference)moistureSensorEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -427,7 +419,7 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 	 * @generated
 	 */
 	@Override
-	public EAttribute getMoistureStatus_Status() {
+	public EAttribute getMoistureStatus_Value() {
 		return (EAttribute)moistureStatusEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -437,8 +429,8 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 	 * @generated
 	 */
 	@Override
-	public EClass getWateringAreaAdmin() {
-		return wateringAreaAdminEClass;
+	public EAttribute getMoistureStatus_ObservedArea() {
+		return (EAttribute)moistureStatusEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -497,14 +489,13 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 		createEAttribute(deviceEClass, DEVICE__APPLICATION_ID);
 		createEAttribute(deviceEClass, DEVICE__APPLICATION_NAME);
 
-		wateringAreaEClass = createEClass(WATERING_AREA);
-		createEAttribute(wateringAreaEClass, WATERING_AREA__NAME);
-		createEReference(wateringAreaEClass, WATERING_AREA__STATUS);
+		moistureSensorEClass = createEClass(MOISTURE_SENSOR);
+		createEAttribute(moistureSensorEClass, MOISTURE_SENSOR__NAME);
+		createEReference(moistureSensorEClass, MOISTURE_SENSOR__STATUS);
 
 		moistureStatusEClass = createEClass(MOISTURE_STATUS);
-		createEAttribute(moistureStatusEClass, MOISTURE_STATUS__STATUS);
-
-		wateringAreaAdminEClass = createEClass(WATERING_AREA_ADMIN);
+		createEAttribute(moistureStatusEClass, MOISTURE_STATUS__VALUE);
+		createEAttribute(moistureStatusEClass, MOISTURE_STATUS__OBSERVED_AREA);
 	}
 
 	/**
@@ -542,9 +533,8 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 		sensorEClass.getESuperTypes().add(theProviderPackage.getService());
 		soilEClass.getESuperTypes().add(theProviderPackage.getService());
 		deviceEClass.getESuperTypes().add(theProviderPackage.getService());
-		wateringAreaEClass.getESuperTypes().add(theProviderPackage.getProvider());
+		moistureSensorEClass.getESuperTypes().add(theProviderPackage.getProvider());
 		moistureStatusEClass.getESuperTypes().add(theProviderPackage.getService());
-		wateringAreaAdminEClass.getESuperTypes().add(theProviderPackage.getAdmin());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(draginoEClass, Dragino.class, "Dragino", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -574,14 +564,13 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 		initEAttribute(getDevice_ApplicationId(), ecorePackage.getEString(), "applicationId", null, 0, 1, Device.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDevice_ApplicationName(), ecorePackage.getEString(), "applicationName", null, 0, 1, Device.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(wateringAreaEClass, WateringArea.class, "WateringArea", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getWateringArea_Name(), ecorePackage.getEString(), "name", null, 0, 1, WateringArea.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWateringArea_Status(), this.getMoistureStatus(), null, "status", null, 0, 1, WateringArea.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(moistureSensorEClass, MoistureSensor.class, "MoistureSensor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMoistureSensor_Name(), ecorePackage.getEString(), "name", null, 0, 1, MoistureSensor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMoistureSensor_Status(), this.getMoistureStatus(), null, "status", null, 0, 1, MoistureSensor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(moistureStatusEClass, MoistureStatus.class, "MoistureStatus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMoistureStatus_Status(), ecorePackage.getEInt(), "status", null, 0, 1, MoistureStatus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(wateringAreaAdminEClass, WateringAreaAdmin.class, "WateringAreaAdmin", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMoistureStatus_Value(), ecorePackage.getEIntegerObject(), "value", null, 0, 1, MoistureStatus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMoistureStatus_ObservedArea(), theProviderPackage.getEGeoJsonObject(), "observedArea", null, 0, 1, MoistureStatus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -591,6 +580,8 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 		createVersionAnnotations();
 		// model
 		createModelAnnotations();
+		// Metadata
+		createMetadataAnnotations();
 	}
 
 	/**
@@ -622,6 +613,28 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 		   source,
 		   new String[] {
 			   "name", "Dragino_LSE01"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>Metadata</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createMetadataAnnotations() {
+		String source = "Metadata";
+		addAnnotation
+		  (getMoistureStatus_Value(),
+		   source,
+		   new String[] {
+			   "sensorthings.unit.name", "Prozent"
+		   });
+		addAnnotation
+		  (getMoistureStatus_ObservedArea(),
+		   source,
+		   new String[] {
+			   "sensorthings.observedArea", "true"
 		   });
 	}
 

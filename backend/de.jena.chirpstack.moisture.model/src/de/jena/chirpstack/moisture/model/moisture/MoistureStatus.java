@@ -13,6 +13,8 @@
  */
 package de.jena.chirpstack.moisture.model.moisture;
 
+import org.eclipse.sensinact.gateway.geojson.GeoJsonObject;
+
 import org.eclipse.sensinact.model.core.provider.Service;
 
 import org.osgi.annotation.versioning.ProviderType;
@@ -26,7 +28,8 @@ import org.osgi.annotation.versioning.ProviderType;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link de.jena.chirpstack.moisture.model.moisture.MoistureStatus#getStatus <em>Status</em>}</li>
+ *   <li>{@link de.jena.chirpstack.moisture.model.moisture.MoistureStatus#getValue <em>Value</em>}</li>
+ *   <li>{@link de.jena.chirpstack.moisture.model.moisture.MoistureStatus#getObservedArea <em>Observed Area</em>}</li>
  * </ul>
  *
  * @see de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage#getMoistureStatus()
@@ -36,25 +39,48 @@ import org.osgi.annotation.versioning.ProviderType;
 @ProviderType
 public interface MoistureStatus extends Service {
 	/**
-	 * Returns the value of the '<em><b>Status</b></em>' attribute.
+	 * Returns the value of the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Status</em>' attribute.
-	 * @see #setStatus(int)
-	 * @see de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage#getMoistureStatus_Status()
-	 * @model
+	 * @return the value of the '<em>Value</em>' attribute.
+	 * @see #setValue(Integer)
+	 * @see de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage#getMoistureStatus_Value()
+	 * @model annotation="Metadata sensorthings.unit.name='Prozent'"
 	 * @generated
 	 */
-	int getStatus();
+	Integer getValue();
 
 	/**
-	 * Sets the value of the '{@link de.jena.chirpstack.moisture.model.moisture.MoistureStatus#getStatus <em>Status</em>}' attribute.
+	 * Sets the value of the '{@link de.jena.chirpstack.moisture.model.moisture.MoistureStatus#getValue <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Status</em>' attribute.
-	 * @see #getStatus()
+	 * @param value the new value of the '<em>Value</em>' attribute.
+	 * @see #getValue()
 	 * @generated
 	 */
-	void setStatus(int value);
+	void setValue(Integer value);
+
+	/**
+	 * Returns the value of the '<em><b>Observed Area</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Observed Area</em>' attribute.
+	 * @see #setObservedArea(GeoJsonObject)
+	 * @see de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage#getMoistureStatus_ObservedArea()
+	 * @model dataType="org.eclipse.sensinact.model.core.provider.EGeoJsonObject"
+	 *        annotation="Metadata sensorthings.observedArea='true'"
+	 * @generated
+	 */
+	GeoJsonObject getObservedArea();
+
+	/**
+	 * Sets the value of the '{@link de.jena.chirpstack.moisture.model.moisture.MoistureStatus#getObservedArea <em>Observed Area</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Observed Area</em>' attribute.
+	 * @see #getObservedArea()
+	 * @generated
+	 */
+	void setObservedArea(GeoJsonObject value);
 
 } // MoistureStatus

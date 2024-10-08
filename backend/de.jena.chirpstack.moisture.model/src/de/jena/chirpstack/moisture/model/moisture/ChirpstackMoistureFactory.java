@@ -72,13 +72,13 @@ public interface ChirpstackMoistureFactory extends EFactory {
 	Device createDevice();
 
 	/**
-	 * Returns a new object of class '<em>Watering Area</em>'.
+	 * Returns a new object of class '<em>Moisture Sensor</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Watering Area</em>'.
+	 * @return a new object of class '<em>Moisture Sensor</em>'.
 	 * @generated
 	 */
-	WateringArea createWateringArea();
+	MoistureSensor createMoistureSensor();
 
 	/**
 	 * Returns a new object of class '<em>Moisture Status</em>'.
@@ -88,15 +88,6 @@ public interface ChirpstackMoistureFactory extends EFactory {
 	 * @generated
 	 */
 	MoistureStatus createMoistureStatus();
-
-	/**
-	 * Returns a new object of class '<em>Watering Area Admin</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Watering Area Admin</em>'.
-	 * @generated
-	 */
-	WateringAreaAdmin createWateringAreaAdmin();
 
 	/**
 	 * Returns the package supported by this factory.

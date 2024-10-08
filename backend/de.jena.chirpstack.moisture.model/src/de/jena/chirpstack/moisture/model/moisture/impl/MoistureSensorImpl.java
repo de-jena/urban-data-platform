@@ -14,8 +14,8 @@
 package de.jena.chirpstack.moisture.model.moisture.impl;
 
 import de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage;
+import de.jena.chirpstack.moisture.model.moisture.MoistureSensor;
 import de.jena.chirpstack.moisture.model.moisture.MoistureStatus;
-import de.jena.chirpstack.moisture.model.moisture.WateringArea;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -29,19 +29,19 @@ import org.eclipse.sensinact.model.core.provider.impl.ProviderImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Watering Area</b></em>'.
+ * An implementation of the model object '<em><b>Moisture Sensor</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.jena.chirpstack.moisture.model.moisture.impl.WateringAreaImpl#getName <em>Name</em>}</li>
- *   <li>{@link de.jena.chirpstack.moisture.model.moisture.impl.WateringAreaImpl#getStatus <em>Status</em>}</li>
+ *   <li>{@link de.jena.chirpstack.moisture.model.moisture.impl.MoistureSensorImpl#getName <em>Name</em>}</li>
+ *   <li>{@link de.jena.chirpstack.moisture.model.moisture.impl.MoistureSensorImpl#getStatus <em>Status</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class WateringAreaImpl extends ProviderImpl implements WateringArea {
+public class MoistureSensorImpl extends ProviderImpl implements MoistureSensor {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -77,7 +77,7 @@ public class WateringAreaImpl extends ProviderImpl implements WateringArea {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected WateringAreaImpl() {
+	protected MoistureSensorImpl() {
 		super();
 	}
 
@@ -88,7 +88,7 @@ public class WateringAreaImpl extends ProviderImpl implements WateringArea {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ChirpstackMoisturePackage.Literals.WATERING_AREA;
+		return ChirpstackMoisturePackage.Literals.MOISTURE_SENSOR;
 	}
 
 	/**
@@ -111,7 +111,7 @@ public class WateringAreaImpl extends ProviderImpl implements WateringArea {
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackMoisturePackage.WATERING_AREA__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackMoisturePackage.MOISTURE_SENSOR__NAME, oldName, name));
 	}
 
 	/**
@@ -133,7 +133,7 @@ public class WateringAreaImpl extends ProviderImpl implements WateringArea {
 		MoistureStatus oldStatus = status;
 		status = newStatus;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ChirpstackMoisturePackage.WATERING_AREA__STATUS, oldStatus, newStatus);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ChirpstackMoisturePackage.MOISTURE_SENSOR__STATUS, oldStatus, newStatus);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -149,14 +149,14 @@ public class WateringAreaImpl extends ProviderImpl implements WateringArea {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
 			if (status != null)
-				msgs = ((InternalEObject)status).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ChirpstackMoisturePackage.WATERING_AREA__STATUS, null, msgs);
+				msgs = ((InternalEObject)status).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ChirpstackMoisturePackage.MOISTURE_SENSOR__STATUS, null, msgs);
 			if (newStatus != null)
-				msgs = ((InternalEObject)newStatus).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ChirpstackMoisturePackage.WATERING_AREA__STATUS, null, msgs);
+				msgs = ((InternalEObject)newStatus).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ChirpstackMoisturePackage.MOISTURE_SENSOR__STATUS, null, msgs);
 			msgs = basicSetStatus(newStatus, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackMoisturePackage.WATERING_AREA__STATUS, newStatus, newStatus));
+			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackMoisturePackage.MOISTURE_SENSOR__STATUS, newStatus, newStatus));
 	}
 
 	/**
@@ -167,7 +167,7 @@ public class WateringAreaImpl extends ProviderImpl implements WateringArea {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ChirpstackMoisturePackage.WATERING_AREA__STATUS:
+			case ChirpstackMoisturePackage.MOISTURE_SENSOR__STATUS:
 				return basicSetStatus(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -181,9 +181,9 @@ public class WateringAreaImpl extends ProviderImpl implements WateringArea {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ChirpstackMoisturePackage.WATERING_AREA__NAME:
+			case ChirpstackMoisturePackage.MOISTURE_SENSOR__NAME:
 				return getName();
-			case ChirpstackMoisturePackage.WATERING_AREA__STATUS:
+			case ChirpstackMoisturePackage.MOISTURE_SENSOR__STATUS:
 				return getStatus();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -197,10 +197,10 @@ public class WateringAreaImpl extends ProviderImpl implements WateringArea {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ChirpstackMoisturePackage.WATERING_AREA__NAME:
+			case ChirpstackMoisturePackage.MOISTURE_SENSOR__NAME:
 				setName((String)newValue);
 				return;
-			case ChirpstackMoisturePackage.WATERING_AREA__STATUS:
+			case ChirpstackMoisturePackage.MOISTURE_SENSOR__STATUS:
 				setStatus((MoistureStatus)newValue);
 				return;
 		}
@@ -215,10 +215,10 @@ public class WateringAreaImpl extends ProviderImpl implements WateringArea {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ChirpstackMoisturePackage.WATERING_AREA__NAME:
+			case ChirpstackMoisturePackage.MOISTURE_SENSOR__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case ChirpstackMoisturePackage.WATERING_AREA__STATUS:
+			case ChirpstackMoisturePackage.MOISTURE_SENSOR__STATUS:
 				setStatus((MoistureStatus)null);
 				return;
 		}
@@ -233,9 +233,9 @@ public class WateringAreaImpl extends ProviderImpl implements WateringArea {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ChirpstackMoisturePackage.WATERING_AREA__NAME:
+			case ChirpstackMoisturePackage.MOISTURE_SENSOR__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case ChirpstackMoisturePackage.WATERING_AREA__STATUS:
+			case ChirpstackMoisturePackage.MOISTURE_SENSOR__STATUS:
 				return status != null;
 		}
 		return super.eIsSet(featureID);
@@ -257,4 +257,4 @@ public class WateringAreaImpl extends ProviderImpl implements WateringArea {
 		return result.toString();
 	}
 
-} //WateringAreaImpl
+} //MoistureSensorImpl

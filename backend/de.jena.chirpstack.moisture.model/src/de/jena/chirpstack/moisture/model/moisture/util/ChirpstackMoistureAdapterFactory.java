@@ -22,7 +22,6 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.sensinact.model.core.provider.Admin;
 import org.eclipse.sensinact.model.core.provider.Provider;
 import org.eclipse.sensinact.model.core.provider.Service;
 
@@ -99,16 +98,12 @@ public class ChirpstackMoistureAdapterFactory extends AdapterFactoryImpl {
 				return createDeviceAdapter();
 			}
 			@Override
-			public Adapter caseWateringArea(WateringArea object) {
-				return createWateringAreaAdapter();
+			public Adapter caseMoistureSensor(MoistureSensor object) {
+				return createMoistureSensorAdapter();
 			}
 			@Override
 			public Adapter caseMoistureStatus(MoistureStatus object) {
 				return createMoistureStatusAdapter();
-			}
-			@Override
-			public Adapter caseWateringAreaAdmin(WateringAreaAdmin object) {
-				return createWateringAreaAdminAdapter();
 			}
 			@Override
 			public Adapter caseProvider(Provider object) {
@@ -117,10 +112,6 @@ public class ChirpstackMoistureAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseService(Service object) {
 				return createServiceAdapter();
-			}
-			@Override
-			public Adapter caseAdmin(Admin object) {
-				return createAdminAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -199,16 +190,16 @@ public class ChirpstackMoistureAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.jena.chirpstack.moisture.model.moisture.WateringArea <em>Watering Area</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.jena.chirpstack.moisture.model.moisture.MoistureSensor <em>Moisture Sensor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.jena.chirpstack.moisture.model.moisture.WateringArea
+	 * @see de.jena.chirpstack.moisture.model.moisture.MoistureSensor
 	 * @generated
 	 */
-	public Adapter createWateringAreaAdapter() {
+	public Adapter createMoistureSensorAdapter() {
 		return null;
 	}
 
@@ -223,20 +214,6 @@ public class ChirpstackMoistureAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMoistureStatusAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link de.jena.chirpstack.moisture.model.moisture.WateringAreaAdmin <em>Watering Area Admin</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.jena.chirpstack.moisture.model.moisture.WateringAreaAdmin
-	 * @generated
-	 */
-	public Adapter createWateringAreaAdminAdapter() {
 		return null;
 	}
 
@@ -265,20 +242,6 @@ public class ChirpstackMoistureAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createServiceAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.sensinact.model.core.provider.Admin <em>Admin</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.sensinact.model.core.provider.Admin
-	 * @generated
-	 */
-	public Adapter createAdminAdapter() {
 		return null;
 	}
 

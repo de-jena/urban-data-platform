@@ -71,9 +71,8 @@ public class ChirpstackMoistureFactoryImpl extends EFactoryImpl implements Chirp
 			case ChirpstackMoisturePackage.SENSOR: return createSensor();
 			case ChirpstackMoisturePackage.SOIL: return createSoil();
 			case ChirpstackMoisturePackage.DEVICE: return createDevice();
-			case ChirpstackMoisturePackage.WATERING_AREA: return createWateringArea();
+			case ChirpstackMoisturePackage.MOISTURE_SENSOR: return createMoistureSensor();
 			case ChirpstackMoisturePackage.MOISTURE_STATUS: return createMoistureStatus();
-			case ChirpstackMoisturePackage.WATERING_AREA_ADMIN: return createWateringAreaAdmin();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -129,9 +128,9 @@ public class ChirpstackMoistureFactoryImpl extends EFactoryImpl implements Chirp
 	 * @generated
 	 */
 	@Override
-	public WateringArea createWateringArea() {
-		WateringAreaImpl wateringArea = new WateringAreaImpl();
-		return wateringArea;
+	public MoistureSensor createMoistureSensor() {
+		MoistureSensorImpl moistureSensor = new MoistureSensorImpl();
+		return moistureSensor;
 	}
 
 	/**
@@ -143,17 +142,6 @@ public class ChirpstackMoistureFactoryImpl extends EFactoryImpl implements Chirp
 	public MoistureStatus createMoistureStatus() {
 		MoistureStatusImpl moistureStatus = new MoistureStatusImpl();
 		return moistureStatus;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public WateringAreaAdmin createWateringAreaAdmin() {
-		WateringAreaAdminImpl wateringAreaAdmin = new WateringAreaAdminImpl();
-		return wateringAreaAdmin;
 	}
 
 	/**

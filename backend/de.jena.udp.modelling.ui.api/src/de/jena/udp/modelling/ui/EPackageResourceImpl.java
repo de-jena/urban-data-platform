@@ -16,14 +16,13 @@ package de.jena.udp.modelling.ui;
 import java.lang.System.Logger;
 import java.lang.System.Logger.Level;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import org.eclipse.emf.common.util.ECollections;
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.gecko.emf.json.annotation.RequireEMFJson;
+import org.gecko.emf.osgi.annotation.require.RequireEMF;
 import org.gecko.emf.rest.annotations.RequireEMFMessageBodyReaderWriter;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
@@ -44,8 +43,6 @@ import jakarta.ws.rs.QueryParam;
 import jakarta.ws.rs.WebApplicationException;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
-import org.gecko.emf.rest.annotations.RequireEMFMessageBodyReaderWriter;
-import org.gecko.emf.osgi.annotation.require.RequireEMF;
 
 
 @JakartarsResource
@@ -136,7 +133,5 @@ public class EPackageResourceImpl implements EPackageResource {
 		boolean exists = repo.existEPackage(ePackageUri);
 		return Response.accepted(exists).build();
 	}
-
-	
 
 }

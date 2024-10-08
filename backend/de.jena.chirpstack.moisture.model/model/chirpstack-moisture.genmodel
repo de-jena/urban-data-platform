@@ -36,13 +36,13 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack-moisture.ecore#//Device/applicationId"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack-moisture.ecore#//Device/applicationName"/>
     </genClasses>
-    <genClasses ecoreClass="chirpstack-moisture.ecore#//WateringArea">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack-moisture.ecore#//WateringArea/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack-moisture.ecore#//WateringArea/status"/>
+    <genClasses ecoreClass="chirpstack-moisture.ecore#//MoistureSensor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack-moisture.ecore#//MoistureSensor/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack-moisture.ecore#//MoistureSensor/status"/>
     </genClasses>
     <genClasses ecoreClass="chirpstack-moisture.ecore#//MoistureStatus">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack-moisture.ecore#//MoistureStatus/status"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack-moisture.ecore#//MoistureStatus/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack-moisture.ecore#//MoistureStatus/observedArea"/>
     </genClasses>
-    <genClasses ecoreClass="chirpstack-moisture.ecore#//WateringAreaAdmin"/>
   </genPackages>
 </genmodel:GenModel>

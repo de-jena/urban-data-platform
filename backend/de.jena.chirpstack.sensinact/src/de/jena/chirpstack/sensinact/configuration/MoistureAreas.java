@@ -16,12 +16,15 @@ package de.jena.chirpstack.sensinact.configuration;
 import java.lang.System.Logger;
 import java.lang.System.Logger.Level;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 import org.eclipse.sensinact.core.push.DataUpdate;
 import org.eclipse.sensinact.gateway.geojson.Coordinates;
+import org.eclipse.sensinact.gateway.geojson.Feature;
+import org.eclipse.sensinact.gateway.geojson.FeatureCollection;
 import org.eclipse.sensinact.gateway.geojson.Polygon;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
@@ -29,9 +32,8 @@ import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Reference;
 
 import de.jena.chirpstack.moisture.model.moisture.ChirpstackMoistureFactory;
+import de.jena.chirpstack.moisture.model.moisture.MoistureSensor;
 import de.jena.chirpstack.moisture.model.moisture.MoistureStatus;
-import de.jena.chirpstack.moisture.model.moisture.WateringArea;
-import de.jena.chirpstack.moisture.model.moisture.WateringAreaAdmin;
 
 /**
  * 
@@ -63,21 +65,21 @@ public class MoistureAreas {
 	}
 
 	private void updateArea() {
-		WateringArea wa = ChirpstackMoistureFactory.eINSTANCE.createWateringArea();
-		wa.setName("Jena-Center");
-		wa.setId("JC");
-		WateringAreaAdmin admin = ChirpstackMoistureFactory.eINSTANCE.createWateringAreaAdmin();
-		Polygon l = createPolygon();
-		admin.setLocation(l);
-		wa.setAdmin(admin);
+		logger.log(Level.INFO, "Send moisture data.");
+		MoistureSensor ms = ChirpstackMoistureFactory.eINSTANCE.createMoistureSensor();
+		ms.setName("Jena-Center");
+		ms.setId("JC");
+		FeatureCollection fc = createPolygon();
 		MoistureStatus s = ChirpstackMoistureFactory.eINSTANCE.createMoistureStatus();
-
-		s.setStatus(1);
-		wa.setStatus(s);
-		sensiNact.pushUpdate(wa);
+		s.setValue(Long.valueOf(Math.round(Math.random()*100 )).intValue());
+		s.setObservedArea(fc);
+		ms.setStatus(s);
+		sensiNact.pushUpdate(ms);
 	}
 
-	private Polygon createPolygon() {
+	private FeatureCollection createPolygon() {
+		FeatureCollection fc = new FeatureCollection();
+		Feature f = new Feature();
 		Polygon l = new Polygon();
 		ArrayList<Coordinates> coordinates = new ArrayList<>();
 		coordinates.add(createCoordinate(11.583249312676969, 50.9293087585084));
@@ -88,7 +90,9 @@ public class MoistureAreas {
 		
 		l.coordinates = new ArrayList<>();
 		l.coordinates.add(coordinates);
-		return l;
+		f.geometry = l;
+		fc.features = Collections.singletonList(f);
+		return fc;
 	}
 
 	private Coordinates createCoordinate(double lon, double lat) {
