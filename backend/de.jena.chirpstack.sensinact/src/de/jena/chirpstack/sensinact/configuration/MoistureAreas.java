@@ -16,7 +16,7 @@ package de.jena.chirpstack.sensinact.configuration;
 import java.lang.System.Logger;
 import java.lang.System.Logger.Level;
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Arrays;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -25,7 +25,10 @@ import org.eclipse.sensinact.core.push.DataUpdate;
 import org.eclipse.sensinact.gateway.geojson.Coordinates;
 import org.eclipse.sensinact.gateway.geojson.Feature;
 import org.eclipse.sensinact.gateway.geojson.FeatureCollection;
+import org.eclipse.sensinact.gateway.geojson.Point;
 import org.eclipse.sensinact.gateway.geojson.Polygon;
+import org.eclipse.sensinact.model.core.provider.Admin;
+import org.eclipse.sensinact.model.core.provider.ProviderFactory;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Deactivate;
@@ -65,21 +68,34 @@ public class MoistureAreas {
 	}
 
 	private void updateArea() {
-		logger.log(Level.INFO, "Send moisture data.");
 		MoistureSensor ms = ChirpstackMoistureFactory.eINSTANCE.createMoistureSensor();
-		ms.setName("Jena-Center");
+		String name = "Jena-Center";
+		ms.setName(name);
 		ms.setId("JC");
-		FeatureCollection fc = createPolygon();
+		Admin admin = ProviderFactory.eINSTANCE.createAdmin();
+		admin.setLocation(createPoint());
+		ms.setAdmin(admin);
+		
 		MoistureStatus s = ChirpstackMoistureFactory.eINSTANCE.createMoistureStatus();
-		s.setValue(Long.valueOf(Math.round(Math.random()*100 )).intValue());
-		s.setObservedArea(fc);
+		int value = Long.valueOf(Math.round(Math.random()*100 )).intValue();
+		logger.log(Level.INFO, "Send moisture data ({1}%) for {0}.", name, value);
+		s.setValue(value);
+		s.setObservedArea(createFeature());
 		ms.setStatus(s);
 		sensiNact.pushUpdate(ms);
 	}
 
-	private FeatureCollection createPolygon() {
+	private FeatureCollection createFeature() {
 		FeatureCollection fc = new FeatureCollection();
-		Feature f = new Feature();
+		Feature f1 = new Feature();
+		f1.geometry = createPolygon();
+		Feature f2 = new Feature();
+		f2.geometry = createPoint();
+		fc.features = Arrays.asList(f2, f1);
+		return fc;
+	}
+
+	private Polygon createPolygon() {
 		Polygon l = new Polygon();
 		ArrayList<Coordinates> coordinates = new ArrayList<>();
 		coordinates.add(createCoordinate(11.583249312676969, 50.9293087585084));
@@ -90,9 +106,12 @@ public class MoistureAreas {
 		
 		l.coordinates = new ArrayList<>();
 		l.coordinates.add(coordinates);
-		f.geometry = l;
-		fc.features = Collections.singletonList(f);
-		return fc;
+		return l;
+	}
+	private Point createPoint() {
+		Point l = new Point();
+		l.coordinates = createCoordinate(11.583479544464922, 50.92860036325317);
+		return l;
 	}
 
 	private Coordinates createCoordinate(double lon, double lat) {
