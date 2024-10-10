@@ -99,7 +99,7 @@ public class MoistureAreas {
 		Polygon l = new Polygon();
 		ArrayList<Coordinates> coordinates = new ArrayList<>();
 		coordinates.add(createCoordinate(11.583249312676969, 50.9293087585084));
-		coordinates.add(createCoordinate(11.582909648706107, 50.9293087585084));
+		coordinates.add(createCoordinate(11.582909648706107, 50.928076074890384));
 		coordinates.add(createCoordinate(11.583714116007002, 50.927931846518476));
 		coordinates.add(createCoordinate(11.584153891464808, 50.92925242084712));
 		coordinates.add(createCoordinate(11.583249312676969, 50.9293087585084));
