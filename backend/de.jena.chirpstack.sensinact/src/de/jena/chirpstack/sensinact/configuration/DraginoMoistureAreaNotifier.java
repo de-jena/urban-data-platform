@@ -62,15 +62,18 @@ public class DraginoMoistureAreaNotifier implements TypedEventHandler<ResourceDa
 	}
 
 	Map<String, Soil> soilValues = new HashMap<>();
-	
+
 	class Soil {
-		double temperature; double water; double conduct;
+		double temperature;
+		double water;
+		double conduct;
 		String id;
+
 		Soil(String id) {
 			this.id = id;
 		}
 	}
-	
+
 	@Override
 	public void notify(String topic, ResourceDataNotification event) {
 		promiseFactory.submit(() -> handleNotify(topic, event))
@@ -79,23 +82,15 @@ public class DraginoMoistureAreaNotifier implements TypedEventHandler<ResourceDa
 
 	public boolean handleNotify(String topic, ResourceDataNotification event) {
 		if (topic.contains("soil")) {
-			synchronized (soilValues) {
-				Soil soil = soilValues.computeIfAbsent(event.provider, Soil::new);
-				if ("conduct".equals(event.resource)) {
-					soil.conduct = (double) event.newValue;
-				} else if ("temperature".equals(event.resource)) {
-					soil.temperature = (double) event.newValue;
-				} else if ("water".equals(event.resource)) {
-					soil.water = (double) event.newValue;
-				}
-			}
-			logger.log(Level.INFO, "Event: {0} - {1}", event.getTopic(), event.newValue);
-			return true;
+			return updateSoil(event);
 		}
-		if (!topic.contains("admin/location")) {
-			logger.log(Level.INFO, "Event: {0} - {1}", event.getTopic(), event.newValue);
-			return false;
+		if (topic.contains("admin/location")) {
+			return updateSensor(event);
 		}
+		return false;
+	}
+
+	private boolean updateSensor(ResourceDataNotification event) {
 		logger.log(Level.INFO, "Event: {0} - {1}", event.getTopic(), event.timestamp);
 		MoistureSensor ms = ChirpstackMoistureFactory.eINSTANCE.createMoistureSensor();
 		String name = event.provider + "-area";
@@ -109,8 +104,8 @@ public class DraginoMoistureAreaNotifier implements TypedEventHandler<ResourceDa
 		logger.log(Level.INFO, "Send moisture data ({1}%) for {0}.", name, 10);
 		s.setValue(10);
 		s.setObservedArea(createFeature((Point) event.newValue));
-		
-		if(soilValues.containsKey(event.provider)) {
+
+		if (soilValues.containsKey(event.provider)) {
 			Soil soil = soilValues.get(event.provider);
 			s.setConduct(soil.conduct);
 			s.setTemperature(soil.temperature);
@@ -119,6 +114,20 @@ public class DraginoMoistureAreaNotifier implements TypedEventHandler<ResourceDa
 		ms.setStatus(s);
 		sensiNact.pushUpdate(ms);
 
+		return true;
+	}
+
+	private boolean updateSoil(ResourceDataNotification event) {
+		synchronized (soilValues) {
+			Soil soil = soilValues.computeIfAbsent(event.provider, Soil::new);
+			if ("conduct".equals(event.resource)) {
+				soil.conduct = (double) event.newValue;
+			} else if ("temperature".equals(event.resource)) {
+				soil.temperature = (double) event.newValue;
+			} else if ("water".equals(event.resource)) {
+				soil.water = (double) event.newValue;
+			}
+		}
 		return true;
 	}
 
@@ -133,11 +142,16 @@ public class DraginoMoistureAreaNotifier implements TypedEventHandler<ResourceDa
 	private Polygon createPolygon(Point center) {
 		Polygon l = new Polygon();
 		ArrayList<Coordinates> coordinates = new ArrayList<>();
-		coordinates.add(createCoordinate(center.coordinates.latitude - DISTANCE, center.coordinates.longitude - DISTANCE));
-		coordinates.add(createCoordinate(center.coordinates.latitude - DISTANCE, center.coordinates.longitude + DISTANCE));
-		coordinates.add(createCoordinate(center.coordinates.latitude + DISTANCE, center.coordinates.longitude + DISTANCE));
-		coordinates.add(createCoordinate(center.coordinates.latitude + DISTANCE, center.coordinates.longitude - DISTANCE));
-		coordinates.add(createCoordinate(center.coordinates.latitude - DISTANCE, center.coordinates.longitude - DISTANCE));
+		coordinates
+				.add(createCoordinate(center.coordinates.latitude - DISTANCE, center.coordinates.longitude - DISTANCE));
+		coordinates
+				.add(createCoordinate(center.coordinates.latitude - DISTANCE, center.coordinates.longitude + DISTANCE));
+		coordinates
+				.add(createCoordinate(center.coordinates.latitude + DISTANCE, center.coordinates.longitude + DISTANCE));
+		coordinates
+				.add(createCoordinate(center.coordinates.latitude + DISTANCE, center.coordinates.longitude - DISTANCE));
+		coordinates
+				.add(createCoordinate(center.coordinates.latitude - DISTANCE, center.coordinates.longitude - DISTANCE));
 
 		l.coordinates = new ArrayList<>();
 		l.coordinates.add(coordinates);

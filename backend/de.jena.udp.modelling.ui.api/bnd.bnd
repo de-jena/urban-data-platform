@@ -18,6 +18,9 @@ src: src, src-gen
 # to take full control over whats exported and imported and will ignore @Export
 # Bundle Annotations		
 -includeresource.model: model=model
+-includeresource.swagger: \
+	swagger-api=@https://github.com/swagger-api/swagger-ui/archive/refs/tags/v3.52.3.zip!/swagger-ui-3.52.3/dist/(*);rename:=$1,\
+	swagger-api=swagger
 
 Bundle-Version: 1.0.0.SNAPSHOT
 
@@ -25,20 +28,20 @@ Bundle-Version: 1.0.0.SNAPSHOT
 	jakarta.ws.rs-api,\
 	org.gecko.emf.json,\
 	org.osgi.service.jakartars,\
-	io.swagger.core.v3.swagger-annotations.jakarta,\
 	org.gecko.emf.repository.api,\
 	org.gecko.emf.repository.mongo,\
 	org.gecko.emf.rest.jakartars,\
 	org.osgi.service.cm,\
 	org.osgi.service.http.whiteboard,\
+	io.swagger.core.v3.swagger-annotations.jakarta,\
 	io.swagger.core.v3.swagger-jaxrs2.jakarta,\
+	io.swagger.core.v3.swagger-integration.jakarta,\
+	io.swagger.core.v3.swagger-core.jakarta,\
+	io.swagger.core.v3.swagger-models.jakarta,\
 	jakarta.servlet-api,\
 	org.apache.felix.http.servlet-api,\
 	com.fasterxml.jackson.core.jackson-core,\
 	com.fasterxml.jackson.core.jackson-databind,\
-	io.swagger.core.v3.swagger-integration.jakarta,\
-	io.swagger.core.v3.swagger-core.jakarta,\
-	io.swagger.core.v3.swagger-models.jakarta,\
 	org.gecko.emf.util.annotations,\
 	org.gecko.emf.osgi.component,\
 	org.glassfish.jersey.media.jersey-media-json-jackson
