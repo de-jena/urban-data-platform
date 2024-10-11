@@ -587,13 +587,40 @@ public interface ChirpstackMoisturePackage extends org.eclipse.emf.ecore.EPackag
 	int MOISTURE_STATUS__OBSERVED_AREA = ProviderPackage.SERVICE_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Temperature</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOISTURE_STATUS__TEMPERATURE = ProviderPackage.SERVICE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Water</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOISTURE_STATUS__WATER = ProviderPackage.SERVICE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Conduct</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOISTURE_STATUS__CONDUCT = ProviderPackage.SERVICE_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Moisture Status</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOISTURE_STATUS_FEATURE_COUNT = ProviderPackage.SERVICE_FEATURE_COUNT + 2;
+	int MOISTURE_STATUS_FEATURE_COUNT = ProviderPackage.SERVICE_FEATURE_COUNT + 5;
 
 	/**
 	 * The operation id for the '<em>EIs Set</em>' operation.
@@ -928,6 +955,39 @@ public interface ChirpstackMoisturePackage extends org.eclipse.emf.ecore.EPackag
 	EAttribute getMoistureStatus_ObservedArea();
 
 	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.moisture.model.moisture.MoistureStatus#getTemperature <em>Temperature</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Temperature</em>'.
+	 * @see de.jena.chirpstack.moisture.model.moisture.MoistureStatus#getTemperature()
+	 * @see #getMoistureStatus()
+	 * @generated
+	 */
+	EAttribute getMoistureStatus_Temperature();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.moisture.model.moisture.MoistureStatus#getWater <em>Water</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Water</em>'.
+	 * @see de.jena.chirpstack.moisture.model.moisture.MoistureStatus#getWater()
+	 * @see #getMoistureStatus()
+	 * @generated
+	 */
+	EAttribute getMoistureStatus_Water();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.moisture.model.moisture.MoistureStatus#getConduct <em>Conduct</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Conduct</em>'.
+	 * @see de.jena.chirpstack.moisture.model.moisture.MoistureStatus#getConduct()
+	 * @see #getMoistureStatus()
+	 * @generated
+	 */
+	EAttribute getMoistureStatus_Conduct();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1193,6 +1253,30 @@ public interface ChirpstackMoisturePackage extends org.eclipse.emf.ecore.EPackag
 		 * @generated
 		 */
 		EAttribute MOISTURE_STATUS__OBSERVED_AREA = eINSTANCE.getMoistureStatus_ObservedArea();
+
+		/**
+		 * The meta object literal for the '<em><b>Temperature</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOISTURE_STATUS__TEMPERATURE = eINSTANCE.getMoistureStatus_Temperature();
+
+		/**
+		 * The meta object literal for the '<em><b>Water</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOISTURE_STATUS__WATER = eINSTANCE.getMoistureStatus_Water();
+
+		/**
+		 * The meta object literal for the '<em><b>Conduct</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOISTURE_STATUS__CONDUCT = eINSTANCE.getMoistureStatus_Conduct();
 
 	}
 

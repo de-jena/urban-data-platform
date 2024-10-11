@@ -50,6 +50,8 @@ public class MoistureAreas {
 
 	private ScheduledExecutorService scheduler;
 
+	private int value = 50;
+
 	@Activate
 	public void activate() {
 		logger.log(Level.DEBUG, "Start loading Moisture areas.");
@@ -75,9 +77,9 @@ public class MoistureAreas {
 		Admin admin = ProviderFactory.eINSTANCE.createAdmin();
 		admin.setLocation(createPoint());
 		ms.setAdmin(admin);
-		
+
 		MoistureStatus s = ChirpstackMoistureFactory.eINSTANCE.createMoistureStatus();
-		int value = Long.valueOf(Math.round(Math.random()*100 )).intValue();
+		updateValue();
 		logger.log(Level.INFO, "Send moisture data ({1}%) for {0}.", name, value);
 		s.setValue(value);
 		s.setObservedArea(createFeature());
@@ -85,17 +87,21 @@ public class MoistureAreas {
 		sensiNact.pushUpdate(ms);
 	}
 
+	private void updateValue() {
+		value = value + Long.valueOf(Math.round(Math.random() * 10)).intValue() - 5;
+		value = Math.min(value, 95);
+		value = Math.max(value, 10);
+	}
+
 	private FeatureCollection createFeature() {
 		FeatureCollection fc = new FeatureCollection();
 		Feature f1 = new Feature();
 		f1.geometry = createPolygon();
-		Feature f2 = new Feature();
-		f2.geometry = createPoint();
-		fc.features = Arrays.asList(f2, f1);
+		fc.features = Arrays.asList(f1);
 		return fc;
 	}
 
-	private Polygon createPolygon() {
+	static Polygon createPolygon() {
 		Polygon l = new Polygon();
 		ArrayList<Coordinates> coordinates = new ArrayList<>();
 		coordinates.add(createCoordinate(11.583249312676969, 50.9293087585084));
@@ -103,18 +109,19 @@ public class MoistureAreas {
 		coordinates.add(createCoordinate(11.583714116007002, 50.927931846518476));
 		coordinates.add(createCoordinate(11.584153891464808, 50.92925242084712));
 		coordinates.add(createCoordinate(11.583249312676969, 50.9293087585084));
-		
+
 		l.coordinates = new ArrayList<>();
 		l.coordinates.add(coordinates);
 		return l;
 	}
-	private Point createPoint() {
+
+	static Point createPoint() {
 		Point l = new Point();
 		l.coordinates = createCoordinate(11.583479544464922, 50.92860036325317);
 		return l;
 	}
 
-	private Coordinates createCoordinate(double lon, double lat) {
+	static Coordinates createCoordinate(double lon, double lat) {
 		Coordinates c = new Coordinates();
 		c.longitude = lon;
 		c.latitude = lat;

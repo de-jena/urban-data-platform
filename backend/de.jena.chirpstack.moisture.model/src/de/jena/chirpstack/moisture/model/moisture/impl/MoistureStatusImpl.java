@@ -36,6 +36,9 @@ import org.eclipse.sensinact.model.core.provider.impl.ServiceImpl;
  * <ul>
  *   <li>{@link de.jena.chirpstack.moisture.model.moisture.impl.MoistureStatusImpl#getValue <em>Value</em>}</li>
  *   <li>{@link de.jena.chirpstack.moisture.model.moisture.impl.MoistureStatusImpl#getObservedArea <em>Observed Area</em>}</li>
+ *   <li>{@link de.jena.chirpstack.moisture.model.moisture.impl.MoistureStatusImpl#getTemperature <em>Temperature</em>}</li>
+ *   <li>{@link de.jena.chirpstack.moisture.model.moisture.impl.MoistureStatusImpl#getWater <em>Water</em>}</li>
+ *   <li>{@link de.jena.chirpstack.moisture.model.moisture.impl.MoistureStatusImpl#getConduct <em>Conduct</em>}</li>
  * </ul>
  *
  * @generated
@@ -80,6 +83,66 @@ public class MoistureStatusImpl extends ServiceImpl implements MoistureStatus {
 	 * @ordered
 	 */
 	protected GeoJsonObject observedArea = OBSERVED_AREA_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getTemperature() <em>Temperature</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTemperature()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double TEMPERATURE_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getTemperature() <em>Temperature</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTemperature()
+	 * @generated
+	 * @ordered
+	 */
+	protected double temperature = TEMPERATURE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getWater() <em>Water</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getWater()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double WATER_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getWater() <em>Water</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getWater()
+	 * @generated
+	 * @ordered
+	 */
+	protected double water = WATER_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getConduct() <em>Conduct</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getConduct()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double CONDUCT_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getConduct() <em>Conduct</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getConduct()
+	 * @generated
+	 * @ordered
+	 */
+	protected double conduct = CONDUCT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -152,12 +215,87 @@ public class MoistureStatusImpl extends ServiceImpl implements MoistureStatus {
 	 * @generated
 	 */
 	@Override
+	public double getTemperature() {
+		return temperature;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setTemperature(double newTemperature) {
+		double oldTemperature = temperature;
+		temperature = newTemperature;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackMoisturePackage.MOISTURE_STATUS__TEMPERATURE, oldTemperature, temperature));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public double getWater() {
+		return water;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setWater(double newWater) {
+		double oldWater = water;
+		water = newWater;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackMoisturePackage.MOISTURE_STATUS__WATER, oldWater, water));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public double getConduct() {
+		return conduct;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setConduct(double newConduct) {
+		double oldConduct = conduct;
+		conduct = newConduct;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackMoisturePackage.MOISTURE_STATUS__CONDUCT, oldConduct, conduct));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case ChirpstackMoisturePackage.MOISTURE_STATUS__VALUE:
 				return getValue();
 			case ChirpstackMoisturePackage.MOISTURE_STATUS__OBSERVED_AREA:
 				return getObservedArea();
+			case ChirpstackMoisturePackage.MOISTURE_STATUS__TEMPERATURE:
+				return getTemperature();
+			case ChirpstackMoisturePackage.MOISTURE_STATUS__WATER:
+				return getWater();
+			case ChirpstackMoisturePackage.MOISTURE_STATUS__CONDUCT:
+				return getConduct();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -175,6 +313,15 @@ public class MoistureStatusImpl extends ServiceImpl implements MoistureStatus {
 				return;
 			case ChirpstackMoisturePackage.MOISTURE_STATUS__OBSERVED_AREA:
 				setObservedArea((GeoJsonObject)newValue);
+				return;
+			case ChirpstackMoisturePackage.MOISTURE_STATUS__TEMPERATURE:
+				setTemperature((Double)newValue);
+				return;
+			case ChirpstackMoisturePackage.MOISTURE_STATUS__WATER:
+				setWater((Double)newValue);
+				return;
+			case ChirpstackMoisturePackage.MOISTURE_STATUS__CONDUCT:
+				setConduct((Double)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -194,6 +341,15 @@ public class MoistureStatusImpl extends ServiceImpl implements MoistureStatus {
 			case ChirpstackMoisturePackage.MOISTURE_STATUS__OBSERVED_AREA:
 				setObservedArea(OBSERVED_AREA_EDEFAULT);
 				return;
+			case ChirpstackMoisturePackage.MOISTURE_STATUS__TEMPERATURE:
+				setTemperature(TEMPERATURE_EDEFAULT);
+				return;
+			case ChirpstackMoisturePackage.MOISTURE_STATUS__WATER:
+				setWater(WATER_EDEFAULT);
+				return;
+			case ChirpstackMoisturePackage.MOISTURE_STATUS__CONDUCT:
+				setConduct(CONDUCT_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -210,6 +366,12 @@ public class MoistureStatusImpl extends ServiceImpl implements MoistureStatus {
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 			case ChirpstackMoisturePackage.MOISTURE_STATUS__OBSERVED_AREA:
 				return OBSERVED_AREA_EDEFAULT == null ? observedArea != null : !OBSERVED_AREA_EDEFAULT.equals(observedArea);
+			case ChirpstackMoisturePackage.MOISTURE_STATUS__TEMPERATURE:
+				return temperature != TEMPERATURE_EDEFAULT;
+			case ChirpstackMoisturePackage.MOISTURE_STATUS__WATER:
+				return water != WATER_EDEFAULT;
+			case ChirpstackMoisturePackage.MOISTURE_STATUS__CONDUCT:
+				return conduct != CONDUCT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -228,6 +390,12 @@ public class MoistureStatusImpl extends ServiceImpl implements MoistureStatus {
 		result.append(value);
 		result.append(", observedArea: ");
 		result.append(observedArea);
+		result.append(", temperature: ");
+		result.append(temperature);
+		result.append(", water: ");
+		result.append(water);
+		result.append(", conduct: ");
+		result.append(conduct);
 		result.append(')');
 		return result.toString();
 	}

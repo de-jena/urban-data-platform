@@ -439,6 +439,36 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 	 * @generated
 	 */
 	@Override
+	public EAttribute getMoistureStatus_Temperature() {
+		return (EAttribute)moistureStatusEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMoistureStatus_Water() {
+		return (EAttribute)moistureStatusEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMoistureStatus_Conduct() {
+		return (EAttribute)moistureStatusEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public ChirpstackMoistureFactory getChirpstackMoistureFactory() {
 		return (ChirpstackMoistureFactory)getEFactoryInstance();
 	}
@@ -496,6 +526,9 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 		moistureStatusEClass = createEClass(MOISTURE_STATUS);
 		createEAttribute(moistureStatusEClass, MOISTURE_STATUS__VALUE);
 		createEAttribute(moistureStatusEClass, MOISTURE_STATUS__OBSERVED_AREA);
+		createEAttribute(moistureStatusEClass, MOISTURE_STATUS__TEMPERATURE);
+		createEAttribute(moistureStatusEClass, MOISTURE_STATUS__WATER);
+		createEAttribute(moistureStatusEClass, MOISTURE_STATUS__CONDUCT);
 	}
 
 	/**
@@ -571,6 +604,9 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 		initEClass(moistureStatusEClass, MoistureStatus.class, "MoistureStatus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMoistureStatus_Value(), ecorePackage.getEIntegerObject(), "value", null, 0, 1, MoistureStatus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMoistureStatus_ObservedArea(), theProviderPackage.getEGeoJsonObject(), "observedArea", null, 0, 1, MoistureStatus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMoistureStatus_Temperature(), ecorePackage.getEDouble(), "temperature", null, 0, 1, MoistureStatus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMoistureStatus_Water(), ecorePackage.getEDouble(), "water", null, 0, 1, MoistureStatus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMoistureStatus_Conduct(), ecorePackage.getEDouble(), "conduct", null, 0, 1, MoistureStatus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

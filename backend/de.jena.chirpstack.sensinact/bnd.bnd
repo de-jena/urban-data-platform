@@ -11,4 +11,7 @@ Require-Capability: \
 	org.eclipse.sensinact.gateway.core.geo-json,\
 	org.eclipse.sensinact.gateway.core.models.provider,\
 	org.eclipse.emf.common,\
-	org.eclipse.emf.ecore
+	org.eclipse.emf.ecore,\
+	org.osgi.util.function,\
+	org.osgi.util.promise,\
+	org.osgi.service.typedevent

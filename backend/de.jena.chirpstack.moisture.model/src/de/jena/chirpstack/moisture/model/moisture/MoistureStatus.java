@@ -30,6 +30,9 @@ import org.osgi.annotation.versioning.ProviderType;
  * <ul>
  *   <li>{@link de.jena.chirpstack.moisture.model.moisture.MoistureStatus#getValue <em>Value</em>}</li>
  *   <li>{@link de.jena.chirpstack.moisture.model.moisture.MoistureStatus#getObservedArea <em>Observed Area</em>}</li>
+ *   <li>{@link de.jena.chirpstack.moisture.model.moisture.MoistureStatus#getTemperature <em>Temperature</em>}</li>
+ *   <li>{@link de.jena.chirpstack.moisture.model.moisture.MoistureStatus#getWater <em>Water</em>}</li>
+ *   <li>{@link de.jena.chirpstack.moisture.model.moisture.MoistureStatus#getConduct <em>Conduct</em>}</li>
  * </ul>
  *
  * @see de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage#getMoistureStatus()
@@ -82,5 +85,71 @@ public interface MoistureStatus extends Service {
 	 * @generated
 	 */
 	void setObservedArea(GeoJsonObject value);
+
+	/**
+	 * Returns the value of the '<em><b>Temperature</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Temperature</em>' attribute.
+	 * @see #setTemperature(double)
+	 * @see de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage#getMoistureStatus_Temperature()
+	 * @model
+	 * @generated
+	 */
+	double getTemperature();
+
+	/**
+	 * Sets the value of the '{@link de.jena.chirpstack.moisture.model.moisture.MoistureStatus#getTemperature <em>Temperature</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Temperature</em>' attribute.
+	 * @see #getTemperature()
+	 * @generated
+	 */
+	void setTemperature(double value);
+
+	/**
+	 * Returns the value of the '<em><b>Water</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Water</em>' attribute.
+	 * @see #setWater(double)
+	 * @see de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage#getMoistureStatus_Water()
+	 * @model
+	 * @generated
+	 */
+	double getWater();
+
+	/**
+	 * Sets the value of the '{@link de.jena.chirpstack.moisture.model.moisture.MoistureStatus#getWater <em>Water</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Water</em>' attribute.
+	 * @see #getWater()
+	 * @generated
+	 */
+	void setWater(double value);
+
+	/**
+	 * Returns the value of the '<em><b>Conduct</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Conduct</em>' attribute.
+	 * @see #setConduct(double)
+	 * @see de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage#getMoistureStatus_Conduct()
+	 * @model
+	 * @generated
+	 */
+	double getConduct();
+
+	/**
+	 * Sets the value of the '{@link de.jena.chirpstack.moisture.model.moisture.MoistureStatus#getConduct <em>Conduct</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Conduct</em>' attribute.
+	 * @see #getConduct()
+	 * @generated
+	 */
+	void setConduct(double value);
 
 } // MoistureStatus

@@ -43,6 +43,9 @@
     <genClasses ecoreClass="chirpstack-moisture.ecore#//MoistureStatus">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack-moisture.ecore#//MoistureStatus/value"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack-moisture.ecore#//MoistureStatus/observedArea"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack-moisture.ecore#//MoistureStatus/temperature"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack-moisture.ecore#//MoistureStatus/water"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack-moisture.ecore#//MoistureStatus/conduct"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
