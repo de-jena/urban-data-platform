@@ -131,7 +131,7 @@ public class EObjectResourceImpl implements EObjectResource {
 	}
 
 	@GET
-	@Path("exists{id}")
+	@Path("exists/{id}")
 	@Operation(description = "Check existens of an EObject with an specified eClassUri and id.")
 	@Override
 	public Response exists(@QueryParam("eClassUri") String eClassUri, @PathParam("id") String id)

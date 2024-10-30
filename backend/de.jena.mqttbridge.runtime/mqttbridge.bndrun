@@ -67,7 +67,13 @@
 	org.gecko.adapter.mqtt;version='[1.1.0,1.1.1)',\
 	org.eclipse.emf.common;version='[2.29.0,2.29.1)',\
 	org.eclipse.emf.ecore;version='[2.35.0,2.35.1)',\
-	org.eclipse.emf.ecore.xmi;version='[2.36.0,2.36.1)'
+	org.eclipse.emf.ecore.xmi;version='[2.36.0,2.36.1)',\
+	com.fasterxml.jackson.dataformat.jackson-dataformat-properties;version='[2.14.1,2.14.2)',\
+	com.fasterxml.jackson.dataformat.jackson-dataformat-yaml;version='[2.16.0,2.16.1)',\
+	com.fasterxml.jackson.datatype.jackson-datatype-jsr310;version='[2.16.0,2.16.1)',\
+	org.eclipse.emfcloud.emfjson-jackson;version='[2.2.0,2.2.1)',\
+	org.gecko.emf.json;version='[1.5.1,1.5.2)',\
+	org.yaml.snakeyaml;version='[2.3.0,2.3.1)'
 
 -runrequires: \
 	bnd.identity;id='de.jena.mqttbridge.runtime',\
