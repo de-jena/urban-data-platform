@@ -80,7 +80,7 @@ public class ChirpstackConfigurator {
 			configureGateway(id, config);
 			configureDeviceFactory(id, mappingFile);
 		} catch (Exception e) {
-			logger.log(Level.ERROR, "Error while reading configuration from {0}", id, e);
+			logger.log(Level.ERROR, () -> "Error while reading configuration from "+ id, e);
 		}
 	}
 

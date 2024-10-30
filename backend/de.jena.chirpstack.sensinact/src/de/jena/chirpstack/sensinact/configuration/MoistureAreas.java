@@ -17,6 +17,7 @@ import java.lang.System.Logger;
 import java.lang.System.Logger.Level;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -62,19 +63,16 @@ public class MoistureAreas {
 
 	private ScheduledExecutorService scheduler;
 
-	private int value1 = 50;
-	private int value2 = 50;
+	private List<DummySensor> sensors;
 
 	@Activate
 	public void activate() {
 		logger.log(Level.DEBUG, "Start loading Moisture areas.");
 		scheduler = Executors.newScheduledThreadPool(1);
+		DummySensor d1 = new DummySensor("Jena-Center", "JC",11.585164896084024, 50.9284176739302, v1);
+		DummySensor d2 = new DummySensor("Jena-Markt", "JM", 11.587946678935253, 50.92782245930468,v2);
+		sensors = Arrays.asList(d1, d2);
 		scheduler.scheduleAtFixedRate(this::updateArea, 0, 1, TimeUnit.MINUTES);
-
-		try {
-		} catch (Exception e) {
-			logger.log(Level.ERROR, "Error while ", e);
-		}
 	}
 
 	@Deactivate
@@ -83,83 +81,81 @@ public class MoistureAreas {
 	}
 
 	private void updateArea() {
-		c1();
-		c2();
+		sensors.forEach(DummySensor::push);
 	}
-
-	private void c1() {
-		MoistureSensor ms = ChirpstackMoistureFactory.eINSTANCE.createMoistureSensor();
-		String name = "Jena-Center";
-		ms.setName(name);
-		ms.setId("JC");
-		MoistureAdmin admin = ChirpstackMoistureFactory.eINSTANCE.createMoistureAdmin();
-		admin.setLocation(createPoint(11.585164896084024, 50.9284176739302));
-		admin.setSoilType(SoilType.CLAY);
-		ms.setAdmin(admin);
-
-		MoistureStatus s = ChirpstackMoistureFactory.eINSTANCE.createMoistureStatus();
-		logger.log(Level.INFO, "Send moisture data ({1}%) for {0}.", name, value1);
-		s.setValue(updateValue(value1));
-		s.setObservedArea(createFeature(v1));
-		ms.setStatus(s);
-		sensiNact.pushUpdate(ms);
-	}
-
-	private void c2() {
-		MoistureSensor ms = ChirpstackMoistureFactory.eINSTANCE.createMoistureSensor();
-		String name = "Jena-Markt";
-		ms.setName(name);
-		ms.setId("JM");
-		MoistureAdmin admin = ChirpstackMoistureFactory.eINSTANCE.createMoistureAdmin();
-		admin.setLocation(createPoint(11.587946678935253, 50.92782245930468));
-		admin.setSoilType(SoilType.SILT);
-		ms.setAdmin(admin);
-
-		MoistureStatus s = ChirpstackMoistureFactory.eINSTANCE.createMoistureStatus();
-		logger.log(Level.INFO, "Send moisture data ({1}%) for {0}.", name, value2);
-		s.setValue(updateValue(value2));
-		s.setObservedArea(createFeature(v2));
-		ms.setStatus(s);
-		sensiNact.pushUpdate(ms);
-	}
-
-	private int updateValue(int value) {
-		value = value + Long.valueOf(Math.round(Math.random() * 10)).intValue() - 5;
-		value = Math.min(value, 95);
-		value = Math.max(value, 10);
-		return value;
-	}
-
-	private FeatureCollection createFeature(double[][] v) {
-		FeatureCollection fc = new FeatureCollection();
-		Feature f1 = new Feature();
-		f1.geometry = createPolygon(v);
-		fc.features = Arrays.asList(f1);
-		return fc;
-	}
-
-	static Polygon createPolygon(double[][] v) {
-		Polygon l = new Polygon();
-		ArrayList<Coordinates> coordinates = new ArrayList<>();
-		for (double[] a : v) {
-			coordinates.add(createCoordinate(a[0], a[1]));
+	
+	class DummySensor {
+		private int value = 50;
+		private double[][] coords;
+		private double lon;
+		private double lat;
+		private String name;
+		private String id;
+		
+		DummySensor(String name, String id, double lon, double lat, double[][] coords) {
+			this.name = name;
+			this.id = id;
+			this.lon = lon;
+			this.lat = lat;
+			this.coords = coords;
+		}
+		
+		void push() {
+			MoistureSensor ms = ChirpstackMoistureFactory.eINSTANCE.createMoistureSensor();
+			ms.setName(name);
+			ms.setId(id);
+			MoistureAdmin admin = ChirpstackMoistureFactory.eINSTANCE.createMoistureAdmin();
+			admin.setLocation(createPoint(lon,lat));
+			admin.setSoilType(SoilType.CLAY);
+			ms.setAdmin(admin);
+			
+			MoistureStatus s = ChirpstackMoistureFactory.eINSTANCE.createMoistureStatus();
+			logger.log(Level.INFO, "Send moisture data ({1}%) for {0}.", name, value);
+			updateValue();
+			s.setValue(value);
+			s.setObservedArea(createFeature(coords));
+			ms.setStatus(s);
+			sensiNact.pushUpdate(ms);
+		}
+		
+		private void updateValue() {
+			value = value + Long.valueOf(Math.round(Math.random() * 10)).intValue() - 5;
+			value = Math.min(value, 95);
+			value = Math.max(value, 10);
 		}
 
-		l.coordinates = new ArrayList<>();
-		l.coordinates.add(coordinates);
-		return l;
-	}
+		private FeatureCollection createFeature(double[][] v) {
+			FeatureCollection fc = new FeatureCollection();
+			Feature f1 = new Feature();
+			f1.geometry = createPolygon(v);
+			fc.features = Arrays.asList(f1);
+			return fc;
+		}
 
-	static Point createPoint(double d, double e) {
-		Point l = new Point();
-		l.coordinates = createCoordinate(d, e);
-		return l;
-	}
+		static Polygon createPolygon(double[][] v) {
+			Polygon l = new Polygon();
+			ArrayList<Coordinates> coordinates = new ArrayList<>();
+			for (double[] a : v) {
+				coordinates.add(createCoordinate(a[0], a[1]));
+			}
 
-	static Coordinates createCoordinate(double lon, double lat) {
-		Coordinates c = new Coordinates();
-		c.longitude = lon;
-		c.latitude = lat;
-		return c;
+			l.coordinates = new ArrayList<>();
+			l.coordinates.add(coordinates);
+			return l;
+		}
+
+		static Point createPoint(double lon, double lat) {
+			Point l = new Point();
+			l.coordinates = createCoordinate(lon, lat);
+			return l;
+		}
+
+		static Coordinates createCoordinate(double lon, double lat) {
+			Coordinates c = new Coordinates();
+			c.longitude = lon;
+			c.latitude = lat;
+			return c;
+		}
 	}
+	
 }
