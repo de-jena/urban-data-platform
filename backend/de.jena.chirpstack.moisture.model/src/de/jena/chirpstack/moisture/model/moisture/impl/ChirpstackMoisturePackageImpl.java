@@ -17,13 +17,16 @@ import de.jena.chirpstack.moisture.model.moisture.ChirpstackMoistureFactory;
 import de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage;
 import de.jena.chirpstack.moisture.model.moisture.Device;
 import de.jena.chirpstack.moisture.model.moisture.Dragino;
+import de.jena.chirpstack.moisture.model.moisture.MoistureAdmin;
 import de.jena.chirpstack.moisture.model.moisture.MoistureSensor;
 import de.jena.chirpstack.moisture.model.moisture.MoistureStatus;
 import de.jena.chirpstack.moisture.model.moisture.Sensor;
 import de.jena.chirpstack.moisture.model.moisture.Soil;
+import de.jena.chirpstack.moisture.model.moisture.SoilType;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -79,6 +82,20 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 	 * @generated
 	 */
 	private EClass moistureStatusEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass moistureAdminEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum soilTypeEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -469,6 +486,36 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 	 * @generated
 	 */
 	@Override
+	public EClass getMoistureAdmin() {
+		return moistureAdminEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMoistureAdmin_SoilType() {
+		return (EAttribute)moistureAdminEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getSoilType() {
+		return soilTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public ChirpstackMoistureFactory getChirpstackMoistureFactory() {
 		return (ChirpstackMoistureFactory)getEFactoryInstance();
 	}
@@ -529,6 +576,12 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 		createEAttribute(moistureStatusEClass, MOISTURE_STATUS__TEMPERATURE);
 		createEAttribute(moistureStatusEClass, MOISTURE_STATUS__WATER);
 		createEAttribute(moistureStatusEClass, MOISTURE_STATUS__CONDUCT);
+
+		moistureAdminEClass = createEClass(MOISTURE_ADMIN);
+		createEAttribute(moistureAdminEClass, MOISTURE_ADMIN__SOIL_TYPE);
+
+		// Create enums
+		soilTypeEEnum = createEEnum(SOIL_TYPE);
 	}
 
 	/**
@@ -568,6 +621,7 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 		deviceEClass.getESuperTypes().add(theProviderPackage.getService());
 		moistureSensorEClass.getESuperTypes().add(theProviderPackage.getProvider());
 		moistureStatusEClass.getESuperTypes().add(theProviderPackage.getService());
+		moistureAdminEClass.getESuperTypes().add(theProviderPackage.getAdmin());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(draginoEClass, Dragino.class, "Dragino", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -607,6 +661,16 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 		initEAttribute(getMoistureStatus_Temperature(), ecorePackage.getEDouble(), "temperature", null, 0, 1, MoistureStatus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMoistureStatus_Water(), ecorePackage.getEDouble(), "water", null, 0, 1, MoistureStatus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMoistureStatus_Conduct(), ecorePackage.getEDouble(), "conduct", null, 0, 1, MoistureStatus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(moistureAdminEClass, MoistureAdmin.class, "MoistureAdmin", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMoistureAdmin_SoilType(), this.getSoilType(), "soilType", null, 0, 1, MoistureAdmin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Initialize enums and add enum literals
+		initEEnum(soilTypeEEnum, SoilType.class, "SoilType");
+		addEEnumLiteral(soilTypeEEnum, SoilType.SAND);
+		addEEnumLiteral(soilTypeEEnum, SoilType.SILT);
+		addEEnumLiteral(soilTypeEEnum, SoilType.LOAM);
+		addEEnumLiteral(soilTypeEEnum, SoilType.CLAY);
 
 		// Create resource
 		createResource(eNS_URI);

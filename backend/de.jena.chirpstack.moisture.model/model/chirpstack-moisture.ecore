@@ -57,4 +57,13 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="water" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="conduct" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MoistureAdmin" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Admin">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="soilType" eType="#//SoilType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="SoilType">
+    <eLiterals name="sand"/>
+    <eLiterals name="silt" value="1"/>
+    <eLiterals name="loam" value="2"/>
+    <eLiterals name="clay" value="3"/>
+  </eClassifiers>
 </ecore:EPackage>

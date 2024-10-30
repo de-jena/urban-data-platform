@@ -90,6 +90,15 @@ public interface ChirpstackMoistureFactory extends EFactory {
 	MoistureStatus createMoistureStatus();
 
 	/**
+	 * Returns a new object of class '<em>Moisture Admin</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Moisture Admin</em>'.
+	 * @generated
+	 */
+	MoistureAdmin createMoistureAdmin();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

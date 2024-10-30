@@ -9,6 +9,12 @@
   <foreignModel>chirpstack-moisture.ecore</foreignModel>
   <genPackages prefix="ChirpstackMoisture" basePackage="de.jena.chirpstack.moisture.model"
       resource="XMI" disposableProviderFactory="true" ecorePackage="chirpstack-moisture.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="chirpstack-moisture.ecore#//SoilType">
+      <genEnumLiterals ecoreEnumLiteral="chirpstack-moisture.ecore#//SoilType/sand"/>
+      <genEnumLiterals ecoreEnumLiteral="chirpstack-moisture.ecore#//SoilType/silt"/>
+      <genEnumLiterals ecoreEnumLiteral="chirpstack-moisture.ecore#//SoilType/loam"/>
+      <genEnumLiterals ecoreEnumLiteral="chirpstack-moisture.ecore#//SoilType/clay"/>
+    </genEnums>
     <genClasses ecoreClass="chirpstack-moisture.ecore#//Dragino">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference chirpstack-moisture.ecore#//Dragino/sensor"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack-moisture.ecore#//Dragino/soil"/>
@@ -46,6 +52,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack-moisture.ecore#//MoistureStatus/temperature"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack-moisture.ecore#//MoistureStatus/water"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack-moisture.ecore#//MoistureStatus/conduct"/>
+    </genClasses>
+    <genClasses ecoreClass="chirpstack-moisture.ecore#//MoistureAdmin">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack-moisture.ecore#//MoistureAdmin/soilType"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -16,6 +16,7 @@ package de.jena.chirpstack.moisture.model.moisture;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.sensinact.model.core.provider.ProviderPackage;
@@ -640,6 +641,107 @@ public interface ChirpstackMoisturePackage extends org.eclipse.emf.ecore.EPackag
 	 */
 	int MOISTURE_STATUS_OPERATION_COUNT = ProviderPackage.SERVICE_OPERATION_COUNT + 0;
 
+	/**
+	 * The meta object id for the '{@link de.jena.chirpstack.moisture.model.moisture.impl.MoistureAdminImpl <em>Moisture Admin</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.chirpstack.moisture.model.moisture.impl.MoistureAdminImpl
+	 * @see de.jena.chirpstack.moisture.model.moisture.impl.ChirpstackMoisturePackageImpl#getMoistureAdmin()
+	 * @generated
+	 */
+	int MOISTURE_ADMIN = 6;
+
+	/**
+	 * The feature id for the '<em><b>Metadata</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOISTURE_ADMIN__METADATA = ProviderPackage.ADMIN__METADATA;
+
+	/**
+	 * The feature id for the '<em><b>Friendly Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOISTURE_ADMIN__FRIENDLY_NAME = ProviderPackage.ADMIN__FRIENDLY_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Location</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOISTURE_ADMIN__LOCATION = ProviderPackage.ADMIN__LOCATION;
+
+	/**
+	 * The feature id for the '<em><b>Model Package Uri</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOISTURE_ADMIN__MODEL_PACKAGE_URI = ProviderPackage.ADMIN__MODEL_PACKAGE_URI;
+
+	/**
+	 * The feature id for the '<em><b>Model</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOISTURE_ADMIN__MODEL = ProviderPackage.ADMIN__MODEL;
+
+	/**
+	 * The feature id for the '<em><b>Soil Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOISTURE_ADMIN__SOIL_TYPE = ProviderPackage.ADMIN_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Moisture Admin</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOISTURE_ADMIN_FEATURE_COUNT = ProviderPackage.ADMIN_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>EIs Set</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOISTURE_ADMIN___EIS_SET__ESTRUCTURALFEATURE = ProviderPackage.ADMIN___EIS_SET__ESTRUCTURALFEATURE;
+
+	/**
+	 * The number of operations of the '<em>Moisture Admin</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOISTURE_ADMIN_OPERATION_COUNT = ProviderPackage.ADMIN_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.chirpstack.moisture.model.moisture.SoilType <em>Soil Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.chirpstack.moisture.model.moisture.SoilType
+	 * @see de.jena.chirpstack.moisture.model.moisture.impl.ChirpstackMoisturePackageImpl#getSoilType()
+	 * @generated
+	 */
+	int SOIL_TYPE = 7;
+
 
 	/**
 	 * Returns the meta object for class '{@link de.jena.chirpstack.moisture.model.moisture.Dragino <em>Dragino</em>}'.
@@ -988,6 +1090,37 @@ public interface ChirpstackMoisturePackage extends org.eclipse.emf.ecore.EPackag
 	EAttribute getMoistureStatus_Conduct();
 
 	/**
+	 * Returns the meta object for class '{@link de.jena.chirpstack.moisture.model.moisture.MoistureAdmin <em>Moisture Admin</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Moisture Admin</em>'.
+	 * @see de.jena.chirpstack.moisture.model.moisture.MoistureAdmin
+	 * @generated
+	 */
+	EClass getMoistureAdmin();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.moisture.model.moisture.MoistureAdmin#getSoilType <em>Soil Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Soil Type</em>'.
+	 * @see de.jena.chirpstack.moisture.model.moisture.MoistureAdmin#getSoilType()
+	 * @see #getMoistureAdmin()
+	 * @generated
+	 */
+	EAttribute getMoistureAdmin_SoilType();
+
+	/**
+	 * Returns the meta object for enum '{@link de.jena.chirpstack.moisture.model.moisture.SoilType <em>Soil Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Soil Type</em>'.
+	 * @see de.jena.chirpstack.moisture.model.moisture.SoilType
+	 * @generated
+	 */
+	EEnum getSoilType();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1277,6 +1410,34 @@ public interface ChirpstackMoisturePackage extends org.eclipse.emf.ecore.EPackag
 		 * @generated
 		 */
 		EAttribute MOISTURE_STATUS__CONDUCT = eINSTANCE.getMoistureStatus_Conduct();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.chirpstack.moisture.model.moisture.impl.MoistureAdminImpl <em>Moisture Admin</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.chirpstack.moisture.model.moisture.impl.MoistureAdminImpl
+		 * @see de.jena.chirpstack.moisture.model.moisture.impl.ChirpstackMoisturePackageImpl#getMoistureAdmin()
+		 * @generated
+		 */
+		EClass MOISTURE_ADMIN = eINSTANCE.getMoistureAdmin();
+
+		/**
+		 * The meta object literal for the '<em><b>Soil Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOISTURE_ADMIN__SOIL_TYPE = eINSTANCE.getMoistureAdmin_SoilType();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.chirpstack.moisture.model.moisture.SoilType <em>Soil Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.chirpstack.moisture.model.moisture.SoilType
+		 * @see de.jena.chirpstack.moisture.model.moisture.impl.ChirpstackMoisturePackageImpl#getSoilType()
+		 * @generated
+		 */
+		EEnum SOIL_TYPE = eINSTANCE.getSoilType();
 
 	}
 
