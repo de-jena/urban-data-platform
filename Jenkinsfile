@@ -116,7 +116,7 @@ pipeline  {
 				echo "I am building app on branch: ${env.GIT_BRANCH}"
 
 				dir("udp/backend") {
-					sh "./gradlew :de.jena.udp.sensinact.runtime:resolve.de.jena.upd.sensinact.runtime.base --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2"
+					sh "./gradlew :de.jena.udp.sensinact.runtime:resolve.de.jena.udp.sensinact.runtime.base --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2"
 				}
 			}
 		}
@@ -129,7 +129,7 @@ pipeline  {
 				echo "I am building app on branch: ${env.GIT_BRANCH}"
 
 				dir("udp/backend") {
-					sh "./gradlew :de.jena.udp.sensinact.runtime:export.de.jena.upd.sensinact.runtime.docker --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2"
+					sh "./gradlew :de.jena.udp.sensinact.runtime:export.de.jena.udp.sensinact.runtime.docker --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2"
 				}
 			}
 		}

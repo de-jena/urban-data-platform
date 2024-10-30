@@ -1,4 +1,4 @@
--include: 	de.jena.upd.sensinact.runtime.base.bndrun,\
+-include: 	de.jena.udp.sensinact.runtime.base.bndrun,\
 			-secrets.bndrun
 
 -runbundles.local:\

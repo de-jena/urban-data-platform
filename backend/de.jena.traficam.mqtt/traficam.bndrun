@@ -28,13 +28,11 @@
 	org.eclipse.jetty.websocket.common;version='[11.0.13,11.0.14)',\
 	org.eclipse.jetty.websocket.core.client;version='[11.0.13,11.0.14)',\
 	org.eclipse.jetty.websocket.core.common;version='[11.0.13,11.0.14)',\
-	org.yaml.snakeyaml;version='[1.33.0,1.33.1)',\
 	de.jena.traficam.config;version=snapshot,\
 	com.fasterxml.jackson.core.jackson-annotations;version='[2.16.0,2.16.1)',\
 	com.fasterxml.jackson.core.jackson-core;version='[2.16.0,2.16.1)',\
 	com.fasterxml.jackson.core.jackson-databind;version='[2.16.0,2.16.1)',\
 	com.fasterxml.jackson.dataformat.jackson-dataformat-properties;version='[2.14.1,2.14.2)',\
-	com.fasterxml.jackson.dataformat.jackson-dataformat-yaml;version='[2.14.1,2.14.2)',\
 	com.fasterxml.jackson.datatype.jackson-datatype-jsr310;version='[2.16.0,2.16.1)',\
 	org.apache.felix.cm.json;version='[2.0.0,2.0.1)',\
 	org.apache.felix.configadmin;version='[1.9.26,1.9.27)',\
@@ -58,8 +56,9 @@
 	org.apache.felix.scr;version='[2.2.12,2.2.13)',\
 	org.eclipse.paho.client.mqttv3;version='[1.2.5,1.2.6)',\
 	org.gecko.adapter.mqtt.common;version='[1.0.0,1.0.1)',\
-	org.gecko.emf.osgi.api;version='[6.2.0,6.2.1)',\
-	org.gecko.emf.osgi.component.minimal;version='[6.2.0,6.2.1)'
+	org.gecko.emf.osgi.component.minimal;version='[6.2.0,6.2.1)',\
+	com.fasterxml.jackson.dataformat.jackson-dataformat-yaml;version='[2.16.0,2.16.1)',\
+	org.yaml.snakeyaml;version='[2.3.0,2.3.1)'
 
 -runrequires: \
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\

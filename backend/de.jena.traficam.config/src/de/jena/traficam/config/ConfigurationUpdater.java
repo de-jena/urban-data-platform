@@ -54,7 +54,7 @@ public class ConfigurationUpdater {
 			if (file.exists()) {
 				@SuppressWarnings("unchecked")
 				Map<String, List<Map<String,String>>> configMap = new ObjectMapper().readValue(file, HashMap.class);
-				configMap.forEach((pid, p) -> updateConfig(pid, p));
+				configMap.forEach(this::updateConfig);
 			} else {
 				logger.log(Level.INFO,"Configuration file {0} is missing.", CONFIG_PATH);
 			}

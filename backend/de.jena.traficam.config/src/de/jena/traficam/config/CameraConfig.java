@@ -60,11 +60,9 @@ import de.jena.traficam.api.TrafiCamConfig;
 @Component(configurationPid = "TrafiCamWSC", configurationPolicy = ConfigurationPolicy.REQUIRE)
 @Designate(ocd = TrafiCamConfig.class)
 public class CameraConfig {
-	/** _5G_CONFIG_TRAFICAM */
-	private static final String TOPIC_PREFIX = "5g/config/traficam/";
-
 	private static final Logger logger = System.getLogger(CameraConfig.class.getName());
 
+	private static final String TOPIC_PREFIX = "5g/config/traficam/";
 	private static final String CLASSMAP_PATH = "/classmap";
 	private static final String CALIBRATION_PATH = "/camera/info";
 
@@ -81,13 +79,14 @@ public class CameraConfig {
 	private WebSocketClient client;
 	private String id;
 	private String address;
+	private CamConfig camConfig;
 
 	@Activate
 	public void activate(TrafiCamConfig config) {
 		id = config.id();
 		address = config.address();
-		CamConfig camConfig = loadConfigRest();
-		sendConfigMQTT(camConfig);
+		loadConfigRest();
+		sendConfigMQTT();
 		subscribeWebSocket(config.address());
 	}
 
@@ -119,29 +118,28 @@ public class CameraConfig {
 	private void refresh() {
 		logger.log(Level.INFO, "Update configuration for {0}.", id);
 
-		CamConfig config = loadConfigRest();
-		sendConfigMQTT(config);
+		loadConfigRest();
+		sendConfigMQTT();
 	}
 
-	private CamConfig loadConfigRest() {
+	private void loadConfigRest() {
 		String path = "http://" + address + "/api";
-		CamConfig config = loadConfig(path + CALIBRATION_PATH);
+		camConfig = loadConfig(path + CALIBRATION_PATH);
 		CamConfig classMapConfig = loadConfig(path + CLASSMAP_PATH);
-		config.getClassMap().addAll(classMapConfig.getClassMap());
-		return config;
+		camConfig.getClassMap().addAll(classMapConfig.getClassMap());
 	}
 
-	private void sendConfigMQTT(CamConfig config) {
+	private void sendConfigMQTT() {
 		try {
 			BinaryResourceImpl res = new BinaryResourceImpl();
-			res.getContents().add(EcoreUtil.copy(config));
+			res.getContents().add(EcoreUtil.copy(camConfig));
 			ByteArrayOutputStream bao = new ByteArrayOutputStream();
 			res.save(bao, null);
 			ByteBuffer buffer = ByteBuffer.wrap(bao.toByteArray());
 			MessagingContext ctx = new MQTTContextBuilder().retained().build();
 			messaging.publish(TOPIC_PREFIX + id + "/retained", buffer, ctx);
 		} catch (Exception e) {
-			logger.log(Level.ERROR, "Error writing intersection configuration from {0}.\n{1}", config, e);
+			logger.log(Level.ERROR, "Error writing intersection configuration from {0}.\n{1}", camConfig, e);
 		}
 	}
 
