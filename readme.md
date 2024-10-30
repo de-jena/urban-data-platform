@@ -2,6 +2,11 @@
 
 # Jena - WISSENsAllmende - Urban Data Platform 
 
+
+## Rest API
+
+[OpenAPI](http://localhost:8080/udp/swagger-api/index.html)
+
 ## Links
 
 * [Documentation](https://github.com/de-jena/urban-data-platform)
