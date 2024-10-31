@@ -35,7 +35,7 @@ pipeline  {
 				// Get DAANSE from GitHub
 				checkout([  
 				           $class: 'GitSCM', 
-				           branches: [[name: 'refs/heads/main']], 
+				           branches: [[name: 'refs/heads/feature-viewClient']], 
 				           doGenerateSubmoduleConfigurations: false, 
 				           extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'legacy.dashboard.client']], 
 				           submoduleCfg: [], 
