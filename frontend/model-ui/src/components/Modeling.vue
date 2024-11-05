@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
 
-import {type Component, computed, onMounted, ref, watch} from "vue";
+import {type Component, computed, nextTick, onMounted, ref, toRaw, watch} from "vue";
 //@ts-ignore
 
 
@@ -14,12 +14,13 @@ import {
   EClassifier, EDataType,
   EList,
   EObject,
+  EcoreUtils,
   EPackage,
   EPackageExt,
-  EReference,
+  EReference, EResourceSetImpl,
   isEClass,
   isEDataType, isEPackage,
-  URI
+  URI, EResourceImpl, EcoreFactoryImpl, EcorePackageImpl, EcoreConstants, BasicEObjectList, EAttribute, EcoreFactory, EResource
 } from "@/ecore";
 
 import {Dimensions, MarkerType, NodeDragEvent, Position, useVueFlow, VueFlow, XYPosition} from '@vue-flow/core'
@@ -31,30 +32,109 @@ import PackageV from "@/components/Flow/PackageV.vue";
 import ScrollPanel from 'primevue/scrollpanel';
 import ClassV from "@/components/Flow/ClassV.vue";
 import {useRouter} from "vue-router";
-
 import type {Node} from '@vue-flow/core';
 import {MODELING_PARAM} from "@/router";
 import MenubarV from "@/components/MenubarV.vue";
 import Tree from "@/components/Tree.vue";
 import {useDataTypeHolder} from "@/modelUiBuilder/impl/composeable/DataTypeHolder";
 import config from "@/config/config";
+import {DefaultApi} from "../../openapi/client";
+import Resources from "@/modelUiBuilder/impl/Resources";
+import ShortUniqueId from "short-unique-id";
+import {useLayout} from "@/composables/layout";
+import {useColaLayout} from "@/composables/colaLayout";
+
+
+
+const uid = new ShortUniqueId({ length: 10 });
 const model = ref<EObject|undefined>(undefined);
 const instanceHolder = useInstanceHolder();
 const router = useRouter();
-const {onConnect,addEdges,onNodeDragStop,getNodes} = useVueFlow()
+const {onConnect,addEdges,onNodeDragStop,getNodes,fitView,setNodes} = useVueFlow()
 const PositionHolder = ref<Map<String,XYPosition>>(new Map<String,XYPosition>());
 const DimensionsHolder = ref<Map<String,any>>(new Map<String,any>());
+
+
+
 onMounted(async ()=> {
-  const {loadResource,store,getResource} = useResource()
+
+  //console.log(await new DefaultApi().load1('http://www.eclipse.org/emf/2002/Ecore'));
+  const {loadResource,store,getResource,ecorePackage,getResourceSet,efc} = useResource()
   const {setDataTypes} = useDataTypeHolder()
 
-  await loadResource(new URI(config.ECORE_PATH));
-  Array.from(getResource(config.ECORE_PATH)?.eAllContents()??[]).forEach(obj=>{
+
+  //await loadResource(new URI(config.ECORE_PATH),config.ECORE_FILE_PATH);
+
+  console.log()
+
+  const data = await fetch('sensinact.ecore');
+  const dataAsText = await data.text();
+  console.log(dataAsText)
+
+  const datachripstack = await fetch('chirpstack-moisture.ecore');
+  const datachripstackAsText = await datachripstack.text();
+  console.log(datachripstackAsText)
+
+  const eoi = ecorePackage;
+  const reSet = getResourceSet()
+  reSet?.getPackageRegistry().registerPackage(eoi);
+
+
+  const resImport = reSet?.createResource(new URI('sensinact.ecore'));
+  const resImport2 = reSet?.createResource(new URI('chirpstack-moisture.ecore'));
+  resImport?.loadFromString(dataAsText)
+  resImport2?.loadFromString(datachripstackAsText)
+  console.log(resImport)
+  console.log(resImport2);
+
+
+if(resImport){
+  for(const cont of resImport.eAllContents()){
+    const id =uid.rnd();
+    useInstanceHolder().setInstance(id,cont)
+  }
+}
+  if(resImport2){
+    for(const cont of resImport2.eAllContents()){
+      const id =uid.rnd();
+      useInstanceHolder().setInstance(id,cont)
+    }
+  }
+
+
+  //const epcak = efc.createEPackage();
+
+ // const eclass =  efc.createEClassFromContainer(epcak)
+ // const eclass2 =  efc.createEClassFromContainer(epcak)
+ // console.log(epcak)
+ // eclass.eSuperTypes.add(eclass2);
+ // eclass.name = "myclas";
+ // eclass2.name = "mySuperClass";
+  //eclass.eSuperTypes.
+  //const eattr:EAttribute = efc.createEAttributeFromContainer(eclass);
+
+  //eattr.name = 'test';
+  //eattr.upperBound = 1;
+  //eattr.lowerBound = 1;
+  //console.log(epcak.eClassifiers);
+
+
+  //const type = eoi.getEInt();
+  //eattr.eType  = (((resImport.eContents().get(0) as EPackage).eClassifiers.get(0) as EClass).eAttributes.get(0) as EAttribute).eType;
+
+
+  //console.log(EcoreUtils.getURI(eoi.getEInt()));
+
+  //const res =  reSet.createResource(new URI('http://de.test.epackage/test.ecore'));
+  //res?.eContents().add(epcak)
+  //console.log(res.saveToString());
+
+  /*Array.from(getResource(config.ECORE_PATH)?.eAllContents()??[]).forEach(obj=>{
     if (isEDataType(<EClassifier>obj)){
       const dt = obj as EDataType;
       setDataTypes(dt.name,dt);
     }
-  })
+  })*/
 
 
 });
@@ -66,7 +146,7 @@ watch(router.currentRoute,()=>{
 })
 
 
-
+const { graph, layout, previousDirection } = useColaLayout()
 const nodes = computed({
 get:() =>{
   let ret:any = [];
@@ -85,7 +165,7 @@ get:() =>{
         id: key,
         label: 'EPackage: ' + name +' ('+ nsURI+')',
         data: {  toolbarPosition: Position.Top,instance:instance},
-        position: /*{ x: 100, y: 100 },*/pos,
+        position: /*{ x: 100, y: 100 },*/toRaw(pos),
         type: 'package',
 
         style: { backgroundColor: 'rgba(226,231,229,0.5)',...dim},
@@ -101,11 +181,11 @@ get:() =>{
         id: key,
         label: 'EClass',
         data: {  toolbarPosition: Position.Top,instance:instance},
-        position: /*{ x: 100, y: 100 },//*/pos,
+        position: /*{ x: 10, y: 10 },//*/toRaw(pos),
         type: 'class',
         parentNode:parent,
         expandParent: true,
-        style: {width: '200px'},//*/dim,
+        style: dim//{width: '200px'},//dim,
       })
     }
 
@@ -122,8 +202,7 @@ set:(val:Array<Node<any>>)=>{
   })
 
   PositionHolder.value = map;
-  DimensionsHolder.value = map2;
-*/
+  DimensionsHolder.value = map2;*/
 }
 });
 onNodeDragStop((param:NodeDragEvent)=>{
@@ -166,17 +245,15 @@ const edges = computed(()=>{
       const referenceClassFeature = instance.eClass().getEStructuralFeatureFromName('eReferences');
       const list2 = instance.eGet(referenceClassFeature) as EList<EReference>;
       for (const entry of list2){
-
+        try{
         const eReferenceType = entry.eGet(entry.eClass().getEStructuralFeatureFromName('eReferenceType'));
         const name = entry.eGet(entry.eClass().getEStructuralFeatureFromName('name'));
         let upperBound = -1;
         let lowerBound= 0;
-        try{
+
             lowerBound = entry.eGet(entry.eClass().getEStructuralFeatureFromName('lowerBound'));
             upperBound = entry.eGet(entry.eClass().getEStructuralFeatureFromName('upperBound'));
-        }catch (e){
-          console.log(e);
-        }
+
 
 
         const id = instanceHolder.identify(eReferenceType);
@@ -190,6 +267,9 @@ const edges = computed(()=>{
               label:`[${lowerBound}:${upperBound}]` ,
               style: { stroke: 'orange','stroke-dasharray':"5,10,5" }};
         iedges.push(obj)
+        }catch (e){
+          console.log(e);
+        }
       }
     }
 
@@ -208,16 +288,41 @@ onConnect((params)=>{
   if(superTypeFeature){
     const list = source?.eGet(superTypeFeature!) as EList<any>;
     list.add(target);
+    source?.eSet(superTypeFeature,list)
   }
 })
+async function layoutGraph(direction:string) {
 
+
+
+
+  //nodes.value = layout(nodes.value, edges.value, direction)as Node[];
+
+ const slayout = layout(nodes.value, edges.value, direction) as Node[];
+  const map = new Map<String,XYPosition>();
+  const map2 = new Map<String,any>();
+
+  slayout.map(e=>{
+    map.set(e.id,e.position);
+    map2.set(e.id,{height:e.dimensions.height+'px',width:e.dimensions.width+'px'});
+  })
+
+  PositionHolder.value = map;
+  DimensionsHolder.value = map2;
+
+  setNodes(slayout)
+  nextTick(() => {
+    fitView()
+  })
+}
 
 </script>
 <template>
+
   <Tree class="appmenu"></Tree>
   <div class="iflexed">
 
-    <MenubarV></MenubarV>
+    <MenubarV @import="()=>layoutGraph('TB')"></MenubarV>
 
 
 

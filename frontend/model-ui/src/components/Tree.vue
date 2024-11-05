@@ -7,7 +7,17 @@ import {useResource} from "@/modelUiBuilder/impl/composeable/Resource";
 import router, {INSTANCE_PAGE, MODELING_PARAM, NEW_INSTANCE_PAGE} from "@/router";
 import {useInstanceHolder} from "@/modelUiBuilder/impl/composeable/InstanceHolder";
 import {isEPackage} from "@/ecore/EPackageExt";
-import {EClass, EClassifier, EDataType, EPackage, EResource, isEDataType, URI} from "@/ecore";
+import {
+  EClass,
+  EClassifier,
+  EDataType,
+  EPackage,
+  EResource,
+  isEDataType,
+  URI,
+  EPackageImpl,
+  EcorePackageImpl, EcoreFactory
+} from "@/ecore";
 import {isEClass} from "@/ecore/EClassExt";
 import ShortUniqueId from "short-unique-id";
 import {useDataTypeHolder} from "@/modelUiBuilder/impl/composeable/DataTypeHolder";
@@ -29,7 +39,7 @@ const items = ref([
   }
 
 ]);
-const {store} = useResource()
+const {store,efc} = useResource()
 const {instances,identify,getInstance} = useInstanceHolder();
 const {setDataTypes} = useDataTypeHolder();
 const route = useRoute();
@@ -54,7 +64,7 @@ const nodes = computed(()=>{
 
     if(inst){
       let name = '';
-      let type = inst.eClass().name;;
+      let type = inst.eClass().name;
       try{
          name = inst.eGet(inst.eClass().getEStructuralFeatureFromName('name'));
       }
@@ -99,24 +109,31 @@ const nodes = computed(()=>{
 
 const addEPackage = ()=>{
   const resUri = config.ECORE_PATH;
-  const className = 'EPackage';
-  const res = (store.value.find(e=>{
-    console.log(e.res?.eURI.toString())
-    console.log(resUri)
-    return e.res?.eURI.toString() == resUri
-  }))?.res
+
+ // const className = 'EPackage';
+  //const res = useResource().getResource(resUri);
 
 
-  let uris = new URI(resUri+'#//'+className);
-  const eClass = res?.eResourceSet().getEObject(uris,false) as EClass;
+  //let uris = new URI(resUri+'#//'+className);
+  //const eClass = res?.eResourceSet().getEObject(uris,false) as EClass;
 
-  const instanceInternal =eClass?.ePackage.eFactoryInstance.create(eClass);
-  const ePack = eClass.getEStructuralFeatureFromName('ePackage');
 
+  //const instanceInternal:EPackage =eClass?.ePackage.eFactoryInstance.create(eClass);
+  //instanceInternal.nsURI = 'http://de.test.epackage/test.ecore'
+ // const ePack = eClass.getEStructuralFeatureFromName('ePackage');
+
+  const apackage =  efc.createEPackage()
+  console.log(apackage)
 
   const id =uid.rnd();
-  useInstanceHolder().setInstance(id,instanceInternal);
-  //router.push({name:MODELING_PARAM,params:{instanceid:id}})
+  useInstanceHolder().setInstance(id,apackage);
+
+
+  //const p2 = useInstanceHolder().getInstance(id);
+  //console.log(p2)
+  //console.log(p2==apackage)
+    //if (instances.eClass().name == 'EPackage') {
+  router.push({name:MODELING_PARAM,params:{instanceid:id}})
 }
 
 const selectedKey = computed({

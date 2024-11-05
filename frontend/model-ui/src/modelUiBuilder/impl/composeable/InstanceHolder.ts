@@ -1,5 +1,5 @@
 
-import {ref} from "vue";
+import {ref, toRaw} from "vue";
 import type {EClass, EObject} from "@/ecore";
 import {EcoreUtils} from "@/ecore";
 

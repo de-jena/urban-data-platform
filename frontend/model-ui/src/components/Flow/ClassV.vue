@@ -3,8 +3,8 @@ import {Handle, Position, useVueFlow} from '@vue-flow/core'
 import { NodeToolbar } from '@vue-flow/node-toolbar'
 import Divider from 'primevue/divider';
 import Card from 'primevue/card';
-import {computed} from "vue";
-import {BasicEList, EAttribute, EClass, EObject, EOperation, EReference, URI} from "@/ecore";
+import {computed, toRaw} from "vue";
+import {BasicEList, EAttribute, EClass, EcoreFactory, EDataType, EObject, EOperation, EReference, URI} from "@/ecore";
 import {useInstanceHolder} from "@/modelUiBuilder/impl/composeable/InstanceHolder";
 import {useResource} from "@/modelUiBuilder/impl/composeable/Resource";
 import ShortUniqueId from "short-unique-id";
@@ -116,91 +116,37 @@ const references = computed(()=>{
 });
 
 const addAttribute = ()=>{
-  const resUri = config.ECORE_PATH;
-  const className = 'EAttribute';
-  const res = (store.value.find(e=>e.res?.eURI.toString() == resUri))?.res
 
-
-  let uris = new URI(resUri+'#//'+className);
-  const eClass = res?.eResourceSet().getEObject(uris,false) as EClass;
-
-  const instanceInternal =eClass?.ePackage.eFactoryInstance.create(eClass) as EAttribute;
-  const eContainingClass = eClass.getEStructuralFeatureFromName('eContainingClass');
-
-  const instance = getInstance(props.id);
-  instanceInternal?.eSet(eContainingClass,instance!);
-  const erfs =  instance!.eClass().getEStructuralFeatureFromName('eAttributes');
-  const list = instance!.eGet(erfs)as BasicEList<EAttribute>;
-  list.add(instanceInternal);
-
-  //props.data.instance.eSet(erfs,list);
+  const efc:EcoreFactory = useResource().ecorePackage.eFactoryInstance;
+  const eclass = toRaw(props.data.instance);
+  const eAttribute =  efc.createEAttributeFromContainer(eclass)
   const id =uid.rnd();
-  useInstanceHolder().setInstance(id,instanceInternal);
+  useInstanceHolder().setInstance(id,eAttribute);
   router.push({name:MODELING_PARAM,params:{instanceid:id}})
 }
 const addOperation = ()=>{
-  const resUri = config.ECORE_PATH;
-  const className = 'EOperation';
-  const res = (store.value.find(e=>e.res?.eURI.toString() == resUri))?.res
-
-
-  let uris = new URI(resUri+'#//'+className);
-  const eClass = res?.eResourceSet().getEObject(uris,false) as EClass;
-
-  const instanceInternal =eClass?.ePackage.eFactoryInstance.create(eClass) as EOperation;
-  //const eContainingClass = eClass.getEStructuralFeatureFromName('eContainingClass');
-  //instanceInternal?.eSet(eContainingClass,props.data.instance);
-  const erfs =  props.data.instance.eClass().getEStructuralFeatureFromName('eOperations');
-  const list = props.data.instance.eGet(erfs)as BasicEList<EOperation>;
-  list.add(instanceInternal);
-
-  //props.data.instance.eSet(erfs,list);
+  const efc:EcoreFactory = useResource().ecorePackage.eFactoryInstance;
+  const eclass = toRaw(props.data.instance);
+  const eOperation =  efc.createEOperationFromContainer(eclass)
   const id =uid.rnd();
-  useInstanceHolder().setInstance(id,instanceInternal);
+  useInstanceHolder().setInstance(id,eOperation);
   router.push({name:MODELING_PARAM,params:{instanceid:id}})
 }
 const addReference = ()=>{
-  const resUri = config.ECORE_PATH;
-  const className = 'EReference';
-  const res = (store.value.find(e=>e.res?.eURI.toString() == resUri))?.res
-
-
-  let uris = new URI(resUri+'#//'+className);
-  const eClass = res?.eResourceSet().getEObject(uris,false) as EClass;
-
-  const instanceInternal =eClass?.ePackage.eFactoryInstance.create(eClass) as EOperation;
-  const instance = getInstance(props.id);
-  const eContainingClass = eClass.getEStructuralFeatureFromName('eContainingClass');
-  instanceInternal?.eSet(eContainingClass,instance!);
-
-  const erfs =  instance!.eClass().getEStructuralFeatureFromName('eReferences');
-  const list = instance!.eGet(erfs)as BasicEList<EOperation>;
-  list.add(instanceInternal);
-
-  //props.data.instance.eSet(erfs,list);
+  const efc:EcoreFactory = useResource().ecorePackage.eFactoryInstance;
+  const eclass = toRaw(props.data.instance);
+  const eRef =  efc.createEReferenceFromContainer(eclass)
   const id =uid.rnd();
-  useInstanceHolder().setInstance(id,instanceInternal);
+  useInstanceHolder().setInstance(id,eRef);
   router.push({name:MODELING_PARAM,params:{instanceid:id}})
 }
 
 const addEAnnotation = ()=>{
-  const resUri = config.ECORE_PATH;
-  const className = 'EAnnotation';
-  const res = (store.value.find(e=>e.res?.eURI.toString() == resUri))?.res
-
-
-  let uris = new URI(resUri+'#//'+className);
-  const eClass = res?.eResourceSet().getEObject(uris,false) as EClass;
-
-  const instanceInternal =eClass?.ePackage.eFactoryInstance.create(eClass);
-  const aclass = getInstance(props.id);
-  const annolist = aclass?.eGet(aclass?.eClass().getEStructuralFeatureFromName('eAnnotations'));
-  annolist.add(instanceInternal)
-
-  //eClass.ePackage.eFactoryInstance.createFromString(eClass.instanceTypeName.)
-
+  const efc:EcoreFactory = useResource().ecorePackage.eFactoryInstance;
+  const eclass = toRaw(props.data.instance);
+  const eAnno =  efc.createEAnnotationFromContainer(eclass)
   const id =uid.rnd();
-  useInstanceHolder().setInstance(id,instanceInternal);
+  useInstanceHolder().setInstance(id,eAnno);
   router.push({name:MODELING_PARAM,params:{instanceid:id}})
 }
 const setInstanceRouter=(id:string)=>{

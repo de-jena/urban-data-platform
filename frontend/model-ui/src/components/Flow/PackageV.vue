@@ -1,13 +1,14 @@
 <script  lang="ts" setup>
 import {Handle, Position, useVueFlow} from '@vue-flow/core'
 import { NodeToolbar } from '@vue-flow/node-toolbar'
-import {EClass, EObject, URI} from "@/ecore";
+import {EClass, EObject, URI, EPackage, BasicEObjectList, EClassImpl, EcorePackageImpl, EcoreFactory} from "@/ecore";
 import {useInstanceHolder} from "@/modelUiBuilder/impl/composeable/InstanceHolder";
 import {useResource} from "@/modelUiBuilder/impl/composeable/Resource";
 import ShortUniqueId from "short-unique-id";
 import {MODELING_PARAM} from "@/router";
 import {useRouter} from "vue-router";
 import config from "@/config/config";
+import {toRaw} from "vue";
 
 
 
@@ -40,41 +41,22 @@ onNodeClick((event) => {
 })
 
 const addEClass = ()=>{
-  const resUri = config.ECORE_PATH;
-  const className = 'EClass';
-  const res = (store.value.find(e=>e.res?.eURI.toString() == resUri))?.res
 
 
-  let uris = new URI(resUri+'#//'+className);
-  const eClass = res?.eResourceSet().getEObject(uris,false) as EClass;
-
-  const instanceInternal =eClass?.ePackage.eFactoryInstance.create(eClass);
-  const ePack = eClass.getEStructuralFeatureFromName('ePackage');
-  instanceInternal?.eSet(ePack,props.data.instance);
-  //eClass.ePackage.eFactoryInstance.createFromString(eClass.instanceTypeName.)
-
+  const efc:EcoreFactory = useResource().ecorePackage.eFactoryInstance;
+  const pack = toRaw(props.data.instance);
+  const aclass =  efc.createEClassFromContainer(pack)
   const id =uid.rnd();
-  useInstanceHolder().setInstance(id,instanceInternal);
+  useInstanceHolder().setInstance(id,aclass);
   router.push({name:MODELING_PARAM,params:{instanceid:id}})
 }
 const addEAnnotation = ()=>{
-  const resUri = config.ECORE_PATH;
-  const className = 'EAnnotation';
-  const res = (store.value.find(e=>e.res?.eURI.toString() == resUri))?.res
 
-
-  let uris = new URI(resUri+'#//'+className);
-  const eClass = res?.eResourceSet().getEObject(uris,false) as EClass;
-
-  const instanceInternal =eClass?.ePackage.eFactoryInstance.create(eClass);
-  const apackage = getInstance(props.id);
-  const annolist = apackage?.eGet(apackage?.eClass().getEStructuralFeatureFromName('eAnnotations'));
-  annolist.add(instanceInternal)
-
-  //eClass.ePackage.eFactoryInstance.createFromString(eClass.instanceTypeName.)
-
+  const efc:EcoreFactory = useResource().ecorePackage.eFactoryInstance;
+  const pack = toRaw(props.data.instance);
+  const aeanno =  efc.createEAnnotationFromContainer(pack)
   const id =uid.rnd();
-  useInstanceHolder().setInstance(id,instanceInternal);
+  useInstanceHolder().setInstance(id,aeanno);
   router.push({name:MODELING_PARAM,params:{instanceid:id}})
 }
 </script>

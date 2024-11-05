@@ -21,7 +21,13 @@ const avialableList = computed(()=>{
   let ret:Array<{id:string,instance:EObject,name:string}> = [];
   intnaces.forEach((value, key, map)=>{
     if(!Array.from(listofRefs.value.values()).map(e=>e.id).includes(key)){
-      const name = value.eGet(value.eClass().getEStructuralFeatureFromName('name'));
+      let name = '';
+      try{
+         name = value.eGet(value.eClass().getEStructuralFeatureFromName('name'));
+      }catch (e)
+      {
+        console.log(e);
+      }
       ret.push({id:key,instance:value,name:name})
     }
 
@@ -43,7 +49,12 @@ const listofRefs = computed(()=>{
         map.push({id: i.name??'unknown', instance: i,name:i.name})
       }
       else {
-        const name = i.eGet(i.eClass().getEStructuralFeatureFromName('name'));
+        let name = '';
+        try{
+          name = i.eGet(i.eClass().getEStructuralFeatureFromName('name'));
+        }catch (e){
+          console.log(e);
+        }
         map.push({id: instancesHolder.identify(i)??'unknown', instance: i,name:name})
       }
 
@@ -58,7 +69,13 @@ const listofRefs = computed(()=>{
           return {id: i.name??'unknown', instance: i,name:i.name}
         }
         else {
-          const name = i.eGet(i.eClass().getEStructuralFeatureFromName('name'));
+          let name = '';
+          try{
+            name = i.eGet(i.eClass().getEStructuralFeatureFromName('name'));
+          }
+          catch (e){
+            console.log(e);
+          }
           return {id: instancesHolder.identify(i)??'unknown', instance: i,name:name}
         }
       })

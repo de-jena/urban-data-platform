@@ -1,5 +1,4 @@
 <script setup lang="ts">
-  import Card from 'primevue/card';
   import {computed} from "vue";
 
   import {useComponentRegistry} from "@/modelUiBuilder/impl/composeable/ComponentRegistry";
@@ -8,6 +7,7 @@
   const {cp} = useComponentRegistry()
   const model = defineModel<EClass|EObject>();
   const componentList = computed(()=>{
+      console.log(model)
       return model.value?.eClass().eAllStructuralFeatures
   })
 </script>
