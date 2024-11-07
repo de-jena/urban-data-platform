@@ -20,18 +20,26 @@ import java.lang.System.Logger.Level;
 import java.nio.CharBuffer;
 import java.nio.charset.StandardCharsets;
 import java.util.Collections;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.ETypedElement;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.sensinact.core.push.DataUpdate;
 import org.eclipse.sensinact.core.push.dto.GenericDto;
 import org.eclipse.sensinact.gateway.geojson.Coordinates;
 import org.eclipse.sensinact.gateway.geojson.Point;
+import org.eclipse.sensinact.model.core.metadata.MetadataFactory;
+import org.eclipse.sensinact.model.core.metadata.ResourceMetadata;
 import org.eclipse.sensinact.model.core.provider.Admin;
-import org.eclipse.sensinact.model.core.provider.Provider;
+import org.eclipse.sensinact.model.core.provider.FeatureCustomMetadata;
+import org.eclipse.sensinact.model.core.provider.Metadata;
+import org.eclipse.sensinact.model.core.provider.ProviderFactory;
+import org.eclipse.sensinact.model.core.provider.Service;
 import org.gecko.emf.json.annotation.RequireEMFJson;
 import org.gecko.emf.osgi.constants.EMFNamespaces;
 import org.gecko.osgi.messaging.Message;
@@ -49,9 +57,11 @@ import org.osgi.util.pushstream.PushEvent;
 import org.osgi.util.pushstream.PushEvent.EventType;
 import org.osgi.util.pushstream.PushStream;
 
+import de.jena.ilsa.sensinact.model.ilsa.Ilsa;
 import de.jena.ilsa.sensinact.model.ilsa.IlsaPackage;
 import de.jena.udp.model.geojson.GeoJSON;
 import de.jena.udp.model.trafficos.trafficlight.TLConfiguration;
+import de.jena.udp.model.trafficos.trafficlight.TLSignal;
 import de.jena.udp.model.trafficos.trafficlight.TLSignalState;
 
 @RequireEMFJson
@@ -144,10 +154,9 @@ public class TrafficLight {
 	private void updateSignal(Message message, String intersectionId) {
 		ResourceSet resourceSet = serviceObjects.getService();
 		Resource resource = resourceSet.createResource(TEMP_URI);
-		try {
-			resource.load(new ByteArrayInputStream(message.payload().array()), Collections.emptyMap());
+		try (ByteArrayInputStream bas = new ByteArrayInputStream(message.payload().array())) {
+			resource.load(bas, Collections.emptyMap());
 			TLSignalState signalState = (TLSignalState) resource.getContents().get(0);
-
 			TrafficLightDto dto = new TrafficLightDto(intersectionId, signalState.getId(), signalState.getState());
 			dto.timestamp = signalState.getTimestamp().getTime();
 			logger.log(Level.DEBUG, "push {0} {1}", signalState.getId(), signalState.getState());
@@ -160,6 +169,13 @@ public class TrafficLight {
 		}
 	}
 
+	private FeatureCustomMetadata createCustomMetadata(String key, Object value) {
+		FeatureCustomMetadata fcmd = ProviderFactory.eINSTANCE.createFeatureCustomMetadata();
+		fcmd.setName(key);
+		fcmd.setValue(value);
+		return fcmd;
+	}
+
 	private void updateConfig(Message message) {
 		ResourceSet resourceSet = serviceObjects.getService();
 		Resource resource = resourceSet.createResource(TEMP_URI);
@@ -167,17 +183,33 @@ public class TrafficLight {
 			resource.load(new ByteArrayInputStream(message.payload().array()), Collections.emptyMap());
 			TLConfiguration configuration = (TLConfiguration) resource.getContents().get(0);
 
-			Provider provider = traf.doTransformation(configuration);
-			Admin admin = provider.getAdmin();
+			Ilsa ilsa = traf.doTransformation(configuration);
+			ilsa.setId(configuration.getIntersectionId());
+			Admin admin = ilsa.getAdmin();
 			Point location = getLocation(configuration);
 			admin.setLocation(location);
-			Promise<?> promise = sensiNact.pushUpdate(provider);
+
+			EMap<String, Service> services = ilsa.getServices();
+//			List<TLSignal> signals = configuration.getSubcircle().flatMap(sc -> sc.getModules().stream()).flatMap(m -> m.getSignals().stream()).toList();
+			List<TLSignal> signals = configuration.getModules().stream().flatMap(m -> m.getSignals().stream()).toList();
+			signals.forEach(s -> initSignal(services, s));
+
+			Promise<?> promise = sensiNact.pushUpdate(ilsa);
 			promise.onFailure(e -> logger.log(Level.ERROR, "Error while pushing configuration to sensinact.", e));
 		} catch (IOException e) {
 			logger.log(Level.ERROR, "Error while parsing json.", e);
 		} finally {
 			serviceObjects.ungetService(resourceSet);
 		}
+	}
+
+	private void initSignal(EMap<String, Service> services, TLSignal signalState) {
+		Service signal = services.get(signalState.getId());
+		EMap<ETypedElement, Metadata> metadata = signal.getMetadata();
+		ResourceMetadata md = MetadataFactory.eINSTANCE.createResourceMetadata();
+		md.getExtra().add(createCustomMetadata("type", signalState.getSignalType()));
+		md.getExtra().add(createCustomMetadata("signalGroup", signalState.getSignalGroup().getId()));
+		metadata.put(IlsaPackage.eINSTANCE.getSignal_Color(), md);
 	}
 
 	private Point getLocation(TLConfiguration configuration) {

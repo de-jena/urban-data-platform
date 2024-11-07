@@ -165,28 +165,8 @@ public class IlsaPackageImpl extends EPackageImpl implements IlsaPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSignal_Type() {
-		return (EAttribute)signalEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getSignal_SignalGroup() {
-		return (EAttribute)signalEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getSignal_ObservedArea() {
-		return (EAttribute)signalEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)signalEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -243,8 +223,6 @@ public class IlsaPackageImpl extends EPackageImpl implements IlsaPackage {
 
 		signalEClass = createEClass(SIGNAL);
 		createEAttribute(signalEClass, SIGNAL__COLOR);
-		createEAttribute(signalEClass, SIGNAL__TYPE);
-		createEAttribute(signalEClass, SIGNAL__SIGNAL_GROUP);
 		createEAttribute(signalEClass, SIGNAL__OBSERVED_AREA);
 
 		thermalEClass = createEClass(THERMAL);
@@ -292,8 +270,6 @@ public class IlsaPackageImpl extends EPackageImpl implements IlsaPackage {
 
 		initEClass(signalEClass, Signal.class, "Signal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSignal_Color(), ecorePackage.getEString(), "color", null, 0, 1, Signal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSignal_Type(), ecorePackage.getEString(), "type", null, 0, 1, Signal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSignal_SignalGroup(), ecorePackage.getEString(), "signalGroup", null, 0, 1, Signal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSignal_ObservedArea(), theProviderPackage.getEGeoJsonObject(), "observedArea", null, 0, 1, Signal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(thermalEClass, Thermal.class, "Thermal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -338,19 +314,6 @@ public class IlsaPackageImpl extends EPackageImpl implements IlsaPackage {
 		   source,
 		   new String[] {
 			   "sensorthings.unit.name", "Farbe"
-		   });
-		addAnnotation
-		  (getSignal_Type(),
-		   source,
-		   new String[] {
-			   "sensorthings.sensor.metadata", null,
-			   "sensorthings.unit.name", "Signaltyp"
-		   });
-		addAnnotation
-		  (getSignal_SignalGroup(),
-		   source,
-		   new String[] {
-			   "sensorthings.unit.name", "Signalgruppe"
 		   });
 		addAnnotation
 		  (getSignal_ObservedArea(),

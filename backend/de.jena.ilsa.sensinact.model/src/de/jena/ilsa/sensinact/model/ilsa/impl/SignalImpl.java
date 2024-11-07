@@ -35,8 +35,6 @@ import org.eclipse.sensinact.model.core.provider.impl.ServiceImpl;
  * </p>
  * <ul>
  *   <li>{@link de.jena.ilsa.sensinact.model.ilsa.impl.SignalImpl#getColor <em>Color</em>}</li>
- *   <li>{@link de.jena.ilsa.sensinact.model.ilsa.impl.SignalImpl#getType <em>Type</em>}</li>
- *   <li>{@link de.jena.ilsa.sensinact.model.ilsa.impl.SignalImpl#getSignalGroup <em>Signal Group</em>}</li>
  *   <li>{@link de.jena.ilsa.sensinact.model.ilsa.impl.SignalImpl#getObservedArea <em>Observed Area</em>}</li>
  * </ul>
  *
@@ -62,46 +60,6 @@ public class SignalImpl extends ServiceImpl implements Signal {
 	 * @ordered
 	 */
 	protected String color = COLOR_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getType()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String TYPE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getType()
-	 * @generated
-	 * @ordered
-	 */
-	protected String type = TYPE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getSignalGroup() <em>Signal Group</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSignalGroup()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String SIGNAL_GROUP_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getSignalGroup() <em>Signal Group</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSignalGroup()
-	 * @generated
-	 * @ordered
-	 */
-	protected String signalGroup = SIGNAL_GROUP_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getObservedArea() <em>Observed Area</em>}' attribute.
@@ -171,52 +129,6 @@ public class SignalImpl extends ServiceImpl implements Signal {
 	 * @generated
 	 */
 	@Override
-	public String getType() {
-		return type;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setType(String newType) {
-		String oldType = type;
-		type = newType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IlsaPackage.SIGNAL__TYPE, oldType, type));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getSignalGroup() {
-		return signalGroup;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setSignalGroup(String newSignalGroup) {
-		String oldSignalGroup = signalGroup;
-		signalGroup = newSignalGroup;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IlsaPackage.SIGNAL__SIGNAL_GROUP, oldSignalGroup, signalGroup));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public GeoJsonObject getObservedArea() {
 		return observedArea;
 	}
@@ -244,10 +156,6 @@ public class SignalImpl extends ServiceImpl implements Signal {
 		switch (featureID) {
 			case IlsaPackage.SIGNAL__COLOR:
 				return getColor();
-			case IlsaPackage.SIGNAL__TYPE:
-				return getType();
-			case IlsaPackage.SIGNAL__SIGNAL_GROUP:
-				return getSignalGroup();
 			case IlsaPackage.SIGNAL__OBSERVED_AREA:
 				return getObservedArea();
 		}
@@ -264,12 +172,6 @@ public class SignalImpl extends ServiceImpl implements Signal {
 		switch (featureID) {
 			case IlsaPackage.SIGNAL__COLOR:
 				setColor((String)newValue);
-				return;
-			case IlsaPackage.SIGNAL__TYPE:
-				setType((String)newValue);
-				return;
-			case IlsaPackage.SIGNAL__SIGNAL_GROUP:
-				setSignalGroup((String)newValue);
 				return;
 			case IlsaPackage.SIGNAL__OBSERVED_AREA:
 				setObservedArea((GeoJsonObject)newValue);
@@ -289,12 +191,6 @@ public class SignalImpl extends ServiceImpl implements Signal {
 			case IlsaPackage.SIGNAL__COLOR:
 				setColor(COLOR_EDEFAULT);
 				return;
-			case IlsaPackage.SIGNAL__TYPE:
-				setType(TYPE_EDEFAULT);
-				return;
-			case IlsaPackage.SIGNAL__SIGNAL_GROUP:
-				setSignalGroup(SIGNAL_GROUP_EDEFAULT);
-				return;
 			case IlsaPackage.SIGNAL__OBSERVED_AREA:
 				setObservedArea(OBSERVED_AREA_EDEFAULT);
 				return;
@@ -312,10 +208,6 @@ public class SignalImpl extends ServiceImpl implements Signal {
 		switch (featureID) {
 			case IlsaPackage.SIGNAL__COLOR:
 				return COLOR_EDEFAULT == null ? color != null : !COLOR_EDEFAULT.equals(color);
-			case IlsaPackage.SIGNAL__TYPE:
-				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
-			case IlsaPackage.SIGNAL__SIGNAL_GROUP:
-				return SIGNAL_GROUP_EDEFAULT == null ? signalGroup != null : !SIGNAL_GROUP_EDEFAULT.equals(signalGroup);
 			case IlsaPackage.SIGNAL__OBSERVED_AREA:
 				return OBSERVED_AREA_EDEFAULT == null ? observedArea != null : !OBSERVED_AREA_EDEFAULT.equals(observedArea);
 		}
@@ -334,10 +226,6 @@ public class SignalImpl extends ServiceImpl implements Signal {
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (color: ");
 		result.append(color);
-		result.append(", type: ");
-		result.append(type);
-		result.append(", signalGroup: ");
-		result.append(signalGroup);
 		result.append(", observedArea: ");
 		result.append(observedArea);
 		result.append(')');

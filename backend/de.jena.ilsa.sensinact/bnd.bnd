@@ -21,6 +21,7 @@
 	org.gecko.qvt.osgi.api,\
 	de.jena.udp.trafficos.common.model,\
 	de.jena.ilsa.sensinact.model,\
-	org.eclipse.sensinact.gateway.core.geo-json
+	org.eclipse.sensinact.gateway.core.geo-json,\
+	org.eclipse.sensinact.gateway.core.models.metadata
 	
 -library: enable-emf

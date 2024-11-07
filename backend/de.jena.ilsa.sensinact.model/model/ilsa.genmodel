@@ -14,8 +14,6 @@
     </genClasses>
     <genClasses ecoreClass="ilsa.ecore#//Signal">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ilsa.ecore#//Signal/color"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ilsa.ecore#//Signal/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ilsa.ecore#//Signal/signalGroup"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ilsa.ecore#//Signal/observedArea"/>
     </genClasses>
     <genClasses ecoreClass="ilsa.ecore#//Thermal">

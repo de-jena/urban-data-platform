@@ -196,31 +196,13 @@ public interface IlsaPackage extends org.eclipse.emf.ecore.EPackage {
 	int SIGNAL__COLOR = ProviderPackage.SERVICE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIGNAL__TYPE = ProviderPackage.SERVICE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Signal Group</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIGNAL__SIGNAL_GROUP = ProviderPackage.SERVICE_FEATURE_COUNT + 2;
-
-	/**
 	 * The feature id for the '<em><b>Observed Area</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL__OBSERVED_AREA = ProviderPackage.SERVICE_FEATURE_COUNT + 3;
+	int SIGNAL__OBSERVED_AREA = ProviderPackage.SERVICE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Signal</em>' class.
@@ -229,7 +211,7 @@ public interface IlsaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_FEATURE_COUNT = ProviderPackage.SERVICE_FEATURE_COUNT + 4;
+	int SIGNAL_FEATURE_COUNT = ProviderPackage.SERVICE_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>EIs Set</em>' operation.
@@ -384,28 +366,6 @@ public interface IlsaPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getSignal_Color();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.ilsa.sensinact.model.ilsa.Signal#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see de.jena.ilsa.sensinact.model.ilsa.Signal#getType()
-	 * @see #getSignal()
-	 * @generated
-	 */
-	EAttribute getSignal_Type();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.jena.ilsa.sensinact.model.ilsa.Signal#getSignalGroup <em>Signal Group</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Signal Group</em>'.
-	 * @see de.jena.ilsa.sensinact.model.ilsa.Signal#getSignalGroup()
-	 * @see #getSignal()
-	 * @generated
-	 */
-	EAttribute getSignal_SignalGroup();
-
-	/**
 	 * Returns the meta object for the attribute '{@link de.jena.ilsa.sensinact.model.ilsa.Signal#getObservedArea <em>Observed Area</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -495,22 +455,6 @@ public interface IlsaPackage extends org.eclipse.emf.ecore.EPackage {
 		 * @generated
 		 */
 		EAttribute SIGNAL__COLOR = eINSTANCE.getSignal_Color();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SIGNAL__TYPE = eINSTANCE.getSignal_Type();
-
-		/**
-		 * The meta object literal for the '<em><b>Signal Group</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SIGNAL__SIGNAL_GROUP = eINSTANCE.getSignal_SignalGroup();
 
 		/**
 		 * The meta object literal for the '<em><b>Observed Area</b></em>' attribute feature.

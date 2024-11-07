@@ -14,17 +14,6 @@
         <details key="sensorthings.unit.name" value="Farbe"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
-      <eAnnotations source="Metadata">
-        <details key="sensorthings.sensor.metadata"/>
-        <details key="sensorthings.unit.name" value="Signaltyp"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="signalGroup" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
-      <eAnnotations source="Metadata">
-        <details key="sensorthings.unit.name" value="Signalgruppe"/>
-      </eAnnotations>
-    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="observedArea" eType="ecore:EDataType ../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//EGeoJsonObject">
       <eAnnotations source="Metadata">
         <details key="sensorthings.observedArea" value="true"/>
