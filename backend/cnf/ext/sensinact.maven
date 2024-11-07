@@ -7,6 +7,7 @@ org.eclipse.sensinact.gateway.core.models:provider:${sensinact.version}
 org.eclipse.sensinact.gateway.core.models:metadata:${sensinact.version}
 org.eclipse.sensinact.gateway.core:geo-json:${sensinact.version}
 
+
 # northbound
 org.eclipse.sensinact.gateway.northbound:rest:${sensinact.version}
 org.eclipse.sensinact.gateway.northbound:gogo-shell:${sensinact.version}
@@ -27,6 +28,9 @@ org.eclipse.sensinact.gateway.northbound.sensorthings:rest.api:${sensinact.versi
 org.eclipse.sensinact.gateway.northbound.sensorthings:rest.gateway:${sensinact.version}
 org.eclipse.sensinact.gateway.northbound.sensorthings:filter:${sensinact.version}
 org.eclipse.sensinact.gateway.northbound.sensorthings:mqtt:${sensinact.version}
+
+## filters
+org.eclipse.sensinact.gateway.filters:filters.core:${sensinact.version}
 
 ## sensorthings mqtt dependencies
 io.netty:netty-common:4.1.93.Final

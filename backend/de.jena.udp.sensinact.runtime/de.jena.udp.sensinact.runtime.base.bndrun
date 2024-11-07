@@ -113,7 +113,7 @@
 	org.eclipse.sensinact.gateway.core.impl;version='[0.0.2,0.0.3)';startlevel=1100,\
 	org.eclipse.sensinact.gateway.core.models.metadata;version='[0.0.2,0.0.3)';startlevel=1110,\
 	org.eclipse.sensinact.gateway.core.models.provider;version='[0.0.2,0.0.3)';startlevel=1120,\
-	org.eclipse.sensinact.gateway.northbound.filters.filters.core;version='[0.0.2,0.0.3)';startlevel=1130,\
+	org.eclipse.sensinact.gateway.filters.filters.core;version='[0.0.2,0.0.3)';startlevel=1130,\
 	org.eclipse.sensinact.gateway.northbound.gogo-shell;version='[0.0.2,0.0.3)';startlevel=1140,\
 	org.eclipse.sensinact.gateway.northbound.query-handler;version='[0.0.2,0.0.3)';startlevel=1150,\
 	org.eclipse.sensinact.gateway.northbound.rest;version='[0.0.2,0.0.3)';startlevel=1160,\
