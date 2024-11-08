@@ -24,7 +24,7 @@ import org.osgi.service.component.annotations.ServiceScope;
 import org.osgi.service.http.context.ServletContextHelper;
 import org.osgi.service.http.whiteboard.propertytypes.HttpWhiteboardContext;
 
-@Component(service = ServletContextHelper.class, scope = ServiceScope.SINGLETON)
+@Component(name="FiveGContentTypeServletContextHelper", service = ServletContextHelper.class, scope = ServiceScope.SINGLETON)
 @HttpWhiteboardContext(name = "upd-5g", path = "/html/5g")
 public class FiveGContentTypeServletContextHelper extends ServletContextHelper {
 

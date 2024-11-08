@@ -1,3 +1,6 @@
+-init: \
+	${system-allow-fail; npm run build --prefix ../../frontend/5gDemo/}
+	
 -includeresource: \
 	content=-../../frontend/5gDemo/dist
 -buildpath: \
