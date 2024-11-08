@@ -190,8 +190,10 @@ public class TrafficLight {
 			admin.setLocation(location);
 
 			EMap<String, Service> services = ilsa.getServices();
-//			List<TLSignal> signals = configuration.getSubcircle().flatMap(sc -> sc.getModules().stream()).flatMap(m -> m.getSignals().stream()).toList();
-			List<TLSignal> signals = configuration.getModules().stream().flatMap(m -> m.getSignals().stream()).toList();
+			List<TLSignal> signals = configuration.getSubcircles().stream() //
+					.flatMap(sc -> sc.getSerialPorts().stream())//
+					.flatMap(sp -> sp.getModules().stream()) //
+					.flatMap(m -> m.getSignals().stream()).toList();
 			signals.forEach(s -> initSignal(services, s));
 
 			Promise<?> promise = sensiNact.pushUpdate(ilsa);

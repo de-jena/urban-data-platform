@@ -195,7 +195,7 @@ public class MQTTTlcControlImpl implements TlcControl {
 		if (config == null) {
 			return Collections.emptyList();
 		}
-		EList<TLPhase> phases = config.getPhases();
+		List<TLPhase> phases = config.getSubcircles().stream().flatMap(sc ->sc.getPhases().stream()).toList();
 		return phases.stream().map(this::convertPhase).toList();
 	}
 
@@ -236,7 +236,7 @@ public class MQTTTlcControlImpl implements TlcControl {
 			return Optional.empty();
 		}
 		TLConfiguration configuration = tlConfigs.get(tlcId);
-		return configuration.getPhases().stream().filter(p -> p.getPhase() == phase).map(this::convertPhase)
+		return configuration.getSubcircles().stream().flatMap(sc ->sc.getPhases().stream()).filter(p -> p.getPhase() == phase).map(this::convertPhase)
 				.findFirst();
 	}
 
