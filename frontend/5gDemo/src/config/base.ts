@@ -15,7 +15,7 @@
 const config= {
   //baseUrl:window.location.origin+'/sensinact/rest',
   //baseUrl:'http://localhost:8080/sensinact/rest',
-  baseUrl:'https://5g.data-in-motion.biz/sensinact/rest',
+  baseUrl:'https://udp.datainmotion.com/udp/rest',
 
   //baseUrl:'http://192.168.178.12:8080/sensinact/rest',
   //baseUrl: 'https://udp-5g-broker.nomad-dmz.jena.de/sensinact/rest'
