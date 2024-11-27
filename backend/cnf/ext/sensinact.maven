@@ -31,6 +31,8 @@ org.eclipse.sensinact.gateway.northbound.sensorthings:mqtt:${sensinact.version}
 
 ## filters
 org.eclipse.sensinact.gateway.filters:filters.core:${sensinact.version}
+org.eclipse.sensinact.gateway.filters:resource.selector:${sensinact.version}
+org.eclipse.sensinact.gateway.filters:resource.selector.impl:${sensinact.version}
 
 ## sensorthings mqtt dependencies
 io.netty:netty-common:4.1.93.Final

@@ -159,7 +159,7 @@ public class TrafficLight {
 			TLSignalState signalState = (TLSignalState) resource.getContents().get(0);
 			TrafficLightDto dto = new TrafficLightDto(intersectionId, signalState.getId(), signalState.getState());
 			dto.timestamp = signalState.getTimestamp().getTime();
-			logger.log(Level.DEBUG, "push {0} {1}", signalState.getId(), signalState.getState());
+			logger.log(Level.DEBUG, "push {0} {1} {2}", intersectionId, signalState.getId(), signalState.getState());
 			Promise<?> promise = sensiNact.pushUpdate(dto);
 			promise.onFailure(e -> logger.log(Level.ERROR, "Error while pushing signal to sensinact.", e));
 		} catch (IOException e) {

@@ -31,6 +31,7 @@ import org.gecko.emf.osgi.constants.EMFNamespaces;
 import org.gecko.osgi.messaging.Message;
 import org.gecko.osgi.messaging.MessagingService;
 import org.gecko.qvt.osgi.api.ModelTransformator;
+import org.osgi.annotation.bundle.Requirement;
 import org.osgi.service.component.ComponentServiceObjects;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
@@ -51,7 +52,8 @@ import de.jena.model.sensinact.ibis.IbisSensinactFactory;
  * 
  */
 @RequireEMFJson
-@Component
+@Requirement(namespace = "osgi.identity", filter = "(osgi.identity=de.jena.ibis.sensinact.mmt)")
+@Component(name = "IbisConnector")
 public class IbisConnector {
 
 	private static final Logger LOGGER = System.getLogger(IbisConnector.class.getName());

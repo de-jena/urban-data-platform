@@ -11,4 +11,5 @@
 	org.gecko.qvt.osgi.api,\
 	org.osgi.service.component,\
 	org.eclipse.sensinact.gateway.core.models.provider,\
-	org.eclipse.sensinact.gateway.core.geo-json
+	org.eclipse.sensinact.gateway.core.geo-json,\
+	de.jena.ibis.sensinact.mmt

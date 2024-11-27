@@ -105,6 +105,7 @@ public class ChirpstackConfigurator {
 		props.put("topics", csConfig.topics());
 		props.put("auth.clientcert.path", csConfig.certPath());
 		props.put("auth.clientcert.key", csConfig.certKey());
+		props.put("auth.clientcert.key.algorithm","EC");
 		props.put("auth.clientcert.ca.path", csConfig.caPath());
 		props.put("auth.trusted.certs", csConfig.caChainPath());
 		props.put("auth.allow.expired", true);

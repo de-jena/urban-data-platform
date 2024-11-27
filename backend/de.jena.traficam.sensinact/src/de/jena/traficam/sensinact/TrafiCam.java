@@ -25,6 +25,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -105,7 +106,7 @@ public class TrafiCam {
 		} catch (Exception e) {
 			logger.log(Level.ERROR, "Error subscribing mqtt {0}.\n{1}", TOPIC, e);
 		}
-		logger.log(Level.INFO, "Sensinact Traffic Light started.");
+		logger.log(Level.INFO, "Sensinact TrafiCam started.");
 	}
 
 	@Deactivate
@@ -189,35 +190,26 @@ public class TrafiCam {
 		PushStream<FeatureCollection> stream = psp.buildStream(source).unbuffered().build()
 				.window(Duration.ofSeconds(2), (messages) -> {
 					FeatureCollection geo = new FeatureCollection();
-					try {
-						for (Message message : messages) {
-							BinaryResourceImpl resource = new BinaryResourceImpl();
-							resource.load(new ByteArrayInputStream(message.payload().array()), Collections.emptyMap());
-							EList<EObject> contents = resource.getContents();
-							if (contents.isEmpty()) {
-								logger.log(Level.WARNING, "Can't load Traficam from {0}.", message);
-								continue;
-							}
-							TrafiCamObject tc = (TrafiCamObject) contents.get(0);
+					for (Message message : messages) {
+						Optional<TrafiCamObject> optionalTC = loadTrafiCamObject(message);
+						if (optionalTC.isPresent()) {
+							TrafiCamObject tc = optionalTC.get();
 							GpsCoordinates gps = tc.getGpsCoordinates().get(0);
-							if (gps == null) {
-								continue;
+							if (gps != null) {
+								long id = tc.getId();
+								if (geo.features.stream().noneMatch(f -> f.properties.get("id").equals(id))) {
+									Feature feature = createFeature(gps);
+									feature.properties.put("id", id);
+									feature.properties.put("class", classId);
+									feature.properties.put("className", className);
+									feature.properties.put("speed", tc.getSpeed());
+									feature.properties.put("heading", gps.getHeading());
+									feature.properties.put("time", tc.getTime().getTime());
+									geo.features.add(feature);
+								}
+								sendEmpty.set(false);
 							}
-							long id = tc.getId();
-							if (geo.features.stream().noneMatch(f -> f.properties.get("id").equals(id))) {
-								Feature feature = createFeature(gps);
-								feature.properties.put("id", id);
-								feature.properties.put("class", classId);
-								feature.properties.put("className", className);
-								feature.properties.put("speed", tc.getSpeed());
-								feature.properties.put("heading", gps.getHeading());
-								feature.properties.put("time", tc.getTime().getTime());
-								geo.features.add(feature);
-							}
-							sendEmpty.set(false);
 						}
-					} catch (IOException e) {
-						logger.log(Level.ERROR, "Error while parsing json for {0}.\n{1}", camId, e);
 					}
 					return geo;
 				});
@@ -230,6 +222,22 @@ public class TrafiCam {
 			}
 		});
 		return source;
+	}
+
+	private Optional<TrafiCamObject> loadTrafiCamObject(Message message) {
+		try {
+			BinaryResourceImpl resource = new BinaryResourceImpl();
+			resource.load(new ByteArrayInputStream(message.payload().array()), Collections.emptyMap());
+			EList<EObject> contents = resource.getContents();
+			if (contents.isEmpty()) {
+				logger.log(Level.WARNING, "Can't load Traficam from {0}.", message);
+				return Optional.empty();
+			}
+			return Optional.of((TrafiCamObject) contents.get(0));
+		} catch (IOException e) {
+			logger.log(Level.ERROR, "Error while parsing json {0}.\n{1}", new String(message.payload().array()), e);
+			return Optional.empty();
+		}
 	}
 
 	private String getClassName(String camId, String classId) {
