@@ -13,10 +13,8 @@
 
 package de.jena.icesensor.rest;
 
-import java.io.IOException;
 import java.lang.System.Logger;
 import java.lang.System.Logger.Level;
-import java.time.Instant;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -29,12 +27,10 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.sensinact.core.push.DataUpdate;
-import org.eclipse.sensinact.core.push.dto.GenericDto;
 import org.eclipse.sensinact.gateway.geojson.Coordinates;
-import org.eclipse.sensinact.gateway.geojson.GeoJsonObject;
 import org.eclipse.sensinact.gateway.geojson.Point;
+import org.eclipse.sensinact.model.core.provider.Admin;
 import org.gecko.emf.json.annotation.RequireEMFJson;
 import org.gecko.emf.json.constants.EMFJs;
 import org.gecko.emf.osgi.constants.EMFNamespaces;
@@ -56,7 +52,6 @@ import de.jena.model.icesensor.IceSENSOR;
 import de.jena.model.icesensor.IcesensorPackage;
 import de.jena.model.icesensor.SensorData;
 import de.jena.model.sensinact.iceprovider.IceSensor;
-import de.jena.model.sensinact.iceprovider.IcesensoreSensinactPackage;
 
 @Component(service = IceSensorService.class, name = "IceSensorServiceRest", configurationPolicy = ConfigurationPolicy.REQUIRE, immediate = true)
 @RequireEMFJson
@@ -77,7 +72,7 @@ public class IceSensorRestService implements IceSensorService {
 	@Reference
 	DataUpdate sensinact;
 	
-	@Reference(target = ("(" + ModelTransformationConstants.TRANSFORMATOR_ID + "=icesensore)"))
+	@Reference(target = ("(" + ModelTransformationConstants.TRANSFORMATOR_ID + "=icesensor)"))
 	private ModelTransformator transformator;
 	
 	private ScheduledExecutorService executor;
@@ -120,13 +115,12 @@ public class IceSensorRestService implements IceSensorService {
 		Resource resource = resourceSet.createResource(URI.createURI(ALL_URL), "application/json");
 		try {
 			resource.load(getLoadOptions());
-			ArrayList<EObject> sensors = new ArrayList<>(resource.getContents());
+			publish(resource.getContents());
+			logger.log(Level.INFO, "Sources: {0} sensors: {1}", eventSources.size(), resource.getContents().size());
 			resource.getContents().clear();
-			logger.log(Level.INFO, "Sources: {0} sensors: {1}", eventSources.size(), sensors.size());
-			publish(sensors);
-		} catch (Throwable e) {
-			resource.getErrors().forEach(x -> System.out.println(x.getMessage()));
-			e.printStackTrace();
+		} catch (Exception e) {
+			resource.getErrors().forEach(x -> logger.log(Level.ERROR,"Error loading resource ", x));
+			logger.log(Level.ERROR,"Error loading resource ", e);
 		} finally {
 			serviceObjects.ungetService(resourceSet);
 		}
@@ -150,44 +144,19 @@ public class IceSensorRestService implements IceSensorService {
 		for (EObject eObject : sensors) {
 			IceSENSOR sensor = (IceSENSOR) eObject;
 			IceSensor push = (IceSensor) transformator.doTransformation(sensor);
+			Admin admin = push.getAdmin();
+			admin.setLocation(createPoint(sensor));
 			
 			logger.log(Level.INFO, "Pushing: {0}", push);
 			sensinact.pushUpdate(push);
-			
-			Point point = new Point();
-			point.coordinates = new Coordinates();
-			point.coordinates.latitude = sensor.getCoords().getLatitude();
-			point.coordinates.longitude = sensor.getCoords().getLongitude();
-			GenericDto dto = createGenericDto(IcesensoreSensinactPackage.Literals.ICE_SENSOR.getName(), sensor.getIce_id(), "admin", "location", GeoJsonObject.class, point, Instant.now());
-			sensinact.pushUpdate(dto);
-			logger.log(Level.INFO, "updated Location of: {0}", push.getId());
 		}
 	}
-	
-	private void printProvider(EObject eObject) {
-		ResourceSet resourceSet = serviceObjects.getService();
-        Resource resource = resourceSet.createResource(URI.createURI("file://temp.xmi"));
-        resource.getContents().add(EcoreUtil.copy(eObject));
-        try {
-            resource.save(System.out, null);
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } finally {
-            resourceSet.getResources().remove(resource);
-            serviceObjects.ungetService(resourceSet);
-        }
-    }
-	
-	private GenericDto createGenericDto(String model, String provider, String service, String resource, Class<?> type, Object value, Instant timestamp) {
-		GenericDto dto = new GenericDto();
-		dto.model = model;
-		dto.provider = provider;
-		dto.service = service;
-		dto.resource = resource;
-		dto.type = type;
-		dto.value = value;
-		dto.timestamp = timestamp;
-		return dto;	
+
+	private Point createPoint(IceSENSOR sensor) {
+		Point point = new Point();
+		point.coordinates = new Coordinates();
+		point.coordinates.latitude = sensor.getCoords().getLatitude();
+		point.coordinates.longitude = sensor.getCoords().getLongitude();
+		return point;
 	}
 }

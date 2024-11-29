@@ -17,6 +17,7 @@ import java.lang.System.Logger;
 import java.lang.System.Logger.Level;
 
 import org.eclipse.sensinact.core.push.DataUpdate;
+import org.osgi.annotation.bundle.Requirement;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Deactivate;
@@ -28,9 +29,10 @@ import org.osgi.util.pushstream.PushStream;
 import de.jena.icesensor.api.IceSensorService;
 import de.jena.model.icesensor.SensorData;
 
-@Component(immediate = true)
-public class IceSensor {
-	private static final Logger logger = System.getLogger(IceSensor.class.getName());
+@Requirement(namespace = "osgi.identity", filter = "(osgi.identity=de.jena.icesensor.sensinact.mmt)")
+@Component(name="IceSensorConnector")
+public class IceSensorConnector {
+	private static final Logger logger = System.getLogger(IceSensorConnector.class.getName());
 
 	@Reference
 	private IceSensorService service;
@@ -42,7 +44,6 @@ public class IceSensor {
 
 	@Activate
 	public void activate() {
-
 		subcribtion = service.subcribe();
 		subcribtion.forEachEvent(this::handle);
 		logger.log(Level.INFO, "Sensinact IceSensor started.");
@@ -51,14 +52,6 @@ public class IceSensor {
 	@Deactivate
 	private void deactivate() {
 		subcribtion.close();
-	}
-
-	private void onMessage(SensorData iceSENSOR) {
-		try {
-			sensiNact.pushUpdate(iceSENSOR);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 	}
 
 	private long handle(PushEvent<? extends SensorData> event) {
@@ -79,4 +72,12 @@ public class IceSensor {
 		return 0;
 	}
 
+	private void onMessage(SensorData iceSensor) {
+		try {
+			sensiNact.pushUpdate(iceSensor);
+		} catch (Exception e) {
+			logger.log(Level.ERROR, "Error update iceSensor data.", e);
+		}
+	}
 }
+

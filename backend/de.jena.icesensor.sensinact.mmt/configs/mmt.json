@@ -3,8 +3,8 @@
 	":configurator:version": "1.0.0",
 	
 	"QVTModelTransformator~icecat": {
-		"transformator.id": "icesensore",
-		"qvt.template.path": "de.jena.icesensor.sensinact.mmt/transformations/icesensore.qvto",
+		"transformator.id": "icesensor",
+		"qvt.template.path": "de.jena.icesensor.sensinact.mmt/transformations/icesensor.qvto",
 		"qvt.model.target": "(&(emf.name=icesensor)(emf.name=iceprovider))"
 	}
 }
