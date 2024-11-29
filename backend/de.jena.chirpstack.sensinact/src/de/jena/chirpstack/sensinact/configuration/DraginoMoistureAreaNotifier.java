@@ -32,8 +32,6 @@ import org.eclipse.sensinact.gateway.geojson.Polygon;
 import org.eclipse.sensinact.model.core.provider.Admin;
 import org.eclipse.sensinact.model.core.provider.ProviderFactory;
 import org.osgi.service.component.annotations.Activate;
-import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.ConfigurationPolicy;
 import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.typedevent.TypedEventHandler;
 import org.osgi.service.typedevent.propertytypes.EventTopics;
@@ -43,7 +41,7 @@ import de.jena.chirpstack.moisture.model.moisture.ChirpstackMoistureFactory;
 import de.jena.chirpstack.moisture.model.moisture.MoistureSensor;
 import de.jena.chirpstack.moisture.model.moisture.MoistureStatus;
 
-@Component(configurationPolicy = ConfigurationPolicy.OPTIONAL)
+//@Component(configurationPolicy = ConfigurationPolicy.OPTIONAL)
 @EventTopics({ "DATA/Dragino_LSE01/*" })
 public class DraginoMoistureAreaNotifier implements TypedEventHandler<ResourceDataNotification> {
 
