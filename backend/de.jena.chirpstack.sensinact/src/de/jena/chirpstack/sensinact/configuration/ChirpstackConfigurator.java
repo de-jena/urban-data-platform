@@ -26,6 +26,7 @@ import org.osgi.service.cm.Configuration;
 import org.osgi.service.cm.ConfigurationAdmin;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Modified;
 import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.metatype.annotations.AttributeDefinition;
 
@@ -76,12 +77,26 @@ public class ChirpstackConfigurator {
 		String id = config.id();
 		logger.log(Level.DEBUG, "Start loading chirpstack configuration {0}", id);
 		try {
-			Path mappingFile = Paths.get(config.mappingFile());
-			configureGateway(id, config);
-			configureDeviceFactory(id, mappingFile);
+			init(config, id);
 		} catch (Exception e) {
 			logger.log(Level.ERROR, () -> "Error while reading configuration from "+ id, e);
 		}
+	}
+	@Modified
+	public void modify(ChirpstackConfig config) {
+		String id = config.id();
+		logger.log(Level.DEBUG, "Update chirpstack configuration {0}", id);
+		try {
+			init(config, id);
+		} catch (Exception e) {
+			logger.log(Level.ERROR, () -> "Error while reading configuration from "+ id, e);
+		}
+	}
+
+	private void init(ChirpstackConfig config, String id) throws IOException {
+		Path mappingFile = Paths.get(config.mappingFile());
+		configureGateway(id, config);
+		configureDeviceFactory(id, mappingFile);
 	}
 
 	void configureDeviceFactory(String name, Path mappingFile) throws IOException {
