@@ -39,8 +39,8 @@ import org.osgi.util.pushstream.PushStreamProvider;
 import org.osgi.util.pushstream.SimplePushEventSource;
 
 import de.jena.icesensor.api.IceSensorService;
+import de.jena.model.icesensor.IceSENSOR;
 import de.jena.model.icesensor.IcesensorPackage;
-import de.jena.model.icesensor.SensorData;
 import de.jena.model.icesensor.SensorMessage;
 
 @Component(service = { IceSensorService.class, IceSensorReader.class }, name = "IceSensorServiceWebsocket")
@@ -48,7 +48,7 @@ import de.jena.model.icesensor.SensorMessage;
 public class IceSensorReader implements IceSensorService {
 
 	private PushStreamProvider provider;
-	private List<SimplePushEventSource<SensorData>> eventSources = new ArrayList<>();
+	private List<SimplePushEventSource<IceSENSOR>> eventSources = new ArrayList<>();
 	@Reference(target = "(&(emf.resource.configurator.name=" + EMFJs.EMFSJON_CAPABILITY_NAME + "))")
 	ComponentServiceObjects<ResourceSet> serviceObjects;
 	@Reference
@@ -65,8 +65,8 @@ public class IceSensorReader implements IceSensorService {
 	}
 
 	@Override
-	public PushStream<SensorData> subcribe() {
-		SimplePushEventSource<SensorData> source = provider.buildSimpleEventSource(SensorData.class).build();
+	public PushStream<IceSENSOR> subcribe() {
+		SimplePushEventSource<IceSENSOR> source = provider.buildSimpleEventSource(IceSENSOR.class).build();
 		eventSources.add(source);
 		return provider.createStream(source);
 	}
@@ -83,7 +83,7 @@ public class IceSensorReader implements IceSensorService {
 			ArrayList<EObject> sensors = new ArrayList<>(resource.getContents());
 			resource.getContents().clear();
 			publish(sensors);
-		} catch (Throwable e) {
+		} catch (Exception e) {
 			resource.getErrors().forEach(diag -> System.out.println(diag.getMessage()));
 			e.printStackTrace();
 		} finally {
@@ -94,12 +94,12 @@ public class IceSensorReader implements IceSensorService {
 
 	private void publish(List<EObject> sensors) {
 		for (EObject sensor : sensors) {
-			Iterator<SimplePushEventSource<SensorData>> it = eventSources.iterator();
+			Iterator<SimplePushEventSource<IceSENSOR>> it = eventSources.iterator();
 			while (it.hasNext()) {
-				SimplePushEventSource<SensorData> source = it.next();
+				SimplePushEventSource<IceSENSOR> source = it.next();
 				if (source.isConnected()) {
 					SensorMessage msg = (SensorMessage) EcoreUtil.copy(sensor);
-					source.publish(msg.getData());
+//					source.publish(msg.getData());
 				} else
 					it.remove();
 			}

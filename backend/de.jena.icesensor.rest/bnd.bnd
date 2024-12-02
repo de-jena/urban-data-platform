@@ -10,15 +10,9 @@
 	org.osgi.service.cdi,\
 	de.jena.icesensor.api,\
 	com.fasterxml.jackson.core.jackson-databind,\
-	org.eclipse.sensinact.gateway.core.api,\
 	org.gecko.qvt.osgi.api,\
 	biz.aQute.bnd.annotation,\
-	de.jena.icesensor.sensinact.model;version=latest,\
-	org.eclipse.sensinact.gateway.core.geo-json,\
-	org.eclipse.sensinact.gateway.core.models.provider,\
 	org.gecko.emf.osgi.component,\
 	org.gecko.emf.util.annotations
 
 -library: enable-emf
-
-Private-Package: de.jena.icesensor.rest

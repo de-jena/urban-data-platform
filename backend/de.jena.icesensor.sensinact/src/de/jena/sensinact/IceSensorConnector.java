@@ -17,6 +17,11 @@ import java.lang.System.Logger;
 import java.lang.System.Logger.Level;
 
 import org.eclipse.sensinact.core.push.DataUpdate;
+import org.eclipse.sensinact.gateway.geojson.Coordinates;
+import org.eclipse.sensinact.gateway.geojson.Point;
+import org.eclipse.sensinact.model.core.provider.Admin;
+import org.gecko.qvt.osgi.api.ModelTransformationConstants;
+import org.gecko.qvt.osgi.api.ModelTransformator;
 import org.osgi.annotation.bundle.Requirement;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
@@ -27,20 +32,22 @@ import org.osgi.util.pushstream.PushEvent.EventType;
 import org.osgi.util.pushstream.PushStream;
 
 import de.jena.icesensor.api.IceSensorService;
-import de.jena.model.icesensor.SensorData;
+import de.jena.model.icesensor.IceSENSOR;
+import de.jena.model.sensinact.iceprovider.IceSensor;
 
 @Requirement(namespace = "osgi.identity", filter = "(osgi.identity=de.jena.icesensor.sensinact.mmt)")
 @Component(name="IceSensorConnector")
 public class IceSensorConnector {
 	private static final Logger logger = System.getLogger(IceSensorConnector.class.getName());
-
+	
+	@Reference(target = ("(" + ModelTransformationConstants.TRANSFORMATOR_ID + "=icesensor)"))
+	private ModelTransformator transformator;
 	@Reference
 	private IceSensorService service;
-
 	@Reference
 	private DataUpdate sensiNact;
 
-	private PushStream<SensorData> subcribtion;
+	private PushStream<IceSENSOR> subcribtion;
 
 	@Activate
 	public void activate() {
@@ -54,7 +61,7 @@ public class IceSensorConnector {
 		subcribtion.close();
 	}
 
-	private long handle(PushEvent<? extends SensorData> event) {
+	private long handle(PushEvent<? extends IceSENSOR> event) {
 		EventType type = event.getType();
 		switch (type) {
 		case CLOSE:
@@ -72,12 +79,22 @@ public class IceSensorConnector {
 		return 0;
 	}
 
-	private void onMessage(SensorData iceSensor) {
+	private void onMessage(IceSENSOR iceSensor) {
 		try {
-			sensiNact.pushUpdate(iceSensor);
+			IceSensor senSensor = (IceSensor) transformator.doTransformation(iceSensor);
+			Admin admin = senSensor.getAdmin();
+			admin.setLocation(createPoint(iceSensor));
+			sensiNact.pushUpdate(senSensor);
 		} catch (Exception e) {
 			logger.log(Level.ERROR, "Error update iceSensor data.", e);
 		}
 	}
+	
+	private Point createPoint(IceSENSOR sensor) {
+		Point point = new Point();
+		point.coordinates = new Coordinates();
+		point.coordinates.latitude = sensor.getCoords().getLatitude();
+		point.coordinates.longitude = sensor.getCoords().getLongitude();
+		return point;
+	}
 }
-

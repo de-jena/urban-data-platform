@@ -15,7 +15,7 @@ package de.jena.icesensor.api;
 
 import org.osgi.util.pushstream.PushStream;
 
-import de.jena.model.icesensor.SensorData;
+import de.jena.model.icesensor.IceSENSOR;
 
 /**
  * 
@@ -24,6 +24,6 @@ import de.jena.model.icesensor.SensorData;
  */
 public interface IceSensorService {
 
-	PushStream<SensorData> subcribe();
+	PushStream<IceSENSOR> subcribe();
 
 }

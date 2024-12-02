@@ -31,7 +31,7 @@ import org.osgi.util.pushstream.PushEvent.EventType;
 import org.osgi.util.pushstream.PushStream;
 
 import de.jena.icesensor.api.IceSensorService;
-import de.jena.model.icesensor.SensorData;
+import de.jena.model.icesensor.IceSENSOR;
 
 @Component(service = IceSensorCollector.class, scope = ServiceScope.SINGLETON, immediate = true)
 public class IceSensorCollector {
@@ -41,10 +41,10 @@ public class IceSensorCollector {
 	@Reference
 	private IceSensorService service;
 	private int eventCounter = 0;
-	private List<SensorData> sensors = new ArrayList<>();
-	private Map<String, Consumer<SensorData>> consumers = new HashMap<>();
+	private List<IceSENSOR> sensors = new ArrayList<>();
+	private Map<String, Consumer<IceSENSOR>> consumers = new HashMap<>();
 
-	private PushStream<SensorData> subcribtion;
+	private PushStream<IceSENSOR> subcribtion;
 
 	@Activate
 	public void activate() {
@@ -60,7 +60,7 @@ public class IceSensorCollector {
 		logger.log(Level.INFO, "IceSensorCollector stopped.");
 	}
 
-	private long handle(PushEvent<? extends SensorData> event) {
+	private long handle(PushEvent<? extends IceSENSOR> event) {
 		logger.log(Level.INFO, "Eventcounter: {0}", ++eventCounter);
 		EventType type = event.getType();
 		switch (type) {
@@ -82,9 +82,10 @@ public class IceSensorCollector {
 	/**
 	 * @param event
 	 */
-	private void readData(PushEvent<? extends SensorData> event) {
+	private void readData(PushEvent<? extends IceSENSOR> event) {
 		try {
-			SensorData sensor = event.getData();
+			IceSENSOR sensor = event.getData();
+			
 			sensors.add(sensor);
 			consumers.values().forEach(c -> c.accept(sensor));
 //			Coords coords = sensor.getCoords();
@@ -95,7 +96,7 @@ public class IceSensorCollector {
 		}
 	}
 
-	public String register(Consumer<SensorData> c) {
+	public String register(Consumer<IceSENSOR> c) {
 		sensors.forEach(c);
 		String id = c.toString();
 		consumers.put(id, c);

@@ -33,7 +33,7 @@ import org.eclipse.jetty.websocket.api.annotations.WebSocket;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 
-import de.jena.model.icesensor.SensorData;
+import de.jena.model.icesensor.IceSENSOR;
 
 @WebSocket
 public class IceWebSocket {
@@ -59,7 +59,7 @@ public class IceWebSocket {
 		handle = collector.register(sensor -> remote.sendString(toJson(sensor), null));
 	}
 
-	private String toJson(SensorData sensor) {
+	private String toJson(IceSENSOR sensor) {
 		ResourceSet resourceSet = new ResourceSetImpl();
 		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("json", new JsonResourceFactory());
 		Resource resource = resourceSet.createResource(URI.createFileURI("sensor.json"), "application/json");

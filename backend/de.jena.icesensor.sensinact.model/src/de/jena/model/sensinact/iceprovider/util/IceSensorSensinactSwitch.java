@@ -33,17 +33,17 @@ import org.eclipse.sensinact.model.core.provider.Service;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see de.jena.model.sensinact.iceprovider.IcesensoreSensinactPackage
+ * @see de.jena.model.sensinact.iceprovider.IceSensorSensinactPackage
  * @generated
  */
-public class IcesensoreSensinactSwitch<T> extends Switch<T> {
+public class IceSensorSensinactSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static IcesensoreSensinactPackage modelPackage;
+	protected static IceSensorSensinactPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -51,9 +51,9 @@ public class IcesensoreSensinactSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IcesensoreSensinactSwitch() {
+	public IceSensorSensinactSwitch() {
 		if (modelPackage == null) {
-			modelPackage = IcesensoreSensinactPackage.eINSTANCE;
+			modelPackage = IceSensorSensinactPackage.eINSTANCE;
 		}
 	}
 
@@ -80,14 +80,14 @@ public class IcesensoreSensinactSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case IcesensoreSensinactPackage.ICE_SENSOR: {
+			case IceSensorSensinactPackage.ICE_SENSOR: {
 				IceSensor iceSensor = (IceSensor)theEObject;
 				T result = caseIceSensor(iceSensor);
 				if (result == null) result = caseProvider(iceSensor);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case IcesensoreSensinactPackage.SENSOR_DATA: {
+			case IceSensorSensinactPackage.SENSOR_DATA: {
 				SensorData sensorData = (SensorData)theEObject;
 				T result = caseSensorData(sensorData);
 				if (result == null) result = caseService(sensorData);
@@ -174,4 +174,4 @@ public class IcesensoreSensinactSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //IcesensoreSensinactSwitch
+} //IceSensorSensinactSwitch

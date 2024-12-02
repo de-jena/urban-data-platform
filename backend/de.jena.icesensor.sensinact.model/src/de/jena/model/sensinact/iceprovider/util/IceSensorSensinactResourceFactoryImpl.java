@@ -13,7 +13,7 @@
  */
 package de.jena.model.sensinact.iceprovider.util;
 
-import de.jena.model.sensinact.iceprovider.IcesensoreSensinactPackage;
+import de.jena.model.sensinact.iceprovider.IceSensorSensinactPackage;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -30,17 +30,17 @@ import org.gecko.emf.osgi.constants.EMFNamespaces;
  * <!-- begin-user-doc -->
  * The <b>Resource Factory</b> associated with the package.
  * <!-- end-user-doc -->
- * @see de.jena.model.sensinact.iceprovider.util.IcesensoreSensinactResourceImpl
+ * @see de.jena.model.sensinact.iceprovider.util.IceSensorSensinactResourceImpl
  * @generated
  */
-public class IcesensoreSensinactResourceFactoryImpl extends ResourceFactoryImpl {
+public class IceSensorSensinactResourceFactoryImpl extends ResourceFactoryImpl {
 	/**
 	 * Creates an instance of the resource factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IcesensoreSensinactResourceFactoryImpl() {
+	public IceSensorSensinactResourceFactoryImpl() {
 		super();
 	}
 
@@ -52,7 +52,7 @@ public class IcesensoreSensinactResourceFactoryImpl extends ResourceFactoryImpl 
 	 */
 	@Override
 	public Resource createResource(URI uri) {
-		Resource result = new IcesensoreSensinactResourceImpl(uri);
+		Resource result = new IceSensorSensinactResourceImpl(uri);
 		return result;
 	}
 
@@ -62,10 +62,10 @@ public class IcesensoreSensinactResourceFactoryImpl extends ResourceFactoryImpl 
 	 */
 	public Map<String, Object> getServiceProperties() {
 		Map<String, Object> properties = new HashMap<String, Object>();
-		properties.put(EMFNamespaces.EMF_CONFIGURATOR_NAME, IcesensoreSensinactPackage.eNAME);
-		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "icesensoresensinact");
+		properties.put(EMFNamespaces.EMF_CONFIGURATOR_NAME, IceSensorSensinactPackage.eNAME);
+		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "icesensorsensinact");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
 		return properties;
 	}
 
-} //IcesensoreSensinactResourceFactoryImpl
+} //IceSensorSensinactResourceFactoryImpl

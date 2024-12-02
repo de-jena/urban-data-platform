@@ -19,6 +19,7 @@ import org.eclipse.jetty.websocket.client.ClientUpgradeRequest;
 import org.eclipse.jetty.websocket.client.WebSocketClient;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.ConfigurationPolicy;
 import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Reference;
 
@@ -32,19 +33,19 @@ import org.osgi.service.component.annotations.Reference;
  * Contributors: Data In Motion - initial API and implementation
  */
 
-@Component(immediate = true)
+@Component(name = "IceSensorWebsocketClient",configurationPolicy = ConfigurationPolicy.REQUIRE)
 public class IceSensorWebsocketClient {
 
 	private WebSocketClient client;
 	@Reference
 	private IceSensorReader reader;
 
-	public @interface WebsocketConfig {
+	public @interface IceSensorWebsocketConfig {
 		String token() default "";
 	}
 
 	@Activate
-	public void activate(WebsocketConfig config) throws Exception {
+	public void activate(IceSensorWebsocketConfig config) throws Exception {
 		client = new WebSocketClient();
 		URI dest = new URI("wss://jena.smart-city-factory.com/ws/sensor/?token=" + config.token());
 
@@ -56,7 +57,7 @@ public class IceSensorWebsocketClient {
 	}
 
 	@Deactivate
-	public void deactivate(WebsocketConfig config) throws Exception {
+	public void deactivate() throws Exception {
 		client.stop();
 	}
 

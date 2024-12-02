@@ -22,18 +22,18 @@ import org.osgi.annotation.versioning.ProviderType;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see de.jena.model.sensinact.iceprovider.IcesensoreSensinactPackage
+ * @see de.jena.model.sensinact.iceprovider.IceSensorSensinactPackage
  * @generated
  */
 @ProviderType
-public interface IcesensoreSensinactFactory extends EFactory {
+public interface IceSensorSensinactFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	IcesensoreSensinactFactory eINSTANCE = de.jena.model.sensinact.iceprovider.impl.IcesensoreSensinactFactoryImpl.init();
+	IceSensorSensinactFactory eINSTANCE = de.jena.model.sensinact.iceprovider.impl.IceSensorSensinactFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Ice Sensor</em>'.
@@ -60,6 +60,6 @@ public interface IcesensoreSensinactFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	IcesensoreSensinactPackage getIcesensoreSensinactPackage();
+	IceSensorSensinactPackage getIceSensorSensinactPackage();
 
-} //IcesensoreSensinactFactory
+} //IceSensorSensinactFactory

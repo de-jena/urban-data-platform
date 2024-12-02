@@ -36,14 +36,14 @@ import org.osgi.annotation.versioning.ProviderType;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see de.jena.model.sensinact.iceprovider.IcesensoreSensinactFactory
+ * @see de.jena.model.sensinact.iceprovider.IceSensorSensinactFactory
  * @model kind="package"
  *        annotation="http://www.eclipse.org/OCL/Import ecore='http://www.eclipse.org/emf/2002/Ecore'"
  * @generated
  */
 @ProviderType
-@EPackage(uri = IcesensoreSensinactPackage.eNS_URI, genModel = "/model/icesensor.genmodel", genModelSourceLocations = {"model/icesensor.genmodel","de.jena.icesensor.sensinact.model/model/icesensor.genmodel"}, ecore="/model/icesensor.ecore", ecoreSourceLocations="/model/icesensor.ecore")
-public interface IcesensoreSensinactPackage extends org.eclipse.emf.ecore.EPackage {
+@EPackage(uri = IceSensorSensinactPackage.eNS_URI, genModel = "/model/icesensor.genmodel", genModelSourceLocations = {"model/icesensor.genmodel","de.jena.icesensor.sensinact.model/model/icesensor.genmodel"}, ecore="/model/icesensor.ecore", ecoreSourceLocations="/model/icesensor.ecore")
+public interface IceSensorSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -74,14 +74,14 @@ public interface IcesensoreSensinactPackage extends org.eclipse.emf.ecore.EPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	IcesensoreSensinactPackage eINSTANCE = de.jena.model.sensinact.iceprovider.impl.IcesensoreSensinactPackageImpl.init();
+	IceSensorSensinactPackage eINSTANCE = de.jena.model.sensinact.iceprovider.impl.IceSensorSensinactPackageImpl.init();
 
 	/**
 	 * The meta object id for the '{@link de.jena.model.sensinact.iceprovider.impl.IceSensorImpl <em>Ice Sensor</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.jena.model.sensinact.iceprovider.impl.IceSensorImpl
-	 * @see de.jena.model.sensinact.iceprovider.impl.IcesensoreSensinactPackageImpl#getIceSensor()
+	 * @see de.jena.model.sensinact.iceprovider.impl.IceSensorSensinactPackageImpl#getIceSensor()
 	 * @generated
 	 */
 	int ICE_SENSOR = 0;
@@ -271,7 +271,7 @@ public interface IcesensoreSensinactPackage extends org.eclipse.emf.ecore.EPacka
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.jena.model.sensinact.iceprovider.impl.SensorDataImpl
-	 * @see de.jena.model.sensinact.iceprovider.impl.IcesensoreSensinactPackageImpl#getSensorData()
+	 * @see de.jena.model.sensinact.iceprovider.impl.IceSensorSensinactPackageImpl#getSensorData()
 	 * @generated
 	 */
 	int SENSOR_DATA = 1;
@@ -683,7 +683,7 @@ public interface IcesensoreSensinactPackage extends org.eclipse.emf.ecore.EPacka
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	IcesensoreSensinactFactory getIcesensoreSensinactFactory();
+	IceSensorSensinactFactory getIceSensorSensinactFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -704,7 +704,7 @@ public interface IcesensoreSensinactPackage extends org.eclipse.emf.ecore.EPacka
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.jena.model.sensinact.iceprovider.impl.IceSensorImpl
-		 * @see de.jena.model.sensinact.iceprovider.impl.IcesensoreSensinactPackageImpl#getIceSensor()
+		 * @see de.jena.model.sensinact.iceprovider.impl.IceSensorSensinactPackageImpl#getIceSensor()
 		 * @generated
 		 */
 		EClass ICE_SENSOR = eINSTANCE.getIceSensor();
@@ -818,7 +818,7 @@ public interface IcesensoreSensinactPackage extends org.eclipse.emf.ecore.EPacka
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.jena.model.sensinact.iceprovider.impl.SensorDataImpl
-		 * @see de.jena.model.sensinact.iceprovider.impl.IcesensoreSensinactPackageImpl#getSensorData()
+		 * @see de.jena.model.sensinact.iceprovider.impl.IceSensorSensinactPackageImpl#getSensorData()
 		 * @generated
 		 */
 		EClass SENSOR_DATA = eINSTANCE.getSensorData();
@@ -905,4 +905,4 @@ public interface IcesensoreSensinactPackage extends org.eclipse.emf.ecore.EPacka
 
 	}
 
-} //IcesensoreSensinactPackage
+} //IceSensorSensinactPackage

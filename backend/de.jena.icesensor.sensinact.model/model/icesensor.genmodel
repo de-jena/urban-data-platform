@@ -7,8 +7,8 @@
     copyrightFields="false" usedGenPackages="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.genmodel#//provider"
     operationReflection="true" importOrganizing="true" oSGiCompatible="true">
   <foreignModel>icesensor.ecore</foreignModel>
-  <genPackages prefix="IcesensoreSensinact" basePackage="de.jena.model.sensinact"
-      resource="XMI" disposableProviderFactory="true" ecorePackage="icesensor.ecore#/">
+  <genPackages prefix="IceSensorSensinact" basePackage="de.jena.model.sensinact" resource="XMI"
+      disposableProviderFactory="true" ecorePackage="icesensor.ecore#/">
     <genClasses ecoreClass="icesensor.ecore#//IceSensor">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference icesensor.ecore#//IceSensor/h2sugm3"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference icesensor.ecore#//IceSensor/cougm3"/>

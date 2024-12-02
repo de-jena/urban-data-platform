@@ -30,17 +30,17 @@ import org.eclipse.sensinact.model.core.provider.Service;
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see de.jena.model.sensinact.iceprovider.IcesensoreSensinactPackage
+ * @see de.jena.model.sensinact.iceprovider.IceSensorSensinactPackage
  * @generated
  */
-public class IcesensoreSensinactAdapterFactory extends AdapterFactoryImpl {
+public class IceSensorSensinactAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static IcesensoreSensinactPackage modelPackage;
+	protected static IceSensorSensinactPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -48,9 +48,9 @@ public class IcesensoreSensinactAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IcesensoreSensinactAdapterFactory() {
+	public IceSensorSensinactAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = IcesensoreSensinactPackage.eINSTANCE;
+			modelPackage = IceSensorSensinactPackage.eINSTANCE;
 		}
 	}
 
@@ -79,8 +79,8 @@ public class IcesensoreSensinactAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected IcesensoreSensinactSwitch<Adapter> modelSwitch =
-		new IcesensoreSensinactSwitch<Adapter>() {
+	protected IceSensorSensinactSwitch<Adapter> modelSwitch =
+		new IceSensorSensinactSwitch<Adapter>() {
 			@Override
 			public Adapter caseIceSensor(IceSensor object) {
 				return createIceSensorAdapter();
@@ -185,4 +185,4 @@ public class IcesensoreSensinactAdapterFactory extends AdapterFactoryImpl {
 		return null;
 	}
 
-} //IcesensoreSensinactAdapterFactory
+} //IceSensorSensinactAdapterFactory

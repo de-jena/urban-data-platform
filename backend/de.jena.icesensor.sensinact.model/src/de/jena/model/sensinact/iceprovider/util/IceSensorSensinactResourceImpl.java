@@ -21,10 +21,10 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceImpl;
  * <!-- begin-user-doc -->
  * The <b>Resource </b> associated with the package.
  * <!-- end-user-doc -->
- * @see de.jena.model.sensinact.iceprovider.util.IcesensoreSensinactResourceFactoryImpl
+ * @see de.jena.model.sensinact.iceprovider.util.IceSensorSensinactResourceFactoryImpl
  * @generated
  */
-public class IcesensoreSensinactResourceImpl extends XMIResourceImpl {
+public class IceSensorSensinactResourceImpl extends XMIResourceImpl {
 	/**
 	 * Creates an instance of the resource.
 	 * <!-- begin-user-doc -->
@@ -32,8 +32,8 @@ public class IcesensoreSensinactResourceImpl extends XMIResourceImpl {
 	 * @param uri the URI of the new resource.
 	 * @generated
 	 */
-	public IcesensoreSensinactResourceImpl(URI uri) {
+	public IceSensorSensinactResourceImpl(URI uri) {
 		super(uri);
 	}
 
-} //IcesensoreSensinactResourceImpl
+} //IceSensorSensinactResourceImpl

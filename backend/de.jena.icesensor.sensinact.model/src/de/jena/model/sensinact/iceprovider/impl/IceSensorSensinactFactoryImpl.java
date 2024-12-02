@@ -29,24 +29,24 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
  * <!-- end-user-doc -->
  * @generated
  */
-public class IcesensoreSensinactFactoryImpl extends EFactoryImpl implements IcesensoreSensinactFactory {
+public class IceSensorSensinactFactoryImpl extends EFactoryImpl implements IceSensorSensinactFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static IcesensoreSensinactFactory init() {
+	public static IceSensorSensinactFactory init() {
 		try {
-			IcesensoreSensinactFactory theIcesensoreSensinactFactory = (IcesensoreSensinactFactory)EPackage.Registry.INSTANCE.getEFactory(IcesensoreSensinactPackage.eNS_URI);
-			if (theIcesensoreSensinactFactory != null) {
-				return theIcesensoreSensinactFactory;
+			IceSensorSensinactFactory theIceSensorSensinactFactory = (IceSensorSensinactFactory)EPackage.Registry.INSTANCE.getEFactory(IceSensorSensinactPackage.eNS_URI);
+			if (theIceSensorSensinactFactory != null) {
+				return theIceSensorSensinactFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new IcesensoreSensinactFactoryImpl();
+		return new IceSensorSensinactFactoryImpl();
 	}
 
 	/**
@@ -55,7 +55,7 @@ public class IcesensoreSensinactFactoryImpl extends EFactoryImpl implements Ices
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IcesensoreSensinactFactoryImpl() {
+	public IceSensorSensinactFactoryImpl() {
 		super();
 	}
 
@@ -67,8 +67,8 @@ public class IcesensoreSensinactFactoryImpl extends EFactoryImpl implements Ices
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case IcesensoreSensinactPackage.ICE_SENSOR: return createIceSensor();
-			case IcesensoreSensinactPackage.SENSOR_DATA: return createSensorData();
+			case IceSensorSensinactPackage.ICE_SENSOR: return createIceSensor();
+			case IceSensorSensinactPackage.SENSOR_DATA: return createSensorData();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -102,8 +102,8 @@ public class IcesensoreSensinactFactoryImpl extends EFactoryImpl implements Ices
 	 * @generated
 	 */
 	@Override
-	public IcesensoreSensinactPackage getIcesensoreSensinactPackage() {
-		return (IcesensoreSensinactPackage)getEPackage();
+	public IceSensorSensinactPackage getIceSensorSensinactPackage() {
+		return (IceSensorSensinactPackage)getEPackage();
 	}
 
 	/**
@@ -113,8 +113,8 @@ public class IcesensoreSensinactFactoryImpl extends EFactoryImpl implements Ices
 	 * @generated
 	 */
 	@Deprecated
-	public static IcesensoreSensinactPackage getPackage() {
-		return IcesensoreSensinactPackage.eINSTANCE;
+	public static IceSensorSensinactPackage getPackage() {
+		return IceSensorSensinactPackage.eINSTANCE;
 	}
 
-} //IcesensoreSensinactFactoryImpl
+} //IceSensorSensinactFactoryImpl

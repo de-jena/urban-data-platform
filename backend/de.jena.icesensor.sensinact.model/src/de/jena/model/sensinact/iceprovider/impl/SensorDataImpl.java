@@ -13,7 +13,7 @@
  */
 package de.jena.model.sensinact.iceprovider.impl;
 
-import de.jena.model.sensinact.iceprovider.IcesensoreSensinactPackage;
+import de.jena.model.sensinact.iceprovider.IceSensorSensinactPackage;
 import de.jena.model.sensinact.iceprovider.SensorData;
 
 import java.util.Date;
@@ -265,7 +265,7 @@ public class SensorDataImpl extends ServiceImpl implements SensorData {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return IcesensoreSensinactPackage.Literals.SENSOR_DATA;
+		return IceSensorSensinactPackage.Literals.SENSOR_DATA;
 	}
 
 	/**
@@ -288,7 +288,7 @@ public class SensorDataImpl extends ServiceImpl implements SensorData {
 		String oldSensor_type = sensor_type;
 		sensor_type = newSensor_type;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IcesensoreSensinactPackage.SENSOR_DATA__SENSOR_TYPE, oldSensor_type, sensor_type));
+			eNotify(new ENotificationImpl(this, Notification.SET, IceSensorSensinactPackage.SENSOR_DATA__SENSOR_TYPE, oldSensor_type, sensor_type));
 	}
 
 	/**
@@ -311,7 +311,7 @@ public class SensorDataImpl extends ServiceImpl implements SensorData {
 		String oldGateway = gateway;
 		gateway = newGateway;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IcesensoreSensinactPackage.SENSOR_DATA__GATEWAY, oldGateway, gateway));
+			eNotify(new ENotificationImpl(this, Notification.SET, IceSensorSensinactPackage.SENSOR_DATA__GATEWAY, oldGateway, gateway));
 	}
 
 	/**
@@ -334,7 +334,7 @@ public class SensorDataImpl extends ServiceImpl implements SensorData {
 		String oldSensor_model = sensor_model;
 		sensor_model = newSensor_model;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IcesensoreSensinactPackage.SENSOR_DATA__SENSOR_MODEL, oldSensor_model, sensor_model));
+			eNotify(new ENotificationImpl(this, Notification.SET, IceSensorSensinactPackage.SENSOR_DATA__SENSOR_MODEL, oldSensor_model, sensor_model));
 	}
 
 	/**
@@ -357,7 +357,7 @@ public class SensorDataImpl extends ServiceImpl implements SensorData {
 		double oldAvg = avg;
 		avg = newAvg;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IcesensoreSensinactPackage.SENSOR_DATA__AVG, oldAvg, avg));
+			eNotify(new ENotificationImpl(this, Notification.SET, IceSensorSensinactPackage.SENSOR_DATA__AVG, oldAvg, avg));
 	}
 
 	/**
@@ -380,7 +380,7 @@ public class SensorDataImpl extends ServiceImpl implements SensorData {
 		double oldMin = min;
 		min = newMin;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IcesensoreSensinactPackage.SENSOR_DATA__MIN, oldMin, min));
+			eNotify(new ENotificationImpl(this, Notification.SET, IceSensorSensinactPackage.SENSOR_DATA__MIN, oldMin, min));
 	}
 
 	/**
@@ -403,7 +403,7 @@ public class SensorDataImpl extends ServiceImpl implements SensorData {
 		double oldMax = max;
 		max = newMax;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IcesensoreSensinactPackage.SENSOR_DATA__MAX, oldMax, max));
+			eNotify(new ENotificationImpl(this, Notification.SET, IceSensorSensinactPackage.SENSOR_DATA__MAX, oldMax, max));
 	}
 
 	/**
@@ -426,7 +426,7 @@ public class SensorDataImpl extends ServiceImpl implements SensorData {
 		String oldUnit = unit;
 		unit = newUnit;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IcesensoreSensinactPackage.SENSOR_DATA__UNIT, oldUnit, unit));
+			eNotify(new ENotificationImpl(this, Notification.SET, IceSensorSensinactPackage.SENSOR_DATA__UNIT, oldUnit, unit));
 	}
 
 	/**
@@ -449,7 +449,7 @@ public class SensorDataImpl extends ServiceImpl implements SensorData {
 		int oldValidity = validity;
 		validity = newValidity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IcesensoreSensinactPackage.SENSOR_DATA__VALIDITY, oldValidity, validity));
+			eNotify(new ENotificationImpl(this, Notification.SET, IceSensorSensinactPackage.SENSOR_DATA__VALIDITY, oldValidity, validity));
 	}
 
 	/**
@@ -472,7 +472,7 @@ public class SensorDataImpl extends ServiceImpl implements SensorData {
 		Date oldCreated_at = created_at;
 		created_at = newCreated_at;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IcesensoreSensinactPackage.SENSOR_DATA__CREATED_AT, oldCreated_at, created_at));
+			eNotify(new ENotificationImpl(this, Notification.SET, IceSensorSensinactPackage.SENSOR_DATA__CREATED_AT, oldCreated_at, created_at));
 	}
 
 	/**
@@ -495,7 +495,7 @@ public class SensorDataImpl extends ServiceImpl implements SensorData {
 		String oldStr_data = str_data;
 		str_data = newStr_data;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IcesensoreSensinactPackage.SENSOR_DATA__STR_DATA, oldStr_data, str_data));
+			eNotify(new ENotificationImpl(this, Notification.SET, IceSensorSensinactPackage.SENSOR_DATA__STR_DATA, oldStr_data, str_data));
 	}
 
 	/**
@@ -506,25 +506,25 @@ public class SensorDataImpl extends ServiceImpl implements SensorData {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case IcesensoreSensinactPackage.SENSOR_DATA__SENSOR_TYPE:
+			case IceSensorSensinactPackage.SENSOR_DATA__SENSOR_TYPE:
 				return getSensor_type();
-			case IcesensoreSensinactPackage.SENSOR_DATA__GATEWAY:
+			case IceSensorSensinactPackage.SENSOR_DATA__GATEWAY:
 				return getGateway();
-			case IcesensoreSensinactPackage.SENSOR_DATA__SENSOR_MODEL:
+			case IceSensorSensinactPackage.SENSOR_DATA__SENSOR_MODEL:
 				return getSensor_model();
-			case IcesensoreSensinactPackage.SENSOR_DATA__AVG:
+			case IceSensorSensinactPackage.SENSOR_DATA__AVG:
 				return getAvg();
-			case IcesensoreSensinactPackage.SENSOR_DATA__MIN:
+			case IceSensorSensinactPackage.SENSOR_DATA__MIN:
 				return getMin();
-			case IcesensoreSensinactPackage.SENSOR_DATA__MAX:
+			case IceSensorSensinactPackage.SENSOR_DATA__MAX:
 				return getMax();
-			case IcesensoreSensinactPackage.SENSOR_DATA__UNIT:
+			case IceSensorSensinactPackage.SENSOR_DATA__UNIT:
 				return getUnit();
-			case IcesensoreSensinactPackage.SENSOR_DATA__VALIDITY:
+			case IceSensorSensinactPackage.SENSOR_DATA__VALIDITY:
 				return getValidity();
-			case IcesensoreSensinactPackage.SENSOR_DATA__CREATED_AT:
+			case IceSensorSensinactPackage.SENSOR_DATA__CREATED_AT:
 				return getCreated_at();
-			case IcesensoreSensinactPackage.SENSOR_DATA__STR_DATA:
+			case IceSensorSensinactPackage.SENSOR_DATA__STR_DATA:
 				return getStr_data();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -538,34 +538,34 @@ public class SensorDataImpl extends ServiceImpl implements SensorData {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case IcesensoreSensinactPackage.SENSOR_DATA__SENSOR_TYPE:
+			case IceSensorSensinactPackage.SENSOR_DATA__SENSOR_TYPE:
 				setSensor_type((String)newValue);
 				return;
-			case IcesensoreSensinactPackage.SENSOR_DATA__GATEWAY:
+			case IceSensorSensinactPackage.SENSOR_DATA__GATEWAY:
 				setGateway((String)newValue);
 				return;
-			case IcesensoreSensinactPackage.SENSOR_DATA__SENSOR_MODEL:
+			case IceSensorSensinactPackage.SENSOR_DATA__SENSOR_MODEL:
 				setSensor_model((String)newValue);
 				return;
-			case IcesensoreSensinactPackage.SENSOR_DATA__AVG:
+			case IceSensorSensinactPackage.SENSOR_DATA__AVG:
 				setAvg((Double)newValue);
 				return;
-			case IcesensoreSensinactPackage.SENSOR_DATA__MIN:
+			case IceSensorSensinactPackage.SENSOR_DATA__MIN:
 				setMin((Double)newValue);
 				return;
-			case IcesensoreSensinactPackage.SENSOR_DATA__MAX:
+			case IceSensorSensinactPackage.SENSOR_DATA__MAX:
 				setMax((Double)newValue);
 				return;
-			case IcesensoreSensinactPackage.SENSOR_DATA__UNIT:
+			case IceSensorSensinactPackage.SENSOR_DATA__UNIT:
 				setUnit((String)newValue);
 				return;
-			case IcesensoreSensinactPackage.SENSOR_DATA__VALIDITY:
+			case IceSensorSensinactPackage.SENSOR_DATA__VALIDITY:
 				setValidity((Integer)newValue);
 				return;
-			case IcesensoreSensinactPackage.SENSOR_DATA__CREATED_AT:
+			case IceSensorSensinactPackage.SENSOR_DATA__CREATED_AT:
 				setCreated_at((Date)newValue);
 				return;
-			case IcesensoreSensinactPackage.SENSOR_DATA__STR_DATA:
+			case IceSensorSensinactPackage.SENSOR_DATA__STR_DATA:
 				setStr_data((String)newValue);
 				return;
 		}
@@ -580,34 +580,34 @@ public class SensorDataImpl extends ServiceImpl implements SensorData {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case IcesensoreSensinactPackage.SENSOR_DATA__SENSOR_TYPE:
+			case IceSensorSensinactPackage.SENSOR_DATA__SENSOR_TYPE:
 				setSensor_type(SENSOR_TYPE_EDEFAULT);
 				return;
-			case IcesensoreSensinactPackage.SENSOR_DATA__GATEWAY:
+			case IceSensorSensinactPackage.SENSOR_DATA__GATEWAY:
 				setGateway(GATEWAY_EDEFAULT);
 				return;
-			case IcesensoreSensinactPackage.SENSOR_DATA__SENSOR_MODEL:
+			case IceSensorSensinactPackage.SENSOR_DATA__SENSOR_MODEL:
 				setSensor_model(SENSOR_MODEL_EDEFAULT);
 				return;
-			case IcesensoreSensinactPackage.SENSOR_DATA__AVG:
+			case IceSensorSensinactPackage.SENSOR_DATA__AVG:
 				setAvg(AVG_EDEFAULT);
 				return;
-			case IcesensoreSensinactPackage.SENSOR_DATA__MIN:
+			case IceSensorSensinactPackage.SENSOR_DATA__MIN:
 				setMin(MIN_EDEFAULT);
 				return;
-			case IcesensoreSensinactPackage.SENSOR_DATA__MAX:
+			case IceSensorSensinactPackage.SENSOR_DATA__MAX:
 				setMax(MAX_EDEFAULT);
 				return;
-			case IcesensoreSensinactPackage.SENSOR_DATA__UNIT:
+			case IceSensorSensinactPackage.SENSOR_DATA__UNIT:
 				setUnit(UNIT_EDEFAULT);
 				return;
-			case IcesensoreSensinactPackage.SENSOR_DATA__VALIDITY:
+			case IceSensorSensinactPackage.SENSOR_DATA__VALIDITY:
 				setValidity(VALIDITY_EDEFAULT);
 				return;
-			case IcesensoreSensinactPackage.SENSOR_DATA__CREATED_AT:
+			case IceSensorSensinactPackage.SENSOR_DATA__CREATED_AT:
 				setCreated_at(CREATED_AT_EDEFAULT);
 				return;
-			case IcesensoreSensinactPackage.SENSOR_DATA__STR_DATA:
+			case IceSensorSensinactPackage.SENSOR_DATA__STR_DATA:
 				setStr_data(STR_DATA_EDEFAULT);
 				return;
 		}
@@ -622,25 +622,25 @@ public class SensorDataImpl extends ServiceImpl implements SensorData {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case IcesensoreSensinactPackage.SENSOR_DATA__SENSOR_TYPE:
+			case IceSensorSensinactPackage.SENSOR_DATA__SENSOR_TYPE:
 				return SENSOR_TYPE_EDEFAULT == null ? sensor_type != null : !SENSOR_TYPE_EDEFAULT.equals(sensor_type);
-			case IcesensoreSensinactPackage.SENSOR_DATA__GATEWAY:
+			case IceSensorSensinactPackage.SENSOR_DATA__GATEWAY:
 				return GATEWAY_EDEFAULT == null ? gateway != null : !GATEWAY_EDEFAULT.equals(gateway);
-			case IcesensoreSensinactPackage.SENSOR_DATA__SENSOR_MODEL:
+			case IceSensorSensinactPackage.SENSOR_DATA__SENSOR_MODEL:
 				return SENSOR_MODEL_EDEFAULT == null ? sensor_model != null : !SENSOR_MODEL_EDEFAULT.equals(sensor_model);
-			case IcesensoreSensinactPackage.SENSOR_DATA__AVG:
+			case IceSensorSensinactPackage.SENSOR_DATA__AVG:
 				return avg != AVG_EDEFAULT;
-			case IcesensoreSensinactPackage.SENSOR_DATA__MIN:
+			case IceSensorSensinactPackage.SENSOR_DATA__MIN:
 				return min != MIN_EDEFAULT;
-			case IcesensoreSensinactPackage.SENSOR_DATA__MAX:
+			case IceSensorSensinactPackage.SENSOR_DATA__MAX:
 				return max != MAX_EDEFAULT;
-			case IcesensoreSensinactPackage.SENSOR_DATA__UNIT:
+			case IceSensorSensinactPackage.SENSOR_DATA__UNIT:
 				return UNIT_EDEFAULT == null ? unit != null : !UNIT_EDEFAULT.equals(unit);
-			case IcesensoreSensinactPackage.SENSOR_DATA__VALIDITY:
+			case IceSensorSensinactPackage.SENSOR_DATA__VALIDITY:
 				return validity != VALIDITY_EDEFAULT;
-			case IcesensoreSensinactPackage.SENSOR_DATA__CREATED_AT:
+			case IceSensorSensinactPackage.SENSOR_DATA__CREATED_AT:
 				return CREATED_AT_EDEFAULT == null ? created_at != null : !CREATED_AT_EDEFAULT.equals(created_at);
-			case IcesensoreSensinactPackage.SENSOR_DATA__STR_DATA:
+			case IceSensorSensinactPackage.SENSOR_DATA__STR_DATA:
 				return STR_DATA_EDEFAULT == null ? str_data != null : !STR_DATA_EDEFAULT.equals(str_data);
 		}
 		return super.eIsSet(featureID);

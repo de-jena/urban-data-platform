@@ -13,7 +13,7 @@
  */
 package de.jena.model.sensinact.iceprovider.configuration;
 
-import de.jena.model.sensinact.iceprovider.IcesensoreSensinactPackage;
+import de.jena.model.sensinact.iceprovider.IceSensorSensinactPackage;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -30,11 +30,11 @@ import org.gecko.emf.osgi.constants.EMFNamespaces;
  * @see EPackageConfigurator
  * @generated
  */
-public class IcesensoreSensinactEPackageConfigurator implements EPackageConfigurator {
+public class IceSensorSensinactEPackageConfigurator implements EPackageConfigurator {
 	
-	private IcesensoreSensinactPackage ePackage;
+	private IceSensorSensinactPackage ePackage;
 
-	protected IcesensoreSensinactEPackageConfigurator(IcesensoreSensinactPackage ePackage){
+	protected IceSensorSensinactEPackageConfigurator(IceSensorSensinactPackage ePackage){
 		this.ePackage = ePackage;
 	}
 	
@@ -45,7 +45,7 @@ public class IcesensoreSensinactEPackageConfigurator implements EPackageConfigur
 	 */
 	@Override
 	public void configureEPackage(org.eclipse.emf.ecore.EPackage.Registry registry) {
-		registry.put(IcesensoreSensinactPackage.eNS_URI, ePackage);
+		registry.put(IceSensorSensinactPackage.eNS_URI, ePackage);
 	}
 	
 	/**
@@ -55,7 +55,7 @@ public class IcesensoreSensinactEPackageConfigurator implements EPackageConfigur
 	 */
 	@Override
 	public void unconfigureEPackage(org.eclipse.emf.ecore.EPackage.Registry registry) {
-		registry.remove(IcesensoreSensinactPackage.eNS_URI);
+		registry.remove(IceSensorSensinactPackage.eNS_URI);
 	}
 	
 	/**
@@ -64,9 +64,9 @@ public class IcesensoreSensinactEPackageConfigurator implements EPackageConfigur
 	 */
 	public Map<String, Object> getServiceProperties() {
 		Map<String, Object> properties = new HashMap<String, Object>();
-		properties.put(EMFNamespaces.EMF_MODEL_NAME, IcesensoreSensinactPackage.eNAME);
-		properties.put(EMFNamespaces.EMF_MODEL_NSURI, IcesensoreSensinactPackage.eNS_URI);
-		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "icesensoresensinact");
+		properties.put(EMFNamespaces.EMF_MODEL_NAME, IceSensorSensinactPackage.eNAME);
+		properties.put(EMFNamespaces.EMF_MODEL_NSURI, IceSensorSensinactPackage.eNS_URI);
+		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "icesensorsensinact");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
 		return properties;
 	}

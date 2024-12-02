@@ -180,13 +180,13 @@ pipeline  {
 			steps  {
 				echo "I am building and publishing a docker image on branch: ${env.GIT_BRANCH}"
 
-//				step([$class: 'DockerBuilderPublisher',
-//				      dockerFileDirectory: 'udp/docker/broker',
-//							cloud: 'docker',
-//							tagsString: """registry-git.jena.de/scj/udp-broker:latest
-//                                        registry-git.jena.de/scj/udp-broker:0.1.0.${VERSION}""",
-//							pushOnSuccess: true,
-//							pushCredentialsId: 'github-jena'])
+				step([$class: 'DockerBuilderPublisher',
+				      dockerFileDirectory: 'udp/docker/broker',
+							cloud: 'docker',
+							tagsString: """registry-git.jena.de/scj/udp/broker:latest
+                                        registry-git.jena.de/scj/udp/broker:0.1.0.${VERSION}""",
+							pushOnSuccess: true,
+							pushCredentialsId: 'github-jena'])
 
 				step([$class: 'DockerBuilderPublisher',
 				      dockerFileDirectory: 'udp/docker/broker',
@@ -203,13 +203,13 @@ pipeline  {
             }
             steps  {
                 echo "I am building and publishing a docker image on branch: ${env.GIT_BRANCH}"
-//                step([$class: 'DockerBuilderPublisher',
-//                    dockerFileDirectory: 'udp/docker/bridge',
-//                             cloud: 'docker',
-//                             tagsString: """registry-git.jena.de/scj/mqtt-bridge:latest
-//                                         registry-git.jena.de/scj/mqtt-bridge:0.1.0.${VERSION}""",
-//                             pushOnSuccess: true,
-//                             pushCredentialsId: 'github-jena'])
+                step([$class: 'DockerBuilderPublisher',
+                    dockerFileDirectory: 'udp/docker/bridge',
+                             cloud: 'docker',
+                             tagsString: """registry-git.jena.de/scj/udp/mqtt-bridge:latest
+                                         registry-git.jena.de/scj/udp/mqtt-bridge:0.1.0.${VERSION}""",
+                             pushOnSuccess: true,
+                             pushCredentialsId: 'github-jena'])
 
                 step([$class: 'DockerBuilderPublisher',
                       dockerFileDirectory: 'udp/docker/bridge',

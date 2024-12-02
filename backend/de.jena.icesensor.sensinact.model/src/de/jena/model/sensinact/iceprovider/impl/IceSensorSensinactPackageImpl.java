@@ -14,8 +14,8 @@
 package de.jena.model.sensinact.iceprovider.impl;
 
 import de.jena.model.sensinact.iceprovider.IceSensor;
-import de.jena.model.sensinact.iceprovider.IcesensoreSensinactFactory;
-import de.jena.model.sensinact.iceprovider.IcesensoreSensinactPackage;
+import de.jena.model.sensinact.iceprovider.IceSensorSensinactFactory;
+import de.jena.model.sensinact.iceprovider.IceSensorSensinactPackage;
 import de.jena.model.sensinact.iceprovider.SensorData;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -33,7 +33,7 @@ import org.eclipse.sensinact.model.core.provider.ProviderPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class IcesensoreSensinactPackageImpl extends EPackageImpl implements IcesensoreSensinactPackage {
+public class IceSensorSensinactPackageImpl extends EPackageImpl implements IceSensorSensinactPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -59,12 +59,12 @@ public class IcesensoreSensinactPackageImpl extends EPackageImpl implements Ices
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see de.jena.model.sensinact.iceprovider.IcesensoreSensinactPackage#eNS_URI
+	 * @see de.jena.model.sensinact.iceprovider.IceSensorSensinactPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private IcesensoreSensinactPackageImpl() {
-		super(eNS_URI, IcesensoreSensinactFactory.eINSTANCE);
+	private IceSensorSensinactPackageImpl() {
+		super(eNS_URI, IceSensorSensinactFactory.eINSTANCE);
 	}
 	/**
 	 * <!-- begin-user-doc -->
@@ -76,7 +76,7 @@ public class IcesensoreSensinactPackageImpl extends EPackageImpl implements Ices
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 *
-	 * <p>This method is used to initialize {@link IcesensoreSensinactPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link IceSensorSensinactPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -85,12 +85,12 @@ public class IcesensoreSensinactPackageImpl extends EPackageImpl implements Ices
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static IcesensoreSensinactPackage init() {
-		if (isInited) return (IcesensoreSensinactPackage)EPackage.Registry.INSTANCE.getEPackage(IcesensoreSensinactPackage.eNS_URI);
+	public static IceSensorSensinactPackage init() {
+		if (isInited) return (IceSensorSensinactPackage)EPackage.Registry.INSTANCE.getEPackage(IceSensorSensinactPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Object registeredIcesensoreSensinactPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
-		IcesensoreSensinactPackageImpl theIcesensoreSensinactPackage = registeredIcesensoreSensinactPackage instanceof IcesensoreSensinactPackageImpl ? (IcesensoreSensinactPackageImpl)registeredIcesensoreSensinactPackage : new IcesensoreSensinactPackageImpl();
+		Object registeredIceSensorSensinactPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		IceSensorSensinactPackageImpl theIceSensorSensinactPackage = registeredIceSensorSensinactPackage instanceof IceSensorSensinactPackageImpl ? (IceSensorSensinactPackageImpl)registeredIceSensorSensinactPackage : new IceSensorSensinactPackageImpl();
 
 		isInited = true;
 
@@ -98,17 +98,17 @@ public class IcesensoreSensinactPackageImpl extends EPackageImpl implements Ices
 		ProviderPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theIcesensoreSensinactPackage.createPackageContents();
+		theIceSensorSensinactPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theIcesensoreSensinactPackage.initializePackageContents();
+		theIceSensorSensinactPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theIcesensoreSensinactPackage.freeze();
+		theIceSensorSensinactPackage.freeze();
 
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(IcesensoreSensinactPackage.eNS_URI, theIcesensoreSensinactPackage);
-		return theIcesensoreSensinactPackage;
+		EPackage.Registry.INSTANCE.put(IceSensorSensinactPackage.eNS_URI, theIceSensorSensinactPackage);
+		return theIceSensorSensinactPackage;
 	}
 
 	/**
@@ -367,8 +367,8 @@ public class IcesensoreSensinactPackageImpl extends EPackageImpl implements Ices
 	 * @generated
 	 */
 	@Override
-	public IcesensoreSensinactFactory getIcesensoreSensinactFactory() {
-		return (IcesensoreSensinactFactory)getEFactoryInstance();
+	public IceSensorSensinactFactory getIceSensorSensinactFactory() {
+		return (IceSensorSensinactFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -504,4 +504,4 @@ public class IcesensoreSensinactPackageImpl extends EPackageImpl implements Ices
 		   });
 	}
 
-} //IcesensoreSensinactPackageImpl
+} //IceSensorSensinactPackageImpl

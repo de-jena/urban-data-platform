@@ -40,7 +40,7 @@ import org.osgi.annotation.versioning.ProviderType;
  *   <li>{@link de.jena.model.sensinact.iceprovider.SensorData#getStr_data <em>Str data</em>}</li>
  * </ul>
  *
- * @see de.jena.model.sensinact.iceprovider.IcesensoreSensinactPackage#getSensorData()
+ * @see de.jena.model.sensinact.iceprovider.IceSensorSensinactPackage#getSensorData()
  * @model
  * @generated
  */
@@ -52,7 +52,7 @@ public interface SensorData extends Service {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Sensor type</em>' attribute.
 	 * @see #setSensor_type(String)
-	 * @see de.jena.model.sensinact.iceprovider.IcesensoreSensinactPackage#getSensorData_Sensor_type()
+	 * @see de.jena.model.sensinact.iceprovider.IceSensorSensinactPackage#getSensorData_Sensor_type()
 	 * @model
 	 * @generated
 	 */
@@ -74,7 +74,7 @@ public interface SensorData extends Service {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Gateway</em>' attribute.
 	 * @see #setGateway(String)
-	 * @see de.jena.model.sensinact.iceprovider.IcesensoreSensinactPackage#getSensorData_Gateway()
+	 * @see de.jena.model.sensinact.iceprovider.IceSensorSensinactPackage#getSensorData_Gateway()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -96,7 +96,7 @@ public interface SensorData extends Service {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Sensor model</em>' attribute.
 	 * @see #setSensor_model(String)
-	 * @see de.jena.model.sensinact.iceprovider.IcesensoreSensinactPackage#getSensorData_Sensor_model()
+	 * @see de.jena.model.sensinact.iceprovider.IceSensorSensinactPackage#getSensorData_Sensor_model()
 	 * @model
 	 * @generated
 	 */
@@ -118,7 +118,7 @@ public interface SensorData extends Service {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Avg</em>' attribute.
 	 * @see #setAvg(double)
-	 * @see de.jena.model.sensinact.iceprovider.IcesensoreSensinactPackage#getSensorData_Avg()
+	 * @see de.jena.model.sensinact.iceprovider.IceSensorSensinactPackage#getSensorData_Avg()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -140,7 +140,7 @@ public interface SensorData extends Service {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Min</em>' attribute.
 	 * @see #setMin(double)
-	 * @see de.jena.model.sensinact.iceprovider.IcesensoreSensinactPackage#getSensorData_Min()
+	 * @see de.jena.model.sensinact.iceprovider.IceSensorSensinactPackage#getSensorData_Min()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -162,7 +162,7 @@ public interface SensorData extends Service {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Max</em>' attribute.
 	 * @see #setMax(double)
-	 * @see de.jena.model.sensinact.iceprovider.IcesensoreSensinactPackage#getSensorData_Max()
+	 * @see de.jena.model.sensinact.iceprovider.IceSensorSensinactPackage#getSensorData_Max()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -184,7 +184,7 @@ public interface SensorData extends Service {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Unit</em>' attribute.
 	 * @see #setUnit(String)
-	 * @see de.jena.model.sensinact.iceprovider.IcesensoreSensinactPackage#getSensorData_Unit()
+	 * @see de.jena.model.sensinact.iceprovider.IceSensorSensinactPackage#getSensorData_Unit()
 	 * @model
 	 * @generated
 	 */
@@ -207,7 +207,7 @@ public interface SensorData extends Service {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Validity</em>' attribute.
 	 * @see #setValidity(int)
-	 * @see de.jena.model.sensinact.iceprovider.IcesensoreSensinactPackage#getSensorData_Validity()
+	 * @see de.jena.model.sensinact.iceprovider.IceSensorSensinactPackage#getSensorData_Validity()
 	 * @model default="-1"
 	 * @generated
 	 */
@@ -229,7 +229,7 @@ public interface SensorData extends Service {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Created at</em>' attribute.
 	 * @see #setCreated_at(Date)
-	 * @see de.jena.model.sensinact.iceprovider.IcesensoreSensinactPackage#getSensorData_Created_at()
+	 * @see de.jena.model.sensinact.iceprovider.IceSensorSensinactPackage#getSensorData_Created_at()
 	 * @model
 	 * @generated
 	 */
@@ -251,7 +251,7 @@ public interface SensorData extends Service {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Str data</em>' attribute.
 	 * @see #setStr_data(String)
-	 * @see de.jena.model.sensinact.iceprovider.IcesensoreSensinactPackage#getSensorData_Str_data()
+	 * @see de.jena.model.sensinact.iceprovider.IceSensorSensinactPackage#getSensorData_Str_data()
 	 * @model
 	 * @generated
 	 */

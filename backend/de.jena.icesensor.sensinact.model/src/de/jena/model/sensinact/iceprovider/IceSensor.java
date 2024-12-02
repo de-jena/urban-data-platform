@@ -41,7 +41,7 @@ import org.osgi.annotation.versioning.ProviderType;
  *   <li>{@link de.jena.model.sensinact.iceprovider.IceSensor#get_2_5p <em>25p</em>}</li>
  * </ul>
  *
- * @see de.jena.model.sensinact.iceprovider.IcesensoreSensinactPackage#getIceSensor()
+ * @see de.jena.model.sensinact.iceprovider.IceSensorSensinactPackage#getIceSensor()
  * @model
  * @generated
  */
@@ -53,7 +53,7 @@ public interface IceSensor extends Provider {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>H2sugm3</em>' containment reference.
 	 * @see #setH2sugm3(SensorData)
-	 * @see de.jena.model.sensinact.iceprovider.IcesensoreSensinactPackage#getIceSensor_H2sugm3()
+	 * @see de.jena.model.sensinact.iceprovider.IceSensorSensinactPackage#getIceSensor_H2sugm3()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -75,7 +75,7 @@ public interface IceSensor extends Provider {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cougm3</em>' containment reference.
 	 * @see #setCougm3(SensorData)
-	 * @see de.jena.model.sensinact.iceprovider.IcesensoreSensinactPackage#getIceSensor_Cougm3()
+	 * @see de.jena.model.sensinact.iceprovider.IceSensorSensinactPackage#getIceSensor_Cougm3()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -97,7 +97,7 @@ public interface IceSensor extends Provider {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Nougm3</em>' containment reference.
 	 * @see #setNougm3(SensorData)
-	 * @see de.jena.model.sensinact.iceprovider.IcesensoreSensinactPackage#getIceSensor_Nougm3()
+	 * @see de.jena.model.sensinact.iceprovider.IceSensorSensinactPackage#getIceSensor_Nougm3()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -119,7 +119,7 @@ public interface IceSensor extends Provider {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>O3ugm3</em>' containment reference.
 	 * @see #setO3ugm3(SensorData)
-	 * @see de.jena.model.sensinact.iceprovider.IcesensoreSensinactPackage#getIceSensor_O3ugm3()
+	 * @see de.jena.model.sensinact.iceprovider.IceSensorSensinactPackage#getIceSensor_O3ugm3()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -141,7 +141,7 @@ public interface IceSensor extends Provider {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>1p</em>' containment reference.
 	 * @see #set_1p(SensorData)
-	 * @see de.jena.model.sensinact.iceprovider.IcesensoreSensinactPackage#getIceSensor__1p()
+	 * @see de.jena.model.sensinact.iceprovider.IceSensorSensinactPackage#getIceSensor__1p()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -163,7 +163,7 @@ public interface IceSensor extends Provider {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Aqi criteria</em>' containment reference.
 	 * @see #setAqi_criteria(SensorData)
-	 * @see de.jena.model.sensinact.iceprovider.IcesensoreSensinactPackage#getIceSensor_Aqi_criteria()
+	 * @see de.jena.model.sensinact.iceprovider.IceSensorSensinactPackage#getIceSensor_Aqi_criteria()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -185,7 +185,7 @@ public interface IceSensor extends Provider {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Temperature</em>' containment reference.
 	 * @see #setTemperature(SensorData)
-	 * @see de.jena.model.sensinact.iceprovider.IcesensoreSensinactPackage#getIceSensor_Temperature()
+	 * @see de.jena.model.sensinact.iceprovider.IceSensorSensinactPackage#getIceSensor_Temperature()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -207,7 +207,7 @@ public interface IceSensor extends Provider {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Humidity</em>' containment reference.
 	 * @see #setHumidity(SensorData)
-	 * @see de.jena.model.sensinact.iceprovider.IcesensoreSensinactPackage#getIceSensor_Humidity()
+	 * @see de.jena.model.sensinact.iceprovider.IceSensorSensinactPackage#getIceSensor_Humidity()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -229,7 +229,7 @@ public interface IceSensor extends Provider {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>10p</em>' containment reference.
 	 * @see #set_10p(SensorData)
-	 * @see de.jena.model.sensinact.iceprovider.IcesensoreSensinactPackage#getIceSensor__10p()
+	 * @see de.jena.model.sensinact.iceprovider.IceSensorSensinactPackage#getIceSensor__10p()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -251,7 +251,7 @@ public interface IceSensor extends Provider {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Pressure</em>' containment reference.
 	 * @see #setPressure(SensorData)
-	 * @see de.jena.model.sensinact.iceprovider.IcesensoreSensinactPackage#getIceSensor_Pressure()
+	 * @see de.jena.model.sensinact.iceprovider.IceSensorSensinactPackage#getIceSensor_Pressure()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -273,7 +273,7 @@ public interface IceSensor extends Provider {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>No2ugm3</em>' containment reference.
 	 * @see #setNo2ugm3(SensorData)
-	 * @see de.jena.model.sensinact.iceprovider.IcesensoreSensinactPackage#getIceSensor_No2ugm3()
+	 * @see de.jena.model.sensinact.iceprovider.IceSensorSensinactPackage#getIceSensor_No2ugm3()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -295,7 +295,7 @@ public interface IceSensor extends Provider {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Aqi</em>' containment reference.
 	 * @see #setAqi(SensorData)
-	 * @see de.jena.model.sensinact.iceprovider.IcesensoreSensinactPackage#getIceSensor_Aqi()
+	 * @see de.jena.model.sensinact.iceprovider.IceSensorSensinactPackage#getIceSensor_Aqi()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -317,7 +317,7 @@ public interface IceSensor extends Provider {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>25p</em>' containment reference.
 	 * @see #set_2_5p(SensorData)
-	 * @see de.jena.model.sensinact.iceprovider.IcesensoreSensinactPackage#getIceSensor__2_5p()
+	 * @see de.jena.model.sensinact.iceprovider.IceSensorSensinactPackage#getIceSensor__2_5p()
 	 * @model containment="true"
 	 * @generated
 	 */
