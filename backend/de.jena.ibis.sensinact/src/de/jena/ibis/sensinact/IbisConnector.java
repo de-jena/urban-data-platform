@@ -26,6 +26,8 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.sensinact.core.push.DataUpdate;
+import org.eclipse.sensinact.gateway.geojson.Coordinates;
+import org.eclipse.sensinact.gateway.geojson.Point;
 import org.gecko.emf.json.annotation.RequireEMFJson;
 import org.gecko.emf.osgi.constants.EMFNamespaces;
 import org.gecko.osgi.messaging.Message;
@@ -43,6 +45,7 @@ import org.osgi.util.pushstream.PushEvent;
 import org.osgi.util.pushstream.PushEvent.EventType;
 import org.osgi.util.pushstream.PushStream;
 
+import de.jena.model.sensinact.ibis.GNSSLocationData;
 import de.jena.model.sensinact.ibis.IbisAdmin;
 import de.jena.model.sensinact.ibis.IbisDevice;
 import de.jena.model.sensinact.ibis.IbisSensinactFactory;
@@ -141,6 +144,15 @@ public class IbisConnector {
 		device.setId(deviceId);
 		IbisAdmin ibisAdmin = IbisSensinactFactory.eINSTANCE.createIbisAdmin();
 		ibisAdmin.setDeviceType(deviceType);
+		GNSSLocationData gnssLocationData = device.getGnssLocationData();
+		if(gnssLocationData != null) {
+			Point point = new Point();
+			point.coordinates = new Coordinates();
+			point.coordinates.latitude = gnssLocationData.getLatitudeDegree();
+			point.coordinates.longitude = gnssLocationData.getLongitudeDegree();
+			point.coordinates.elevation = gnssLocationData.getAltitude();
+			ibisAdmin.setLocation(point);
+		}
 		device.setIbisAdmin(ibisAdmin);
 		return Optional.of(device);
 	}
