@@ -264,7 +264,8 @@ slf4j.runpath:  \
 	bnd.identity;id='de.jena.udp.5g.ui.web.app',\
 	bnd.identity;id='de.jena.ibis.sensinact',\
 	bnd.identity;id='de.jena.icesensor.sensinact',\
-	bnd.identity;id='de.jena.icesensor.rest'
+	bnd.identity;id='de.jena.icesensor.rest',\
+	bnd.identity;id='org.eclipse.sensinact.gateway.northbound.sensorthings.mqtt'
 #	osgi.implementation;filter:='(&(osgi.implementation=org.eclipse.osgitech.rest.adapter)(provider=osgi.http)),\
 	
 -runee: JavaSE-17
