@@ -4,7 +4,7 @@
     ":configurator:version": "0.0.1",
     "sensinact.northbound.rest": {
         "allow.anonymous": true,
-        "osgi.jakartars.whiteboard.target": "(osgi.jakartars.name=sensiNact.rest)"
+        "osgi.jakartars.whiteboard.target": "(jersey.jakartars.whiteboard.name=udprest)"
     },
     "sensinact.session.manager": {
     	"auth.policy": "ALLOW_ALL"

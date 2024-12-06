@@ -253,6 +253,7 @@ slf4j.runpath:  \
 
 -runrequires: \
 	bnd.identity;id='org.eclipse.sensinact.gateway.northbound.rest',\
+	bnd.identity;id='org.eclipse.sensinact.gateway.northbound.sensorthings.mqtt',\
 	bnd.identity;id='org.eclipse.sensinact.gateway.northbound.sensorthings.rest.gateway',\
 	bnd.identity;id='org.eclipse.sensinact.gateway.northbound.gogo-shell',\
 	bnd.identity;id='org.eclipse.sensinact.gateway.southbound.mqtt.mqtt-client',\
@@ -275,8 +276,7 @@ slf4j.runpath:  \
 	bnd.identity;id='de.jena.udp.5g.ui.web.app',\
 	bnd.identity;id='de.jena.ibis.sensinact',\
 	bnd.identity;id='de.jena.icesensor.sensinact',\
-	bnd.identity;id='de.jena.icesensor.rest',\
-	bnd.identity;id='org.eclipse.sensinact.gateway.northbound.sensorthings.mqtt'
+	bnd.identity;id='de.jena.icesensor.rest'
 #	osgi.implementation;filter:='(&(osgi.implementation=org.eclipse.osgitech.rest.adapter)(provider=osgi.http)),\
 	
 -runee: JavaSE-17
