@@ -2,31 +2,55 @@ services:
 
     mongodb:
         image: mongo:4.2
-        entrypoint: [ "/usr/bin/mongod", "--dbpath", "/data", "--journal", "--bind_ip", "0.0.0.0"]
+        entrypoint:
+        - /usr/bin/mongod
+        - --dbpath
+        - /data
+        - --journal
+        - --bind_ip
+        - 0.0.0.0
         environment:
-            - MONGO_INITDB_ROOT_USERNAME=mdo
-            - MONGO_INITDB_ROOT_PASSWORD=init@mdo_
+        - MONGO_INITDB_ROOT_USERNAME=mdo
+        - MONGO_INITDB_ROOT_PASSWORD=init@mdo_
+        networks:
+        - udp
 
-    timescaledb:
-        hostname: 'timescaledb'
+            timescaledb:
+        hostname: timescaledb
         image: timescale/timescaledb-ha:pg16
         environment:
-            - POSTGRES_DB=sensinactHistory
-            - POSTGRES_USER=snaHistory
-            - POSTGRES_PASSWORD=test.password        
+        - POSTGRES_DB=sensinactHistory
+        - POSTGRES_USER=snaHistory
+        - POSTGRES_PASSWORD=test.password
+        volumes:
+        - ./timescale:/home/postgres/pgdata/data
+        networks:
+        - udp
 
     sensinact:
         image: devel.data-in-motion.biz:6000/scj/dim-broker:latest
         ports:
-            - "8080:8080"
+        - 8080:8080
+        - 2883:1883
         environment:
-            - MONGO_USERNAME=mdo
-            - MONGO_PASSWORD=init@mdo_
-            - ICESENSORE_TOKEN=<icetoken>
-            - MQTT_FULL_USER=<mqttuser>
-            - MQTT_FULL_PWD=<mqttpasswd>
-            - TTN_APP_SCJ_Simple_Sensors=<ttn_simple_sensors>
-            - TTN_APP_SCJ_Sensors_01=<ttn_sensors>
-            - TTN_APP_Bosch_Parking=<ttn_bosch>
+        - MONGO_USERNAME=mdo
+        - MONGO_PASSWORD=init@mdo_
+        - ICESENSORE_TOKEN=<icetoken>
+        - MQTT_FULL_USER=<mqttuser>
+        - MQTT_FULL_PWD=<mqttpasswd>
+        - TIMESCALE_HOST=timescaledb
+        - TIMESCALE_DB=sensinactHistory
+        - TIMESCALE_PORT=5432
+        - TIMESCALE_USER=snaHistory
+        - TIMESCALE_PWD=test.password
+        - CHIRPSTACK_CERT=/opt/sensinact/chirpstack/certificates/cert.pem
+        - CHIRPSTACK_KEY=/opt/sensinact/chirpstack/certificates/private.key
+        - CHIRPSTACK_CA=/opt/sensinact/chirpstack/certificates/ca.pem
+        - TTN_APP_SCJ_Simple_Sensors=<ttn_simple_sensors>
+        - TTN_APP_SCJ_Sensors_01=<ttn_sensors>
+        - TTN_APP_Bosch_Parking=<ttn_bosch>
+        networks:
+        - udp
 
-
+networks:
+    udp: null

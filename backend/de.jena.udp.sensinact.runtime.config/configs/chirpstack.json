@@ -13,9 +13,9 @@
 		"topics": [
 			"application/5bb92de6-49b3-49af-a366-34667f2230be/device/+/event/up"
 		],
-		"certPath": "/opt/sensinact/chirpstack/certificates/cert.pem",
-		"certKey": "/opt/sensinact/chirpstack/certificates/private.key",
-		"caPath": "/opt/sensinact/chirpstack/certificates/ca.pem",
+		"certPath": "$[env:CHIRPSTACK_CERT;default=]$[prop:CHIRPSTACK_CERT;default=/opt/sensinact/chirpstack/certificates/cert.pem]",
+		"certKey": "$[env:CHIRPSTACK_KEY;default=]$[prop:CHIRPSTACK_KEY;default=/opt/sensinact/chirpstack/certificates/private.key]",
+		"caPath": "$[env:CHIRPSTACK_CA;default=]$[prop:CHIRPSTACK_CA;default=/opt/sensinact/chirpstack/certificates/ca.pem]",
 		"caChainPath": [
 			"/opt/sensinact/chirpstack/certificates/ISRG_Root_X1_DST_Root_CA_X3_.cer",
 			"/opt/sensinact/chirpstack/certificates/R3_ISRG_Root_X1_.cer"
@@ -31,9 +31,9 @@
 		"topics": [
 			"application/b186270e-812c-40c2-bb03-a06ffb640f03/device/+/event/up"
 		],
-		"certPath": "/opt/sensinact/chirpstack/certificates/cert.pem",
-		"certKey": "/opt/sensinact/chirpstack/certificates/private.key",
-		"caPath": "/opt/sensinact/chirpstack/certificates/ca.pem",
+		"certPath": "$[env:CHIRPSTACK_CERT;default=]$[prop:CHIRPSTACK_CERT;default=/opt/sensinact/chirpstack/certificates/cert.pem]",
+		"certKey": "$[env:CHIRPSTACK_KEY;default=]$[prop:CHIRPSTACK_KEY;default=/opt/sensinact/chirpstack/certificates/private.key]",
+		"caPath": "$[env:CHIRPSTACK_CA;default=]$[prop:CHIRPSTACK_CA;default=/opt/sensinact/chirpstack/certificates/ca.pem]",
 		"caChainPath": [
 			"/opt/sensinact/chirpstack/certificates/ISRG_Root_X1_DST_Root_CA_X3_.cer",
 			"/opt/sensinact/chirpstack/certificates/R3_ISRG_Root_X1_.cer"
