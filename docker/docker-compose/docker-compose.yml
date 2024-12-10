@@ -2,20 +2,20 @@ services:
 
     mongodb:
         image: mongo:4.2
-        entrypoint:
-        - /usr/bin/mongod
-        - --dbpath
-        - /data
-        - --journal
-        - --bind_ip
-        - 0.0.0.0
+        entrypoint: /usr/bin/mongod --dbpath /data --journal --bind_ip 0.0.0.0
         environment:
         - MONGO_INITDB_ROOT_USERNAME=mdo
         - MONGO_INITDB_ROOT_PASSWORD=init@mdo_
+        healthcheck:
+            test: echo 'db.runCommand("ping").ok' | mongo localhost:27017 --quiet
+            interval: 5s
+            timeout: 5s
+            retries: 3
+            start_period: 5s
         networks:
         - udp
 
-            timescaledb:
+    timescaledb:
         hostname: timescaledb
         image: timescale/timescaledb-ha:pg16
         environment:
@@ -26,13 +26,28 @@ services:
         - ./timescale:/home/postgres/pgdata/data
         networks:
         - udp
+        healthcheck:
+            test:
+            - CMD-SHELL
+            - pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB
+            interval: 5s
+            timeout: 3s
+            retries: 3
 
     sensinact:
         image: devel.data-in-motion.biz:6000/scj/dim-broker:latest
         ports:
         - 8080:8080
         - 2883:1883
+        - 8885:8885
+        depends_on:
+            timescaledb:
+                condition: service_healthy
+            mongodb:
+                condition: service_healthy
+        restart: always
         environment:
+        - MONGO_BASE_URI=mongodb://mongodb:27017
         - MONGO_USERNAME=mdo
         - MONGO_PASSWORD=init@mdo_
         - ICESENSORE_TOKEN=<icetoken>
@@ -49,8 +64,11 @@ services:
         - TTN_APP_SCJ_Simple_Sensors=<ttn_simple_sensors>
         - TTN_APP_SCJ_Sensors_01=<ttn_sensors>
         - TTN_APP_Bosch_Parking=<ttn_bosch>
+        volumes:
+        - ./chirpstack:/opt/sensinact/chirpstack
         networks:
         - udp
 
 networks:
-    udp: null
+    udp:
+      name: urban-data-platform
