@@ -64,10 +64,10 @@ public class CPUTemp {
 			int value = Integer.parseInt(br.readLine());
 			values.add(value);
 			int total = values.stream().mapToInt(Integer::valueOf).sum();
-			logger.log(Level.INFO, "Now: {0}°C - Average: {1}°C - Number of measurements: {2}", toCelsius(value), toCelsius(total / values.size()),values.size());
+			logger.log(Level.DEBUG, "Now: {0}°C - Average: {1}°C - Number of measurements: {2}", toCelsius(value), toCelsius(total / values.size()),values.size());
 			sendMqtt(value);
 		} catch (Exception e) {
-			logger.log(Level.INFO, "Error during temperature check: ",e);
+			logger.log(Level.ERROR, "Error during temperature check: ",e);
 		}
 
 	}
