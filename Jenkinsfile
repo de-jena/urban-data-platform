@@ -220,6 +220,5 @@ pipeline  {
                             pushCredentialsId: 'dim-nexus'])
           }
         }
-
 	}
 }
