@@ -13,9 +13,11 @@
 
 package de.jena.traficam.websocket;
 
+import java.io.IOException;
 import java.lang.System.Logger;
 import java.lang.System.Logger.Level;
 import java.net.URI;
+import java.net.URISyntaxException;
 
 import org.eclipse.jetty.websocket.client.ClientUpgradeRequest;
 import org.eclipse.jetty.websocket.client.WebSocketClient;
@@ -46,21 +48,19 @@ public class TrafiCamWebsocketClient {
 	private static final Logger logger = System.getLogger(TrafiCamWebsocketClient.class.getName());
 
 	private WebSocketClient client;
-	// configure using sender config in ConfigurationUpdater#configureClient using .target=(id=something))
+	private TrafiCamConfig config;
+
+	// configure using sender config in ConfigurationUpdater#configureClient using
+	// .target=(id=something))
 	@Reference
 	private TrafiCamReader reader;
 
 	@Activate
 	public void activate(TrafiCamConfig config) throws Exception {
+		this.config = config;
 		client = new WebSocketClient();
-		String url = "ws://" + config.address() + "/api/subscriptions";
-		logger.log(Level.INFO, "Connect websocket for camera {0} to {1}.",config.id(), url);
-		URI dest = new URI(url);
-
 		client.start();
-		TrafiCamWebsocket socket = new TrafiCamWebsocket(reader);
-		ClientUpgradeRequest request = new ClientUpgradeRequest();
-		client.connect(socket, dest, request);
+		connect();
 	}
 
 	@Modified
@@ -68,11 +68,31 @@ public class TrafiCamWebsocketClient {
 		deactivate();
 		activate(config);
 	}
-	
+
 	@Deactivate
 	public void deactivate() throws Exception {
 		logger.log(Level.INFO, "Disconnect websocket");
 		client.stop();
+	}
+
+	void onError(Throwable reason) {
+		if (client.isStarted() && reason.getMessage().contains("Not valid UTF8!")) {
+			try {
+				connect();
+			} catch (URISyntaxException | IOException e) {
+				logger.log(Level.ERROR, "Error while connecting websocket for camera {0} to {1}.", config.id(),
+						config.address(), e);
+			}
+		}
+	}
+
+	private void connect() throws URISyntaxException, IOException {
+		String url = "ws://" + config.address() + "/api/subscriptions";
+		URI dest = new URI(url);
+		TrafiCamWebsocket socket = new TrafiCamWebsocket(reader, this::onError);
+		ClientUpgradeRequest request = new ClientUpgradeRequest();
+		logger.log(Level.INFO, "Connect websocket for camera {0} to {1}.", config.id(), url);
+		client.connect(socket, dest, request);
 	}
 
 }

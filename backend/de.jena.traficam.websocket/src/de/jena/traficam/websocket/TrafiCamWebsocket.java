@@ -40,9 +40,11 @@ public class TrafiCamWebsocket {
 
 	private static final Logger logger = System.getLogger(TrafiCamWebsocket.class.getName());
 	private TrafiCamReader reader;
+	private ErrorHandler errorHandler;
 
-	public TrafiCamWebsocket(TrafiCamReader reader) {
+	public TrafiCamWebsocket(TrafiCamReader reader, ErrorHandler errorHandler) {
 		this.reader = reader;
+		this.errorHandler = errorHandler;
 	}
 
 	@OnWebSocketConnect
@@ -90,6 +92,7 @@ public class TrafiCamWebsocket {
 	@OnWebSocketError
 	public void onErrorReceived(Throwable t) {
 		logger.log(Level.ERROR, "Error from Websocket: ",t);
+		errorHandler.onError(t);
 	}
 
 }
