@@ -4,6 +4,7 @@ package org.eclipse.fennec.models.geojson.util;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -49,5 +50,18 @@ public class GeoJsonResourceImpl extends ConfigurableJsonResource {
 			options.forEach((k,v) -> map.put( k, v));
 		}
 		super.doLoad(inputStream, map);
+	}
+	
+	/* 
+	 * (non-Javadoc)
+	 * @see org.gecko.emf.json.configuration.ConfigurableJsonResource#doSave(java.io.OutputStream, java.util.Map)
+	 */
+	@Override
+	protected void doSave(OutputStream outputStream, Map<?, ?> options) throws IOException {
+		Map<Object,Object> map = new HashMap<>(GEOJSON_DEFAULT_OPTIONS);
+		if(options != null) {
+			options.forEach((k,v) -> map.put( k, v));
+		}
+		super.doSave(outputStream, map);
 	}
 } //GeoJsonResourceImpl
