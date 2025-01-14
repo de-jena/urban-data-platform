@@ -28,8 +28,11 @@
     </genClasses>
     <genClasses ecoreClass="geojson.ecore#//GeoJsonObject">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geojson.ecore#//GeoJsonObject/bbox"
-          get="return new org.eclipse.fennec.models.geojson.util.GenericConvertingList&lt;double[], Coordinates>(getBoundingBox(), org.eclipse.fennec.models.geojson.util.GeoJsonHelper::toCoordinates, org.eclipse.fennec.models.geojson.util.GeoJsonHelper::convertCoordinates);"/>
+          get="return org.eclipse.fennec.models.geojson.util.GeoJsonHelper.convertBoundingBox(getBoundingBox());"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EReference geojson.ecore#//GeoJsonObject/boundingBox"/>
+      <genOperations ecoreOperation="geojson.ecore#//GeoJsonObject/setBbox" body="setBoundingBox(org.eclipse.fennec.models.geojson.util.GeoJsonHelper.convertToBoundingBox(newBbox));">
+        <genParameters ecoreParameter="geojson.ecore#//GeoJsonObject/setBbox/newBbox"/>
+      </genOperations>
     </genClasses>
     <genClasses image="false" ecoreClass="geojson.ecore#//Geometry"/>
     <genClasses ecoreClass="geojson.ecore#//LineString"/>
@@ -83,6 +86,10 @@
       <genOperations ecoreOperation="geojson.ecore#//MultiLineString/setData" body="org.eclipse.fennec.models.geojson.util.GeoJsonHelper.setMultiLineStringData(this, data);">
         <genParameters ecoreParameter="geojson.ecore#//MultiLineString/setData/data"/>
       </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="geojson.ecore#//BoundingBox">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geojson.ecore#//BoundingBox/southwest"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geojson.ecore#//BoundingBox/northeast"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

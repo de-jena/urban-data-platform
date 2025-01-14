@@ -48,7 +48,14 @@
         transient="true" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GeoJsonObject">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bbox" upperBound="-1" eType="#//DoubleArray1D"
+    <eOperations name="setBbox">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="setBoundingBox(org.eclipse.fennec.models.geojson.util.GeoJsonHelper.convertToBoundingBox(newBbox));"/>
+        <details key="suppressedVisibility" value="true"/>
+      </eAnnotations>
+      <eParameters name="newBbox" eType="#//DoubleArray1D"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bbox" lowerBound="1" eType="#//DoubleArray1D"
         volatile="true">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="name" value="bbox"/>
@@ -58,11 +65,11 @@
         <details key="suppressedIsSetVisibility" value="false"/>
         <details key="suppressedSetVisibility" value="true"/>
         <details key="suppressedUnsetVisibility" value="true"/>
-        <details key="get" value="return new org.eclipse.fennec.models.geojson.util.GenericConvertingList&lt;double[], Coordinates>(getBoundingBox(), org.eclipse.fennec.models.geojson.util.GeoJsonHelper::toCoordinates, org.eclipse.fennec.models.geojson.util.GeoJsonHelper::convertCoordinates);"/>
+        <details key="get" value="return org.eclipse.fennec.models.geojson.util.GeoJsonHelper.convertBoundingBox(getBoundingBox());"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="boundingBox" upperBound="-1"
-        eType="#//Coordinates" transient="true" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="boundingBox" lowerBound="1"
+        eType="#//BoundingBox" transient="true" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="DoubleArray1D" instanceClassName="java.lang.double[]"/>
   <eClassifiers xsi:type="ecore:EDataType" name="DoubleArray2D" instanceClassName="java.lang.double[][]"/>
@@ -230,5 +237,11 @@
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="linesStrings" upperBound="-1"
         eType="#//SimpleLineString" transient="true" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BoundingBox">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="southwest" lowerBound="1"
+        eType="#//Coordinates" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="northeast" lowerBound="1"
+        eType="#//Coordinates" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

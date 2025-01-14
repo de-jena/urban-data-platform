@@ -8,9 +8,10 @@ Test-Cases: ${classes;HIERARCHY_INDIRECTLY_ANNOTATED;org.junit.platform.commons.
 	org.osgi.framework;version=latest,\
 	org.eclipse.sensinact.gateway.core.geo-json.model;version=snapshot,\
 	org.gecko.emf.util.annotations;version=latest,\
-	org.eclipse.emfcloud.emfjson-jackson
+	org.eclipse.emfcloud.emfjson-jackson,\
+	org.gecko.emf.json
 	
-Private-Package: org.eclipse.sensinact.gateway.core.geo_json.model.test
+Private-Package: org.eclipse.fennec.models.geojson.test
 
 Bundle-Version: 1.0.0.SNAPSHOT
 

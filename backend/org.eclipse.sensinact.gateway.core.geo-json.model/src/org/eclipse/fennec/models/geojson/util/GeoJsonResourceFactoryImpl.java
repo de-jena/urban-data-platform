@@ -19,7 +19,7 @@ import org.osgi.service.component.annotations.Component;
  * @see org.eclipse.fennec.models.geojson.util.GeoJsonResourceImpl
  * @generated
  */
-@Component(property = {
+@Component(service = Resource.Factory.class, property = {
 		EMFNamespaces.EMF_CONFIGURATOR_NAME + "=" + GeoJsonPackage.eNAME,
 		EMFNamespaces.EMF_MODEL_FILE_EXT + "=" + "geojson",
 		EMFNamespaces.EMF_MODEL_VERSION + "=" + "1.0"

@@ -2,21 +2,16 @@
  */
 package org.eclipse.fennec.models.geojson.impl;
 
-import java.util.Collection;
-
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
-import org.eclipse.fennec.models.geojson.Coordinates;
+import org.eclipse.fennec.models.geojson.BoundingBox;
 import org.eclipse.fennec.models.geojson.GeoJsonObject;
 import org.eclipse.fennec.models.geojson.GeoJsonPackage;
 
@@ -36,14 +31,24 @@ import org.eclipse.fennec.models.geojson.GeoJsonPackage;
  */
 public class GeoJsonObjectImpl extends MinimalEObjectImpl.Container implements GeoJsonObject {
 	/**
-	 * The cached value of the '{@link #getBoundingBox() <em>Bounding Box</em>}' containment reference list.
+	 * The default value of the '{@link #getBbox() <em>Bbox</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBbox()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double[] BBOX_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getBoundingBox() <em>Bounding Box</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getBoundingBox()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Coordinates> boundingBox;
+	protected BoundingBox boundingBox;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,8 +74,17 @@ public class GeoJsonObjectImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<double[]> getBbox() {
-		return new org.eclipse.fennec.models.geojson.util.GenericConvertingList<double[], Coordinates>(getBoundingBox(), org.eclipse.fennec.models.geojson.util.GeoJsonHelper::toCoordinates, org.eclipse.fennec.models.geojson.util.GeoJsonHelper::convertCoordinates);
+	public double[] getBbox() {
+		return org.eclipse.fennec.models.geojson.util.GeoJsonHelper.convertBoundingBox(getBoundingBox());
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBbox(double[] newBbox) {
+		setBoundingBox(org.eclipse.fennec.models.geojson.util.GeoJsonHelper.convertToBoundingBox(newBbox));
 	}
 
 	/**
@@ -79,11 +93,43 @@ public class GeoJsonObjectImpl extends MinimalEObjectImpl.Container implements G
 	 * @generated
 	 */
 	@Override
-	public EList<Coordinates> getBoundingBox() {
-		if (boundingBox == null) {
-			boundingBox = new EObjectContainmentEList<Coordinates>(Coordinates.class, this, GeoJsonPackage.GEO_JSON_OBJECT__BOUNDING_BOX);
-		}
+	public BoundingBox getBoundingBox() {
 		return boundingBox;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetBoundingBox(BoundingBox newBoundingBox, NotificationChain msgs) {
+		BoundingBox oldBoundingBox = boundingBox;
+		boundingBox = newBoundingBox;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GeoJsonPackage.GEO_JSON_OBJECT__BOUNDING_BOX, oldBoundingBox, newBoundingBox);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setBoundingBox(BoundingBox newBoundingBox) {
+		if (newBoundingBox != boundingBox) {
+			NotificationChain msgs = null;
+			if (boundingBox != null)
+				msgs = ((InternalEObject)boundingBox).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GeoJsonPackage.GEO_JSON_OBJECT__BOUNDING_BOX, null, msgs);
+			if (newBoundingBox != null)
+				msgs = ((InternalEObject)newBoundingBox).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GeoJsonPackage.GEO_JSON_OBJECT__BOUNDING_BOX, null, msgs);
+			msgs = basicSetBoundingBox(newBoundingBox, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeoJsonPackage.GEO_JSON_OBJECT__BOUNDING_BOX, newBoundingBox, newBoundingBox));
 	}
 
 	/**
@@ -95,7 +141,7 @@ public class GeoJsonObjectImpl extends MinimalEObjectImpl.Container implements G
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case GeoJsonPackage.GEO_JSON_OBJECT__BOUNDING_BOX:
-				return ((InternalEList<?>)getBoundingBox()).basicRemove(otherEnd, msgs);
+				return basicSetBoundingBox(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -121,17 +167,14 @@ public class GeoJsonObjectImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case GeoJsonPackage.GEO_JSON_OBJECT__BBOX:
-				getBbox().clear();
-				getBbox().addAll((Collection<? extends double[]>)newValue);
+				setBbox((double[])newValue);
 				return;
 			case GeoJsonPackage.GEO_JSON_OBJECT__BOUNDING_BOX:
-				getBoundingBox().clear();
-				getBoundingBox().addAll((Collection<? extends Coordinates>)newValue);
+				setBoundingBox((BoundingBox)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -146,10 +189,10 @@ public class GeoJsonObjectImpl extends MinimalEObjectImpl.Container implements G
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case GeoJsonPackage.GEO_JSON_OBJECT__BBOX:
-				getBbox().clear();
+				setBbox(BBOX_EDEFAULT);
 				return;
 			case GeoJsonPackage.GEO_JSON_OBJECT__BOUNDING_BOX:
-				getBoundingBox().clear();
+				setBoundingBox((BoundingBox)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -164,9 +207,9 @@ public class GeoJsonObjectImpl extends MinimalEObjectImpl.Container implements G
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case GeoJsonPackage.GEO_JSON_OBJECT__BBOX:
-				return !getBbox().isEmpty();
+				return BBOX_EDEFAULT == null ? getBbox() != null : !BBOX_EDEFAULT.equals(getBbox());
 			case GeoJsonPackage.GEO_JSON_OBJECT__BOUNDING_BOX:
-				return boundingBox != null && !boundingBox.isEmpty();
+				return boundingBox != null;
 		}
 		return super.eIsSet(featureID);
 	}

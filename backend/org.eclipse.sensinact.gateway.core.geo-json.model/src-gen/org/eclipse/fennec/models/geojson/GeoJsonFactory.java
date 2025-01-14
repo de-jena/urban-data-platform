@@ -160,6 +160,15 @@ public interface GeoJsonFactory extends EFactory {
 	MultiLineString createMultiLineString();
 
 	/**
+	 * Returns a new object of class '<em>Bounding Box</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Bounding Box</em>'.
+	 * @generated
+	 */
+	BoundingBox createBoundingBox();
+
+	/**
 	 * Returns an instance of data type '<em>Double Array1 D</em>' corresponding the given literal.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

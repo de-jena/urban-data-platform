@@ -72,6 +72,7 @@ public class GeoJsonFactoryImpl extends EFactoryImpl implements GeoJsonFactory {
 			case GeoJsonPackage.MULTI_POLYGON: return createMultiPolygon();
 			case GeoJsonPackage.SIMPLE_POLYGON: return createSimplePolygon();
 			case GeoJsonPackage.MULTI_LINE_STRING: return createMultiLineString();
+			case GeoJsonPackage.BOUNDING_BOX: return createBoundingBox();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -282,6 +283,17 @@ public class GeoJsonFactoryImpl extends EFactoryImpl implements GeoJsonFactory {
 	public MultiLineString createMultiLineString() {
 		MultiLineStringImpl multiLineString = new MultiLineStringImpl();
 		return multiLineString;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public BoundingBox createBoundingBox() {
+		BoundingBoxImpl boundingBox = new BoundingBoxImpl();
+		return boundingBox;
 	}
 
 	/**

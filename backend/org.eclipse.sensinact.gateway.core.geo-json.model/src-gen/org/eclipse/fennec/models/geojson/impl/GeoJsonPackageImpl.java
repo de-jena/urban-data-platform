@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.eclipse.fennec.models.geojson.BoundingBox;
 import org.eclipse.fennec.models.geojson.Coordinates;
 import org.eclipse.fennec.models.geojson.Feature;
 import org.eclipse.fennec.models.geojson.FeatureCollection;
@@ -148,6 +149,13 @@ public class GeoJsonPackageImpl extends EPackageImpl implements GeoJsonPackage {
 	 * @generated
 	 */
 	private EClass multiLineStringEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass boundingBoxEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -345,6 +353,16 @@ public class GeoJsonPackageImpl extends EPackageImpl implements GeoJsonPackage {
 	@Override
 	public EReference getGeoJsonObject_BoundingBox() {
 		return (EReference)geoJsonObjectEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getGeoJsonObject__SetBbox__double() {
+		return geoJsonObjectEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -683,6 +701,36 @@ public class GeoJsonPackageImpl extends EPackageImpl implements GeoJsonPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getBoundingBox() {
+		return boundingBoxEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getBoundingBox_Southwest() {
+		return (EReference)boundingBoxEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getBoundingBox_Northeast() {
+		return (EReference)boundingBoxEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EDataType getDoubleArray1D() {
 		return doubleArray1DEDataType;
 	}
@@ -759,6 +807,7 @@ public class GeoJsonPackageImpl extends EPackageImpl implements GeoJsonPackage {
 		geoJsonObjectEClass = createEClass(GEO_JSON_OBJECT);
 		createEAttribute(geoJsonObjectEClass, GEO_JSON_OBJECT__BBOX);
 		createEReference(geoJsonObjectEClass, GEO_JSON_OBJECT__BOUNDING_BOX);
+		createEOperation(geoJsonObjectEClass, GEO_JSON_OBJECT___SET_BBOX__DOUBLE);
 
 		geometryEClass = createEClass(GEOMETRY);
 
@@ -805,6 +854,10 @@ public class GeoJsonPackageImpl extends EPackageImpl implements GeoJsonPackage {
 		createEAttribute(multiLineStringEClass, MULTI_LINE_STRING__DATA);
 		createEReference(multiLineStringEClass, MULTI_LINE_STRING__LINES_STRINGS);
 		createEOperation(multiLineStringEClass, MULTI_LINE_STRING___SET_DATA__DOUBLE);
+
+		boundingBoxEClass = createEClass(BOUNDING_BOX);
+		createEReference(boundingBoxEClass, BOUNDING_BOX__SOUTHWEST);
+		createEReference(boundingBoxEClass, BOUNDING_BOX__NORTHEAST);
 
 		// Create data types
 		doubleArray1DEDataType = createEDataType(DOUBLE_ARRAY1_D);
@@ -869,8 +922,11 @@ public class GeoJsonPackageImpl extends EPackageImpl implements GeoJsonPackage {
 		addEParameter(op, this.getDoubleArray1D(), "data", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(geoJsonObjectEClass, GeoJsonObject.class, "GeoJsonObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGeoJsonObject_Bbox(), this.getDoubleArray1D(), "bbox", null, 0, -1, GeoJsonObject.class, !IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGeoJsonObject_BoundingBox(), this.getCoordinates(), null, "boundingBox", null, 0, -1, GeoJsonObject.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGeoJsonObject_Bbox(), this.getDoubleArray1D(), "bbox", null, 1, 1, GeoJsonObject.class, !IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGeoJsonObject_BoundingBox(), this.getBoundingBox(), null, "boundingBox", null, 1, 1, GeoJsonObject.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		op = initEOperation(getGeoJsonObject__SetBbox__double(), null, "setBbox", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getDoubleArray1D(), "newBbox", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(geometryEClass, Geometry.class, "Geometry", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -923,6 +979,10 @@ public class GeoJsonPackageImpl extends EPackageImpl implements GeoJsonPackage {
 
 		op = initEOperation(getMultiLineString__SetData__double(), null, "setData", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getDoubleArray3D(), "data", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(boundingBoxEClass, BoundingBox.class, "BoundingBox", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getBoundingBox_Southwest(), this.getCoordinates(), null, "southwest", null, 1, 1, BoundingBox.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBoundingBox_Northeast(), this.getCoordinates(), null, "northeast", null, 1, 1, BoundingBox.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize data types
 		initEDataType(doubleArray1DEDataType, double[].class, "DoubleArray1D", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
@@ -1001,6 +1061,13 @@ public class GeoJsonPackageImpl extends EPackageImpl implements GeoJsonPackage {
 			   "get", "return org.eclipse.fennec.models.geojson.util.GeoJsonHelper.convertCoordinates(getCoordinates());"
 		   });
 		addAnnotation
+		  (getGeoJsonObject__SetBbox__double(),
+		   source,
+		   new String[] {
+			   "body", "setBoundingBox(org.eclipse.fennec.models.geojson.util.GeoJsonHelper.convertToBoundingBox(newBbox));",
+			   "suppressedVisibility", "true"
+		   });
+		addAnnotation
 		  (getGeoJsonObject_Bbox(),
 		   source,
 		   new String[] {
@@ -1008,7 +1075,7 @@ public class GeoJsonPackageImpl extends EPackageImpl implements GeoJsonPackage {
 			   "suppressedIsSetVisibility", "false",
 			   "suppressedSetVisibility", "true",
 			   "suppressedUnsetVisibility", "true",
-			   "get", "return new org.eclipse.fennec.models.geojson.util.GenericConvertingList<double[], Coordinates>(getBoundingBox(), org.eclipse.fennec.models.geojson.util.GeoJsonHelper::toCoordinates, org.eclipse.fennec.models.geojson.util.GeoJsonHelper::convertCoordinates);"
+			   "get", "return org.eclipse.fennec.models.geojson.util.GeoJsonHelper.convertBoundingBox(getBoundingBox());"
 		   });
 		addAnnotation
 		  (lineStringEClass,

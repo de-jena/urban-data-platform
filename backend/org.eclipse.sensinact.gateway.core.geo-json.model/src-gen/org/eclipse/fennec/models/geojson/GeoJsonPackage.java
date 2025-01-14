@@ -140,7 +140,7 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	int GEO_JSON_OBJECT = 2;
 
 	/**
-	 * The feature id for the '<em><b>Bbox</b></em>' attribute list.
+	 * The feature id for the '<em><b>Bbox</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -149,7 +149,7 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	int GEO_JSON_OBJECT__BBOX = 0;
 
 	/**
-	 * The feature id for the '<em><b>Bounding Box</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Bounding Box</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -167,13 +167,22 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	int GEO_JSON_OBJECT_FEATURE_COUNT = 2;
 
 	/**
+	 * The operation id for the '<em>Set Bbox</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEO_JSON_OBJECT___SET_BBOX__DOUBLE = 0;
+
+	/**
 	 * The number of operations of the '<em>Object</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GEO_JSON_OBJECT_OPERATION_COUNT = 0;
+	int GEO_JSON_OBJECT_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.fennec.models.geojson.Geometry <em>Geometry</em>}' class.
@@ -186,7 +195,7 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	int GEOMETRY = 3;
 
 	/**
-	 * The feature id for the '<em><b>Bbox</b></em>' attribute list.
+	 * The feature id for the '<em><b>Bbox</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -195,7 +204,7 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	int GEOMETRY__BBOX = GEO_JSON_OBJECT__BBOX;
 
 	/**
-	 * The feature id for the '<em><b>Bounding Box</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Bounding Box</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -211,6 +220,15 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @ordered
 	 */
 	int GEOMETRY_FEATURE_COUNT = GEO_JSON_OBJECT_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Set Bbox</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOMETRY___SET_BBOX__DOUBLE = GEO_JSON_OBJECT___SET_BBOX__DOUBLE;
 
 	/**
 	 * The number of operations of the '<em>Geometry</em>' class.
@@ -232,7 +250,7 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	int POINT = 1;
 
 	/**
-	 * The feature id for the '<em><b>Bbox</b></em>' attribute list.
+	 * The feature id for the '<em><b>Bbox</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -241,7 +259,7 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	int POINT__BBOX = GEOMETRY__BBOX;
 
 	/**
-	 * The feature id for the '<em><b>Bounding Box</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Bounding Box</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -277,6 +295,15 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	int POINT_FEATURE_COUNT = GEOMETRY_FEATURE_COUNT + 2;
 
 	/**
+	 * The operation id for the '<em>Set Bbox</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT___SET_BBOX__DOUBLE = GEOMETRY___SET_BBOX__DOUBLE;
+
+	/**
 	 * The operation id for the '<em>Set Data</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -305,7 +332,7 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	int LINE_STRING = 4;
 
 	/**
-	 * The feature id for the '<em><b>Bbox</b></em>' attribute list.
+	 * The feature id for the '<em><b>Bbox</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -314,7 +341,7 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	int LINE_STRING__BBOX = GEOMETRY__BBOX;
 
 	/**
-	 * The feature id for the '<em><b>Bounding Box</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Bounding Box</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -348,6 +375,15 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @ordered
 	 */
 	int LINE_STRING_FEATURE_COUNT = GEOMETRY_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Set Bbox</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINE_STRING___SET_BBOX__DOUBLE = GEOMETRY___SET_BBOX__DOUBLE;
 
 	/**
 	 * The number of operations of the '<em>Line String</em>' class.
@@ -415,7 +451,7 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	int FEATURE = 6;
 
 	/**
-	 * The feature id for the '<em><b>Bbox</b></em>' attribute list.
+	 * The feature id for the '<em><b>Bbox</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -424,7 +460,7 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	int FEATURE__BBOX = GEO_JSON_OBJECT__BBOX;
 
 	/**
-	 * The feature id for the '<em><b>Bounding Box</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Bounding Box</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -469,6 +505,15 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	int FEATURE_FEATURE_COUNT = GEO_JSON_OBJECT_FEATURE_COUNT + 3;
 
 	/**
+	 * The operation id for the '<em>Set Bbox</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE___SET_BBOX__DOUBLE = GEO_JSON_OBJECT___SET_BBOX__DOUBLE;
+
+	/**
 	 * The number of operations of the '<em>Feature</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -488,7 +533,7 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	int FEATURE_COLLECTION = 7;
 
 	/**
-	 * The feature id for the '<em><b>Bbox</b></em>' attribute list.
+	 * The feature id for the '<em><b>Bbox</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -497,7 +542,7 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	int FEATURE_COLLECTION__BBOX = GEO_JSON_OBJECT__BBOX;
 
 	/**
-	 * The feature id for the '<em><b>Bounding Box</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Bounding Box</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -524,6 +569,15 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	int FEATURE_COLLECTION_FEATURE_COUNT = GEO_JSON_OBJECT_FEATURE_COUNT + 1;
 
 	/**
+	 * The operation id for the '<em>Set Bbox</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_COLLECTION___SET_BBOX__DOUBLE = GEO_JSON_OBJECT___SET_BBOX__DOUBLE;
+
+	/**
 	 * The number of operations of the '<em>Feature Collection</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -543,7 +597,7 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	int GEOMETRY_COLLECTION = 8;
 
 	/**
-	 * The feature id for the '<em><b>Bbox</b></em>' attribute list.
+	 * The feature id for the '<em><b>Bbox</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -552,7 +606,7 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	int GEOMETRY_COLLECTION__BBOX = GEOMETRY__BBOX;
 
 	/**
-	 * The feature id for the '<em><b>Bounding Box</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Bounding Box</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -579,6 +633,15 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	int GEOMETRY_COLLECTION_FEATURE_COUNT = GEOMETRY_FEATURE_COUNT + 1;
 
 	/**
+	 * The operation id for the '<em>Set Bbox</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOMETRY_COLLECTION___SET_BBOX__DOUBLE = GEOMETRY___SET_BBOX__DOUBLE;
+
+	/**
 	 * The number of operations of the '<em>Geometry Collection</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -598,7 +661,7 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	int MULTI_POINT = 9;
 
 	/**
-	 * The feature id for the '<em><b>Bbox</b></em>' attribute list.
+	 * The feature id for the '<em><b>Bbox</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -607,7 +670,7 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	int MULTI_POINT__BBOX = GEOMETRY__BBOX;
 
 	/**
-	 * The feature id for the '<em><b>Bounding Box</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Bounding Box</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -643,6 +706,15 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	int MULTI_POINT_FEATURE_COUNT = GEOMETRY_FEATURE_COUNT + 2;
 
 	/**
+	 * The operation id for the '<em>Set Bbox</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTI_POINT___SET_BBOX__DOUBLE = GEOMETRY___SET_BBOX__DOUBLE;
+
+	/**
 	 * The number of operations of the '<em>Multi Point</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -662,7 +734,7 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	int POLYGON = 10;
 
 	/**
-	 * The feature id for the '<em><b>Bbox</b></em>' attribute list.
+	 * The feature id for the '<em><b>Bbox</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -671,7 +743,7 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	int POLYGON__BBOX = GEOMETRY__BBOX;
 
 	/**
-	 * The feature id for the '<em><b>Bounding Box</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Bounding Box</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -714,6 +786,15 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @ordered
 	 */
 	int POLYGON_FEATURE_COUNT = GEOMETRY_FEATURE_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Set Bbox</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POLYGON___SET_BBOX__DOUBLE = GEOMETRY___SET_BBOX__DOUBLE;
 
 	/**
 	 * The operation id for the '<em>Set Data</em>' operation.
@@ -818,7 +899,7 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	int MULTI_POLYGON = 13;
 
 	/**
-	 * The feature id for the '<em><b>Bbox</b></em>' attribute list.
+	 * The feature id for the '<em><b>Bbox</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -827,7 +908,7 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	int MULTI_POLYGON__BBOX = GEOMETRY__BBOX;
 
 	/**
-	 * The feature id for the '<em><b>Bounding Box</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Bounding Box</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -861,6 +942,15 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @ordered
 	 */
 	int MULTI_POLYGON_FEATURE_COUNT = GEOMETRY_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Set Bbox</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTI_POLYGON___SET_BBOX__DOUBLE = GEOMETRY___SET_BBOX__DOUBLE;
 
 	/**
 	 * The operation id for the '<em>Set Data</em>' operation.
@@ -955,7 +1045,7 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	int MULTI_LINE_STRING = 15;
 
 	/**
-	 * The feature id for the '<em><b>Bbox</b></em>' attribute list.
+	 * The feature id for the '<em><b>Bbox</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -964,7 +1054,7 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	int MULTI_LINE_STRING__BBOX = GEOMETRY__BBOX;
 
 	/**
-	 * The feature id for the '<em><b>Bounding Box</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Bounding Box</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1000,6 +1090,15 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	int MULTI_LINE_STRING_FEATURE_COUNT = GEOMETRY_FEATURE_COUNT + 2;
 
 	/**
+	 * The operation id for the '<em>Set Bbox</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTI_LINE_STRING___SET_BBOX__DOUBLE = GEOMETRY___SET_BBOX__DOUBLE;
+
+	/**
 	 * The operation id for the '<em>Set Data</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1018,13 +1117,59 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	int MULTI_LINE_STRING_OPERATION_COUNT = GEOMETRY_OPERATION_COUNT + 1;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.fennec.models.geojson.impl.BoundingBoxImpl <em>Bounding Box</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.fennec.models.geojson.impl.BoundingBoxImpl
+	 * @see org.eclipse.fennec.models.geojson.impl.GeoJsonPackageImpl#getBoundingBox()
+	 * @generated
+	 */
+	int BOUNDING_BOX = 16;
+
+	/**
+	 * The feature id for the '<em><b>Southwest</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOUNDING_BOX__SOUTHWEST = 0;
+
+	/**
+	 * The feature id for the '<em><b>Northeast</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOUNDING_BOX__NORTHEAST = 1;
+
+	/**
+	 * The number of structural features of the '<em>Bounding Box</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOUNDING_BOX_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Bounding Box</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOUNDING_BOX_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '<em>Double Array1 D</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.fennec.models.geojson.impl.GeoJsonPackageImpl#getDoubleArray1D()
 	 * @generated
 	 */
-	int DOUBLE_ARRAY1_D = 16;
+	int DOUBLE_ARRAY1_D = 17;
 
 	/**
 	 * The meta object id for the '<em>Double Array2 D</em>' data type.
@@ -1033,7 +1178,7 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.eclipse.fennec.models.geojson.impl.GeoJsonPackageImpl#getDoubleArray2D()
 	 * @generated
 	 */
-	int DOUBLE_ARRAY2_D = 17;
+	int DOUBLE_ARRAY2_D = 18;
 
 	/**
 	 * The meta object id for the '<em>Double Array3 D</em>' data type.
@@ -1042,7 +1187,7 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.eclipse.fennec.models.geojson.impl.GeoJsonPackageImpl#getDoubleArray3D()
 	 * @generated
 	 */
-	int DOUBLE_ARRAY3_D = 18;
+	int DOUBLE_ARRAY3_D = 19;
 
 	/**
 	 * The meta object id for the '<em>Double Array4 D</em>' data type.
@@ -1051,7 +1196,7 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.eclipse.fennec.models.geojson.impl.GeoJsonPackageImpl#getDoubleArray4D()
 	 * @generated
 	 */
-	int DOUBLE_ARRAY4_D = 19;
+	int DOUBLE_ARRAY4_D = 20;
 
 
 	/**
@@ -1150,10 +1295,10 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getGeoJsonObject();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link org.eclipse.fennec.models.geojson.GeoJsonObject <em>Bbox</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.fennec.models.geojson.GeoJsonObject <em>Bbox</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Bbox</em>'.
+	 * @return the meta object for the attribute '<em>Bbox</em>'.
 	 * @see org.eclipse.fennec.models.geojson.GeoJsonObject
 	 * @see #getGeoJsonObject()
 	 * @generated
@@ -1161,15 +1306,25 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getGeoJsonObject_Bbox();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.fennec.models.geojson.GeoJsonObject#getBoundingBox <em>Bounding Box</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.fennec.models.geojson.GeoJsonObject#getBoundingBox <em>Bounding Box</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Bounding Box</em>'.
+	 * @return the meta object for the containment reference '<em>Bounding Box</em>'.
 	 * @see org.eclipse.fennec.models.geojson.GeoJsonObject#getBoundingBox()
 	 * @see #getGeoJsonObject()
 	 * @generated
 	 */
 	EReference getGeoJsonObject_BoundingBox();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.fennec.models.geojson.GeoJsonObject#setBbox(java.lang.double[]) <em>Set Bbox</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Set Bbox</em>' operation.
+	 * @see org.eclipse.fennec.models.geojson.GeoJsonObject#setBbox(java.lang.double[])
+	 * @generated
+	 */
+	EOperation getGeoJsonObject__SetBbox__double();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.fennec.models.geojson.Geometry <em>Geometry</em>}'.
@@ -1519,6 +1674,38 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	EOperation getMultiLineString__SetData__double();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipse.fennec.models.geojson.BoundingBox <em>Bounding Box</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Bounding Box</em>'.
+	 * @see org.eclipse.fennec.models.geojson.BoundingBox
+	 * @generated
+	 */
+	EClass getBoundingBox();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.fennec.models.geojson.BoundingBox#getSouthwest <em>Southwest</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Southwest</em>'.
+	 * @see org.eclipse.fennec.models.geojson.BoundingBox#getSouthwest()
+	 * @see #getBoundingBox()
+	 * @generated
+	 */
+	EReference getBoundingBox_Southwest();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.fennec.models.geojson.BoundingBox#getNortheast <em>Northeast</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Northeast</em>'.
+	 * @see org.eclipse.fennec.models.geojson.BoundingBox#getNortheast()
+	 * @see #getBoundingBox()
+	 * @generated
+	 */
+	EReference getBoundingBox_Northeast();
+
+	/**
 	 * Returns the meta object for data type '<em>Double Array1 D</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1660,7 +1847,7 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 		EClass GEO_JSON_OBJECT = eINSTANCE.getGeoJsonObject();
 
 		/**
-		 * The meta object literal for the '<em><b>Bbox</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Bbox</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1668,12 +1855,20 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 		EAttribute GEO_JSON_OBJECT__BBOX = eINSTANCE.getGeoJsonObject_Bbox();
 
 		/**
-		 * The meta object literal for the '<em><b>Bounding Box</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Bounding Box</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference GEO_JSON_OBJECT__BOUNDING_BOX = eINSTANCE.getGeoJsonObject_BoundingBox();
+
+		/**
+		 * The meta object literal for the '<em><b>Set Bbox</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation GEO_JSON_OBJECT___SET_BBOX__DOUBLE = eINSTANCE.getGeoJsonObject__SetBbox__double();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.fennec.models.geojson.Geometry <em>Geometry</em>}' class.
@@ -1964,6 +2159,32 @@ public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 		 * @generated
 		 */
 		EOperation MULTI_LINE_STRING___SET_DATA__DOUBLE = eINSTANCE.getMultiLineString__SetData__double();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.fennec.models.geojson.impl.BoundingBoxImpl <em>Bounding Box</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.fennec.models.geojson.impl.BoundingBoxImpl
+		 * @see org.eclipse.fennec.models.geojson.impl.GeoJsonPackageImpl#getBoundingBox()
+		 * @generated
+		 */
+		EClass BOUNDING_BOX = eINSTANCE.getBoundingBox();
+
+		/**
+		 * The meta object literal for the '<em><b>Southwest</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BOUNDING_BOX__SOUTHWEST = eINSTANCE.getBoundingBox_Southwest();
+
+		/**
+		 * The meta object literal for the '<em><b>Northeast</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BOUNDING_BOX__NORTHEAST = eINSTANCE.getBoundingBox_Northeast();
 
 		/**
 		 * The meta object literal for the '<em>Double Array1 D</em>' data type.

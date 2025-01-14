@@ -13,8 +13,10 @@
  */
 package org.eclipse.fennec.models.geojson.util;
 
+import java.util.Arrays;
 import java.util.List;
 
+import org.eclipse.fennec.models.geojson.BoundingBox;
 import org.eclipse.fennec.models.geojson.Coordinates;
 import org.eclipse.fennec.models.geojson.GeoJsonFactory;
 import org.eclipse.fennec.models.geojson.GeoJsonPackage;
@@ -84,12 +86,33 @@ public class GeoJsonHelper {
 		return result;
 	}
 
+	public static double[] convertBoundingBox(BoundingBox bbox) {
+		if(bbox == null) {
+			return null;
+		}
+		double[] southwest = convertCoordinates(bbox.getSouthwest());
+		double[] norhteast = convertCoordinates(bbox.getNortheast());
+		double[] result = Arrays.copyOf(southwest, southwest.length + norhteast.length);
+		if(result.length < 4) {
+			throw new IllegalArgumentException("Northeast and Southwest must both be set for a Boundingbox");
+		}
+		if(result.length % 2 != 0) {
+			throw new IllegalArgumentException("Coordinates of a boundingbox must aither bove or none have an Elevation");
+		}
+		System.arraycopy(norhteast, 0, result, southwest.length, norhteast.length);
+		return result;
+	}
+
+	public static BoundingBox convertToBoundingBox(double[] bbox) {
+		BoundingBox boundingBox = GeoJsonFactory.eINSTANCE.createBoundingBox();
+		boolean ignoreElevation = bbox.length / 2 == 2;
+		double[] southwest = Arrays.copyOfRange(bbox, 0, ignoreElevation ? 2 : 3);
+		double[] norhteast = Arrays.copyOfRange(bbox, ignoreElevation ? 2 : 3, bbox.length);
+		boundingBox.setSouthwest(toCoordinates(southwest));
+		boundingBox.setNortheast(toCoordinates(norhteast));
+		return boundingBox;
+	}
 	
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
 	public static void setMultiLineStringData(MultiLineString multiLineString, double[][][] data) {
 		for (int i = 0; i < data.length; i++) {
 			double[][] d = data[i];
