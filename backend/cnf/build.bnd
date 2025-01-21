@@ -50,6 +50,8 @@ javac.debug:  on
 # This can be replaced, as soon as we have the latest release figuered out
 #	geckoSearch
 
+-releaserepo: UDP_Nexus_Release
+
 sensinact.version: 0.0.2-SNAPSHOT
 jackson.version: 2.16.0
 jersey.version: 3.0.8
