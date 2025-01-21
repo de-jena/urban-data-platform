@@ -220,5 +220,16 @@ pipeline  {
                             pushCredentialsId: 'dim-nexus'])
           }
         }
+        stage('Release'){
+            when {
+                branch 'main'
+            }
+
+            steps  {
+				dir("udp/backend") {
+                    sh "./gradlew release --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2"
+                }
+            }
+        } 
 	}
 }
