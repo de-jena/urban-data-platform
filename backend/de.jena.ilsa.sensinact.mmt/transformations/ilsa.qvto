@@ -24,7 +24,7 @@ mapping ILSA::TLConfiguration::toAdmin(): PROVIDER::Admin {
 }
 
 mapping ILSA::TLSignal::toSignalMapEntry(): PROVIDER::ServiceMap {
-	key := self.id;
+	key := self.id.replaceAll("/","_");
 	value := self.map toSignal();
 }
 

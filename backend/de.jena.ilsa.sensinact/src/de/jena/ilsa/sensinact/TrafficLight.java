@@ -157,9 +157,10 @@ public class TrafficLight {
 		try (ByteArrayInputStream bas = new ByteArrayInputStream(message.payload().array())) {
 			resource.load(bas, Collections.emptyMap());
 			TLSignalState signalState = (TLSignalState) resource.getContents().get(0);
-			TrafficLightDto dto = new TrafficLightDto(intersectionId, signalState.getId(), signalState.getState());
+			String serviceId = signalState.getId().replace("/", "_");
+			TrafficLightDto dto = new TrafficLightDto(intersectionId, serviceId, signalState.getState());
 			dto.timestamp = signalState.getTimestamp().getTime();
-			logger.log(Level.DEBUG, "push {0} {1} {2}", intersectionId, signalState.getId(), signalState.getState());
+			logger.log(Level.DEBUG, "push {0} {1} {2}", intersectionId, serviceId, signalState.getState());
 			Promise<?> promise = sensiNact.pushUpdate(dto);
 			promise.onFailure(e -> logger.log(Level.ERROR, "Error while pushing signal to sensinact.", e));
 		} catch (IOException e) {
@@ -206,7 +207,8 @@ public class TrafficLight {
 	}
 
 	private void initSignal(EMap<String, Service> services, TLSignal signalState) {
-		Service signal = services.get(signalState.getId());
+		String serviceId = signalState.getId().replace("/", "_");
+		Service signal = services.get(serviceId);
 		EMap<ETypedElement, Metadata> metadata = signal.getMetadata();
 		ResourceMetadata md = MetadataFactory.eINSTANCE.createResourceMetadata();
 		md.getExtra().add(createCustomMetadata("type", signalState.getSignalType()));
