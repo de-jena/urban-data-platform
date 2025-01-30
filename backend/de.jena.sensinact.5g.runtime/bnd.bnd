@@ -6,8 +6,6 @@
 -buildpath: \
 	org.eclipse.paho.client.mqttv3;version=latest,\
 	org.apache.felix.configadmin.plugin.interpolation,\
-	org.gecko.qvt.osgi.component,\
-	org.gecko.qvt.osgi.api,\
 	org.antlr.antlr4-runtime,\
 	org.apache.aries.component-dsl.component-dsl,\
 	org.apache.aries.typedevent.bus,\
@@ -38,4 +36,6 @@
 	org.gecko.osgi.messaging,\
 	org.gecko.util.common,\
 	org.gecko.util.pushstream,\
-	org.eclipse.sensinact.gateway.northbound.sensorthings.mqtt
+	org.eclipse.sensinact.gateway.northbound.sensorthings.mqtt,\
+	org.eclipse.fennec.qvt.api,\
+	org.eclipse.fennec.qvt.component

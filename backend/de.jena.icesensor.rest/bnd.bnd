@@ -7,12 +7,10 @@
 	org.osgi.util.pushstream;version=latest,\
 	org.osgi.util.promise;version=latest,\
 	org.osgi.util.function;version=latest,\
-	org.osgi.service.cdi,\
-	de.jena.icesensor.api,\
 	com.fasterxml.jackson.core.jackson-databind,\
-	org.gecko.qvt.osgi.api,\
 	biz.aQute.bnd.annotation,\
 	org.gecko.emf.osgi.component,\
-	org.gecko.emf.util.annotations
+	org.gecko.emf.util.annotations,\
+	de.jena.icesensor.api
 
 -library: enable-emf

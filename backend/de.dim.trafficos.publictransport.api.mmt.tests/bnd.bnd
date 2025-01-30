@@ -6,11 +6,10 @@ Test-Cases: ${classes;HIERARCHY_INDIRECTLY_ANNOTATED;org.junit.platform.commons.
 # sets the usually required buildpath using the bnd library, you can extend it with the normal -buildpath to your liking
 -buildpath: \
 	org.osgi.test.junit5.cm,\
-	org.gecko.qvt.osgi.api,\
 	de.jena.udp.trafficos.publictransport.api.model,\
 	de.jena.udp.trafficos.publictransport.model,\
 	de.jena.udp.trafficos.common.model,\
-	
+	org.eclipse.fennec.qvt.api
 Private-Package: de.dim.trafficos.publictransport.api.mmt.tests
 
 Bundle-Version: 1.0.0.SNAPSHOT

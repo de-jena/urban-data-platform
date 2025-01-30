@@ -22,8 +22,8 @@ import java.time.LocalTime;
 import java.util.Date;
 import java.util.UUID;
 
-import org.gecko.qvt.osgi.api.ModelTransformationConstants;
-import org.gecko.qvt.osgi.api.ModelTransformator;
+import org.eclipse.fennec.qvt.osgi.api.ModelTransformationConstants;
+import org.eclipse.fennec.qvt.osgi.api.ModelTransformator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

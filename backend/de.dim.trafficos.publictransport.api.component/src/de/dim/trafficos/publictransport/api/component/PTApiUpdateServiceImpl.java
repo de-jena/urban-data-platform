@@ -16,7 +16,7 @@ package de.dim.trafficos.publictransport.api.component;
 import java.util.Collections;
 import java.util.List;
 
-import org.gecko.qvt.osgi.api.ModelTransformator;
+import org.eclipse.fennec.qvt.osgi.api.ModelTransformator;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.component.annotations.ServiceScope;

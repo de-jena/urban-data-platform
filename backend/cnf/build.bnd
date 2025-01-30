@@ -43,7 +43,7 @@ javac.debug:  on
 	geckoEMFRepository,\
 	geckoEMFUtil,\
 	geckoUtil,\
-	geckoUtilQVT,\
+    fennecQVT,\
 	jakartaREST,\
 	geckoMessaging
 	

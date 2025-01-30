@@ -11,11 +11,11 @@
 	slf4j.api,\
 	org.eclipse.sensinact.gateway.core.annotation,\
 	org.osgi.service.component,\
-	org.gecko.qvt.osgi.api,\
 	org.osgi.service.condition,\
 	de.jena.ttn.sensinact.model,\
 	org.eclipse.sensinact.gateway.core.models.provider,\
 	org.eclipse.sensinact.gateway.core.geo-json,\
 	org.osgi.namespace.implementation,\
 	org.apache.felix.eventadmin,\
-	org.osgi.service.event
+	org.osgi.service.event,\
+	org.eclipse.fennec.qvt.api

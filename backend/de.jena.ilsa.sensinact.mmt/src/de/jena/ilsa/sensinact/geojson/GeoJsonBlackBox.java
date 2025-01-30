@@ -18,6 +18,11 @@ import java.util.HashMap;
 import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.fennec.qvt.osgi.annotations.ModuleName;
+import org.eclipse.fennec.qvt.osgi.annotations.QvtBlackbox;
+import org.eclipse.fennec.qvt.osgi.annotations.TemplatePath;
+import org.eclipse.fennec.qvt.osgi.annotations.TransformatorId;
+import org.eclipse.fennec.qvt.osgi.annotations.UnitQualifiedName;
 import org.eclipse.m2m.qvt.oml.blackbox.java.Module;
 import org.eclipse.m2m.qvt.oml.blackbox.java.Operation;
 import org.eclipse.sensinact.gateway.geojson.Coordinates;
@@ -29,11 +34,6 @@ import org.eclipse.sensinact.gateway.geojson.MultiPoint;
 import org.eclipse.sensinact.gateway.geojson.Point;
 import org.eclipse.sensinact.gateway.geojson.Polygon;
 import org.eclipse.sensinact.model.core.provider.ProviderPackage;
-import org.gecko.qvt.osgi.annotations.ModuleName;
-import org.gecko.qvt.osgi.annotations.QvtBlackbox;
-import org.gecko.qvt.osgi.annotations.TemplatePath;
-import org.gecko.qvt.osgi.annotations.TransformatorId;
-import org.gecko.qvt.osgi.annotations.UnitQualifiedName;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 

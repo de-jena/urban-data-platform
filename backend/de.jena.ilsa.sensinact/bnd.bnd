@@ -18,10 +18,10 @@
 	com.fasterxml.jackson.datatype.jackson-datatype-jsr310,\
 	de.jena.udp.trafficos.trafficlight.model;version=latest,\
 	org.eclipse.emfcloud.emfjson-jackson,\
-	org.gecko.qvt.osgi.api,\
 	de.jena.udp.trafficos.common.model,\
 	de.jena.ilsa.sensinact.model,\
 	org.eclipse.sensinact.gateway.core.geo-json,\
-	org.eclipse.sensinact.gateway.core.models.metadata
+	org.eclipse.sensinact.gateway.core.models.metadata,\
+	org.eclipse.fennec.qvt.api
 	
 -library: enable-emf

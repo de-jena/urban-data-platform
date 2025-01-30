@@ -2,7 +2,6 @@
 	org.eclipse.m2m.qvt.oml,\
 	org.osgi.service.component.annotations;version=latest,\
 	de.jena.ilsa.sensinact.model,\
-	org.gecko.qvt.osgi.api,\
 	org.eclipse.sensinact.gateway.core.geo-json,\
 	org.osgi.service.condition,\
 	com.fasterxml.jackson.core.jackson-annotations;version=latest,\
@@ -22,7 +21,8 @@
 	org.osgi.util.pushstream,\
 	org.osgi.util.function,\
 	org.gecko.osgi.messaging,\
-	org.eclipse.emfcloud.emfjson-jackson
+	org.eclipse.emfcloud.emfjson-jackson,\
+	org.eclipse.fennec.qvt.api
 	
 	
 -library: enable-emf
