@@ -1,0 +1,20 @@
+{
+	":configurator:resource-version": 1,
+	":configurator:version": "1.0.0",
+	":configurator:symbolic-name": "Timescale",
+	"sensinact.history.timescale": {
+		"url": "jdbc:postgresql://$[env:TIMESCALE_HOST;default=$[prop:TIMESCALE_HOST;default=localhost]]:$[env:TIMESCALE_PORT;default=$[prop:TIMESCALE_PORT;default=5432]]/$[env:TIMESCALE_DB;default=$[prop:TIMESCALE_DB;default=sensinactHistory]]",
+		"user": "$[env:TIMESCALE_USER;default=$[prop:TIMESCALE_USER;default=snaHistory]]",
+		".password": "$[env:TIMESCALE_PWD;default=$[prop:TIMESCALE_PWD;default=]]",
+		"provider": "brokerHistory",
+		"include.resources": [
+			"{\"model\": {\"value\":\"Dragino_LSE01\",\"type\":\"EXACT\"}}",
+			"{\"model\": {\"value\":\"MoistureSensor\",\"type\":\"EXACT\"}}"
+		],
+		"exclude.resources": [
+			"{\"resource\": {\"value\": \"observedArea\",\"type\":\"EXACT\"}} ",
+			"{\"resource\": {\"value\": \"objects\",\"type\":\"EXACT\"}} ",
+			"{\"resource\": {\"value\": \"viewport\",\"type\":\"EXACT\"}} "
+		]
+	}
+}
