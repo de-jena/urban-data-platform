@@ -131,19 +131,19 @@ public class TrafficConflictNotification implements TypedEventHandler<ResourceDa
 
 	public boolean handleNotify(String topic, ResourceDataNotification event) {
 
-		logger.log(Level.DEBUG, "Event: {0} - {1}", event.getTopic(), event.timestamp);
+		logger.log(Level.DEBUG, "Event: {0} - {1}", event.getTopic(), event.timestamp());
 
-		boolean isCam = "Felsenkeller".equals(event.provider) && "objects".equals(event.resource)
-				&& "3".equals(event.service);
+		boolean isCam = "Felsenkeller".equals(event.provider()) && "objects".equals(event.resource())
+				&& "3".equals(event.service());
 		if (isCam) {
 			state.bike = isBikeToSouth(event);
-			state.bikeTimestamp = event.timestamp;
+			state.bikeTimestamp = event.timestamp();
 		}
 
-		boolean isIlsa = "K440".equals(event.provider) && "color".equals(event.resource);
+		boolean isIlsa = "K440".equals(event.provider()) && "color".equals(event.resource());
 		if (isIlsa) {
-			state.currentColor = (String) event.newValue;
-			state.trafficLightTimestamp = event.timestamp;
+			state.currentColor = (String) event.newValue();
+			state.trafficLightTimestamp = event.timestamp();
 			logger.log(Level.DEBUG, "Traffic light changed to: {0}", state.currentColor);
 		}
 
@@ -189,10 +189,10 @@ public class TrafficConflictNotification implements TypedEventHandler<ResourceDa
 	}
 
 	private boolean isBikeToSouth(ResourceDataNotification event) {
-		if (event.newValue == null) {
+		if (event.newValue() == null) {
 			return false;
 		}
-		List<Feature> features = ((FeatureCollection) event.newValue).features;
+		List<Feature> features = ((FeatureCollection) event.newValue()).features;
 		for (Feature feature : features) {
 			Double heading = (Double) feature.properties.get("heading");
 			Double speed = (Double) feature.properties.get("speed");
