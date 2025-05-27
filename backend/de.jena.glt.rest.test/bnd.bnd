@@ -1,0 +1,29 @@
+Test-Cases: ${classes;HIERARCHY_INDIRECTLY_ANNOTATED;org.junit.platform.commons.annotation.Testable;CONCRETE}
+
+-library: \
+	enableOSGi-Test,\
+	enable-emf
+
+# sets the usually required buildpath using the bnd library, you can extend it with the normal -buildpath to your liking
+-buildpath: \
+	org.eclipse.emfcloud.emfjson-jackson;version=latest,\
+	com.fasterxml.jackson.core.jackson-databind,\
+	org.osgi.framework;version=latest,\
+	org.gecko.emf.osgi.api,\
+	org.osgi.service.component,\
+	org.osgi.service.component.annotations,\
+	org.osgi.resource,\
+	org.eclipse.emf.common,\
+	de.jena.glt.rest.model,\
+	de.jena.glt.rest;version=snapshot,\
+	org.osgi.test.junit5.cm,\
+	org.gecko.codec,\
+	org.gecko.codec.constants,\
+	jakarta.ws.rs-api
+	
+Private-Package: de.jena.glt.rest.test
+
+Bundle-Version: 1.0.0.SNAPSHOT
+
+# Sometimes without DynamicImport Mockito will not find certain classes
+#DynamicImport-Package: *

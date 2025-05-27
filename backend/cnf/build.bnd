@@ -83,5 +83,6 @@ Bundle-Version: ${broker-base-version}
   chirpstack;member=${filter;${p};.*\.chirpstack\.*},\
   trafficos;member=${filter;${p};.*\.trafficos\.*},\
   ibis;member=${filter;${p};.*\.ibis\.*},\
+  glt;member=${filter;${p};.*\.glt\.*},\
   dashboard;member=${filter;${p};.*\.dashboard\.*}
   
