@@ -89,22 +89,22 @@ public class DraginoMoistureAreaNotifier implements TypedEventHandler<ResourceDa
 	}
 
 	private boolean updateSensor(ResourceDataNotification event) {
-		logger.log(Level.INFO, "Event: {0} - {1}", event.getTopic(), event.timestamp);
+		logger.log(Level.INFO, "Event: {0} - {1}", event.getTopic(), event.timestamp());
 		MoistureSensor ms = ChirpstackMoistureFactory.eINSTANCE.createMoistureSensor();
-		String name = event.provider + "-area";
+		String name = event.provider() + "-area";
 		ms.setName(name);
 		ms.setId(name);
 		Admin admin = ProviderFactory.eINSTANCE.createAdmin();
-		admin.setLocation((Point) event.newValue);
+		admin.setLocation((Point) event.newValue());
 		ms.setAdmin(admin);
 
 		MoistureStatus s = ChirpstackMoistureFactory.eINSTANCE.createMoistureStatus();
 		logger.log(Level.INFO, "Send moisture data ({1}%) for {0}.", name, 10);
 		s.setValue(10);
-		s.setObservedArea(createFeature((Point) event.newValue));
+		s.setObservedArea(createFeature((Point) event.newValue()));
 
-		if (soilValues.containsKey(event.provider)) {
-			Soil soil = soilValues.get(event.provider);
+		if (soilValues.containsKey(event.provider())) {
+			Soil soil = soilValues.get(event.provider());
 			s.setConduct(soil.conduct);
 			s.setTemperature(soil.temperature);
 			s.setWater(soil.water);
@@ -117,13 +117,13 @@ public class DraginoMoistureAreaNotifier implements TypedEventHandler<ResourceDa
 
 	private boolean updateSoil(ResourceDataNotification event) {
 		synchronized (soilValues) {
-			Soil soil = soilValues.computeIfAbsent(event.provider, Soil::new);
-			if ("conduct".equals(event.resource)) {
-				soil.conduct = (double) event.newValue;
-			} else if ("temperature".equals(event.resource)) {
-				soil.temperature = (double) event.newValue;
-			} else if ("water".equals(event.resource)) {
-				soil.water = (double) event.newValue;
+			Soil soil = soilValues.computeIfAbsent(event.provider(), Soil::new);
+			if ("conduct".equals(event.resource())) {
+				soil.conduct = (double) event.newValue();
+			} else if ("temperature".equals(event.resource())) {
+				soil.temperature = (double) event.newValue();
+			} else if ("water".equals(event.resource())) {
+				soil.water = (double) event.newValue();
 			}
 		}
 		return true;
