@@ -45,7 +45,7 @@ import de.jena.conflict.sensinact.model.conflictProvider.TrafficConflictAdmin;
 import de.jena.conflict.sensinact.model.conflictProvider.TrafficConflictProvider;
 
 @Component(configurationPolicy = ConfigurationPolicy.OPTIONAL)
-@EventTopics({ "DATA/Ilsa/K440/K4/1/*", "DATA/TraficamProvider/Felsenkeller/3/*" })
+@EventTopics({ "DATA/Ilsa/K440/K4_1/*", "DATA/TraficamProvider/Felsenkeller/3/*" })
 public class TrafficConflictNotification implements TypedEventHandler<ResourceDataNotification> {
 
 	private static final Logger logger = System.getLogger(TrafficConflictNotification.class.getName());
@@ -155,7 +155,7 @@ public class TrafficConflictNotification implements TypedEventHandler<ResourceDa
 			Promise<?> promise = sensiNact.pushUpdate(provider);
 			promise.onFailure(e -> logger.log(Level.ERROR, "Error while pushing to sensinact.", e));
 		}
-		logger.log(Level.INFO, "{0}", state);
+		logger.log(Level.DEBUG, "{0}", state);
 		return conflictOld;
 	}
 
@@ -203,7 +203,7 @@ public class TrafficConflictNotification implements TypedEventHandler<ResourceDa
 				return true;
 			}
 		}
-		logger.log(Level.INFO, "No Bike to south but {0} MotorCyclePlus", features.size());
+		logger.log(Level.DEBUG, "No Bike to south but {0} MotorCyclePlus", features.size());
 		state.bikeId = 0l;
 		return false;
 	}
