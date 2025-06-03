@@ -16,9 +16,6 @@
 	org.eclipse.sensinact.gateway.core.geo-json,\
 	org.eclipse.sensinact.gateway.core.impl,\
 	org.eclipse.sensinact.gateway.core.models.provider,\
-	org.eclipse.sensinact.gateway.northbound.filters.filters.core,\
-	org.eclipse.sensinact.gateway.northbound.filters.ldap,\
-	org.eclipse.sensinact.gateway.northbound.query-handler,\
 	org.eclipse.sensinact.gateway.northbound.rest,\
 	org.eclipse.sensinact.gateway.northbound.sensorthings.dto,\
 	org.eclipse.sensinact.gateway.northbound.sensorthings.filter,\
