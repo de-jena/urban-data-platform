@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link de.jena.model.glt.impl.CalendarEventPojoImpl#getType <em>Type</em>}</li>
  *   <li>{@link de.jena.model.glt.impl.CalendarEventPojoImpl#getAuthor <em>Author</em>}</li>
  *   <li>{@link de.jena.model.glt.impl.CalendarEventPojoImpl#getAlarmId <em>Alarm Id</em>}</li>
- *   <li>{@link de.jena.model.glt.impl.CalendarEventPojoImpl#getSiteId <em>Site Id</em>}</li>
+ *   <li>{@link de.jena.model.glt.impl.CalendarEventPojoImpl#getSystemId <em>System Id</em>}</li>
  * </ul>
  *
  * @generated
@@ -174,24 +174,24 @@ public class CalendarEventPojoImpl extends MinimalEObjectImpl.Container implemen
 	protected String alarmId = ALARM_ID_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getSiteId() <em>Site Id</em>}' attribute.
+	 * The default value of the '{@link #getSystemId() <em>System Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSiteId()
+	 * @see #getSystemId()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String SITE_ID_EDEFAULT = null;
+	protected static final String SYSTEM_ID_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getSiteId() <em>Site Id</em>}' attribute.
+	 * The cached value of the '{@link #getSystemId() <em>System Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSiteId()
+	 * @see #getSystemId()
 	 * @generated
 	 * @ordered
 	 */
-	protected String siteId = SITE_ID_EDEFAULT;
+	protected String systemId = SYSTEM_ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -379,8 +379,8 @@ public class CalendarEventPojoImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	@Override
-	public String getSiteId() {
-		return siteId;
+	public String getSystemId() {
+		return systemId;
 	}
 
 	/**
@@ -389,11 +389,11 @@ public class CalendarEventPojoImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	@Override
-	public void setSiteId(String newSiteId) {
-		String oldSiteId = siteId;
-		siteId = newSiteId;
+	public void setSystemId(String newSystemId) {
+		String oldSystemId = systemId;
+		systemId = newSystemId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.CALENDAR_EVENT_POJO__SITE_ID, oldSiteId, siteId));
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.CALENDAR_EVENT_POJO__SYSTEM_ID, oldSystemId, systemId));
 	}
 
 	/**
@@ -418,8 +418,8 @@ public class CalendarEventPojoImpl extends MinimalEObjectImpl.Container implemen
 				return getAuthor();
 			case GltPackage.CALENDAR_EVENT_POJO__ALARM_ID:
 				return getAlarmId();
-			case GltPackage.CALENDAR_EVENT_POJO__SITE_ID:
-				return getSiteId();
+			case GltPackage.CALENDAR_EVENT_POJO__SYSTEM_ID:
+				return getSystemId();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -453,8 +453,8 @@ public class CalendarEventPojoImpl extends MinimalEObjectImpl.Container implemen
 			case GltPackage.CALENDAR_EVENT_POJO__ALARM_ID:
 				setAlarmId((String)newValue);
 				return;
-			case GltPackage.CALENDAR_EVENT_POJO__SITE_ID:
-				setSiteId((String)newValue);
+			case GltPackage.CALENDAR_EVENT_POJO__SYSTEM_ID:
+				setSystemId((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -489,8 +489,8 @@ public class CalendarEventPojoImpl extends MinimalEObjectImpl.Container implemen
 			case GltPackage.CALENDAR_EVENT_POJO__ALARM_ID:
 				setAlarmId(ALARM_ID_EDEFAULT);
 				return;
-			case GltPackage.CALENDAR_EVENT_POJO__SITE_ID:
-				setSiteId(SITE_ID_EDEFAULT);
+			case GltPackage.CALENDAR_EVENT_POJO__SYSTEM_ID:
+				setSystemId(SYSTEM_ID_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -518,8 +518,8 @@ public class CalendarEventPojoImpl extends MinimalEObjectImpl.Container implemen
 				return AUTHOR_EDEFAULT == null ? author != null : !AUTHOR_EDEFAULT.equals(author);
 			case GltPackage.CALENDAR_EVENT_POJO__ALARM_ID:
 				return ALARM_ID_EDEFAULT == null ? alarmId != null : !ALARM_ID_EDEFAULT.equals(alarmId);
-			case GltPackage.CALENDAR_EVENT_POJO__SITE_ID:
-				return SITE_ID_EDEFAULT == null ? siteId != null : !SITE_ID_EDEFAULT.equals(siteId);
+			case GltPackage.CALENDAR_EVENT_POJO__SYSTEM_ID:
+				return SYSTEM_ID_EDEFAULT == null ? systemId != null : !SYSTEM_ID_EDEFAULT.equals(systemId);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -548,8 +548,8 @@ public class CalendarEventPojoImpl extends MinimalEObjectImpl.Container implemen
 		result.append(author);
 		result.append(", alarmId: ");
 		result.append(alarmId);
-		result.append(", siteId: ");
-		result.append(siteId);
+		result.append(", systemId: ");
+		result.append(systemId);
 		result.append(')');
 		return result.toString();
 	}

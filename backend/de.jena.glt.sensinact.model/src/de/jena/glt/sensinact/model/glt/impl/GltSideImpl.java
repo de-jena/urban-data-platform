@@ -13,8 +13,8 @@
  */
 package de.jena.glt.sensinact.model.glt.impl;
 
-import de.jena.glt.sensinact.model.glt.Glt;
 import de.jena.glt.sensinact.model.glt.GltPackage;
+import de.jena.glt.sensinact.model.glt.GltSide;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -22,18 +22,18 @@ import org.eclipse.sensinact.model.core.provider.impl.DynamicProviderImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Glt</b></em>'.
+ * An implementation of the model object '<em><b>Side</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class GltImpl extends DynamicProviderImpl implements Glt {
+public class GltSideImpl extends DynamicProviderImpl implements GltSide {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected GltImpl() {
+	protected GltSideImpl() {
 		super();
 	}
 
@@ -44,7 +44,7 @@ public class GltImpl extends DynamicProviderImpl implements Glt {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return GltPackage.Literals.GLT;
+		return GltPackage.Literals.GLT_SIDE;
 	}
 
-} //GltImpl
+} //GltSideImpl

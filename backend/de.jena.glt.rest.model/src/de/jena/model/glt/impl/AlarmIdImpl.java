@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.jena.model.glt.impl.AlarmIdImpl#getSiteId <em>Site Id</em>}</li>
+ *   <li>{@link de.jena.model.glt.impl.AlarmIdImpl#getSystemId <em>System Id</em>}</li>
  *   <li>{@link de.jena.model.glt.impl.AlarmIdImpl#getBuildingId <em>Building Id</em>}</li>
  *   <li>{@link de.jena.model.glt.impl.AlarmIdImpl#getAlarmId <em>Alarm Id</em>}</li>
  * </ul>
@@ -29,24 +29,24 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class AlarmIdImpl extends MinimalEObjectImpl.Container implements AlarmId {
 	/**
-	 * The default value of the '{@link #getSiteId() <em>Site Id</em>}' attribute.
+	 * The default value of the '{@link #getSystemId() <em>System Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSiteId()
+	 * @see #getSystemId()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String SITE_ID_EDEFAULT = null;
+	protected static final String SYSTEM_ID_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getSiteId() <em>Site Id</em>}' attribute.
+	 * The cached value of the '{@link #getSystemId() <em>System Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSiteId()
+	 * @see #getSystemId()
 	 * @generated
 	 * @ordered
 	 */
-	protected String siteId = SITE_ID_EDEFAULT;
+	protected String systemId = SYSTEM_ID_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getBuildingId() <em>Building Id</em>}' attribute.
@@ -113,8 +113,8 @@ public class AlarmIdImpl extends MinimalEObjectImpl.Container implements AlarmId
 	 * @generated
 	 */
 	@Override
-	public String getSiteId() {
-		return siteId;
+	public String getSystemId() {
+		return systemId;
 	}
 
 	/**
@@ -123,11 +123,11 @@ public class AlarmIdImpl extends MinimalEObjectImpl.Container implements AlarmId
 	 * @generated
 	 */
 	@Override
-	public void setSiteId(String newSiteId) {
-		String oldSiteId = siteId;
-		siteId = newSiteId;
+	public void setSystemId(String newSystemId) {
+		String oldSystemId = systemId;
+		systemId = newSystemId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.ALARM_ID__SITE_ID, oldSiteId, siteId));
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.ALARM_ID__SYSTEM_ID, oldSystemId, systemId));
 	}
 
 	/**
@@ -184,8 +184,8 @@ public class AlarmIdImpl extends MinimalEObjectImpl.Container implements AlarmId
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case GltPackage.ALARM_ID__SITE_ID:
-				return getSiteId();
+			case GltPackage.ALARM_ID__SYSTEM_ID:
+				return getSystemId();
 			case GltPackage.ALARM_ID__BUILDING_ID:
 				return getBuildingId();
 			case GltPackage.ALARM_ID__ALARM_ID:
@@ -202,8 +202,8 @@ public class AlarmIdImpl extends MinimalEObjectImpl.Container implements AlarmId
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case GltPackage.ALARM_ID__SITE_ID:
-				setSiteId((String)newValue);
+			case GltPackage.ALARM_ID__SYSTEM_ID:
+				setSystemId((String)newValue);
 				return;
 			case GltPackage.ALARM_ID__BUILDING_ID:
 				setBuildingId((String)newValue);
@@ -223,8 +223,8 @@ public class AlarmIdImpl extends MinimalEObjectImpl.Container implements AlarmId
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case GltPackage.ALARM_ID__SITE_ID:
-				setSiteId(SITE_ID_EDEFAULT);
+			case GltPackage.ALARM_ID__SYSTEM_ID:
+				setSystemId(SYSTEM_ID_EDEFAULT);
 				return;
 			case GltPackage.ALARM_ID__BUILDING_ID:
 				setBuildingId(BUILDING_ID_EDEFAULT);
@@ -244,8 +244,8 @@ public class AlarmIdImpl extends MinimalEObjectImpl.Container implements AlarmId
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case GltPackage.ALARM_ID__SITE_ID:
-				return SITE_ID_EDEFAULT == null ? siteId != null : !SITE_ID_EDEFAULT.equals(siteId);
+			case GltPackage.ALARM_ID__SYSTEM_ID:
+				return SYSTEM_ID_EDEFAULT == null ? systemId != null : !SYSTEM_ID_EDEFAULT.equals(systemId);
 			case GltPackage.ALARM_ID__BUILDING_ID:
 				return BUILDING_ID_EDEFAULT == null ? buildingId != null : !BUILDING_ID_EDEFAULT.equals(buildingId);
 			case GltPackage.ALARM_ID__ALARM_ID:
@@ -264,8 +264,8 @@ public class AlarmIdImpl extends MinimalEObjectImpl.Container implements AlarmId
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (siteId: ");
-		result.append(siteId);
+		result.append(" (systemId: ");
+		result.append(systemId);
 		result.append(", buildingId: ");
 		result.append(buildingId);
 		result.append(", alarmId: ");

@@ -184,12 +184,12 @@ public class GltAdapterFactory extends AdapterFactoryImpl {
 				return createAddressPojoAdapter();
 			}
 			@Override
-			public Adapter caseSitePojo(SitePojo object) {
-				return createSitePojoAdapter();
+			public Adapter caseSystemDescriptionPojo(SystemDescriptionPojo object) {
+				return createSystemDescriptionPojoAdapter();
 			}
 			@Override
-			public Adapter caseSiteRequest(SiteRequest object) {
-				return createSiteRequestAdapter();
+			public Adapter caseSystemDescriptionRequest(SystemDescriptionRequest object) {
+				return createSystemDescriptionRequestAdapter();
 			}
 			@Override
 			public Adapter caseContactPojo(ContactPojo object) {
@@ -682,30 +682,30 @@ public class GltAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.jena.model.glt.SitePojo <em>Site Pojo</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.jena.model.glt.SystemDescriptionPojo <em>System Description Pojo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.jena.model.glt.SitePojo
+	 * @see de.jena.model.glt.SystemDescriptionPojo
 	 * @generated
 	 */
-	public Adapter createSitePojoAdapter() {
+	public Adapter createSystemDescriptionPojoAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.jena.model.glt.SiteRequest <em>Site Request</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.jena.model.glt.SystemDescriptionRequest <em>System Description Request</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.jena.model.glt.SiteRequest
+	 * @see de.jena.model.glt.SystemDescriptionRequest
 	 * @generated
 	 */
-	public Adapter createSiteRequestAdapter() {
+	public Adapter createSystemDescriptionRequestAdapter() {
 		return null;
 	}
 

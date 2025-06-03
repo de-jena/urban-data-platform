@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link de.jena.model.glt.impl.StatusLogRequestImpl#getId <em>Id</em>}</li>
- *   <li>{@link de.jena.model.glt.impl.StatusLogRequestImpl#getSiteId <em>Site Id</em>}</li>
+ *   <li>{@link de.jena.model.glt.impl.StatusLogRequestImpl#getSystemId <em>System Id</em>}</li>
  *   <li>{@link de.jena.model.glt.impl.StatusLogRequestImpl#getType <em>Type</em>}</li>
  *   <li>{@link de.jena.model.glt.impl.StatusLogRequestImpl#getSeverity <em>Severity</em>}</li>
  *   <li>{@link de.jena.model.glt.impl.StatusLogRequestImpl#getMessage <em>Message</em>}</li>
@@ -54,24 +54,24 @@ public class StatusLogRequestImpl extends MinimalEObjectImpl.Container implement
 	protected BigInteger id = ID_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getSiteId() <em>Site Id</em>}' attribute.
+	 * The default value of the '{@link #getSystemId() <em>System Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSiteId()
+	 * @see #getSystemId()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String SITE_ID_EDEFAULT = null;
+	protected static final String SYSTEM_ID_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getSiteId() <em>Site Id</em>}' attribute.
+	 * The cached value of the '{@link #getSystemId() <em>System Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSiteId()
+	 * @see #getSystemId()
 	 * @generated
 	 * @ordered
 	 */
-	protected String siteId = SITE_ID_EDEFAULT;
+	protected String systemId = SYSTEM_ID_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -201,8 +201,8 @@ public class StatusLogRequestImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	@Override
-	public String getSiteId() {
-		return siteId;
+	public String getSystemId() {
+		return systemId;
 	}
 
 	/**
@@ -211,11 +211,11 @@ public class StatusLogRequestImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	@Override
-	public void setSiteId(String newSiteId) {
-		String oldSiteId = siteId;
-		siteId = newSiteId;
+	public void setSystemId(String newSystemId) {
+		String oldSystemId = systemId;
+		systemId = newSystemId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.STATUS_LOG_REQUEST__SITE_ID, oldSiteId, siteId));
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.STATUS_LOG_REQUEST__SYSTEM_ID, oldSystemId, systemId));
 	}
 
 	/**
@@ -320,8 +320,8 @@ public class StatusLogRequestImpl extends MinimalEObjectImpl.Container implement
 		switch (featureID) {
 			case GltPackage.STATUS_LOG_REQUEST__ID:
 				return getId();
-			case GltPackage.STATUS_LOG_REQUEST__SITE_ID:
-				return getSiteId();
+			case GltPackage.STATUS_LOG_REQUEST__SYSTEM_ID:
+				return getSystemId();
 			case GltPackage.STATUS_LOG_REQUEST__TYPE:
 				return getType();
 			case GltPackage.STATUS_LOG_REQUEST__SEVERITY:
@@ -345,8 +345,8 @@ public class StatusLogRequestImpl extends MinimalEObjectImpl.Container implement
 			case GltPackage.STATUS_LOG_REQUEST__ID:
 				setId((BigInteger)newValue);
 				return;
-			case GltPackage.STATUS_LOG_REQUEST__SITE_ID:
-				setSiteId((String)newValue);
+			case GltPackage.STATUS_LOG_REQUEST__SYSTEM_ID:
+				setSystemId((String)newValue);
 				return;
 			case GltPackage.STATUS_LOG_REQUEST__TYPE:
 				setType((Integer)newValue);
@@ -375,8 +375,8 @@ public class StatusLogRequestImpl extends MinimalEObjectImpl.Container implement
 			case GltPackage.STATUS_LOG_REQUEST__ID:
 				setId(ID_EDEFAULT);
 				return;
-			case GltPackage.STATUS_LOG_REQUEST__SITE_ID:
-				setSiteId(SITE_ID_EDEFAULT);
+			case GltPackage.STATUS_LOG_REQUEST__SYSTEM_ID:
+				setSystemId(SYSTEM_ID_EDEFAULT);
 				return;
 			case GltPackage.STATUS_LOG_REQUEST__TYPE:
 				setType(TYPE_EDEFAULT);
@@ -404,8 +404,8 @@ public class StatusLogRequestImpl extends MinimalEObjectImpl.Container implement
 		switch (featureID) {
 			case GltPackage.STATUS_LOG_REQUEST__ID:
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-			case GltPackage.STATUS_LOG_REQUEST__SITE_ID:
-				return SITE_ID_EDEFAULT == null ? siteId != null : !SITE_ID_EDEFAULT.equals(siteId);
+			case GltPackage.STATUS_LOG_REQUEST__SYSTEM_ID:
+				return SYSTEM_ID_EDEFAULT == null ? systemId != null : !SYSTEM_ID_EDEFAULT.equals(systemId);
 			case GltPackage.STATUS_LOG_REQUEST__TYPE:
 				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 			case GltPackage.STATUS_LOG_REQUEST__SEVERITY:
@@ -430,8 +430,8 @@ public class StatusLogRequestImpl extends MinimalEObjectImpl.Container implement
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (id: ");
 		result.append(id);
-		result.append(", siteId: ");
-		result.append(siteId);
+		result.append(", systemId: ");
+		result.append(systemId);
 		result.append(", type: ");
 		result.append(type);
 		result.append(", severity: ");

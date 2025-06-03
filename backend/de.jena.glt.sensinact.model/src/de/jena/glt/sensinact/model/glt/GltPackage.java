@@ -76,14 +76,14 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	GltPackage eINSTANCE = de.jena.glt.sensinact.model.glt.impl.GltPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link de.jena.glt.sensinact.model.glt.impl.GltImpl <em>Glt</em>}' class.
+	 * The meta object id for the '{@link de.jena.glt.sensinact.model.glt.impl.GltSideImpl <em>Side</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.jena.glt.sensinact.model.glt.impl.GltImpl
-	 * @see de.jena.glt.sensinact.model.glt.impl.GltPackageImpl#getGlt()
+	 * @see de.jena.glt.sensinact.model.glt.impl.GltSideImpl
+	 * @see de.jena.glt.sensinact.model.glt.impl.GltPackageImpl#getGltSide()
 	 * @generated
 	 */
-	int GLT = 0;
+	int GLT_SIDE = 0;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -92,7 +92,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT__ID = ProviderPackage.DYNAMIC_PROVIDER__ID;
+	int GLT_SIDE__ID = ProviderPackage.DYNAMIC_PROVIDER__ID;
 
 	/**
 	 * The feature id for the '<em><b>Admin</b></em>' containment reference.
@@ -101,7 +101,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT__ADMIN = ProviderPackage.DYNAMIC_PROVIDER__ADMIN;
+	int GLT_SIDE__ADMIN = ProviderPackage.DYNAMIC_PROVIDER__ADMIN;
 
 	/**
 	 * The feature id for the '<em><b>Linked Providers</b></em>' reference list.
@@ -110,7 +110,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT__LINKED_PROVIDERS = ProviderPackage.DYNAMIC_PROVIDER__LINKED_PROVIDERS;
+	int GLT_SIDE__LINKED_PROVIDERS = ProviderPackage.DYNAMIC_PROVIDER__LINKED_PROVIDERS;
 
 	/**
 	 * The feature id for the '<em><b>Services</b></em>' map.
@@ -119,16 +119,16 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT__SERVICES = ProviderPackage.DYNAMIC_PROVIDER__SERVICES;
+	int GLT_SIDE__SERVICES = ProviderPackage.DYNAMIC_PROVIDER__SERVICES;
 
 	/**
-	 * The number of structural features of the '<em>Glt</em>' class.
+	 * The number of structural features of the '<em>Side</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_FEATURE_COUNT = ProviderPackage.DYNAMIC_PROVIDER_FEATURE_COUNT + 0;
+	int GLT_SIDE_FEATURE_COUNT = ProviderPackage.DYNAMIC_PROVIDER_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Get Service</em>' operation.
@@ -137,7 +137,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT___GET_SERVICE__STRING = ProviderPackage.DYNAMIC_PROVIDER___GET_SERVICE__STRING;
+	int GLT_SIDE___GET_SERVICE__STRING = ProviderPackage.DYNAMIC_PROVIDER___GET_SERVICE__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Service EClass</em>' operation.
@@ -146,16 +146,16 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT___GET_SERVICE_ECLASS__STRING = ProviderPackage.DYNAMIC_PROVIDER___GET_SERVICE_ECLASS__STRING;
+	int GLT_SIDE___GET_SERVICE_ECLASS__STRING = ProviderPackage.DYNAMIC_PROVIDER___GET_SERVICE_ECLASS__STRING;
 
 	/**
-	 * The number of operations of the '<em>Glt</em>' class.
+	 * The number of operations of the '<em>Side</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPERATION_COUNT = ProviderPackage.DYNAMIC_PROVIDER_OPERATION_COUNT + 0;
+	int GLT_SIDE_OPERATION_COUNT = ProviderPackage.DYNAMIC_PROVIDER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.jena.glt.sensinact.model.glt.impl.MonitoringDataImpl <em>Monitoring Data</em>}' class.
@@ -214,14 +214,14 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 
 
 	/**
-	 * Returns the meta object for class '{@link de.jena.glt.sensinact.model.glt.Glt <em>Glt</em>}'.
+	 * Returns the meta object for class '{@link de.jena.glt.sensinact.model.glt.GltSide <em>Side</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Glt</em>'.
-	 * @see de.jena.glt.sensinact.model.glt.Glt
+	 * @return the meta object for class '<em>Side</em>'.
+	 * @see de.jena.glt.sensinact.model.glt.GltSide
 	 * @generated
 	 */
-	EClass getGlt();
+	EClass getGltSide();
 
 	/**
 	 * Returns the meta object for class '{@link de.jena.glt.sensinact.model.glt.MonitoringData <em>Monitoring Data</em>}'.
@@ -268,14 +268,14 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link de.jena.glt.sensinact.model.glt.impl.GltImpl <em>Glt</em>}' class.
+		 * The meta object literal for the '{@link de.jena.glt.sensinact.model.glt.impl.GltSideImpl <em>Side</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.jena.glt.sensinact.model.glt.impl.GltImpl
-		 * @see de.jena.glt.sensinact.model.glt.impl.GltPackageImpl#getGlt()
+		 * @see de.jena.glt.sensinact.model.glt.impl.GltSideImpl
+		 * @see de.jena.glt.sensinact.model.glt.impl.GltPackageImpl#getGltSide()
 		 * @generated
 		 */
-		EClass GLT = eINSTANCE.getGlt();
+		EClass GLT_SIDE = eINSTANCE.getGltSide();
 
 		/**
 		 * The meta object literal for the '{@link de.jena.glt.sensinact.model.glt.impl.MonitoringDataImpl <em>Monitoring Data</em>}' class.

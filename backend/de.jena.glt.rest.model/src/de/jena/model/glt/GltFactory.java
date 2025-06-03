@@ -286,22 +286,22 @@ public interface GltFactory extends EFactory {
 	AddressPojo createAddressPojo();
 
 	/**
-	 * Returns a new object of class '<em>Site Pojo</em>'.
+	 * Returns a new object of class '<em>System Description Pojo</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Site Pojo</em>'.
+	 * @return a new object of class '<em>System Description Pojo</em>'.
 	 * @generated
 	 */
-	SitePojo createSitePojo();
+	SystemDescriptionPojo createSystemDescriptionPojo();
 
 	/**
-	 * Returns a new object of class '<em>Site Request</em>'.
+	 * Returns a new object of class '<em>System Description Request</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Site Request</em>'.
+	 * @return a new object of class '<em>System Description Request</em>'.
 	 * @generated
 	 */
-	SiteRequest createSiteRequest();
+	SystemDescriptionRequest createSystemDescriptionRequest();
 
 	/**
 	 * Returns a new object of class '<em>Contact Pojo</em>'.

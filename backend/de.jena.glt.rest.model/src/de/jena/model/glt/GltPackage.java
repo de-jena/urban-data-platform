@@ -156,13 +156,13 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int ALARM__PRIORITY_WINTER = 8;
 
 	/**
-	 * The feature id for the '<em><b>Site Id</b></em>' attribute.
+	 * The feature id for the '<em><b>System Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ALARM__SITE_ID = 9;
+	int ALARM__SYSTEM_ID = 9;
 
 	/**
 	 * The feature id for the '<em><b>Flag</b></em>' attribute.
@@ -202,13 +202,13 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int ALARM_ID = 1;
 
 	/**
-	 * The feature id for the '<em><b>Site Id</b></em>' attribute.
+	 * The feature id for the '<em><b>System Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ALARM_ID__SITE_ID = 0;
+	int ALARM_ID__SYSTEM_ID = 0;
 
 	/**
 	 * The feature id for the '<em><b>Building Id</b></em>' attribute.
@@ -621,13 +621,13 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int CALENDAR_EVENT_POJO__ALARM_ID = 6;
 
 	/**
-	 * The feature id for the '<em><b>Site Id</b></em>' attribute.
+	 * The feature id for the '<em><b>System Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CALENDAR_EVENT_POJO__SITE_ID = 7;
+	int CALENDAR_EVENT_POJO__SYSTEM_ID = 7;
 
 	/**
 	 * The number of structural features of the '<em>Calendar Event Pojo</em>' class.
@@ -923,13 +923,13 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int ALARM_LOG_POJO = 11;
 
 	/**
-	 * The feature id for the '<em><b>Site Id</b></em>' attribute.
+	 * The feature id for the '<em><b>System Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ALARM_LOG_POJO__SITE_ID = 0;
+	int ALARM_LOG_POJO__SYSTEM_ID = 0;
 
 	/**
 	 * The feature id for the '<em><b>Alarm Id</b></em>' attribute.
@@ -1078,13 +1078,13 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int DATALOG_CONTENT_POJO = 13;
 
 	/**
-	 * The feature id for the '<em><b>Site Id</b></em>' attribute.
+	 * The feature id for the '<em><b>System Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATALOG_CONTENT_POJO__SITE_ID = 0;
+	int DATALOG_CONTENT_POJO__SYSTEM_ID = 0;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1259,13 +1259,13 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int POINT_VALUE_POJO = 14;
 
 	/**
-	 * The feature id for the '<em><b>Site Id</b></em>' attribute.
+	 * The feature id for the '<em><b>System Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POINT_VALUE_POJO__SITE_ID = 0;
+	int POINT_VALUE_POJO__SYSTEM_ID = 0;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1524,13 +1524,13 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int ENTITY_MONITORING_SETTINGS_POJO = 18;
 
 	/**
-	 * The feature id for the '<em><b>Site Id</b></em>' attribute.
+	 * The feature id for the '<em><b>System Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_MONITORING_SETTINGS_POJO__SITE_ID = 0;
+	int ENTITY_MONITORING_SETTINGS_POJO__SYSTEM_ID = 0;
 
 	/**
 	 * The feature id for the '<em><b>Identifier</b></em>' attribute.
@@ -1597,13 +1597,13 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int SYNC_LOG_POJO = 19;
 
 	/**
-	 * The feature id for the '<em><b>Site Id</b></em>' attribute.
+	 * The feature id for the '<em><b>System Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYNC_LOG_POJO__SITE_ID = 0;
+	int SYNC_LOG_POJO__SYSTEM_ID = 0;
 
 	/**
 	 * The feature id for the '<em><b>State</b></em>' attribute.
@@ -1697,13 +1697,13 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int STATUS_LOG_POJO__ID = 0;
 
 	/**
-	 * The feature id for the '<em><b>Site Id</b></em>' attribute.
+	 * The feature id for the '<em><b>System Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATUS_LOG_POJO__SITE_ID = 1;
+	int STATUS_LOG_POJO__SYSTEM_ID = 1;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1770,13 +1770,13 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int UPDATE_STATE_REQUEST = 21;
 
 	/**
-	 * The feature id for the '<em><b>Site Id</b></em>' attribute.
+	 * The feature id for the '<em><b>System Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATE_STATE_REQUEST__SITE_ID = 0;
+	int UPDATE_STATE_REQUEST__SYSTEM_ID = 0;
 
 	/**
 	 * The feature id for the '<em><b>Alarm Id</b></em>' attribute.
@@ -1852,13 +1852,13 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int STATUS_LOG_REQUEST__ID = 0;
 
 	/**
-	 * The feature id for the '<em><b>Site Id</b></em>' attribute.
+	 * The feature id for the '<em><b>System Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATUS_LOG_REQUEST__SITE_ID = 1;
+	int STATUS_LOG_REQUEST__SYSTEM_ID = 1;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1925,13 +1925,13 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int TIME_SCHEDULE_BLOCK_POJO = 23;
 
 	/**
-	 * The feature id for the '<em><b>Site Id</b></em>' attribute.
+	 * The feature id for the '<em><b>System Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TIME_SCHEDULE_BLOCK_POJO__SITE_ID = 0;
+	int TIME_SCHEDULE_BLOCK_POJO__SYSTEM_ID = 0;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2061,13 +2061,13 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int TIME_SCHEDULE_STATE_POJO = 24;
 
 	/**
-	 * The feature id for the '<em><b>Site Id</b></em>' attribute.
+	 * The feature id for the '<em><b>System Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TIME_SCHEDULE_STATE_POJO__SITE_ID = 0;
+	int TIME_SCHEDULE_STATE_POJO__SYSTEM_ID = 0;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2234,13 +2234,13 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int POINT_RECORD = 26;
 
 	/**
-	 * The feature id for the '<em><b>Site Id</b></em>' attribute.
+	 * The feature id for the '<em><b>System Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POINT_RECORD__SITE_ID = 0;
+	int POINT_RECORD__SYSTEM_ID = 0;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2334,13 +2334,13 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int TIME_SCHEDULE_RECORD = 27;
 
 	/**
-	 * The feature id for the '<em><b>Site Id</b></em>' attribute.
+	 * The feature id for the '<em><b>System Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TIME_SCHEDULE_RECORD__SITE_ID = 0;
+	int TIME_SCHEDULE_RECORD__SYSTEM_ID = 0;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2569,14 +2569,14 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int ADDRESS_POJO_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link de.jena.model.glt.impl.SitePojoImpl <em>Site Pojo</em>}' class.
+	 * The meta object id for the '{@link de.jena.model.glt.impl.SystemDescriptionPojoImpl <em>System Description Pojo</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.jena.model.glt.impl.SitePojoImpl
-	 * @see de.jena.model.glt.impl.GltPackageImpl#getSitePojo()
+	 * @see de.jena.model.glt.impl.SystemDescriptionPojoImpl
+	 * @see de.jena.model.glt.impl.GltPackageImpl#getSystemDescriptionPojo()
 	 * @generated
 	 */
-	int SITE_POJO = 29;
+	int SYSTEM_DESCRIPTION_POJO = 29;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2585,7 +2585,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SITE_POJO__ID = 0;
+	int SYSTEM_DESCRIPTION_POJO__ID = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2594,7 +2594,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SITE_POJO__NAME = 1;
+	int SYSTEM_DESCRIPTION_POJO__NAME = 1;
 
 	/**
 	 * The feature id for the '<em><b>Prefix</b></em>' attribute.
@@ -2603,7 +2603,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SITE_POJO__PREFIX = 2;
+	int SYSTEM_DESCRIPTION_POJO__PREFIX = 2;
 
 	/**
 	 * The feature id for the '<em><b>Ip</b></em>' attribute.
@@ -2612,7 +2612,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SITE_POJO__IP = 3;
+	int SYSTEM_DESCRIPTION_POJO__IP = 3;
 
 	/**
 	 * The feature id for the '<em><b>Directory</b></em>' attribute.
@@ -2621,7 +2621,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SITE_POJO__DIRECTORY = 4;
+	int SYSTEM_DESCRIPTION_POJO__DIRECTORY = 4;
 
 	/**
 	 * The feature id for the '<em><b>Port</b></em>' attribute.
@@ -2630,7 +2630,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SITE_POJO__PORT = 5;
+	int SYSTEM_DESCRIPTION_POJO__PORT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Lon</b></em>' attribute.
@@ -2639,7 +2639,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SITE_POJO__LON = 6;
+	int SYSTEM_DESCRIPTION_POJO__LON = 6;
 
 	/**
 	 * The feature id for the '<em><b>Lat</b></em>' attribute.
@@ -2648,7 +2648,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SITE_POJO__LAT = 7;
+	int SYSTEM_DESCRIPTION_POJO__LAT = 7;
 
 	/**
 	 * The feature id for the '<em><b>Shallow</b></em>' attribute.
@@ -2657,7 +2657,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SITE_POJO__SHALLOW = 8;
+	int SYSTEM_DESCRIPTION_POJO__SHALLOW = 8;
 
 	/**
 	 * The feature id for the '<em><b>Excluded</b></em>' attribute.
@@ -2666,7 +2666,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SITE_POJO__EXCLUDED = 9;
+	int SYSTEM_DESCRIPTION_POJO__EXCLUDED = 9;
 
 	/**
 	 * The feature id for the '<em><b>External Id</b></em>' attribute.
@@ -2675,7 +2675,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SITE_POJO__EXTERNAL_ID = 10;
+	int SYSTEM_DESCRIPTION_POJO__EXTERNAL_ID = 10;
 
 	/**
 	 * The feature id for the '<em><b>Address</b></em>' reference.
@@ -2684,7 +2684,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SITE_POJO__ADDRESS = 11;
+	int SYSTEM_DESCRIPTION_POJO__ADDRESS = 11;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' attribute.
@@ -2693,7 +2693,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SITE_POJO__SOURCE = 12;
+	int SYSTEM_DESCRIPTION_POJO__SOURCE = 12;
 
 	/**
 	 * The feature id for the '<em><b>Children</b></em>' reference list.
@@ -2702,7 +2702,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SITE_POJO__CHILDREN = 13;
+	int SYSTEM_DESCRIPTION_POJO__CHILDREN = 13;
 
 	/**
 	 * The feature id for the '<em><b>Flags</b></em>' attribute.
@@ -2711,7 +2711,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SITE_POJO__FLAGS = 14;
+	int SYSTEM_DESCRIPTION_POJO__FLAGS = 14;
 
 	/**
 	 * The feature id for the '<em><b>Cylon Network</b></em>' attribute.
@@ -2720,35 +2720,35 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SITE_POJO__CYLON_NETWORK = 15;
+	int SYSTEM_DESCRIPTION_POJO__CYLON_NETWORK = 15;
 
 	/**
-	 * The number of structural features of the '<em>Site Pojo</em>' class.
+	 * The number of structural features of the '<em>System Description Pojo</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SITE_POJO_FEATURE_COUNT = 16;
+	int SYSTEM_DESCRIPTION_POJO_FEATURE_COUNT = 16;
 
 	/**
-	 * The number of operations of the '<em>Site Pojo</em>' class.
+	 * The number of operations of the '<em>System Description Pojo</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SITE_POJO_OPERATION_COUNT = 0;
+	int SYSTEM_DESCRIPTION_POJO_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link de.jena.model.glt.impl.SiteRequestImpl <em>Site Request</em>}' class.
+	 * The meta object id for the '{@link de.jena.model.glt.impl.SystemDescriptionRequestImpl <em>System Description Request</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.jena.model.glt.impl.SiteRequestImpl
-	 * @see de.jena.model.glt.impl.GltPackageImpl#getSiteRequest()
+	 * @see de.jena.model.glt.impl.SystemDescriptionRequestImpl
+	 * @see de.jena.model.glt.impl.GltPackageImpl#getSystemDescriptionRequest()
 	 * @generated
 	 */
-	int SITE_REQUEST = 30;
+	int SYSTEM_DESCRIPTION_REQUEST = 30;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2757,7 +2757,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SITE_REQUEST__ID = 0;
+	int SYSTEM_DESCRIPTION_REQUEST__ID = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2766,7 +2766,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SITE_REQUEST__NAME = 1;
+	int SYSTEM_DESCRIPTION_REQUEST__NAME = 1;
 
 	/**
 	 * The feature id for the '<em><b>Directory</b></em>' attribute.
@@ -2775,7 +2775,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SITE_REQUEST__DIRECTORY = 2;
+	int SYSTEM_DESCRIPTION_REQUEST__DIRECTORY = 2;
 
 	/**
 	 * The feature id for the '<em><b>Port</b></em>' attribute.
@@ -2784,7 +2784,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SITE_REQUEST__PORT = 3;
+	int SYSTEM_DESCRIPTION_REQUEST__PORT = 3;
 
 	/**
 	 * The feature id for the '<em><b>External Id</b></em>' attribute.
@@ -2793,7 +2793,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SITE_REQUEST__EXTERNAL_ID = 4;
+	int SYSTEM_DESCRIPTION_REQUEST__EXTERNAL_ID = 4;
 
 	/**
 	 * The feature id for the '<em><b>Ip</b></em>' attribute.
@@ -2802,7 +2802,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SITE_REQUEST__IP = 5;
+	int SYSTEM_DESCRIPTION_REQUEST__IP = 5;
 
 	/**
 	 * The feature id for the '<em><b>Lon</b></em>' attribute.
@@ -2811,7 +2811,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SITE_REQUEST__LON = 6;
+	int SYSTEM_DESCRIPTION_REQUEST__LON = 6;
 
 	/**
 	 * The feature id for the '<em><b>Lat</b></em>' attribute.
@@ -2820,7 +2820,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SITE_REQUEST__LAT = 7;
+	int SYSTEM_DESCRIPTION_REQUEST__LAT = 7;
 
 	/**
 	 * The feature id for the '<em><b>Excluded</b></em>' attribute.
@@ -2829,7 +2829,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SITE_REQUEST__EXCLUDED = 8;
+	int SYSTEM_DESCRIPTION_REQUEST__EXCLUDED = 8;
 
 	/**
 	 * The feature id for the '<em><b>Flags</b></em>' attribute.
@@ -2838,25 +2838,25 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SITE_REQUEST__FLAGS = 9;
+	int SYSTEM_DESCRIPTION_REQUEST__FLAGS = 9;
 
 	/**
-	 * The number of structural features of the '<em>Site Request</em>' class.
+	 * The number of structural features of the '<em>System Description Request</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SITE_REQUEST_FEATURE_COUNT = 10;
+	int SYSTEM_DESCRIPTION_REQUEST_FEATURE_COUNT = 10;
 
 	/**
-	 * The number of operations of the '<em>Site Request</em>' class.
+	 * The number of operations of the '<em>System Description Request</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SITE_REQUEST_OPERATION_COUNT = 0;
+	int SYSTEM_DESCRIPTION_REQUEST_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link de.jena.model.glt.impl.ContactPojoImpl <em>Contact Pojo</em>}' class.
@@ -3433,13 +3433,13 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int CYLON_NETWORK_POJO__NAME = 2;
 
 	/**
-	 * The feature id for the '<em><b>Site Id</b></em>' attribute.
+	 * The feature id for the '<em><b>System Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CYLON_NETWORK_POJO__SITE_ID = 3;
+	int CYLON_NETWORK_POJO__SYSTEM_ID = 3;
 
 	/**
 	 * The feature id for the '<em><b>Directory</b></em>' attribute.
@@ -3771,13 +3771,13 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int SUSPECT_POJO = 42;
 
 	/**
-	 * The feature id for the '<em><b>Site Id</b></em>' attribute.
+	 * The feature id for the '<em><b>System Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUSPECT_POJO__SITE_ID = 0;
+	int SUSPECT_POJO__SYSTEM_ID = 0;
 
 	/**
 	 * The feature id for the '<em><b>Alarm Id</b></em>' attribute.
@@ -4089,22 +4089,22 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int GLT_OPEN_API_CLIENT___CREATE_EVENT_FOR_ALARM__STRING_CALENDEREVENTREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 9;
 
 	/**
-	 * The operation id for the '<em>Get Events For Site</em>' operation.
+	 * The operation id for the '<em>Get Events For System</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_EVENTS_FOR_SITE__STRING_STRING_BOOLEAN_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 10;
+	int GLT_OPEN_API_CLIENT___GET_EVENTS_FOR_SYSTEM__STRING_STRING_BOOLEAN_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 10;
 
 	/**
-	 * The operation id for the '<em>Create Event For Site</em>' operation.
+	 * The operation id for the '<em>Create Event For System</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___CREATE_EVENT_FOR_SITE__STRING_CALENDEREVENTREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 11;
+	int GLT_OPEN_API_CLIENT___CREATE_EVENT_FOR_SYSTEM__STRING_CALENDEREVENTREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 11;
 
 	/**
 	 * The operation id for the '<em>Update Event</em>' operation.
@@ -4152,13 +4152,13 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int GLT_OPEN_API_CLIENT___GET_EVENTS_FOR_ALARM_1__STRING_STRING_STRING_BIGINTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 16;
 
 	/**
-	 * The operation id for the '<em>Get Events For Site 1</em>' operation.
+	 * The operation id for the '<em>Get Events For System 1</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_EVENTS_FOR_SITE_1__STRING_STRING_STRING_BIGINTEGER_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 17;
+	int GLT_OPEN_API_CLIENT___GET_EVENTS_FOR_SYSTEM_1__STRING_STRING_STRING_BIGINTEGER_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 17;
 
 	/**
 	 * The operation id for the '<em>Get For Alarm</em>' operation.
@@ -4278,13 +4278,13 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int GLT_OPEN_API_CLIENT___GET_DEVICES_COUNT = OPEN_API_CLIENT_OPERATION_COUNT + 30;
 
 	/**
-	 * The operation id for the '<em>Get Alarms With Mismatched Sites</em>' operation.
+	 * The operation id for the '<em>Get Alarms With Mismatched Systems</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALARMS_WITH_MISMATCHED_SITES = OPEN_API_CLIENT_OPERATION_COUNT + 31;
+	int GLT_OPEN_API_CLIENT___GET_ALARMS_WITH_MISMATCHED_SYSTEMS = OPEN_API_CLIENT_OPERATION_COUNT + 31;
 
 	/**
 	 * The operation id for the '<em>Get Audit Log</em>' operation.
@@ -4467,13 +4467,13 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int GLT_OPEN_API_CLIENT___GET_ALARM_COUNT_BY_STATE_1__ELIST_BOOLEAN_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 51;
 
 	/**
-	 * The operation id for the '<em>Get Alarm Count For Site</em>' operation.
+	 * The operation id for the '<em>Get Alarm Count For System</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALARM_COUNT_FOR_SITE__STRING_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 52;
+	int GLT_OPEN_API_CLIENT___GET_ALARM_COUNT_FOR_SYSTEM__STRING_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 52;
 
 	/**
 	 * The operation id for the '<em>Get Alarm For State Count</em>' operation.
@@ -4692,13 +4692,13 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int GLT_OPEN_API_CLIENT___LOGS_FOR_STATES__ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 76;
 
 	/**
-	 * The operation id for the '<em>Refresh Site</em>' operation.
+	 * The operation id for the '<em>Refresh System</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___REFRESH_SITE__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 77;
+	int GLT_OPEN_API_CLIENT___REFRESH_SYSTEM__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 77;
 
 	/**
 	 * The operation id for the '<em>Update Alarm State</em>' operation.
@@ -4854,85 +4854,13 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int GLT_OPEN_API_CLIENT___GET_ALL_SETTINGS = OPEN_API_CLIENT_OPERATION_COUNT + 94;
 
 	/**
-	 * The operation id for the '<em>Get Site</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GLT_OPEN_API_CLIENT___GET_SITE__STRING_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 95;
-
-	/**
-	 * The operation id for the '<em>Update Site</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GLT_OPEN_API_CLIENT___UPDATE_SITE__STRING_SITEREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 96;
-
-	/**
-	 * The operation id for the '<em>Create Site</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GLT_OPEN_API_CLIENT___CREATE_SITE__STRING_SITEREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 97;
-
-	/**
-	 * The operation id for the '<em>Delete Site</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GLT_OPEN_API_CLIENT___DELETE_SITE__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 98;
-
-	/**
-	 * The operation id for the '<em>Get Contacts</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GLT_OPEN_API_CLIENT___GET_CONTACTS__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 99;
-
-	/**
-	 * The operation id for the '<em>Get Contracts</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GLT_OPEN_API_CLIENT___GET_CONTRACTS__STRING_STRING_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 100;
-
-	/**
-	 * The operation id for the '<em>Get Sites</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GLT_OPEN_API_CLIENT___GET_SITES__BOOLEAN_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 101;
-
-	/**
-	 * The operation id for the '<em>Get Tech Facilities</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GLT_OPEN_API_CLIENT___GET_TECH_FACILITIES__STRING_STRING_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 102;
-
-	/**
 	 * The operation id for the '<em>Get Auth Status</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_AUTH_STATUS = OPEN_API_CLIENT_OPERATION_COUNT + 103;
+	int GLT_OPEN_API_CLIENT___GET_AUTH_STATUS = OPEN_API_CLIENT_OPERATION_COUNT + 95;
 
 	/**
 	 * The operation id for the '<em>Get Status</em>' operation.
@@ -4941,7 +4869,79 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_STATUS = OPEN_API_CLIENT_OPERATION_COUNT + 104;
+	int GLT_OPEN_API_CLIENT___GET_STATUS = OPEN_API_CLIENT_OPERATION_COUNT + 96;
+
+	/**
+	 * The operation id for the '<em>Get System</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLT_OPEN_API_CLIENT___GET_SYSTEM__STRING_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 97;
+
+	/**
+	 * The operation id for the '<em>Update System</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLT_OPEN_API_CLIENT___UPDATE_SYSTEM__STRING_SYSTEMDESCRIPTIONREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 98;
+
+	/**
+	 * The operation id for the '<em>Create System Description</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLT_OPEN_API_CLIENT___CREATE_SYSTEM_DESCRIPTION__STRING_SYSTEMDESCRIPTIONREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 99;
+
+	/**
+	 * The operation id for the '<em>Delete System</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLT_OPEN_API_CLIENT___DELETE_SYSTEM__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 100;
+
+	/**
+	 * The operation id for the '<em>Get Contacts</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLT_OPEN_API_CLIENT___GET_CONTACTS__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 101;
+
+	/**
+	 * The operation id for the '<em>Get Contracts</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLT_OPEN_API_CLIENT___GET_CONTRACTS__STRING_STRING_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 102;
+
+	/**
+	 * The operation id for the '<em>Get Systems</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLT_OPEN_API_CLIENT___GET_SYSTEMS__BOOLEAN_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 103;
+
+	/**
+	 * The operation id for the '<em>Get Tech Facilities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLT_OPEN_API_CLIENT___GET_TECH_FACILITIES__STRING_STRING_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 104;
 
 	/**
 	 * The operation id for the '<em>Get Entities</em>' operation.
@@ -5121,7 +5121,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___ADD_USER__BOOLEAN_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 124;
+	int GLT_OPEN_API_CLIENT___ADD_USER__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 124;
 
 	/**
 	 * The operation id for the '<em>Current Role</em>' operation.
@@ -5353,15 +5353,15 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getAlarm_PriorityWinter();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.Alarm#getSiteId <em>Site Id</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.Alarm#getSystemId <em>System Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Site Id</em>'.
-	 * @see de.jena.model.glt.Alarm#getSiteId()
+	 * @return the meta object for the attribute '<em>System Id</em>'.
+	 * @see de.jena.model.glt.Alarm#getSystemId()
 	 * @see #getAlarm()
 	 * @generated
 	 */
-	EAttribute getAlarm_SiteId();
+	EAttribute getAlarm_SystemId();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.jena.model.glt.Alarm#getFlag <em>Flag</em>}'.
@@ -5385,15 +5385,15 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getAlarmId();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.AlarmId#getSiteId <em>Site Id</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.AlarmId#getSystemId <em>System Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Site Id</em>'.
-	 * @see de.jena.model.glt.AlarmId#getSiteId()
+	 * @return the meta object for the attribute '<em>System Id</em>'.
+	 * @see de.jena.model.glt.AlarmId#getSystemId()
 	 * @see #getAlarmId()
 	 * @generated
 	 */
-	EAttribute getAlarmId_SiteId();
+	EAttribute getAlarmId_SystemId();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.jena.model.glt.AlarmId#getBuildingId <em>Building Id</em>}'.
@@ -5776,15 +5776,15 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getCalendarEventPojo_AlarmId();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.CalendarEventPojo#getSiteId <em>Site Id</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.CalendarEventPojo#getSystemId <em>System Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Site Id</em>'.
-	 * @see de.jena.model.glt.CalendarEventPojo#getSiteId()
+	 * @return the meta object for the attribute '<em>System Id</em>'.
+	 * @see de.jena.model.glt.CalendarEventPojo#getSystemId()
 	 * @see #getCalendarEventPojo()
 	 * @generated
 	 */
-	EAttribute getCalendarEventPojo_SiteId();
+	EAttribute getCalendarEventPojo_SystemId();
 
 	/**
 	 * Returns the meta object for class '{@link de.jena.model.glt.CalenderEventRequest <em>Calender Event Request</em>}'.
@@ -6024,15 +6024,15 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getAlarmLogPojo();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.AlarmLogPojo#getSiteId <em>Site Id</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.AlarmLogPojo#getSystemId <em>System Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Site Id</em>'.
-	 * @see de.jena.model.glt.AlarmLogPojo#getSiteId()
+	 * @return the meta object for the attribute '<em>System Id</em>'.
+	 * @see de.jena.model.glt.AlarmLogPojo#getSystemId()
 	 * @see #getAlarmLogPojo()
 	 * @generated
 	 */
-	EAttribute getAlarmLogPojo_SiteId();
+	EAttribute getAlarmLogPojo_SystemId();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.jena.model.glt.AlarmLogPojo#getAlarmId <em>Alarm Id</em>}'.
@@ -6165,15 +6165,15 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getDatalogContentPojo();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.DatalogContentPojo#getSiteId <em>Site Id</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.DatalogContentPojo#getSystemId <em>System Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Site Id</em>'.
-	 * @see de.jena.model.glt.DatalogContentPojo#getSiteId()
+	 * @return the meta object for the attribute '<em>System Id</em>'.
+	 * @see de.jena.model.glt.DatalogContentPojo#getSystemId()
 	 * @see #getDatalogContentPojo()
 	 * @generated
 	 */
-	EAttribute getDatalogContentPojo_SiteId();
+	EAttribute getDatalogContentPojo_SystemId();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.jena.model.glt.DatalogContentPojo#getId <em>Id</em>}'.
@@ -6362,15 +6362,15 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getPointValuePojo();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.PointValuePojo#getSiteId <em>Site Id</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.PointValuePojo#getSystemId <em>System Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Site Id</em>'.
-	 * @see de.jena.model.glt.PointValuePojo#getSiteId()
+	 * @return the meta object for the attribute '<em>System Id</em>'.
+	 * @see de.jena.model.glt.PointValuePojo#getSystemId()
 	 * @see #getPointValuePojo()
 	 * @generated
 	 */
-	EAttribute getPointValuePojo_SiteId();
+	EAttribute getPointValuePojo_SystemId();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.jena.model.glt.PointValuePojo#getId <em>Id</em>}'.
@@ -6589,15 +6589,15 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getEntityMonitoringSettingsPojo();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.EntityMonitoringSettingsPojo#getSiteId <em>Site Id</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.EntityMonitoringSettingsPojo#getSystemId <em>System Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Site Id</em>'.
-	 * @see de.jena.model.glt.EntityMonitoringSettingsPojo#getSiteId()
+	 * @return the meta object for the attribute '<em>System Id</em>'.
+	 * @see de.jena.model.glt.EntityMonitoringSettingsPojo#getSystemId()
 	 * @see #getEntityMonitoringSettingsPojo()
 	 * @generated
 	 */
-	EAttribute getEntityMonitoringSettingsPojo_SiteId();
+	EAttribute getEntityMonitoringSettingsPojo_SystemId();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.jena.model.glt.EntityMonitoringSettingsPojo#getIdentifier <em>Identifier</em>}'.
@@ -6654,15 +6654,15 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getSyncLogPojo();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SyncLogPojo#getSiteId <em>Site Id</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SyncLogPojo#getSystemId <em>System Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Site Id</em>'.
-	 * @see de.jena.model.glt.SyncLogPojo#getSiteId()
+	 * @return the meta object for the attribute '<em>System Id</em>'.
+	 * @see de.jena.model.glt.SyncLogPojo#getSystemId()
 	 * @see #getSyncLogPojo()
 	 * @generated
 	 */
-	EAttribute getSyncLogPojo_SiteId();
+	EAttribute getSyncLogPojo_SystemId();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SyncLogPojo#getState <em>State</em>}'.
@@ -6752,15 +6752,15 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getStatusLogPojo_Id();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.StatusLogPojo#getSiteId <em>Site Id</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.StatusLogPojo#getSystemId <em>System Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Site Id</em>'.
-	 * @see de.jena.model.glt.StatusLogPojo#getSiteId()
+	 * @return the meta object for the attribute '<em>System Id</em>'.
+	 * @see de.jena.model.glt.StatusLogPojo#getSystemId()
 	 * @see #getStatusLogPojo()
 	 * @generated
 	 */
-	EAttribute getStatusLogPojo_SiteId();
+	EAttribute getStatusLogPojo_SystemId();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.jena.model.glt.StatusLogPojo#getType <em>Type</em>}'.
@@ -6817,15 +6817,15 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getUpdateStateRequest();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.UpdateStateRequest#getSiteId <em>Site Id</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.UpdateStateRequest#getSystemId <em>System Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Site Id</em>'.
-	 * @see de.jena.model.glt.UpdateStateRequest#getSiteId()
+	 * @return the meta object for the attribute '<em>System Id</em>'.
+	 * @see de.jena.model.glt.UpdateStateRequest#getSystemId()
 	 * @see #getUpdateStateRequest()
 	 * @generated
 	 */
-	EAttribute getUpdateStateRequest_SiteId();
+	EAttribute getUpdateStateRequest_SystemId();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.jena.model.glt.UpdateStateRequest#getAlarmId <em>Alarm Id</em>}'.
@@ -6893,15 +6893,15 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getStatusLogRequest_Id();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.StatusLogRequest#getSiteId <em>Site Id</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.StatusLogRequest#getSystemId <em>System Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Site Id</em>'.
-	 * @see de.jena.model.glt.StatusLogRequest#getSiteId()
+	 * @return the meta object for the attribute '<em>System Id</em>'.
+	 * @see de.jena.model.glt.StatusLogRequest#getSystemId()
 	 * @see #getStatusLogRequest()
 	 * @generated
 	 */
-	EAttribute getStatusLogRequest_SiteId();
+	EAttribute getStatusLogRequest_SystemId();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.jena.model.glt.StatusLogRequest#getType <em>Type</em>}'.
@@ -6958,15 +6958,15 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getTimeScheduleBlockPojo();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.TimeScheduleBlockPojo#getSiteId <em>Site Id</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.TimeScheduleBlockPojo#getSystemId <em>System Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Site Id</em>'.
-	 * @see de.jena.model.glt.TimeScheduleBlockPojo#getSiteId()
+	 * @return the meta object for the attribute '<em>System Id</em>'.
+	 * @see de.jena.model.glt.TimeScheduleBlockPojo#getSystemId()
 	 * @see #getTimeScheduleBlockPojo()
 	 * @generated
 	 */
-	EAttribute getTimeScheduleBlockPojo_SiteId();
+	EAttribute getTimeScheduleBlockPojo_SystemId();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.jena.model.glt.TimeScheduleBlockPojo#getId <em>Id</em>}'.
@@ -7100,15 +7100,15 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getTimeScheduleStatePojo();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.TimeScheduleStatePojo#getSiteId <em>Site Id</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.TimeScheduleStatePojo#getSystemId <em>System Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Site Id</em>'.
-	 * @see de.jena.model.glt.TimeScheduleStatePojo#getSiteId()
+	 * @return the meta object for the attribute '<em>System Id</em>'.
+	 * @see de.jena.model.glt.TimeScheduleStatePojo#getSystemId()
 	 * @see #getTimeScheduleStatePojo()
 	 * @generated
 	 */
-	EAttribute getTimeScheduleStatePojo_SiteId();
+	EAttribute getTimeScheduleStatePojo_SystemId();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.jena.model.glt.TimeScheduleStatePojo#getId <em>Id</em>}'.
@@ -7263,15 +7263,15 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getPointRecord();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.PointRecord#getSiteId <em>Site Id</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.PointRecord#getSystemId <em>System Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Site Id</em>'.
-	 * @see de.jena.model.glt.PointRecord#getSiteId()
+	 * @return the meta object for the attribute '<em>System Id</em>'.
+	 * @see de.jena.model.glt.PointRecord#getSystemId()
 	 * @see #getPointRecord()
 	 * @generated
 	 */
-	EAttribute getPointRecord_SiteId();
+	EAttribute getPointRecord_SystemId();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.jena.model.glt.PointRecord#getId <em>Id</em>}'.
@@ -7361,15 +7361,15 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getTimeScheduleRecord();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.TimeScheduleRecord#getSiteId <em>Site Id</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.TimeScheduleRecord#getSystemId <em>System Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Site Id</em>'.
-	 * @see de.jena.model.glt.TimeScheduleRecord#getSiteId()
+	 * @return the meta object for the attribute '<em>System Id</em>'.
+	 * @see de.jena.model.glt.TimeScheduleRecord#getSystemId()
 	 * @see #getTimeScheduleRecord()
 	 * @generated
 	 */
-	EAttribute getTimeScheduleRecord_SiteId();
+	EAttribute getTimeScheduleRecord_SystemId();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.jena.model.glt.TimeScheduleRecord#getId <em>Id</em>}'.
@@ -7602,310 +7602,310 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getAddressPojo_Representation();
 
 	/**
-	 * Returns the meta object for class '{@link de.jena.model.glt.SitePojo <em>Site Pojo</em>}'.
+	 * Returns the meta object for class '{@link de.jena.model.glt.SystemDescriptionPojo <em>System Description Pojo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Site Pojo</em>'.
-	 * @see de.jena.model.glt.SitePojo
+	 * @return the meta object for class '<em>System Description Pojo</em>'.
+	 * @see de.jena.model.glt.SystemDescriptionPojo
 	 * @generated
 	 */
-	EClass getSitePojo();
+	EClass getSystemDescriptionPojo();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SitePojo#getId <em>Id</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SystemDescriptionPojo#getId <em>Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see de.jena.model.glt.SitePojo#getId()
-	 * @see #getSitePojo()
+	 * @see de.jena.model.glt.SystemDescriptionPojo#getId()
+	 * @see #getSystemDescriptionPojo()
 	 * @generated
 	 */
-	EAttribute getSitePojo_Id();
+	EAttribute getSystemDescriptionPojo_Id();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SitePojo#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SystemDescriptionPojo#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see de.jena.model.glt.SitePojo#getName()
-	 * @see #getSitePojo()
+	 * @see de.jena.model.glt.SystemDescriptionPojo#getName()
+	 * @see #getSystemDescriptionPojo()
 	 * @generated
 	 */
-	EAttribute getSitePojo_Name();
+	EAttribute getSystemDescriptionPojo_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SitePojo#getPrefix <em>Prefix</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SystemDescriptionPojo#getPrefix <em>Prefix</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Prefix</em>'.
-	 * @see de.jena.model.glt.SitePojo#getPrefix()
-	 * @see #getSitePojo()
+	 * @see de.jena.model.glt.SystemDescriptionPojo#getPrefix()
+	 * @see #getSystemDescriptionPojo()
 	 * @generated
 	 */
-	EAttribute getSitePojo_Prefix();
+	EAttribute getSystemDescriptionPojo_Prefix();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SitePojo#getIp <em>Ip</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SystemDescriptionPojo#getIp <em>Ip</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Ip</em>'.
-	 * @see de.jena.model.glt.SitePojo#getIp()
-	 * @see #getSitePojo()
+	 * @see de.jena.model.glt.SystemDescriptionPojo#getIp()
+	 * @see #getSystemDescriptionPojo()
 	 * @generated
 	 */
-	EAttribute getSitePojo_Ip();
+	EAttribute getSystemDescriptionPojo_Ip();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SitePojo#getDirectory <em>Directory</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SystemDescriptionPojo#getDirectory <em>Directory</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Directory</em>'.
-	 * @see de.jena.model.glt.SitePojo#getDirectory()
-	 * @see #getSitePojo()
+	 * @see de.jena.model.glt.SystemDescriptionPojo#getDirectory()
+	 * @see #getSystemDescriptionPojo()
 	 * @generated
 	 */
-	EAttribute getSitePojo_Directory();
+	EAttribute getSystemDescriptionPojo_Directory();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SitePojo#getPort <em>Port</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SystemDescriptionPojo#getPort <em>Port</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Port</em>'.
-	 * @see de.jena.model.glt.SitePojo#getPort()
-	 * @see #getSitePojo()
+	 * @see de.jena.model.glt.SystemDescriptionPojo#getPort()
+	 * @see #getSystemDescriptionPojo()
 	 * @generated
 	 */
-	EAttribute getSitePojo_Port();
+	EAttribute getSystemDescriptionPojo_Port();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SitePojo#getLon <em>Lon</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SystemDescriptionPojo#getLon <em>Lon</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Lon</em>'.
-	 * @see de.jena.model.glt.SitePojo#getLon()
-	 * @see #getSitePojo()
+	 * @see de.jena.model.glt.SystemDescriptionPojo#getLon()
+	 * @see #getSystemDescriptionPojo()
 	 * @generated
 	 */
-	EAttribute getSitePojo_Lon();
+	EAttribute getSystemDescriptionPojo_Lon();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SitePojo#getLat <em>Lat</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SystemDescriptionPojo#getLat <em>Lat</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Lat</em>'.
-	 * @see de.jena.model.glt.SitePojo#getLat()
-	 * @see #getSitePojo()
+	 * @see de.jena.model.glt.SystemDescriptionPojo#getLat()
+	 * @see #getSystemDescriptionPojo()
 	 * @generated
 	 */
-	EAttribute getSitePojo_Lat();
+	EAttribute getSystemDescriptionPojo_Lat();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SitePojo#getShallow <em>Shallow</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SystemDescriptionPojo#getShallow <em>Shallow</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Shallow</em>'.
-	 * @see de.jena.model.glt.SitePojo#getShallow()
-	 * @see #getSitePojo()
+	 * @see de.jena.model.glt.SystemDescriptionPojo#getShallow()
+	 * @see #getSystemDescriptionPojo()
 	 * @generated
 	 */
-	EAttribute getSitePojo_Shallow();
+	EAttribute getSystemDescriptionPojo_Shallow();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SitePojo#getExcluded <em>Excluded</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SystemDescriptionPojo#getExcluded <em>Excluded</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Excluded</em>'.
-	 * @see de.jena.model.glt.SitePojo#getExcluded()
-	 * @see #getSitePojo()
+	 * @see de.jena.model.glt.SystemDescriptionPojo#getExcluded()
+	 * @see #getSystemDescriptionPojo()
 	 * @generated
 	 */
-	EAttribute getSitePojo_Excluded();
+	EAttribute getSystemDescriptionPojo_Excluded();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SitePojo#getExternalId <em>External Id</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SystemDescriptionPojo#getExternalId <em>External Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>External Id</em>'.
-	 * @see de.jena.model.glt.SitePojo#getExternalId()
-	 * @see #getSitePojo()
+	 * @see de.jena.model.glt.SystemDescriptionPojo#getExternalId()
+	 * @see #getSystemDescriptionPojo()
 	 * @generated
 	 */
-	EAttribute getSitePojo_ExternalId();
+	EAttribute getSystemDescriptionPojo_ExternalId();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.jena.model.glt.SitePojo#getAddress <em>Address</em>}'.
+	 * Returns the meta object for the reference '{@link de.jena.model.glt.SystemDescriptionPojo#getAddress <em>Address</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Address</em>'.
-	 * @see de.jena.model.glt.SitePojo#getAddress()
-	 * @see #getSitePojo()
+	 * @see de.jena.model.glt.SystemDescriptionPojo#getAddress()
+	 * @see #getSystemDescriptionPojo()
 	 * @generated
 	 */
-	EReference getSitePojo_Address();
+	EReference getSystemDescriptionPojo_Address();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SitePojo#getSource <em>Source</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SystemDescriptionPojo#getSource <em>Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Source</em>'.
-	 * @see de.jena.model.glt.SitePojo#getSource()
-	 * @see #getSitePojo()
+	 * @see de.jena.model.glt.SystemDescriptionPojo#getSource()
+	 * @see #getSystemDescriptionPojo()
 	 * @generated
 	 */
-	EAttribute getSitePojo_Source();
+	EAttribute getSystemDescriptionPojo_Source();
 
 	/**
-	 * Returns the meta object for the reference list '{@link de.jena.model.glt.SitePojo#getChildren <em>Children</em>}'.
+	 * Returns the meta object for the reference list '{@link de.jena.model.glt.SystemDescriptionPojo#getChildren <em>Children</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Children</em>'.
-	 * @see de.jena.model.glt.SitePojo#getChildren()
-	 * @see #getSitePojo()
+	 * @see de.jena.model.glt.SystemDescriptionPojo#getChildren()
+	 * @see #getSystemDescriptionPojo()
 	 * @generated
 	 */
-	EReference getSitePojo_Children();
+	EReference getSystemDescriptionPojo_Children();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SitePojo#getFlags <em>Flags</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SystemDescriptionPojo#getFlags <em>Flags</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Flags</em>'.
-	 * @see de.jena.model.glt.SitePojo#getFlags()
-	 * @see #getSitePojo()
+	 * @see de.jena.model.glt.SystemDescriptionPojo#getFlags()
+	 * @see #getSystemDescriptionPojo()
 	 * @generated
 	 */
-	EAttribute getSitePojo_Flags();
+	EAttribute getSystemDescriptionPojo_Flags();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SitePojo#getCylonNetwork <em>Cylon Network</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SystemDescriptionPojo#getCylonNetwork <em>Cylon Network</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Cylon Network</em>'.
-	 * @see de.jena.model.glt.SitePojo#getCylonNetwork()
-	 * @see #getSitePojo()
+	 * @see de.jena.model.glt.SystemDescriptionPojo#getCylonNetwork()
+	 * @see #getSystemDescriptionPojo()
 	 * @generated
 	 */
-	EAttribute getSitePojo_CylonNetwork();
+	EAttribute getSystemDescriptionPojo_CylonNetwork();
 
 	/**
-	 * Returns the meta object for class '{@link de.jena.model.glt.SiteRequest <em>Site Request</em>}'.
+	 * Returns the meta object for class '{@link de.jena.model.glt.SystemDescriptionRequest <em>System Description Request</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Site Request</em>'.
-	 * @see de.jena.model.glt.SiteRequest
+	 * @return the meta object for class '<em>System Description Request</em>'.
+	 * @see de.jena.model.glt.SystemDescriptionRequest
 	 * @generated
 	 */
-	EClass getSiteRequest();
+	EClass getSystemDescriptionRequest();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SiteRequest#getId <em>Id</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SystemDescriptionRequest#getId <em>Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see de.jena.model.glt.SiteRequest#getId()
-	 * @see #getSiteRequest()
+	 * @see de.jena.model.glt.SystemDescriptionRequest#getId()
+	 * @see #getSystemDescriptionRequest()
 	 * @generated
 	 */
-	EAttribute getSiteRequest_Id();
+	EAttribute getSystemDescriptionRequest_Id();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SiteRequest#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SystemDescriptionRequest#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see de.jena.model.glt.SiteRequest#getName()
-	 * @see #getSiteRequest()
+	 * @see de.jena.model.glt.SystemDescriptionRequest#getName()
+	 * @see #getSystemDescriptionRequest()
 	 * @generated
 	 */
-	EAttribute getSiteRequest_Name();
+	EAttribute getSystemDescriptionRequest_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SiteRequest#getDirectory <em>Directory</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SystemDescriptionRequest#getDirectory <em>Directory</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Directory</em>'.
-	 * @see de.jena.model.glt.SiteRequest#getDirectory()
-	 * @see #getSiteRequest()
+	 * @see de.jena.model.glt.SystemDescriptionRequest#getDirectory()
+	 * @see #getSystemDescriptionRequest()
 	 * @generated
 	 */
-	EAttribute getSiteRequest_Directory();
+	EAttribute getSystemDescriptionRequest_Directory();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SiteRequest#getPort <em>Port</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SystemDescriptionRequest#getPort <em>Port</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Port</em>'.
-	 * @see de.jena.model.glt.SiteRequest#getPort()
-	 * @see #getSiteRequest()
+	 * @see de.jena.model.glt.SystemDescriptionRequest#getPort()
+	 * @see #getSystemDescriptionRequest()
 	 * @generated
 	 */
-	EAttribute getSiteRequest_Port();
+	EAttribute getSystemDescriptionRequest_Port();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SiteRequest#getExternalId <em>External Id</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SystemDescriptionRequest#getExternalId <em>External Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>External Id</em>'.
-	 * @see de.jena.model.glt.SiteRequest#getExternalId()
-	 * @see #getSiteRequest()
+	 * @see de.jena.model.glt.SystemDescriptionRequest#getExternalId()
+	 * @see #getSystemDescriptionRequest()
 	 * @generated
 	 */
-	EAttribute getSiteRequest_ExternalId();
+	EAttribute getSystemDescriptionRequest_ExternalId();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SiteRequest#getIp <em>Ip</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SystemDescriptionRequest#getIp <em>Ip</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Ip</em>'.
-	 * @see de.jena.model.glt.SiteRequest#getIp()
-	 * @see #getSiteRequest()
+	 * @see de.jena.model.glt.SystemDescriptionRequest#getIp()
+	 * @see #getSystemDescriptionRequest()
 	 * @generated
 	 */
-	EAttribute getSiteRequest_Ip();
+	EAttribute getSystemDescriptionRequest_Ip();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SiteRequest#getLon <em>Lon</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SystemDescriptionRequest#getLon <em>Lon</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Lon</em>'.
-	 * @see de.jena.model.glt.SiteRequest#getLon()
-	 * @see #getSiteRequest()
+	 * @see de.jena.model.glt.SystemDescriptionRequest#getLon()
+	 * @see #getSystemDescriptionRequest()
 	 * @generated
 	 */
-	EAttribute getSiteRequest_Lon();
+	EAttribute getSystemDescriptionRequest_Lon();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SiteRequest#getLat <em>Lat</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SystemDescriptionRequest#getLat <em>Lat</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Lat</em>'.
-	 * @see de.jena.model.glt.SiteRequest#getLat()
-	 * @see #getSiteRequest()
+	 * @see de.jena.model.glt.SystemDescriptionRequest#getLat()
+	 * @see #getSystemDescriptionRequest()
 	 * @generated
 	 */
-	EAttribute getSiteRequest_Lat();
+	EAttribute getSystemDescriptionRequest_Lat();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SiteRequest#getExcluded <em>Excluded</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SystemDescriptionRequest#getExcluded <em>Excluded</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Excluded</em>'.
-	 * @see de.jena.model.glt.SiteRequest#getExcluded()
-	 * @see #getSiteRequest()
+	 * @see de.jena.model.glt.SystemDescriptionRequest#getExcluded()
+	 * @see #getSystemDescriptionRequest()
 	 * @generated
 	 */
-	EAttribute getSiteRequest_Excluded();
+	EAttribute getSystemDescriptionRequest_Excluded();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SiteRequest#getFlags <em>Flags</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SystemDescriptionRequest#getFlags <em>Flags</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Flags</em>'.
-	 * @see de.jena.model.glt.SiteRequest#getFlags()
-	 * @see #getSiteRequest()
+	 * @see de.jena.model.glt.SystemDescriptionRequest#getFlags()
+	 * @see #getSystemDescriptionRequest()
 	 * @generated
 	 */
-	EAttribute getSiteRequest_Flags();
+	EAttribute getSystemDescriptionRequest_Flags();
 
 	/**
 	 * Returns the meta object for class '{@link de.jena.model.glt.ContactPojo <em>Contact Pojo</em>}'.
@@ -8462,15 +8462,15 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getCylonNetworkPojo_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.CylonNetworkPojo#getSiteId <em>Site Id</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.CylonNetworkPojo#getSystemId <em>System Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Site Id</em>'.
-	 * @see de.jena.model.glt.CylonNetworkPojo#getSiteId()
+	 * @return the meta object for the attribute '<em>System Id</em>'.
+	 * @see de.jena.model.glt.CylonNetworkPojo#getSystemId()
 	 * @see #getCylonNetworkPojo()
 	 * @generated
 	 */
-	EAttribute getCylonNetworkPojo_SiteId();
+	EAttribute getCylonNetworkPojo_SystemId();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.jena.model.glt.CylonNetworkPojo#getDirectory <em>Directory</em>}'.
@@ -8754,15 +8754,15 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getSuspectPojo();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SuspectPojo#getSiteId <em>Site Id</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SuspectPojo#getSystemId <em>System Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Site Id</em>'.
-	 * @see de.jena.model.glt.SuspectPojo#getSiteId()
+	 * @return the meta object for the attribute '<em>System Id</em>'.
+	 * @see de.jena.model.glt.SuspectPojo#getSystemId()
 	 * @see #getSuspectPojo()
 	 * @generated
 	 */
-	EAttribute getSuspectPojo_SiteId();
+	EAttribute getSuspectPojo_SystemId();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.jena.model.glt.SuspectPojo#getAlarmId <em>Alarm Id</em>}'.
@@ -9025,24 +9025,24 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EOperation getGltOpenApiClient__CreateEventForAlarm__String_CalenderEventRequest();
 
 	/**
-	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getEventsForSite(java.lang.String, java.lang.String, java.lang.Boolean, java.lang.String, java.lang.String) <em>Get Events For Site</em>}' operation.
+	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getEventsForSystem(java.lang.String, java.lang.String, java.lang.Boolean, java.lang.String, java.lang.String) <em>Get Events For System</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Events For Site</em>' operation.
-	 * @see de.jena.model.glt.GltOpenApiClient#getEventsForSite(java.lang.String, java.lang.String, java.lang.Boolean, java.lang.String, java.lang.String)
+	 * @return the meta object for the '<em>Get Events For System</em>' operation.
+	 * @see de.jena.model.glt.GltOpenApiClient#getEventsForSystem(java.lang.String, java.lang.String, java.lang.Boolean, java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getGltOpenApiClient__GetEventsForSite__String_String_Boolean_String_String();
+	EOperation getGltOpenApiClient__GetEventsForSystem__String_String_Boolean_String_String();
 
 	/**
-	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#createEventForSite(java.lang.String, de.jena.model.glt.CalenderEventRequest) <em>Create Event For Site</em>}' operation.
+	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#createEventForSystem(java.lang.String, de.jena.model.glt.CalenderEventRequest) <em>Create Event For System</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Create Event For Site</em>' operation.
-	 * @see de.jena.model.glt.GltOpenApiClient#createEventForSite(java.lang.String, de.jena.model.glt.CalenderEventRequest)
+	 * @return the meta object for the '<em>Create Event For System</em>' operation.
+	 * @see de.jena.model.glt.GltOpenApiClient#createEventForSystem(java.lang.String, de.jena.model.glt.CalenderEventRequest)
 	 * @generated
 	 */
-	EOperation getGltOpenApiClient__CreateEventForSite__String_CalenderEventRequest();
+	EOperation getGltOpenApiClient__CreateEventForSystem__String_CalenderEventRequest();
 
 	/**
 	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#updateEvent(java.lang.Integer, de.jena.model.glt.CalenderEventRequest) <em>Update Event</em>}' operation.
@@ -9095,14 +9095,14 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EOperation getGltOpenApiClient__GetEventsForAlarm_1__String_String_String_BigInteger();
 
 	/**
-	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getEventsForSite_1(java.lang.String, java.lang.String, java.lang.String, java.math.BigInteger, java.lang.Boolean) <em>Get Events For Site 1</em>}' operation.
+	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getEventsForSystem_1(java.lang.String, java.lang.String, java.lang.String, java.math.BigInteger, java.lang.Boolean) <em>Get Events For System 1</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Events For Site 1</em>' operation.
-	 * @see de.jena.model.glt.GltOpenApiClient#getEventsForSite_1(java.lang.String, java.lang.String, java.lang.String, java.math.BigInteger, java.lang.Boolean)
+	 * @return the meta object for the '<em>Get Events For System 1</em>' operation.
+	 * @see de.jena.model.glt.GltOpenApiClient#getEventsForSystem_1(java.lang.String, java.lang.String, java.lang.String, java.math.BigInteger, java.lang.Boolean)
 	 * @generated
 	 */
-	EOperation getGltOpenApiClient__GetEventsForSite_1__String_String_String_BigInteger_Boolean();
+	EOperation getGltOpenApiClient__GetEventsForSystem_1__String_String_String_BigInteger_Boolean();
 
 	/**
 	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getForAlarm(java.lang.String, java.math.BigInteger, java.lang.String) <em>Get For Alarm</em>}' operation.
@@ -9235,14 +9235,14 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EOperation getGltOpenApiClient__GetDevicesCount();
 
 	/**
-	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getAlarmsWithMismatchedSites() <em>Get Alarms With Mismatched Sites</em>}' operation.
+	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getAlarmsWithMismatchedSystems() <em>Get Alarms With Mismatched Systems</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Alarms With Mismatched Sites</em>' operation.
-	 * @see de.jena.model.glt.GltOpenApiClient#getAlarmsWithMismatchedSites()
+	 * @return the meta object for the '<em>Get Alarms With Mismatched Systems</em>' operation.
+	 * @see de.jena.model.glt.GltOpenApiClient#getAlarmsWithMismatchedSystems()
 	 * @generated
 	 */
-	EOperation getGltOpenApiClient__GetAlarmsWithMismatchedSites();
+	EOperation getGltOpenApiClient__GetAlarmsWithMismatchedSystems();
 
 	/**
 	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getAuditLog(java.lang.Integer, java.lang.Integer) <em>Get Audit Log</em>}' operation.
@@ -9445,14 +9445,14 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EOperation getGltOpenApiClient__GetAlarmCountByState_1__EList_Boolean_EList_EList();
 
 	/**
-	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getAlarmCountForSite(java.lang.String, org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList) <em>Get Alarm Count For Site</em>}' operation.
+	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getAlarmCountForSystem(java.lang.String, org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList) <em>Get Alarm Count For System</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Alarm Count For Site</em>' operation.
-	 * @see de.jena.model.glt.GltOpenApiClient#getAlarmCountForSite(java.lang.String, org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList)
+	 * @return the meta object for the '<em>Get Alarm Count For System</em>' operation.
+	 * @see de.jena.model.glt.GltOpenApiClient#getAlarmCountForSystem(java.lang.String, org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList)
 	 * @generated
 	 */
-	EOperation getGltOpenApiClient__GetAlarmCountForSite__String_EList_EList();
+	EOperation getGltOpenApiClient__GetAlarmCountForSystem__String_EList_EList();
 
 	/**
 	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getAlarmForStateCount(java.lang.String, org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList) <em>Get Alarm For State Count</em>}' operation.
@@ -9695,14 +9695,14 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EOperation getGltOpenApiClient__LogsForStates__EList();
 
 	/**
-	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#refreshSite(java.lang.String) <em>Refresh Site</em>}' operation.
+	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#refreshSystem(java.lang.String) <em>Refresh System</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Refresh Site</em>' operation.
-	 * @see de.jena.model.glt.GltOpenApiClient#refreshSite(java.lang.String)
+	 * @return the meta object for the '<em>Refresh System</em>' operation.
+	 * @see de.jena.model.glt.GltOpenApiClient#refreshSystem(java.lang.String)
 	 * @generated
 	 */
-	EOperation getGltOpenApiClient__RefreshSite__String();
+	EOperation getGltOpenApiClient__RefreshSystem__String();
 
 	/**
 	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#updateAlarmState(java.lang.String, de.jena.model.glt.UpdateStateRequest) <em>Update Alarm State</em>}' operation.
@@ -9875,44 +9875,64 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EOperation getGltOpenApiClient__GetAllSettings();
 
 	/**
-	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getSite(java.lang.String, java.lang.Boolean) <em>Get Site</em>}' operation.
+	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getAuthStatus() <em>Get Auth Status</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Site</em>' operation.
-	 * @see de.jena.model.glt.GltOpenApiClient#getSite(java.lang.String, java.lang.Boolean)
+	 * @return the meta object for the '<em>Get Auth Status</em>' operation.
+	 * @see de.jena.model.glt.GltOpenApiClient#getAuthStatus()
 	 * @generated
 	 */
-	EOperation getGltOpenApiClient__GetSite__String_Boolean();
+	EOperation getGltOpenApiClient__GetAuthStatus();
 
 	/**
-	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#updateSite(java.lang.String, de.jena.model.glt.SiteRequest) <em>Update Site</em>}' operation.
+	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getStatus() <em>Get Status</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Update Site</em>' operation.
-	 * @see de.jena.model.glt.GltOpenApiClient#updateSite(java.lang.String, de.jena.model.glt.SiteRequest)
+	 * @return the meta object for the '<em>Get Status</em>' operation.
+	 * @see de.jena.model.glt.GltOpenApiClient#getStatus()
 	 * @generated
 	 */
-	EOperation getGltOpenApiClient__UpdateSite__String_SiteRequest();
+	EOperation getGltOpenApiClient__GetStatus();
 
 	/**
-	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#createSite(java.lang.String, de.jena.model.glt.SiteRequest) <em>Create Site</em>}' operation.
+	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getSystem(java.lang.String, java.lang.Boolean) <em>Get System</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Create Site</em>' operation.
-	 * @see de.jena.model.glt.GltOpenApiClient#createSite(java.lang.String, de.jena.model.glt.SiteRequest)
+	 * @return the meta object for the '<em>Get System</em>' operation.
+	 * @see de.jena.model.glt.GltOpenApiClient#getSystem(java.lang.String, java.lang.Boolean)
 	 * @generated
 	 */
-	EOperation getGltOpenApiClient__CreateSite__String_SiteRequest();
+	EOperation getGltOpenApiClient__GetSystem__String_Boolean();
 
 	/**
-	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#deleteSite(java.lang.String) <em>Delete Site</em>}' operation.
+	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#updateSystem(java.lang.String, de.jena.model.glt.SystemDescriptionRequest) <em>Update System</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Delete Site</em>' operation.
-	 * @see de.jena.model.glt.GltOpenApiClient#deleteSite(java.lang.String)
+	 * @return the meta object for the '<em>Update System</em>' operation.
+	 * @see de.jena.model.glt.GltOpenApiClient#updateSystem(java.lang.String, de.jena.model.glt.SystemDescriptionRequest)
 	 * @generated
 	 */
-	EOperation getGltOpenApiClient__DeleteSite__String();
+	EOperation getGltOpenApiClient__UpdateSystem__String_SystemDescriptionRequest();
+
+	/**
+	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#createSystemDescription(java.lang.String, de.jena.model.glt.SystemDescriptionRequest) <em>Create System Description</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create System Description</em>' operation.
+	 * @see de.jena.model.glt.GltOpenApiClient#createSystemDescription(java.lang.String, de.jena.model.glt.SystemDescriptionRequest)
+	 * @generated
+	 */
+	EOperation getGltOpenApiClient__CreateSystemDescription__String_SystemDescriptionRequest();
+
+	/**
+	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#deleteSystem(java.lang.String) <em>Delete System</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Delete System</em>' operation.
+	 * @see de.jena.model.glt.GltOpenApiClient#deleteSystem(java.lang.String)
+	 * @generated
+	 */
+	EOperation getGltOpenApiClient__DeleteSystem__String();
 
 	/**
 	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getContacts(java.lang.String) <em>Get Contacts</em>}' operation.
@@ -9935,14 +9955,14 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EOperation getGltOpenApiClient__GetContracts__String_String_Boolean();
 
 	/**
-	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getSites(java.lang.Boolean, java.lang.Boolean) <em>Get Sites</em>}' operation.
+	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getSystems(java.lang.Boolean, java.lang.Boolean) <em>Get Systems</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Sites</em>' operation.
-	 * @see de.jena.model.glt.GltOpenApiClient#getSites(java.lang.Boolean, java.lang.Boolean)
+	 * @return the meta object for the '<em>Get Systems</em>' operation.
+	 * @see de.jena.model.glt.GltOpenApiClient#getSystems(java.lang.Boolean, java.lang.Boolean)
 	 * @generated
 	 */
-	EOperation getGltOpenApiClient__GetSites__Boolean_Boolean();
+	EOperation getGltOpenApiClient__GetSystems__Boolean_Boolean();
 
 	/**
 	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getTechFacilities(java.lang.String, java.lang.String, java.lang.Boolean) <em>Get Tech Facilities</em>}' operation.
@@ -9953,26 +9973,6 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EOperation getGltOpenApiClient__GetTechFacilities__String_String_Boolean();
-
-	/**
-	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getAuthStatus() <em>Get Auth Status</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Auth Status</em>' operation.
-	 * @see de.jena.model.glt.GltOpenApiClient#getAuthStatus()
-	 * @generated
-	 */
-	EOperation getGltOpenApiClient__GetAuthStatus();
-
-	/**
-	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getStatus() <em>Get Status</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Status</em>' operation.
-	 * @see de.jena.model.glt.GltOpenApiClient#getStatus()
-	 * @generated
-	 */
-	EOperation getGltOpenApiClient__GetStatus();
 
 	/**
 	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getEntities(org.eclipse.emf.common.util.EList) <em>Get Entities</em>}' operation.
@@ -10165,14 +10165,14 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EOperation getGltOpenApiClient__GetUsers();
 
 	/**
-	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#addUser(java.lang.Boolean, java.lang.String) <em>Add User</em>}' operation.
+	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#addUser(java.lang.String) <em>Add User</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add User</em>' operation.
-	 * @see de.jena.model.glt.GltOpenApiClient#addUser(java.lang.Boolean, java.lang.String)
+	 * @see de.jena.model.glt.GltOpenApiClient#addUser(java.lang.String)
 	 * @generated
 	 */
-	EOperation getGltOpenApiClient__AddUser__Boolean_String();
+	EOperation getGltOpenApiClient__AddUser__String();
 
 	/**
 	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#currentRole() <em>Current Role</em>}' operation.

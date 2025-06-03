@@ -24,12 +24,12 @@ import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.metatype.annotations.Designate;
 
 import de.jena.glt.rest.GltOpenApi;
-import de.jena.glt.sensinact.model.glt.Glt;
 import de.jena.glt.sensinact.model.glt.GltFactory;
+import de.jena.glt.sensinact.model.glt.GltSide;
 import de.jena.glt.sensinact.model.glt.MonitoringData;
 import de.jena.model.glt.DatalogContentPojo;
 import de.jena.model.glt.Response;
-import de.jena.model.glt.SitePojo;
+import de.jena.model.glt.SystemDescriptionPojo;
 
 /**
  * Lädt
@@ -68,12 +68,12 @@ public class GltConverter {
 
 	private void initSide() {
 		String sideID = conf.sideID();
-		Response response = gltOpenApi.getSite(sideID, false);
+		Response response = gltOpenApi.getSystem(sideID, false);
 		int code = response.getCode();
 		if (code == 200) {
 			EList<EObject> result = response.getResult();
 			if (!result.isEmpty()) {
-				SitePojo site = (SitePojo) result.get(0);
+				SystemDescriptionPojo site = (SystemDescriptionPojo) result.get(0);
 				logger.log(Level.INFO, "Init side: {0}", site.getName());
 				initGeo(site);
 				// TODO: Metadaten
@@ -83,14 +83,18 @@ public class GltConverter {
 		}
 	}
 
-	private void initGeo(SitePojo site) {
+	private void initGeo(SystemDescriptionPojo site) {
 //		FeatureCollection fc = new FeatureCollection();
 //		Feature castFeature = new Feature();
 		Point point = new Point();
-		Coordinates coordinates = new Coordinates();
-		point.coordinates = coordinates;
-		coordinates.longitude = site.getLon();
-		coordinates.latitude = site.getLat();
+		Double lon = site.getLon();
+		Double lat = site.getLat();
+		if (lon != null && lat != null) {
+			Coordinates coordinates = new Coordinates();
+			point.coordinates = coordinates;
+			coordinates.longitude = lon;
+			coordinates.latitude = lat;
+		}
 		geoJson = point;
 //		castFeature.geometry = pg;
 //		fc.features.add(castFeature);
@@ -110,7 +114,7 @@ public class GltConverter {
 			for (EObject object : result) {
 				DatalogContentPojo dc = (DatalogContentPojo) object;
 				logger.log(Level.INFO, "Data: " + dc);
-				Glt glt = GltFactory.eINSTANCE.createGlt();
+				GltSide glt = GltFactory.eINSTANCE.createGltSide();
 				Admin admin = glt.getAdmin();
 				admin.setLocation(geoJson);
 				MonitoringData service = GltFactory.eINSTANCE.createMonitoringData();
@@ -120,6 +124,8 @@ public class GltConverter {
 //				dc.getTime();
 			}
 
+		} else if (code == 404) {
+			logger.log(Level.INFO, "Response Code: " + code + " : No new data.");
 		} else {
 			logger.log(Level.INFO, "Response Code: " + code + " : " + response.getDescription());
 		}

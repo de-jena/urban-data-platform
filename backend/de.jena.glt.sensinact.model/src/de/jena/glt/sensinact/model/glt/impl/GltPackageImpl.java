@@ -13,9 +13,9 @@
  */
 package de.jena.glt.sensinact.model.glt.impl;
 
-import de.jena.glt.sensinact.model.glt.Glt;
 import de.jena.glt.sensinact.model.glt.GltFactory;
 import de.jena.glt.sensinact.model.glt.GltPackage;
+import de.jena.glt.sensinact.model.glt.GltSide;
 import de.jena.glt.sensinact.model.glt.MonitoringData;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -38,7 +38,7 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass gltEClass = null;
+	private EClass gltSideEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -116,8 +116,8 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getGlt() {
-		return gltEClass;
+	public EClass getGltSide() {
+		return gltSideEClass;
 	}
 
 	/**
@@ -169,7 +169,7 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 		isCreated = true;
 
 		// Create classes and their features
-		gltEClass = createEClass(GLT);
+		gltSideEClass = createEClass(GLT_SIDE);
 
 		monitoringDataEClass = createEClass(MONITORING_DATA);
 		createEAttribute(monitoringDataEClass, MONITORING_DATA__VALUE);
@@ -206,11 +206,11 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		gltEClass.getESuperTypes().add(theProviderPackage.getDynamicProvider());
+		gltSideEClass.getESuperTypes().add(theProviderPackage.getDynamicProvider());
 		monitoringDataEClass.getESuperTypes().add(theProviderPackage.getService());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(gltEClass, Glt.class, "Glt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(gltSideEClass, GltSide.class, "GltSide", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(monitoringDataEClass, MonitoringData.class, "MonitoringData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMonitoringData_Value(), ecorePackage.getEFloat(), "value", null, 0, 1, MonitoringData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

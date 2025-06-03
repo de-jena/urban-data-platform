@@ -139,18 +139,18 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * @model
 	 * @generated
 	 */
-	Response getEventsForSite(String siteId, String type, Boolean includeAlarms, String from, String to);
+	Response getEventsForSystem(String systemId, String type, Boolean includeAlarms, String from, String to);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Create a calendar event for a site. endpoint: /calendar/site/{siteId}
+	 * Create a calendar event for a system. endpoint: /calendar/system/{systemId}
 	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated
 	 */
-	Response createEventForSite(String siteId, CalenderEventRequest request);
+	Response createEventForSystem(String systemId, CalenderEventRequest request);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -180,10 +180,10 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-model-doc -->
 	 * Get calendar events [in a range].
 	 * <!-- end-model-doc -->
-	 * @model siteIdsMany="true"
+	 * @model systemIdsMany="true"
 	 * @generated
 	 */
-	Response getEvents(EList<String> siteIds, String type, String from, String to);
+	Response getEvents(EList<String> systemIds, String type, String from, String to);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -191,10 +191,10 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-model-doc -->
 	 * Get calendar events at a given point in time [within a grace period/ms].
 	 * <!-- end-model-doc -->
-	 * @model siteIdsMany="true"
+	 * @model systemIdsMany="true"
 	 * @generated
 	 */
-	Response getEventsAtTime(EList<String> siteIds, String time, String type, BigInteger grace);
+	Response getEventsAtTime(EList<String> systemIds, String time, String type, BigInteger grace);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -211,18 +211,18 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Get calendar events for a site at a given point in time [within a grace period/ms]
+	 * Get calendar events for a system at a given point in time [within a grace period/ms]
 	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated
 	 */
-	Response getEventsForSite_1(String siteId, String time, String type, BigInteger grace, Boolean includeAlarms);
+	Response getEventsForSystem_1(String systemId, String time, String type, BigInteger grace, Boolean includeAlarms);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Get comments for a given owner type (alarm, site ...).
+	 * Get comments for a given owner type (alarm, system ...).
 	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated
@@ -359,12 +359,12 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will return alarms with mismatching site id.
+	 * Will return alarms with mismatching system id.
 	 * <!-- end-model-doc -->
 	 * @model kind="operation"
 	 * @generated
 	 */
-	Response getAlarmsWithMismatchedSites();
+	Response getAlarmsWithMismatchedSystems();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -447,7 +447,7 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will return datalog contents for the site and its given identifier (mostly point ids) within the specified timeframe.
+	 * Will return datalog contents for the system and its given identifier (mostly point ids) within the specified timeframe.
 	 * <!-- end-model-doc -->
 	 * @model idMany="true"
 	 * @generated
@@ -458,7 +458,7 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will return datalog infos for the site and its given identifiers (mostly point ids). Will return all datalogs for all points connected to this site if no point ids are given.
+	 * Will return datalog infos for the system and its given identifiers (mostly point ids). Will return all datalogs for all points connected to this system if no point ids are given.
 	 * <!-- end-model-doc -->
 	 * @model idMany="true"
 	 * @generated
@@ -469,7 +469,7 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will update datalog for site with specified systemId and optionally specific identifiers. endpoint: /monitoring/datalogs/update/{systemId}
+	 * Will update datalog for system with specified systemId and optionally specific identifiers. endpoint: /monitoring/datalogs/update/{systemId}
 	 * <!-- end-model-doc -->
 	 * @model idMany="true"
 	 * @generated
@@ -482,10 +482,10 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-model-doc -->
 	 * Will return point changes for input filters.
 	 * <!-- end-model-doc -->
-	 * @model siteIdMany="true" authorMany="true"
+	 * @model systemIdsMany="true" authorMany="true"
 	 * @generated
 	 */
-	Response getChangelog(Integer offset, Integer limit, EList<Integer> siteId, Boolean external, EList<String> author, String from, String to);
+	Response getChangelog(Integer offset, Integer limit, EList<Integer> systemIds, Boolean external, EList<String> author, String from, String to);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -493,16 +493,16 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-model-doc -->
 	 * Will return count of point changes for input filters.
 	 * <!-- end-model-doc -->
-	 * @model siteIdMany="true" authorMany="true"
+	 * @model systemIdsMany="true" authorMany="true"
 	 * @generated
 	 */
-	Response getChangelogCount(EList<Integer> siteId, Boolean external, EList<String> author, String from, String to);
+	Response getChangelogCount(EList<Integer> systemIds, Boolean external, EList<String> author, String from, String to);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will return stored point values for site.
+	 * Will return stored point values for system.
 	 * <!-- end-model-doc -->
 	 * @model idMany="true"
 	 * @generated
@@ -513,7 +513,7 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will return current point values for site.
+	 * Will return current point values for system.
 	 * <!-- end-model-doc -->
 	 * @model idMany="true"
 	 * @generated
@@ -524,7 +524,7 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will update points for site with specified systemId and optionally specific identifiers. endpoint: /monitoring/points/update/{systemId}
+	 * Will update points for system with specified systemId and optionally specific identifiers. endpoint: /monitoring/points/update/{systemId}
 	 * <!-- end-model-doc -->
 	 * @model idMany="true"
 	 * @generated
@@ -557,23 +557,23 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will return count for alarms in state for the given site id. [ON, OFF, UNKNOWN]
+	 * Will return count for alarms in state for the given system id. [ON, OFF, UNKNOWN]
 	 * <!-- end-model-doc -->
 	 * @model eventTypeMany="true" flagsMany="true"
 	 * @generated
 	 */
-	Response getAlarmCount_1(String siteId, String state, EList<String> eventType, EList<Integer> flags);
+	Response getAlarmCount_1(String systemId, String state, EList<String> eventType, EList<Integer> flags);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will return count for alarms in state for the given site id. 
+	 * Will return count for alarms in state for the given system id. 
 	 * <!-- end-model-doc -->
 	 * @model eventTypeMany="true" flagsMany="true"
 	 * @generated
 	 */
-	Response getAlarmCountByState(String siteId, EList<String> eventType, EList<Integer> flags);
+	Response getAlarmCountByState(String systemId, EList<String> eventType, EList<Integer> flags);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -581,21 +581,21 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-model-doc -->
 	 * Will return all alarm counts for states.
 	 * <!-- end-model-doc -->
-	 * @model siteIdsMany="true" eventTypeMany="true" flagsMany="true"
+	 * @model systemIdsMany="true" eventTypeMany="true" flagsMany="true"
 	 * @generated
 	 */
-	Response getAlarmCountByState_1(EList<String> siteIds, Boolean summary, EList<String> eventType, EList<Integer> flags);
+	Response getAlarmCountByState_1(EList<String> systemIds, Boolean summary, EList<String> eventType, EList<Integer> flags);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will return count for alarms for the given site id.
+	 * Will return count for alarms for the given system id.
 	 * <!-- end-model-doc -->
 	 * @model eventTypeMany="true" flagsMany="true"
 	 * @generated
 	 */
-	Response getAlarmCountForSite(String siteId, EList<String> eventType, EList<Integer> flags);
+	Response getAlarmCountForSystem(String systemId, EList<String> eventType, EList<Integer> flags);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -645,12 +645,12 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will return all current alarm logs for the given site id.
+	 * Will return all current alarm logs for the given system id.
 	 * <!-- end-model-doc -->
 	 * @model eventTypeMany="true" flagsMany="true"
 	 * @generated
 	 */
-	Response getAlarmLogs_1(String siteId, EList<String> eventType, EList<Integer> flags);
+	Response getAlarmLogs_1(String systemId, EList<String> eventType, EList<Integer> flags);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -678,40 +678,40 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will return all alarm logs for the given site id including superseded.
+	 * Will return all alarm logs for the given system id including superseded.
 	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated
 	 */
-	Response getAlarmLogsTimeline(String siteId, BigInteger from, BigInteger to);
+	Response getAlarmLogsTimeline(String systemId, BigInteger from, BigInteger to);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will return alarms in state for the given site id. [ON, OFF, UNKNOWN]
+	 * Will return alarms in state for the given system id. [ON, OFF, UNKNOWN]
 	 * <!-- end-model-doc -->
 	 * @model eventTypeMany="true" flagsMany="true"
 	 * @generated
 	 */
-	Response getAlarmsForState(String siteId, String state, EList<String> eventType, EList<Integer> flags);
+	Response getAlarmsForState(String systemId, String state, EList<String> eventType, EList<Integer> flags);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will return alarms in any of the states for the given site id. [ON, OFF, UNKNOWN]
+	 * Will return alarms in any of the states for the given system id. [ON, OFF, UNKNOWN]
 	 * <!-- end-model-doc -->
 	 * @model stateMany="true" eventTypeMany="true" flagsMany="true"
 	 * @generated
 	 */
-	Response getAlarmsForStates(String siteId, EList<String> state, EList<String> eventType, EList<Integer> flags);
+	Response getAlarmsForStates(String systemId, EList<String> state, EList<String> eventType, EList<Integer> flags);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will get monitoring setting for site with specified id.
+	 * Will get monitoring setting for system with specified id.
 	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated
@@ -722,7 +722,7 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will get monitored identifiers for site with specified id and given entity type.
+	 * Will get monitored identifiers for system with specified id and given entity type.
 	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated
@@ -733,7 +733,7 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will update monitoring for site with specified id, entity type and optionally specific identifier. endpoint: /monitoring/entities/{systemId}/{type}
+	 * Will update monitoring for system with specified id, entity type and optionally specific identifier. endpoint: /monitoring/entities/{systemId}/{type}
 	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated
@@ -744,12 +744,12 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will return all logs for the given site id.
+	 * Will return all logs for the given system id.
 	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated
 	 */
-	Response getLog(String siteId);
+	Response getLog(String systemId);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -777,12 +777,12 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will return statistics for alarm ids for the given site id.
+	 * Will return statistics for alarm ids for the given system id.
 	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated
 	 */
-	Response getStatistics(String siteId);
+	Response getStatistics(String systemId);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -810,45 +810,45 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will return all status logs for the given site id.
+	 * Will return all status logs for the given system id.
 	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated
 	 */
-	Response getStatusLogs_1(String siteId);
+	Response getStatusLogs_1(String systemId);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will return all status logs for the given site id including superseded.
+	 * Will return all status logs for the given system id including superseded.
 	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated
 	 */
-	Response getStatusLogsTimeline(String siteId, BigInteger from, BigInteger to);
+	Response getStatusLogsTimeline(String systemId, BigInteger from, BigInteger to);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will return tracked alarm ids for the given site id.
+	 * Will return tracked alarm ids for the given system id.
 	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated
 	 */
-	Response getTracked(String siteId);
+	Response getTracked(String systemId);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will return true if given alarm on given site is flaky.
+	 * Will return true if given alarm on given system is flaky.
 	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated
 	 */
-	Response isFlaky(String siteId, String alarmId, BigInteger from, BigInteger to, Integer threshold);
+	Response isFlaky(String systemId, String alarmId, BigInteger from, BigInteger to, Integer threshold);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -865,23 +865,23 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Update the alarm states of the site with the given id from the GLT's buffer. endpoint: /monitoring/refresh/{siteId}
+	 * Update the alarm states of the system with the given id from the controller's buffer. endpoint: /monitoring/refresh/{systemId}
 	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated
 	 */
-	Response refreshSite(String siteId);
+	Response refreshSystem(String systemId);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Update the state of the alarm with the given id to the given state. endpoint: /monitoring/state/{siteId}
+	 * Update the state of the alarm with the given id to the given state. endpoint: /monitoring/state/{systemId}
 	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated
 	 */
-	Response updateAlarmState(String siteId, UpdateStateRequest request);
+	Response updateAlarmState(String systemId, UpdateStateRequest request);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -889,10 +889,10 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-model-doc -->
 	 * Will return block changes for input filters.
 	 * <!-- end-model-doc -->
-	 * @model siteIdMany="true" authorMany="true"
+	 * @model systemIdsMany="true" authorMany="true"
 	 * @generated
 	 */
-	Response getChangelog_1(Integer offset, Integer limit, EList<Integer> siteId, Boolean external, EList<String> author, String from, String to);
+	Response getChangelog_1(Integer offset, Integer limit, EList<Integer> systemIds, Boolean external, EList<String> author, String from, String to);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -900,16 +900,16 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-model-doc -->
 	 * Will return count of block changes for input filters.
 	 * <!-- end-model-doc -->
-	 * @model siteIdMany="true" authorMany="true"
+	 * @model systemIdsMany="true" authorMany="true"
 	 * @generated
 	 */
-	Response getChangelogCount_1(EList<Integer> siteId, Boolean external, EList<String> author, String from, String to);
+	Response getChangelogCount_1(EList<Integer> systemIds, Boolean external, EList<String> author, String from, String to);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will return stored time schedule blocks for site.
+	 * Will return stored time schedule blocks for system.
 	 * <!-- end-model-doc -->
 	 * @model idMany="true"
 	 * @generated
@@ -920,7 +920,7 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will return current time schedule states for site.
+	 * Will return current time schedule states for system.
 	 * <!-- end-model-doc -->
 	 * @model idMany="true"
 	 * @generated
@@ -931,7 +931,7 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will update time schedule blocks for site with specified systemId and optionally specific identifiers. endpoint: /monitoring/timeschedule/block/update/{systemId}
+	 * Will update time schedule blocks for system with specified systemId and optionally specific identifiers. endpoint: /monitoring/timeschedule/block/update/{systemId}
 	 * <!-- end-model-doc -->
 	 * @model idMany="true"
 	 * @generated
@@ -942,7 +942,7 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will return stored time schedule states for site.
+	 * Will return stored time schedule states for system.
 	 * <!-- end-model-doc -->
 	 * @model idMany="true"
 	 * @generated
@@ -953,7 +953,7 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will return current time schedule states for site.
+	 * Will return current time schedule states for system.
 	 * <!-- end-model-doc -->
 	 * @model idMany="true"
 	 * @generated
@@ -964,7 +964,7 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will update time schedule states for site with specified systemId and optionally specific identifiers. endpoint: /monitoring/timeschedule/state/update/{systemId}
+	 * Will update time schedule states for system with specified systemId and optionally specific identifiers. endpoint: /monitoring/timeschedule/state/update/{systemId}
 	 * <!-- end-model-doc -->
 	 * @model idMany="true"
 	 * @generated
@@ -1063,94 +1063,6 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will return site with specified id.
-	 * <!-- end-model-doc -->
-	 * @model
-	 * @generated
-	 */
-	Response getSite(String id, Boolean shallow);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Will update site with specified id. endpoint: /sites/{id}
-	 * <!-- end-model-doc -->
-	 * @model
-	 * @generated
-	 */
-	Response updateSite(String id, SiteRequest request);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Will create site with specified id. endpoint: /sites/{id}
-	 * <!-- end-model-doc -->
-	 * @model
-	 * @generated
-	 */
-	Response createSite(String id, SiteRequest request);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Will delete site with specified id. endpoint: /sites/{id}
-	 * <!-- end-model-doc -->
-	 * @model
-	 * @generated
-	 */
-	Response deleteSite(String id);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Will return contacts for the site with specified id.
-	 * <!-- end-model-doc -->
-	 * @model
-	 * @generated
-	 */
-	Response getContacts(String id);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Will return contracts for the site with specified id.
-	 * <!-- end-model-doc -->
-	 * @model
-	 * @generated
-	 */
-	Response getContracts(String id, String type, Boolean activeOnly);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Will return all site ids.
-	 * <!-- end-model-doc -->
-	 * @model
-	 * @generated
-	 */
-	Response getSites(Boolean expanded, Boolean excluded);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Will return tech facilities for the site with specified id.
-	 * <!-- end-model-doc -->
-	 * @model
-	 * @generated
-	 */
-	Response getTechFacilities(String id, String type, Boolean activeOnly);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
 	 * Will return authorization status information regarding the service.
 	 * <!-- end-model-doc -->
 	 * @model kind="operation"
@@ -1173,6 +1085,94 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
+	 * Will return system with specified id.
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	Response getSystem(String id, Boolean shallow);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Will update system with specified id. endpoint: /systems/{id}
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	Response updateSystem(String id, SystemDescriptionRequest request);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Will create system with specified id. endpoint: /systems/{id}
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	Response createSystemDescription(String id, SystemDescriptionRequest request);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Will delete system with specified id. endpoint: /systems/{id}
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	Response deleteSystem(String id);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Will return contacts for the system with specified id.
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	Response getContacts(String id);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Will return contracts for the system with specified id.
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	Response getContracts(String id, String type, Boolean activeOnly);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Will return all system ids.
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	Response getSystems(Boolean expanded, Boolean excluded);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Will return tech facilities for the building with specified id.
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	Response getTechFacilities(String id, String type, Boolean activeOnly);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
 	 * Will return control entity information. endpoint: /system/entities
 	 * <!-- end-model-doc -->
 	 * @model requestMany="true"
@@ -1184,7 +1184,7 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will return entities of given type for site optionally filtered by identifier.
+	 * Will return entities of given type for system optionally filtered by identifier.
 	 * <!-- end-model-doc -->
 	 * @model idMany="true"
 	 * @generated
@@ -1195,7 +1195,7 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will return entities of given types for site optionally filtered by identifier.
+	 * Will return entities of given types for system optionally filtered by identifier.
 	 * <!-- end-model-doc -->
 	 * @model typeMany="true" idMany="true"
 	 * @generated
@@ -1206,7 +1206,7 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will return control entity information for the site.
+	 * Will return control entity information for the system.
 	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated
@@ -1217,7 +1217,7 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will return control entity information for site with specified id.
+	 * Will return control entity information for system with specified id.
 	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated
@@ -1387,7 +1387,7 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * @model
 	 * @generated
 	 */
-	Response addUser(Boolean internal, String request);
+	Response addUser(String request);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1437,23 +1437,23 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Update a suspect. endpoint: /watcher/suspects/{siteId}.{alarmId}
+	 * Update a suspect. endpoint: /watcher/suspects/{systemId}.{alarmId}
 	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated
 	 */
-	Response updateSuspect(String siteId, String alarmId);
+	Response updateSuspect(String systemId, String alarmId);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Delete a suspect. endpoint: /watcher/suspects/{siteId}.{alarmId}
+	 * Delete a suspect. endpoint: /watcher/suspects/{systemId}.{alarmId}
 	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated
 	 */
-	Response deleteSuspect(String siteId, String alarmId);
+	Response deleteSuspect(String systemId, String alarmId);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1470,11 +1470,11 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will return a collection of alarms for site, that occur repeatedly as per settings (flaky).
+	 * Will return a collection of alarms for system, that occur repeatedly as per settings (flaky).
 	 * <!-- end-model-doc -->
 	 * @model eventTypeMany="true" flagsMany="true"
 	 * @generated
 	 */
-	Response getSuspects_1(String siteId, EList<String> eventType, EList<Integer> flags, Boolean recognized);
+	Response getSuspects_1(String systemId, EList<String> eventType, EList<Integer> flags, Boolean recognized);
 
 } // GltOpenApiClient

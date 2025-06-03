@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link de.jena.model.glt.impl.CylonNetworkPojoImpl#getEntity <em>Entity</em>}</li>
  *   <li>{@link de.jena.model.glt.impl.CylonNetworkPojoImpl#getId <em>Id</em>}</li>
  *   <li>{@link de.jena.model.glt.impl.CylonNetworkPojoImpl#getName <em>Name</em>}</li>
- *   <li>{@link de.jena.model.glt.impl.CylonNetworkPojoImpl#getSiteId <em>Site Id</em>}</li>
+ *   <li>{@link de.jena.model.glt.impl.CylonNetworkPojoImpl#getSystemId <em>System Id</em>}</li>
  *   <li>{@link de.jena.model.glt.impl.CylonNetworkPojoImpl#getDirectory <em>Directory</em>}</li>
  *   <li>{@link de.jena.model.glt.impl.CylonNetworkPojoImpl#getIp <em>Ip</em>}</li>
  *   <li>{@link de.jena.model.glt.impl.CylonNetworkPojoImpl#getPort <em>Port</em>}</li>
@@ -103,24 +103,24 @@ public class CylonNetworkPojoImpl extends MinimalEObjectImpl.Container implement
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getSiteId() <em>Site Id</em>}' attribute.
+	 * The default value of the '{@link #getSystemId() <em>System Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSiteId()
+	 * @see #getSystemId()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Integer SITE_ID_EDEFAULT = null;
+	protected static final Integer SYSTEM_ID_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getSiteId() <em>Site Id</em>}' attribute.
+	 * The cached value of the '{@link #getSystemId() <em>System Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSiteId()
+	 * @see #getSystemId()
 	 * @generated
 	 * @ordered
 	 */
-	protected Integer siteId = SITE_ID_EDEFAULT;
+	protected Integer systemId = SYSTEM_ID_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDirectory() <em>Directory</em>}' attribute.
@@ -326,8 +326,8 @@ public class CylonNetworkPojoImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	@Override
-	public Integer getSiteId() {
-		return siteId;
+	public Integer getSystemId() {
+		return systemId;
 	}
 
 	/**
@@ -336,11 +336,11 @@ public class CylonNetworkPojoImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	@Override
-	public void setSiteId(Integer newSiteId) {
-		Integer oldSiteId = siteId;
-		siteId = newSiteId;
+	public void setSystemId(Integer newSystemId) {
+		Integer oldSystemId = systemId;
+		systemId = newSystemId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.CYLON_NETWORK_POJO__SITE_ID, oldSiteId, siteId));
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.CYLON_NETWORK_POJO__SYSTEM_ID, oldSystemId, systemId));
 	}
 
 	/**
@@ -485,8 +485,8 @@ public class CylonNetworkPojoImpl extends MinimalEObjectImpl.Container implement
 				return getId();
 			case GltPackage.CYLON_NETWORK_POJO__NAME:
 				return getName();
-			case GltPackage.CYLON_NETWORK_POJO__SITE_ID:
-				return getSiteId();
+			case GltPackage.CYLON_NETWORK_POJO__SYSTEM_ID:
+				return getSystemId();
 			case GltPackage.CYLON_NETWORK_POJO__DIRECTORY:
 				return getDirectory();
 			case GltPackage.CYLON_NETWORK_POJO__IP:
@@ -521,8 +521,8 @@ public class CylonNetworkPojoImpl extends MinimalEObjectImpl.Container implement
 			case GltPackage.CYLON_NETWORK_POJO__NAME:
 				setName((String)newValue);
 				return;
-			case GltPackage.CYLON_NETWORK_POJO__SITE_ID:
-				setSiteId((Integer)newValue);
+			case GltPackage.CYLON_NETWORK_POJO__SYSTEM_ID:
+				setSystemId((Integer)newValue);
 				return;
 			case GltPackage.CYLON_NETWORK_POJO__DIRECTORY:
 				setDirectory((String)newValue);
@@ -564,8 +564,8 @@ public class CylonNetworkPojoImpl extends MinimalEObjectImpl.Container implement
 			case GltPackage.CYLON_NETWORK_POJO__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case GltPackage.CYLON_NETWORK_POJO__SITE_ID:
-				setSiteId(SITE_ID_EDEFAULT);
+			case GltPackage.CYLON_NETWORK_POJO__SYSTEM_ID:
+				setSystemId(SYSTEM_ID_EDEFAULT);
 				return;
 			case GltPackage.CYLON_NETWORK_POJO__DIRECTORY:
 				setDirectory(DIRECTORY_EDEFAULT);
@@ -603,8 +603,8 @@ public class CylonNetworkPojoImpl extends MinimalEObjectImpl.Container implement
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case GltPackage.CYLON_NETWORK_POJO__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case GltPackage.CYLON_NETWORK_POJO__SITE_ID:
-				return SITE_ID_EDEFAULT == null ? siteId != null : !SITE_ID_EDEFAULT.equals(siteId);
+			case GltPackage.CYLON_NETWORK_POJO__SYSTEM_ID:
+				return SYSTEM_ID_EDEFAULT == null ? systemId != null : !SYSTEM_ID_EDEFAULT.equals(systemId);
 			case GltPackage.CYLON_NETWORK_POJO__DIRECTORY:
 				return DIRECTORY_EDEFAULT == null ? directory != null : !DIRECTORY_EDEFAULT.equals(directory);
 			case GltPackage.CYLON_NETWORK_POJO__IP:
@@ -637,8 +637,8 @@ public class CylonNetworkPojoImpl extends MinimalEObjectImpl.Container implement
 		result.append(id);
 		result.append(", name: ");
 		result.append(name);
-		result.append(", siteId: ");
-		result.append(siteId);
+		result.append(", systemId: ");
+		result.append(systemId);
 		result.append(", directory: ");
 		result.append(directory);
 		result.append(", ip: ");

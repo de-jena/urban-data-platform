@@ -3,7 +3,7 @@
 package de.jena.model.glt.impl;
 
 import de.jena.model.glt.GltPackage;
-import de.jena.model.glt.SiteRequest;
+import de.jena.model.glt.SystemDescriptionRequest;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -14,27 +14,27 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Site Request</b></em>'.
+ * An implementation of the model object '<em><b>System Description Request</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.jena.model.glt.impl.SiteRequestImpl#getId <em>Id</em>}</li>
- *   <li>{@link de.jena.model.glt.impl.SiteRequestImpl#getName <em>Name</em>}</li>
- *   <li>{@link de.jena.model.glt.impl.SiteRequestImpl#getDirectory <em>Directory</em>}</li>
- *   <li>{@link de.jena.model.glt.impl.SiteRequestImpl#getPort <em>Port</em>}</li>
- *   <li>{@link de.jena.model.glt.impl.SiteRequestImpl#getExternalId <em>External Id</em>}</li>
- *   <li>{@link de.jena.model.glt.impl.SiteRequestImpl#getIp <em>Ip</em>}</li>
- *   <li>{@link de.jena.model.glt.impl.SiteRequestImpl#getLon <em>Lon</em>}</li>
- *   <li>{@link de.jena.model.glt.impl.SiteRequestImpl#getLat <em>Lat</em>}</li>
- *   <li>{@link de.jena.model.glt.impl.SiteRequestImpl#getExcluded <em>Excluded</em>}</li>
- *   <li>{@link de.jena.model.glt.impl.SiteRequestImpl#getFlags <em>Flags</em>}</li>
+ *   <li>{@link de.jena.model.glt.impl.SystemDescriptionRequestImpl#getId <em>Id</em>}</li>
+ *   <li>{@link de.jena.model.glt.impl.SystemDescriptionRequestImpl#getName <em>Name</em>}</li>
+ *   <li>{@link de.jena.model.glt.impl.SystemDescriptionRequestImpl#getDirectory <em>Directory</em>}</li>
+ *   <li>{@link de.jena.model.glt.impl.SystemDescriptionRequestImpl#getPort <em>Port</em>}</li>
+ *   <li>{@link de.jena.model.glt.impl.SystemDescriptionRequestImpl#getExternalId <em>External Id</em>}</li>
+ *   <li>{@link de.jena.model.glt.impl.SystemDescriptionRequestImpl#getIp <em>Ip</em>}</li>
+ *   <li>{@link de.jena.model.glt.impl.SystemDescriptionRequestImpl#getLon <em>Lon</em>}</li>
+ *   <li>{@link de.jena.model.glt.impl.SystemDescriptionRequestImpl#getLat <em>Lat</em>}</li>
+ *   <li>{@link de.jena.model.glt.impl.SystemDescriptionRequestImpl#getExcluded <em>Excluded</em>}</li>
+ *   <li>{@link de.jena.model.glt.impl.SystemDescriptionRequestImpl#getFlags <em>Flags</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class SiteRequestImpl extends MinimalEObjectImpl.Container implements SiteRequest {
+public class SystemDescriptionRequestImpl extends MinimalEObjectImpl.Container implements SystemDescriptionRequest {
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -240,7 +240,7 @@ public class SiteRequestImpl extends MinimalEObjectImpl.Container implements Sit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SiteRequestImpl() {
+	protected SystemDescriptionRequestImpl() {
 		super();
 	}
 
@@ -251,7 +251,7 @@ public class SiteRequestImpl extends MinimalEObjectImpl.Container implements Sit
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return GltPackage.eINSTANCE.getSiteRequest();
+		return GltPackage.eINSTANCE.getSystemDescriptionRequest();
 	}
 
 	/**
@@ -274,7 +274,7 @@ public class SiteRequestImpl extends MinimalEObjectImpl.Container implements Sit
 		String oldId = id;
 		id = newId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SITE_REQUEST__ID, oldId, id));
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SYSTEM_DESCRIPTION_REQUEST__ID, oldId, id));
 	}
 
 	/**
@@ -297,7 +297,7 @@ public class SiteRequestImpl extends MinimalEObjectImpl.Container implements Sit
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SITE_REQUEST__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SYSTEM_DESCRIPTION_REQUEST__NAME, oldName, name));
 	}
 
 	/**
@@ -320,7 +320,7 @@ public class SiteRequestImpl extends MinimalEObjectImpl.Container implements Sit
 		String oldDirectory = directory;
 		directory = newDirectory;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SITE_REQUEST__DIRECTORY, oldDirectory, directory));
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SYSTEM_DESCRIPTION_REQUEST__DIRECTORY, oldDirectory, directory));
 	}
 
 	/**
@@ -343,7 +343,7 @@ public class SiteRequestImpl extends MinimalEObjectImpl.Container implements Sit
 		Integer oldPort = port;
 		port = newPort;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SITE_REQUEST__PORT, oldPort, port));
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SYSTEM_DESCRIPTION_REQUEST__PORT, oldPort, port));
 	}
 
 	/**
@@ -366,7 +366,7 @@ public class SiteRequestImpl extends MinimalEObjectImpl.Container implements Sit
 		Integer oldExternalId = externalId;
 		externalId = newExternalId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SITE_REQUEST__EXTERNAL_ID, oldExternalId, externalId));
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SYSTEM_DESCRIPTION_REQUEST__EXTERNAL_ID, oldExternalId, externalId));
 	}
 
 	/**
@@ -389,7 +389,7 @@ public class SiteRequestImpl extends MinimalEObjectImpl.Container implements Sit
 		String oldIp = ip;
 		ip = newIp;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SITE_REQUEST__IP, oldIp, ip));
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SYSTEM_DESCRIPTION_REQUEST__IP, oldIp, ip));
 	}
 
 	/**
@@ -412,7 +412,7 @@ public class SiteRequestImpl extends MinimalEObjectImpl.Container implements Sit
 		Double oldLon = lon;
 		lon = newLon;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SITE_REQUEST__LON, oldLon, lon));
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SYSTEM_DESCRIPTION_REQUEST__LON, oldLon, lon));
 	}
 
 	/**
@@ -435,7 +435,7 @@ public class SiteRequestImpl extends MinimalEObjectImpl.Container implements Sit
 		Double oldLat = lat;
 		lat = newLat;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SITE_REQUEST__LAT, oldLat, lat));
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SYSTEM_DESCRIPTION_REQUEST__LAT, oldLat, lat));
 	}
 
 	/**
@@ -458,7 +458,7 @@ public class SiteRequestImpl extends MinimalEObjectImpl.Container implements Sit
 		Boolean oldExcluded = excluded;
 		excluded = newExcluded;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SITE_REQUEST__EXCLUDED, oldExcluded, excluded));
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SYSTEM_DESCRIPTION_REQUEST__EXCLUDED, oldExcluded, excluded));
 	}
 
 	/**
@@ -481,7 +481,7 @@ public class SiteRequestImpl extends MinimalEObjectImpl.Container implements Sit
 		Integer oldFlags = flags;
 		flags = newFlags;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SITE_REQUEST__FLAGS, oldFlags, flags));
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SYSTEM_DESCRIPTION_REQUEST__FLAGS, oldFlags, flags));
 	}
 
 	/**
@@ -492,25 +492,25 @@ public class SiteRequestImpl extends MinimalEObjectImpl.Container implements Sit
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case GltPackage.SITE_REQUEST__ID:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__ID:
 				return getId();
-			case GltPackage.SITE_REQUEST__NAME:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__NAME:
 				return getName();
-			case GltPackage.SITE_REQUEST__DIRECTORY:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__DIRECTORY:
 				return getDirectory();
-			case GltPackage.SITE_REQUEST__PORT:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__PORT:
 				return getPort();
-			case GltPackage.SITE_REQUEST__EXTERNAL_ID:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__EXTERNAL_ID:
 				return getExternalId();
-			case GltPackage.SITE_REQUEST__IP:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__IP:
 				return getIp();
-			case GltPackage.SITE_REQUEST__LON:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__LON:
 				return getLon();
-			case GltPackage.SITE_REQUEST__LAT:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__LAT:
 				return getLat();
-			case GltPackage.SITE_REQUEST__EXCLUDED:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__EXCLUDED:
 				return getExcluded();
-			case GltPackage.SITE_REQUEST__FLAGS:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__FLAGS:
 				return getFlags();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -524,34 +524,34 @@ public class SiteRequestImpl extends MinimalEObjectImpl.Container implements Sit
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case GltPackage.SITE_REQUEST__ID:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__ID:
 				setId((String)newValue);
 				return;
-			case GltPackage.SITE_REQUEST__NAME:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__NAME:
 				setName((String)newValue);
 				return;
-			case GltPackage.SITE_REQUEST__DIRECTORY:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__DIRECTORY:
 				setDirectory((String)newValue);
 				return;
-			case GltPackage.SITE_REQUEST__PORT:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__PORT:
 				setPort((Integer)newValue);
 				return;
-			case GltPackage.SITE_REQUEST__EXTERNAL_ID:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__EXTERNAL_ID:
 				setExternalId((Integer)newValue);
 				return;
-			case GltPackage.SITE_REQUEST__IP:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__IP:
 				setIp((String)newValue);
 				return;
-			case GltPackage.SITE_REQUEST__LON:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__LON:
 				setLon((Double)newValue);
 				return;
-			case GltPackage.SITE_REQUEST__LAT:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__LAT:
 				setLat((Double)newValue);
 				return;
-			case GltPackage.SITE_REQUEST__EXCLUDED:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__EXCLUDED:
 				setExcluded((Boolean)newValue);
 				return;
-			case GltPackage.SITE_REQUEST__FLAGS:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__FLAGS:
 				setFlags((Integer)newValue);
 				return;
 		}
@@ -566,34 +566,34 @@ public class SiteRequestImpl extends MinimalEObjectImpl.Container implements Sit
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case GltPackage.SITE_REQUEST__ID:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__ID:
 				setId(ID_EDEFAULT);
 				return;
-			case GltPackage.SITE_REQUEST__NAME:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case GltPackage.SITE_REQUEST__DIRECTORY:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__DIRECTORY:
 				setDirectory(DIRECTORY_EDEFAULT);
 				return;
-			case GltPackage.SITE_REQUEST__PORT:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__PORT:
 				setPort(PORT_EDEFAULT);
 				return;
-			case GltPackage.SITE_REQUEST__EXTERNAL_ID:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__EXTERNAL_ID:
 				setExternalId(EXTERNAL_ID_EDEFAULT);
 				return;
-			case GltPackage.SITE_REQUEST__IP:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__IP:
 				setIp(IP_EDEFAULT);
 				return;
-			case GltPackage.SITE_REQUEST__LON:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__LON:
 				setLon(LON_EDEFAULT);
 				return;
-			case GltPackage.SITE_REQUEST__LAT:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__LAT:
 				setLat(LAT_EDEFAULT);
 				return;
-			case GltPackage.SITE_REQUEST__EXCLUDED:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__EXCLUDED:
 				setExcluded(EXCLUDED_EDEFAULT);
 				return;
-			case GltPackage.SITE_REQUEST__FLAGS:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__FLAGS:
 				setFlags(FLAGS_EDEFAULT);
 				return;
 		}
@@ -608,25 +608,25 @@ public class SiteRequestImpl extends MinimalEObjectImpl.Container implements Sit
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case GltPackage.SITE_REQUEST__ID:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__ID:
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-			case GltPackage.SITE_REQUEST__NAME:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case GltPackage.SITE_REQUEST__DIRECTORY:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__DIRECTORY:
 				return DIRECTORY_EDEFAULT == null ? directory != null : !DIRECTORY_EDEFAULT.equals(directory);
-			case GltPackage.SITE_REQUEST__PORT:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__PORT:
 				return PORT_EDEFAULT == null ? port != null : !PORT_EDEFAULT.equals(port);
-			case GltPackage.SITE_REQUEST__EXTERNAL_ID:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__EXTERNAL_ID:
 				return EXTERNAL_ID_EDEFAULT == null ? externalId != null : !EXTERNAL_ID_EDEFAULT.equals(externalId);
-			case GltPackage.SITE_REQUEST__IP:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__IP:
 				return IP_EDEFAULT == null ? ip != null : !IP_EDEFAULT.equals(ip);
-			case GltPackage.SITE_REQUEST__LON:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__LON:
 				return LON_EDEFAULT == null ? lon != null : !LON_EDEFAULT.equals(lon);
-			case GltPackage.SITE_REQUEST__LAT:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__LAT:
 				return LAT_EDEFAULT == null ? lat != null : !LAT_EDEFAULT.equals(lat);
-			case GltPackage.SITE_REQUEST__EXCLUDED:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__EXCLUDED:
 				return EXCLUDED_EDEFAULT == null ? excluded != null : !EXCLUDED_EDEFAULT.equals(excluded);
-			case GltPackage.SITE_REQUEST__FLAGS:
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST__FLAGS:
 				return FLAGS_EDEFAULT == null ? flags != null : !FLAGS_EDEFAULT.equals(flags);
 		}
 		return super.eIsSet(featureID);
@@ -666,4 +666,4 @@ public class SiteRequestImpl extends MinimalEObjectImpl.Container implements Sit
 		return result.toString();
 	}
 
-} //SiteRequestImpl
+} //SystemDescriptionRequestImpl

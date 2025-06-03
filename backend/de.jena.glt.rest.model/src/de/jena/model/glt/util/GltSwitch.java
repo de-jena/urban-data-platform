@@ -240,15 +240,15 @@ public class GltSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case GltPackage.SITE_POJO: {
-				SitePojo sitePojo = (SitePojo)theEObject;
-				T result = caseSitePojo(sitePojo);
+			case GltPackage.SYSTEM_DESCRIPTION_POJO: {
+				SystemDescriptionPojo systemDescriptionPojo = (SystemDescriptionPojo)theEObject;
+				T result = caseSystemDescriptionPojo(systemDescriptionPojo);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case GltPackage.SITE_REQUEST: {
-				SiteRequest siteRequest = (SiteRequest)theEObject;
-				T result = caseSiteRequest(siteRequest);
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST: {
+				SystemDescriptionRequest systemDescriptionRequest = (SystemDescriptionRequest)theEObject;
+				T result = caseSystemDescriptionRequest(systemDescriptionRequest);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -789,32 +789,32 @@ public class GltSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Site Pojo</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>System Description Pojo</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Site Pojo</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>System Description Pojo</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSitePojo(SitePojo object) {
+	public T caseSystemDescriptionPojo(SystemDescriptionPojo object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Site Request</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>System Description Request</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Site Request</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>System Description Request</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSiteRequest(SiteRequest object) {
+	public T caseSystemDescriptionRequest(SystemDescriptionRequest object) {
 		return null;
 	}
 

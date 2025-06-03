@@ -34,7 +34,7 @@ import org.osgi.test.junit5.service.ServiceExtension;
 import de.jena.glt.rest.GltOpenApi;
 import de.jena.model.glt.DatalogContentPojo;
 import de.jena.model.glt.Response;
-import de.jena.model.glt.SitePojo;
+import de.jena.model.glt.SystemDescriptionPojo;
 
 /**
  * See documentation here: https://github.com/osgi/osgi-test
@@ -65,7 +65,7 @@ public class GltOpenApiClientTest {
 	public void test(@InjectService(cardinality = 0) ServiceAware<GltOpenApi> swGlt) throws InterruptedException {
 		GltOpenApi api = swGlt.waitForService(500);
 		assertThat(api).isNotNull();
-		Response response = api.getSites(false, false);
+		Response response = api.getSystems(false, false);
 
 		assertThat(response).isNotNull();
 		assertThat(response.getCode()).isEqualTo(200);
@@ -80,7 +80,7 @@ public class GltOpenApiClientTest {
 			throws InterruptedException {
 		GltOpenApi api = swGlt.waitForService(500);
 		assertThat(api).isNotNull();
-		Response response = api.getSites(true, false);
+		Response response = api.getSystems(true, false);
 
 		assertThat(response).isNotNull();
 		assertThat(response.getCode()).isEqualTo(200);
@@ -95,14 +95,14 @@ public class GltOpenApiClientTest {
 			throws InterruptedException {
 		GltOpenApi api = swGlt.waitForService(500);
 		assertThat(api).isNotNull();
-		Response response = api.getSite("065", false);
+		Response response = api.getSystem("065", false);
 
 		assertThat(response).isNotNull();
 		assertThat(response.getCode()).isEqualTo(200);
 		EList<EObject> result = response.getResult();
 		assertThat(result).hasSize(1);
-		assertThat(result.get(0)).isInstanceOf(SitePojo.class);
-		SitePojo site = (SitePojo) result.get(0);
+		assertThat(result.get(0)).isInstanceOf(SystemDescriptionPojo.class);
+		SystemDescriptionPojo site = (SystemDescriptionPojo) result.get(0);
 		assertThat(site.getName()).isEqualTo("Funktionsgebäude Leichtathletikstadion");
 	}
 

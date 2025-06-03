@@ -17,7 +17,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link de.jena.model.glt.TimeScheduleStatePojo#getSiteId <em>Site Id</em>}</li>
+ *   <li>{@link de.jena.model.glt.TimeScheduleStatePojo#getSystemId <em>System Id</em>}</li>
  *   <li>{@link de.jena.model.glt.TimeScheduleStatePojo#getId <em>Id</em>}</li>
  *   <li>{@link de.jena.model.glt.TimeScheduleStatePojo#getName <em>Name</em>}</li>
  *   <li>{@link de.jena.model.glt.TimeScheduleStatePojo#getValue <em>Value</em>}</li>
@@ -33,26 +33,26 @@ import org.osgi.annotation.versioning.ProviderType;
 @ProviderType
 public interface TimeScheduleStatePojo extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Site Id</b></em>' attribute.
+	 * Returns the value of the '<em><b>System Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Site Id</em>' attribute.
-	 * @see #setSiteId(Integer)
-	 * @see de.jena.model.glt.GltPackage#getTimeScheduleStatePojo_SiteId()
+	 * @return the value of the '<em>System Id</em>' attribute.
+	 * @see #setSystemId(Integer)
+	 * @see de.jena.model.glt.GltPackage#getTimeScheduleStatePojo_SystemId()
 	 * @model
 	 * @generated
 	 */
-	Integer getSiteId();
+	Integer getSystemId();
 
 	/**
-	 * Sets the value of the '{@link de.jena.model.glt.TimeScheduleStatePojo#getSiteId <em>Site Id</em>}' attribute.
+	 * Sets the value of the '{@link de.jena.model.glt.TimeScheduleStatePojo#getSystemId <em>System Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Site Id</em>' attribute.
-	 * @see #getSiteId()
+	 * @param value the new value of the '<em>System Id</em>' attribute.
+	 * @see #getSystemId()
 	 * @generated
 	 */
-	void setSiteId(Integer value);
+	void setSystemId(Integer value);
 
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.

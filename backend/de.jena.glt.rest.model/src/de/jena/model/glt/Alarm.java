@@ -24,7 +24,7 @@ import org.osgi.annotation.versioning.ProviderType;
  *   <li>{@link de.jena.model.glt.Alarm#getSl24schedule <em>Sl24schedule</em>}</li>
  *   <li>{@link de.jena.model.glt.Alarm#getPrioritySummer <em>Priority Summer</em>}</li>
  *   <li>{@link de.jena.model.glt.Alarm#getPriorityWinter <em>Priority Winter</em>}</li>
- *   <li>{@link de.jena.model.glt.Alarm#getSiteId <em>Site Id</em>}</li>
+ *   <li>{@link de.jena.model.glt.Alarm#getSystemId <em>System Id</em>}</li>
  *   <li>{@link de.jena.model.glt.Alarm#getFlag <em>Flag</em>}</li>
  * </ul>
  *
@@ -233,26 +233,26 @@ public interface Alarm extends EObject {
 	void setPriorityWinter(Integer value);
 
 	/**
-	 * Returns the value of the '<em><b>Site Id</b></em>' attribute.
+	 * Returns the value of the '<em><b>System Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Site Id</em>' attribute.
-	 * @see #setSiteId(String)
-	 * @see de.jena.model.glt.GltPackage#getAlarm_SiteId()
+	 * @return the value of the '<em>System Id</em>' attribute.
+	 * @see #setSystemId(String)
+	 * @see de.jena.model.glt.GltPackage#getAlarm_SystemId()
 	 * @model
 	 * @generated
 	 */
-	String getSiteId();
+	String getSystemId();
 
 	/**
-	 * Sets the value of the '{@link de.jena.model.glt.Alarm#getSiteId <em>Site Id</em>}' attribute.
+	 * Sets the value of the '{@link de.jena.model.glt.Alarm#getSystemId <em>System Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Site Id</em>' attribute.
-	 * @see #getSiteId()
+	 * @param value the new value of the '<em>System Id</em>' attribute.
+	 * @see #getSystemId()
 	 * @generated
 	 */
-	void setSiteId(String value);
+	void setSystemId(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Flag</b></em>' attribute.

@@ -20,7 +20,7 @@ import org.osgi.annotation.versioning.ProviderType;
  *   <li>{@link de.jena.model.glt.CylonNetworkPojo#getEntity <em>Entity</em>}</li>
  *   <li>{@link de.jena.model.glt.CylonNetworkPojo#getId <em>Id</em>}</li>
  *   <li>{@link de.jena.model.glt.CylonNetworkPojo#getName <em>Name</em>}</li>
- *   <li>{@link de.jena.model.glt.CylonNetworkPojo#getSiteId <em>Site Id</em>}</li>
+ *   <li>{@link de.jena.model.glt.CylonNetworkPojo#getSystemId <em>System Id</em>}</li>
  *   <li>{@link de.jena.model.glt.CylonNetworkPojo#getDirectory <em>Directory</em>}</li>
  *   <li>{@link de.jena.model.glt.CylonNetworkPojo#getIp <em>Ip</em>}</li>
  *   <li>{@link de.jena.model.glt.CylonNetworkPojo#getPort <em>Port</em>}</li>
@@ -102,26 +102,26 @@ public interface CylonNetworkPojo extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Site Id</b></em>' attribute.
+	 * Returns the value of the '<em><b>System Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Site Id</em>' attribute.
-	 * @see #setSiteId(Integer)
-	 * @see de.jena.model.glt.GltPackage#getCylonNetworkPojo_SiteId()
+	 * @return the value of the '<em>System Id</em>' attribute.
+	 * @see #setSystemId(Integer)
+	 * @see de.jena.model.glt.GltPackage#getCylonNetworkPojo_SystemId()
 	 * @model
 	 * @generated
 	 */
-	Integer getSiteId();
+	Integer getSystemId();
 
 	/**
-	 * Sets the value of the '{@link de.jena.model.glt.CylonNetworkPojo#getSiteId <em>Site Id</em>}' attribute.
+	 * Sets the value of the '{@link de.jena.model.glt.CylonNetworkPojo#getSystemId <em>System Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Site Id</em>' attribute.
-	 * @see #getSiteId()
+	 * @param value the new value of the '<em>System Id</em>' attribute.
+	 * @see #getSystemId()
 	 * @generated
 	 */
-	void setSiteId(Integer value);
+	void setSystemId(Integer value);
 
 	/**
 	 * Returns the value of the '<em><b>Directory</b></em>' attribute.

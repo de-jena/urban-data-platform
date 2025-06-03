@@ -23,8 +23,8 @@ import de.jena.model.glt.GltPackage;
 import de.jena.model.glt.InstructionsPojo;
 import de.jena.model.glt.PointRecord;
 import de.jena.model.glt.Response;
-import de.jena.model.glt.SiteRequest;
 import de.jena.model.glt.StatusLogRequest;
+import de.jena.model.glt.SystemDescriptionRequest;
 import de.jena.model.glt.TextRequest;
 import de.jena.model.glt.TimeScheduleRecord;
 import de.jena.model.glt.UpdateStateRequest;
@@ -203,12 +203,12 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public Response getEventsForSite(final String siteId, final String type, final Boolean includeAlarms, final String from, final String to) {
+	public Response getEventsForSystem(final String systemId, final String type, final Boolean includeAlarms, final String from, final String to) {
 		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
-			String endpoint = "/calendar/site/{siteId}";
+			String endpoint = "/calendar/system/{systemId}";
 		EClass resultEClass = GltPackage.eINSTANCE.getCalendarEventPojo();
-		pathParameter.put("siteId", toQueryString("siteId",siteId));
+		pathParameter.put("systemId", toQueryString("systemId",systemId));
 		if ( null != type ) queryParameter.put("type", toQueryString("type",type));
 		if ( null != includeAlarms ) queryParameter.put("includeAlarms", toQueryString("includeAlarms",includeAlarms));
 		if ( null != from ) queryParameter.put("from", toQueryString("from",from));
@@ -222,7 +222,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public Response createEventForSite(String siteId, CalenderEventRequest request) {
+	public Response createEventForSystem(String systemId, CalenderEventRequest request) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -258,12 +258,12 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public Response getEvents(final EList<String> siteIds, final String type, final String from, final String to) {
+	public Response getEvents(final EList<String> systemIds, final String type, final String from, final String to) {
 		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
 			String endpoint = "/calendar";
 		EClass resultEClass = GltPackage.eINSTANCE.getCalendarEventPojo();
-		if ( null != siteIds ) queryParameter.put("siteIds", toQueryString("siteIds",siteIds));
+		if ( null != systemIds ) queryParameter.put("systemIds", toQueryString("systemIds",systemIds));
 		if ( null != type ) queryParameter.put("type", toQueryString("type",type));
 		if ( null != from ) queryParameter.put("from", toQueryString("from",from));
 		if ( null != to ) queryParameter.put("to", toQueryString("to",to));
@@ -276,12 +276,12 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public Response getEventsAtTime(final EList<String> siteIds, final String time, final String type, final BigInteger grace) {
+	public Response getEventsAtTime(final EList<String> systemIds, final String time, final String type, final BigInteger grace) {
 		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
 			String endpoint = "/calendar/{time}";
 		EClass resultEClass = GltPackage.eINSTANCE.getCalendarEventPojo();
-		if ( null != siteIds ) queryParameter.put("siteIds", toQueryString("siteIds",siteIds));
+		if ( null != systemIds ) queryParameter.put("systemIds", toQueryString("systemIds",systemIds));
 		pathParameter.put("time", toQueryString("time",time));
 		if ( null != type ) queryParameter.put("type", toQueryString("type",type));
 		if ( null != grace ) queryParameter.put("grace", toQueryString("grace",grace));
@@ -312,12 +312,12 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public Response getEventsForSite_1(final String siteId, final String time, final String type, final BigInteger grace, final Boolean includeAlarms) {
+	public Response getEventsForSystem_1(final String systemId, final String time, final String type, final BigInteger grace, final Boolean includeAlarms) {
 		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
-			String endpoint = "/calendar/site/{siteId}/{time}";
+			String endpoint = "/calendar/system/{systemId}/{time}";
 		EClass resultEClass = GltPackage.eINSTANCE.getCalendarEventPojo();
-		pathParameter.put("siteId", toQueryString("siteId",siteId));
+		pathParameter.put("systemId", toQueryString("systemId",systemId));
 		pathParameter.put("time", toQueryString("time",time));
 		if ( null != type ) queryParameter.put("type", toQueryString("type",type));
 		if ( null != grace ) queryParameter.put("grace", toQueryString("grace",grace));
@@ -540,7 +540,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public Response getAlarmsWithMismatchedSites() {
+	public Response getAlarmsWithMismatchedSystems() {
 		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
 			String endpoint = "/meta/diag/alarms/mismatched";
@@ -699,14 +699,14 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public Response getChangelog(final Integer offset, final Integer limit, final EList<Integer> siteId, final Boolean external, final EList<String> author, final String from, final String to) {
+	public Response getChangelog(final Integer offset, final Integer limit, final EList<Integer> systemIds, final Boolean external, final EList<String> author, final String from, final String to) {
 		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
 			String endpoint = "/monitoring/points/history/{offset}-{limit}";
 		EClass resultEClass = GltPackage.eINSTANCE.getPointValuePojo();
 		pathParameter.put("offset", toQueryString("offset",offset));
 		pathParameter.put("limit", toQueryString("limit",limit));
-		if ( null != siteId ) queryParameter.put("siteId", toQueryString("siteId",siteId));
+		if ( null != systemIds ) queryParameter.put("systemIds", toQueryString("systemIds",systemIds));
 		if ( null != external ) queryParameter.put("external", toQueryString("external",external));
 		if ( null != author ) queryParameter.put("author", toQueryString("author",author));
 		if ( null != from ) queryParameter.put("from", toQueryString("from",from));
@@ -720,12 +720,12 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public Response getChangelogCount(final EList<Integer> siteId, final Boolean external, final EList<String> author, final String from, final String to) {
+	public Response getChangelogCount(final EList<Integer> systemIds, final Boolean external, final EList<String> author, final String from, final String to) {
 		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
 			String endpoint = "/monitoring/points/history/count";
 		EClass resultEClass = EcorePackage.eINSTANCE.getEObject();
-		if ( null != siteId ) queryParameter.put("siteId", toQueryString("siteId",siteId));
+		if ( null != systemIds ) queryParameter.put("systemIds", toQueryString("systemIds",systemIds));
 		if ( null != external ) queryParameter.put("external", toQueryString("external",external));
 		if ( null != author ) queryParameter.put("author", toQueryString("author",author));
 		if ( null != from ) queryParameter.put("from", toQueryString("from",from));
@@ -816,12 +816,12 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public Response getAlarmCount_1(final String siteId, final String state, final EList<String> eventType, final EList<Integer> flags) {
+	public Response getAlarmCount_1(final String systemId, final String state, final EList<String> eventType, final EList<Integer> flags) {
 		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
-			String endpoint = "/monitoring/alarms/{siteId}/state/{state}/count";
+			String endpoint = "/monitoring/alarms/{systemId}/state/{state}/count";
 		EClass resultEClass = EcorePackage.eINSTANCE.getEObject();
-		pathParameter.put("siteId", toQueryString("siteId",siteId));
+		pathParameter.put("systemId", toQueryString("systemId",systemId));
 		pathParameter.put("state", toQueryString("state",state));
 		if ( null != eventType ) queryParameter.put("eventType", toQueryString("eventType",eventType));
 		if ( null != flags ) queryParameter.put("flags", toQueryString("flags",flags));
@@ -834,12 +834,12 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public Response getAlarmCountByState(final String siteId, final EList<String> eventType, final EList<Integer> flags) {
+	public Response getAlarmCountByState(final String systemId, final EList<String> eventType, final EList<Integer> flags) {
 		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
-			String endpoint = "/monitoring/alarms/{siteId}/state/count";
+			String endpoint = "/monitoring/alarms/{systemId}/state/count";
 		EClass resultEClass = EcorePackage.eINSTANCE.getEObject();
-		pathParameter.put("siteId", toQueryString("siteId",siteId));
+		pathParameter.put("systemId", toQueryString("systemId",systemId));
 		if ( null != eventType ) queryParameter.put("eventType", toQueryString("eventType",eventType));
 		if ( null != flags ) queryParameter.put("flags", toQueryString("flags",flags));
 		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
@@ -851,12 +851,12 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public Response getAlarmCountByState_1(final EList<String> siteIds, final Boolean summary, final EList<String> eventType, final EList<Integer> flags) {
+	public Response getAlarmCountByState_1(final EList<String> systemIds, final Boolean summary, final EList<String> eventType, final EList<Integer> flags) {
 		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
 			String endpoint = "/monitoring/alarms/state/count";
 		EClass resultEClass = null;
-		if ( null != siteIds ) queryParameter.put("siteIds", toQueryString("siteIds",siteIds));
+		if ( null != systemIds ) queryParameter.put("systemIds", toQueryString("systemIds",systemIds));
 		if ( null != summary ) queryParameter.put("summary", toQueryString("summary",summary));
 		if ( null != eventType ) queryParameter.put("eventType", toQueryString("eventType",eventType));
 		if ( null != flags ) queryParameter.put("flags", toQueryString("flags",flags));
@@ -869,12 +869,12 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public Response getAlarmCountForSite(final String siteId, final EList<String> eventType, final EList<Integer> flags) {
+	public Response getAlarmCountForSystem(final String systemId, final EList<String> eventType, final EList<Integer> flags) {
 		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
-			String endpoint = "/monitoring/alarms/{siteId}/count";
+			String endpoint = "/monitoring/alarms/{systemId}/count";
 		EClass resultEClass = EcorePackage.eINSTANCE.getEObject();
-		pathParameter.put("siteId", toQueryString("siteId",siteId));
+		pathParameter.put("systemId", toQueryString("systemId",systemId));
 		if ( null != eventType ) queryParameter.put("eventType", toQueryString("eventType",eventType));
 		if ( null != flags ) queryParameter.put("flags", toQueryString("flags",flags));
 		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
@@ -957,12 +957,12 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public Response getAlarmLogs_1(final String siteId, final EList<String> eventType, final EList<Integer> flags) {
+	public Response getAlarmLogs_1(final String systemId, final EList<String> eventType, final EList<Integer> flags) {
 		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
-			String endpoint = "/monitoring/alarms/{siteId}";
+			String endpoint = "/monitoring/alarms/{systemId}";
 		EClass resultEClass = GltPackage.eINSTANCE.getAlarmLogPojo();
-		pathParameter.put("siteId", toQueryString("siteId",siteId));
+		pathParameter.put("systemId", toQueryString("systemId",systemId));
 		if ( null != eventType ) queryParameter.put("eventType", toQueryString("eventType",eventType));
 		if ( null != flags ) queryParameter.put("flags", toQueryString("flags",flags));
 		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
@@ -1008,12 +1008,12 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public Response getAlarmLogsTimeline(final String siteId, final BigInteger from, final BigInteger to) {
+	public Response getAlarmLogsTimeline(final String systemId, final BigInteger from, final BigInteger to) {
 		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
-			String endpoint = "/monitoring/timeline/site/{siteId}";
+			String endpoint = "/monitoring/timeline/system/{systemId}";
 		EClass resultEClass = EcorePackage.eINSTANCE.getEObject();
-		pathParameter.put("siteId", toQueryString("siteId",siteId));
+		pathParameter.put("systemId", toQueryString("systemId",systemId));
 		if ( null != from ) queryParameter.put("from", toQueryString("from",from));
 		if ( null != to ) queryParameter.put("to", toQueryString("to",to));
 		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
@@ -1025,12 +1025,12 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public Response getAlarmsForState(final String siteId, final String state, final EList<String> eventType, final EList<Integer> flags) {
+	public Response getAlarmsForState(final String systemId, final String state, final EList<String> eventType, final EList<Integer> flags) {
 		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
-			String endpoint = "/monitoring/alarms/{siteId}/state/{state}";
+			String endpoint = "/monitoring/alarms/{systemId}/state/{state}";
 		EClass resultEClass = GltPackage.eINSTANCE.getAlarmLogPojo();
-		pathParameter.put("siteId", toQueryString("siteId",siteId));
+		pathParameter.put("systemId", toQueryString("systemId",systemId));
 		pathParameter.put("state", toQueryString("state",state));
 		if ( null != eventType ) queryParameter.put("eventType", toQueryString("eventType",eventType));
 		if ( null != flags ) queryParameter.put("flags", toQueryString("flags",flags));
@@ -1043,12 +1043,12 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public Response getAlarmsForStates(final String siteId, final EList<String> state, final EList<String> eventType, final EList<Integer> flags) {
+	public Response getAlarmsForStates(final String systemId, final EList<String> state, final EList<String> eventType, final EList<Integer> flags) {
 		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
-			String endpoint = "/monitoring/alarms/{siteId}/state";
+			String endpoint = "/monitoring/alarms/{systemId}/state";
 		EClass resultEClass = GltPackage.eINSTANCE.getAlarmLogPojo();
-		pathParameter.put("siteId", toQueryString("siteId",siteId));
+		pathParameter.put("systemId", toQueryString("systemId",systemId));
 		if ( null != state ) queryParameter.put("state", toQueryString("state",state));
 		if ( null != eventType ) queryParameter.put("eventType", toQueryString("eventType",eventType));
 		if ( null != flags ) queryParameter.put("flags", toQueryString("flags",flags));
@@ -1104,12 +1104,12 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public Response getLog(final String siteId) {
+	public Response getLog(final String systemId) {
 		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
-			String endpoint = "/monitoring/logs/{siteId}";
+			String endpoint = "/monitoring/logs/{systemId}";
 		EClass resultEClass = GltPackage.eINSTANCE.getSyncLogPojo();
-		pathParameter.put("siteId", toQueryString("siteId",siteId));
+		pathParameter.put("systemId", toQueryString("systemId",systemId));
 		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
@@ -1148,12 +1148,12 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public Response getStatistics(final String siteId) {
+	public Response getStatistics(final String systemId) {
 		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
-			String endpoint = "/monitoring/statistics/{siteId}";
+			String endpoint = "/monitoring/statistics/{systemId}";
 		EClass resultEClass = EcorePackage.eINSTANCE.getEObject();
-		pathParameter.put("siteId", toQueryString("siteId",siteId));
+		pathParameter.put("systemId", toQueryString("systemId",systemId));
 		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
@@ -1189,12 +1189,12 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public Response getStatusLogs_1(final String siteId) {
+	public Response getStatusLogs_1(final String systemId) {
 		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
-			String endpoint = "/monitoring/status/{siteId}";
+			String endpoint = "/monitoring/status/{systemId}";
 		EClass resultEClass = GltPackage.eINSTANCE.getStatusLogPojo();
-		pathParameter.put("siteId", toQueryString("siteId",siteId));
+		pathParameter.put("systemId", toQueryString("systemId",systemId));
 		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
@@ -1204,12 +1204,12 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public Response getStatusLogsTimeline(final String siteId, final BigInteger from, final BigInteger to) {
+	public Response getStatusLogsTimeline(final String systemId, final BigInteger from, final BigInteger to) {
 		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
-			String endpoint = "/monitoring/timeline/status/{siteId}";
+			String endpoint = "/monitoring/timeline/status/{systemId}";
 		EClass resultEClass = GltPackage.eINSTANCE.getStatusLogPojo();
-		pathParameter.put("siteId", toQueryString("siteId",siteId));
+		pathParameter.put("systemId", toQueryString("systemId",systemId));
 		if ( null != from ) queryParameter.put("from", toQueryString("from",from));
 		if ( null != to ) queryParameter.put("to", toQueryString("to",to));
 		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
@@ -1221,12 +1221,12 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public Response getTracked(final String siteId) {
+	public Response getTracked(final String systemId) {
 		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
-			String endpoint = "/monitoring/tracked/{siteId}";
+			String endpoint = "/monitoring/tracked/{systemId}";
 		EClass resultEClass = EcorePackage.eINSTANCE.getEObject();
-		pathParameter.put("siteId", toQueryString("siteId",siteId));
+		pathParameter.put("systemId", toQueryString("systemId",systemId));
 		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
@@ -1236,12 +1236,12 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public Response isFlaky(final String siteId, final String alarmId, final BigInteger from, final BigInteger to, final Integer threshold) {
+	public Response isFlaky(final String systemId, final String alarmId, final BigInteger from, final BigInteger to, final Integer threshold) {
 		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
-			String endpoint = "/monitoring/flaky/{siteId}/{alarmId}";
+			String endpoint = "/monitoring/flaky/{systemId}/{alarmId}";
 		EClass resultEClass = EcorePackage.eINSTANCE.getEObject();
-		pathParameter.put("siteId", toQueryString("siteId",siteId));
+		pathParameter.put("systemId", toQueryString("systemId",systemId));
 		pathParameter.put("alarmId", toQueryString("alarmId",alarmId));
 		if ( null != from ) queryParameter.put("from", toQueryString("from",from));
 		if ( null != to ) queryParameter.put("to", toQueryString("to",to));
@@ -1270,7 +1270,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public Response refreshSite(String siteId) {
+	public Response refreshSystem(String systemId) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -1282,7 +1282,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public Response updateAlarmState(String siteId, UpdateStateRequest request) {
+	public Response updateAlarmState(String systemId, UpdateStateRequest request) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -1294,14 +1294,14 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public Response getChangelog_1(final Integer offset, final Integer limit, final EList<Integer> siteId, final Boolean external, final EList<String> author, final String from, final String to) {
+	public Response getChangelog_1(final Integer offset, final Integer limit, final EList<Integer> systemIds, final Boolean external, final EList<String> author, final String from, final String to) {
 		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
 			String endpoint = "/monitoring/timeschedule/block/history/{offset}-{limit}";
 		EClass resultEClass = GltPackage.eINSTANCE.getTimeScheduleBlockPojo();
 		pathParameter.put("offset", toQueryString("offset",offset));
 		pathParameter.put("limit", toQueryString("limit",limit));
-		if ( null != siteId ) queryParameter.put("siteId", toQueryString("siteId",siteId));
+		if ( null != systemIds ) queryParameter.put("systemIds", toQueryString("systemIds",systemIds));
 		if ( null != external ) queryParameter.put("external", toQueryString("external",external));
 		if ( null != author ) queryParameter.put("author", toQueryString("author",author));
 		if ( null != from ) queryParameter.put("from", toQueryString("from",from));
@@ -1315,12 +1315,12 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public Response getChangelogCount_1(final EList<Integer> siteId, final Boolean external, final EList<String> author, final String from, final String to) {
+	public Response getChangelogCount_1(final EList<Integer> systemIds, final Boolean external, final EList<String> author, final String from, final String to) {
 		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
 			String endpoint = "/monitoring/timeschedule/block/history/count";
 		EClass resultEClass = EcorePackage.eINSTANCE.getEObject();
-		if ( null != siteId ) queryParameter.put("siteId", toQueryString("siteId",siteId));
+		if ( null != systemIds ) queryParameter.put("systemIds", toQueryString("systemIds",systemIds));
 		if ( null != external ) queryParameter.put("external", toQueryString("external",external));
 		if ( null != author ) queryParameter.put("author", toQueryString("author",author));
 		if ( null != from ) queryParameter.put("from", toQueryString("from",from));
@@ -1529,123 +1529,6 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public Response getSite(final String id, final Boolean shallow) {
-		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
-		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
-			String endpoint = "/sites/{id}";
-		EClass resultEClass = GltPackage.eINSTANCE.getSitePojo();
-		pathParameter.put("id", toQueryString("id",id));
-		if ( null != shallow ) queryParameter.put("shallow", toQueryString("shallow",shallow));
-		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Response updateSite(String id, SiteRequest request) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Response createSite(String id, SiteRequest request) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Response deleteSite(String id) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Response getContacts(final String id) {
-		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
-		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
-			String endpoint = "/sites/contacts/{id}";
-		EClass resultEClass = GltPackage.eINSTANCE.getContactPojo();
-		pathParameter.put("id", toQueryString("id",id));
-		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Response getContracts(final String id, final String type, final Boolean activeOnly) {
-		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
-		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
-			String endpoint = "/sites/contracts/{id}";
-		EClass resultEClass = GltPackage.eINSTANCE.getContractPojo();
-		pathParameter.put("id", toQueryString("id",id));
-		if ( null != type ) queryParameter.put("type", toQueryString("type",type));
-		if ( null != activeOnly ) queryParameter.put("activeOnly", toQueryString("activeOnly",activeOnly));
-		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Response getSites(final Boolean expanded, final Boolean excluded) {
-		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
-		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
-			String endpoint = "/sites";
-		EClass resultEClass = null;
-		if ( null != expanded ) queryParameter.put("expanded", toQueryString("expanded",expanded));
-		if ( null != excluded ) queryParameter.put("excluded", toQueryString("excluded",excluded));
-		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Response getTechFacilities(final String id, final String type, final Boolean activeOnly) {
-		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
-		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
-			String endpoint = "/sites/facilities/{id}";
-		EClass resultEClass = GltPackage.eINSTANCE.getTechFacilityPojo();
-		pathParameter.put("id", toQueryString("id",id));
-		if ( null != type ) queryParameter.put("type", toQueryString("type",type));
-		if ( null != activeOnly ) queryParameter.put("activeOnly", toQueryString("activeOnly",activeOnly));
-		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Response getAuthStatus() {
 		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
@@ -1665,6 +1548,123 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
 			String endpoint = "/status";
 		EClass resultEClass = EcorePackage.eINSTANCE.getEObject();
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Response getSystem(final String id, final Boolean shallow) {
+		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
+		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
+			String endpoint = "/systems/{id}";
+		EClass resultEClass = GltPackage.eINSTANCE.getSystemDescriptionPojo();
+		pathParameter.put("id", toQueryString("id",id));
+		if ( null != shallow ) queryParameter.put("shallow", toQueryString("shallow",shallow));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Response updateSystem(String id, SystemDescriptionRequest request) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Response createSystemDescription(String id, SystemDescriptionRequest request) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Response deleteSystem(String id) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Response getContacts(final String id) {
+		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
+		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
+			String endpoint = "/systems/contacts/{id}";
+		EClass resultEClass = GltPackage.eINSTANCE.getContactPojo();
+		pathParameter.put("id", toQueryString("id",id));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Response getContracts(final String id, final String type, final Boolean activeOnly) {
+		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
+		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
+			String endpoint = "/systems/contracts/{id}";
+		EClass resultEClass = GltPackage.eINSTANCE.getContractPojo();
+		pathParameter.put("id", toQueryString("id",id));
+		if ( null != type ) queryParameter.put("type", toQueryString("type",type));
+		if ( null != activeOnly ) queryParameter.put("activeOnly", toQueryString("activeOnly",activeOnly));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Response getSystems(final Boolean expanded, final Boolean excluded) {
+		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
+		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
+			String endpoint = "/systems";
+		EClass resultEClass = null;
+		if ( null != expanded ) queryParameter.put("expanded", toQueryString("expanded",expanded));
+		if ( null != excluded ) queryParameter.put("excluded", toQueryString("excluded",excluded));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Response getTechFacilities(final String id, final String type, final Boolean activeOnly) {
+		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
+		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
+			String endpoint = "/systems/facilities/{id}";
+		EClass resultEClass = GltPackage.eINSTANCE.getTechFacilityPojo();
+		pathParameter.put("id", toQueryString("id",id));
+		if ( null != type ) queryParameter.put("type", toQueryString("type",type));
+		if ( null != activeOnly ) queryParameter.put("activeOnly", toQueryString("activeOnly",activeOnly));
 		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
@@ -1935,7 +1935,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public Response addUser(Boolean internal, String request) {
+	public Response addUser(String request) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -2002,7 +2002,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public Response updateSuspect(String siteId, String alarmId) {
+	public Response updateSuspect(String systemId, String alarmId) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -2014,7 +2014,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public Response deleteSuspect(String siteId, String alarmId) {
+	public Response deleteSuspect(String systemId, String alarmId) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -2043,12 +2043,12 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public Response getSuspects_1(final String siteId, final EList<String> eventType, final EList<Integer> flags, final Boolean recognized) {
+	public Response getSuspects_1(final String systemId, final EList<String> eventType, final EList<Integer> flags, final Boolean recognized) {
 		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
-			String endpoint = "/watcher/suspects/{siteId}";
+			String endpoint = "/watcher/suspects/{systemId}";
 		EClass resultEClass = GltPackage.eINSTANCE.getSuspectPojo();
-		pathParameter.put("siteId", toQueryString("siteId",siteId));
+		pathParameter.put("systemId", toQueryString("systemId",systemId));
 		if ( null != eventType ) queryParameter.put("eventType", toQueryString("eventType",eventType));
 		if ( null != flags ) queryParameter.put("flags", toQueryString("flags",flags));
 		if ( null != recognized ) queryParameter.put("recognized", toQueryString("recognized",recognized));
@@ -2110,10 +2110,10 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 				return getEventsForAlarm((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
 			case GltPackage.GLT_OPEN_API_CLIENT___CREATE_EVENT_FOR_ALARM__STRING_CALENDEREVENTREQUEST:
 				return createEventForAlarm((String)arguments.get(0), (CalenderEventRequest)arguments.get(1));
-			case GltPackage.GLT_OPEN_API_CLIENT___GET_EVENTS_FOR_SITE__STRING_STRING_BOOLEAN_STRING_STRING:
-				return getEventsForSite((String)arguments.get(0), (String)arguments.get(1), (Boolean)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4));
-			case GltPackage.GLT_OPEN_API_CLIENT___CREATE_EVENT_FOR_SITE__STRING_CALENDEREVENTREQUEST:
-				return createEventForSite((String)arguments.get(0), (CalenderEventRequest)arguments.get(1));
+			case GltPackage.GLT_OPEN_API_CLIENT___GET_EVENTS_FOR_SYSTEM__STRING_STRING_BOOLEAN_STRING_STRING:
+				return getEventsForSystem((String)arguments.get(0), (String)arguments.get(1), (Boolean)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4));
+			case GltPackage.GLT_OPEN_API_CLIENT___CREATE_EVENT_FOR_SYSTEM__STRING_CALENDEREVENTREQUEST:
+				return createEventForSystem((String)arguments.get(0), (CalenderEventRequest)arguments.get(1));
 			case GltPackage.GLT_OPEN_API_CLIENT___UPDATE_EVENT__INTEGER_CALENDEREVENTREQUEST:
 				return updateEvent((Integer)arguments.get(0), (CalenderEventRequest)arguments.get(1));
 			case GltPackage.GLT_OPEN_API_CLIENT___DELETE_EVENT__INTEGER:
@@ -2124,8 +2124,8 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 				return getEventsAtTime((EList<String>)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (BigInteger)arguments.get(3));
 			case GltPackage.GLT_OPEN_API_CLIENT___GET_EVENTS_FOR_ALARM_1__STRING_STRING_STRING_BIGINTEGER:
 				return getEventsForAlarm_1((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (BigInteger)arguments.get(3));
-			case GltPackage.GLT_OPEN_API_CLIENT___GET_EVENTS_FOR_SITE_1__STRING_STRING_STRING_BIGINTEGER_BOOLEAN:
-				return getEventsForSite_1((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (BigInteger)arguments.get(3), (Boolean)arguments.get(4));
+			case GltPackage.GLT_OPEN_API_CLIENT___GET_EVENTS_FOR_SYSTEM_1__STRING_STRING_STRING_BIGINTEGER_BOOLEAN:
+				return getEventsForSystem_1((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (BigInteger)arguments.get(3), (Boolean)arguments.get(4));
 			case GltPackage.GLT_OPEN_API_CLIENT___GET_FOR_ALARM__STRING_BIGINTEGER_STRING:
 				return getForAlarm((String)arguments.get(0), (BigInteger)arguments.get(1), (String)arguments.get(2));
 			case GltPackage.GLT_OPEN_API_CLIENT___CREATE_COMMENT_FOR_OWNER__STRING_BIGINTEGER_COMMENTREQUEST:
@@ -2152,8 +2152,8 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 				return getDevices((Boolean)arguments.get(0));
 			case GltPackage.GLT_OPEN_API_CLIENT___GET_DEVICES_COUNT:
 				return getDevicesCount();
-			case GltPackage.GLT_OPEN_API_CLIENT___GET_ALARMS_WITH_MISMATCHED_SITES:
-				return getAlarmsWithMismatchedSites();
+			case GltPackage.GLT_OPEN_API_CLIENT___GET_ALARMS_WITH_MISMATCHED_SYSTEMS:
+				return getAlarmsWithMismatchedSystems();
 			case GltPackage.GLT_OPEN_API_CLIENT___GET_AUDIT_LOG__INTEGER_INTEGER:
 				return getAuditLog((Integer)arguments.get(0), (Integer)arguments.get(1));
 			case GltPackage.GLT_OPEN_API_CLIENT___GET_AUDIT_LOG_COUNT:
@@ -2194,8 +2194,8 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 				return getAlarmCountByState((String)arguments.get(0), (EList<String>)arguments.get(1), (EList<Integer>)arguments.get(2));
 			case GltPackage.GLT_OPEN_API_CLIENT___GET_ALARM_COUNT_BY_STATE_1__ELIST_BOOLEAN_ELIST_ELIST:
 				return getAlarmCountByState_1((EList<String>)arguments.get(0), (Boolean)arguments.get(1), (EList<String>)arguments.get(2), (EList<Integer>)arguments.get(3));
-			case GltPackage.GLT_OPEN_API_CLIENT___GET_ALARM_COUNT_FOR_SITE__STRING_ELIST_ELIST:
-				return getAlarmCountForSite((String)arguments.get(0), (EList<String>)arguments.get(1), (EList<Integer>)arguments.get(2));
+			case GltPackage.GLT_OPEN_API_CLIENT___GET_ALARM_COUNT_FOR_SYSTEM__STRING_ELIST_ELIST:
+				return getAlarmCountForSystem((String)arguments.get(0), (EList<String>)arguments.get(1), (EList<Integer>)arguments.get(2));
 			case GltPackage.GLT_OPEN_API_CLIENT___GET_ALARM_FOR_STATE_COUNT__STRING_ELIST_ELIST:
 				return getAlarmForStateCount((String)arguments.get(0), (EList<String>)arguments.get(1), (EList<Integer>)arguments.get(2));
 			case GltPackage.GLT_OPEN_API_CLIENT___GET_ALARM_LOG_TIMELINE__STRING_BIGINTEGER_BIGINTEGER_INTEGER_INTEGER:
@@ -2244,8 +2244,8 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 				return isFlaky((String)arguments.get(0), (String)arguments.get(1), (BigInteger)arguments.get(2), (BigInteger)arguments.get(3), (Integer)arguments.get(4));
 			case GltPackage.GLT_OPEN_API_CLIENT___LOGS_FOR_STATES__ELIST:
 				return logsForStates((EList<String>)arguments.get(0));
-			case GltPackage.GLT_OPEN_API_CLIENT___REFRESH_SITE__STRING:
-				return refreshSite((String)arguments.get(0));
+			case GltPackage.GLT_OPEN_API_CLIENT___REFRESH_SYSTEM__STRING:
+				return refreshSystem((String)arguments.get(0));
 			case GltPackage.GLT_OPEN_API_CLIENT___UPDATE_ALARM_STATE__STRING_UPDATESTATEREQUEST:
 				return updateAlarmState((String)arguments.get(0), (UpdateStateRequest)arguments.get(1));
 			case GltPackage.GLT_OPEN_API_CLIENT___GET_CHANGELOG_1__INTEGER_INTEGER_ELIST_BOOLEAN_ELIST_STRING_STRING:
@@ -2280,26 +2280,26 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 				return delete((String)arguments.get(0));
 			case GltPackage.GLT_OPEN_API_CLIENT___GET_ALL_SETTINGS:
 				return getAllSettings();
-			case GltPackage.GLT_OPEN_API_CLIENT___GET_SITE__STRING_BOOLEAN:
-				return getSite((String)arguments.get(0), (Boolean)arguments.get(1));
-			case GltPackage.GLT_OPEN_API_CLIENT___UPDATE_SITE__STRING_SITEREQUEST:
-				return updateSite((String)arguments.get(0), (SiteRequest)arguments.get(1));
-			case GltPackage.GLT_OPEN_API_CLIENT___CREATE_SITE__STRING_SITEREQUEST:
-				return createSite((String)arguments.get(0), (SiteRequest)arguments.get(1));
-			case GltPackage.GLT_OPEN_API_CLIENT___DELETE_SITE__STRING:
-				return deleteSite((String)arguments.get(0));
-			case GltPackage.GLT_OPEN_API_CLIENT___GET_CONTACTS__STRING:
-				return getContacts((String)arguments.get(0));
-			case GltPackage.GLT_OPEN_API_CLIENT___GET_CONTRACTS__STRING_STRING_BOOLEAN:
-				return getContracts((String)arguments.get(0), (String)arguments.get(1), (Boolean)arguments.get(2));
-			case GltPackage.GLT_OPEN_API_CLIENT___GET_SITES__BOOLEAN_BOOLEAN:
-				return getSites((Boolean)arguments.get(0), (Boolean)arguments.get(1));
-			case GltPackage.GLT_OPEN_API_CLIENT___GET_TECH_FACILITIES__STRING_STRING_BOOLEAN:
-				return getTechFacilities((String)arguments.get(0), (String)arguments.get(1), (Boolean)arguments.get(2));
 			case GltPackage.GLT_OPEN_API_CLIENT___GET_AUTH_STATUS:
 				return getAuthStatus();
 			case GltPackage.GLT_OPEN_API_CLIENT___GET_STATUS:
 				return getStatus();
+			case GltPackage.GLT_OPEN_API_CLIENT___GET_SYSTEM__STRING_BOOLEAN:
+				return getSystem((String)arguments.get(0), (Boolean)arguments.get(1));
+			case GltPackage.GLT_OPEN_API_CLIENT___UPDATE_SYSTEM__STRING_SYSTEMDESCRIPTIONREQUEST:
+				return updateSystem((String)arguments.get(0), (SystemDescriptionRequest)arguments.get(1));
+			case GltPackage.GLT_OPEN_API_CLIENT___CREATE_SYSTEM_DESCRIPTION__STRING_SYSTEMDESCRIPTIONREQUEST:
+				return createSystemDescription((String)arguments.get(0), (SystemDescriptionRequest)arguments.get(1));
+			case GltPackage.GLT_OPEN_API_CLIENT___DELETE_SYSTEM__STRING:
+				return deleteSystem((String)arguments.get(0));
+			case GltPackage.GLT_OPEN_API_CLIENT___GET_CONTACTS__STRING:
+				return getContacts((String)arguments.get(0));
+			case GltPackage.GLT_OPEN_API_CLIENT___GET_CONTRACTS__STRING_STRING_BOOLEAN:
+				return getContracts((String)arguments.get(0), (String)arguments.get(1), (Boolean)arguments.get(2));
+			case GltPackage.GLT_OPEN_API_CLIENT___GET_SYSTEMS__BOOLEAN_BOOLEAN:
+				return getSystems((Boolean)arguments.get(0), (Boolean)arguments.get(1));
+			case GltPackage.GLT_OPEN_API_CLIENT___GET_TECH_FACILITIES__STRING_STRING_BOOLEAN:
+				return getTechFacilities((String)arguments.get(0), (String)arguments.get(1), (Boolean)arguments.get(2));
 			case GltPackage.GLT_OPEN_API_CLIENT___GET_ENTITIES__ELIST:
 				return getEntities((EList<EntityRequest>)arguments.get(0));
 			case GltPackage.GLT_OPEN_API_CLIENT___GET_ENTITIES_BY_TYPE__INTEGER_STRING_ELIST:
@@ -2338,8 +2338,8 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 				return removePropertyFromRole((String)arguments.get(0), (String)arguments.get(1));
 			case GltPackage.GLT_OPEN_API_CLIENT___GET_USERS:
 				return getUsers();
-			case GltPackage.GLT_OPEN_API_CLIENT___ADD_USER__BOOLEAN_STRING:
-				return addUser((Boolean)arguments.get(0), (String)arguments.get(1));
+			case GltPackage.GLT_OPEN_API_CLIENT___ADD_USER__STRING:
+				return addUser((String)arguments.get(0));
 			case GltPackage.GLT_OPEN_API_CLIENT___CURRENT_ROLE:
 				return currentRole();
 			case GltPackage.GLT_OPEN_API_CLIENT___GET_ROLE__STRING_BOOLEAN_BOOLEAN:

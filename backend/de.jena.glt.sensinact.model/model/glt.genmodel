@@ -9,7 +9,7 @@
   <foreignModel>glt.ecore</foreignModel>
   <genPackages prefix="Glt" basePackage="de.jena.glt.sensinact.model" disposableProviderFactory="true"
       ecorePackage="glt.ecore#/">
-    <genClasses ecoreClass="glt.ecore#//Glt"/>
+    <genClasses ecoreClass="glt.ecore#//GltSide"/>
     <genClasses ecoreClass="glt.ecore#//MonitoringData">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glt.ecore#//MonitoringData/value"/>
     </genClasses>

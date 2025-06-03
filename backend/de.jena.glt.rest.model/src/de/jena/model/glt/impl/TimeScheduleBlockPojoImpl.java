@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.jena.model.glt.impl.TimeScheduleBlockPojoImpl#getSiteId <em>Site Id</em>}</li>
+ *   <li>{@link de.jena.model.glt.impl.TimeScheduleBlockPojoImpl#getSystemId <em>System Id</em>}</li>
  *   <li>{@link de.jena.model.glt.impl.TimeScheduleBlockPojoImpl#getId <em>Id</em>}</li>
  *   <li>{@link de.jena.model.glt.impl.TimeScheduleBlockPojoImpl#getBlock <em>Block</em>}</li>
  *   <li>{@link de.jena.model.glt.impl.TimeScheduleBlockPojoImpl#getExceptionStartDay <em>Exception Start Day</em>}</li>
@@ -45,24 +45,24 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  */
 public class TimeScheduleBlockPojoImpl extends MinimalEObjectImpl.Container implements TimeScheduleBlockPojo {
 	/**
-	 * The default value of the '{@link #getSiteId() <em>Site Id</em>}' attribute.
+	 * The default value of the '{@link #getSystemId() <em>System Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSiteId()
+	 * @see #getSystemId()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Integer SITE_ID_EDEFAULT = null;
+	protected static final Integer SYSTEM_ID_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getSiteId() <em>Site Id</em>}' attribute.
+	 * The cached value of the '{@link #getSystemId() <em>System Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSiteId()
+	 * @see #getSystemId()
 	 * @generated
 	 * @ordered
 	 */
-	protected Integer siteId = SITE_ID_EDEFAULT;
+	protected Integer systemId = SYSTEM_ID_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
@@ -299,8 +299,8 @@ public class TimeScheduleBlockPojoImpl extends MinimalEObjectImpl.Container impl
 	 * @generated
 	 */
 	@Override
-	public Integer getSiteId() {
-		return siteId;
+	public Integer getSystemId() {
+		return systemId;
 	}
 
 	/**
@@ -309,11 +309,11 @@ public class TimeScheduleBlockPojoImpl extends MinimalEObjectImpl.Container impl
 	 * @generated
 	 */
 	@Override
-	public void setSiteId(Integer newSiteId) {
-		Integer oldSiteId = siteId;
-		siteId = newSiteId;
+	public void setSystemId(Integer newSystemId) {
+		Integer oldSystemId = systemId;
+		systemId = newSystemId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.TIME_SCHEDULE_BLOCK_POJO__SITE_ID, oldSiteId, siteId));
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.TIME_SCHEDULE_BLOCK_POJO__SYSTEM_ID, oldSystemId, systemId));
 	}
 
 	/**
@@ -567,8 +567,8 @@ public class TimeScheduleBlockPojoImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case GltPackage.TIME_SCHEDULE_BLOCK_POJO__SITE_ID:
-				return getSiteId();
+			case GltPackage.TIME_SCHEDULE_BLOCK_POJO__SYSTEM_ID:
+				return getSystemId();
 			case GltPackage.TIME_SCHEDULE_BLOCK_POJO__ID:
 				return getId();
 			case GltPackage.TIME_SCHEDULE_BLOCK_POJO__BLOCK:
@@ -604,8 +604,8 @@ public class TimeScheduleBlockPojoImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case GltPackage.TIME_SCHEDULE_BLOCK_POJO__SITE_ID:
-				setSiteId((Integer)newValue);
+			case GltPackage.TIME_SCHEDULE_BLOCK_POJO__SYSTEM_ID:
+				setSystemId((Integer)newValue);
 				return;
 			case GltPackage.TIME_SCHEDULE_BLOCK_POJO__ID:
 				setId((Integer)newValue);
@@ -653,8 +653,8 @@ public class TimeScheduleBlockPojoImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case GltPackage.TIME_SCHEDULE_BLOCK_POJO__SITE_ID:
-				setSiteId(SITE_ID_EDEFAULT);
+			case GltPackage.TIME_SCHEDULE_BLOCK_POJO__SYSTEM_ID:
+				setSystemId(SYSTEM_ID_EDEFAULT);
 				return;
 			case GltPackage.TIME_SCHEDULE_BLOCK_POJO__ID:
 				setId(ID_EDEFAULT);
@@ -701,8 +701,8 @@ public class TimeScheduleBlockPojoImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case GltPackage.TIME_SCHEDULE_BLOCK_POJO__SITE_ID:
-				return SITE_ID_EDEFAULT == null ? siteId != null : !SITE_ID_EDEFAULT.equals(siteId);
+			case GltPackage.TIME_SCHEDULE_BLOCK_POJO__SYSTEM_ID:
+				return SYSTEM_ID_EDEFAULT == null ? systemId != null : !SYSTEM_ID_EDEFAULT.equals(systemId);
 			case GltPackage.TIME_SCHEDULE_BLOCK_POJO__ID:
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case GltPackage.TIME_SCHEDULE_BLOCK_POJO__BLOCK:
@@ -739,8 +739,8 @@ public class TimeScheduleBlockPojoImpl extends MinimalEObjectImpl.Container impl
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (siteId: ");
-		result.append(siteId);
+		result.append(" (systemId: ");
+		result.append(systemId);
 		result.append(", id: ");
 		result.append(id);
 		result.append(", block: ");

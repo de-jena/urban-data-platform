@@ -4,7 +4,7 @@
   <eAnnotations source="Version">
     <details key="value" value="1.0"/>
   </eAnnotations>
-  <eClassifiers xsi:type="ecore:EClass" name="Glt" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//DynamicProvider"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GltSide" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//DynamicProvider"/>
   <eClassifiers xsi:type="ecore:EClass" name="MonitoringData" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
   </eClassifiers>

@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.jena.model.glt.impl.SyncLogPojoImpl#getSiteId <em>Site Id</em>}</li>
+ *   <li>{@link de.jena.model.glt.impl.SyncLogPojoImpl#getSystemId <em>System Id</em>}</li>
  *   <li>{@link de.jena.model.glt.impl.SyncLogPojoImpl#getState <em>State</em>}</li>
  *   <li>{@link de.jena.model.glt.impl.SyncLogPojoImpl#getLatestRingbufferTimestamp <em>Latest Ringbuffer Timestamp</em>}</li>
  *   <li>{@link de.jena.model.glt.impl.SyncLogPojoImpl#getLastAccessTimeMs <em>Last Access Time Ms</em>}</li>
@@ -35,24 +35,24 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class SyncLogPojoImpl extends MinimalEObjectImpl.Container implements SyncLogPojo {
 	/**
-	 * The default value of the '{@link #getSiteId() <em>Site Id</em>}' attribute.
+	 * The default value of the '{@link #getSystemId() <em>System Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSiteId()
+	 * @see #getSystemId()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String SITE_ID_EDEFAULT = null;
+	protected static final String SYSTEM_ID_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getSiteId() <em>Site Id</em>}' attribute.
+	 * The cached value of the '{@link #getSystemId() <em>System Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSiteId()
+	 * @see #getSystemId()
 	 * @generated
 	 * @ordered
 	 */
-	protected String siteId = SITE_ID_EDEFAULT;
+	protected String systemId = SYSTEM_ID_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getState() <em>State</em>}' attribute.
@@ -199,8 +199,8 @@ public class SyncLogPojoImpl extends MinimalEObjectImpl.Container implements Syn
 	 * @generated
 	 */
 	@Override
-	public String getSiteId() {
-		return siteId;
+	public String getSystemId() {
+		return systemId;
 	}
 
 	/**
@@ -209,11 +209,11 @@ public class SyncLogPojoImpl extends MinimalEObjectImpl.Container implements Syn
 	 * @generated
 	 */
 	@Override
-	public void setSiteId(String newSiteId) {
-		String oldSiteId = siteId;
-		siteId = newSiteId;
+	public void setSystemId(String newSystemId) {
+		String oldSystemId = systemId;
+		systemId = newSystemId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SYNC_LOG_POJO__SITE_ID, oldSiteId, siteId));
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SYNC_LOG_POJO__SYSTEM_ID, oldSystemId, systemId));
 	}
 
 	/**
@@ -362,8 +362,8 @@ public class SyncLogPojoImpl extends MinimalEObjectImpl.Container implements Syn
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case GltPackage.SYNC_LOG_POJO__SITE_ID:
-				return getSiteId();
+			case GltPackage.SYNC_LOG_POJO__SYSTEM_ID:
+				return getSystemId();
 			case GltPackage.SYNC_LOG_POJO__STATE:
 				return getState();
 			case GltPackage.SYNC_LOG_POJO__LATEST_RINGBUFFER_TIMESTAMP:
@@ -388,8 +388,8 @@ public class SyncLogPojoImpl extends MinimalEObjectImpl.Container implements Syn
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case GltPackage.SYNC_LOG_POJO__SITE_ID:
-				setSiteId((String)newValue);
+			case GltPackage.SYNC_LOG_POJO__SYSTEM_ID:
+				setSystemId((String)newValue);
 				return;
 			case GltPackage.SYNC_LOG_POJO__STATE:
 				setState((String)newValue);
@@ -421,8 +421,8 @@ public class SyncLogPojoImpl extends MinimalEObjectImpl.Container implements Syn
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case GltPackage.SYNC_LOG_POJO__SITE_ID:
-				setSiteId(SITE_ID_EDEFAULT);
+			case GltPackage.SYNC_LOG_POJO__SYSTEM_ID:
+				setSystemId(SYSTEM_ID_EDEFAULT);
 				return;
 			case GltPackage.SYNC_LOG_POJO__STATE:
 				setState(STATE_EDEFAULT);
@@ -454,8 +454,8 @@ public class SyncLogPojoImpl extends MinimalEObjectImpl.Container implements Syn
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case GltPackage.SYNC_LOG_POJO__SITE_ID:
-				return SITE_ID_EDEFAULT == null ? siteId != null : !SITE_ID_EDEFAULT.equals(siteId);
+			case GltPackage.SYNC_LOG_POJO__SYSTEM_ID:
+				return SYSTEM_ID_EDEFAULT == null ? systemId != null : !SYSTEM_ID_EDEFAULT.equals(systemId);
 			case GltPackage.SYNC_LOG_POJO__STATE:
 				return STATE_EDEFAULT == null ? state != null : !STATE_EDEFAULT.equals(state);
 			case GltPackage.SYNC_LOG_POJO__LATEST_RINGBUFFER_TIMESTAMP:
@@ -482,8 +482,8 @@ public class SyncLogPojoImpl extends MinimalEObjectImpl.Container implements Syn
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (siteId: ");
-		result.append(siteId);
+		result.append(" (systemId: ");
+		result.append(systemId);
 		result.append(", state: ");
 		result.append(state);
 		result.append(", latestRingbufferTimestamp: ");

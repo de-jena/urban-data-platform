@@ -4,7 +4,7 @@ package de.jena.model.glt.impl;
 
 import de.jena.model.glt.AddressPojo;
 import de.jena.model.glt.GltPackage;
-import de.jena.model.glt.SitePojo;
+import de.jena.model.glt.SystemDescriptionPojo;
 
 import java.util.Collection;
 
@@ -22,33 +22,33 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Site Pojo</b></em>'.
+ * An implementation of the model object '<em><b>System Description Pojo</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.jena.model.glt.impl.SitePojoImpl#getId <em>Id</em>}</li>
- *   <li>{@link de.jena.model.glt.impl.SitePojoImpl#getName <em>Name</em>}</li>
- *   <li>{@link de.jena.model.glt.impl.SitePojoImpl#getPrefix <em>Prefix</em>}</li>
- *   <li>{@link de.jena.model.glt.impl.SitePojoImpl#getIp <em>Ip</em>}</li>
- *   <li>{@link de.jena.model.glt.impl.SitePojoImpl#getDirectory <em>Directory</em>}</li>
- *   <li>{@link de.jena.model.glt.impl.SitePojoImpl#getPort <em>Port</em>}</li>
- *   <li>{@link de.jena.model.glt.impl.SitePojoImpl#getLon <em>Lon</em>}</li>
- *   <li>{@link de.jena.model.glt.impl.SitePojoImpl#getLat <em>Lat</em>}</li>
- *   <li>{@link de.jena.model.glt.impl.SitePojoImpl#getShallow <em>Shallow</em>}</li>
- *   <li>{@link de.jena.model.glt.impl.SitePojoImpl#getExcluded <em>Excluded</em>}</li>
- *   <li>{@link de.jena.model.glt.impl.SitePojoImpl#getExternalId <em>External Id</em>}</li>
- *   <li>{@link de.jena.model.glt.impl.SitePojoImpl#getAddress <em>Address</em>}</li>
- *   <li>{@link de.jena.model.glt.impl.SitePojoImpl#getSource <em>Source</em>}</li>
- *   <li>{@link de.jena.model.glt.impl.SitePojoImpl#getChildren <em>Children</em>}</li>
- *   <li>{@link de.jena.model.glt.impl.SitePojoImpl#getFlags <em>Flags</em>}</li>
- *   <li>{@link de.jena.model.glt.impl.SitePojoImpl#getCylonNetwork <em>Cylon Network</em>}</li>
+ *   <li>{@link de.jena.model.glt.impl.SystemDescriptionPojoImpl#getId <em>Id</em>}</li>
+ *   <li>{@link de.jena.model.glt.impl.SystemDescriptionPojoImpl#getName <em>Name</em>}</li>
+ *   <li>{@link de.jena.model.glt.impl.SystemDescriptionPojoImpl#getPrefix <em>Prefix</em>}</li>
+ *   <li>{@link de.jena.model.glt.impl.SystemDescriptionPojoImpl#getIp <em>Ip</em>}</li>
+ *   <li>{@link de.jena.model.glt.impl.SystemDescriptionPojoImpl#getDirectory <em>Directory</em>}</li>
+ *   <li>{@link de.jena.model.glt.impl.SystemDescriptionPojoImpl#getPort <em>Port</em>}</li>
+ *   <li>{@link de.jena.model.glt.impl.SystemDescriptionPojoImpl#getLon <em>Lon</em>}</li>
+ *   <li>{@link de.jena.model.glt.impl.SystemDescriptionPojoImpl#getLat <em>Lat</em>}</li>
+ *   <li>{@link de.jena.model.glt.impl.SystemDescriptionPojoImpl#getShallow <em>Shallow</em>}</li>
+ *   <li>{@link de.jena.model.glt.impl.SystemDescriptionPojoImpl#getExcluded <em>Excluded</em>}</li>
+ *   <li>{@link de.jena.model.glt.impl.SystemDescriptionPojoImpl#getExternalId <em>External Id</em>}</li>
+ *   <li>{@link de.jena.model.glt.impl.SystemDescriptionPojoImpl#getAddress <em>Address</em>}</li>
+ *   <li>{@link de.jena.model.glt.impl.SystemDescriptionPojoImpl#getSource <em>Source</em>}</li>
+ *   <li>{@link de.jena.model.glt.impl.SystemDescriptionPojoImpl#getChildren <em>Children</em>}</li>
+ *   <li>{@link de.jena.model.glt.impl.SystemDescriptionPojoImpl#getFlags <em>Flags</em>}</li>
+ *   <li>{@link de.jena.model.glt.impl.SystemDescriptionPojoImpl#getCylonNetwork <em>Cylon Network</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class SitePojoImpl extends MinimalEObjectImpl.Container implements SitePojo {
+public class SystemDescriptionPojoImpl extends MinimalEObjectImpl.Container implements SystemDescriptionPojo {
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -307,7 +307,7 @@ public class SitePojoImpl extends MinimalEObjectImpl.Container implements SitePo
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<SitePojo> children;
+	protected EList<SystemDescriptionPojo> children;
 
 	/**
 	 * The default value of the '{@link #getFlags() <em>Flags</em>}' attribute.
@@ -354,7 +354,7 @@ public class SitePojoImpl extends MinimalEObjectImpl.Container implements SitePo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SitePojoImpl() {
+	protected SystemDescriptionPojoImpl() {
 		super();
 	}
 
@@ -365,7 +365,7 @@ public class SitePojoImpl extends MinimalEObjectImpl.Container implements SitePo
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return GltPackage.eINSTANCE.getSitePojo();
+		return GltPackage.eINSTANCE.getSystemDescriptionPojo();
 	}
 
 	/**
@@ -388,7 +388,7 @@ public class SitePojoImpl extends MinimalEObjectImpl.Container implements SitePo
 		String oldId = id;
 		id = newId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SITE_POJO__ID, oldId, id));
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SYSTEM_DESCRIPTION_POJO__ID, oldId, id));
 	}
 
 	/**
@@ -411,7 +411,7 @@ public class SitePojoImpl extends MinimalEObjectImpl.Container implements SitePo
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SITE_POJO__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SYSTEM_DESCRIPTION_POJO__NAME, oldName, name));
 	}
 
 	/**
@@ -434,7 +434,7 @@ public class SitePojoImpl extends MinimalEObjectImpl.Container implements SitePo
 		String oldPrefix = prefix;
 		prefix = newPrefix;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SITE_POJO__PREFIX, oldPrefix, prefix));
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SYSTEM_DESCRIPTION_POJO__PREFIX, oldPrefix, prefix));
 	}
 
 	/**
@@ -457,7 +457,7 @@ public class SitePojoImpl extends MinimalEObjectImpl.Container implements SitePo
 		String oldIp = ip;
 		ip = newIp;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SITE_POJO__IP, oldIp, ip));
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SYSTEM_DESCRIPTION_POJO__IP, oldIp, ip));
 	}
 
 	/**
@@ -480,7 +480,7 @@ public class SitePojoImpl extends MinimalEObjectImpl.Container implements SitePo
 		String oldDirectory = directory;
 		directory = newDirectory;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SITE_POJO__DIRECTORY, oldDirectory, directory));
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SYSTEM_DESCRIPTION_POJO__DIRECTORY, oldDirectory, directory));
 	}
 
 	/**
@@ -503,7 +503,7 @@ public class SitePojoImpl extends MinimalEObjectImpl.Container implements SitePo
 		Integer oldPort = port;
 		port = newPort;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SITE_POJO__PORT, oldPort, port));
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SYSTEM_DESCRIPTION_POJO__PORT, oldPort, port));
 	}
 
 	/**
@@ -526,7 +526,7 @@ public class SitePojoImpl extends MinimalEObjectImpl.Container implements SitePo
 		Double oldLon = lon;
 		lon = newLon;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SITE_POJO__LON, oldLon, lon));
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SYSTEM_DESCRIPTION_POJO__LON, oldLon, lon));
 	}
 
 	/**
@@ -549,7 +549,7 @@ public class SitePojoImpl extends MinimalEObjectImpl.Container implements SitePo
 		Double oldLat = lat;
 		lat = newLat;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SITE_POJO__LAT, oldLat, lat));
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SYSTEM_DESCRIPTION_POJO__LAT, oldLat, lat));
 	}
 
 	/**
@@ -572,7 +572,7 @@ public class SitePojoImpl extends MinimalEObjectImpl.Container implements SitePo
 		Boolean oldShallow = shallow;
 		shallow = newShallow;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SITE_POJO__SHALLOW, oldShallow, shallow));
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SYSTEM_DESCRIPTION_POJO__SHALLOW, oldShallow, shallow));
 	}
 
 	/**
@@ -595,7 +595,7 @@ public class SitePojoImpl extends MinimalEObjectImpl.Container implements SitePo
 		Boolean oldExcluded = excluded;
 		excluded = newExcluded;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SITE_POJO__EXCLUDED, oldExcluded, excluded));
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SYSTEM_DESCRIPTION_POJO__EXCLUDED, oldExcluded, excluded));
 	}
 
 	/**
@@ -618,7 +618,7 @@ public class SitePojoImpl extends MinimalEObjectImpl.Container implements SitePo
 		Integer oldExternalId = externalId;
 		externalId = newExternalId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SITE_POJO__EXTERNAL_ID, oldExternalId, externalId));
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SYSTEM_DESCRIPTION_POJO__EXTERNAL_ID, oldExternalId, externalId));
 	}
 
 	/**
@@ -633,7 +633,7 @@ public class SitePojoImpl extends MinimalEObjectImpl.Container implements SitePo
 			address = (AddressPojo)eResolveProxy(oldAddress);
 			if (address != oldAddress) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GltPackage.SITE_POJO__ADDRESS, oldAddress, address));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GltPackage.SYSTEM_DESCRIPTION_POJO__ADDRESS, oldAddress, address));
 			}
 		}
 		return address;
@@ -658,7 +658,7 @@ public class SitePojoImpl extends MinimalEObjectImpl.Container implements SitePo
 		AddressPojo oldAddress = address;
 		address = newAddress;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SITE_POJO__ADDRESS, oldAddress, address));
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SYSTEM_DESCRIPTION_POJO__ADDRESS, oldAddress, address));
 	}
 
 	/**
@@ -681,7 +681,7 @@ public class SitePojoImpl extends MinimalEObjectImpl.Container implements SitePo
 		String oldSource = source;
 		source = newSource;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SITE_POJO__SOURCE, oldSource, source));
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SYSTEM_DESCRIPTION_POJO__SOURCE, oldSource, source));
 	}
 
 	/**
@@ -690,9 +690,9 @@ public class SitePojoImpl extends MinimalEObjectImpl.Container implements SitePo
 	 * @generated
 	 */
 	@Override
-	public EList<SitePojo> getChildren() {
+	public EList<SystemDescriptionPojo> getChildren() {
 		if (children == null) {
-			children = new EObjectResolvingEList<SitePojo>(SitePojo.class, this, GltPackage.SITE_POJO__CHILDREN);
+			children = new EObjectResolvingEList<SystemDescriptionPojo>(SystemDescriptionPojo.class, this, GltPackage.SYSTEM_DESCRIPTION_POJO__CHILDREN);
 		}
 		return children;
 	}
@@ -717,7 +717,7 @@ public class SitePojoImpl extends MinimalEObjectImpl.Container implements SitePo
 		Integer oldFlags = flags;
 		flags = newFlags;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SITE_POJO__FLAGS, oldFlags, flags));
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SYSTEM_DESCRIPTION_POJO__FLAGS, oldFlags, flags));
 	}
 
 	/**
@@ -740,7 +740,7 @@ public class SitePojoImpl extends MinimalEObjectImpl.Container implements SitePo
 		Boolean oldCylonNetwork = cylonNetwork;
 		cylonNetwork = newCylonNetwork;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SITE_POJO__CYLON_NETWORK, oldCylonNetwork, cylonNetwork));
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SYSTEM_DESCRIPTION_POJO__CYLON_NETWORK, oldCylonNetwork, cylonNetwork));
 	}
 
 	/**
@@ -751,38 +751,38 @@ public class SitePojoImpl extends MinimalEObjectImpl.Container implements SitePo
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case GltPackage.SITE_POJO__ID:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__ID:
 				return getId();
-			case GltPackage.SITE_POJO__NAME:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__NAME:
 				return getName();
-			case GltPackage.SITE_POJO__PREFIX:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__PREFIX:
 				return getPrefix();
-			case GltPackage.SITE_POJO__IP:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__IP:
 				return getIp();
-			case GltPackage.SITE_POJO__DIRECTORY:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__DIRECTORY:
 				return getDirectory();
-			case GltPackage.SITE_POJO__PORT:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__PORT:
 				return getPort();
-			case GltPackage.SITE_POJO__LON:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__LON:
 				return getLon();
-			case GltPackage.SITE_POJO__LAT:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__LAT:
 				return getLat();
-			case GltPackage.SITE_POJO__SHALLOW:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__SHALLOW:
 				return getShallow();
-			case GltPackage.SITE_POJO__EXCLUDED:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__EXCLUDED:
 				return getExcluded();
-			case GltPackage.SITE_POJO__EXTERNAL_ID:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__EXTERNAL_ID:
 				return getExternalId();
-			case GltPackage.SITE_POJO__ADDRESS:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__ADDRESS:
 				if (resolve) return getAddress();
 				return basicGetAddress();
-			case GltPackage.SITE_POJO__SOURCE:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__SOURCE:
 				return getSource();
-			case GltPackage.SITE_POJO__CHILDREN:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__CHILDREN:
 				return getChildren();
-			case GltPackage.SITE_POJO__FLAGS:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__FLAGS:
 				return getFlags();
-			case GltPackage.SITE_POJO__CYLON_NETWORK:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__CYLON_NETWORK:
 				return getCylonNetwork();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -797,53 +797,53 @@ public class SitePojoImpl extends MinimalEObjectImpl.Container implements SitePo
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case GltPackage.SITE_POJO__ID:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__ID:
 				setId((String)newValue);
 				return;
-			case GltPackage.SITE_POJO__NAME:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__NAME:
 				setName((String)newValue);
 				return;
-			case GltPackage.SITE_POJO__PREFIX:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__PREFIX:
 				setPrefix((String)newValue);
 				return;
-			case GltPackage.SITE_POJO__IP:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__IP:
 				setIp((String)newValue);
 				return;
-			case GltPackage.SITE_POJO__DIRECTORY:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__DIRECTORY:
 				setDirectory((String)newValue);
 				return;
-			case GltPackage.SITE_POJO__PORT:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__PORT:
 				setPort((Integer)newValue);
 				return;
-			case GltPackage.SITE_POJO__LON:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__LON:
 				setLon((Double)newValue);
 				return;
-			case GltPackage.SITE_POJO__LAT:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__LAT:
 				setLat((Double)newValue);
 				return;
-			case GltPackage.SITE_POJO__SHALLOW:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__SHALLOW:
 				setShallow((Boolean)newValue);
 				return;
-			case GltPackage.SITE_POJO__EXCLUDED:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__EXCLUDED:
 				setExcluded((Boolean)newValue);
 				return;
-			case GltPackage.SITE_POJO__EXTERNAL_ID:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__EXTERNAL_ID:
 				setExternalId((Integer)newValue);
 				return;
-			case GltPackage.SITE_POJO__ADDRESS:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__ADDRESS:
 				setAddress((AddressPojo)newValue);
 				return;
-			case GltPackage.SITE_POJO__SOURCE:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__SOURCE:
 				setSource((String)newValue);
 				return;
-			case GltPackage.SITE_POJO__CHILDREN:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__CHILDREN:
 				getChildren().clear();
-				getChildren().addAll((Collection<? extends SitePojo>)newValue);
+				getChildren().addAll((Collection<? extends SystemDescriptionPojo>)newValue);
 				return;
-			case GltPackage.SITE_POJO__FLAGS:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__FLAGS:
 				setFlags((Integer)newValue);
 				return;
-			case GltPackage.SITE_POJO__CYLON_NETWORK:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__CYLON_NETWORK:
 				setCylonNetwork((Boolean)newValue);
 				return;
 		}
@@ -858,52 +858,52 @@ public class SitePojoImpl extends MinimalEObjectImpl.Container implements SitePo
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case GltPackage.SITE_POJO__ID:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__ID:
 				setId(ID_EDEFAULT);
 				return;
-			case GltPackage.SITE_POJO__NAME:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case GltPackage.SITE_POJO__PREFIX:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__PREFIX:
 				setPrefix(PREFIX_EDEFAULT);
 				return;
-			case GltPackage.SITE_POJO__IP:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__IP:
 				setIp(IP_EDEFAULT);
 				return;
-			case GltPackage.SITE_POJO__DIRECTORY:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__DIRECTORY:
 				setDirectory(DIRECTORY_EDEFAULT);
 				return;
-			case GltPackage.SITE_POJO__PORT:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__PORT:
 				setPort(PORT_EDEFAULT);
 				return;
-			case GltPackage.SITE_POJO__LON:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__LON:
 				setLon(LON_EDEFAULT);
 				return;
-			case GltPackage.SITE_POJO__LAT:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__LAT:
 				setLat(LAT_EDEFAULT);
 				return;
-			case GltPackage.SITE_POJO__SHALLOW:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__SHALLOW:
 				setShallow(SHALLOW_EDEFAULT);
 				return;
-			case GltPackage.SITE_POJO__EXCLUDED:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__EXCLUDED:
 				setExcluded(EXCLUDED_EDEFAULT);
 				return;
-			case GltPackage.SITE_POJO__EXTERNAL_ID:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__EXTERNAL_ID:
 				setExternalId(EXTERNAL_ID_EDEFAULT);
 				return;
-			case GltPackage.SITE_POJO__ADDRESS:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__ADDRESS:
 				setAddress((AddressPojo)null);
 				return;
-			case GltPackage.SITE_POJO__SOURCE:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__SOURCE:
 				setSource(SOURCE_EDEFAULT);
 				return;
-			case GltPackage.SITE_POJO__CHILDREN:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__CHILDREN:
 				getChildren().clear();
 				return;
-			case GltPackage.SITE_POJO__FLAGS:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__FLAGS:
 				setFlags(FLAGS_EDEFAULT);
 				return;
-			case GltPackage.SITE_POJO__CYLON_NETWORK:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__CYLON_NETWORK:
 				setCylonNetwork(CYLON_NETWORK_EDEFAULT);
 				return;
 		}
@@ -918,37 +918,37 @@ public class SitePojoImpl extends MinimalEObjectImpl.Container implements SitePo
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case GltPackage.SITE_POJO__ID:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__ID:
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-			case GltPackage.SITE_POJO__NAME:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case GltPackage.SITE_POJO__PREFIX:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__PREFIX:
 				return PREFIX_EDEFAULT == null ? prefix != null : !PREFIX_EDEFAULT.equals(prefix);
-			case GltPackage.SITE_POJO__IP:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__IP:
 				return IP_EDEFAULT == null ? ip != null : !IP_EDEFAULT.equals(ip);
-			case GltPackage.SITE_POJO__DIRECTORY:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__DIRECTORY:
 				return DIRECTORY_EDEFAULT == null ? directory != null : !DIRECTORY_EDEFAULT.equals(directory);
-			case GltPackage.SITE_POJO__PORT:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__PORT:
 				return PORT_EDEFAULT == null ? port != null : !PORT_EDEFAULT.equals(port);
-			case GltPackage.SITE_POJO__LON:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__LON:
 				return LON_EDEFAULT == null ? lon != null : !LON_EDEFAULT.equals(lon);
-			case GltPackage.SITE_POJO__LAT:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__LAT:
 				return LAT_EDEFAULT == null ? lat != null : !LAT_EDEFAULT.equals(lat);
-			case GltPackage.SITE_POJO__SHALLOW:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__SHALLOW:
 				return SHALLOW_EDEFAULT == null ? shallow != null : !SHALLOW_EDEFAULT.equals(shallow);
-			case GltPackage.SITE_POJO__EXCLUDED:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__EXCLUDED:
 				return EXCLUDED_EDEFAULT == null ? excluded != null : !EXCLUDED_EDEFAULT.equals(excluded);
-			case GltPackage.SITE_POJO__EXTERNAL_ID:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__EXTERNAL_ID:
 				return EXTERNAL_ID_EDEFAULT == null ? externalId != null : !EXTERNAL_ID_EDEFAULT.equals(externalId);
-			case GltPackage.SITE_POJO__ADDRESS:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__ADDRESS:
 				return address != null;
-			case GltPackage.SITE_POJO__SOURCE:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__SOURCE:
 				return SOURCE_EDEFAULT == null ? source != null : !SOURCE_EDEFAULT.equals(source);
-			case GltPackage.SITE_POJO__CHILDREN:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__CHILDREN:
 				return children != null && !children.isEmpty();
-			case GltPackage.SITE_POJO__FLAGS:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__FLAGS:
 				return FLAGS_EDEFAULT == null ? flags != null : !FLAGS_EDEFAULT.equals(flags);
-			case GltPackage.SITE_POJO__CYLON_NETWORK:
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__CYLON_NETWORK:
 				return CYLON_NETWORK_EDEFAULT == null ? cylonNetwork != null : !CYLON_NETWORK_EDEFAULT.equals(cylonNetwork);
 		}
 		return super.eIsSet(featureID);
@@ -996,4 +996,4 @@ public class SitePojoImpl extends MinimalEObjectImpl.Container implements SitePo
 		return result.toString();
 	}
 
-} //SitePojoImpl
+} //SystemDescriptionPojoImpl
