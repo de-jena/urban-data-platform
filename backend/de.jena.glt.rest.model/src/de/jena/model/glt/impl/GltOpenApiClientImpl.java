@@ -80,7 +80,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		EClass resultEClass = GltPackage.eINSTANCE.getAlarmPojo();
 		pathParameter.put("id", toQueryString("id",id));
 		if ( null != create ) queryParameter.put("create", toQueryString("create",create));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -119,7 +119,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		String endpoint = "/alarms/instructions/{id}";
 		EClass resultEClass = GltPackage.eINSTANCE.getInstructionsPojo();
 		pathParameter.put("id", toQueryString("id",id));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -147,7 +147,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		EClass resultEClass = null;
 		if ( null != expanded ) queryParameter.put("expanded", toQueryString("expanded",expanded));
 		if ( null != regex ) queryParameter.put("regex", toQueryString("regex",regex));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -163,7 +163,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		EClass resultEClass = null;
 		pathParameter.put("id", toQueryString("id",id));
 		if ( null != expanded ) queryParameter.put("expanded", toQueryString("expanded",expanded));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -181,7 +181,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		if ( null != type ) queryParameter.put("type", toQueryString("type",type));
 		if ( null != from ) queryParameter.put("from", toQueryString("from",from));
 		if ( null != to ) queryParameter.put("to", toQueryString("to",to));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -212,7 +212,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		if ( null != includeAlarms ) queryParameter.put("includeAlarms", toQueryString("includeAlarms",includeAlarms));
 		if ( null != from ) queryParameter.put("from", toQueryString("from",from));
 		if ( null != to ) queryParameter.put("to", toQueryString("to",to));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -251,7 +251,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		String endpoint = "/calendar/{id}";
 		EClass resultEClass = null;
 		pathParameter.put("id", toQueryString("id",id));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _delete(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -269,7 +269,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		if ( null != type ) queryParameter.put("type", toQueryString("type",type));
 		if ( null != from ) queryParameter.put("from", toQueryString("from",from));
 		if ( null != to ) queryParameter.put("to", toQueryString("to",to));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -287,7 +287,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		pathParameter.put("time", toQueryString("time",time));
 		if ( null != type ) queryParameter.put("type", toQueryString("type",type));
 		if ( null != grace ) queryParameter.put("grace", toQueryString("grace",grace));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -305,7 +305,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		pathParameter.put("time", toQueryString("time",time));
 		if ( null != type ) queryParameter.put("type", toQueryString("type",type));
 		if ( null != grace ) queryParameter.put("grace", toQueryString("grace",grace));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -324,7 +324,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		if ( null != type ) queryParameter.put("type", toQueryString("type",type));
 		if ( null != grace ) queryParameter.put("grace", toQueryString("grace",grace));
 		if ( null != includeAlarms ) queryParameter.put("includeAlarms", toQueryString("includeAlarms",includeAlarms));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -341,7 +341,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		pathParameter.put("ownerType", toQueryString("ownerType",ownerType));
 		pathParameter.put("ownerId", toQueryString("ownerId",ownerId));
 		if ( null != type ) queryParameter.put("type", toQueryString("type",type));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -380,7 +380,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		String endpoint = "/comment/{id}";
 		EClass resultEClass = null;
 		pathParameter.put("id", toQueryString("id",id));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _delete(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -398,7 +398,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		if ( null != type ) queryParameter.put("type", toQueryString("type",type));
 		if ( null != from ) queryParameter.put("from", toQueryString("from",from));
 		if ( null != to ) queryParameter.put("to", toQueryString("to",to));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -422,7 +422,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		if ( null != status ) queryParameter.put("status", toQueryString("status",status));
 		if ( null != from ) queryParameter.put("from", toQueryString("from",from));
 		if ( null != to ) queryParameter.put("to", toQueryString("to",to));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -443,7 +443,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		if ( null != status ) queryParameter.put("status", toQueryString("status",status));
 		if ( null != from ) queryParameter.put("from", toQueryString("from",from));
 		if ( null != to ) queryParameter.put("to", toQueryString("to",to));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -465,7 +465,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		if ( null != status ) queryParameter.put("status", toQueryString("status",status));
 		if ( null != from ) queryParameter.put("from", toQueryString("from",from));
 		if ( null != to ) queryParameter.put("to", toQueryString("to",to));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -492,7 +492,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		String endpoint = "/devices/buildings";
 		EClass resultEClass = org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEObject();
 		if ( null != buildingId ) queryParameter.put("buildingId", toQueryString("buildingId",buildingId));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -507,7 +507,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		String endpoint = "/devices/devices";
 		EClass resultEClass = org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEObject();
 		if ( null != deviceId ) queryParameter.put("deviceId", toQueryString("deviceId",deviceId));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -522,7 +522,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		String endpoint = "/devices";
 		EClass resultEClass = null;
 		if ( null != flat ) queryParameter.put("flat", toQueryString("flat",flat));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -536,7 +536,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
 		String endpoint = "/devices/count";
 		EClass resultEClass = org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEObject();
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -550,7 +550,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
 		String endpoint = "/meta/diag/alarms/mismatched";
 		EClass resultEClass = GltPackage.eINSTANCE.getAlarmLogPojo();
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -566,7 +566,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		EClass resultEClass = GltPackage.eINSTANCE.getChangeItem();
 		if ( null != limit ) queryParameter.put("limit", toQueryString("limit",limit));
 		if ( null != offset ) queryParameter.put("offset", toQueryString("offset",offset));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -580,7 +580,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
 		String endpoint = "/meta/audit/count";
 		EClass resultEClass = org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEObject();
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -594,7 +594,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
 		String endpoint = "/meta/diag/texts/duplicate";
 		EClass resultEClass = null;
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -609,7 +609,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		String endpoint = "/meta/csv/fields";
 		EClass resultEClass = org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEObject();
 		if ( null != importableOnly ) queryParameter.put("importableOnly", toQueryString("importableOnly",importableOnly));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -623,7 +623,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
 		String endpoint = "/meta/diag/alarms/undocumented";
 		EClass resultEClass = GltPackage.eINSTANCE.getAlarmLogPojo();
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -637,7 +637,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
 		String endpoint = "/meta/diag/texts/unused";
 		EClass resultEClass = null;
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -667,7 +667,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		if ( null != id ) queryParameter.put("id", toQueryString("id",id));
 		if ( null != from ) queryParameter.put("from", toQueryString("from",from));
 		if ( null != to ) queryParameter.put("to", toQueryString("to",to));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -683,7 +683,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		EClass resultEClass = GltPackage.eINSTANCE.getDatalogContentPojo();
 		pathParameter.put("systemId", toQueryString("systemId",systemId));
 		if ( null != id ) queryParameter.put("id", toQueryString("id",id));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -716,7 +716,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		if ( null != author ) queryParameter.put("author", toQueryString("author",author));
 		if ( null != from ) queryParameter.put("from", toQueryString("from",from));
 		if ( null != to ) queryParameter.put("to", toQueryString("to",to));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -735,7 +735,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		if ( null != author ) queryParameter.put("author", toQueryString("author",author));
 		if ( null != from ) queryParameter.put("from", toQueryString("from",from));
 		if ( null != to ) queryParameter.put("to", toQueryString("to",to));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -753,7 +753,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		if ( null != id ) queryParameter.put("id", toQueryString("id",id));
 		if ( null != latestOnly ) queryParameter.put("latestOnly", toQueryString("latestOnly",latestOnly));
 		if ( null != includeComments ) queryParameter.put("includeComments", toQueryString("includeComments",includeComments));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -771,7 +771,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		if ( null != type ) queryParameter.put("type", toQueryString("type",type));
 		if ( null != valueType ) queryParameter.put("valueType", toQueryString("valueType",valueType));
 		if ( null != id ) queryParameter.put("id", toQueryString("id",id));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -800,7 +800,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		if ( null != alarmId ) queryParameter.put("alarmId", toQueryString("alarmId",alarmId));
 		if ( null != from ) queryParameter.put("from", toQueryString("from",from));
 		if ( null != to ) queryParameter.put("to", toQueryString("to",to));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -830,7 +830,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		pathParameter.put("state", toQueryString("state",state));
 		if ( null != eventType ) queryParameter.put("eventType", toQueryString("eventType",eventType));
 		if ( null != flags ) queryParameter.put("flags", toQueryString("flags",flags));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -847,7 +847,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		pathParameter.put("systemId", toQueryString("systemId",systemId));
 		if ( null != eventType ) queryParameter.put("eventType", toQueryString("eventType",eventType));
 		if ( null != flags ) queryParameter.put("flags", toQueryString("flags",flags));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -865,7 +865,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		if ( null != summary ) queryParameter.put("summary", toQueryString("summary",summary));
 		if ( null != eventType ) queryParameter.put("eventType", toQueryString("eventType",eventType));
 		if ( null != flags ) queryParameter.put("flags", toQueryString("flags",flags));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -882,7 +882,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		pathParameter.put("systemId", toQueryString("systemId",systemId));
 		if ( null != eventType ) queryParameter.put("eventType", toQueryString("eventType",eventType));
 		if ( null != flags ) queryParameter.put("flags", toQueryString("flags",flags));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -899,7 +899,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		pathParameter.put("state", toQueryString("state",state));
 		if ( null != eventType ) queryParameter.put("eventType", toQueryString("eventType",eventType));
 		if ( null != flags ) queryParameter.put("flags", toQueryString("flags",flags));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -918,7 +918,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		if ( null != to ) queryParameter.put("to", toQueryString("to",to));
 		if ( null != limit ) queryParameter.put("limit", toQueryString("limit",limit));
 		if ( null != offset ) queryParameter.put("offset", toQueryString("offset",offset));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -937,7 +937,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		if ( null != to ) queryParameter.put("to", toQueryString("to",to));
 		if ( null != unit ) queryParameter.put("unit", toQueryString("unit",unit));
 		if ( null != timezone ) queryParameter.put("timezone", toQueryString("timezone",timezone));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -953,7 +953,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		EClass resultEClass = GltPackage.eINSTANCE.getAlarmLogPojo();
 		if ( null != eventType ) queryParameter.put("eventType", toQueryString("eventType",eventType));
 		if ( null != flags ) queryParameter.put("flags", toQueryString("flags",flags));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -970,7 +970,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		pathParameter.put("systemId", toQueryString("systemId",systemId));
 		if ( null != eventType ) queryParameter.put("eventType", toQueryString("eventType",eventType));
 		if ( null != flags ) queryParameter.put("flags", toQueryString("flags",flags));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -987,7 +987,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		pathParameter.put("state", toQueryString("state",state));
 		if ( null != eventType ) queryParameter.put("eventType", toQueryString("eventType",eventType));
 		if ( null != flags ) queryParameter.put("flags", toQueryString("flags",flags));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1004,7 +1004,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		if ( null != state ) queryParameter.put("state", toQueryString("state",state));
 		if ( null != eventType ) queryParameter.put("eventType", toQueryString("eventType",eventType));
 		if ( null != flags ) queryParameter.put("flags", toQueryString("flags",flags));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1021,7 +1021,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		pathParameter.put("systemId", toQueryString("systemId",systemId));
 		if ( null != from ) queryParameter.put("from", toQueryString("from",from));
 		if ( null != to ) queryParameter.put("to", toQueryString("to",to));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1039,7 +1039,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		pathParameter.put("state", toQueryString("state",state));
 		if ( null != eventType ) queryParameter.put("eventType", toQueryString("eventType",eventType));
 		if ( null != flags ) queryParameter.put("flags", toQueryString("flags",flags));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1057,7 +1057,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		if ( null != state ) queryParameter.put("state", toQueryString("state",state));
 		if ( null != eventType ) queryParameter.put("eventType", toQueryString("eventType",eventType));
 		if ( null != flags ) queryParameter.put("flags", toQueryString("flags",flags));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1072,7 +1072,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		String endpoint = "/monitoring/entities/{systemId}";
 		EClass resultEClass = GltPackage.eINSTANCE.getEntityMonitoringSettingsPojo();
 		pathParameter.put("systemId", toQueryString("systemId",systemId));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1088,7 +1088,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		EClass resultEClass = org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEObject();
 		pathParameter.put("systemId", toQueryString("systemId",systemId));
 		pathParameter.put("type", toQueryString("type",type));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1115,7 +1115,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		String endpoint = "/monitoring/logs/{systemId}";
 		EClass resultEClass = GltPackage.eINSTANCE.getSyncLogPojo();
 		pathParameter.put("systemId", toQueryString("systemId",systemId));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1129,7 +1129,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
 		String endpoint = "/monitoring/logs";
 		EClass resultEClass = GltPackage.eINSTANCE.getSyncLogPojo();
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1144,7 +1144,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		String endpoint = "/monitoring/logs/state/{state}";
 		EClass resultEClass = GltPackage.eINSTANCE.getSyncLogPojo();
 		pathParameter.put("state", toQueryString("state",state));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1159,7 +1159,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		String endpoint = "/monitoring/statistics/{systemId}";
 		EClass resultEClass = org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEObject();
 		pathParameter.put("systemId", toQueryString("systemId",systemId));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1173,7 +1173,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
 		String endpoint = "/monitoring/status";
 		EClass resultEClass = GltPackage.eINSTANCE.getStatusLogPojo();
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1200,7 +1200,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		String endpoint = "/monitoring/status/{systemId}";
 		EClass resultEClass = GltPackage.eINSTANCE.getStatusLogPojo();
 		pathParameter.put("systemId", toQueryString("systemId",systemId));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1217,7 +1217,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		pathParameter.put("systemId", toQueryString("systemId",systemId));
 		if ( null != from ) queryParameter.put("from", toQueryString("from",from));
 		if ( null != to ) queryParameter.put("to", toQueryString("to",to));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1232,7 +1232,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		String endpoint = "/monitoring/tracked/{systemId}";
 		EClass resultEClass = org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEObject();
 		pathParameter.put("systemId", toQueryString("systemId",systemId));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1251,7 +1251,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		if ( null != from ) queryParameter.put("from", toQueryString("from",from));
 		if ( null != to ) queryParameter.put("to", toQueryString("to",to));
 		if ( null != threshold ) queryParameter.put("threshold", toQueryString("threshold",threshold));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1266,7 +1266,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		String endpoint = "/monitoring/logs/state";
 		EClass resultEClass = GltPackage.eINSTANCE.getSyncLogPojo();
 		if ( null != state ) queryParameter.put("state", toQueryString("state",state));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1311,7 +1311,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		if ( null != author ) queryParameter.put("author", toQueryString("author",author));
 		if ( null != from ) queryParameter.put("from", toQueryString("from",from));
 		if ( null != to ) queryParameter.put("to", toQueryString("to",to));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1330,7 +1330,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		if ( null != author ) queryParameter.put("author", toQueryString("author",author));
 		if ( null != from ) queryParameter.put("from", toQueryString("from",from));
 		if ( null != to ) queryParameter.put("to", toQueryString("to",to));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1347,7 +1347,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		pathParameter.put("systemId", toQueryString("systemId",systemId));
 		if ( null != id ) queryParameter.put("id", toQueryString("id",id));
 		if ( null != latestOnly ) queryParameter.put("latestOnly", toQueryString("latestOnly",latestOnly));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1363,7 +1363,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		EClass resultEClass = GltPackage.eINSTANCE.getTimeScheduleBlockPojo();
 		pathParameter.put("systemId", toQueryString("systemId",systemId));
 		if ( null != id ) queryParameter.put("id", toQueryString("id",id));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1392,7 +1392,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		pathParameter.put("systemId", toQueryString("systemId",systemId));
 		if ( null != id ) queryParameter.put("id", toQueryString("id",id));
 		if ( null != latestOnly ) queryParameter.put("latestOnly", toQueryString("latestOnly",latestOnly));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1408,7 +1408,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		EClass resultEClass = GltPackage.eINSTANCE.getTimeScheduleStatePojo();
 		pathParameter.put("systemId", toQueryString("systemId",systemId));
 		if ( null != id ) queryParameter.put("id", toQueryString("id",id));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1436,7 +1436,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		EClass resultEClass = GltPackage.eINSTANCE.getVersionInfo();
 		pathParameter.put("systemId", toQueryString("systemId",systemId));
 		if ( null != id ) queryParameter.put("id", toQueryString("id",id));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1475,7 +1475,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		String endpoint = "/conf/{key}";
 		EClass resultEClass = GltPackage.eINSTANCE.getJsonNode();
 		pathParameter.put("key", toQueryString("key",key));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1514,7 +1514,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		String endpoint = "/conf/{key}";
 		EClass resultEClass = null;
 		pathParameter.put("key", toQueryString("key",key));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _delete(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1528,7 +1528,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
 		String endpoint = "/conf";
 		EClass resultEClass = GltPackage.eINSTANCE.getJsonNode();
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1542,7 +1542,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
 		String endpoint = "/status/auth";
 		EClass resultEClass = org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEObject();
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1556,7 +1556,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
 		String endpoint = "/status";
 		EClass resultEClass = org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEObject();
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1572,7 +1572,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		EClass resultEClass = GltPackage.eINSTANCE.getSystemDescriptionPojo();
 		pathParameter.put("id", toQueryString("id",id));
 		if ( null != shallow ) queryParameter.put("shallow", toQueryString("shallow",shallow));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1611,7 +1611,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		String endpoint = "/systems/{id}";
 		EClass resultEClass = null;
 		pathParameter.put("id", toQueryString("id",id));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _delete(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1626,7 +1626,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		String endpoint = "/systems/contacts/{id}";
 		EClass resultEClass = GltPackage.eINSTANCE.getContactPojo();
 		pathParameter.put("id", toQueryString("id",id));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1643,7 +1643,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		pathParameter.put("id", toQueryString("id",id));
 		if ( null != type ) queryParameter.put("type", toQueryString("type",type));
 		if ( null != activeOnly ) queryParameter.put("activeOnly", toQueryString("activeOnly",activeOnly));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1659,7 +1659,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		EClass resultEClass = null;
 		if ( null != expanded ) queryParameter.put("expanded", toQueryString("expanded",expanded));
 		if ( null != excluded ) queryParameter.put("excluded", toQueryString("excluded",excluded));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1676,7 +1676,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		pathParameter.put("id", toQueryString("id",id));
 		if ( null != type ) queryParameter.put("type", toQueryString("type",type));
 		if ( null != activeOnly ) queryParameter.put("activeOnly", toQueryString("activeOnly",activeOnly));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1705,7 +1705,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		pathParameter.put("systemId", toQueryString("systemId",systemId));
 		pathParameter.put("type", toQueryString("type",type));
 		if ( null != id ) queryParameter.put("id", toQueryString("id",id));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1722,7 +1722,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		pathParameter.put("systemId", toQueryString("systemId",systemId));
 		if ( null != type ) queryParameter.put("type", toQueryString("type",type));
 		if ( null != id ) queryParameter.put("id", toQueryString("id",id));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1738,7 +1738,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		EClass resultEClass = GltPackage.eINSTANCE.getCylonNetworkPojo();
 		pathParameter.put("systemId", toQueryString("systemId",systemId));
 		if ( null != depth ) queryParameter.put("depth", toQueryString("depth",depth));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1755,7 +1755,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		pathParameter.put("systemId", toQueryString("systemId",systemId));
 		pathParameter.put("type", toQueryString("type",type));
 		pathParameter.put("id", toQueryString("id",id));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1806,7 +1806,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		String endpoint = "/texts/{id}";
 		EClass resultEClass = GltPackage.eINSTANCE.getText();
 		pathParameter.put("id", toQueryString("id",id));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1833,7 +1833,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		String endpoint = "/texts/{id}";
 		EClass resultEClass = null;
 		pathParameter.put("id", toQueryString("id",id));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _delete(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1848,7 +1848,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		String endpoint = "/texts";
 		EClass resultEClass = null;
 		if ( null != expanded ) queryParameter.put("expanded", toQueryString("expanded",expanded));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1864,7 +1864,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		EClass resultEClass = null;
 		pathParameter.put("type", toQueryString("type",type));
 		if ( null != expanded ) queryParameter.put("expanded", toQueryString("expanded",expanded));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1878,7 +1878,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
 		String endpoint = "/useradmin/groups";
 		EClass resultEClass = GltPackage.eINSTANCE.getRolePojo();
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1930,7 +1930,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		EClass resultEClass = GltPackage.eINSTANCE.getRolePojo();
 		pathParameter.put("roleName", toQueryString("roleName",roleName));
 		pathParameter.put("key", toQueryString("key",key));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _delete(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1944,7 +1944,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
 		String endpoint = "/useradmin/users";
 		EClass resultEClass = GltPackage.eINSTANCE.getRolePojo();
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1970,7 +1970,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
 		String endpoint = "/useradmin";
 		EClass resultEClass = GltPackage.eINSTANCE.getRolePojo();
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -1987,7 +1987,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		pathParameter.put("identifier", toQueryString("identifier",identifier));
 		if ( null != mandatory ) queryParameter.put("mandatory", toQueryString("mandatory",mandatory));
 		if ( null != discovery ) queryParameter.put("discovery", toQueryString("discovery",discovery));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -2003,7 +2003,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		EClass resultEClass = GltPackage.eINSTANCE.getRolePojo();
 		pathParameter.put("groupName", toQueryString("groupName",groupName));
 		pathParameter.put("roleName", toQueryString("roleName",roleName));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _delete(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -2018,7 +2018,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		String endpoint = "/useradmin/{name}";
 		EClass resultEClass = null;
 		pathParameter.put("name", toQueryString("name",name));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _delete(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -2046,7 +2046,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		EClass resultEClass = null;
 		pathParameter.put("systemId", toQueryString("systemId",systemId));
 		pathParameter.put("alarmId", toQueryString("alarmId",alarmId));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _delete(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -2063,7 +2063,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		if ( null != eventType ) queryParameter.put("eventType", toQueryString("eventType",eventType));
 		if ( null != flags ) queryParameter.put("flags", toQueryString("flags",flags));
 		if ( null != recognized ) queryParameter.put("recognized", toQueryString("recognized",recognized));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -2081,7 +2081,7 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		if ( null != eventType ) queryParameter.put("eventType", toQueryString("eventType",eventType));
 		if ( null != flags ) queryParameter.put("flags", toQueryString("flags",flags));
 		if ( null != recognized ) queryParameter.put("recognized", toQueryString("recognized",recognized));
-		return _call(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -2104,7 +2104,19 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public Response _call(String endpoint, EClass result, EMap<String, String> pathParameter, EMap<String, String> queryParameter) {
+	public Response _get(String endpoint, EClass result, EMap<String, String> pathParameter, EMap<String, String> queryParameter) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Response _delete(String endpoint, EClass result, EMap<String, String> pathParameter, EMap<String, String> queryParameter) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -2387,8 +2399,10 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 				return getSuspects_1((String)arguments.get(0), (EList<String>)arguments.get(1), (EList<Integer>)arguments.get(2), (Boolean)arguments.get(3));
 			case GltPackage.GLT_OPEN_API_CLIENT___TO_QUERY_STRING__STRING_OBJECT:
 				return toQueryString((String)arguments.get(0), arguments.get(1));
-			case GltPackage.GLT_OPEN_API_CLIENT___CALL__STRING_ECLASS_EMAP_EMAP:
-				return _call((String)arguments.get(0), (EClass)arguments.get(1), (EMap<String, String>)arguments.get(2), (EMap<String, String>)arguments.get(3));
+			case GltPackage.GLT_OPEN_API_CLIENT___GET__STRING_ECLASS_EMAP_EMAP:
+				return _get((String)arguments.get(0), (EClass)arguments.get(1), (EMap<String, String>)arguments.get(2), (EMap<String, String>)arguments.get(3));
+			case GltPackage.GLT_OPEN_API_CLIENT___DELETE__STRING_ECLASS_EMAP_EMAP:
+				return _delete((String)arguments.get(0), (EClass)arguments.get(1), (EMap<String, String>)arguments.get(2), (EMap<String, String>)arguments.get(3));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

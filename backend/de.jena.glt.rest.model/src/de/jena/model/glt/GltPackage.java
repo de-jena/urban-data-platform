@@ -65,61 +65,6 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	GltPackage eINSTANCE = de.jena.model.glt.impl.GltPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link de.jena.model.glt.impl.AlarmIdImpl <em>Alarm Id</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.jena.model.glt.impl.AlarmIdImpl
-	 * @see de.jena.model.glt.impl.GltPackageImpl#getAlarmId()
-	 * @generated
-	 */
-	int ALARM_ID = 0;
-
-	/**
-	 * The feature id for the '<em><b>System Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALARM_ID__SYSTEM_ID = 0;
-
-	/**
-	 * The feature id for the '<em><b>Building Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALARM_ID__BUILDING_ID = 1;
-
-	/**
-	 * The feature id for the '<em><b>Alarm Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALARM_ID__ALARM_ID = 2;
-
-	/**
-	 * The number of structural features of the '<em>Alarm Id</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALARM_ID_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Alarm Id</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALARM_ID_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link de.jena.model.glt.impl.AlarmImpl <em>Alarm</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -127,7 +72,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getAlarm()
 	 * @generated
 	 */
-	int ALARM = 1;
+	int ALARM = 0;
 
 	/**
 	 * The feature id for the '<em><b>Flags</b></em>' attribute.
@@ -245,6 +190,61 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @ordered
 	 */
 	int ALARM_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.model.glt.impl.AlarmIdImpl <em>Alarm Id</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.model.glt.impl.AlarmIdImpl
+	 * @see de.jena.model.glt.impl.GltPackageImpl#getAlarmId()
+	 * @generated
+	 */
+	int ALARM_ID = 1;
+
+	/**
+	 * The feature id for the '<em><b>System Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALARM_ID__SYSTEM_ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Building Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALARM_ID__BUILDING_ID = 1;
+
+	/**
+	 * The feature id for the '<em><b>Alarm Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALARM_ID__ALARM_ID = 2;
+
+	/**
+	 * The number of structural features of the '<em>Alarm Id</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALARM_ID_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Alarm Id</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALARM_ID_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link de.jena.model.glt.impl.AlarmRequestImpl <em>Alarm Request</em>}' class.
@@ -3944,13 +3944,22 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int OPEN_API_CLIENT___TO_QUERY_STRING__STRING_OBJECT = 0;
 
 	/**
-	 * The operation id for the '<em>call</em>' operation.
+	 * The operation id for the '<em>get</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPEN_API_CLIENT___CALL__STRING_ECLASS_EMAP_EMAP = 1;
+	int OPEN_API_CLIENT___GET__STRING_ECLASS_EMAP_EMAP = 1;
+
+	/**
+	 * The operation id for the '<em>delete</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPEN_API_CLIENT___DELETE__STRING_ECLASS_EMAP_EMAP = 2;
 
 	/**
 	 * The number of operations of the '<em>Open Api Client</em>' class.
@@ -3959,7 +3968,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPEN_API_CLIENT_OPERATION_COUNT = 2;
+	int OPEN_API_CLIENT_OPERATION_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link de.jena.model.glt.impl.GltOpenApiClientImpl <em>Open Api Client</em>}' class.
@@ -3990,13 +3999,22 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int GLT_OPEN_API_CLIENT___TO_QUERY_STRING__STRING_OBJECT = OPEN_API_CLIENT___TO_QUERY_STRING__STRING_OBJECT;
 
 	/**
-	 * The operation id for the '<em>call</em>' operation.
+	 * The operation id for the '<em>get</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___CALL__STRING_ECLASS_EMAP_EMAP = OPEN_API_CLIENT___CALL__STRING_ECLASS_EMAP_EMAP;
+	int GLT_OPEN_API_CLIENT___GET__STRING_ECLASS_EMAP_EMAP = OPEN_API_CLIENT___GET__STRING_ECLASS_EMAP_EMAP;
+
+	/**
+	 * The operation id for the '<em>delete</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLT_OPEN_API_CLIENT___DELETE__STRING_ECLASS_EMAP_EMAP = OPEN_API_CLIENT___DELETE__STRING_ECLASS_EMAP_EMAP;
 
 	/**
 	 * The operation id for the '<em>Bulk Text Update</em>' operation.
@@ -5244,49 +5262,6 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 
 
 	/**
-	 * Returns the meta object for class '{@link de.jena.model.glt.AlarmId <em>Alarm Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Alarm Id</em>'.
-	 * @see de.jena.model.glt.AlarmId
-	 * @generated
-	 */
-	EClass getAlarmId();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.AlarmId#getSystemId <em>System Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>System Id</em>'.
-	 * @see de.jena.model.glt.AlarmId#getSystemId()
-	 * @see #getAlarmId()
-	 * @generated
-	 */
-	EAttribute getAlarmId_SystemId();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.AlarmId#getBuildingId <em>Building Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Building Id</em>'.
-	 * @see de.jena.model.glt.AlarmId#getBuildingId()
-	 * @see #getAlarmId()
-	 * @generated
-	 */
-	EAttribute getAlarmId_BuildingId();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.AlarmId#getAlarmId <em>Alarm Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Alarm Id</em>'.
-	 * @see de.jena.model.glt.AlarmId#getAlarmId()
-	 * @see #getAlarmId()
-	 * @generated
-	 */
-	EAttribute getAlarmId_AlarmId();
-
-	/**
 	 * Returns the meta object for class '{@link de.jena.model.glt.Alarm <em>Alarm</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5416,6 +5391,49 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EAttribute getAlarm_Flag();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.model.glt.AlarmId <em>Alarm Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Alarm Id</em>'.
+	 * @see de.jena.model.glt.AlarmId
+	 * @generated
+	 */
+	EClass getAlarmId();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.AlarmId#getSystemId <em>System Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>System Id</em>'.
+	 * @see de.jena.model.glt.AlarmId#getSystemId()
+	 * @see #getAlarmId()
+	 * @generated
+	 */
+	EAttribute getAlarmId_SystemId();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.AlarmId#getBuildingId <em>Building Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Building Id</em>'.
+	 * @see de.jena.model.glt.AlarmId#getBuildingId()
+	 * @see #getAlarmId()
+	 * @generated
+	 */
+	EAttribute getAlarmId_BuildingId();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.AlarmId#getAlarmId <em>Alarm Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Alarm Id</em>'.
+	 * @see de.jena.model.glt.AlarmId#getAlarmId()
+	 * @see #getAlarmId()
+	 * @generated
+	 */
+	EAttribute getAlarmId_AlarmId();
 
 	/**
 	 * Returns the meta object for class '{@link de.jena.model.glt.AlarmRequest <em>Alarm Request</em>}'.
@@ -8905,14 +8923,24 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EOperation getOpenApiClient__ToQueryString__String_Object();
 
 	/**
-	 * Returns the meta object for the '{@link de.jena.model.glt.OpenApiClient#_call(java.lang.String, org.eclipse.emf.ecore.EClass, org.eclipse.emf.common.util.EMap, org.eclipse.emf.common.util.EMap) <em>call</em>}' operation.
+	 * Returns the meta object for the '{@link de.jena.model.glt.OpenApiClient#_get(java.lang.String, org.eclipse.emf.ecore.EClass, org.eclipse.emf.common.util.EMap, org.eclipse.emf.common.util.EMap) <em>get</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>call</em>' operation.
-	 * @see de.jena.model.glt.OpenApiClient#_call(java.lang.String, org.eclipse.emf.ecore.EClass, org.eclipse.emf.common.util.EMap, org.eclipse.emf.common.util.EMap)
+	 * @return the meta object for the '<em>get</em>' operation.
+	 * @see de.jena.model.glt.OpenApiClient#_get(java.lang.String, org.eclipse.emf.ecore.EClass, org.eclipse.emf.common.util.EMap, org.eclipse.emf.common.util.EMap)
 	 * @generated
 	 */
-	EOperation getOpenApiClient___call__String_EClass_EMap_EMap();
+	EOperation getOpenApiClient___get__String_EClass_EMap_EMap();
+
+	/**
+	 * Returns the meta object for the '{@link de.jena.model.glt.OpenApiClient#_delete(java.lang.String, org.eclipse.emf.ecore.EClass, org.eclipse.emf.common.util.EMap, org.eclipse.emf.common.util.EMap) <em>delete</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>delete</em>' operation.
+	 * @see de.jena.model.glt.OpenApiClient#_delete(java.lang.String, org.eclipse.emf.ecore.EClass, org.eclipse.emf.common.util.EMap, org.eclipse.emf.common.util.EMap)
+	 * @generated
+	 */
+	EOperation getOpenApiClient___delete__String_EClass_EMap_EMap();
 
 	/**
 	 * Returns the meta object for class '{@link de.jena.model.glt.GltOpenApiClient <em>Open Api Client</em>}'.
