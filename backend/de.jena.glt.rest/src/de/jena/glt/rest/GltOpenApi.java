@@ -72,7 +72,7 @@ public class GltOpenApi extends GltOpenApiClientImpl {
 		this.token = token;
 	}
 	
-	public Response getJakarta(String path, EMap<String, String> templateParameters,
+	public Response callJakarta(String path, EMap<String, String> templateParameters,
 			EMap<String, String> queryParameters) {
 
 		try (Client client = ClientBuilder.newClient()) {
@@ -95,7 +95,7 @@ public class GltOpenApi extends GltOpenApiClientImpl {
 		}
 	}
 
-	public Response get(String path, EClass resultEClass, EMap<String,String> pathParameters,
+	public Response call(String path, EClass resultEClass, EMap<String,String> pathParameters,
 			EMap<String,String> queryParameters) {
 		String requestURL = config.url() + path;
 		for (Entry<String, String> param : pathParameters.entrySet()) {
@@ -184,11 +184,11 @@ public class GltOpenApi extends GltOpenApiClientImpl {
 	}
 
 	@Override
-	public Response _get(String endPoint, EClass resultEClass, EMap<String, String> pathParameters, EMap<String, String> queryParameters) {
+	public Response _call(String endPoint, EClass resultEClass, EMap<String, String> pathParameters, EMap<String, String> queryParameters) {
 		if(resultEClass ==null) {
-			return getJakarta(endPoint, pathParameters, queryParameters);
+			return callJakarta(endPoint, pathParameters, queryParameters);
 		} else {
-			return get(endPoint, resultEClass, pathParameters, queryParameters);
+			return call(endPoint, resultEClass, pathParameters, queryParameters);
 		}
 	}
 
