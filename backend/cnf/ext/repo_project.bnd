@@ -44,13 +44,6 @@
 		index=${.}/dim_release.maven;\
 		poll_time 			= -1;\
 		name='DIM_Nexus_Release'
-
--plugin.modeling:\
-	aQute.bnd.repository.osgi.OSGiRepository;\
-		name=DIM_Eclipse_Runtime;\
-		locations=https://devel.data-in-motion.biz/public/update/repository/p2/obr/dim-core-runtime/index.xml;\
-		cache=${build}/cache/dim-core-runtime;\
-		poll.time=-1		
 		
 -plugin.release: \
     aQute.bnd.repository.maven.provider.MavenBndRepository;\
