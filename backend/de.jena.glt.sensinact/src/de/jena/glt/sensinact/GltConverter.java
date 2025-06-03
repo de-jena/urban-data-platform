@@ -56,7 +56,7 @@ public class GltConverter {
 	@Activate
 	public void activate(GltConfiguration config) {
 		this.conf = config;
-		logger.log(Level.INFO, "activate GLT for side id " + config.sideID());
+		logger.log(Level.INFO, "activate GLT for system id " + config.systemID());
 		initSide();
 		executor = Executors.newScheduledThreadPool(1);
 		executor.scheduleAtFixedRate(this::update, 0, config.interval(), TimeUnit.MINUTES);
@@ -67,8 +67,8 @@ public class GltConverter {
 	}
 
 	private void initSide() {
-		String sideID = conf.sideID();
-		Response response = gltOpenApi.getSystem(sideID, false);
+		String systemId = conf.systemID();
+		Response response = gltOpenApi.getSystem(systemId, false);
 		int code = response.getCode();
 		if (code == 200) {
 			EList<EObject> result = response.getResult();
@@ -78,8 +78,10 @@ public class GltConverter {
 				initGeo(site);
 				// TODO: Metadaten
 			}
+		} else if (code == 404){
+			logger.log(Level.WARNING, "Response Code: " + code + " System with id " + systemId);
 		} else {
-			logger.log(Level.INFO, "Response Code: " + code + " : " + response.getDescription());
+			logger.log(Level.WARNING, "Response Code: " + code + " : " + response.getDescription());
 		}
 	}
 
@@ -102,7 +104,7 @@ public class GltConverter {
 	}
 
 	private void update() {
-		int systemId = Integer.parseInt(conf.sideID());
+		int systemId = Integer.parseInt(conf.systemID());
 		EList<Integer> point = ECollections.asEList(Arrays.stream(conf.points()).boxed().toList());
 		String from = DateTimeFormatter.ISO_LOCAL_DATE_TIME.format(LocalDateTime.now().minusMinutes(conf.interval()));
 		String to = DateTimeFormatter.ISO_LOCAL_DATE_TIME.format(LocalDateTime.now().plusMinutes(1));

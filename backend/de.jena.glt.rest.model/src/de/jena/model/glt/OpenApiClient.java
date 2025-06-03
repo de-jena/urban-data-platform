@@ -36,11 +36,11 @@ public interface OpenApiClient extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  get it 
+	 *  call it 
 	 * <!-- end-model-doc -->
 	 * @model pathParameterMapType="org.eclipse.emf.ecore.EStringToStringMapEntry&lt;org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EString&gt;" queryParameterMapType="org.eclipse.emf.ecore.EStringToStringMapEntry&lt;org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EString&gt;"
 	 * @generated
 	 */
-	Response _get(String endpoint, EClass result, EMap<String, String> pathParameter, EMap<String, String> queryParameter);
+	Response _call(String endpoint, EClass result, EMap<String, String> pathParameter, EMap<String, String> queryParameter);
 
 } // OpenApiClient

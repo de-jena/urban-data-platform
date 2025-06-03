@@ -447,7 +447,7 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will return datalog contents for the system and its given identifier (mostly point ids) within the specified timeframe.
+	 * Will return datalog contents for the system and its given identifier within the specified timeframe.
 	 * <!-- end-model-doc -->
 	 * @model idMany="true"
 	 * @generated
@@ -458,7 +458,7 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will return datalog infos for the system and its given identifiers (mostly point ids). Will return all datalogs for all points connected to this system if no point ids are given.
+	 * Will return datalog infos for the system and its given identifiers. Will return all datalogs for all points connected to this system if no point ids are given.
 	 * <!-- end-model-doc -->
 	 * @model idMany="true"
 	 * @generated
@@ -975,7 +975,7 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will return all logs.
+	 * Will return all logs for the system with the given systemId + ids if provided.
 	 * <!-- end-model-doc -->
 	 * @model idMany="true"
 	 * @generated
@@ -1371,7 +1371,7 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will return all groups.
+	 * Will return all users.
 	 * <!-- end-model-doc -->
 	 * @model kind="operation"
 	 * @generated
@@ -1426,7 +1426,7 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will add user with given name. endpoint: /useradmin/{name}
+	 * Will remove role with given name. endpoint: /useradmin/{name}
 	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated
