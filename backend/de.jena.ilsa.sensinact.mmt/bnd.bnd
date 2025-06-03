@@ -11,7 +11,6 @@
 	org.gecko.emf.json,\
 	de.jena.udp.trafficos.common.model,\
 	org.eclipse.sensinact.gateway.core.api,\
-	org.eclipse.sensinact.gateway.core.models.metadata,\
 	org.eclipse.sensinact.gateway.core.models.provider,\
 	org.eclipse.sensinact.gateway.northbound.session.session-api,\
 	org.eclipse.sensinact.gateway.northbound.session.session-impl,\
