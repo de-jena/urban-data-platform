@@ -25,15 +25,6 @@ public interface GltFactory extends EFactory {
 	GltFactory eINSTANCE = de.jena.model.glt.impl.GltFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Alarm</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Alarm</em>'.
-	 * @generated
-	 */
-	Alarm createAlarm();
-
-	/**
 	 * Returns a new object of class '<em>Alarm Id</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -41,6 +32,15 @@ public interface GltFactory extends EFactory {
 	 * @generated
 	 */
 	AlarmId createAlarmId();
+
+	/**
+	 * Returns a new object of class '<em>Alarm</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Alarm</em>'.
+	 * @generated
+	 */
+	Alarm createAlarm();
 
 	/**
 	 * Returns a new object of class '<em>Alarm Request</em>'.

@@ -66,15 +66,15 @@ public class GltSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case GltPackage.ALARM: {
-				Alarm alarm = (Alarm)theEObject;
-				T result = caseAlarm(alarm);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case GltPackage.ALARM_ID: {
 				AlarmId alarmId = (AlarmId)theEObject;
 				T result = caseAlarmId(alarmId);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GltPackage.ALARM: {
+				Alarm alarm = (Alarm)theEObject;
+				T result = caseAlarm(alarm);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -354,21 +354,6 @@ public class GltSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Alarm</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Alarm</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAlarm(Alarm object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Alarm Id</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -380,6 +365,21 @@ public class GltSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAlarmId(AlarmId object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Alarm</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Alarm</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAlarm(Alarm object) {
 		return null;
 	}
 

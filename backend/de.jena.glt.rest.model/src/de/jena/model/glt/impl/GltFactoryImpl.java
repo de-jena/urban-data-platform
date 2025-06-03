@@ -57,8 +57,8 @@ public class GltFactoryImpl extends EFactoryImpl implements GltFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case GltPackage.ALARM: return createAlarm();
 			case GltPackage.ALARM_ID: return createAlarmId();
+			case GltPackage.ALARM: return createAlarm();
 			case GltPackage.ALARM_REQUEST: return createAlarmRequest();
 			case GltPackage.ALARM_POJO: return createAlarmPojo();
 			case GltPackage.INSTRUCTIONS_POJO: return createInstructionsPojo();
@@ -143,9 +143,9 @@ public class GltFactoryImpl extends EFactoryImpl implements GltFactory {
 	 * @generated
 	 */
 	@Override
-	public Alarm createAlarm() {
-		AlarmImpl alarm = new AlarmImpl();
-		return alarm;
+	public AlarmId createAlarmId() {
+		AlarmIdImpl alarmId = new AlarmIdImpl();
+		return alarmId;
 	}
 
 	/**
@@ -154,9 +154,9 @@ public class GltFactoryImpl extends EFactoryImpl implements GltFactory {
 	 * @generated
 	 */
 	@Override
-	public AlarmId createAlarmId() {
-		AlarmIdImpl alarmId = new AlarmIdImpl();
-		return alarmId;
+	public Alarm createAlarm() {
+		AlarmImpl alarm = new AlarmImpl();
+		return alarm;
 	}
 
 	/**
