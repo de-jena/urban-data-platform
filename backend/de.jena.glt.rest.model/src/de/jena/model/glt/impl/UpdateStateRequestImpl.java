@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.jena.model.glt.impl.UpdateStateRequestImpl#getSiteId <em>Site Id</em>}</li>
+ *   <li>{@link de.jena.model.glt.impl.UpdateStateRequestImpl#getSystemId <em>System Id</em>}</li>
  *   <li>{@link de.jena.model.glt.impl.UpdateStateRequestImpl#getAlarmId <em>Alarm Id</em>}</li>
  *   <li>{@link de.jena.model.glt.impl.UpdateStateRequestImpl#getState <em>State</em>}</li>
  *   <li>{@link de.jena.model.glt.impl.UpdateStateRequestImpl#getSeverity <em>Severity</em>}</li>
@@ -33,24 +33,24 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class UpdateStateRequestImpl extends MinimalEObjectImpl.Container implements UpdateStateRequest {
 	/**
-	 * The default value of the '{@link #getSiteId() <em>Site Id</em>}' attribute.
+	 * The default value of the '{@link #getSystemId() <em>System Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSiteId()
+	 * @see #getSystemId()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String SITE_ID_EDEFAULT = null;
+	protected static final String SYSTEM_ID_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getSiteId() <em>Site Id</em>}' attribute.
+	 * The cached value of the '{@link #getSystemId() <em>System Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSiteId()
+	 * @see #getSystemId()
 	 * @generated
 	 * @ordered
 	 */
-	protected String siteId = SITE_ID_EDEFAULT;
+	protected String systemId = SYSTEM_ID_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getAlarmId() <em>Alarm Id</em>}' attribute.
@@ -157,8 +157,8 @@ public class UpdateStateRequestImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	public String getSiteId() {
-		return siteId;
+	public String getSystemId() {
+		return systemId;
 	}
 
 	/**
@@ -167,11 +167,11 @@ public class UpdateStateRequestImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	public void setSiteId(String newSiteId) {
-		String oldSiteId = siteId;
-		siteId = newSiteId;
+	public void setSystemId(String newSystemId) {
+		String oldSystemId = systemId;
+		systemId = newSystemId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.UPDATE_STATE_REQUEST__SITE_ID, oldSiteId, siteId));
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.UPDATE_STATE_REQUEST__SYSTEM_ID, oldSystemId, systemId));
 	}
 
 	/**
@@ -274,8 +274,8 @@ public class UpdateStateRequestImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case GltPackage.UPDATE_STATE_REQUEST__SITE_ID:
-				return getSiteId();
+			case GltPackage.UPDATE_STATE_REQUEST__SYSTEM_ID:
+				return getSystemId();
 			case GltPackage.UPDATE_STATE_REQUEST__ALARM_ID:
 				return getAlarmId();
 			case GltPackage.UPDATE_STATE_REQUEST__STATE:
@@ -296,8 +296,8 @@ public class UpdateStateRequestImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case GltPackage.UPDATE_STATE_REQUEST__SITE_ID:
-				setSiteId((String)newValue);
+			case GltPackage.UPDATE_STATE_REQUEST__SYSTEM_ID:
+				setSystemId((String)newValue);
 				return;
 			case GltPackage.UPDATE_STATE_REQUEST__ALARM_ID:
 				setAlarmId((String)newValue);
@@ -323,8 +323,8 @@ public class UpdateStateRequestImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case GltPackage.UPDATE_STATE_REQUEST__SITE_ID:
-				setSiteId(SITE_ID_EDEFAULT);
+			case GltPackage.UPDATE_STATE_REQUEST__SYSTEM_ID:
+				setSystemId(SYSTEM_ID_EDEFAULT);
 				return;
 			case GltPackage.UPDATE_STATE_REQUEST__ALARM_ID:
 				setAlarmId(ALARM_ID_EDEFAULT);
@@ -350,8 +350,8 @@ public class UpdateStateRequestImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case GltPackage.UPDATE_STATE_REQUEST__SITE_ID:
-				return SITE_ID_EDEFAULT == null ? siteId != null : !SITE_ID_EDEFAULT.equals(siteId);
+			case GltPackage.UPDATE_STATE_REQUEST__SYSTEM_ID:
+				return SYSTEM_ID_EDEFAULT == null ? systemId != null : !SYSTEM_ID_EDEFAULT.equals(systemId);
 			case GltPackage.UPDATE_STATE_REQUEST__ALARM_ID:
 				return ALARM_ID_EDEFAULT == null ? alarmId != null : !ALARM_ID_EDEFAULT.equals(alarmId);
 			case GltPackage.UPDATE_STATE_REQUEST__STATE:
@@ -374,8 +374,8 @@ public class UpdateStateRequestImpl extends MinimalEObjectImpl.Container impleme
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (siteId: ");
-		result.append(siteId);
+		result.append(" (systemId: ");
+		result.append(systemId);
 		result.append(", alarmId: ");
 		result.append(alarmId);
 		result.append(", state: ");

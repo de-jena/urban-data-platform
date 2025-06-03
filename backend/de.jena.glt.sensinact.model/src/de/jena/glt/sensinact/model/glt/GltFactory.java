@@ -36,13 +36,13 @@ public interface GltFactory extends EFactory {
 	GltFactory eINSTANCE = de.jena.glt.sensinact.model.glt.impl.GltFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Glt</em>'.
+	 * Returns a new object of class '<em>Side</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Glt</em>'.
+	 * @return a new object of class '<em>Side</em>'.
 	 * @generated
 	 */
-	Glt createGlt();
+	GltSide createGltSide();
 
 	/**
 	 * Returns a new object of class '<em>Monitoring Data</em>'.

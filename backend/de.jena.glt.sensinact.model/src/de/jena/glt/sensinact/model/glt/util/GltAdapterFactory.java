@@ -83,8 +83,8 @@ public class GltAdapterFactory extends AdapterFactoryImpl {
 	protected GltSwitch<Adapter> modelSwitch =
 		new GltSwitch<Adapter>() {
 			@Override
-			public Adapter caseGlt(Glt object) {
-				return createGltAdapter();
+			public Adapter caseGltSide(GltSide object) {
+				return createGltSideAdapter();
 			}
 			@Override
 			public Adapter caseMonitoringData(MonitoringData object) {
@@ -123,16 +123,16 @@ public class GltAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.jena.glt.sensinact.model.glt.Glt <em>Glt</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.jena.glt.sensinact.model.glt.GltSide <em>Side</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.jena.glt.sensinact.model.glt.Glt
+	 * @see de.jena.glt.sensinact.model.glt.GltSide
 	 * @generated
 	 */
-	public Adapter createGltAdapter() {
+	public Adapter createGltSideAdapter() {
 		return null;
 	}
 

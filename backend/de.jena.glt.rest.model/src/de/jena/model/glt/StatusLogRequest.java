@@ -18,7 +18,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * </p>
  * <ul>
  *   <li>{@link de.jena.model.glt.StatusLogRequest#getId <em>Id</em>}</li>
- *   <li>{@link de.jena.model.glt.StatusLogRequest#getSiteId <em>Site Id</em>}</li>
+ *   <li>{@link de.jena.model.glt.StatusLogRequest#getSystemId <em>System Id</em>}</li>
  *   <li>{@link de.jena.model.glt.StatusLogRequest#getType <em>Type</em>}</li>
  *   <li>{@link de.jena.model.glt.StatusLogRequest#getSeverity <em>Severity</em>}</li>
  *   <li>{@link de.jena.model.glt.StatusLogRequest#getMessage <em>Message</em>}</li>
@@ -54,26 +54,26 @@ public interface StatusLogRequest extends EObject {
 	void setId(BigInteger value);
 
 	/**
-	 * Returns the value of the '<em><b>Site Id</b></em>' attribute.
+	 * Returns the value of the '<em><b>System Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Site Id</em>' attribute.
-	 * @see #setSiteId(String)
-	 * @see de.jena.model.glt.GltPackage#getStatusLogRequest_SiteId()
+	 * @return the value of the '<em>System Id</em>' attribute.
+	 * @see #setSystemId(String)
+	 * @see de.jena.model.glt.GltPackage#getStatusLogRequest_SystemId()
 	 * @model
 	 * @generated
 	 */
-	String getSiteId();
+	String getSystemId();
 
 	/**
-	 * Sets the value of the '{@link de.jena.model.glt.StatusLogRequest#getSiteId <em>Site Id</em>}' attribute.
+	 * Sets the value of the '{@link de.jena.model.glt.StatusLogRequest#getSystemId <em>System Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Site Id</em>' attribute.
-	 * @see #getSiteId()
+	 * @param value the new value of the '<em>System Id</em>' attribute.
+	 * @see #getSystemId()
 	 * @generated
 	 */
-	void setSiteId(String value);
+	void setSystemId(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.

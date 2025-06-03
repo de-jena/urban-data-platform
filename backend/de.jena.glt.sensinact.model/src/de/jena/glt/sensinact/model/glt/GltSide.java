@@ -19,14 +19,14 @@ import org.osgi.annotation.versioning.ProviderType;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Glt</b></em>'.
+ * A representation of the model object '<em><b>Side</b></em>'.
  * <!-- end-user-doc -->
  *
  *
- * @see de.jena.glt.sensinact.model.glt.GltPackage#getGlt()
+ * @see de.jena.glt.sensinact.model.glt.GltPackage#getGltSide()
  * @model
  * @generated
  */
 @ProviderType
-public interface Glt extends DynamicProvider {
-} // Glt
+public interface GltSide extends DynamicProvider {
+} // GltSide

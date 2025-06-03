@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.jena.model.glt.impl.DatalogContentPojoImpl#getSiteId <em>Site Id</em>}</li>
+ *   <li>{@link de.jena.model.glt.impl.DatalogContentPojoImpl#getSystemId <em>System Id</em>}</li>
  *   <li>{@link de.jena.model.glt.impl.DatalogContentPojoImpl#getId <em>Id</em>}</li>
  *   <li>{@link de.jena.model.glt.impl.DatalogContentPojoImpl#getName <em>Name</em>}</li>
  *   <li>{@link de.jena.model.glt.impl.DatalogContentPojoImpl#getValueType <em>Value Type</em>}</li>
@@ -51,24 +51,24 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  */
 public class DatalogContentPojoImpl extends MinimalEObjectImpl.Container implements DatalogContentPojo {
 	/**
-	 * The default value of the '{@link #getSiteId() <em>Site Id</em>}' attribute.
+	 * The default value of the '{@link #getSystemId() <em>System Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSiteId()
+	 * @see #getSystemId()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Integer SITE_ID_EDEFAULT = null;
+	protected static final Integer SYSTEM_ID_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getSiteId() <em>Site Id</em>}' attribute.
+	 * The cached value of the '{@link #getSystemId() <em>System Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSiteId()
+	 * @see #getSystemId()
 	 * @generated
 	 * @ordered
 	 */
-	protected Integer siteId = SITE_ID_EDEFAULT;
+	protected Integer systemId = SYSTEM_ID_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
@@ -385,8 +385,8 @@ public class DatalogContentPojoImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	public Integer getSiteId() {
-		return siteId;
+	public Integer getSystemId() {
+		return systemId;
 	}
 
 	/**
@@ -395,11 +395,11 @@ public class DatalogContentPojoImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	public void setSiteId(Integer newSiteId) {
-		Integer oldSiteId = siteId;
-		siteId = newSiteId;
+	public void setSystemId(Integer newSystemId) {
+		Integer oldSystemId = systemId;
+		systemId = newSystemId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.DATALOG_CONTENT_POJO__SITE_ID, oldSiteId, siteId));
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.DATALOG_CONTENT_POJO__SYSTEM_ID, oldSystemId, systemId));
 	}
 
 	/**
@@ -748,8 +748,8 @@ public class DatalogContentPojoImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case GltPackage.DATALOG_CONTENT_POJO__SITE_ID:
-				return getSiteId();
+			case GltPackage.DATALOG_CONTENT_POJO__SYSTEM_ID:
+				return getSystemId();
 			case GltPackage.DATALOG_CONTENT_POJO__ID:
 				return getId();
 			case GltPackage.DATALOG_CONTENT_POJO__NAME:
@@ -795,8 +795,8 @@ public class DatalogContentPojoImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case GltPackage.DATALOG_CONTENT_POJO__SITE_ID:
-				setSiteId((Integer)newValue);
+			case GltPackage.DATALOG_CONTENT_POJO__SYSTEM_ID:
+				setSystemId((Integer)newValue);
 				return;
 			case GltPackage.DATALOG_CONTENT_POJO__ID:
 				setId((Integer)newValue);
@@ -861,8 +861,8 @@ public class DatalogContentPojoImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case GltPackage.DATALOG_CONTENT_POJO__SITE_ID:
-				setSiteId(SITE_ID_EDEFAULT);
+			case GltPackage.DATALOG_CONTENT_POJO__SYSTEM_ID:
+				setSystemId(SYSTEM_ID_EDEFAULT);
 				return;
 			case GltPackage.DATALOG_CONTENT_POJO__ID:
 				setId(ID_EDEFAULT);
@@ -924,8 +924,8 @@ public class DatalogContentPojoImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case GltPackage.DATALOG_CONTENT_POJO__SITE_ID:
-				return SITE_ID_EDEFAULT == null ? siteId != null : !SITE_ID_EDEFAULT.equals(siteId);
+			case GltPackage.DATALOG_CONTENT_POJO__SYSTEM_ID:
+				return SYSTEM_ID_EDEFAULT == null ? systemId != null : !SYSTEM_ID_EDEFAULT.equals(systemId);
 			case GltPackage.DATALOG_CONTENT_POJO__ID:
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case GltPackage.DATALOG_CONTENT_POJO__NAME:
@@ -972,8 +972,8 @@ public class DatalogContentPojoImpl extends MinimalEObjectImpl.Container impleme
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (siteId: ");
-		result.append(siteId);
+		result.append(" (systemId: ");
+		result.append(systemId);
 		result.append(", id: ");
 		result.append(id);
 		result.append(", name: ");

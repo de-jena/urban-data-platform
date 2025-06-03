@@ -86,8 +86,8 @@ public class GltFactoryImpl extends EFactoryImpl implements GltFactory {
 			case GltPackage.POINT_RECORD: return createPointRecord();
 			case GltPackage.TIME_SCHEDULE_RECORD: return createTimeScheduleRecord();
 			case GltPackage.ADDRESS_POJO: return createAddressPojo();
-			case GltPackage.SITE_POJO: return createSitePojo();
-			case GltPackage.SITE_REQUEST: return createSiteRequest();
+			case GltPackage.SYSTEM_DESCRIPTION_POJO: return createSystemDescriptionPojo();
+			case GltPackage.SYSTEM_DESCRIPTION_REQUEST: return createSystemDescriptionRequest();
 			case GltPackage.CONTACT_POJO: return createContactPojo();
 			case GltPackage.PHONE_POJO: return createPhonePojo();
 			case GltPackage.CONTRACT_POJO: return createContractPojo();
@@ -462,9 +462,9 @@ public class GltFactoryImpl extends EFactoryImpl implements GltFactory {
 	 * @generated
 	 */
 	@Override
-	public SitePojo createSitePojo() {
-		SitePojoImpl sitePojo = new SitePojoImpl();
-		return sitePojo;
+	public SystemDescriptionPojo createSystemDescriptionPojo() {
+		SystemDescriptionPojoImpl systemDescriptionPojo = new SystemDescriptionPojoImpl();
+		return systemDescriptionPojo;
 	}
 
 	/**
@@ -473,9 +473,9 @@ public class GltFactoryImpl extends EFactoryImpl implements GltFactory {
 	 * @generated
 	 */
 	@Override
-	public SiteRequest createSiteRequest() {
-		SiteRequestImpl siteRequest = new SiteRequestImpl();
-		return siteRequest;
+	public SystemDescriptionRequest createSystemDescriptionRequest() {
+		SystemDescriptionRequestImpl systemDescriptionRequest = new SystemDescriptionRequestImpl();
+		return systemDescriptionRequest;
 	}
 
 	/**

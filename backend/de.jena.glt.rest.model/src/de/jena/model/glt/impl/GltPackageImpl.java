@@ -248,14 +248,14 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass sitePojoEClass = null;
+	private EClass systemDescriptionPojoEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass siteRequestEClass = null;
+	private EClass systemDescriptionRequestEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -543,7 +543,7 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAlarm_SiteId() {
+	public EAttribute getAlarm_SystemId() {
         return (EAttribute)getAlarm().getEStructuralFeatures().get(9);
 	}
 
@@ -576,7 +576,7 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAlarmId_SiteId() {
+	public EAttribute getAlarmId_SystemId() {
         return (EAttribute)getAlarmId().getEStructuralFeatures().get(0);
 	}
 
@@ -951,7 +951,7 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCalendarEventPojo_SiteId() {
+	public EAttribute getCalendarEventPojo_SystemId() {
         return (EAttribute)getCalendarEventPojo().getEStructuralFeatures().get(7);
 	}
 
@@ -1196,7 +1196,7 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAlarmLogPojo_SiteId() {
+	public EAttribute getAlarmLogPojo_SystemId() {
         return (EAttribute)getAlarmLogPojo().getEStructuralFeatures().get(0);
 	}
 
@@ -1332,7 +1332,7 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDatalogContentPojo_SiteId() {
+	public EAttribute getDatalogContentPojo_SystemId() {
         return (EAttribute)getDatalogContentPojo().getEStructuralFeatures().get(0);
 	}
 
@@ -1515,7 +1515,7 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getPointValuePojo_SiteId() {
+	public EAttribute getPointValuePojo_SystemId() {
         return (EAttribute)getPointValuePojo().getEStructuralFeatures().get(0);
 	}
 
@@ -1737,7 +1737,7 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getEntityMonitoringSettingsPojo_SiteId() {
+	public EAttribute getEntityMonitoringSettingsPojo_SystemId() {
         return (EAttribute)getEntityMonitoringSettingsPojo().getEStructuralFeatures().get(0);
 	}
 
@@ -1800,7 +1800,7 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSyncLogPojo_SiteId() {
+	public EAttribute getSyncLogPojo_SystemId() {
         return (EAttribute)getSyncLogPojo().getEStructuralFeatures().get(0);
 	}
 
@@ -1893,7 +1893,7 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getStatusLogPojo_SiteId() {
+	public EAttribute getStatusLogPojo_SystemId() {
         return (EAttribute)getStatusLogPojo().getEStructuralFeatures().get(1);
 	}
 
@@ -1956,7 +1956,7 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getUpdateStateRequest_SiteId() {
+	public EAttribute getUpdateStateRequest_SystemId() {
         return (EAttribute)getUpdateStateRequest().getEStructuralFeatures().get(0);
 	}
 
@@ -2029,7 +2029,7 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getStatusLogRequest_SiteId() {
+	public EAttribute getStatusLogRequest_SystemId() {
         return (EAttribute)getStatusLogRequest().getEStructuralFeatures().get(1);
 	}
 
@@ -2092,7 +2092,7 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTimeScheduleBlockPojo_SiteId() {
+	public EAttribute getTimeScheduleBlockPojo_SystemId() {
         return (EAttribute)getTimeScheduleBlockPojo().getEStructuralFeatures().get(0);
 	}
 
@@ -2225,7 +2225,7 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTimeScheduleStatePojo_SiteId() {
+	public EAttribute getTimeScheduleStatePojo_SystemId() {
         return (EAttribute)getTimeScheduleStatePojo().getEStructuralFeatures().get(0);
 	}
 
@@ -2381,7 +2381,7 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getPointRecord_SiteId() {
+	public EAttribute getPointRecord_SystemId() {
         return (EAttribute)getPointRecord().getEStructuralFeatures().get(0);
 	}
 
@@ -2474,7 +2474,7 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTimeScheduleRecord_SiteId() {
+	public EAttribute getTimeScheduleRecord_SystemId() {
         return (EAttribute)getTimeScheduleRecord().getEStructuralFeatures().get(0);
 	}
 
@@ -2697,11 +2697,11 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getSitePojo() {
-		if (sitePojoEClass == null) {
-			sitePojoEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(GltPackage.eNS_URI).getEClassifiers().get(29);
+	public EClass getSystemDescriptionPojo() {
+		if (systemDescriptionPojoEClass == null) {
+			systemDescriptionPojoEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(GltPackage.eNS_URI).getEClassifiers().get(29);
 		}
-		return sitePojoEClass;
+		return systemDescriptionPojoEClass;
 	}
 
 	/**
@@ -2710,8 +2710,8 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSitePojo_Id() {
-        return (EAttribute)getSitePojo().getEStructuralFeatures().get(0);
+	public EAttribute getSystemDescriptionPojo_Id() {
+        return (EAttribute)getSystemDescriptionPojo().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2720,8 +2720,8 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSitePojo_Name() {
-        return (EAttribute)getSitePojo().getEStructuralFeatures().get(1);
+	public EAttribute getSystemDescriptionPojo_Name() {
+        return (EAttribute)getSystemDescriptionPojo().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2730,8 +2730,8 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSitePojo_Prefix() {
-        return (EAttribute)getSitePojo().getEStructuralFeatures().get(2);
+	public EAttribute getSystemDescriptionPojo_Prefix() {
+        return (EAttribute)getSystemDescriptionPojo().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -2740,8 +2740,8 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSitePojo_Ip() {
-        return (EAttribute)getSitePojo().getEStructuralFeatures().get(3);
+	public EAttribute getSystemDescriptionPojo_Ip() {
+        return (EAttribute)getSystemDescriptionPojo().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -2750,8 +2750,8 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSitePojo_Directory() {
-        return (EAttribute)getSitePojo().getEStructuralFeatures().get(4);
+	public EAttribute getSystemDescriptionPojo_Directory() {
+        return (EAttribute)getSystemDescriptionPojo().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -2760,8 +2760,8 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSitePojo_Port() {
-        return (EAttribute)getSitePojo().getEStructuralFeatures().get(5);
+	public EAttribute getSystemDescriptionPojo_Port() {
+        return (EAttribute)getSystemDescriptionPojo().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -2770,8 +2770,8 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSitePojo_Lon() {
-        return (EAttribute)getSitePojo().getEStructuralFeatures().get(6);
+	public EAttribute getSystemDescriptionPojo_Lon() {
+        return (EAttribute)getSystemDescriptionPojo().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -2780,8 +2780,8 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSitePojo_Lat() {
-        return (EAttribute)getSitePojo().getEStructuralFeatures().get(7);
+	public EAttribute getSystemDescriptionPojo_Lat() {
+        return (EAttribute)getSystemDescriptionPojo().getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -2790,8 +2790,8 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSitePojo_Shallow() {
-        return (EAttribute)getSitePojo().getEStructuralFeatures().get(8);
+	public EAttribute getSystemDescriptionPojo_Shallow() {
+        return (EAttribute)getSystemDescriptionPojo().getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -2800,8 +2800,8 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSitePojo_Excluded() {
-        return (EAttribute)getSitePojo().getEStructuralFeatures().get(9);
+	public EAttribute getSystemDescriptionPojo_Excluded() {
+        return (EAttribute)getSystemDescriptionPojo().getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -2810,8 +2810,8 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSitePojo_ExternalId() {
-        return (EAttribute)getSitePojo().getEStructuralFeatures().get(10);
+	public EAttribute getSystemDescriptionPojo_ExternalId() {
+        return (EAttribute)getSystemDescriptionPojo().getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -2820,8 +2820,8 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSitePojo_Address() {
-        return (EReference)getSitePojo().getEStructuralFeatures().get(11);
+	public EReference getSystemDescriptionPojo_Address() {
+        return (EReference)getSystemDescriptionPojo().getEStructuralFeatures().get(11);
 	}
 
 	/**
@@ -2830,8 +2830,8 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSitePojo_Source() {
-        return (EAttribute)getSitePojo().getEStructuralFeatures().get(12);
+	public EAttribute getSystemDescriptionPojo_Source() {
+        return (EAttribute)getSystemDescriptionPojo().getEStructuralFeatures().get(12);
 	}
 
 	/**
@@ -2840,8 +2840,8 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSitePojo_Children() {
-        return (EReference)getSitePojo().getEStructuralFeatures().get(13);
+	public EReference getSystemDescriptionPojo_Children() {
+        return (EReference)getSystemDescriptionPojo().getEStructuralFeatures().get(13);
 	}
 
 	/**
@@ -2850,8 +2850,8 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSitePojo_Flags() {
-        return (EAttribute)getSitePojo().getEStructuralFeatures().get(14);
+	public EAttribute getSystemDescriptionPojo_Flags() {
+        return (EAttribute)getSystemDescriptionPojo().getEStructuralFeatures().get(14);
 	}
 
 	/**
@@ -2860,8 +2860,8 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSitePojo_CylonNetwork() {
-        return (EAttribute)getSitePojo().getEStructuralFeatures().get(15);
+	public EAttribute getSystemDescriptionPojo_CylonNetwork() {
+        return (EAttribute)getSystemDescriptionPojo().getEStructuralFeatures().get(15);
 	}
 
 	/**
@@ -2870,11 +2870,11 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getSiteRequest() {
-		if (siteRequestEClass == null) {
-			siteRequestEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(GltPackage.eNS_URI).getEClassifiers().get(30);
+	public EClass getSystemDescriptionRequest() {
+		if (systemDescriptionRequestEClass == null) {
+			systemDescriptionRequestEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(GltPackage.eNS_URI).getEClassifiers().get(30);
 		}
-		return siteRequestEClass;
+		return systemDescriptionRequestEClass;
 	}
 
 	/**
@@ -2883,8 +2883,8 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSiteRequest_Id() {
-        return (EAttribute)getSiteRequest().getEStructuralFeatures().get(0);
+	public EAttribute getSystemDescriptionRequest_Id() {
+        return (EAttribute)getSystemDescriptionRequest().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2893,8 +2893,8 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSiteRequest_Name() {
-        return (EAttribute)getSiteRequest().getEStructuralFeatures().get(1);
+	public EAttribute getSystemDescriptionRequest_Name() {
+        return (EAttribute)getSystemDescriptionRequest().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2903,8 +2903,8 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSiteRequest_Directory() {
-        return (EAttribute)getSiteRequest().getEStructuralFeatures().get(2);
+	public EAttribute getSystemDescriptionRequest_Directory() {
+        return (EAttribute)getSystemDescriptionRequest().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -2913,8 +2913,8 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSiteRequest_Port() {
-        return (EAttribute)getSiteRequest().getEStructuralFeatures().get(3);
+	public EAttribute getSystemDescriptionRequest_Port() {
+        return (EAttribute)getSystemDescriptionRequest().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -2923,8 +2923,8 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSiteRequest_ExternalId() {
-        return (EAttribute)getSiteRequest().getEStructuralFeatures().get(4);
+	public EAttribute getSystemDescriptionRequest_ExternalId() {
+        return (EAttribute)getSystemDescriptionRequest().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -2933,8 +2933,8 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSiteRequest_Ip() {
-        return (EAttribute)getSiteRequest().getEStructuralFeatures().get(5);
+	public EAttribute getSystemDescriptionRequest_Ip() {
+        return (EAttribute)getSystemDescriptionRequest().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -2943,8 +2943,8 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSiteRequest_Lon() {
-        return (EAttribute)getSiteRequest().getEStructuralFeatures().get(6);
+	public EAttribute getSystemDescriptionRequest_Lon() {
+        return (EAttribute)getSystemDescriptionRequest().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -2953,8 +2953,8 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSiteRequest_Lat() {
-        return (EAttribute)getSiteRequest().getEStructuralFeatures().get(7);
+	public EAttribute getSystemDescriptionRequest_Lat() {
+        return (EAttribute)getSystemDescriptionRequest().getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -2963,8 +2963,8 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSiteRequest_Excluded() {
-        return (EAttribute)getSiteRequest().getEStructuralFeatures().get(8);
+	public EAttribute getSystemDescriptionRequest_Excluded() {
+        return (EAttribute)getSystemDescriptionRequest().getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -2973,8 +2973,8 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSiteRequest_Flags() {
-        return (EAttribute)getSiteRequest().getEStructuralFeatures().get(9);
+	public EAttribute getSystemDescriptionRequest_Flags() {
+        return (EAttribute)getSystemDescriptionRequest().getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -3514,7 +3514,7 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCylonNetworkPojo_SiteId() {
+	public EAttribute getCylonNetworkPojo_SystemId() {
         return (EAttribute)getCylonNetworkPojo().getEStructuralFeatures().get(3);
 	}
 
@@ -3799,7 +3799,7 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSuspectPojo_SiteId() {
+	public EAttribute getSuspectPojo_SystemId() {
         return (EAttribute)getSuspectPojo().getEStructuralFeatures().get(0);
 	}
 
@@ -4068,7 +4068,7 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getGltOpenApiClient__GetEventsForSite__String_String_Boolean_String_String() {
+	public EOperation getGltOpenApiClient__GetEventsForSystem__String_String_Boolean_String_String() {
         return getGltOpenApiClient().getEOperations().get(10);
 	}
 
@@ -4078,7 +4078,7 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getGltOpenApiClient__CreateEventForSite__String_CalenderEventRequest() {
+	public EOperation getGltOpenApiClient__CreateEventForSystem__String_CalenderEventRequest() {
         return getGltOpenApiClient().getEOperations().get(11);
 	}
 
@@ -4138,7 +4138,7 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getGltOpenApiClient__GetEventsForSite_1__String_String_String_BigInteger_Boolean() {
+	public EOperation getGltOpenApiClient__GetEventsForSystem_1__String_String_String_BigInteger_Boolean() {
         return getGltOpenApiClient().getEOperations().get(17);
 	}
 
@@ -4278,7 +4278,7 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getGltOpenApiClient__GetAlarmsWithMismatchedSites() {
+	public EOperation getGltOpenApiClient__GetAlarmsWithMismatchedSystems() {
         return getGltOpenApiClient().getEOperations().get(31);
 	}
 
@@ -4488,7 +4488,7 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getGltOpenApiClient__GetAlarmCountForSite__String_EList_EList() {
+	public EOperation getGltOpenApiClient__GetAlarmCountForSystem__String_EList_EList() {
         return getGltOpenApiClient().getEOperations().get(52);
 	}
 
@@ -4738,7 +4738,7 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getGltOpenApiClient__RefreshSite__String() {
+	public EOperation getGltOpenApiClient__RefreshSystem__String() {
         return getGltOpenApiClient().getEOperations().get(77);
 	}
 
@@ -4918,7 +4918,7 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getGltOpenApiClient__GetSite__String_Boolean() {
+	public EOperation getGltOpenApiClient__GetAuthStatus() {
         return getGltOpenApiClient().getEOperations().get(95);
 	}
 
@@ -4928,7 +4928,7 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getGltOpenApiClient__UpdateSite__String_SiteRequest() {
+	public EOperation getGltOpenApiClient__GetStatus() {
         return getGltOpenApiClient().getEOperations().get(96);
 	}
 
@@ -4938,7 +4938,7 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getGltOpenApiClient__CreateSite__String_SiteRequest() {
+	public EOperation getGltOpenApiClient__GetSystem__String_Boolean() {
         return getGltOpenApiClient().getEOperations().get(97);
 	}
 
@@ -4948,7 +4948,7 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getGltOpenApiClient__DeleteSite__String() {
+	public EOperation getGltOpenApiClient__UpdateSystem__String_SystemDescriptionRequest() {
         return getGltOpenApiClient().getEOperations().get(98);
 	}
 
@@ -4958,7 +4958,7 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getGltOpenApiClient__GetContacts__String() {
+	public EOperation getGltOpenApiClient__CreateSystemDescription__String_SystemDescriptionRequest() {
         return getGltOpenApiClient().getEOperations().get(99);
 	}
 
@@ -4968,7 +4968,7 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getGltOpenApiClient__GetContracts__String_String_Boolean() {
+	public EOperation getGltOpenApiClient__DeleteSystem__String() {
         return getGltOpenApiClient().getEOperations().get(100);
 	}
 
@@ -4978,7 +4978,7 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getGltOpenApiClient__GetSites__Boolean_Boolean() {
+	public EOperation getGltOpenApiClient__GetContacts__String() {
         return getGltOpenApiClient().getEOperations().get(101);
 	}
 
@@ -4988,7 +4988,7 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getGltOpenApiClient__GetTechFacilities__String_String_Boolean() {
+	public EOperation getGltOpenApiClient__GetContracts__String_String_Boolean() {
         return getGltOpenApiClient().getEOperations().get(102);
 	}
 
@@ -4998,7 +4998,7 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getGltOpenApiClient__GetAuthStatus() {
+	public EOperation getGltOpenApiClient__GetSystems__Boolean_Boolean() {
         return getGltOpenApiClient().getEOperations().get(103);
 	}
 
@@ -5008,7 +5008,7 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getGltOpenApiClient__GetStatus() {
+	public EOperation getGltOpenApiClient__GetTechFacilities__String_String_Boolean() {
         return getGltOpenApiClient().getEOperations().get(104);
 	}
 
@@ -5208,7 +5208,7 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getGltOpenApiClient__AddUser__Boolean_String() {
+	public EOperation getGltOpenApiClient__AddUser__String() {
         return getGltOpenApiClient().getEOperations().get(124);
 	}
 

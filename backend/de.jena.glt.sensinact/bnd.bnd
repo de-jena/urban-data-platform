@@ -23,6 +23,6 @@
 
 -privatepackage: de.jena.glt.sensinact
 
--includeresource: OSGI-INF/configurator/=configs/
+#-includeresource: OSGI-INF/configurator/=configs/
 
 Require-Capability: osgi.extender;filter:='(osgi.extender=osgi.configurator)'

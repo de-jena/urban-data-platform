@@ -67,7 +67,7 @@ public class GltFactoryImpl extends EFactoryImpl implements GltFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case GltPackage.GLT: return createGlt();
+			case GltPackage.GLT_SIDE: return createGltSide();
 			case GltPackage.MONITORING_DATA: return createMonitoringData();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -80,9 +80,9 @@ public class GltFactoryImpl extends EFactoryImpl implements GltFactory {
 	 * @generated
 	 */
 	@Override
-	public Glt createGlt() {
-		GltImpl glt = new GltImpl();
-		return glt;
+	public GltSide createGltSide() {
+		GltSideImpl gltSide = new GltSideImpl();
+		return gltSide;
 	}
 
 	/**

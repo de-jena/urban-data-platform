@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-//import jakarta.ws.rs.client.Client;
 //import jakarta.ws.rs.client.ClientBuilder;
 //import jakarta.ws.rs.client.WebTarget;
 //import jakarta.ws.rs.core.MediaType;
@@ -36,6 +35,7 @@ import jakarta.ws.rs.client.Client;
 import jakarta.ws.rs.client.ClientBuilder;
 import jakarta.ws.rs.client.WebTarget;
 import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.MultivaluedHashMap;
 
 @Component(configurationPid = "GltOpenApi", service = GltOpenApi.class, scope = ServiceScope.PROTOTYPE)
 public class GltOpenApi extends GltOpenApiClientImpl {
@@ -85,7 +85,8 @@ public class GltOpenApi extends GltOpenApiClientImpl {
 			}
 
 			jakarta.ws.rs.core.Response response = target.request(MediaType.APPLICATION_JSON)
-					.header("Authorization", getAuthHeader()).get();
+					.headers(new MultivaluedHashMap<>(getHeader()))
+					.get();
 			Response gltResponse = GltFactory.eINSTANCE.createResponse();
 			gltResponse.setResponse(response);
 			gltResponse.setCode(response.getStatus());
@@ -93,7 +94,7 @@ public class GltOpenApi extends GltOpenApiClientImpl {
 
 		}
 	}
-	
+
 	public Response get(String path, EClass resultEClass, EMap<String,String> pathParameters,
 			EMap<String,String> queryParameters) {
 		String requestURL = config.url() + path;
@@ -151,25 +152,27 @@ public class GltOpenApi extends GltOpenApiClientImpl {
 		headers.put("Accept", "*/*");
 		headers.put("Content-Type", "application/json");
 		headers.put("Method", "GET");
-		headers.put("Authorization", getAuthHeader());
+		getAuthHeader(headers);
 		return headers;
 	}
 	
-	private String getAuthHeader() {
+	private void getAuthHeader(Map<String, Object> headers) {
 		String apiKey = config.apiKey();
 		if (isNotEmpty(apiKey)) {
-			return getBasicAuthHeader(apiKey);
+			headers.put("x-api-key", apiKey);
 		} else {
 			String login = config.login();
 			String password = config.password();
 			if (isNotEmpty(login) && isNotEmpty(password)) {
-				return getBasicAuthHeader(login + ":" + password);
+				headers.put("Authorization", getBasicAuthHeader(login + ":" + password));
 			}
 		}
-		if(isNotEmpty(config.bearerToken())) {
-			return "Bearer " + config.bearerToken();
+		if (isNotEmpty(config.bearerToken())) {
+			headers.put("Authorization", "Bearer " + config.bearerToken());
 		}
-		return "Bearer " + token;
+		if (isNotEmpty(token)) {
+			headers.put("Authorization", "Bearer " + token);
+		}
 	}
 
 	private String getBasicAuthHeader(String basicAuth) {

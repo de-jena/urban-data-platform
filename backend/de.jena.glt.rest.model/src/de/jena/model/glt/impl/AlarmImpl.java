@@ -31,7 +31,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link de.jena.model.glt.impl.AlarmImpl#getSl24schedule <em>Sl24schedule</em>}</li>
  *   <li>{@link de.jena.model.glt.impl.AlarmImpl#getPrioritySummer <em>Priority Summer</em>}</li>
  *   <li>{@link de.jena.model.glt.impl.AlarmImpl#getPriorityWinter <em>Priority Winter</em>}</li>
- *   <li>{@link de.jena.model.glt.impl.AlarmImpl#getSiteId <em>Site Id</em>}</li>
+ *   <li>{@link de.jena.model.glt.impl.AlarmImpl#getSystemId <em>System Id</em>}</li>
  *   <li>{@link de.jena.model.glt.impl.AlarmImpl#getFlag <em>Flag</em>}</li>
  * </ul>
  *
@@ -209,24 +209,24 @@ public class AlarmImpl extends MinimalEObjectImpl.Container implements Alarm {
 	protected Integer priorityWinter = PRIORITY_WINTER_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getSiteId() <em>Site Id</em>}' attribute.
+	 * The default value of the '{@link #getSystemId() <em>System Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSiteId()
+	 * @see #getSystemId()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String SITE_ID_EDEFAULT = null;
+	protected static final String SYSTEM_ID_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getSiteId() <em>Site Id</em>}' attribute.
+	 * The cached value of the '{@link #getSystemId() <em>System Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSiteId()
+	 * @see #getSystemId()
 	 * @generated
 	 * @ordered
 	 */
-	protected String siteId = SITE_ID_EDEFAULT;
+	protected String systemId = SYSTEM_ID_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getFlag() <em>Flag</em>}' attribute.
@@ -497,8 +497,8 @@ public class AlarmImpl extends MinimalEObjectImpl.Container implements Alarm {
 	 * @generated
 	 */
 	@Override
-	public String getSiteId() {
-		return siteId;
+	public String getSystemId() {
+		return systemId;
 	}
 
 	/**
@@ -507,11 +507,11 @@ public class AlarmImpl extends MinimalEObjectImpl.Container implements Alarm {
 	 * @generated
 	 */
 	@Override
-	public void setSiteId(String newSiteId) {
-		String oldSiteId = siteId;
-		siteId = newSiteId;
+	public void setSystemId(String newSystemId) {
+		String oldSystemId = systemId;
+		systemId = newSystemId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.ALARM__SITE_ID, oldSiteId, siteId));
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.ALARM__SYSTEM_ID, oldSystemId, systemId));
 	}
 
 	/**
@@ -564,8 +564,8 @@ public class AlarmImpl extends MinimalEObjectImpl.Container implements Alarm {
 				return getPrioritySummer();
 			case GltPackage.ALARM__PRIORITY_WINTER:
 				return getPriorityWinter();
-			case GltPackage.ALARM__SITE_ID:
-				return getSiteId();
+			case GltPackage.ALARM__SYSTEM_ID:
+				return getSystemId();
 			case GltPackage.ALARM__FLAG:
 				return getFlag();
 		}
@@ -607,8 +607,8 @@ public class AlarmImpl extends MinimalEObjectImpl.Container implements Alarm {
 			case GltPackage.ALARM__PRIORITY_WINTER:
 				setPriorityWinter((Integer)newValue);
 				return;
-			case GltPackage.ALARM__SITE_ID:
-				setSiteId((String)newValue);
+			case GltPackage.ALARM__SYSTEM_ID:
+				setSystemId((String)newValue);
 				return;
 			case GltPackage.ALARM__FLAG:
 				setFlag((String)newValue);
@@ -652,8 +652,8 @@ public class AlarmImpl extends MinimalEObjectImpl.Container implements Alarm {
 			case GltPackage.ALARM__PRIORITY_WINTER:
 				setPriorityWinter(PRIORITY_WINTER_EDEFAULT);
 				return;
-			case GltPackage.ALARM__SITE_ID:
-				setSiteId(SITE_ID_EDEFAULT);
+			case GltPackage.ALARM__SYSTEM_ID:
+				setSystemId(SYSTEM_ID_EDEFAULT);
 				return;
 			case GltPackage.ALARM__FLAG:
 				setFlag(FLAG_EDEFAULT);
@@ -688,8 +688,8 @@ public class AlarmImpl extends MinimalEObjectImpl.Container implements Alarm {
 				return PRIORITY_SUMMER_EDEFAULT == null ? prioritySummer != null : !PRIORITY_SUMMER_EDEFAULT.equals(prioritySummer);
 			case GltPackage.ALARM__PRIORITY_WINTER:
 				return PRIORITY_WINTER_EDEFAULT == null ? priorityWinter != null : !PRIORITY_WINTER_EDEFAULT.equals(priorityWinter);
-			case GltPackage.ALARM__SITE_ID:
-				return SITE_ID_EDEFAULT == null ? siteId != null : !SITE_ID_EDEFAULT.equals(siteId);
+			case GltPackage.ALARM__SYSTEM_ID:
+				return SYSTEM_ID_EDEFAULT == null ? systemId != null : !SYSTEM_ID_EDEFAULT.equals(systemId);
 			case GltPackage.ALARM__FLAG:
 				return FLAG_EDEFAULT == null ? flag != null : !FLAG_EDEFAULT.equals(flag);
 		}
@@ -722,8 +722,8 @@ public class AlarmImpl extends MinimalEObjectImpl.Container implements Alarm {
 		result.append(prioritySummer);
 		result.append(", priorityWinter: ");
 		result.append(priorityWinter);
-		result.append(", siteId: ");
-		result.append(siteId);
+		result.append(", systemId: ");
+		result.append(systemId);
 		result.append(", flag: ");
 		result.append(flag);
 		result.append(')');

@@ -11,11 +11,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sl24schedule" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="prioritySummer" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="priorityWinter" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="siteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="flag" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AlarmId">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="siteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="buildingId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="alarmId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -58,7 +58,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="author" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="alarmId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="siteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CalenderEventRequest">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="from" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -86,7 +86,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AlarmLogPojo">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="siteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="alarmId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"/>
@@ -101,7 +101,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="author" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DatalogContentPojo">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="siteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valueType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -123,7 +123,7 @@
         eType="#//CommentPojo"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PointValuePojo">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="siteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
@@ -150,14 +150,14 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="zoneId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EntityMonitoringSettingsPojo">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="siteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="identifier" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="included" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SyncLogPojo">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="siteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="latestRingbufferTimestamp"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"/>
@@ -168,14 +168,14 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StatusLogPojo">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="siteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="severity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="message" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="UpdateStateRequest">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="siteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="alarmId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="severity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
@@ -183,14 +183,14 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StatusLogRequest">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="siteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="severity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="message" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TimeScheduleBlockPojo">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="siteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="block" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="exceptionStartDay" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
@@ -205,7 +205,7 @@
         eType="#//CommentPojo"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TimeScheduleStatePojo">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="siteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
@@ -223,7 +223,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="serial" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PointRecord">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="siteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="address" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="newValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
@@ -233,7 +233,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="author" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TimeScheduleRecord">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="siteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="address" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="oldValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -257,7 +257,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="street" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="representation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SitePojo">
+  <eClassifiers xsi:type="ecore:EClass" name="SystemDescriptionPojo">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="prefix" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -272,11 +272,11 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="address" eType="#//AddressPojo"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="source" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
-        eType="#//SitePojo"/>
+        eType="#//SystemDescriptionPojo"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="flags" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cylonNetwork" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SiteRequest">
+  <eClassifiers xsi:type="ecore:EClass" name="SystemDescriptionRequest">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="directory" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -350,7 +350,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="entity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="siteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="directory" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ip" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="port" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
@@ -388,7 +388,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="properties" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SuspectPojo">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="siteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="alarmId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"/>
@@ -501,22 +501,22 @@
       <eParameters name="alarmId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="request" eType="#//CalenderEventRequest"/>
     </eOperations>
-    <eOperations name="getEventsForSite" eType="#//Response">
+    <eOperations name="getEventsForSystem" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Get calendar events for an alarm [in a range of a given type]."/>
-        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/calendar/site/{siteId}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getCalendarEventPojo();&#xA;pathParameter.put(&quot;siteId&quot;, toQueryString(&quot;siteId&quot;,siteId));&#xA;if ( null != type ) queryParameter.put(&quot;type&quot;, toQueryString(&quot;type&quot;,type));&#xA;if ( null != includeAlarms ) queryParameter.put(&quot;includeAlarms&quot;, toQueryString(&quot;includeAlarms&quot;,includeAlarms));&#xA;if ( null != from ) queryParameter.put(&quot;from&quot;, toQueryString(&quot;from&quot;,from));&#xA;if ( null != to ) queryParameter.put(&quot;to&quot;, toQueryString(&quot;to&quot;,to));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
+        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/calendar/system/{systemId}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getCalendarEventPojo();&#xA;pathParameter.put(&quot;systemId&quot;, toQueryString(&quot;systemId&quot;,systemId));&#xA;if ( null != type ) queryParameter.put(&quot;type&quot;, toQueryString(&quot;type&quot;,type));&#xA;if ( null != includeAlarms ) queryParameter.put(&quot;includeAlarms&quot;, toQueryString(&quot;includeAlarms&quot;,includeAlarms));&#xA;if ( null != from ) queryParameter.put(&quot;from&quot;, toQueryString(&quot;from&quot;,from));&#xA;if ( null != to ) queryParameter.put(&quot;to&quot;, toQueryString(&quot;to&quot;,to));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
-      <eParameters name="siteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="includeAlarms" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
       <eParameters name="from" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="to" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eOperations>
-    <eOperations name="createEventForSite" eType="#//Response">
+    <eOperations name="createEventForSystem" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Create a calendar event for a site. endpoint: /calendar/site/{siteId}"/>
+        <details key="documentation" value="Create a calendar event for a system. endpoint: /calendar/system/{systemId}"/>
       </eAnnotations>
-      <eParameters name="siteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="request" eType="#//CalenderEventRequest"/>
     </eOperations>
     <eOperations name="updateEvent" eType="#//Response">
@@ -535,9 +535,9 @@
     <eOperations name="getEvents" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Get calendar events [in a range]."/>
-        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/calendar&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getCalendarEventPojo();&#xA;if ( null != siteIds ) queryParameter.put(&quot;siteIds&quot;, toQueryString(&quot;siteIds&quot;,siteIds));&#xA;if ( null != type ) queryParameter.put(&quot;type&quot;, toQueryString(&quot;type&quot;,type));&#xA;if ( null != from ) queryParameter.put(&quot;from&quot;, toQueryString(&quot;from&quot;,from));&#xA;if ( null != to ) queryParameter.put(&quot;to&quot;, toQueryString(&quot;to&quot;,to));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
+        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/calendar&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getCalendarEventPojo();&#xA;if ( null != systemIds ) queryParameter.put(&quot;systemIds&quot;, toQueryString(&quot;systemIds&quot;,systemIds));&#xA;if ( null != type ) queryParameter.put(&quot;type&quot;, toQueryString(&quot;type&quot;,type));&#xA;if ( null != from ) queryParameter.put(&quot;from&quot;, toQueryString(&quot;from&quot;,from));&#xA;if ( null != to ) queryParameter.put(&quot;to&quot;, toQueryString(&quot;to&quot;,to));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
-      <eParameters name="siteIds" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="systemIds" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="from" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="to" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -545,9 +545,9 @@
     <eOperations name="getEventsAtTime" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Get calendar events at a given point in time [within a grace period/ms]."/>
-        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/calendar/{time}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getCalendarEventPojo();&#xA;if ( null != siteIds ) queryParameter.put(&quot;siteIds&quot;, toQueryString(&quot;siteIds&quot;,siteIds));&#xA;pathParameter.put(&quot;time&quot;, toQueryString(&quot;time&quot;,time));&#xA;if ( null != type ) queryParameter.put(&quot;type&quot;, toQueryString(&quot;type&quot;,type));&#xA;if ( null != grace ) queryParameter.put(&quot;grace&quot;, toQueryString(&quot;grace&quot;,grace));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
+        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/calendar/{time}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getCalendarEventPojo();&#xA;if ( null != systemIds ) queryParameter.put(&quot;systemIds&quot;, toQueryString(&quot;systemIds&quot;,systemIds));&#xA;pathParameter.put(&quot;time&quot;, toQueryString(&quot;time&quot;,time));&#xA;if ( null != type ) queryParameter.put(&quot;type&quot;, toQueryString(&quot;type&quot;,type));&#xA;if ( null != grace ) queryParameter.put(&quot;grace&quot;, toQueryString(&quot;grace&quot;,grace));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
-      <eParameters name="siteIds" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="systemIds" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="time" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="grace" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"/>
@@ -562,12 +562,12 @@
       <eParameters name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="grace" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"/>
     </eOperations>
-    <eOperations name="getEventsForSite_1" eType="#//Response">
+    <eOperations name="getEventsForSystem_1" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Get calendar events for a site at a given point in time [within a grace period/ms]"/>
-        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/calendar/site/{siteId}/{time}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getCalendarEventPojo();&#xA;pathParameter.put(&quot;siteId&quot;, toQueryString(&quot;siteId&quot;,siteId));&#xA;pathParameter.put(&quot;time&quot;, toQueryString(&quot;time&quot;,time));&#xA;if ( null != type ) queryParameter.put(&quot;type&quot;, toQueryString(&quot;type&quot;,type));&#xA;if ( null != grace ) queryParameter.put(&quot;grace&quot;, toQueryString(&quot;grace&quot;,grace));&#xA;if ( null != includeAlarms ) queryParameter.put(&quot;includeAlarms&quot;, toQueryString(&quot;includeAlarms&quot;,includeAlarms));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
+        <details key="documentation" value="Get calendar events for a system at a given point in time [within a grace period/ms]"/>
+        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/calendar/system/{systemId}/{time}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getCalendarEventPojo();&#xA;pathParameter.put(&quot;systemId&quot;, toQueryString(&quot;systemId&quot;,systemId));&#xA;pathParameter.put(&quot;time&quot;, toQueryString(&quot;time&quot;,time));&#xA;if ( null != type ) queryParameter.put(&quot;type&quot;, toQueryString(&quot;type&quot;,type));&#xA;if ( null != grace ) queryParameter.put(&quot;grace&quot;, toQueryString(&quot;grace&quot;,grace));&#xA;if ( null != includeAlarms ) queryParameter.put(&quot;includeAlarms&quot;, toQueryString(&quot;includeAlarms&quot;,includeAlarms));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
-      <eParameters name="siteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="time" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="grace" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"/>
@@ -575,7 +575,7 @@
     </eOperations>
     <eOperations name="getForAlarm" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Get comments for a given owner type (alarm, site ...)."/>
+        <details key="documentation" value="Get comments for a given owner type (alarm, system ...)."/>
         <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/comment/{ownerType}/{ownerId}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getCommentPojo();&#xA;pathParameter.put(&quot;ownerType&quot;, toQueryString(&quot;ownerType&quot;,ownerType));&#xA;pathParameter.put(&quot;ownerId&quot;, toQueryString(&quot;ownerId&quot;,ownerId));&#xA;if ( null != type ) queryParameter.put(&quot;type&quot;, toQueryString(&quot;type&quot;,type));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
       <eParameters name="ownerType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -690,9 +690,9 @@
         <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/devices/count&quot;;&#xA;EClass resultEClass = EcorePackage.eINSTANCE.getEObject();&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
     </eOperations>
-    <eOperations name="getAlarmsWithMismatchedSites" eType="#//Response">
+    <eOperations name="getAlarmsWithMismatchedSystems" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will return alarms with mismatching site id."/>
+        <details key="documentation" value="Will return alarms with mismatching system id."/>
         <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/meta/diag/alarms/mismatched&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getAlarmLogPojo();&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
     </eOperations>
@@ -746,7 +746,7 @@
     </eOperations>
     <eOperations name="getDatalogContent" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will return datalog contents for the site and its given identifier (mostly point ids) within the specified timeframe."/>
+        <details key="documentation" value="Will return datalog contents for the system and its given identifier (mostly point ids) within the specified timeframe."/>
         <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/datalogs/content/{systemId}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getDatalogContentPojo();&#xA;pathParameter.put(&quot;systemId&quot;, toQueryString(&quot;systemId&quot;,systemId));&#xA;if ( null != id ) queryParameter.put(&quot;id&quot;, toQueryString(&quot;id&quot;,id));&#xA;if ( null != from ) queryParameter.put(&quot;from&quot;, toQueryString(&quot;from&quot;,from));&#xA;if ( null != to ) queryParameter.put(&quot;to&quot;, toQueryString(&quot;to&quot;,to));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
       <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
@@ -756,7 +756,7 @@
     </eOperations>
     <eOperations name="getDatalogInfo" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will return datalog infos for the site and its given identifiers (mostly point ids). Will return all datalogs for all points connected to this site if no point ids are given."/>
+        <details key="documentation" value="Will return datalog infos for the system and its given identifiers (mostly point ids). Will return all datalogs for all points connected to this system if no point ids are given."/>
         <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/datalogs/info/{systemId}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getDatalogContentPojo();&#xA;pathParameter.put(&quot;systemId&quot;, toQueryString(&quot;systemId&quot;,systemId));&#xA;if ( null != id ) queryParameter.put(&quot;id&quot;, toQueryString(&quot;id&quot;,id));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
       <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
@@ -764,7 +764,7 @@
     </eOperations>
     <eOperations name="updateDatalogContent" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will update datalog for site with specified systemId and optionally specific identifiers. endpoint: /monitoring/datalogs/update/{systemId}"/>
+        <details key="documentation" value="Will update datalog for system with specified systemId and optionally specific identifiers. endpoint: /monitoring/datalogs/update/{systemId}"/>
       </eAnnotations>
       <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
       <eParameters name="id" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
@@ -772,11 +772,11 @@
     <eOperations name="getChangelog" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Will return point changes for input filters."/>
-        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/points/history/{offset}-{limit}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getPointValuePojo();&#xA;pathParameter.put(&quot;offset&quot;, toQueryString(&quot;offset&quot;,offset));&#xA;pathParameter.put(&quot;limit&quot;, toQueryString(&quot;limit&quot;,limit));&#xA;if ( null != siteId ) queryParameter.put(&quot;siteId&quot;, toQueryString(&quot;siteId&quot;,siteId));&#xA;if ( null != external ) queryParameter.put(&quot;external&quot;, toQueryString(&quot;external&quot;,external));&#xA;if ( null != author ) queryParameter.put(&quot;author&quot;, toQueryString(&quot;author&quot;,author));&#xA;if ( null != from ) queryParameter.put(&quot;from&quot;, toQueryString(&quot;from&quot;,from));&#xA;if ( null != to ) queryParameter.put(&quot;to&quot;, toQueryString(&quot;to&quot;,to));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
+        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/points/history/{offset}-{limit}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getPointValuePojo();&#xA;pathParameter.put(&quot;offset&quot;, toQueryString(&quot;offset&quot;,offset));&#xA;pathParameter.put(&quot;limit&quot;, toQueryString(&quot;limit&quot;,limit));&#xA;if ( null != systemIds ) queryParameter.put(&quot;systemIds&quot;, toQueryString(&quot;systemIds&quot;,systemIds));&#xA;if ( null != external ) queryParameter.put(&quot;external&quot;, toQueryString(&quot;external&quot;,external));&#xA;if ( null != author ) queryParameter.put(&quot;author&quot;, toQueryString(&quot;author&quot;,author));&#xA;if ( null != from ) queryParameter.put(&quot;from&quot;, toQueryString(&quot;from&quot;,from));&#xA;if ( null != to ) queryParameter.put(&quot;to&quot;, toQueryString(&quot;to&quot;,to));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
       <eParameters name="offset" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
       <eParameters name="limit" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
-      <eParameters name="siteId" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+      <eParameters name="systemIds" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
       <eParameters name="external" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
       <eParameters name="author" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="from" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -785,9 +785,9 @@
     <eOperations name="getChangelogCount" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Will return count of point changes for input filters."/>
-        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/points/history/count&quot;;&#xA;EClass resultEClass = EcorePackage.eINSTANCE.getEObject();&#xA;if ( null != siteId ) queryParameter.put(&quot;siteId&quot;, toQueryString(&quot;siteId&quot;,siteId));&#xA;if ( null != external ) queryParameter.put(&quot;external&quot;, toQueryString(&quot;external&quot;,external));&#xA;if ( null != author ) queryParameter.put(&quot;author&quot;, toQueryString(&quot;author&quot;,author));&#xA;if ( null != from ) queryParameter.put(&quot;from&quot;, toQueryString(&quot;from&quot;,from));&#xA;if ( null != to ) queryParameter.put(&quot;to&quot;, toQueryString(&quot;to&quot;,to));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
+        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/points/history/count&quot;;&#xA;EClass resultEClass = EcorePackage.eINSTANCE.getEObject();&#xA;if ( null != systemIds ) queryParameter.put(&quot;systemIds&quot;, toQueryString(&quot;systemIds&quot;,systemIds));&#xA;if ( null != external ) queryParameter.put(&quot;external&quot;, toQueryString(&quot;external&quot;,external));&#xA;if ( null != author ) queryParameter.put(&quot;author&quot;, toQueryString(&quot;author&quot;,author));&#xA;if ( null != from ) queryParameter.put(&quot;from&quot;, toQueryString(&quot;from&quot;,from));&#xA;if ( null != to ) queryParameter.put(&quot;to&quot;, toQueryString(&quot;to&quot;,to));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
-      <eParameters name="siteId" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+      <eParameters name="systemIds" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
       <eParameters name="external" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
       <eParameters name="author" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="from" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -795,7 +795,7 @@
     </eOperations>
     <eOperations name="getPointValueHistory" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will return stored point values for site."/>
+        <details key="documentation" value="Will return stored point values for system."/>
         <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/points/history/{systemId}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getPointValuePojo();&#xA;pathParameter.put(&quot;systemId&quot;, toQueryString(&quot;systemId&quot;,systemId));&#xA;if ( null != id ) queryParameter.put(&quot;id&quot;, toQueryString(&quot;id&quot;,id));&#xA;if ( null != latestOnly ) queryParameter.put(&quot;latestOnly&quot;, toQueryString(&quot;latestOnly&quot;,latestOnly));&#xA;if ( null != includeComments ) queryParameter.put(&quot;includeComments&quot;, toQueryString(&quot;includeComments&quot;,includeComments));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
       <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
@@ -805,7 +805,7 @@
     </eOperations>
     <eOperations name="getPointValues" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will return current point values for site."/>
+        <details key="documentation" value="Will return current point values for system."/>
         <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/points/{systemId}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getPointValuePojo();&#xA;pathParameter.put(&quot;systemId&quot;, toQueryString(&quot;systemId&quot;,systemId));&#xA;if ( null != type ) queryParameter.put(&quot;type&quot;, toQueryString(&quot;type&quot;,type));&#xA;if ( null != valueType ) queryParameter.put(&quot;valueType&quot;, toQueryString(&quot;valueType&quot;,valueType));&#xA;if ( null != id ) queryParameter.put(&quot;id&quot;, toQueryString(&quot;id&quot;,id));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
       <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
@@ -815,7 +815,7 @@
     </eOperations>
     <eOperations name="updatePointValues" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will update points for site with specified systemId and optionally specific identifiers. endpoint: /monitoring/points/update/{systemId}"/>
+        <details key="documentation" value="Will update points for system with specified systemId and optionally specific identifiers. endpoint: /monitoring/points/update/{systemId}"/>
       </eAnnotations>
       <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
       <eParameters name="id" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
@@ -839,39 +839,39 @@
     </eOperations>
     <eOperations name="getAlarmCount_1" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will return count for alarms in state for the given site id. [ON, OFF, UNKNOWN]"/>
-        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/alarms/{siteId}/state/{state}/count&quot;;&#xA;EClass resultEClass = EcorePackage.eINSTANCE.getEObject();&#xA;pathParameter.put(&quot;siteId&quot;, toQueryString(&quot;siteId&quot;,siteId));&#xA;pathParameter.put(&quot;state&quot;, toQueryString(&quot;state&quot;,state));&#xA;if ( null != eventType ) queryParameter.put(&quot;eventType&quot;, toQueryString(&quot;eventType&quot;,eventType));&#xA;if ( null != flags ) queryParameter.put(&quot;flags&quot;, toQueryString(&quot;flags&quot;,flags));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
+        <details key="documentation" value="Will return count for alarms in state for the given system id. [ON, OFF, UNKNOWN]"/>
+        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/alarms/{systemId}/state/{state}/count&quot;;&#xA;EClass resultEClass = EcorePackage.eINSTANCE.getEObject();&#xA;pathParameter.put(&quot;systemId&quot;, toQueryString(&quot;systemId&quot;,systemId));&#xA;pathParameter.put(&quot;state&quot;, toQueryString(&quot;state&quot;,state));&#xA;if ( null != eventType ) queryParameter.put(&quot;eventType&quot;, toQueryString(&quot;eventType&quot;,eventType));&#xA;if ( null != flags ) queryParameter.put(&quot;flags&quot;, toQueryString(&quot;flags&quot;,flags));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
-      <eParameters name="siteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="state" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="eventType" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="flags" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     </eOperations>
     <eOperations name="getAlarmCountByState" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will return count for alarms in state for the given site id. "/>
-        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/alarms/{siteId}/state/count&quot;;&#xA;EClass resultEClass = EcorePackage.eINSTANCE.getEObject();&#xA;pathParameter.put(&quot;siteId&quot;, toQueryString(&quot;siteId&quot;,siteId));&#xA;if ( null != eventType ) queryParameter.put(&quot;eventType&quot;, toQueryString(&quot;eventType&quot;,eventType));&#xA;if ( null != flags ) queryParameter.put(&quot;flags&quot;, toQueryString(&quot;flags&quot;,flags));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
+        <details key="documentation" value="Will return count for alarms in state for the given system id. "/>
+        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/alarms/{systemId}/state/count&quot;;&#xA;EClass resultEClass = EcorePackage.eINSTANCE.getEObject();&#xA;pathParameter.put(&quot;systemId&quot;, toQueryString(&quot;systemId&quot;,systemId));&#xA;if ( null != eventType ) queryParameter.put(&quot;eventType&quot;, toQueryString(&quot;eventType&quot;,eventType));&#xA;if ( null != flags ) queryParameter.put(&quot;flags&quot;, toQueryString(&quot;flags&quot;,flags));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
-      <eParameters name="siteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="eventType" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="flags" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     </eOperations>
     <eOperations name="getAlarmCountByState_1" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Will return all alarm counts for states."/>
-        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/alarms/state/count&quot;;&#xA;EClass resultEClass = null;&#xA;if ( null != siteIds ) queryParameter.put(&quot;siteIds&quot;, toQueryString(&quot;siteIds&quot;,siteIds));&#xA;if ( null != summary ) queryParameter.put(&quot;summary&quot;, toQueryString(&quot;summary&quot;,summary));&#xA;if ( null != eventType ) queryParameter.put(&quot;eventType&quot;, toQueryString(&quot;eventType&quot;,eventType));&#xA;if ( null != flags ) queryParameter.put(&quot;flags&quot;, toQueryString(&quot;flags&quot;,flags));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
+        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/alarms/state/count&quot;;&#xA;EClass resultEClass = null;&#xA;if ( null != systemIds ) queryParameter.put(&quot;systemIds&quot;, toQueryString(&quot;systemIds&quot;,systemIds));&#xA;if ( null != summary ) queryParameter.put(&quot;summary&quot;, toQueryString(&quot;summary&quot;,summary));&#xA;if ( null != eventType ) queryParameter.put(&quot;eventType&quot;, toQueryString(&quot;eventType&quot;,eventType));&#xA;if ( null != flags ) queryParameter.put(&quot;flags&quot;, toQueryString(&quot;flags&quot;,flags));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
-      <eParameters name="siteIds" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="systemIds" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="summary" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
       <eParameters name="eventType" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="flags" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     </eOperations>
-    <eOperations name="getAlarmCountForSite" eType="#//Response">
+    <eOperations name="getAlarmCountForSystem" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will return count for alarms for the given site id."/>
-        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/alarms/{siteId}/count&quot;;&#xA;EClass resultEClass = EcorePackage.eINSTANCE.getEObject();&#xA;pathParameter.put(&quot;siteId&quot;, toQueryString(&quot;siteId&quot;,siteId));&#xA;if ( null != eventType ) queryParameter.put(&quot;eventType&quot;, toQueryString(&quot;eventType&quot;,eventType));&#xA;if ( null != flags ) queryParameter.put(&quot;flags&quot;, toQueryString(&quot;flags&quot;,flags));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
+        <details key="documentation" value="Will return count for alarms for the given system id."/>
+        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/alarms/{systemId}/count&quot;;&#xA;EClass resultEClass = EcorePackage.eINSTANCE.getEObject();&#xA;pathParameter.put(&quot;systemId&quot;, toQueryString(&quot;systemId&quot;,systemId));&#xA;if ( null != eventType ) queryParameter.put(&quot;eventType&quot;, toQueryString(&quot;eventType&quot;,eventType));&#xA;if ( null != flags ) queryParameter.put(&quot;flags&quot;, toQueryString(&quot;flags&quot;,flags));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
-      <eParameters name="siteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="eventType" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="flags" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     </eOperations>
@@ -916,10 +916,10 @@
     </eOperations>
     <eOperations name="getAlarmLogs_1" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will return all current alarm logs for the given site id."/>
-        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/alarms/{siteId}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getAlarmLogPojo();&#xA;pathParameter.put(&quot;siteId&quot;, toQueryString(&quot;siteId&quot;,siteId));&#xA;if ( null != eventType ) queryParameter.put(&quot;eventType&quot;, toQueryString(&quot;eventType&quot;,eventType));&#xA;if ( null != flags ) queryParameter.put(&quot;flags&quot;, toQueryString(&quot;flags&quot;,flags));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
+        <details key="documentation" value="Will return all current alarm logs for the given system id."/>
+        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/alarms/{systemId}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getAlarmLogPojo();&#xA;pathParameter.put(&quot;systemId&quot;, toQueryString(&quot;systemId&quot;,systemId));&#xA;if ( null != eventType ) queryParameter.put(&quot;eventType&quot;, toQueryString(&quot;eventType&quot;,eventType));&#xA;if ( null != flags ) queryParameter.put(&quot;flags&quot;, toQueryString(&quot;flags&quot;,flags));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
-      <eParameters name="siteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="eventType" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="flags" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     </eOperations>
@@ -943,43 +943,43 @@
     </eOperations>
     <eOperations name="getAlarmLogsTimeline" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will return all alarm logs for the given site id including superseded."/>
-        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/timeline/site/{siteId}&quot;;&#xA;EClass resultEClass = EcorePackage.eINSTANCE.getEObject();&#xA;pathParameter.put(&quot;siteId&quot;, toQueryString(&quot;siteId&quot;,siteId));&#xA;if ( null != from ) queryParameter.put(&quot;from&quot;, toQueryString(&quot;from&quot;,from));&#xA;if ( null != to ) queryParameter.put(&quot;to&quot;, toQueryString(&quot;to&quot;,to));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
+        <details key="documentation" value="Will return all alarm logs for the given system id including superseded."/>
+        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/timeline/system/{systemId}&quot;;&#xA;EClass resultEClass = EcorePackage.eINSTANCE.getEObject();&#xA;pathParameter.put(&quot;systemId&quot;, toQueryString(&quot;systemId&quot;,systemId));&#xA;if ( null != from ) queryParameter.put(&quot;from&quot;, toQueryString(&quot;from&quot;,from));&#xA;if ( null != to ) queryParameter.put(&quot;to&quot;, toQueryString(&quot;to&quot;,to));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
-      <eParameters name="siteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="from" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"/>
       <eParameters name="to" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"/>
     </eOperations>
     <eOperations name="getAlarmsForState" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will return alarms in state for the given site id. [ON, OFF, UNKNOWN]"/>
-        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/alarms/{siteId}/state/{state}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getAlarmLogPojo();&#xA;pathParameter.put(&quot;siteId&quot;, toQueryString(&quot;siteId&quot;,siteId));&#xA;pathParameter.put(&quot;state&quot;, toQueryString(&quot;state&quot;,state));&#xA;if ( null != eventType ) queryParameter.put(&quot;eventType&quot;, toQueryString(&quot;eventType&quot;,eventType));&#xA;if ( null != flags ) queryParameter.put(&quot;flags&quot;, toQueryString(&quot;flags&quot;,flags));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
+        <details key="documentation" value="Will return alarms in state for the given system id. [ON, OFF, UNKNOWN]"/>
+        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/alarms/{systemId}/state/{state}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getAlarmLogPojo();&#xA;pathParameter.put(&quot;systemId&quot;, toQueryString(&quot;systemId&quot;,systemId));&#xA;pathParameter.put(&quot;state&quot;, toQueryString(&quot;state&quot;,state));&#xA;if ( null != eventType ) queryParameter.put(&quot;eventType&quot;, toQueryString(&quot;eventType&quot;,eventType));&#xA;if ( null != flags ) queryParameter.put(&quot;flags&quot;, toQueryString(&quot;flags&quot;,flags));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
-      <eParameters name="siteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="state" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="eventType" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="flags" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     </eOperations>
     <eOperations name="getAlarmsForStates" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will return alarms in any of the states for the given site id. [ON, OFF, UNKNOWN]"/>
-        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/alarms/{siteId}/state&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getAlarmLogPojo();&#xA;pathParameter.put(&quot;siteId&quot;, toQueryString(&quot;siteId&quot;,siteId));&#xA;if ( null != state ) queryParameter.put(&quot;state&quot;, toQueryString(&quot;state&quot;,state));&#xA;if ( null != eventType ) queryParameter.put(&quot;eventType&quot;, toQueryString(&quot;eventType&quot;,eventType));&#xA;if ( null != flags ) queryParameter.put(&quot;flags&quot;, toQueryString(&quot;flags&quot;,flags));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
+        <details key="documentation" value="Will return alarms in any of the states for the given system id. [ON, OFF, UNKNOWN]"/>
+        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/alarms/{systemId}/state&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getAlarmLogPojo();&#xA;pathParameter.put(&quot;systemId&quot;, toQueryString(&quot;systemId&quot;,systemId));&#xA;if ( null != state ) queryParameter.put(&quot;state&quot;, toQueryString(&quot;state&quot;,state));&#xA;if ( null != eventType ) queryParameter.put(&quot;eventType&quot;, toQueryString(&quot;eventType&quot;,eventType));&#xA;if ( null != flags ) queryParameter.put(&quot;flags&quot;, toQueryString(&quot;flags&quot;,flags));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
-      <eParameters name="siteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="state" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="eventType" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="flags" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     </eOperations>
     <eOperations name="getEntityMonitoring" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will get monitoring setting for site with specified id."/>
+        <details key="documentation" value="Will get monitoring setting for system with specified id."/>
         <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/entities/{systemId}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getEntityMonitoringSettingsPojo();&#xA;pathParameter.put(&quot;systemId&quot;, toQueryString(&quot;systemId&quot;,systemId));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
       <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     </eOperations>
     <eOperations name="getEntityMonitoring_1" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will get monitored identifiers for site with specified id and given entity type."/>
+        <details key="documentation" value="Will get monitored identifiers for system with specified id and given entity type."/>
         <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/entities/{systemId}/{type}&quot;;&#xA;EClass resultEClass = EcorePackage.eINSTANCE.getEObject();&#xA;pathParameter.put(&quot;systemId&quot;, toQueryString(&quot;systemId&quot;,systemId));&#xA;pathParameter.put(&quot;type&quot;, toQueryString(&quot;type&quot;,type));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
       <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
@@ -987,7 +987,7 @@
     </eOperations>
     <eOperations name="updateEntityMonitoring" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will update monitoring for site with specified id, entity type and optionally specific identifier. endpoint: /monitoring/entities/{systemId}/{type}"/>
+        <details key="documentation" value="Will update monitoring for system with specified id, entity type and optionally specific identifier. endpoint: /monitoring/entities/{systemId}/{type}"/>
       </eAnnotations>
       <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
       <eParameters name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -997,10 +997,10 @@
     </eOperations>
     <eOperations name="getLog" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will return all logs for the given site id."/>
-        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/logs/{siteId}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getSyncLogPojo();&#xA;pathParameter.put(&quot;siteId&quot;, toQueryString(&quot;siteId&quot;,siteId));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
+        <details key="documentation" value="Will return all logs for the given system id."/>
+        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/logs/{systemId}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getSyncLogPojo();&#xA;pathParameter.put(&quot;systemId&quot;, toQueryString(&quot;systemId&quot;,systemId));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
-      <eParameters name="siteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eOperations>
     <eOperations name="getLogs" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -1017,10 +1017,10 @@
     </eOperations>
     <eOperations name="getStatistics" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will return statistics for alarm ids for the given site id."/>
-        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/statistics/{siteId}&quot;;&#xA;EClass resultEClass = EcorePackage.eINSTANCE.getEObject();&#xA;pathParameter.put(&quot;siteId&quot;, toQueryString(&quot;siteId&quot;,siteId));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
+        <details key="documentation" value="Will return statistics for alarm ids for the given system id."/>
+        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/statistics/{systemId}&quot;;&#xA;EClass resultEClass = EcorePackage.eINSTANCE.getEObject();&#xA;pathParameter.put(&quot;systemId&quot;, toQueryString(&quot;systemId&quot;,systemId));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
-      <eParameters name="siteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eOperations>
     <eOperations name="getStatusLogs" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -1036,33 +1036,33 @@
     </eOperations>
     <eOperations name="getStatusLogs_1" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will return all status logs for the given site id."/>
-        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/status/{siteId}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getStatusLogPojo();&#xA;pathParameter.put(&quot;siteId&quot;, toQueryString(&quot;siteId&quot;,siteId));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
+        <details key="documentation" value="Will return all status logs for the given system id."/>
+        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/status/{systemId}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getStatusLogPojo();&#xA;pathParameter.put(&quot;systemId&quot;, toQueryString(&quot;systemId&quot;,systemId));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
-      <eParameters name="siteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eOperations>
     <eOperations name="getStatusLogsTimeline" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will return all status logs for the given site id including superseded."/>
-        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/timeline/status/{siteId}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getStatusLogPojo();&#xA;pathParameter.put(&quot;siteId&quot;, toQueryString(&quot;siteId&quot;,siteId));&#xA;if ( null != from ) queryParameter.put(&quot;from&quot;, toQueryString(&quot;from&quot;,from));&#xA;if ( null != to ) queryParameter.put(&quot;to&quot;, toQueryString(&quot;to&quot;,to));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
+        <details key="documentation" value="Will return all status logs for the given system id including superseded."/>
+        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/timeline/status/{systemId}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getStatusLogPojo();&#xA;pathParameter.put(&quot;systemId&quot;, toQueryString(&quot;systemId&quot;,systemId));&#xA;if ( null != from ) queryParameter.put(&quot;from&quot;, toQueryString(&quot;from&quot;,from));&#xA;if ( null != to ) queryParameter.put(&quot;to&quot;, toQueryString(&quot;to&quot;,to));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
-      <eParameters name="siteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="from" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"/>
       <eParameters name="to" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"/>
     </eOperations>
     <eOperations name="getTracked" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will return tracked alarm ids for the given site id."/>
-        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/tracked/{siteId}&quot;;&#xA;EClass resultEClass = EcorePackage.eINSTANCE.getEObject();&#xA;pathParameter.put(&quot;siteId&quot;, toQueryString(&quot;siteId&quot;,siteId));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
+        <details key="documentation" value="Will return tracked alarm ids for the given system id."/>
+        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/tracked/{systemId}&quot;;&#xA;EClass resultEClass = EcorePackage.eINSTANCE.getEObject();&#xA;pathParameter.put(&quot;systemId&quot;, toQueryString(&quot;systemId&quot;,systemId));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
-      <eParameters name="siteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eOperations>
     <eOperations name="isFlaky" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will return true if given alarm on given site is flaky."/>
-        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/flaky/{siteId}/{alarmId}&quot;;&#xA;EClass resultEClass = EcorePackage.eINSTANCE.getEObject();&#xA;pathParameter.put(&quot;siteId&quot;, toQueryString(&quot;siteId&quot;,siteId));&#xA;pathParameter.put(&quot;alarmId&quot;, toQueryString(&quot;alarmId&quot;,alarmId));&#xA;if ( null != from ) queryParameter.put(&quot;from&quot;, toQueryString(&quot;from&quot;,from));&#xA;if ( null != to ) queryParameter.put(&quot;to&quot;, toQueryString(&quot;to&quot;,to));&#xA;if ( null != threshold ) queryParameter.put(&quot;threshold&quot;, toQueryString(&quot;threshold&quot;,threshold));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
+        <details key="documentation" value="Will return true if given alarm on given system is flaky."/>
+        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/flaky/{systemId}/{alarmId}&quot;;&#xA;EClass resultEClass = EcorePackage.eINSTANCE.getEObject();&#xA;pathParameter.put(&quot;systemId&quot;, toQueryString(&quot;systemId&quot;,systemId));&#xA;pathParameter.put(&quot;alarmId&quot;, toQueryString(&quot;alarmId&quot;,alarmId));&#xA;if ( null != from ) queryParameter.put(&quot;from&quot;, toQueryString(&quot;from&quot;,from));&#xA;if ( null != to ) queryParameter.put(&quot;to&quot;, toQueryString(&quot;to&quot;,to));&#xA;if ( null != threshold ) queryParameter.put(&quot;threshold&quot;, toQueryString(&quot;threshold&quot;,threshold));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
-      <eParameters name="siteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="alarmId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="from" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"/>
       <eParameters name="to" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"/>
@@ -1075,27 +1075,27 @@
       </eAnnotations>
       <eParameters name="state" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eOperations>
-    <eOperations name="refreshSite" eType="#//Response">
+    <eOperations name="refreshSystem" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Update the alarm states of the site with the given id from the GLT's buffer. endpoint: /monitoring/refresh/{siteId}"/>
+        <details key="documentation" value="Update the alarm states of the system with the given id from the controller's buffer. endpoint: /monitoring/refresh/{systemId}"/>
       </eAnnotations>
-      <eParameters name="siteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eOperations>
     <eOperations name="updateAlarmState" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Update the state of the alarm with the given id to the given state. endpoint: /monitoring/state/{siteId}"/>
+        <details key="documentation" value="Update the state of the alarm with the given id to the given state. endpoint: /monitoring/state/{systemId}"/>
       </eAnnotations>
-      <eParameters name="siteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="request" eType="#//UpdateStateRequest"/>
     </eOperations>
     <eOperations name="getChangelog_1" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Will return block changes for input filters."/>
-        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/timeschedule/block/history/{offset}-{limit}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getTimeScheduleBlockPojo();&#xA;pathParameter.put(&quot;offset&quot;, toQueryString(&quot;offset&quot;,offset));&#xA;pathParameter.put(&quot;limit&quot;, toQueryString(&quot;limit&quot;,limit));&#xA;if ( null != siteId ) queryParameter.put(&quot;siteId&quot;, toQueryString(&quot;siteId&quot;,siteId));&#xA;if ( null != external ) queryParameter.put(&quot;external&quot;, toQueryString(&quot;external&quot;,external));&#xA;if ( null != author ) queryParameter.put(&quot;author&quot;, toQueryString(&quot;author&quot;,author));&#xA;if ( null != from ) queryParameter.put(&quot;from&quot;, toQueryString(&quot;from&quot;,from));&#xA;if ( null != to ) queryParameter.put(&quot;to&quot;, toQueryString(&quot;to&quot;,to));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
+        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/timeschedule/block/history/{offset}-{limit}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getTimeScheduleBlockPojo();&#xA;pathParameter.put(&quot;offset&quot;, toQueryString(&quot;offset&quot;,offset));&#xA;pathParameter.put(&quot;limit&quot;, toQueryString(&quot;limit&quot;,limit));&#xA;if ( null != systemIds ) queryParameter.put(&quot;systemIds&quot;, toQueryString(&quot;systemIds&quot;,systemIds));&#xA;if ( null != external ) queryParameter.put(&quot;external&quot;, toQueryString(&quot;external&quot;,external));&#xA;if ( null != author ) queryParameter.put(&quot;author&quot;, toQueryString(&quot;author&quot;,author));&#xA;if ( null != from ) queryParameter.put(&quot;from&quot;, toQueryString(&quot;from&quot;,from));&#xA;if ( null != to ) queryParameter.put(&quot;to&quot;, toQueryString(&quot;to&quot;,to));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
       <eParameters name="offset" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
       <eParameters name="limit" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
-      <eParameters name="siteId" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+      <eParameters name="systemIds" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
       <eParameters name="external" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
       <eParameters name="author" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="from" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -1104,9 +1104,9 @@
     <eOperations name="getChangelogCount_1" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Will return count of block changes for input filters."/>
-        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/timeschedule/block/history/count&quot;;&#xA;EClass resultEClass = EcorePackage.eINSTANCE.getEObject();&#xA;if ( null != siteId ) queryParameter.put(&quot;siteId&quot;, toQueryString(&quot;siteId&quot;,siteId));&#xA;if ( null != external ) queryParameter.put(&quot;external&quot;, toQueryString(&quot;external&quot;,external));&#xA;if ( null != author ) queryParameter.put(&quot;author&quot;, toQueryString(&quot;author&quot;,author));&#xA;if ( null != from ) queryParameter.put(&quot;from&quot;, toQueryString(&quot;from&quot;,from));&#xA;if ( null != to ) queryParameter.put(&quot;to&quot;, toQueryString(&quot;to&quot;,to));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
+        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/timeschedule/block/history/count&quot;;&#xA;EClass resultEClass = EcorePackage.eINSTANCE.getEObject();&#xA;if ( null != systemIds ) queryParameter.put(&quot;systemIds&quot;, toQueryString(&quot;systemIds&quot;,systemIds));&#xA;if ( null != external ) queryParameter.put(&quot;external&quot;, toQueryString(&quot;external&quot;,external));&#xA;if ( null != author ) queryParameter.put(&quot;author&quot;, toQueryString(&quot;author&quot;,author));&#xA;if ( null != from ) queryParameter.put(&quot;from&quot;, toQueryString(&quot;from&quot;,from));&#xA;if ( null != to ) queryParameter.put(&quot;to&quot;, toQueryString(&quot;to&quot;,to));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
-      <eParameters name="siteId" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+      <eParameters name="systemIds" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
       <eParameters name="external" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
       <eParameters name="author" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="from" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -1114,7 +1114,7 @@
     </eOperations>
     <eOperations name="getTimeScheduleBlockHistory" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will return stored time schedule blocks for site."/>
+        <details key="documentation" value="Will return stored time schedule blocks for system."/>
         <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/timeschedule/block/history/{systemId}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getTimeScheduleBlockPojo();&#xA;pathParameter.put(&quot;systemId&quot;, toQueryString(&quot;systemId&quot;,systemId));&#xA;if ( null != id ) queryParameter.put(&quot;id&quot;, toQueryString(&quot;id&quot;,id));&#xA;if ( null != latestOnly ) queryParameter.put(&quot;latestOnly&quot;, toQueryString(&quot;latestOnly&quot;,latestOnly));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
       <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
@@ -1123,7 +1123,7 @@
     </eOperations>
     <eOperations name="getTimeScheduleBlocks" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will return current time schedule states for site."/>
+        <details key="documentation" value="Will return current time schedule states for system."/>
         <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/timeschedule/block/{systemId}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getTimeScheduleBlockPojo();&#xA;pathParameter.put(&quot;systemId&quot;, toQueryString(&quot;systemId&quot;,systemId));&#xA;if ( null != id ) queryParameter.put(&quot;id&quot;, toQueryString(&quot;id&quot;,id));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
       <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
@@ -1131,14 +1131,14 @@
     </eOperations>
     <eOperations name="updateTimeScheduleBlocks" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will update time schedule blocks for site with specified systemId and optionally specific identifiers. endpoint: /monitoring/timeschedule/block/update/{systemId}"/>
+        <details key="documentation" value="Will update time schedule blocks for system with specified systemId and optionally specific identifiers. endpoint: /monitoring/timeschedule/block/update/{systemId}"/>
       </eAnnotations>
       <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
       <eParameters name="id" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     </eOperations>
     <eOperations name="getTimeScheduleStateHistory" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will return stored time schedule states for site."/>
+        <details key="documentation" value="Will return stored time schedule states for system."/>
         <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/timeschedule/state/history/{systemId}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getTimeScheduleStatePojo();&#xA;pathParameter.put(&quot;systemId&quot;, toQueryString(&quot;systemId&quot;,systemId));&#xA;if ( null != id ) queryParameter.put(&quot;id&quot;, toQueryString(&quot;id&quot;,id));&#xA;if ( null != latestOnly ) queryParameter.put(&quot;latestOnly&quot;, toQueryString(&quot;latestOnly&quot;,latestOnly));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
       <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
@@ -1147,7 +1147,7 @@
     </eOperations>
     <eOperations name="getTimeScheduleStates" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will return current time schedule states for site."/>
+        <details key="documentation" value="Will return current time schedule states for system."/>
         <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/monitoring/timeschedule/state/{systemId}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getTimeScheduleStatePojo();&#xA;pathParameter.put(&quot;systemId&quot;, toQueryString(&quot;systemId&quot;,systemId));&#xA;if ( null != id ) queryParameter.put(&quot;id&quot;, toQueryString(&quot;id&quot;,id));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
       <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
@@ -1155,7 +1155,7 @@
     </eOperations>
     <eOperations name="updateTimeScheduleStates" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will update time schedule states for site with specified systemId and optionally specific identifiers. endpoint: /monitoring/timeschedule/state/update/{systemId}"/>
+        <details key="documentation" value="Will update time schedule states for system with specified systemId and optionally specific identifiers. endpoint: /monitoring/timeschedule/state/update/{systemId}"/>
       </eAnnotations>
       <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
       <eParameters name="id" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
@@ -1213,67 +1213,6 @@
         <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/conf&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getJsonNode();&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
     </eOperations>
-    <eOperations name="getSite" eType="#//Response">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will return site with specified id."/>
-        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/sites/{id}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getSitePojo();&#xA;pathParameter.put(&quot;id&quot;, toQueryString(&quot;id&quot;,id));&#xA;if ( null != shallow ) queryParameter.put(&quot;shallow&quot;, toQueryString(&quot;shallow&quot;,shallow));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
-      </eAnnotations>
-      <eParameters name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eParameters name="shallow" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
-    </eOperations>
-    <eOperations name="updateSite" eType="#//Response">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will update site with specified id. endpoint: /sites/{id}"/>
-      </eAnnotations>
-      <eParameters name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eParameters name="request" eType="#//SiteRequest"/>
-    </eOperations>
-    <eOperations name="createSite" eType="#//Response">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will create site with specified id. endpoint: /sites/{id}"/>
-      </eAnnotations>
-      <eParameters name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eParameters name="request" eType="#//SiteRequest"/>
-    </eOperations>
-    <eOperations name="deleteSite" eType="#//Response">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will delete site with specified id. endpoint: /sites/{id}"/>
-      </eAnnotations>
-      <eParameters name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    </eOperations>
-    <eOperations name="getContacts" eType="#//Response">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will return contacts for the site with specified id."/>
-        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/sites/contacts/{id}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getContactPojo();&#xA;pathParameter.put(&quot;id&quot;, toQueryString(&quot;id&quot;,id));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
-      </eAnnotations>
-      <eParameters name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    </eOperations>
-    <eOperations name="getContracts" eType="#//Response">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will return contracts for the site with specified id."/>
-        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/sites/contracts/{id}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getContractPojo();&#xA;pathParameter.put(&quot;id&quot;, toQueryString(&quot;id&quot;,id));&#xA;if ( null != type ) queryParameter.put(&quot;type&quot;, toQueryString(&quot;type&quot;,type));&#xA;if ( null != activeOnly ) queryParameter.put(&quot;activeOnly&quot;, toQueryString(&quot;activeOnly&quot;,activeOnly));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
-      </eAnnotations>
-      <eParameters name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eParameters name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eParameters name="activeOnly" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
-    </eOperations>
-    <eOperations name="getSites" eType="#//Response">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will return all site ids."/>
-        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/sites&quot;;&#xA;EClass resultEClass = null;&#xA;if ( null != expanded ) queryParameter.put(&quot;expanded&quot;, toQueryString(&quot;expanded&quot;,expanded));&#xA;if ( null != excluded ) queryParameter.put(&quot;excluded&quot;, toQueryString(&quot;excluded&quot;,excluded));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
-      </eAnnotations>
-      <eParameters name="expanded" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
-      <eParameters name="excluded" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
-    </eOperations>
-    <eOperations name="getTechFacilities" eType="#//Response">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will return tech facilities for the site with specified id."/>
-        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/sites/facilities/{id}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getTechFacilityPojo();&#xA;pathParameter.put(&quot;id&quot;, toQueryString(&quot;id&quot;,id));&#xA;if ( null != type ) queryParameter.put(&quot;type&quot;, toQueryString(&quot;type&quot;,type));&#xA;if ( null != activeOnly ) queryParameter.put(&quot;activeOnly&quot;, toQueryString(&quot;activeOnly&quot;,activeOnly));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
-      </eAnnotations>
-      <eParameters name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eParameters name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eParameters name="activeOnly" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
-    </eOperations>
     <eOperations name="getAuthStatus" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Will return authorization status information regarding the service."/>
@@ -1286,6 +1225,67 @@
         <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/status&quot;;&#xA;EClass resultEClass = EcorePackage.eINSTANCE.getEObject();&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
     </eOperations>
+    <eOperations name="getSystem" eType="#//Response">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Will return system with specified id."/>
+        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/systems/{id}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getSystemDescriptionPojo();&#xA;pathParameter.put(&quot;id&quot;, toQueryString(&quot;id&quot;,id));&#xA;if ( null != shallow ) queryParameter.put(&quot;shallow&quot;, toQueryString(&quot;shallow&quot;,shallow));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
+      </eAnnotations>
+      <eParameters name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="shallow" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+    </eOperations>
+    <eOperations name="updateSystem" eType="#//Response">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Will update system with specified id. endpoint: /systems/{id}"/>
+      </eAnnotations>
+      <eParameters name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="request" eType="#//SystemDescriptionRequest"/>
+    </eOperations>
+    <eOperations name="createSystemDescription" eType="#//Response">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Will create system with specified id. endpoint: /systems/{id}"/>
+      </eAnnotations>
+      <eParameters name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="request" eType="#//SystemDescriptionRequest"/>
+    </eOperations>
+    <eOperations name="deleteSystem" eType="#//Response">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Will delete system with specified id. endpoint: /systems/{id}"/>
+      </eAnnotations>
+      <eParameters name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="getContacts" eType="#//Response">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Will return contacts for the system with specified id."/>
+        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/systems/contacts/{id}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getContactPojo();&#xA;pathParameter.put(&quot;id&quot;, toQueryString(&quot;id&quot;,id));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
+      </eAnnotations>
+      <eParameters name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="getContracts" eType="#//Response">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Will return contracts for the system with specified id."/>
+        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/systems/contracts/{id}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getContractPojo();&#xA;pathParameter.put(&quot;id&quot;, toQueryString(&quot;id&quot;,id));&#xA;if ( null != type ) queryParameter.put(&quot;type&quot;, toQueryString(&quot;type&quot;,type));&#xA;if ( null != activeOnly ) queryParameter.put(&quot;activeOnly&quot;, toQueryString(&quot;activeOnly&quot;,activeOnly));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
+      </eAnnotations>
+      <eParameters name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="activeOnly" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+    </eOperations>
+    <eOperations name="getSystems" eType="#//Response">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Will return all system ids."/>
+        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/systems&quot;;&#xA;EClass resultEClass = null;&#xA;if ( null != expanded ) queryParameter.put(&quot;expanded&quot;, toQueryString(&quot;expanded&quot;,expanded));&#xA;if ( null != excluded ) queryParameter.put(&quot;excluded&quot;, toQueryString(&quot;excluded&quot;,excluded));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
+      </eAnnotations>
+      <eParameters name="expanded" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+      <eParameters name="excluded" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+    </eOperations>
+    <eOperations name="getTechFacilities" eType="#//Response">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Will return tech facilities for the building with specified id."/>
+        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/systems/facilities/{id}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getTechFacilityPojo();&#xA;pathParameter.put(&quot;id&quot;, toQueryString(&quot;id&quot;,id));&#xA;if ( null != type ) queryParameter.put(&quot;type&quot;, toQueryString(&quot;type&quot;,type));&#xA;if ( null != activeOnly ) queryParameter.put(&quot;activeOnly&quot;, toQueryString(&quot;activeOnly&quot;,activeOnly));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
+      </eAnnotations>
+      <eParameters name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="activeOnly" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+    </eOperations>
     <eOperations name="getEntities" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Will return control entity information. endpoint: /system/entities"/>
@@ -1294,7 +1294,7 @@
     </eOperations>
     <eOperations name="getEntitiesByType" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will return entities of given type for site optionally filtered by identifier."/>
+        <details key="documentation" value="Will return entities of given type for system optionally filtered by identifier."/>
         <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/system/entities/{systemId}/{type}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getEntityPojo();&#xA;pathParameter.put(&quot;systemId&quot;, toQueryString(&quot;systemId&quot;,systemId));&#xA;pathParameter.put(&quot;type&quot;, toQueryString(&quot;type&quot;,type));&#xA;if ( null != id ) queryParameter.put(&quot;id&quot;, toQueryString(&quot;id&quot;,id));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
       <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
@@ -1303,7 +1303,7 @@
     </eOperations>
     <eOperations name="getEntitiesByTypes" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will return entities of given types for site optionally filtered by identifier."/>
+        <details key="documentation" value="Will return entities of given types for system optionally filtered by identifier."/>
         <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/system/entities/{systemId}/types&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getEntityPojo();&#xA;pathParameter.put(&quot;systemId&quot;, toQueryString(&quot;systemId&quot;,systemId));&#xA;if ( null != type ) queryParameter.put(&quot;type&quot;, toQueryString(&quot;type&quot;,type));&#xA;if ( null != id ) queryParameter.put(&quot;id&quot;, toQueryString(&quot;id&quot;,id));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
       <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
@@ -1312,7 +1312,7 @@
     </eOperations>
     <eOperations name="getSystemEntities" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will return control entity information for the site."/>
+        <details key="documentation" value="Will return control entity information for the system."/>
         <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/system/entities/{systemId}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getCylonNetworkPojo();&#xA;pathParameter.put(&quot;systemId&quot;, toQueryString(&quot;systemId&quot;,systemId));&#xA;if ( null != depth ) queryParameter.put(&quot;depth&quot;, toQueryString(&quot;depth&quot;,depth));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
       <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
@@ -1320,7 +1320,7 @@
     </eOperations>
     <eOperations name="getSystemEntity" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will return control entity information for site with specified id."/>
+        <details key="documentation" value="Will return control entity information for system with specified id."/>
         <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/system/entities/{systemId}/{type}/{id}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getEntityPojo();&#xA;pathParameter.put(&quot;systemId&quot;, toQueryString(&quot;systemId&quot;,systemId));&#xA;pathParameter.put(&quot;type&quot;, toQueryString(&quot;type&quot;,type));&#xA;pathParameter.put(&quot;id&quot;, toQueryString(&quot;id&quot;,id));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
       <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
@@ -1426,7 +1426,6 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Will add user with given id or auth. endpoint: /useradmin/users"/>
       </eAnnotations>
-      <eParameters name="internal" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
       <eParameters name="request" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eOperations>
     <eOperations name="currentRole" eType="#//Response">
@@ -1459,16 +1458,16 @@
     </eOperations>
     <eOperations name="updateSuspect" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Update a suspect. endpoint: /watcher/suspects/{siteId}.{alarmId}"/>
+        <details key="documentation" value="Update a suspect. endpoint: /watcher/suspects/{systemId}.{alarmId}"/>
       </eAnnotations>
-      <eParameters name="siteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="alarmId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eOperations>
     <eOperations name="deleteSuspect" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Delete a suspect. endpoint: /watcher/suspects/{siteId}.{alarmId}"/>
+        <details key="documentation" value="Delete a suspect. endpoint: /watcher/suspects/{systemId}.{alarmId}"/>
       </eAnnotations>
-      <eParameters name="siteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="alarmId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eOperations>
     <eOperations name="getSuspects" eType="#//Response">
@@ -1482,10 +1481,10 @@
     </eOperations>
     <eOperations name="getSuspects_1" eType="#//Response">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Will return a collection of alarms for site, that occur repeatedly as per settings (flaky)."/>
-        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/watcher/suspects/{siteId}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getSuspectPojo();&#xA;pathParameter.put(&quot;siteId&quot;, toQueryString(&quot;siteId&quot;,siteId));&#xA;if ( null != eventType ) queryParameter.put(&quot;eventType&quot;, toQueryString(&quot;eventType&quot;,eventType));&#xA;if ( null != flags ) queryParameter.put(&quot;flags&quot;, toQueryString(&quot;flags&quot;,flags));&#xA;if ( null != recognized ) queryParameter.put(&quot;recognized&quot;, toQueryString(&quot;recognized&quot;,recognized));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
+        <details key="documentation" value="Will return a collection of alarms for system, that occur repeatedly as per settings (flaky)."/>
+        <details key="body" value="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;&#x9;String endpoint = &quot;/watcher/suspects/{systemId}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getSuspectPojo();&#xA;pathParameter.put(&quot;systemId&quot;, toQueryString(&quot;systemId&quot;,systemId));&#xA;if ( null != eventType ) queryParameter.put(&quot;eventType&quot;, toQueryString(&quot;eventType&quot;,eventType));&#xA;if ( null != flags ) queryParameter.put(&quot;flags&quot;, toQueryString(&quot;flags&quot;,flags));&#xA;if ( null != recognized ) queryParameter.put(&quot;recognized&quot;, toQueryString(&quot;recognized&quot;,recognized));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));"/>
       </eAnnotations>
-      <eParameters name="siteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="systemId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="eventType" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="flags" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
       <eParameters name="recognized" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>

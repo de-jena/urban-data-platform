@@ -81,11 +81,11 @@ public class GltSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case GltPackage.GLT: {
-				Glt glt = (Glt)theEObject;
-				T result = caseGlt(glt);
-				if (result == null) result = caseDynamicProvider(glt);
-				if (result == null) result = caseProvider(glt);
+			case GltPackage.GLT_SIDE: {
+				GltSide gltSide = (GltSide)theEObject;
+				T result = caseGltSide(gltSide);
+				if (result == null) result = caseDynamicProvider(gltSide);
+				if (result == null) result = caseProvider(gltSide);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -101,17 +101,17 @@ public class GltSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Glt</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Side</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Glt</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Side</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseGlt(Glt object) {
+	public T caseGltSide(GltSide object) {
 		return null;
 	}
 
