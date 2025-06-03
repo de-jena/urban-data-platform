@@ -1,0 +1,19 @@
+-buildpath: \
+	org.osgi.service.component,\
+	org.osgi.service.component.annotations,\
+	org.osgi.resource,\
+	org.eclipse.emf.common,\
+	de.jena.glt.rest.model,\
+	org.osgi.annotation.versioning,\
+	org.osgi.annotation.bundle,\
+	org.osgi.service.metatype.annotations,\
+	org.eclipse.emf.ecore,\
+	org.gecko.emf.osgi.api,\
+	jakarta.ws.rs-api,\
+	org.gecko.codec.constants,\
+	org.gecko.codec
+-testpath: \
+	junit-jupiter-api,\
+	${junit}
+
+Bundle-Version: 0.0.0.${tstamp}

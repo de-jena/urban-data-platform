@@ -1,0 +1,18 @@
+{
+    ":configurator:resource-version": 1,
+    ":configurator:version": "1.0.0",
+    ":configurator:symbolic-name": "GLT Config",
+    "Glt~Leichtathletikstadion": {
+        "sideID": "065",
+        "points": [
+            16842753,
+            16842754,
+            16842755
+        ],
+        "interval": "1"
+    },
+    "GltOpenApi~glt": {
+        "url": "https://glt.jena.de/rest/v1/",
+        "apiKey": "$[env:GLT_API_KEY;default=$[prop:GLT_API_KEY;default=mRi9qsN9y4v2cJMVqKH-vKcFMg57uWJL]]"
+    }
+}

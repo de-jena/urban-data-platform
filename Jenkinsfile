@@ -26,7 +26,7 @@ pipeline  {
 				// Get UDP from GitHub
 				checkout([  
 				           $class: 'GitSCM', 
-				           branches: [[name: 'refs/heads/main']], 
+				           branches: [[name: "refs/heads/${env.GIT_BRANCH}"]], 
 				           doGenerateSubmoduleConfigurations: false, 
 				           extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'udp']], 
 				           submoduleCfg: [], 

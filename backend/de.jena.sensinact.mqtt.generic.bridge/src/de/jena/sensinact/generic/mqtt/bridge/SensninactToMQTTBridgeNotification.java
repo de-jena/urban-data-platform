@@ -63,13 +63,13 @@ public class SensninactToMQTTBridgeNotification implements TypedEventHandler<Res
 		}
 		try {
 			UpdateMessage update = MessageUtil
-					.createUpdateMessageForType(event.newValue != null ? event.newValue.getClass() : event.type);
-			update.setTimestamp(event.timestamp);
-			update.setResource(event.resource);
-			setValue(update, event.oldValue, "oldValue");
-			setValue(update, event.newValue, "newValue");
-			send(String.format("5g/data/sensinact/event/%s/%s/%s/%s", event.model, event.provider, event.service,
-					event.resource), update);
+					.createUpdateMessageForType(event.newValue() != null ? event.newValue().getClass() : event.type());
+			update.setTimestamp(event.timestamp());
+			update.setResource(event.resource());
+			setValue(update, event.oldValue(), "oldValue");
+			setValue(update, event.newValue(), "newValue");
+			send(String.format("5g/data/sensinact/event/%s/%s/%s/%s", event.model(), event.provider(), event.service(),
+					event.resource()), update);
 		} catch (Throwable e) {
 			logger.log(Level.ERROR, "Could not send update message: {0}", e.getMessage(), e);
 		}

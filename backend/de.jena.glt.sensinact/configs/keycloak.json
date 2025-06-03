@@ -1,0 +1,8 @@
+{
+   ":configurator:resource-version": 1,
+   "KeycloakService~glt": {
+   		"name": "Glt",
+   		"type": "prod",
+   		"configuration.file": "$[env:KEYCLOAK_SECRETS;default=$[prop:KEYCLOAK_SECRETS;default=]]"
+   }
+}

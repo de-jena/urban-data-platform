@@ -58,4 +58,10 @@ de.jena.ibis-ip:de.jena.ibis.tests:1.0.0-SNAPSHOT
 de.jena.ibis-ip:de.jena.ibis.txw2:4.0.2
 
 
-
+# Codec
+org.geckoprojects.codec:org.gecko.codec:1.0.0-SNAPSHOT
+org.geckoprojects.codec:org.gecko.codec.json:1.0.0-SNAPSHOT
+org.geckoprojects.codec:org.gecko.codec.emfjson:1.0.0-SNAPSHOT
+org.geckoprojects.codec:org.gecko.codec.info:1.0.0-SNAPSHOT
+org.geckoprojects.codec:org.gecko.codec.info.model:1.0.0-SNAPSHOT
+org.geckoprojects.codec:org.gecko.codec.constants:1.0.0-SNAPSHOT

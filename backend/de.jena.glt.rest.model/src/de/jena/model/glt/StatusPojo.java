@@ -1,0 +1,95 @@
+/*
+ */
+package de.jena.model.glt;
+
+import org.eclipse.emf.ecore.EObject;
+
+import org.osgi.annotation.versioning.ProviderType;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Status Pojo</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link de.jena.model.glt.StatusPojo#getTimestamp <em>Timestamp</em>}</li>
+ *   <li>{@link de.jena.model.glt.StatusPojo#getName <em>Name</em>}</li>
+ *   <li>{@link de.jena.model.glt.StatusPojo#getAuthor <em>Author</em>}</li>
+ * </ul>
+ *
+ * @see de.jena.model.glt.GltPackage#getStatusPojo()
+ * @model
+ * @generated
+ */
+@ProviderType
+public interface StatusPojo extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Timestamp</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Timestamp</em>' attribute.
+	 * @see #setTimestamp(String)
+	 * @see de.jena.model.glt.GltPackage#getStatusPojo_Timestamp()
+	 * @model
+	 * @generated
+	 */
+	String getTimestamp();
+
+	/**
+	 * Sets the value of the '{@link de.jena.model.glt.StatusPojo#getTimestamp <em>Timestamp</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Timestamp</em>' attribute.
+	 * @see #getTimestamp()
+	 * @generated
+	 */
+	void setTimestamp(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see de.jena.model.glt.GltPackage#getStatusPojo_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link de.jena.model.glt.StatusPojo#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Author</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Author</em>' attribute.
+	 * @see #setAuthor(String)
+	 * @see de.jena.model.glt.GltPackage#getStatusPojo_Author()
+	 * @model
+	 * @generated
+	 */
+	String getAuthor();
+
+	/**
+	 * Sets the value of the '{@link de.jena.model.glt.StatusPojo#getAuthor <em>Author</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Author</em>' attribute.
+	 * @see #getAuthor()
+	 * @generated
+	 */
+	void setAuthor(String value);
+
+} // StatusPojo

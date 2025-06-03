@@ -1,12 +1,7 @@
 -buildpath: \
-	org.eclipse.sensinact.gateway.core.api,\
-	org.eclipse.sensinact.gateway.core.impl,\
-	org.osgi.service.typedevent,\
-	org.osgi.service.event,\
 	org.osgi.service.component.annotations,\
 	org.osgi.util.pushstream,\
 	org.osgi.util.promise,\
-	org.eclipse.sensinact.gateway.core.annotation,\
 	org.gecko.osgi.messaging,\
 	de.jena.sensinact.mqtt.generic.message,\
 	org.osgi.service.component,\
@@ -15,13 +10,13 @@
 	com.fasterxml.jackson.core.jackson-databind,\
 	com.fasterxml.jackson.core.jackson-core,\
 	org.osgi.util.function,\
-	com.fasterxml.jackson.datatype.jackson-datatype-jsr310,\
 	de.jena.udp.trafficos.trafficlight.model;version=latest,\
 	org.eclipse.emfcloud.emfjson-jackson,\
 	org.gecko.qvt.osgi.api,\
 	de.jena.udp.trafficos.common.model,\
 	de.jena.ilsa.sensinact.model,\
 	org.eclipse.sensinact.gateway.core.geo-json,\
-	org.eclipse.sensinact.gateway.core.models.metadata
+	org.eclipse.sensinact.gateway.core.annotation,\
+	org.eclipse.sensinact.gateway.core.api
 	
 -library: enable-emf
