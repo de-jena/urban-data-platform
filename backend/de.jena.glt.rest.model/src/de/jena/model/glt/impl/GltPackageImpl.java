@@ -45,14 +45,14 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass alarmIdEClass = null;
+	private EClass alarmEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass alarmEClass = null;
+	private EClass alarmIdEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -440,49 +440,6 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getAlarmId() {
-		if (alarmIdEClass == null) {
-			alarmIdEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(GltPackage.eNS_URI).getEClassifiers().get(1);
-		}
-		return alarmIdEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getAlarmId_SystemId() {
-        return (EAttribute)getAlarmId().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getAlarmId_BuildingId() {
-        return (EAttribute)getAlarmId().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getAlarmId_AlarmId() {
-        return (EAttribute)getAlarmId().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getAlarm() {
 		if (alarmEClass == null) {
 			alarmEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(GltPackage.eNS_URI).getEClassifiers().get(0);
@@ -598,6 +555,49 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	@Override
 	public EAttribute getAlarm_Flag() {
         return (EAttribute)getAlarm().getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getAlarmId() {
+		if (alarmIdEClass == null) {
+			alarmIdEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(GltPackage.eNS_URI).getEClassifiers().get(1);
+		}
+		return alarmIdEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAlarmId_SystemId() {
+        return (EAttribute)getAlarmId().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAlarmId_BuildingId() {
+        return (EAttribute)getAlarmId().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAlarmId_AlarmId() {
+        return (EAttribute)getAlarmId().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -3945,8 +3945,18 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getOpenApiClient___call__String_EClass_EMap_EMap() {
+	public EOperation getOpenApiClient___get__String_EClass_EMap_EMap() {
         return getOpenApiClient().getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getOpenApiClient___delete__String_EClass_EMap_EMap() {
+        return getOpenApiClient().getEOperations().get(2);
 	}
 
 	/**

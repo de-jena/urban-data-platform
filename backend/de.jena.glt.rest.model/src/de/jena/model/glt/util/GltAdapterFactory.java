@@ -68,12 +68,12 @@ public class GltAdapterFactory extends AdapterFactoryImpl {
 	protected GltSwitch<Adapter> modelSwitch =
 		new GltSwitch<Adapter>() {
 			@Override
-			public Adapter caseAlarmId(AlarmId object) {
-				return createAlarmIdAdapter();
-			}
-			@Override
 			public Adapter caseAlarm(Alarm object) {
 				return createAlarmAdapter();
+			}
+			@Override
+			public Adapter caseAlarmId(AlarmId object) {
+				return createAlarmIdAdapter();
 			}
 			@Override
 			public Adapter caseAlarmRequest(AlarmRequest object) {
@@ -276,20 +276,6 @@ public class GltAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.jena.model.glt.AlarmId <em>Alarm Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.jena.model.glt.AlarmId
-	 * @generated
-	 */
-	public Adapter createAlarmIdAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link de.jena.model.glt.Alarm <em>Alarm</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -300,6 +286,20 @@ public class GltAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAlarmAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.model.glt.AlarmId <em>Alarm Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.model.glt.AlarmId
+	 * @generated
+	 */
+	public Adapter createAlarmIdAdapter() {
 		return null;
 	}
 
