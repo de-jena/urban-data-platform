@@ -99,7 +99,7 @@ public class GltOpenApi extends GltOpenApiClientImpl {
 			EMap<String,String> queryParameters) {
 		String requestURL = config.url() + path;
 		for (Entry<String, String> param : pathParameters.entrySet()) {
-			requestURL = requestURL.replace("{" + param.getKey() + "}", param.getValue().toString());
+			requestURL = requestURL.replace("{" + param.getKey() + "}", param.getValue());
 		}
 		if (!queryParameters.isEmpty()) {
 			requestURL = queryParameters.keySet().stream().map(key -> key + "=" + queryParameters.get(key))
@@ -139,7 +139,7 @@ public class GltOpenApi extends GltOpenApiClientImpl {
 
 	}
 
-	private int extractCode(String msg) {
+	int extractCode(String msg) {
 		if (msg.startsWith(GET_HTTP_ERROR_WITH_CODE)) {
 			return Integer.parseInt(msg, GET_HTTP_ERROR_WITH_CODE.length(), msg.length(), 10);
 		} else {
@@ -147,7 +147,7 @@ public class GltOpenApi extends GltOpenApiClientImpl {
 		}
 	}
 
-	private Map<String, Object> getHeader() {
+	Map<String, Object> getHeader() {
 		Map<String, Object> headers = new HashMap<>();
 		headers.put("Accept", "*/*");
 		headers.put("Content-Type", "application/json");
@@ -156,7 +156,7 @@ public class GltOpenApi extends GltOpenApiClientImpl {
 		return headers;
 	}
 	
-	private void getAuthHeader(Map<String, Object> headers) {
+	void getAuthHeader(Map<String, Object> headers) {
 		String apiKey = config.apiKey();
 		if (isNotEmpty(apiKey)) {
 			headers.put("x-api-key", apiKey);
@@ -175,11 +175,11 @@ public class GltOpenApi extends GltOpenApiClientImpl {
 		}
 	}
 
-	private String getBasicAuthHeader(String basicAuth) {
+	String getBasicAuthHeader(String basicAuth) {
 		return "Basic " + Base64.getEncoder().encodeToString(basicAuth.getBytes());
 	}
 
-	private boolean isNotEmpty(String s) {
+	boolean isNotEmpty(String s) {
 		return s != null && !s.isEmpty();
 	}
 
