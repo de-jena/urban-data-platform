@@ -8,7 +8,7 @@
 	org.osgi.util.function,\
 	org.gecko.emf.json,\
 	de.jena.ibis.sensinact.model,\
-	org.gecko.qvt.osgi.api,\
+	org.eclipse.fennec.qvt.api,\
 	org.osgi.service.component,\
 	org.eclipse.sensinact.gateway.core.models.provider,\
 	org.eclipse.sensinact.gateway.core.geo-json,\

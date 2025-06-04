@@ -16,12 +16,12 @@ package de.jena.sensinact;
 import java.lang.System.Logger;
 import java.lang.System.Logger.Level;
 
+import org.eclipse.fennec.qvt.osgi.api.ModelTransformationConstants;
+import org.eclipse.fennec.qvt.osgi.api.ModelTransformator;
 import org.eclipse.sensinact.core.push.DataUpdate;
 import org.eclipse.sensinact.gateway.geojson.Coordinates;
 import org.eclipse.sensinact.gateway.geojson.Point;
 import org.eclipse.sensinact.model.core.provider.Admin;
-import org.gecko.qvt.osgi.api.ModelTransformationConstants;
-import org.gecko.qvt.osgi.api.ModelTransformator;
 import org.osgi.annotation.bundle.Requirement;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;

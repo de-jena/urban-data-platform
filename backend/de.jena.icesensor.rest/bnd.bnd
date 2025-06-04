@@ -10,7 +10,7 @@
 	org.osgi.service.cdi,\
 	de.jena.icesensor.api,\
 	com.fasterxml.jackson.core.jackson-databind,\
-	org.gecko.qvt.osgi.api,\
+	org.eclipse.fennec.qvt.api,\
 	biz.aQute.bnd.annotation,\
 	org.gecko.emf.osgi.component,\
 	org.gecko.emf.util.annotations

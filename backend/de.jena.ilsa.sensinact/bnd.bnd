@@ -12,7 +12,7 @@
 	org.osgi.util.function,\
 	de.jena.udp.trafficos.trafficlight.model;version=latest,\
 	org.eclipse.emfcloud.emfjson-jackson,\
-	org.gecko.qvt.osgi.api,\
+	org.eclipse.fennec.qvt.api,\
 	de.jena.udp.trafficos.common.model,\
 	de.jena.ilsa.sensinact.model,\
 	org.eclipse.sensinact.gateway.core.geo-json,\

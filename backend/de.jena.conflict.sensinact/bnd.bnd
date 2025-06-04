@@ -8,7 +8,9 @@
 	org.osgi.util.function,\
 	org.eclipse.sensinact.gateway.core.models.provider,\
 	org.eclipse.sensinact.gateway.core.geo-json,\
-	org.osgi.service.metatype.annotations
+	org.osgi.service.metatype.annotations,\
+	org.apache.aries.typedevent.bus,\
+	org.eclipse.fennec.qvt.api
 
 -testpath: \
 	${junit}

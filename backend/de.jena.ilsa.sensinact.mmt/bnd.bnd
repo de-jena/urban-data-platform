@@ -2,7 +2,7 @@
 	org.eclipse.m2m.qvt.oml,\
 	org.osgi.service.component.annotations;version=latest,\
 	de.jena.ilsa.sensinact.model,\
-	org.gecko.qvt.osgi.api,\
+	org.eclipse.fennec.qvt.api,\
 	org.eclipse.sensinact.gateway.core.geo-json,\
 	org.osgi.service.condition,\
 	com.fasterxml.jackson.core.jackson-annotations;version=latest,\

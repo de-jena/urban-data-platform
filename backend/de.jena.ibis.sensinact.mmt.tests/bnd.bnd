@@ -5,7 +5,7 @@
 Bundle-Version: 1.0.0.SNAPSHOT
 
 -buildpath: \
-	org.gecko.qvt.osgi.api,\
+	org.eclipse.fennec.qvt.api,\
 	de.jena.ibis.customer.info.service.model;version=latest,\
 	de.jena.ibis.common.model;version=latest,\
 	de.jena.ibis.enumerations.model;version=latest,\

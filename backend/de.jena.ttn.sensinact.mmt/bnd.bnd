@@ -8,7 +8,7 @@ Require-Capability: osgi.extender;filter:='(osgi.extender=osgi.configurator)'
 	org.osgi.service.component.annotations;version=latest,\
 	de.jena.ttn.sensinact.model,\
 	de.jena.ttn.model,\
-	org.gecko.qvt.osgi.api,\
+	org.eclipse.fennec.qvt.api,\
 	org.eclipse.sensinact.gateway.core.geo-json,\
 	org.osgi.service.condition,\
 	com.fasterxml.jackson.core.jackson-annotations;version=latest

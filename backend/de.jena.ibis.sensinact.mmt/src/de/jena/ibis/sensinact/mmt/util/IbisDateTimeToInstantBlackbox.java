@@ -15,20 +15,20 @@ package de.jena.ibis.sensinact.mmt.util;
 
 import java.time.Instant;
 
+import org.eclipse.fennec.qvt.osgi.annotations.ModuleName;
+import org.eclipse.fennec.qvt.osgi.annotations.QvtBlackbox;
+import org.eclipse.fennec.qvt.osgi.annotations.TemplatePath;
+import org.eclipse.fennec.qvt.osgi.annotations.TransformatorId;
+import org.eclipse.fennec.qvt.osgi.annotations.UnitQualifiedName;
 import org.eclipse.m2m.qvt.oml.blackbox.java.Module;
 import org.eclipse.m2m.qvt.oml.blackbox.java.Operation;
+import org.eclipse.sensinact.model.core.provider.ProviderPackage;
 import org.osgi.annotation.bundle.Requirement;
 import org.osgi.service.component.annotations.Component;
 
 import de.jena.model.ibis.common.IBISIPDate;
 import de.jena.model.ibis.common.IBISIPDateTime;
 import de.jena.model.ibis.common.IbisCommonPackage;
-import org.eclipse.sensinact.model.core.provider.ProviderPackage;
-import org.gecko.qvt.osgi.annotations.ModuleName;
-import org.gecko.qvt.osgi.annotations.QvtBlackbox;
-import org.gecko.qvt.osgi.annotations.TemplatePath;
-import org.gecko.qvt.osgi.annotations.TransformatorId;
-import org.gecko.qvt.osgi.annotations.UnitQualifiedName;
 
 @Requirement(namespace = "osgi.identity", filter = "(osgi.identity=de.jena.ibis.customer.info.service.model)")
 @Requirement(namespace = "osgi.identity", filter = "(osgi.identity=de.jena.ibis.door.state.service.model)")
