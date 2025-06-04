@@ -3,7 +3,7 @@
     ":configurator:version": "1.0.0",
     ":configurator:symbolic-name": "GLT Config",
     "Glt~Leichtathletikstadion": {
-        "sideID": "065",
+        "systemID": "065",
         "points": [
             16842753,
             16842754,
