@@ -17,6 +17,7 @@ import org.eclipse.sensinact.gateway.geojson.Coordinates;
 import org.eclipse.sensinact.gateway.geojson.GeoJsonObject;
 import org.eclipse.sensinact.gateway.geojson.Point;
 import org.eclipse.sensinact.model.core.provider.Admin;
+import org.eclipse.sensinact.model.core.provider.ProviderFactory;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.ConfigurationPolicy;
@@ -106,8 +107,12 @@ public class GltConverter {
 	private void update() {
 		int systemId = Integer.parseInt(conf.systemID());
 		EList<Integer> point = ECollections.asEList(Arrays.stream(conf.points()).boxed().toList());
-		String from = DateTimeFormatter.ISO_LOCAL_DATE_TIME.format(LocalDateTime.now().minusMinutes(conf.interval()));
-		String to = DateTimeFormatter.ISO_LOCAL_DATE_TIME.format(LocalDateTime.now().plusMinutes(1));
+//		String from = DateTimeFormatter.ISO_LOCAL_DATE_TIME.format(LocalDateTime.now().minusMinutes(conf.interval()));
+//		String from = DateTimeFormatter.ISO_OFFSET_DATE_TIME.format(LocalDateTime.now().minusYears(conf.interval()).atOffset(ZoneOffset.of("+00:00")));
+		String from = DateTimeFormatter.ISO_LOCAL_DATE_TIME.format(LocalDateTime.now().minusHours(conf.interval()))+"+00:00";
+//		String to = DateTimeFormatter.ISO_LOCAL_DATE_TIME.format(LocalDateTime.now().plusMinutes(1));
+//		String to = DateTimeFormatter.ISO_OFFSET_DATE_TIME.format(LocalDateTime.now().plusMinutes(1).atOffset(ZoneOffset.of("+00:00")));
+		String to = DateTimeFormatter.ISO_LOCAL_DATE_TIME.format(LocalDateTime.now().plusMinutes(1))+"+00:00";
 
 		Response response = gltOpenApi.getDatalogContent(systemId, point, from, to);
 		int code = response.getCode();
@@ -117,11 +122,13 @@ public class GltConverter {
 				DatalogContentPojo dc = (DatalogContentPojo) object;
 				logger.log(Level.INFO, "Data: " + dc);
 				GltSide glt = GltFactory.eINSTANCE.createGltSide();
-				Admin admin = glt.getAdmin();
+				Admin admin = ProviderFactory.eINSTANCE.createAdmin();
+				glt.setAdmin(admin);
+				glt.setId(conf.systemID());
 				admin.setLocation(geoJson);
 				MonitoringData service = GltFactory.eINSTANCE.createMonitoringData();
 				service.setValue(dc.getValue());
-				glt.getServices().put(dc.getName(), service);
+				glt.getServices().put(dc.getName().replace(" ", "_"), service);
 				sensiNact.pushUpdate(glt);
 //				dc.getTime();
 			}
