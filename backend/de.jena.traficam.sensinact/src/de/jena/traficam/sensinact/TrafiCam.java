@@ -62,6 +62,7 @@ import de.jena.traficam.CamConfig;
 import de.jena.traficam.GpsCoordinates;
 import de.jena.traficam.Scene;
 import de.jena.traficam.TrafiCamObject;
+import de.jena.traficam.sensinact.model.traficamprovider.ObservedObjects;
 import de.jena.traficam.sensinact.model.traficamprovider.TraficamAdmin;
 import de.jena.traficam.sensinact.model.traficamprovider.TraficamProvider;
 import de.jena.traficam.sensinact.model.traficamprovider.TraficamproviderFactory;
@@ -319,7 +320,11 @@ public class TrafiCam {
 			traficamProvider.setId(camId);
 			traficamProvider.setAdmin(traficamAdmin);
 			traficamAdmin.setLocation(createLocation(camId));
-			traficamAdmin.setViewport(createFeatureCollection(camId));
+			FeatureCollection viewport = createFeatureCollection(camId);
+			traficamAdmin.setViewport(viewport);
+			ObservedObjects area = TraficamproviderFactory.eINSTANCE.createObservedObjects();
+			area.setObjects(viewport);
+			traficamProvider.getServices().put("observedArea", area);
 			Promise<?> promise = sensiNact.pushUpdate(traficamProvider);
 			promise.onFailure(e -> logger.log(Level.ERROR, "Error while pushing configuration to sensinact.", e));
 
