@@ -29,37 +29,37 @@ import org.osgi.annotation.versioning.ProviderType;
 @ProviderType
 public interface ImportStatisticPojo extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Add</b></em>' reference list.
+	 * Returns the value of the '<em><b>Add</b></em>' containment reference list.
 	 * The list contents are of type {@link de.jena.model.glt.CylonNetworkPojo}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Add</em>' reference list.
+	 * @return the value of the '<em>Add</em>' containment reference list.
 	 * @see de.jena.model.glt.GltPackage#getImportStatisticPojo_Add()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<CylonNetworkPojo> getAdd();
 
 	/**
-	 * Returns the value of the '<em><b>Remove</b></em>' reference list.
+	 * Returns the value of the '<em><b>Remove</b></em>' containment reference list.
 	 * The list contents are of type {@link de.jena.model.glt.CylonNetworkPojo}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Remove</em>' reference list.
+	 * @return the value of the '<em>Remove</em>' containment reference list.
 	 * @see de.jena.model.glt.GltPackage#getImportStatisticPojo_Remove()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<CylonNetworkPojo> getRemove();
 
 	/**
-	 * Returns the value of the '<em><b>Update</b></em>' reference list.
+	 * Returns the value of the '<em><b>Update</b></em>' containment reference list.
 	 * The list contents are of type {@link de.jena.model.glt.CylonNetworkPojo}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Update</em>' reference list.
+	 * @return the value of the '<em>Update</em>' containment reference list.
 	 * @see de.jena.model.glt.GltPackage#getImportStatisticPojo_Update()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<CylonNetworkPojo> getUpdate();

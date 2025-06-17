@@ -9,6 +9,7 @@ import de.jena.model.glt.GltPackage;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -18,7 +19,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -150,7 +152,7 @@ public class ContractPojoImpl extends MinimalEObjectImpl.Container implements Co
 	protected String comment = COMMENT_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getContacts() <em>Contacts</em>}' reference list.
+	 * The cached value of the '{@link #getContacts() <em>Contacts</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getContacts()
@@ -220,7 +222,7 @@ public class ContractPojoImpl extends MinimalEObjectImpl.Container implements Co
 	protected String number = NUMBER_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getPartner() <em>Partner</em>}' reference.
+	 * The cached value of the '{@link #getPartner() <em>Partner</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getPartner()
@@ -230,7 +232,7 @@ public class ContractPojoImpl extends MinimalEObjectImpl.Container implements Co
 	protected ContactPojo partner;
 
 	/**
-	 * The cached value of the '{@link #getReferee() <em>Referee</em>}' reference.
+	 * The cached value of the '{@link #getReferee() <em>Referee</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getReferee()
@@ -481,7 +483,7 @@ public class ContractPojoImpl extends MinimalEObjectImpl.Container implements Co
 	@Override
 	public EList<ContactPojo> getContacts() {
 		if (contacts == null) {
-			contacts = new EObjectResolvingEList<ContactPojo>(ContactPojo.class, this, GltPackage.CONTRACT_POJO__CONTACTS);
+			contacts = new EObjectContainmentEList<ContactPojo>(ContactPojo.class, this, GltPackage.CONTRACT_POJO__CONTACTS);
 		}
 		return contacts;
 	}
@@ -562,14 +564,6 @@ public class ContractPojoImpl extends MinimalEObjectImpl.Container implements Co
 	 */
 	@Override
 	public ContactPojo getPartner() {
-		if (partner != null && partner.eIsProxy()) {
-			InternalEObject oldPartner = (InternalEObject)partner;
-			partner = (ContactPojo)eResolveProxy(oldPartner);
-			if (partner != oldPartner) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GltPackage.CONTRACT_POJO__PARTNER, oldPartner, partner));
-			}
-		}
 		return partner;
 	}
 
@@ -578,8 +572,14 @@ public class ContractPojoImpl extends MinimalEObjectImpl.Container implements Co
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ContactPojo basicGetPartner() {
-		return partner;
+	public NotificationChain basicSetPartner(ContactPojo newPartner, NotificationChain msgs) {
+		ContactPojo oldPartner = partner;
+		partner = newPartner;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GltPackage.CONTRACT_POJO__PARTNER, oldPartner, newPartner);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -589,10 +589,17 @@ public class ContractPojoImpl extends MinimalEObjectImpl.Container implements Co
 	 */
 	@Override
 	public void setPartner(ContactPojo newPartner) {
-		ContactPojo oldPartner = partner;
-		partner = newPartner;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.CONTRACT_POJO__PARTNER, oldPartner, partner));
+		if (newPartner != partner) {
+			NotificationChain msgs = null;
+			if (partner != null)
+				msgs = ((InternalEObject)partner).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GltPackage.CONTRACT_POJO__PARTNER, null, msgs);
+			if (newPartner != null)
+				msgs = ((InternalEObject)newPartner).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GltPackage.CONTRACT_POJO__PARTNER, null, msgs);
+			msgs = basicSetPartner(newPartner, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.CONTRACT_POJO__PARTNER, newPartner, newPartner));
 	}
 
 	/**
@@ -602,14 +609,6 @@ public class ContractPojoImpl extends MinimalEObjectImpl.Container implements Co
 	 */
 	@Override
 	public ContactPojo getReferee() {
-		if (referee != null && referee.eIsProxy()) {
-			InternalEObject oldReferee = (InternalEObject)referee;
-			referee = (ContactPojo)eResolveProxy(oldReferee);
-			if (referee != oldReferee) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GltPackage.CONTRACT_POJO__REFEREE, oldReferee, referee));
-			}
-		}
 		return referee;
 	}
 
@@ -618,8 +617,14 @@ public class ContractPojoImpl extends MinimalEObjectImpl.Container implements Co
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ContactPojo basicGetReferee() {
-		return referee;
+	public NotificationChain basicSetReferee(ContactPojo newReferee, NotificationChain msgs) {
+		ContactPojo oldReferee = referee;
+		referee = newReferee;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GltPackage.CONTRACT_POJO__REFEREE, oldReferee, newReferee);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -629,10 +634,17 @@ public class ContractPojoImpl extends MinimalEObjectImpl.Container implements Co
 	 */
 	@Override
 	public void setReferee(ContactPojo newReferee) {
-		ContactPojo oldReferee = referee;
-		referee = newReferee;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.CONTRACT_POJO__REFEREE, oldReferee, referee));
+		if (newReferee != referee) {
+			NotificationChain msgs = null;
+			if (referee != null)
+				msgs = ((InternalEObject)referee).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GltPackage.CONTRACT_POJO__REFEREE, null, msgs);
+			if (newReferee != null)
+				msgs = ((InternalEObject)newReferee).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GltPackage.CONTRACT_POJO__REFEREE, null, msgs);
+			msgs = basicSetReferee(newReferee, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.CONTRACT_POJO__REFEREE, newReferee, newReferee));
 	}
 
 	/**
@@ -756,6 +768,24 @@ public class ContractPojoImpl extends MinimalEObjectImpl.Container implements Co
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case GltPackage.CONTRACT_POJO__CONTACTS:
+				return ((InternalEList<?>)getContacts()).basicRemove(otherEnd, msgs);
+			case GltPackage.CONTRACT_POJO__PARTNER:
+				return basicSetPartner(null, msgs);
+			case GltPackage.CONTRACT_POJO__REFEREE:
+				return basicSetReferee(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case GltPackage.CONTRACT_POJO__ART:
@@ -777,11 +807,9 @@ public class ContractPojoImpl extends MinimalEObjectImpl.Container implements Co
 			case GltPackage.CONTRACT_POJO__NUMBER:
 				return getNumber();
 			case GltPackage.CONTRACT_POJO__PARTNER:
-				if (resolve) return getPartner();
-				return basicGetPartner();
+				return getPartner();
 			case GltPackage.CONTRACT_POJO__REFEREE:
-				if (resolve) return getReferee();
-				return basicGetReferee();
+				return getReferee();
 			case GltPackage.CONTRACT_POJO__START:
 				return getStart();
 			case GltPackage.CONTRACT_POJO__STATE:

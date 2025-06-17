@@ -1,0 +1,41 @@
+/*
+ */
+package de.jena.model.glt;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
+
+import org.osgi.annotation.versioning.ProviderType;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Devices Collection Pojo</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link de.jena.model.glt.DevicesCollectionPojo#getBuildings <em>Buildings</em>}</li>
+ * </ul>
+ *
+ * @see de.jena.model.glt.GltPackage#getDevicesCollectionPojo()
+ * @model
+ * @generated
+ */
+@ProviderType
+public interface DevicesCollectionPojo extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Buildings</b></em>' containment reference list.
+	 * The list contents are of type {@link de.jena.model.glt.DeviceBuildingPojo}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Buildings</em>' containment reference list.
+	 * @see de.jena.model.glt.GltPackage#getDevicesCollectionPojo_Buildings()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<DeviceBuildingPojo> getBuildings();
+
+} // DevicesCollectionPojo

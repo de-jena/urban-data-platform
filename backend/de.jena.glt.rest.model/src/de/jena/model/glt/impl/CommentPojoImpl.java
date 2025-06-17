@@ -9,6 +9,7 @@ import de.jena.model.glt.StatusPojo;
 import java.math.BigInteger;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -178,7 +179,7 @@ public class CommentPojoImpl extends MinimalEObjectImpl.Container implements Com
 	protected String ownerType = OWNER_TYPE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getStatus() <em>Status</em>}' reference.
+	 * The cached value of the '{@link #getStatus() <em>Status</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getStatus()
@@ -374,14 +375,6 @@ public class CommentPojoImpl extends MinimalEObjectImpl.Container implements Com
 	 */
 	@Override
 	public StatusPojo getStatus() {
-		if (status != null && status.eIsProxy()) {
-			InternalEObject oldStatus = (InternalEObject)status;
-			status = (StatusPojo)eResolveProxy(oldStatus);
-			if (status != oldStatus) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GltPackage.COMMENT_POJO__STATUS, oldStatus, status));
-			}
-		}
 		return status;
 	}
 
@@ -390,8 +383,14 @@ public class CommentPojoImpl extends MinimalEObjectImpl.Container implements Com
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public StatusPojo basicGetStatus() {
-		return status;
+	public NotificationChain basicSetStatus(StatusPojo newStatus, NotificationChain msgs) {
+		StatusPojo oldStatus = status;
+		status = newStatus;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GltPackage.COMMENT_POJO__STATUS, oldStatus, newStatus);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -401,10 +400,31 @@ public class CommentPojoImpl extends MinimalEObjectImpl.Container implements Com
 	 */
 	@Override
 	public void setStatus(StatusPojo newStatus) {
-		StatusPojo oldStatus = status;
-		status = newStatus;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.COMMENT_POJO__STATUS, oldStatus, status));
+		if (newStatus != status) {
+			NotificationChain msgs = null;
+			if (status != null)
+				msgs = ((InternalEObject)status).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GltPackage.COMMENT_POJO__STATUS, null, msgs);
+			if (newStatus != null)
+				msgs = ((InternalEObject)newStatus).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GltPackage.COMMENT_POJO__STATUS, null, msgs);
+			msgs = basicSetStatus(newStatus, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.COMMENT_POJO__STATUS, newStatus, newStatus));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case GltPackage.COMMENT_POJO__STATUS:
+				return basicSetStatus(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -430,8 +450,7 @@ public class CommentPojoImpl extends MinimalEObjectImpl.Container implements Com
 			case GltPackage.COMMENT_POJO__OWNER_TYPE:
 				return getOwnerType();
 			case GltPackage.COMMENT_POJO__STATUS:
-				if (resolve) return getStatus();
-				return basicGetStatus();
+				return getStatus();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}

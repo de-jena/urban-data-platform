@@ -2,7 +2,9 @@ package de.jena.glt.sensinact;
 
 import java.lang.System.Logger;
 import java.lang.System.Logger.Level;
+import java.time.Instant;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 import java.util.concurrent.Executors;
@@ -11,13 +13,17 @@ import java.util.concurrent.TimeUnit;
 
 import org.eclipse.emf.common.util.ECollections;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.ETypedElement;
 import org.eclipse.sensinact.core.push.DataUpdate;
 import org.eclipse.sensinact.gateway.geojson.Coordinates;
 import org.eclipse.sensinact.gateway.geojson.GeoJsonObject;
 import org.eclipse.sensinact.gateway.geojson.Point;
 import org.eclipse.sensinact.model.core.provider.Admin;
+import org.eclipse.sensinact.model.core.provider.FeatureCustomMetadata;
 import org.eclipse.sensinact.model.core.provider.ProviderFactory;
+import org.eclipse.sensinact.model.core.provider.ResourceValueMetadata;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.ConfigurationPolicy;
@@ -26,6 +32,7 @@ import org.osgi.service.metatype.annotations.Designate;
 
 import de.jena.glt.rest.GltOpenApi;
 import de.jena.glt.sensinact.model.glt.GltFactory;
+import de.jena.glt.sensinact.model.glt.GltPackage;
 import de.jena.glt.sensinact.model.glt.GltSide;
 import de.jena.glt.sensinact.model.glt.MonitoringData;
 import de.jena.model.glt.DatalogContentPojo;
@@ -33,7 +40,7 @@ import de.jena.model.glt.Response;
 import de.jena.model.glt.SystemDescriptionPojo;
 
 /**
- * Lädt
+ * Loads data from the GLT API of the city of Jena
  * 
  * @author grune
  * @since May 27, 2025
@@ -79,7 +86,7 @@ public class GltConverter {
 				initGeo(site);
 				// TODO: Metadaten
 			}
-		} else if (code == 404){
+		} else if (code == 404) {
 			logger.log(Level.WARNING, "Response Code: " + code + " System with id " + systemId);
 		} else {
 			logger.log(Level.WARNING, "Response Code: " + code + " : " + response.getDescription());
@@ -113,31 +120,60 @@ public class GltConverter {
 //		String to = DateTimeFormatter.ISO_LOCAL_DATE_TIME.format(LocalDateTime.now().plusMinutes(1));
 //		String to = DateTimeFormatter.ISO_OFFSET_DATE_TIME.format(LocalDateTime.now().plusMinutes(1).atOffset(ZoneOffset.of("+00:00")));
 		String to = DateTimeFormatter.ISO_LOCAL_DATE_TIME.format(LocalDateTime.now().plusMinutes(1))+"+00:00";
-
-		Response response = gltOpenApi.getDatalogContent(systemId, point, from, to);
-		int code = response.getCode();
-		if (code == 200) {
-			EList<EObject> result = response.getResult();
-			for (EObject object : result) {
-				DatalogContentPojo dc = (DatalogContentPojo) object;
-				logger.log(Level.INFO, "Data: " + dc);
+		try {
+			Response response = gltOpenApi.getDatalogContent(systemId, point, from, to);
+			int code = response.getCode();
+			if (code == 200) {
+				EList<EObject> result = response.getResult();
 				GltSide glt = GltFactory.eINSTANCE.createGltSide();
 				Admin admin = ProviderFactory.eINSTANCE.createAdmin();
 				glt.setAdmin(admin);
-				glt.setId(conf.systemID());
 				admin.setLocation(geoJson);
-				MonitoringData service = GltFactory.eINSTANCE.createMonitoringData();
-				service.setValue(dc.getValue());
-				glt.getServices().put(dc.getName().replace(" ", "_"), service);
-				sensiNact.pushUpdate(glt);
+				glt.setId(conf.systemID());
+				for (EObject object : result) {
+					DatalogContentPojo dc = (DatalogContentPojo) object;
+					logger.log(Level.INFO, "Data: " + dc);
+					MonitoringData service = GltFactory.eINSTANCE.createMonitoringData();
+					EList<String> timeEntries = dc.getEntriesT();
+					if (!timeEntries.isEmpty()) {
+						String time = timeEntries.get(timeEntries.size() - 1);
+						EList<Float> valueEntries = dc.getEntriesV();
+						Float value = valueEntries.get(valueEntries.size() - 1); 
+						service.setValue(value);
+						addMetaData(dc, service, time);
+						glt.getServices().put("" + dc.getId(), service);
+					}
 //				dc.getTime();
-			}
+				}
+				sensiNact.pushUpdate(glt);
 
-		} else if (code == 404) {
-			logger.log(Level.INFO, "Response Code: " + code + " : No new data.");
-		} else {
-			logger.log(Level.INFO, "Response Code: " + code + " : " + response.getDescription());
+			} else if (code == 404) {
+				logger.log(Level.INFO, "Response Code: " + code + " : No new data.");
+			} else {
+				logger.log(Level.INFO, "Response Code: " + code + " : " + response.getDescription());
+			}
+		} catch (Exception e) {
+			logger.log(Level.ERROR, "Error while updating datalog content for system {0}", conf.systemID(), e);
 		}
+	}
+
+	private void addMetaData(DatalogContentPojo dc, MonitoringData service, String time) {
+		EMap<ETypedElement, ResourceValueMetadata> metadata = service.getMetadata();
+		ResourceValueMetadata md = ProviderFactory.eINSTANCE.createResourceValueMetadata();
+		Instant instant = LocalDateTime.parse(time, DateTimeFormatter.ISO_OFFSET_DATE_TIME)
+				.atZone(ZoneId.of("Europe/Berlin")).toInstant();
+		md.setTimestamp(instant);
+		md.getExtra().add(createCustomMetadata("name", dc.getName()));
+		md.getExtra().add(createCustomMetadata("number", dc.getPointNumber()));
+		md.getExtra().add(createCustomMetadata("id", dc.getPointId()));
+		metadata.put(GltPackage.eINSTANCE.getMonitoringData_Value(), md);
+	}
+
+	private FeatureCustomMetadata createCustomMetadata(String key, Object value) {
+		FeatureCustomMetadata fcmd = ProviderFactory.eINSTANCE.createFeatureCustomMetadata();
+		fcmd.setName(key);
+		fcmd.setValue(value);
+		return fcmd;
 	}
 }
 // 16842753 16842754  16842755

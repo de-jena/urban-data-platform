@@ -57,22 +57,22 @@ public interface Alarm extends EObject {
 	void setFlags(Integer value);
 
 	/**
-	 * Returns the value of the '<em><b>Id</b></em>' reference.
+	 * Returns the value of the '<em><b>Id</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id</em>' reference.
+	 * @return the value of the '<em>Id</em>' containment reference.
 	 * @see #setId(AlarmId)
 	 * @see de.jena.model.glt.GltPackage#getAlarm_Id()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	AlarmId getId();
 
 	/**
-	 * Sets the value of the '{@link de.jena.model.glt.Alarm#getId <em>Id</em>}' reference.
+	 * Sets the value of the '{@link de.jena.model.glt.Alarm#getId <em>Id</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id</em>' reference.
+	 * @param value the new value of the '<em>Id</em>' containment reference.
 	 * @see #getId()
 	 * @generated
 	 */

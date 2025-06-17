@@ -8,13 +8,17 @@ import de.jena.model.glt.ImportStatisticPojo;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,7 +37,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  */
 public class ImportStatisticPojoImpl extends MinimalEObjectImpl.Container implements ImportStatisticPojo {
 	/**
-	 * The cached value of the '{@link #getAdd() <em>Add</em>}' reference list.
+	 * The cached value of the '{@link #getAdd() <em>Add</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getAdd()
@@ -43,7 +47,7 @@ public class ImportStatisticPojoImpl extends MinimalEObjectImpl.Container implem
 	protected EList<CylonNetworkPojo> add;
 
 	/**
-	 * The cached value of the '{@link #getRemove() <em>Remove</em>}' reference list.
+	 * The cached value of the '{@link #getRemove() <em>Remove</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRemove()
@@ -53,7 +57,7 @@ public class ImportStatisticPojoImpl extends MinimalEObjectImpl.Container implem
 	protected EList<CylonNetworkPojo> remove;
 
 	/**
-	 * The cached value of the '{@link #getUpdate() <em>Update</em>}' reference list.
+	 * The cached value of the '{@link #getUpdate() <em>Update</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getUpdate()
@@ -89,7 +93,7 @@ public class ImportStatisticPojoImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public EList<CylonNetworkPojo> getAdd() {
 		if (add == null) {
-			add = new EObjectResolvingEList<CylonNetworkPojo>(CylonNetworkPojo.class, this, GltPackage.IMPORT_STATISTIC_POJO__ADD);
+			add = new EObjectContainmentEList<CylonNetworkPojo>(CylonNetworkPojo.class, this, GltPackage.IMPORT_STATISTIC_POJO__ADD);
 		}
 		return add;
 	}
@@ -102,7 +106,7 @@ public class ImportStatisticPojoImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public EList<CylonNetworkPojo> getRemove() {
 		if (remove == null) {
-			remove = new EObjectResolvingEList<CylonNetworkPojo>(CylonNetworkPojo.class, this, GltPackage.IMPORT_STATISTIC_POJO__REMOVE);
+			remove = new EObjectContainmentEList<CylonNetworkPojo>(CylonNetworkPojo.class, this, GltPackage.IMPORT_STATISTIC_POJO__REMOVE);
 		}
 		return remove;
 	}
@@ -115,9 +119,27 @@ public class ImportStatisticPojoImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public EList<CylonNetworkPojo> getUpdate() {
 		if (update == null) {
-			update = new EObjectResolvingEList<CylonNetworkPojo>(CylonNetworkPojo.class, this, GltPackage.IMPORT_STATISTIC_POJO__UPDATE);
+			update = new EObjectContainmentEList<CylonNetworkPojo>(CylonNetworkPojo.class, this, GltPackage.IMPORT_STATISTIC_POJO__UPDATE);
 		}
 		return update;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case GltPackage.IMPORT_STATISTIC_POJO__ADD:
+				return ((InternalEList<?>)getAdd()).basicRemove(otherEnd, msgs);
+			case GltPackage.IMPORT_STATISTIC_POJO__REMOVE:
+				return ((InternalEList<?>)getRemove()).basicRemove(otherEnd, msgs);
+			case GltPackage.IMPORT_STATISTIC_POJO__UPDATE:
+				return ((InternalEList<?>)getUpdate()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

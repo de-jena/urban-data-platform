@@ -9,15 +9,18 @@ import de.jena.model.glt.TechFacilityPojo;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -160,7 +163,7 @@ public class TechFacilityPojoImpl extends MinimalEObjectImpl.Container implement
 	protected String launchDate = LAUNCH_DATE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getContracts() <em>Contracts</em>}' reference list.
+	 * The cached value of the '{@link #getContracts() <em>Contracts</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getContracts()
@@ -334,9 +337,23 @@ public class TechFacilityPojoImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public EList<ContractPojo> getContracts() {
 		if (contracts == null) {
-			contracts = new EObjectResolvingEList<ContractPojo>(ContractPojo.class, this, GltPackage.TECH_FACILITY_POJO__CONTRACTS);
+			contracts = new EObjectContainmentEList<ContractPojo>(ContractPojo.class, this, GltPackage.TECH_FACILITY_POJO__CONTRACTS);
 		}
 		return contracts;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case GltPackage.TECH_FACILITY_POJO__CONTRACTS:
+				return ((InternalEList<?>)getContracts()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

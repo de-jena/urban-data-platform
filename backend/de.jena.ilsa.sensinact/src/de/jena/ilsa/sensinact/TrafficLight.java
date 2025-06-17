@@ -20,7 +20,9 @@ import java.lang.System.Logger.Level;
 import java.nio.CharBuffer;
 import java.nio.charset.StandardCharsets;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -39,6 +41,7 @@ import org.eclipse.sensinact.model.core.provider.FeatureCustomMetadata;
 import org.eclipse.sensinact.model.core.provider.ProviderFactory;
 import org.eclipse.sensinact.model.core.provider.ResourceValueMetadata;
 import org.eclipse.sensinact.model.core.provider.Service;
+import org.gecko.codec.constants.CodecResourceOptions;
 import org.gecko.emf.json.annotation.RequireEMFJson;
 import org.gecko.emf.osgi.constants.EMFNamespaces;
 import org.gecko.osgi.messaging.Message;
@@ -61,6 +64,7 @@ import de.jena.udp.model.geojson.GeoJSON;
 import de.jena.udp.model.trafficos.trafficlight.TLConfiguration;
 import de.jena.udp.model.trafficos.trafficlight.TLSignal;
 import de.jena.udp.model.trafficos.trafficlight.TLSignalState;
+import de.jena.udp.model.trafficos.trafficlight.TOSTrafficLightPackage;
 
 @RequireEMFJson
 @Requirement(namespace = "osgi.identity", filter = "(osgi.identity=de.jena.ilsa.sensinact.mmt)")
@@ -176,10 +180,12 @@ public class TrafficLight {
 	}
 
 	private void updateConfig(Message message) {
+		Map<String, Object> options = new HashMap<>();
+		options.put(CodecResourceOptions.CODEC_ROOT_OBJECT, TOSTrafficLightPackage.eINSTANCE.getTLConfiguration());
 		ResourceSet resourceSet = serviceObjects.getService();
 		Resource resource = resourceSet.createResource(TEMP_URI);
 		try {
-			resource.load(new ByteArrayInputStream(message.payload().array()), Collections.emptyMap());
+			resource.load(new ByteArrayInputStream(message.payload().array()), options);
 			TLConfiguration configuration = (TLConfiguration) resource.getContents().get(0);
 
 			Ilsa ilsa = traf.doTransformation(configuration);

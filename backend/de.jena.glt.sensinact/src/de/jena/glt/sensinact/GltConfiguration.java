@@ -7,4 +7,5 @@ public @interface GltConfiguration {
 	String systemID();
 	int[] points();
 	long interval() default 10;
+	long back() default 60;
 }

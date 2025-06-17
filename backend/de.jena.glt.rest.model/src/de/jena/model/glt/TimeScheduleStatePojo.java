@@ -165,13 +165,13 @@ public interface TimeScheduleStatePojo extends EObject {
 	void setIsUnknown(Boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Comments</b></em>' reference list.
+	 * Returns the value of the '<em><b>Comments</b></em>' containment reference list.
 	 * The list contents are of type {@link de.jena.model.glt.CommentPojo}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Comments</em>' reference list.
+	 * @return the value of the '<em>Comments</em>' containment reference list.
 	 * @see de.jena.model.glt.GltPackage#getTimeScheduleStatePojo_Comments()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<CommentPojo> getComments();

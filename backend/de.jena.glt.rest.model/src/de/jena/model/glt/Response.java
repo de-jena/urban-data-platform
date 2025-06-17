@@ -96,13 +96,13 @@ public interface Response extends EObject {
 	void setResponse(jakarta.ws.rs.core.Response value);
 
 	/**
-	 * Returns the value of the '<em><b>Result</b></em>' reference list.
+	 * Returns the value of the '<em><b>Result</b></em>' containment reference list.
 	 * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Result</em>' reference list.
+	 * @return the value of the '<em>Result</em>' containment reference list.
 	 * @see de.jena.model.glt.GltPackage#getResponse_Result()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<EObject> getResult();

@@ -61,6 +61,15 @@ public interface GltFactory extends EFactory {
 	AlarmPojo createAlarmPojo();
 
 	/**
+	 * Returns a new object of class '<em>Linked Id String</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Linked Id String</em>'.
+	 * @generated
+	 */
+	LinkedIdString createLinkedIdString();
+
+	/**
 	 * Returns a new object of class '<em>Instructions Pojo</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -79,15 +88,6 @@ public interface GltFactory extends EFactory {
 	RelationPojo createRelationPojo();
 
 	/**
-	 * Returns a new object of class '<em>Calendar Event Pojo</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Calendar Event Pojo</em>'.
-	 * @generated
-	 */
-	CalendarEventPojo createCalendarEventPojo();
-
-	/**
 	 * Returns a new object of class '<em>Calender Event Request</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -95,6 +95,15 @@ public interface GltFactory extends EFactory {
 	 * @generated
 	 */
 	CalenderEventRequest createCalenderEventRequest();
+
+	/**
+	 * Returns a new object of class '<em>Calendar Event Pojo</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Calendar Event Pojo</em>'.
+	 * @generated
+	 */
+	CalendarEventPojo createCalendarEventPojo();
 
 	/**
 	 * Returns a new object of class '<em>Comment Pojo</em>'.
@@ -122,6 +131,51 @@ public interface GltFactory extends EFactory {
 	 * @generated
 	 */
 	CommentRequest createCommentRequest();
+
+	/**
+	 * Returns a new object of class '<em>Device Building Pojo</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Device Building Pojo</em>'.
+	 * @generated
+	 */
+	DeviceBuildingPojo createDeviceBuildingPojo();
+
+	/**
+	 * Returns a new object of class '<em>Device Pojo</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Device Pojo</em>'.
+	 * @generated
+	 */
+	DevicePojo createDevicePojo();
+
+	/**
+	 * Returns a new object of class '<em>Device Connection Pojo</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Device Connection Pojo</em>'.
+	 * @generated
+	 */
+	DeviceConnectionPojo createDeviceConnectionPojo();
+
+	/**
+	 * Returns a new object of class '<em>Devices Collection Pojo</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Devices Collection Pojo</em>'.
+	 * @generated
+	 */
+	DevicesCollectionPojo createDevicesCollectionPojo();
+
+	/**
+	 * Returns a new object of class '<em>Device Adapter Pojo</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Device Adapter Pojo</em>'.
+	 * @generated
+	 */
+	DeviceAdapterPojo createDeviceAdapterPojo();
 
 	/**
 	 * Returns a new object of class '<em>Alarm Log Pojo</em>'.
@@ -277,6 +331,15 @@ public interface GltFactory extends EFactory {
 	TimeScheduleRecord createTimeScheduleRecord();
 
 	/**
+	 * Returns a new object of class '<em>Json Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Json Node</em>'.
+	 * @generated
+	 */
+	JsonNode createJsonNode();
+
+	/**
 	 * Returns a new object of class '<em>Address Pojo</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -394,6 +457,15 @@ public interface GltFactory extends EFactory {
 	TextRequest createTextRequest();
 
 	/**
+	 * Returns a new object of class '<em>Linked Id Integer</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Linked Id Integer</em>'.
+	 * @generated
+	 */
+	LinkedIdInteger createLinkedIdInteger();
+
+	/**
 	 * Returns a new object of class '<em>Role Pojo</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -419,15 +491,6 @@ public interface GltFactory extends EFactory {
 	 * @generated
 	 */
 	Response createResponse();
-
-	/**
-	 * Returns a new object of class '<em>Json Node</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Json Node</em>'.
-	 * @generated
-	 */
-	JsonNode createJsonNode();
 
 	/**
 	 * Returns the package supported by this factory.

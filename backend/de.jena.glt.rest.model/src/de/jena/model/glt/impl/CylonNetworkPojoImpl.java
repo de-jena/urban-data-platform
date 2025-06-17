@@ -9,15 +9,18 @@ import de.jena.model.glt.GltPackage;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -203,7 +206,7 @@ public class CylonNetworkPojoImpl extends MinimalEObjectImpl.Container implement
 	protected Integer count = COUNT_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getChildren() <em>Children</em>}' reference list.
+	 * The cached value of the '{@link #getChildren() <em>Children</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getChildren()
@@ -443,7 +446,7 @@ public class CylonNetworkPojoImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public EList<EntityPojo> getChildren() {
 		if (children == null) {
-			children = new EObjectResolvingEList<EntityPojo>(EntityPojo.class, this, GltPackage.CYLON_NETWORK_POJO__CHILDREN);
+			children = new EObjectContainmentEList<EntityPojo>(EntityPojo.class, this, GltPackage.CYLON_NETWORK_POJO__CHILDREN);
 		}
 		return children;
 	}
@@ -469,6 +472,20 @@ public class CylonNetworkPojoImpl extends MinimalEObjectImpl.Container implement
 		summary = newSummary;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.CYLON_NETWORK_POJO__SUMMARY, oldSummary, summary));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case GltPackage.CYLON_NETWORK_POJO__CHILDREN:
+				return ((InternalEList<?>)getChildren()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

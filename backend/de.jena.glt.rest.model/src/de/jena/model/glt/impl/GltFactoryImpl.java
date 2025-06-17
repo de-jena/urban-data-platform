@@ -61,13 +61,19 @@ public class GltFactoryImpl extends EFactoryImpl implements GltFactory {
 			case GltPackage.ALARM_ID: return createAlarmId();
 			case GltPackage.ALARM_REQUEST: return createAlarmRequest();
 			case GltPackage.ALARM_POJO: return createAlarmPojo();
+			case GltPackage.LINKED_ID_STRING: return createLinkedIdString();
 			case GltPackage.INSTRUCTIONS_POJO: return createInstructionsPojo();
 			case GltPackage.RELATION_POJO: return createRelationPojo();
-			case GltPackage.CALENDAR_EVENT_POJO: return createCalendarEventPojo();
 			case GltPackage.CALENDER_EVENT_REQUEST: return createCalenderEventRequest();
+			case GltPackage.CALENDAR_EVENT_POJO: return createCalendarEventPojo();
 			case GltPackage.COMMENT_POJO: return createCommentPojo();
 			case GltPackage.STATUS_POJO: return createStatusPojo();
 			case GltPackage.COMMENT_REQUEST: return createCommentRequest();
+			case GltPackage.DEVICE_BUILDING_POJO: return createDeviceBuildingPojo();
+			case GltPackage.DEVICE_POJO: return createDevicePojo();
+			case GltPackage.DEVICE_CONNECTION_POJO: return createDeviceConnectionPojo();
+			case GltPackage.DEVICES_COLLECTION_POJO: return createDevicesCollectionPojo();
+			case GltPackage.DEVICE_ADAPTER_POJO: return createDeviceAdapterPojo();
 			case GltPackage.ALARM_LOG_POJO: return createAlarmLogPojo();
 			case GltPackage.CHANGE_ITEM: return createChangeItem();
 			case GltPackage.DATALOG_CONTENT_POJO: return createDatalogContentPojo();
@@ -85,6 +91,7 @@ public class GltFactoryImpl extends EFactoryImpl implements GltFactory {
 			case GltPackage.VERSION_INFO: return createVersionInfo();
 			case GltPackage.POINT_RECORD: return createPointRecord();
 			case GltPackage.TIME_SCHEDULE_RECORD: return createTimeScheduleRecord();
+			case GltPackage.JSON_NODE: return createJsonNode();
 			case GltPackage.ADDRESS_POJO: return createAddressPojo();
 			case GltPackage.SYSTEM_DESCRIPTION_POJO: return createSystemDescriptionPojo();
 			case GltPackage.SYSTEM_DESCRIPTION_REQUEST: return createSystemDescriptionRequest();
@@ -98,10 +105,10 @@ public class GltFactoryImpl extends EFactoryImpl implements GltFactory {
 			case GltPackage.IMPORT_STATISTIC_POJO: return createImportStatisticPojo();
 			case GltPackage.TEXT: return createText();
 			case GltPackage.TEXT_REQUEST: return createTextRequest();
+			case GltPackage.LINKED_ID_INTEGER: return createLinkedIdInteger();
 			case GltPackage.ROLE_POJO: return createRolePojo();
 			case GltPackage.SUSPECT_POJO: return createSuspectPojo();
 			case GltPackage.RESPONSE: return createResponse();
-			case GltPackage.JSON_NODE: return createJsonNode();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -187,6 +194,17 @@ public class GltFactoryImpl extends EFactoryImpl implements GltFactory {
 	 * @generated
 	 */
 	@Override
+	public LinkedIdString createLinkedIdString() {
+		LinkedIdStringImpl linkedIdString = new LinkedIdStringImpl();
+		return linkedIdString;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public InstructionsPojo createInstructionsPojo() {
 		InstructionsPojoImpl instructionsPojo = new InstructionsPojoImpl();
 		return instructionsPojo;
@@ -209,9 +227,9 @@ public class GltFactoryImpl extends EFactoryImpl implements GltFactory {
 	 * @generated
 	 */
 	@Override
-	public CalendarEventPojo createCalendarEventPojo() {
-		CalendarEventPojoImpl calendarEventPojo = new CalendarEventPojoImpl();
-		return calendarEventPojo;
+	public CalenderEventRequest createCalenderEventRequest() {
+		CalenderEventRequestImpl calenderEventRequest = new CalenderEventRequestImpl();
+		return calenderEventRequest;
 	}
 
 	/**
@@ -220,9 +238,9 @@ public class GltFactoryImpl extends EFactoryImpl implements GltFactory {
 	 * @generated
 	 */
 	@Override
-	public CalenderEventRequest createCalenderEventRequest() {
-		CalenderEventRequestImpl calenderEventRequest = new CalenderEventRequestImpl();
-		return calenderEventRequest;
+	public CalendarEventPojo createCalendarEventPojo() {
+		CalendarEventPojoImpl calendarEventPojo = new CalendarEventPojoImpl();
+		return calendarEventPojo;
 	}
 
 	/**
@@ -256,6 +274,61 @@ public class GltFactoryImpl extends EFactoryImpl implements GltFactory {
 	public CommentRequest createCommentRequest() {
 		CommentRequestImpl commentRequest = new CommentRequestImpl();
 		return commentRequest;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DeviceBuildingPojo createDeviceBuildingPojo() {
+		DeviceBuildingPojoImpl deviceBuildingPojo = new DeviceBuildingPojoImpl();
+		return deviceBuildingPojo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DevicePojo createDevicePojo() {
+		DevicePojoImpl devicePojo = new DevicePojoImpl();
+		return devicePojo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DeviceConnectionPojo createDeviceConnectionPojo() {
+		DeviceConnectionPojoImpl deviceConnectionPojo = new DeviceConnectionPojoImpl();
+		return deviceConnectionPojo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DevicesCollectionPojo createDevicesCollectionPojo() {
+		DevicesCollectionPojoImpl devicesCollectionPojo = new DevicesCollectionPojoImpl();
+		return devicesCollectionPojo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DeviceAdapterPojo createDeviceAdapterPojo() {
+		DeviceAdapterPojoImpl deviceAdapterPojo = new DeviceAdapterPojoImpl();
+		return deviceAdapterPojo;
 	}
 
 	/**
@@ -451,6 +524,17 @@ public class GltFactoryImpl extends EFactoryImpl implements GltFactory {
 	 * @generated
 	 */
 	@Override
+	public JsonNode createJsonNode() {
+		JsonNodeImpl jsonNode = new JsonNodeImpl();
+		return jsonNode;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public AddressPojo createAddressPojo() {
 		AddressPojoImpl addressPojo = new AddressPojoImpl();
 		return addressPojo;
@@ -594,6 +678,17 @@ public class GltFactoryImpl extends EFactoryImpl implements GltFactory {
 	 * @generated
 	 */
 	@Override
+	public LinkedIdInteger createLinkedIdInteger() {
+		LinkedIdIntegerImpl linkedIdInteger = new LinkedIdIntegerImpl();
+		return linkedIdInteger;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public RolePojo createRolePojo() {
 		RolePojoImpl rolePojo = new RolePojoImpl();
 		return rolePojo;
@@ -619,17 +714,6 @@ public class GltFactoryImpl extends EFactoryImpl implements GltFactory {
 	public Response createResponse() {
 		ResponseImpl response = new ResponseImpl();
 		return response;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public JsonNode createJsonNode() {
-		JsonNodeImpl jsonNode = new JsonNodeImpl();
-		return jsonNode;
 	}
 
 	/**

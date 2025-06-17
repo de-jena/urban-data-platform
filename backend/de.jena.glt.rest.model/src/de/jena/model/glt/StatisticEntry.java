@@ -26,22 +26,22 @@ import org.osgi.annotation.versioning.ProviderType;
 @ProviderType
 public interface StatisticEntry extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Time Window</b></em>' reference.
+	 * Returns the value of the '<em><b>Time Window</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Time Window</em>' reference.
+	 * @return the value of the '<em>Time Window</em>' containment reference.
 	 * @see #setTimeWindow(TimeWindow)
 	 * @see de.jena.model.glt.GltPackage#getStatisticEntry_TimeWindow()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	TimeWindow getTimeWindow();
 
 	/**
-	 * Sets the value of the '{@link de.jena.model.glt.StatisticEntry#getTimeWindow <em>Time Window</em>}' reference.
+	 * Sets the value of the '{@link de.jena.model.glt.StatisticEntry#getTimeWindow <em>Time Window</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Time Window</em>' reference.
+	 * @param value the new value of the '<em>Time Window</em>' containment reference.
 	 * @see #getTimeWindow()
 	 * @generated
 	 */

@@ -152,13 +152,13 @@ public interface ContractPojo extends EObject {
 	void setComment(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Contacts</b></em>' reference list.
+	 * Returns the value of the '<em><b>Contacts</b></em>' containment reference list.
 	 * The list contents are of type {@link de.jena.model.glt.ContactPojo}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Contacts</em>' reference list.
+	 * @return the value of the '<em>Contacts</em>' containment reference list.
 	 * @see de.jena.model.glt.GltPackage#getContractPojo_Contacts()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<ContactPojo> getContacts();
@@ -230,44 +230,44 @@ public interface ContractPojo extends EObject {
 	void setNumber(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Partner</b></em>' reference.
+	 * Returns the value of the '<em><b>Partner</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Partner</em>' reference.
+	 * @return the value of the '<em>Partner</em>' containment reference.
 	 * @see #setPartner(ContactPojo)
 	 * @see de.jena.model.glt.GltPackage#getContractPojo_Partner()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	ContactPojo getPartner();
 
 	/**
-	 * Sets the value of the '{@link de.jena.model.glt.ContractPojo#getPartner <em>Partner</em>}' reference.
+	 * Sets the value of the '{@link de.jena.model.glt.ContractPojo#getPartner <em>Partner</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Partner</em>' reference.
+	 * @param value the new value of the '<em>Partner</em>' containment reference.
 	 * @see #getPartner()
 	 * @generated
 	 */
 	void setPartner(ContactPojo value);
 
 	/**
-	 * Returns the value of the '<em><b>Referee</b></em>' reference.
+	 * Returns the value of the '<em><b>Referee</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Referee</em>' reference.
+	 * @return the value of the '<em>Referee</em>' containment reference.
 	 * @see #setReferee(ContactPojo)
 	 * @see de.jena.model.glt.GltPackage#getContractPojo_Referee()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	ContactPojo getReferee();
 
 	/**
-	 * Sets the value of the '{@link de.jena.model.glt.ContractPojo#getReferee <em>Referee</em>}' reference.
+	 * Sets the value of the '{@link de.jena.model.glt.ContractPojo#getReferee <em>Referee</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Referee</em>' reference.
+	 * @param value the new value of the '<em>Referee</em>' containment reference.
 	 * @see #getReferee()
 	 * @generated
 	 */

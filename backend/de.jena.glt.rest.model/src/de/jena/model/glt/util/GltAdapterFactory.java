@@ -84,6 +84,10 @@ public class GltAdapterFactory extends AdapterFactoryImpl {
 				return createAlarmPojoAdapter();
 			}
 			@Override
+			public Adapter caseLinkedIdString(LinkedIdString object) {
+				return createLinkedIdStringAdapter();
+			}
+			@Override
 			public Adapter caseInstructionsPojo(InstructionsPojo object) {
 				return createInstructionsPojoAdapter();
 			}
@@ -92,12 +96,12 @@ public class GltAdapterFactory extends AdapterFactoryImpl {
 				return createRelationPojoAdapter();
 			}
 			@Override
-			public Adapter caseCalendarEventPojo(CalendarEventPojo object) {
-				return createCalendarEventPojoAdapter();
-			}
-			@Override
 			public Adapter caseCalenderEventRequest(CalenderEventRequest object) {
 				return createCalenderEventRequestAdapter();
+			}
+			@Override
+			public Adapter caseCalendarEventPojo(CalendarEventPojo object) {
+				return createCalendarEventPojoAdapter();
 			}
 			@Override
 			public Adapter caseCommentPojo(CommentPojo object) {
@@ -110,6 +114,26 @@ public class GltAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseCommentRequest(CommentRequest object) {
 				return createCommentRequestAdapter();
+			}
+			@Override
+			public Adapter caseDeviceBuildingPojo(DeviceBuildingPojo object) {
+				return createDeviceBuildingPojoAdapter();
+			}
+			@Override
+			public Adapter caseDevicePojo(DevicePojo object) {
+				return createDevicePojoAdapter();
+			}
+			@Override
+			public Adapter caseDeviceConnectionPojo(DeviceConnectionPojo object) {
+				return createDeviceConnectionPojoAdapter();
+			}
+			@Override
+			public Adapter caseDevicesCollectionPojo(DevicesCollectionPojo object) {
+				return createDevicesCollectionPojoAdapter();
+			}
+			@Override
+			public Adapter caseDeviceAdapterPojo(DeviceAdapterPojo object) {
+				return createDeviceAdapterPojoAdapter();
 			}
 			@Override
 			public Adapter caseAlarmLogPojo(AlarmLogPojo object) {
@@ -180,6 +204,10 @@ public class GltAdapterFactory extends AdapterFactoryImpl {
 				return createTimeScheduleRecordAdapter();
 			}
 			@Override
+			public Adapter caseJsonNode(JsonNode object) {
+				return createJsonNodeAdapter();
+			}
+			@Override
 			public Adapter caseAddressPojo(AddressPojo object) {
 				return createAddressPojoAdapter();
 			}
@@ -232,6 +260,10 @@ public class GltAdapterFactory extends AdapterFactoryImpl {
 				return createTextRequestAdapter();
 			}
 			@Override
+			public Adapter caseLinkedIdInteger(LinkedIdInteger object) {
+				return createLinkedIdIntegerAdapter();
+			}
+			@Override
 			public Adapter caseRolePojo(RolePojo object) {
 				return createRolePojoAdapter();
 			}
@@ -250,10 +282,6 @@ public class GltAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseGltOpenApiClient(GltOpenApiClient object) {
 				return createGltOpenApiClientAdapter();
-			}
-			@Override
-			public Adapter caseJsonNode(JsonNode object) {
-				return createJsonNodeAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -332,6 +360,20 @@ public class GltAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.model.glt.LinkedIdString <em>Linked Id String</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.model.glt.LinkedIdString
+	 * @generated
+	 */
+	public Adapter createLinkedIdStringAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link de.jena.model.glt.InstructionsPojo <em>Instructions Pojo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -360,20 +402,6 @@ public class GltAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.jena.model.glt.CalendarEventPojo <em>Calendar Event Pojo</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.jena.model.glt.CalendarEventPojo
-	 * @generated
-	 */
-	public Adapter createCalendarEventPojoAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link de.jena.model.glt.CalenderEventRequest <em>Calender Event Request</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -384,6 +412,20 @@ public class GltAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCalenderEventRequestAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.model.glt.CalendarEventPojo <em>Calendar Event Pojo</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.model.glt.CalendarEventPojo
+	 * @generated
+	 */
+	public Adapter createCalendarEventPojoAdapter() {
 		return null;
 	}
 
@@ -426,6 +468,76 @@ public class GltAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCommentRequestAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.model.glt.DeviceBuildingPojo <em>Device Building Pojo</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.model.glt.DeviceBuildingPojo
+	 * @generated
+	 */
+	public Adapter createDeviceBuildingPojoAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.model.glt.DevicePojo <em>Device Pojo</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.model.glt.DevicePojo
+	 * @generated
+	 */
+	public Adapter createDevicePojoAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.model.glt.DeviceConnectionPojo <em>Device Connection Pojo</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.model.glt.DeviceConnectionPojo
+	 * @generated
+	 */
+	public Adapter createDeviceConnectionPojoAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.model.glt.DevicesCollectionPojo <em>Devices Collection Pojo</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.model.glt.DevicesCollectionPojo
+	 * @generated
+	 */
+	public Adapter createDevicesCollectionPojoAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.model.glt.DeviceAdapterPojo <em>Device Adapter Pojo</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.model.glt.DeviceAdapterPojo
+	 * @generated
+	 */
+	public Adapter createDeviceAdapterPojoAdapter() {
 		return null;
 	}
 
@@ -668,6 +780,20 @@ public class GltAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.model.glt.JsonNode <em>Json Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.model.glt.JsonNode
+	 * @generated
+	 */
+	public Adapter createJsonNodeAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link de.jena.model.glt.AddressPojo <em>Address Pojo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -850,6 +976,20 @@ public class GltAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.model.glt.LinkedIdInteger <em>Linked Id Integer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.model.glt.LinkedIdInteger
+	 * @generated
+	 */
+	public Adapter createLinkedIdIntegerAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link de.jena.model.glt.RolePojo <em>Role Pojo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -916,20 +1056,6 @@ public class GltAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGltOpenApiClientAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link de.jena.model.glt.JsonNode <em>Json Node</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.jena.model.glt.JsonNode
-	 * @generated
-	 */
-	public Adapter createJsonNodeAdapter() {
 		return null;
 	}
 

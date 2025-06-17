@@ -68,6 +68,17 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
+	 * Will return all alarm definition ids.
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	Response getAlarmIds(String regex);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
 	 * Will return alarm instruction with specified alarm id.
 	 * <!-- end-model-doc -->
 	 * @model
@@ -90,23 +101,34 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will return all alarm definition ids.
+	 * Will return all alarm definitions
 	 * <!-- end-model-doc -->
-	 * @model expandedMany="true"
+	 * @model fieldsMany="true"
 	 * @generated
 	 */
-	Response getAlarms(EList<String> expanded, String regex);
+	Response getAlarms(EList<String> fields, String regex);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Will return all ids which use the given text id.
+	 * Will return all alarms which use the given text id.
 	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated
 	 */
-	Response usage(Integer id, Boolean expanded);
+	Response usage(Integer id);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Will return all alarm ids which use the given text id.
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	Response usageIds(Integer id);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -339,10 +361,10 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-model-doc -->
 	 * Will return a collection of devices with their corresponding status.
 	 * <!-- end-model-doc -->
-	 * @model
+	 * @model kind="operation"
 	 * @generated
 	 */
-	Response getDevices(Boolean flat);
+	Response getDevices();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -354,6 +376,17 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * @generated
 	 */
 	Response getDevicesCount();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Will return a set of devices with their corresponding status (without hierarchy).
+	 * <!-- end-model-doc -->
+	 * @model kind="operation"
+	 * @generated
+	 */
+	Response getDevicesFlat();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -584,7 +617,18 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * @model systemIdsMany="true" eventTypeMany="true" flagsMany="true"
 	 * @generated
 	 */
-	Response getAlarmCountByState_1(EList<String> systemIds, Boolean summary, EList<String> eventType, EList<Integer> flags);
+	Response getAlarmCountByState_1(EList<String> systemIds, EList<String> eventType, EList<Integer> flags);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Will return all alarm counts for states by system id.
+	 * <!-- end-model-doc -->
+	 * @model systemIdsMany="true" eventTypeMany="true" flagsMany="true"
+	 * @generated
+	 */
+	Response getAlarmCountByStateAndSystem(EList<String> systemIds, EList<String> eventType, EList<Integer> flags);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1156,7 +1200,18 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * @model
 	 * @generated
 	 */
-	Response getSystems(Boolean expanded, Boolean excluded);
+	Response getSystemIds(Boolean excluded);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Will return all systems.
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	Response getSystems(Boolean excluded);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1296,10 +1351,32 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-model-doc -->
 	 * Will return all text ids.
 	 * <!-- end-model-doc -->
+	 * @model kind="operation"
+	 * @generated
+	 */
+	Response getTextIds();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Will return all text ids of given type.
+	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated
 	 */
-	Response getTextIds(Boolean expanded);
+	Response getTextIds_1(String type);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Will return all texts.
+	 * <!-- end-model-doc -->
+	 * @model kind="operation"
+	 * @generated
+	 */
+	Response getTexts();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1310,7 +1387,7 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * @model
 	 * @generated
 	 */
-	Response getTexts(String type, Boolean expanded);
+	Response getTexts_1(String type);
 
 	/**
 	 * <!-- begin-user-doc -->

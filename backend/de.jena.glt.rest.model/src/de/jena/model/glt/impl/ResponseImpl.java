@@ -8,16 +8,19 @@ import de.jena.model.glt.Response;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -97,7 +100,7 @@ public class ResponseImpl extends MinimalEObjectImpl.Container implements Respon
 	protected jakarta.ws.rs.core.Response response = RESPONSE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getResult() <em>Result</em>}' reference list.
+	 * The cached value of the '{@link #getResult() <em>Result</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getResult()
@@ -202,9 +205,23 @@ public class ResponseImpl extends MinimalEObjectImpl.Container implements Respon
 	@Override
 	public EList<EObject> getResult() {
 		if (result == null) {
-			result = new EObjectResolvingEList<EObject>(EObject.class, this, GltPackage.RESPONSE__RESULT);
+			result = new EObjectContainmentEList<EObject>(EObject.class, this, GltPackage.RESPONSE__RESULT);
 		}
 		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case GltPackage.RESPONSE__RESULT:
+				return ((InternalEList<?>)getResult()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

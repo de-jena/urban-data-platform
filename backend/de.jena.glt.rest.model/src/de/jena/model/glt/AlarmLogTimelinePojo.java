@@ -30,13 +30,13 @@ import org.osgi.annotation.versioning.ProviderType;
 @ProviderType
 public interface AlarmLogTimelinePojo extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Alarm Logs</b></em>' reference list.
+	 * Returns the value of the '<em><b>Alarm Logs</b></em>' containment reference list.
 	 * The list contents are of type {@link de.jena.model.glt.AlarmLogPojo}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Alarm Logs</em>' reference list.
+	 * @return the value of the '<em>Alarm Logs</em>' containment reference list.
 	 * @see de.jena.model.glt.GltPackage#getAlarmLogTimelinePojo_AlarmLogs()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<AlarmLogPojo> getAlarmLogs();

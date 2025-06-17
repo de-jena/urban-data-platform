@@ -50,13 +50,13 @@ public interface InstructionsPojo extends EObject {
 	void setAlarmId(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Relations</b></em>' reference list.
+	 * Returns the value of the '<em><b>Relations</b></em>' containment reference list.
 	 * The list contents are of type {@link de.jena.model.glt.RelationPojo}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Relations</em>' reference list.
+	 * @return the value of the '<em>Relations</em>' containment reference list.
 	 * @see de.jena.model.glt.GltPackage#getInstructionsPojo_Relations()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<RelationPojo> getRelations();

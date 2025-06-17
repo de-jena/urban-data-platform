@@ -7,6 +7,7 @@ import de.jena.model.glt.AlarmId;
 import de.jena.model.glt.GltPackage;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -59,7 +60,7 @@ public class AlarmImpl extends MinimalEObjectImpl.Container implements Alarm {
 	protected Integer flags = FLAGS_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' reference.
+	 * The cached value of the '{@link #getId() <em>Id</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getId()
@@ -297,14 +298,6 @@ public class AlarmImpl extends MinimalEObjectImpl.Container implements Alarm {
 	 */
 	@Override
 	public AlarmId getId() {
-		if (id != null && id.eIsProxy()) {
-			InternalEObject oldId = (InternalEObject)id;
-			id = (AlarmId)eResolveProxy(oldId);
-			if (id != oldId) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GltPackage.ALARM__ID, oldId, id));
-			}
-		}
 		return id;
 	}
 
@@ -313,8 +306,14 @@ public class AlarmImpl extends MinimalEObjectImpl.Container implements Alarm {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AlarmId basicGetId() {
-		return id;
+	public NotificationChain basicSetId(AlarmId newId, NotificationChain msgs) {
+		AlarmId oldId = id;
+		id = newId;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GltPackage.ALARM__ID, oldId, newId);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -324,10 +323,17 @@ public class AlarmImpl extends MinimalEObjectImpl.Container implements Alarm {
 	 */
 	@Override
 	public void setId(AlarmId newId) {
-		AlarmId oldId = id;
-		id = newId;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.ALARM__ID, oldId, id));
+		if (newId != id) {
+			NotificationChain msgs = null;
+			if (id != null)
+				msgs = ((InternalEObject)id).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GltPackage.ALARM__ID, null, msgs);
+			if (newId != null)
+				msgs = ((InternalEObject)newId).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GltPackage.ALARM__ID, null, msgs);
+			msgs = basicSetId(newId, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.ALARM__ID, newId, newId));
 	}
 
 	/**
@@ -543,13 +549,26 @@ public class AlarmImpl extends MinimalEObjectImpl.Container implements Alarm {
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case GltPackage.ALARM__ID:
+				return basicSetId(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case GltPackage.ALARM__FLAGS:
 				return getFlags();
 			case GltPackage.ALARM__ID:
-				if (resolve) return getId();
-				return basicGetId();
+				return getId();
 			case GltPackage.ALARM__NAME:
 				return getName();
 			case GltPackage.ALARM__DESCRIPTION:

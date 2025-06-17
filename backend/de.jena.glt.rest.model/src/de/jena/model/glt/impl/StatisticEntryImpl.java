@@ -7,6 +7,7 @@ import de.jena.model.glt.StatisticEntry;
 import de.jena.model.glt.TimeWindow;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -30,7 +31,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class StatisticEntryImpl extends MinimalEObjectImpl.Container implements StatisticEntry {
 	/**
-	 * The cached value of the '{@link #getTimeWindow() <em>Time Window</em>}' reference.
+	 * The cached value of the '{@link #getTimeWindow() <em>Time Window</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTimeWindow()
@@ -85,14 +86,6 @@ public class StatisticEntryImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	@Override
 	public TimeWindow getTimeWindow() {
-		if (timeWindow != null && timeWindow.eIsProxy()) {
-			InternalEObject oldTimeWindow = (InternalEObject)timeWindow;
-			timeWindow = (TimeWindow)eResolveProxy(oldTimeWindow);
-			if (timeWindow != oldTimeWindow) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GltPackage.STATISTIC_ENTRY__TIME_WINDOW, oldTimeWindow, timeWindow));
-			}
-		}
 		return timeWindow;
 	}
 
@@ -101,8 +94,14 @@ public class StatisticEntryImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TimeWindow basicGetTimeWindow() {
-		return timeWindow;
+	public NotificationChain basicSetTimeWindow(TimeWindow newTimeWindow, NotificationChain msgs) {
+		TimeWindow oldTimeWindow = timeWindow;
+		timeWindow = newTimeWindow;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GltPackage.STATISTIC_ENTRY__TIME_WINDOW, oldTimeWindow, newTimeWindow);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -112,10 +111,17 @@ public class StatisticEntryImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	@Override
 	public void setTimeWindow(TimeWindow newTimeWindow) {
-		TimeWindow oldTimeWindow = timeWindow;
-		timeWindow = newTimeWindow;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.STATISTIC_ENTRY__TIME_WINDOW, oldTimeWindow, timeWindow));
+		if (newTimeWindow != timeWindow) {
+			NotificationChain msgs = null;
+			if (timeWindow != null)
+				msgs = ((InternalEObject)timeWindow).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GltPackage.STATISTIC_ENTRY__TIME_WINDOW, null, msgs);
+			if (newTimeWindow != null)
+				msgs = ((InternalEObject)newTimeWindow).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GltPackage.STATISTIC_ENTRY__TIME_WINDOW, null, msgs);
+			msgs = basicSetTimeWindow(newTimeWindow, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.STATISTIC_ENTRY__TIME_WINDOW, newTimeWindow, newTimeWindow));
 	}
 
 	/**
@@ -147,11 +153,24 @@ public class StatisticEntryImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case GltPackage.STATISTIC_ENTRY__TIME_WINDOW:
+				return basicSetTimeWindow(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case GltPackage.STATISTIC_ENTRY__TIME_WINDOW:
-				if (resolve) return getTimeWindow();
-				return basicGetTimeWindow();
+				return getTimeWindow();
 			case GltPackage.STATISTIC_ENTRY__VALUES:
 				return getValues();
 		}

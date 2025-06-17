@@ -165,13 +165,13 @@ public interface TechFacilityPojo extends EObject {
 	void setLaunchDate(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Contracts</b></em>' reference list.
+	 * Returns the value of the '<em><b>Contracts</b></em>' containment reference list.
 	 * The list contents are of type {@link de.jena.model.glt.ContractPojo}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Contracts</em>' reference list.
+	 * @return the value of the '<em>Contracts</em>' containment reference list.
 	 * @see de.jena.model.glt.GltPackage#getTechFacilityPojo_Contracts()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<ContractPojo> getContracts();

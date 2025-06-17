@@ -16,7 +16,8 @@
 	org.gecko.codec.info,\
 	org.gecko.codec.info.model,\
 	org.gecko.codec.json,\
-	jakarta.ws.rs-api
+	jakarta.ws.rs-api,\
+	org.eclipse.sensinact.gateway.core.annotation
 
 -testpath: \
 	${junit}

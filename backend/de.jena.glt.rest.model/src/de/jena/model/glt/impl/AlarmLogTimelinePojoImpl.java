@@ -11,15 +11,18 @@ import java.math.BigInteger;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,7 +40,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  */
 public class AlarmLogTimelinePojoImpl extends MinimalEObjectImpl.Container implements AlarmLogTimelinePojo {
 	/**
-	 * The cached value of the '{@link #getAlarmLogs() <em>Alarm Logs</em>}' reference list.
+	 * The cached value of the '{@link #getAlarmLogs() <em>Alarm Logs</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getAlarmLogs()
@@ -93,7 +96,7 @@ public class AlarmLogTimelinePojoImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public EList<AlarmLogPojo> getAlarmLogs() {
 		if (alarmLogs == null) {
-			alarmLogs = new EObjectResolvingEList<AlarmLogPojo>(AlarmLogPojo.class, this, GltPackage.ALARM_LOG_TIMELINE_POJO__ALARM_LOGS);
+			alarmLogs = new EObjectContainmentEList<AlarmLogPojo>(AlarmLogPojo.class, this, GltPackage.ALARM_LOG_TIMELINE_POJO__ALARM_LOGS);
 		}
 		return alarmLogs;
 	}
@@ -119,6 +122,20 @@ public class AlarmLogTimelinePojoImpl extends MinimalEObjectImpl.Container imple
 		total = newTotal;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.ALARM_LOG_TIMELINE_POJO__TOTAL, oldTotal, total));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case GltPackage.ALARM_LOG_TIMELINE_POJO__ALARM_LOGS:
+				return ((InternalEList<?>)getAlarmLogs()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

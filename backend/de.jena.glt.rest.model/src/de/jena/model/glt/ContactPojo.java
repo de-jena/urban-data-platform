@@ -214,35 +214,35 @@ public interface ContactPojo extends EObject {
 	void setTitle(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Address</b></em>' reference.
+	 * Returns the value of the '<em><b>Address</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Address</em>' reference.
+	 * @return the value of the '<em>Address</em>' containment reference.
 	 * @see #setAddress(AddressPojo)
 	 * @see de.jena.model.glt.GltPackage#getContactPojo_Address()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	AddressPojo getAddress();
 
 	/**
-	 * Sets the value of the '{@link de.jena.model.glt.ContactPojo#getAddress <em>Address</em>}' reference.
+	 * Sets the value of the '{@link de.jena.model.glt.ContactPojo#getAddress <em>Address</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Address</em>' reference.
+	 * @param value the new value of the '<em>Address</em>' containment reference.
 	 * @see #getAddress()
 	 * @generated
 	 */
 	void setAddress(AddressPojo value);
 
 	/**
-	 * Returns the value of the '<em><b>Phones</b></em>' reference list.
+	 * Returns the value of the '<em><b>Phones</b></em>' containment reference list.
 	 * The list contents are of type {@link de.jena.model.glt.PhonePojo}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Phones</em>' reference list.
+	 * @return the value of the '<em>Phones</em>' containment reference list.
 	 * @see de.jena.model.glt.GltPackage#getContactPojo_Phones()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<PhonePojo> getPhones();

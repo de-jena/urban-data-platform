@@ -9,15 +9,18 @@ import de.jena.model.glt.PointValuePojo;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -202,7 +205,7 @@ public class PointValuePojoImpl extends MinimalEObjectImpl.Container implements 
 	protected Boolean isUnknown = IS_UNKNOWN_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getComments() <em>Comments</em>}' reference list.
+	 * The cached value of the '{@link #getComments() <em>Comments</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getComments()
@@ -422,9 +425,23 @@ public class PointValuePojoImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public EList<CommentPojo> getComments() {
 		if (comments == null) {
-			comments = new EObjectResolvingEList<CommentPojo>(CommentPojo.class, this, GltPackage.POINT_VALUE_POJO__COMMENTS);
+			comments = new EObjectContainmentEList<CommentPojo>(CommentPojo.class, this, GltPackage.POINT_VALUE_POJO__COMMENTS);
 		}
 		return comments;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case GltPackage.POINT_VALUE_POJO__COMMENTS:
+				return ((InternalEList<?>)getComments()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

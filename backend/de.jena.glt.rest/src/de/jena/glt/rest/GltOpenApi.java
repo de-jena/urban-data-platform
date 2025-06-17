@@ -117,7 +117,7 @@ public class GltOpenApi extends GltOpenApiClientImpl {
 		ResourceSet resourceSet = serviceObjects.getService();
 		Resource resource = null;
 		try {
-			resource = resourceSet.createResource(URI.createURI(requestURL), "application/json");
+			resource = resourceSet.createResource(URI.createURI(requestURL), "application/codecjson");
 			resource.load(options);
 			gltResponse.setCode(200);
 			EList<EObject> contents = resource.getContents();

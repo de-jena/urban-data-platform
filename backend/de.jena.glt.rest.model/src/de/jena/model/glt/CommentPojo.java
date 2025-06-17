@@ -188,22 +188,22 @@ public interface CommentPojo extends EObject {
 	void setOwnerType(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Status</b></em>' reference.
+	 * Returns the value of the '<em><b>Status</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Status</em>' reference.
+	 * @return the value of the '<em>Status</em>' containment reference.
 	 * @see #setStatus(StatusPojo)
 	 * @see de.jena.model.glt.GltPackage#getCommentPojo_Status()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	StatusPojo getStatus();
 
 	/**
-	 * Sets the value of the '{@link de.jena.model.glt.CommentPojo#getStatus <em>Status</em>}' reference.
+	 * Sets the value of the '{@link de.jena.model.glt.CommentPojo#getStatus <em>Status</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Status</em>' reference.
+	 * @param value the new value of the '<em>Status</em>' containment reference.
 	 * @see #getStatus()
 	 * @generated
 	 */

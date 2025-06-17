@@ -81,7 +81,7 @@ mapping SENSOR::SensorData::toMetadataEntry(feature : ECORE::EStructuralFeature,
 	value := self.map toMetadata(friendlyServiceName + "-" + feature.name, unit, hide, type); 
 }
 
-mapping SENSOR::SensorData::toMetadata(friendlyNameParam : String, unit : String, hide : String, type : String): PROVIDER::Metadata{
+mapping SENSOR::SensorData::toMetadata(friendlyNameParam : String, unit : String, hide : String, type : String): PROVIDER::ResourceValueMetadata {
 	extra += self.toCustomMetadata("friendlyName", friendlyNameParam);
 	if(unit != null and unit != ""){
 		extra += self.toCustomMetadata("unit", unit);

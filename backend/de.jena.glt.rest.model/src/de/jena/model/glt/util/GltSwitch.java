@@ -90,6 +90,12 @@ public class GltSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case GltPackage.LINKED_ID_STRING: {
+				LinkedIdString linkedIdString = (LinkedIdString)theEObject;
+				T result = caseLinkedIdString(linkedIdString);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case GltPackage.INSTRUCTIONS_POJO: {
 				InstructionsPojo instructionsPojo = (InstructionsPojo)theEObject;
 				T result = caseInstructionsPojo(instructionsPojo);
@@ -102,15 +108,15 @@ public class GltSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case GltPackage.CALENDAR_EVENT_POJO: {
-				CalendarEventPojo calendarEventPojo = (CalendarEventPojo)theEObject;
-				T result = caseCalendarEventPojo(calendarEventPojo);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case GltPackage.CALENDER_EVENT_REQUEST: {
 				CalenderEventRequest calenderEventRequest = (CalenderEventRequest)theEObject;
 				T result = caseCalenderEventRequest(calenderEventRequest);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GltPackage.CALENDAR_EVENT_POJO: {
+				CalendarEventPojo calendarEventPojo = (CalendarEventPojo)theEObject;
+				T result = caseCalendarEventPojo(calendarEventPojo);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -129,6 +135,36 @@ public class GltSwitch<T> extends Switch<T> {
 			case GltPackage.COMMENT_REQUEST: {
 				CommentRequest commentRequest = (CommentRequest)theEObject;
 				T result = caseCommentRequest(commentRequest);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GltPackage.DEVICE_BUILDING_POJO: {
+				DeviceBuildingPojo deviceBuildingPojo = (DeviceBuildingPojo)theEObject;
+				T result = caseDeviceBuildingPojo(deviceBuildingPojo);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GltPackage.DEVICE_POJO: {
+				DevicePojo devicePojo = (DevicePojo)theEObject;
+				T result = caseDevicePojo(devicePojo);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GltPackage.DEVICE_CONNECTION_POJO: {
+				DeviceConnectionPojo deviceConnectionPojo = (DeviceConnectionPojo)theEObject;
+				T result = caseDeviceConnectionPojo(deviceConnectionPojo);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GltPackage.DEVICES_COLLECTION_POJO: {
+				DevicesCollectionPojo devicesCollectionPojo = (DevicesCollectionPojo)theEObject;
+				T result = caseDevicesCollectionPojo(devicesCollectionPojo);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GltPackage.DEVICE_ADAPTER_POJO: {
+				DeviceAdapterPojo deviceAdapterPojo = (DeviceAdapterPojo)theEObject;
+				T result = caseDeviceAdapterPojo(deviceAdapterPojo);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -234,6 +270,12 @@ public class GltSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case GltPackage.JSON_NODE: {
+				JsonNode jsonNode = (JsonNode)theEObject;
+				T result = caseJsonNode(jsonNode);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case GltPackage.ADDRESS_POJO: {
 				AddressPojo addressPojo = (AddressPojo)theEObject;
 				T result = caseAddressPojo(addressPojo);
@@ -312,6 +354,12 @@ public class GltSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case GltPackage.LINKED_ID_INTEGER: {
+				LinkedIdInteger linkedIdInteger = (LinkedIdInteger)theEObject;
+				T result = caseLinkedIdInteger(linkedIdInteger);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case GltPackage.ROLE_POJO: {
 				RolePojo rolePojo = (RolePojo)theEObject;
 				T result = caseRolePojo(rolePojo);
@@ -340,12 +388,6 @@ public class GltSwitch<T> extends Switch<T> {
 				GltOpenApiClient gltOpenApiClient = (GltOpenApiClient)theEObject;
 				T result = caseGltOpenApiClient(gltOpenApiClient);
 				if (result == null) result = caseOpenApiClient(gltOpenApiClient);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case GltPackage.JSON_NODE: {
-				JsonNode jsonNode = (JsonNode)theEObject;
-				T result = caseJsonNode(jsonNode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -414,6 +456,21 @@ public class GltSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Linked Id String</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Linked Id String</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLinkedIdString(LinkedIdString object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Instructions Pojo</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -444,21 +501,6 @@ public class GltSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Calendar Event Pojo</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Calendar Event Pojo</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseCalendarEventPojo(CalendarEventPojo object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Calender Event Request</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -470,6 +512,21 @@ public class GltSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCalenderEventRequest(CalenderEventRequest object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Calendar Event Pojo</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Calendar Event Pojo</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCalendarEventPojo(CalendarEventPojo object) {
 		return null;
 	}
 
@@ -515,6 +572,81 @@ public class GltSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCommentRequest(CommentRequest object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Device Building Pojo</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Device Building Pojo</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDeviceBuildingPojo(DeviceBuildingPojo object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Device Pojo</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Device Pojo</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDevicePojo(DevicePojo object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Device Connection Pojo</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Device Connection Pojo</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDeviceConnectionPojo(DeviceConnectionPojo object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Devices Collection Pojo</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Devices Collection Pojo</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDevicesCollectionPojo(DevicesCollectionPojo object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Device Adapter Pojo</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Device Adapter Pojo</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDeviceAdapterPojo(DeviceAdapterPojo object) {
 		return null;
 	}
 
@@ -774,6 +906,21 @@ public class GltSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Json Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Json Node</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseJsonNode(JsonNode object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Address Pojo</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -969,6 +1116,21 @@ public class GltSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Linked Id Integer</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Linked Id Integer</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLinkedIdInteger(LinkedIdInteger object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Role Pojo</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1040,21 +1202,6 @@ public class GltSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGltOpenApiClient(GltOpenApiClient object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Json Node</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Json Node</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseJsonNode(JsonNode object) {
 		return null;
 	}
 

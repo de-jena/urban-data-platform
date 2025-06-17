@@ -9,6 +9,7 @@ import de.jena.model.glt.SystemDescriptionPojo;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -18,7 +19,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -270,7 +272,7 @@ public class SystemDescriptionPojoImpl extends MinimalEObjectImpl.Container impl
 	protected Integer externalId = EXTERNAL_ID_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getAddress() <em>Address</em>}' reference.
+	 * The cached value of the '{@link #getAddress() <em>Address</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getAddress()
@@ -300,7 +302,7 @@ public class SystemDescriptionPojoImpl extends MinimalEObjectImpl.Container impl
 	protected String source = SOURCE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getChildren() <em>Children</em>}' reference list.
+	 * The cached value of the '{@link #getChildren() <em>Children</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getChildren()
@@ -628,14 +630,6 @@ public class SystemDescriptionPojoImpl extends MinimalEObjectImpl.Container impl
 	 */
 	@Override
 	public AddressPojo getAddress() {
-		if (address != null && address.eIsProxy()) {
-			InternalEObject oldAddress = (InternalEObject)address;
-			address = (AddressPojo)eResolveProxy(oldAddress);
-			if (address != oldAddress) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GltPackage.SYSTEM_DESCRIPTION_POJO__ADDRESS, oldAddress, address));
-			}
-		}
 		return address;
 	}
 
@@ -644,8 +638,14 @@ public class SystemDescriptionPojoImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AddressPojo basicGetAddress() {
-		return address;
+	public NotificationChain basicSetAddress(AddressPojo newAddress, NotificationChain msgs) {
+		AddressPojo oldAddress = address;
+		address = newAddress;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GltPackage.SYSTEM_DESCRIPTION_POJO__ADDRESS, oldAddress, newAddress);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -655,10 +655,17 @@ public class SystemDescriptionPojoImpl extends MinimalEObjectImpl.Container impl
 	 */
 	@Override
 	public void setAddress(AddressPojo newAddress) {
-		AddressPojo oldAddress = address;
-		address = newAddress;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SYSTEM_DESCRIPTION_POJO__ADDRESS, oldAddress, address));
+		if (newAddress != address) {
+			NotificationChain msgs = null;
+			if (address != null)
+				msgs = ((InternalEObject)address).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GltPackage.SYSTEM_DESCRIPTION_POJO__ADDRESS, null, msgs);
+			if (newAddress != null)
+				msgs = ((InternalEObject)newAddress).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GltPackage.SYSTEM_DESCRIPTION_POJO__ADDRESS, null, msgs);
+			msgs = basicSetAddress(newAddress, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.SYSTEM_DESCRIPTION_POJO__ADDRESS, newAddress, newAddress));
 	}
 
 	/**
@@ -692,7 +699,7 @@ public class SystemDescriptionPojoImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public EList<SystemDescriptionPojo> getChildren() {
 		if (children == null) {
-			children = new EObjectResolvingEList<SystemDescriptionPojo>(SystemDescriptionPojo.class, this, GltPackage.SYSTEM_DESCRIPTION_POJO__CHILDREN);
+			children = new EObjectContainmentEList<SystemDescriptionPojo>(SystemDescriptionPojo.class, this, GltPackage.SYSTEM_DESCRIPTION_POJO__CHILDREN);
 		}
 		return children;
 	}
@@ -749,6 +756,22 @@ public class SystemDescriptionPojoImpl extends MinimalEObjectImpl.Container impl
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__ADDRESS:
+				return basicSetAddress(null, msgs);
+			case GltPackage.SYSTEM_DESCRIPTION_POJO__CHILDREN:
+				return ((InternalEList<?>)getChildren()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case GltPackage.SYSTEM_DESCRIPTION_POJO__ID:
@@ -774,8 +797,7 @@ public class SystemDescriptionPojoImpl extends MinimalEObjectImpl.Container impl
 			case GltPackage.SYSTEM_DESCRIPTION_POJO__EXTERNAL_ID:
 				return getExternalId();
 			case GltPackage.SYSTEM_DESCRIPTION_POJO__ADDRESS:
-				if (resolve) return getAddress();
-				return basicGetAddress();
+				return getAddress();
 			case GltPackage.SYSTEM_DESCRIPTION_POJO__SOURCE:
 				return getSource();
 			case GltPackage.SYSTEM_DESCRIPTION_POJO__CHILDREN:

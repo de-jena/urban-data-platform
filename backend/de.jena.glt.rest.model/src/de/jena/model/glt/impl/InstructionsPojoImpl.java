@@ -9,15 +9,18 @@ import de.jena.model.glt.RelationPojo;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -55,7 +58,7 @@ public class InstructionsPojoImpl extends MinimalEObjectImpl.Container implement
 	protected String alarmId = ALARM_ID_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getRelations() <em>Relations</em>}' reference list.
+	 * The cached value of the '{@link #getRelations() <em>Relations</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRelations()
@@ -114,9 +117,23 @@ public class InstructionsPojoImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public EList<RelationPojo> getRelations() {
 		if (relations == null) {
-			relations = new EObjectResolvingEList<RelationPojo>(RelationPojo.class, this, GltPackage.INSTRUCTIONS_POJO__RELATIONS);
+			relations = new EObjectContainmentEList<RelationPojo>(RelationPojo.class, this, GltPackage.INSTRUCTIONS_POJO__RELATIONS);
 		}
 		return relations;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case GltPackage.INSTRUCTIONS_POJO__RELATIONS:
+				return ((InternalEList<?>)getRelations()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

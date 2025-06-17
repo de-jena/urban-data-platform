@@ -84,7 +84,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int ALARM__FLAGS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Id</b></em>' reference.
+	 * The feature id for the '<em><b>Id</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -357,7 +357,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int ALARM_POJO = 3;
 
 	/**
-	 * The feature id for the '<em><b>Id</b></em>' reference.
+	 * The feature id for the '<em><b>Id</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -456,6 +456,52 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int ALARM_POJO_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link de.jena.model.glt.impl.LinkedIdStringImpl <em>Linked Id String</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.model.glt.impl.LinkedIdStringImpl
+	 * @see de.jena.model.glt.impl.GltPackageImpl#getLinkedIdString()
+	 * @generated
+	 */
+	int LINKED_ID_STRING = 4;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINKED_ID_STRING__ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Links</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINKED_ID_STRING__LINKS = 1;
+
+	/**
+	 * The number of structural features of the '<em>Linked Id String</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINKED_ID_STRING_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Linked Id String</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINKED_ID_STRING_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link de.jena.model.glt.impl.InstructionsPojoImpl <em>Instructions Pojo</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -463,7 +509,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getInstructionsPojo()
 	 * @generated
 	 */
-	int INSTRUCTIONS_POJO = 4;
+	int INSTRUCTIONS_POJO = 5;
 
 	/**
 	 * The feature id for the '<em><b>Alarm Id</b></em>' attribute.
@@ -475,7 +521,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int INSTRUCTIONS_POJO__ALARM_ID = 0;
 
 	/**
-	 * The feature id for the '<em><b>Relations</b></em>' reference list.
+	 * The feature id for the '<em><b>Relations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -509,7 +555,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getRelationPojo()
 	 * @generated
 	 */
-	int RELATION_POJO = 5;
+	int RELATION_POJO = 6;
 
 	/**
 	 * The feature id for the '<em><b>Condition</b></em>' attribute.
@@ -548,6 +594,70 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int RELATION_POJO_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link de.jena.model.glt.impl.CalenderEventRequestImpl <em>Calender Event Request</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.model.glt.impl.CalenderEventRequestImpl
+	 * @see de.jena.model.glt.impl.GltPackageImpl#getCalenderEventRequest()
+	 * @generated
+	 */
+	int CALENDER_EVENT_REQUEST = 7;
+
+	/**
+	 * The feature id for the '<em><b>From</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALENDER_EVENT_REQUEST__FROM = 0;
+
+	/**
+	 * The feature id for the '<em><b>To</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALENDER_EVENT_REQUEST__TO = 1;
+
+	/**
+	 * The feature id for the '<em><b>Note</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALENDER_EVENT_REQUEST__NOTE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALENDER_EVENT_REQUEST__TYPE = 3;
+
+	/**
+	 * The number of structural features of the '<em>Calender Event Request</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALENDER_EVENT_REQUEST_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Calender Event Request</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALENDER_EVENT_REQUEST_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link de.jena.model.glt.impl.CalendarEventPojoImpl <em>Calendar Event Pojo</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -555,7 +665,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getCalendarEventPojo()
 	 * @generated
 	 */
-	int CALENDAR_EVENT_POJO = 6;
+	int CALENDAR_EVENT_POJO = 8;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -648,70 +758,6 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int CALENDAR_EVENT_POJO_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link de.jena.model.glt.impl.CalenderEventRequestImpl <em>Calender Event Request</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.jena.model.glt.impl.CalenderEventRequestImpl
-	 * @see de.jena.model.glt.impl.GltPackageImpl#getCalenderEventRequest()
-	 * @generated
-	 */
-	int CALENDER_EVENT_REQUEST = 7;
-
-	/**
-	 * The feature id for the '<em><b>From</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALENDER_EVENT_REQUEST__FROM = 0;
-
-	/**
-	 * The feature id for the '<em><b>To</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALENDER_EVENT_REQUEST__TO = 1;
-
-	/**
-	 * The feature id for the '<em><b>Note</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALENDER_EVENT_REQUEST__NOTE = 2;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALENDER_EVENT_REQUEST__TYPE = 3;
-
-	/**
-	 * The number of structural features of the '<em>Calender Event Request</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALENDER_EVENT_REQUEST_FEATURE_COUNT = 4;
-
-	/**
-	 * The number of operations of the '<em>Calender Event Request</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALENDER_EVENT_REQUEST_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link de.jena.model.glt.impl.CommentPojoImpl <em>Comment Pojo</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -719,7 +765,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getCommentPojo()
 	 * @generated
 	 */
-	int COMMENT_POJO = 8;
+	int COMMENT_POJO = 9;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -785,7 +831,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int COMMENT_POJO__OWNER_TYPE = 6;
 
 	/**
-	 * The feature id for the '<em><b>Status</b></em>' reference.
+	 * The feature id for the '<em><b>Status</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -819,7 +865,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getStatusPojo()
 	 * @generated
 	 */
-	int STATUS_POJO = 9;
+	int STATUS_POJO = 10;
 
 	/**
 	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
@@ -874,7 +920,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getCommentRequest()
 	 * @generated
 	 */
-	int COMMENT_REQUEST = 10;
+	int COMMENT_REQUEST = 11;
 
 	/**
 	 * The feature id for the '<em><b>Content</b></em>' attribute.
@@ -913,6 +959,308 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int COMMENT_REQUEST_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link de.jena.model.glt.impl.DeviceBuildingPojoImpl <em>Device Building Pojo</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.model.glt.impl.DeviceBuildingPojoImpl
+	 * @see de.jena.model.glt.impl.GltPackageImpl#getDeviceBuildingPojo()
+	 * @generated
+	 */
+	int DEVICE_BUILDING_POJO = 12;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVICE_BUILDING_POJO__ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>System Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVICE_BUILDING_POJO__SYSTEM_ID = 1;
+
+	/**
+	 * The feature id for the '<em><b>Devices</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVICE_BUILDING_POJO__DEVICES = 2;
+
+	/**
+	 * The number of structural features of the '<em>Device Building Pojo</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVICE_BUILDING_POJO_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Device Building Pojo</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVICE_BUILDING_POJO_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.model.glt.impl.DevicePojoImpl <em>Device Pojo</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.model.glt.impl.DevicePojoImpl
+	 * @see de.jena.model.glt.impl.GltPackageImpl#getDevicePojo()
+	 * @generated
+	 */
+	int DEVICE_POJO = 13;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVICE_POJO__ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVICE_POJO__TYPE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Connections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVICE_POJO__CONNECTIONS = 2;
+
+	/**
+	 * The number of structural features of the '<em>Device Pojo</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVICE_POJO_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Device Pojo</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVICE_POJO_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.model.glt.impl.DeviceConnectionPojoImpl <em>Device Connection Pojo</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.model.glt.impl.DeviceConnectionPojoImpl
+	 * @see de.jena.model.glt.impl.GltPackageImpl#getDeviceConnectionPojo()
+	 * @generated
+	 */
+	int DEVICE_CONNECTION_POJO = 14;
+
+	/**
+	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVICE_CONNECTION_POJO__TIMESTAMP = 0;
+
+	/**
+	 * The feature id for the '<em><b>Ip</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVICE_CONNECTION_POJO__IP = 1;
+
+	/**
+	 * The feature id for the '<em><b>Reachable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVICE_CONNECTION_POJO__REACHABLE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Since</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVICE_CONNECTION_POJO__SINCE = 3;
+
+	/**
+	 * The number of structural features of the '<em>Device Connection Pojo</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVICE_CONNECTION_POJO_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Device Connection Pojo</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVICE_CONNECTION_POJO_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.model.glt.impl.DevicesCollectionPojoImpl <em>Devices Collection Pojo</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.model.glt.impl.DevicesCollectionPojoImpl
+	 * @see de.jena.model.glt.impl.GltPackageImpl#getDevicesCollectionPojo()
+	 * @generated
+	 */
+	int DEVICES_COLLECTION_POJO = 15;
+
+	/**
+	 * The feature id for the '<em><b>Buildings</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVICES_COLLECTION_POJO__BUILDINGS = 0;
+
+	/**
+	 * The number of structural features of the '<em>Devices Collection Pojo</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVICES_COLLECTION_POJO_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Devices Collection Pojo</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVICES_COLLECTION_POJO_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.model.glt.impl.DeviceAdapterPojoImpl <em>Device Adapter Pojo</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.model.glt.impl.DeviceAdapterPojoImpl
+	 * @see de.jena.model.glt.impl.GltPackageImpl#getDeviceAdapterPojo()
+	 * @generated
+	 */
+	int DEVICE_ADAPTER_POJO = 16;
+
+	/**
+	 * The feature id for the '<em><b>Building Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVICE_ADAPTER_POJO__BUILDING_ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Device Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVICE_ADAPTER_POJO__DEVICE_ID = 1;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVICE_ADAPTER_POJO__TYPE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVICE_ADAPTER_POJO__TIMESTAMP = 3;
+
+	/**
+	 * The feature id for the '<em><b>Ip</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVICE_ADAPTER_POJO__IP = 4;
+
+	/**
+	 * The feature id for the '<em><b>Reachable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVICE_ADAPTER_POJO__REACHABLE = 5;
+
+	/**
+	 * The feature id for the '<em><b>Since</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVICE_ADAPTER_POJO__SINCE = 6;
+
+	/**
+	 * The number of structural features of the '<em>Device Adapter Pojo</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVICE_ADAPTER_POJO_FEATURE_COUNT = 7;
+
+	/**
+	 * The number of operations of the '<em>Device Adapter Pojo</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVICE_ADAPTER_POJO_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link de.jena.model.glt.impl.AlarmLogPojoImpl <em>Alarm Log Pojo</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -920,7 +1268,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getAlarmLogPojo()
 	 * @generated
 	 */
-	int ALARM_LOG_POJO = 11;
+	int ALARM_LOG_POJO = 17;
 
 	/**
 	 * The feature id for the '<em><b>System Id</b></em>' attribute.
@@ -984,7 +1332,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getChangeItem()
 	 * @generated
 	 */
-	int CHANGE_ITEM = 12;
+	int CHANGE_ITEM = 18;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1075,7 +1423,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getDatalogContentPojo()
 	 * @generated
 	 */
-	int DATALOG_CONTENT_POJO = 13;
+	int DATALOG_CONTENT_POJO = 19;
 
 	/**
 	 * The feature id for the '<em><b>System Id</b></em>' attribute.
@@ -1222,7 +1570,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int DATALOG_CONTENT_POJO__IS_ERROR = 15;
 
 	/**
-	 * The feature id for the '<em><b>Comments</b></em>' reference list.
+	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1256,7 +1604,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getPointValuePojo()
 	 * @generated
 	 */
-	int POINT_VALUE_POJO = 14;
+	int POINT_VALUE_POJO = 20;
 
 	/**
 	 * The feature id for the '<em><b>System Id</b></em>' attribute.
@@ -1331,7 +1679,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int POINT_VALUE_POJO__IS_UNKNOWN = 7;
 
 	/**
-	 * The feature id for the '<em><b>Comments</b></em>' reference list.
+	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1365,10 +1713,10 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getAlarmLogTimelinePojo()
 	 * @generated
 	 */
-	int ALARM_LOG_TIMELINE_POJO = 15;
+	int ALARM_LOG_TIMELINE_POJO = 21;
 
 	/**
-	 * The feature id for the '<em><b>Alarm Logs</b></em>' reference list.
+	 * The feature id for the '<em><b>Alarm Logs</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1411,10 +1759,10 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getStatisticEntry()
 	 * @generated
 	 */
-	int STATISTIC_ENTRY = 16;
+	int STATISTIC_ENTRY = 22;
 
 	/**
-	 * The feature id for the '<em><b>Time Window</b></em>' reference.
+	 * The feature id for the '<em><b>Time Window</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1457,7 +1805,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getTimeWindow()
 	 * @generated
 	 */
-	int TIME_WINDOW = 17;
+	int TIME_WINDOW = 23;
 
 	/**
 	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
@@ -1521,7 +1869,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getEntityMonitoringSettingsPojo()
 	 * @generated
 	 */
-	int ENTITY_MONITORING_SETTINGS_POJO = 18;
+	int ENTITY_MONITORING_SETTINGS_POJO = 24;
 
 	/**
 	 * The feature id for the '<em><b>System Id</b></em>' attribute.
@@ -1594,7 +1942,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getSyncLogPojo()
 	 * @generated
 	 */
-	int SYNC_LOG_POJO = 19;
+	int SYNC_LOG_POJO = 25;
 
 	/**
 	 * The feature id for the '<em><b>System Id</b></em>' attribute.
@@ -1685,7 +2033,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getStatusLogPojo()
 	 * @generated
 	 */
-	int STATUS_LOG_POJO = 20;
+	int STATUS_LOG_POJO = 26;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1767,7 +2115,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getUpdateStateRequest()
 	 * @generated
 	 */
-	int UPDATE_STATE_REQUEST = 21;
+	int UPDATE_STATE_REQUEST = 27;
 
 	/**
 	 * The feature id for the '<em><b>System Id</b></em>' attribute.
@@ -1840,7 +2188,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getStatusLogRequest()
 	 * @generated
 	 */
-	int STATUS_LOG_REQUEST = 22;
+	int STATUS_LOG_REQUEST = 28;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1922,7 +2270,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getTimeScheduleBlockPojo()
 	 * @generated
 	 */
-	int TIME_SCHEDULE_BLOCK_POJO = 23;
+	int TIME_SCHEDULE_BLOCK_POJO = 29;
 
 	/**
 	 * The feature id for the '<em><b>System Id</b></em>' attribute.
@@ -2024,7 +2372,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int TIME_SCHEDULE_BLOCK_POJO__IS_UNKNOWN = 10;
 
 	/**
-	 * The feature id for the '<em><b>Comments</b></em>' reference list.
+	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2058,7 +2406,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getTimeScheduleStatePojo()
 	 * @generated
 	 */
-	int TIME_SCHEDULE_STATE_POJO = 24;
+	int TIME_SCHEDULE_STATE_POJO = 30;
 
 	/**
 	 * The feature id for the '<em><b>System Id</b></em>' attribute.
@@ -2115,7 +2463,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int TIME_SCHEDULE_STATE_POJO__IS_UNKNOWN = 5;
 
 	/**
-	 * The feature id for the '<em><b>Comments</b></em>' reference list.
+	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2149,7 +2497,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getVersionInfo()
 	 * @generated
 	 */
-	int VERSION_INFO = 25;
+	int VERSION_INFO = 31;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2231,7 +2579,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getPointRecord()
 	 * @generated
 	 */
-	int POINT_RECORD = 26;
+	int POINT_RECORD = 32;
 
 	/**
 	 * The feature id for the '<em><b>System Id</b></em>' attribute.
@@ -2331,7 +2679,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getTimeScheduleRecord()
 	 * @generated
 	 */
-	int TIME_SCHEDULE_RECORD = 27;
+	int TIME_SCHEDULE_RECORD = 33;
 
 	/**
 	 * The feature id for the '<em><b>System Id</b></em>' attribute.
@@ -2415,6 +2763,34 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int TIME_SCHEDULE_RECORD_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link de.jena.model.glt.impl.JsonNodeImpl <em>Json Node</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.model.glt.impl.JsonNodeImpl
+	 * @see de.jena.model.glt.impl.GltPackageImpl#getJsonNode()
+	 * @generated
+	 */
+	int JSON_NODE = 34;
+
+	/**
+	 * The number of structural features of the '<em>Json Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JSON_NODE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Json Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JSON_NODE_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link de.jena.model.glt.impl.AddressPojoImpl <em>Address Pojo</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2422,7 +2798,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getAddressPojo()
 	 * @generated
 	 */
-	int ADDRESS_POJO = 28;
+	int ADDRESS_POJO = 35;
 
 	/**
 	 * The feature id for the '<em><b>Address</b></em>' attribute.
@@ -2576,7 +2952,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getSystemDescriptionPojo()
 	 * @generated
 	 */
-	int SYSTEM_DESCRIPTION_POJO = 29;
+	int SYSTEM_DESCRIPTION_POJO = 36;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2678,7 +3054,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int SYSTEM_DESCRIPTION_POJO__EXTERNAL_ID = 10;
 
 	/**
-	 * The feature id for the '<em><b>Address</b></em>' reference.
+	 * The feature id for the '<em><b>Address</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2696,7 +3072,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int SYSTEM_DESCRIPTION_POJO__SOURCE = 12;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' reference list.
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2748,7 +3124,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getSystemDescriptionRequest()
 	 * @generated
 	 */
-	int SYSTEM_DESCRIPTION_REQUEST = 30;
+	int SYSTEM_DESCRIPTION_REQUEST = 37;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2866,7 +3242,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getContactPojo()
 	 * @generated
 	 */
-	int CONTACT_POJO = 31;
+	int CONTACT_POJO = 38;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2941,7 +3317,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int CONTACT_POJO__TITLE = 7;
 
 	/**
-	 * The feature id for the '<em><b>Address</b></em>' reference.
+	 * The feature id for the '<em><b>Address</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2950,7 +3326,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int CONTACT_POJO__ADDRESS = 8;
 
 	/**
-	 * The feature id for the '<em><b>Phones</b></em>' reference list.
+	 * The feature id for the '<em><b>Phones</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3002,7 +3378,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getPhonePojo()
 	 * @generated
 	 */
-	int PHONE_POJO = 32;
+	int PHONE_POJO = 39;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -3048,7 +3424,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getContractPojo()
 	 * @generated
 	 */
-	int CONTRACT_POJO = 33;
+	int CONTRACT_POJO = 40;
 
 	/**
 	 * The feature id for the '<em><b>Art</b></em>' attribute.
@@ -3096,7 +3472,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int CONTRACT_POJO__COMMENT = 4;
 
 	/**
-	 * The feature id for the '<em><b>Contacts</b></em>' reference list.
+	 * The feature id for the '<em><b>Contacts</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3132,7 +3508,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int CONTRACT_POJO__NUMBER = 8;
 
 	/**
-	 * The feature id for the '<em><b>Partner</b></em>' reference.
+	 * The feature id for the '<em><b>Partner</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3141,7 +3517,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int CONTRACT_POJO__PARTNER = 9;
 
 	/**
-	 * The feature id for the '<em><b>Referee</b></em>' reference.
+	 * The feature id for the '<em><b>Referee</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3220,7 +3596,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getTechFacilityPojo()
 	 * @generated
 	 */
-	int TECH_FACILITY_POJO = 34;
+	int TECH_FACILITY_POJO = 41;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3277,7 +3653,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int TECH_FACILITY_POJO__LAUNCH_DATE = 5;
 
 	/**
-	 * The feature id for the '<em><b>Contracts</b></em>' reference list.
+	 * The feature id for the '<em><b>Contracts</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3311,7 +3687,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getEntityPojo()
 	 * @generated
 	 */
-	int ENTITY_POJO = 35;
+	int ENTITY_POJO = 42;
 
 	/**
 	 * The feature id for the '<em><b>Entity</b></em>' attribute.
@@ -3348,7 +3724,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getEntityRequest()
 	 * @generated
 	 */
-	int ENTITY_REQUEST = 36;
+	int ENTITY_REQUEST = 43;
 
 	/**
 	 * The feature id for the '<em><b>System Id</b></em>' attribute.
@@ -3403,7 +3779,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getCylonNetworkPojo()
 	 * @generated
 	 */
-	int CYLON_NETWORK_POJO = 37;
+	int CYLON_NETWORK_POJO = 44;
 
 	/**
 	 * The feature id for the '<em><b>Entity</b></em>' attribute.
@@ -3478,7 +3854,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int CYLON_NETWORK_POJO__COUNT = 7;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' reference list.
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3521,10 +3897,10 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getImportStatisticPojo()
 	 * @generated
 	 */
-	int IMPORT_STATISTIC_POJO = 38;
+	int IMPORT_STATISTIC_POJO = 45;
 
 	/**
-	 * The feature id for the '<em><b>Add</b></em>' reference list.
+	 * The feature id for the '<em><b>Add</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3533,7 +3909,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int IMPORT_STATISTIC_POJO__ADD = 0;
 
 	/**
-	 * The feature id for the '<em><b>Remove</b></em>' reference list.
+	 * The feature id for the '<em><b>Remove</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3542,7 +3918,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int IMPORT_STATISTIC_POJO__REMOVE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Update</b></em>' reference list.
+	 * The feature id for the '<em><b>Update</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3576,7 +3952,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getText()
 	 * @generated
 	 */
-	int TEXT = 39;
+	int TEXT = 46;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -3631,7 +4007,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getTextRequest()
 	 * @generated
 	 */
-	int TEXT_REQUEST = 40;
+	int TEXT_REQUEST = 47;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3679,6 +4055,52 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int TEXT_REQUEST_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link de.jena.model.glt.impl.LinkedIdIntegerImpl <em>Linked Id Integer</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.model.glt.impl.LinkedIdIntegerImpl
+	 * @see de.jena.model.glt.impl.GltPackageImpl#getLinkedIdInteger()
+	 * @generated
+	 */
+	int LINKED_ID_INTEGER = 48;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINKED_ID_INTEGER__ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Links</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINKED_ID_INTEGER__LINKS = 1;
+
+	/**
+	 * The number of structural features of the '<em>Linked Id Integer</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINKED_ID_INTEGER_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Linked Id Integer</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINKED_ID_INTEGER_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link de.jena.model.glt.impl.RolePojoImpl <em>Role Pojo</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3686,7 +4108,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getRolePojo()
 	 * @generated
 	 */
-	int ROLE_POJO = 41;
+	int ROLE_POJO = 49;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3768,7 +4190,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getSuspectPojo()
 	 * @generated
 	 */
-	int SUSPECT_POJO = 42;
+	int SUSPECT_POJO = 50;
 
 	/**
 	 * The feature id for the '<em><b>System Id</b></em>' attribute.
@@ -3859,7 +4281,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getResponse()
 	 * @generated
 	 */
-	int RESPONSE = 43;
+	int RESPONSE = 51;
 
 	/**
 	 * The feature id for the '<em><b>Code</b></em>' attribute.
@@ -3889,7 +4311,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int RESPONSE__RESPONSE = 2;
 
 	/**
-	 * The feature id for the '<em><b>Result</b></em>' reference list.
+	 * The feature id for the '<em><b>Result</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3923,7 +4345,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getOpenApiClient()
 	 * @generated
 	 */
-	int OPEN_API_CLIENT = 44;
+	int OPEN_API_CLIENT = 52;
 
 	/**
 	 * The number of structural features of the '<em>Open Api Client</em>' class.
@@ -3978,7 +4400,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getGltOpenApiClient()
 	 * @generated
 	 */
-	int GLT_OPEN_API_CLIENT = 45;
+	int GLT_OPEN_API_CLIENT = 53;
 
 	/**
 	 * The number of structural features of the '<em>Open Api Client</em>' class.
@@ -4053,13 +4475,22 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int GLT_OPEN_API_CLIENT___CREATE_ALARM__STRING_ALARMREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 3;
 
 	/**
+	 * The operation id for the '<em>Get Alarm Ids</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLT_OPEN_API_CLIENT___GET_ALARM_IDS__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 4;
+
+	/**
 	 * The operation id for the '<em>Get Alarm Instructions</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALARM_INSTRUCTIONS__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 4;
+	int GLT_OPEN_API_CLIENT___GET_ALARM_INSTRUCTIONS__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 5;
 
 	/**
 	 * The operation id for the '<em>Update Instructions</em>' operation.
@@ -4068,7 +4499,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___UPDATE_INSTRUCTIONS__STRING_INSTRUCTIONSPOJO = OPEN_API_CLIENT_OPERATION_COUNT + 5;
+	int GLT_OPEN_API_CLIENT___UPDATE_INSTRUCTIONS__STRING_INSTRUCTIONSPOJO = OPEN_API_CLIENT_OPERATION_COUNT + 6;
 
 	/**
 	 * The operation id for the '<em>Get Alarms</em>' operation.
@@ -4077,7 +4508,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALARMS__ELIST_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 6;
+	int GLT_OPEN_API_CLIENT___GET_ALARMS__ELIST_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 7;
 
 	/**
 	 * The operation id for the '<em>Usage</em>' operation.
@@ -4086,7 +4517,16 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___USAGE__INTEGER_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 7;
+	int GLT_OPEN_API_CLIENT___USAGE__INTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 8;
+
+	/**
+	 * The operation id for the '<em>Usage Ids</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLT_OPEN_API_CLIENT___USAGE_IDS__INTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 9;
 
 	/**
 	 * The operation id for the '<em>Get Events For Alarm</em>' operation.
@@ -4095,7 +4535,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_EVENTS_FOR_ALARM__STRING_STRING_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 8;
+	int GLT_OPEN_API_CLIENT___GET_EVENTS_FOR_ALARM__STRING_STRING_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 10;
 
 	/**
 	 * The operation id for the '<em>Create Event For Alarm</em>' operation.
@@ -4104,7 +4544,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___CREATE_EVENT_FOR_ALARM__STRING_CALENDEREVENTREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 9;
+	int GLT_OPEN_API_CLIENT___CREATE_EVENT_FOR_ALARM__STRING_CALENDEREVENTREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 11;
 
 	/**
 	 * The operation id for the '<em>Get Events For System</em>' operation.
@@ -4113,7 +4553,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_EVENTS_FOR_SYSTEM__STRING_STRING_BOOLEAN_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 10;
+	int GLT_OPEN_API_CLIENT___GET_EVENTS_FOR_SYSTEM__STRING_STRING_BOOLEAN_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 12;
 
 	/**
 	 * The operation id for the '<em>Create Event For System</em>' operation.
@@ -4122,7 +4562,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___CREATE_EVENT_FOR_SYSTEM__STRING_CALENDEREVENTREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 11;
+	int GLT_OPEN_API_CLIENT___CREATE_EVENT_FOR_SYSTEM__STRING_CALENDEREVENTREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 13;
 
 	/**
 	 * The operation id for the '<em>Update Event</em>' operation.
@@ -4131,7 +4571,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___UPDATE_EVENT__INTEGER_CALENDEREVENTREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 12;
+	int GLT_OPEN_API_CLIENT___UPDATE_EVENT__INTEGER_CALENDEREVENTREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 14;
 
 	/**
 	 * The operation id for the '<em>Delete Event</em>' operation.
@@ -4140,7 +4580,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___DELETE_EVENT__INTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 13;
+	int GLT_OPEN_API_CLIENT___DELETE_EVENT__INTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 15;
 
 	/**
 	 * The operation id for the '<em>Get Events</em>' operation.
@@ -4149,7 +4589,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_EVENTS__ELIST_STRING_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 14;
+	int GLT_OPEN_API_CLIENT___GET_EVENTS__ELIST_STRING_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 16;
 
 	/**
 	 * The operation id for the '<em>Get Events At Time</em>' operation.
@@ -4158,7 +4598,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_EVENTS_AT_TIME__ELIST_STRING_STRING_BIGINTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 15;
+	int GLT_OPEN_API_CLIENT___GET_EVENTS_AT_TIME__ELIST_STRING_STRING_BIGINTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 17;
 
 	/**
 	 * The operation id for the '<em>Get Events For Alarm 1</em>' operation.
@@ -4167,7 +4607,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_EVENTS_FOR_ALARM_1__STRING_STRING_STRING_BIGINTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 16;
+	int GLT_OPEN_API_CLIENT___GET_EVENTS_FOR_ALARM_1__STRING_STRING_STRING_BIGINTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 18;
 
 	/**
 	 * The operation id for the '<em>Get Events For System 1</em>' operation.
@@ -4176,7 +4616,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_EVENTS_FOR_SYSTEM_1__STRING_STRING_STRING_BIGINTEGER_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 17;
+	int GLT_OPEN_API_CLIENT___GET_EVENTS_FOR_SYSTEM_1__STRING_STRING_STRING_BIGINTEGER_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 19;
 
 	/**
 	 * The operation id for the '<em>Get For Alarm</em>' operation.
@@ -4185,7 +4625,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_FOR_ALARM__STRING_BIGINTEGER_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 18;
+	int GLT_OPEN_API_CLIENT___GET_FOR_ALARM__STRING_BIGINTEGER_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 20;
 
 	/**
 	 * The operation id for the '<em>Create Comment For Owner</em>' operation.
@@ -4194,7 +4634,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___CREATE_COMMENT_FOR_OWNER__STRING_BIGINTEGER_COMMENTREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 19;
+	int GLT_OPEN_API_CLIENT___CREATE_COMMENT_FOR_OWNER__STRING_BIGINTEGER_COMMENTREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 21;
 
 	/**
 	 * The operation id for the '<em>Update Comment</em>' operation.
@@ -4203,7 +4643,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___UPDATE_COMMENT__INTEGER_COMMENTREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 20;
+	int GLT_OPEN_API_CLIENT___UPDATE_COMMENT__INTEGER_COMMENTREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 22;
 
 	/**
 	 * The operation id for the '<em>Delete Comment</em>' operation.
@@ -4212,7 +4652,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___DELETE_COMMENT__INTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 21;
+	int GLT_OPEN_API_CLIENT___DELETE_COMMENT__INTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 23;
 
 	/**
 	 * The operation id for the '<em>Get Commented On</em>' operation.
@@ -4221,7 +4661,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_COMMENTED_ON__STRING_STRING_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 22;
+	int GLT_OPEN_API_CLIENT___GET_COMMENTED_ON__STRING_STRING_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 24;
 
 	/**
 	 * The operation id for the '<em>Get Filtered</em>' operation.
@@ -4230,7 +4670,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_FILTERED__INTEGER_INTEGER_ELIST_ELIST_BOOLEAN_ELIST_ELIST_ELIST_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 23;
+	int GLT_OPEN_API_CLIENT___GET_FILTERED__INTEGER_INTEGER_ELIST_ELIST_BOOLEAN_ELIST_ELIST_ELIST_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 25;
 
 	/**
 	 * The operation id for the '<em>Get Filtered Authors</em>' operation.
@@ -4239,7 +4679,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_FILTERED_AUTHORS__ELIST_ELIST_BOOLEAN_ELIST_ELIST_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 24;
+	int GLT_OPEN_API_CLIENT___GET_FILTERED_AUTHORS__ELIST_ELIST_BOOLEAN_ELIST_ELIST_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 26;
 
 	/**
 	 * The operation id for the '<em>Get Filtered Count</em>' operation.
@@ -4248,7 +4688,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_FILTERED_COUNT__ELIST_ELIST_BOOLEAN_ELIST_ELIST_ELIST_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 25;
+	int GLT_OPEN_API_CLIENT___GET_FILTERED_COUNT__ELIST_ELIST_BOOLEAN_ELIST_ELIST_ELIST_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 27;
 
 	/**
 	 * The operation id for the '<em>Update Status</em>' operation.
@@ -4257,7 +4697,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___UPDATE_STATUS__INTEGER_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 26;
+	int GLT_OPEN_API_CLIENT___UPDATE_STATUS__INTEGER_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 28;
 
 	/**
 	 * The operation id for the '<em>Get Building Names</em>' operation.
@@ -4266,7 +4706,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_BUILDING_NAMES__ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 27;
+	int GLT_OPEN_API_CLIENT___GET_BUILDING_NAMES__ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 29;
 
 	/**
 	 * The operation id for the '<em>Get Device Name</em>' operation.
@@ -4275,7 +4715,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_DEVICE_NAME__ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 28;
+	int GLT_OPEN_API_CLIENT___GET_DEVICE_NAME__ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 30;
 
 	/**
 	 * The operation id for the '<em>Get Devices</em>' operation.
@@ -4284,7 +4724,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_DEVICES__BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 29;
+	int GLT_OPEN_API_CLIENT___GET_DEVICES = OPEN_API_CLIENT_OPERATION_COUNT + 31;
 
 	/**
 	 * The operation id for the '<em>Get Devices Count</em>' operation.
@@ -4293,7 +4733,16 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_DEVICES_COUNT = OPEN_API_CLIENT_OPERATION_COUNT + 30;
+	int GLT_OPEN_API_CLIENT___GET_DEVICES_COUNT = OPEN_API_CLIENT_OPERATION_COUNT + 32;
+
+	/**
+	 * The operation id for the '<em>Get Devices Flat</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLT_OPEN_API_CLIENT___GET_DEVICES_FLAT = OPEN_API_CLIENT_OPERATION_COUNT + 33;
 
 	/**
 	 * The operation id for the '<em>Get Alarms With Mismatched Systems</em>' operation.
@@ -4302,7 +4751,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALARMS_WITH_MISMATCHED_SYSTEMS = OPEN_API_CLIENT_OPERATION_COUNT + 31;
+	int GLT_OPEN_API_CLIENT___GET_ALARMS_WITH_MISMATCHED_SYSTEMS = OPEN_API_CLIENT_OPERATION_COUNT + 34;
 
 	/**
 	 * The operation id for the '<em>Get Audit Log</em>' operation.
@@ -4311,7 +4760,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_AUDIT_LOG__INTEGER_INTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 32;
+	int GLT_OPEN_API_CLIENT___GET_AUDIT_LOG__INTEGER_INTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 35;
 
 	/**
 	 * The operation id for the '<em>Get Audit Log Count</em>' operation.
@@ -4320,7 +4769,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_AUDIT_LOG_COUNT = OPEN_API_CLIENT_OPERATION_COUNT + 33;
+	int GLT_OPEN_API_CLIENT___GET_AUDIT_LOG_COUNT = OPEN_API_CLIENT_OPERATION_COUNT + 36;
 
 	/**
 	 * The operation id for the '<em>Get Duplicate Texts</em>' operation.
@@ -4329,7 +4778,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_DUPLICATE_TEXTS = OPEN_API_CLIENT_OPERATION_COUNT + 34;
+	int GLT_OPEN_API_CLIENT___GET_DUPLICATE_TEXTS = OPEN_API_CLIENT_OPERATION_COUNT + 37;
 
 	/**
 	 * The operation id for the '<em>Get Fields</em>' operation.
@@ -4338,7 +4787,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_FIELDS__BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 35;
+	int GLT_OPEN_API_CLIENT___GET_FIELDS__BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 38;
 
 	/**
 	 * The operation id for the '<em>Get Undocumented Alarms</em>' operation.
@@ -4347,7 +4796,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_UNDOCUMENTED_ALARMS = OPEN_API_CLIENT_OPERATION_COUNT + 36;
+	int GLT_OPEN_API_CLIENT___GET_UNDOCUMENTED_ALARMS = OPEN_API_CLIENT_OPERATION_COUNT + 39;
 
 	/**
 	 * The operation id for the '<em>Get Unused Texts</em>' operation.
@@ -4356,7 +4805,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_UNUSED_TEXTS = OPEN_API_CLIENT_OPERATION_COUNT + 37;
+	int GLT_OPEN_API_CLIENT___GET_UNUSED_TEXTS = OPEN_API_CLIENT_OPERATION_COUNT + 40;
 
 	/**
 	 * The operation id for the '<em>Import From Csv</em>' operation.
@@ -4365,7 +4814,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___IMPORT_FROM_CSV__ELIST_STRING_BOOLEAN_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 38;
+	int GLT_OPEN_API_CLIENT___IMPORT_FROM_CSV__ELIST_STRING_BOOLEAN_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 41;
 
 	/**
 	 * The operation id for the '<em>Get Datalog Content</em>' operation.
@@ -4374,7 +4823,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_DATALOG_CONTENT__INTEGER_ELIST_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 39;
+	int GLT_OPEN_API_CLIENT___GET_DATALOG_CONTENT__INTEGER_ELIST_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 42;
 
 	/**
 	 * The operation id for the '<em>Get Datalog Info</em>' operation.
@@ -4383,7 +4832,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_DATALOG_INFO__INTEGER_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 40;
+	int GLT_OPEN_API_CLIENT___GET_DATALOG_INFO__INTEGER_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 43;
 
 	/**
 	 * The operation id for the '<em>Update Datalog Content</em>' operation.
@@ -4392,7 +4841,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___UPDATE_DATALOG_CONTENT__INTEGER_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 41;
+	int GLT_OPEN_API_CLIENT___UPDATE_DATALOG_CONTENT__INTEGER_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 44;
 
 	/**
 	 * The operation id for the '<em>Get Changelog</em>' operation.
@@ -4401,7 +4850,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_CHANGELOG__INTEGER_INTEGER_ELIST_BOOLEAN_ELIST_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 42;
+	int GLT_OPEN_API_CLIENT___GET_CHANGELOG__INTEGER_INTEGER_ELIST_BOOLEAN_ELIST_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 45;
 
 	/**
 	 * The operation id for the '<em>Get Changelog Count</em>' operation.
@@ -4410,7 +4859,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_CHANGELOG_COUNT__ELIST_BOOLEAN_ELIST_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 43;
+	int GLT_OPEN_API_CLIENT___GET_CHANGELOG_COUNT__ELIST_BOOLEAN_ELIST_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 46;
 
 	/**
 	 * The operation id for the '<em>Get Point Value History</em>' operation.
@@ -4419,7 +4868,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_POINT_VALUE_HISTORY__INTEGER_ELIST_BOOLEAN_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 44;
+	int GLT_OPEN_API_CLIENT___GET_POINT_VALUE_HISTORY__INTEGER_ELIST_BOOLEAN_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 47;
 
 	/**
 	 * The operation id for the '<em>Get Point Values</em>' operation.
@@ -4428,7 +4877,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_POINT_VALUES__INTEGER_STRING_STRING_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 45;
+	int GLT_OPEN_API_CLIENT___GET_POINT_VALUES__INTEGER_STRING_STRING_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 48;
 
 	/**
 	 * The operation id for the '<em>Update Point Values</em>' operation.
@@ -4437,7 +4886,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___UPDATE_POINT_VALUES__INTEGER_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 46;
+	int GLT_OPEN_API_CLIENT___UPDATE_POINT_VALUES__INTEGER_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 49;
 
 	/**
 	 * The operation id for the '<em>Get Alarm Count</em>' operation.
@@ -4446,7 +4895,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALARM_COUNT__ELIST_BIGINTEGER_BIGINTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 47;
+	int GLT_OPEN_API_CLIENT___GET_ALARM_COUNT__ELIST_BIGINTEGER_BIGINTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 50;
 
 	/**
 	 * The operation id for the '<em>Get Alarm Count Post</em>' operation.
@@ -4455,7 +4904,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALARM_COUNT_POST__BIGINTEGER_BIGINTEGER_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 48;
+	int GLT_OPEN_API_CLIENT___GET_ALARM_COUNT_POST__BIGINTEGER_BIGINTEGER_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 51;
 
 	/**
 	 * The operation id for the '<em>Get Alarm Count 1</em>' operation.
@@ -4464,7 +4913,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALARM_COUNT_1__STRING_STRING_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 49;
+	int GLT_OPEN_API_CLIENT___GET_ALARM_COUNT_1__STRING_STRING_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 52;
 
 	/**
 	 * The operation id for the '<em>Get Alarm Count By State</em>' operation.
@@ -4473,7 +4922,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALARM_COUNT_BY_STATE__STRING_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 50;
+	int GLT_OPEN_API_CLIENT___GET_ALARM_COUNT_BY_STATE__STRING_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 53;
 
 	/**
 	 * The operation id for the '<em>Get Alarm Count By State 1</em>' operation.
@@ -4482,7 +4931,16 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALARM_COUNT_BY_STATE_1__ELIST_BOOLEAN_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 51;
+	int GLT_OPEN_API_CLIENT___GET_ALARM_COUNT_BY_STATE_1__ELIST_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 54;
+
+	/**
+	 * The operation id for the '<em>Get Alarm Count By State And System</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLT_OPEN_API_CLIENT___GET_ALARM_COUNT_BY_STATE_AND_SYSTEM__ELIST_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 55;
 
 	/**
 	 * The operation id for the '<em>Get Alarm Count For System</em>' operation.
@@ -4491,7 +4949,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALARM_COUNT_FOR_SYSTEM__STRING_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 52;
+	int GLT_OPEN_API_CLIENT___GET_ALARM_COUNT_FOR_SYSTEM__STRING_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 56;
 
 	/**
 	 * The operation id for the '<em>Get Alarm For State Count</em>' operation.
@@ -4500,7 +4958,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALARM_FOR_STATE_COUNT__STRING_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 53;
+	int GLT_OPEN_API_CLIENT___GET_ALARM_FOR_STATE_COUNT__STRING_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 57;
 
 	/**
 	 * The operation id for the '<em>Get Alarm Log Timeline</em>' operation.
@@ -4509,7 +4967,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALARM_LOG_TIMELINE__STRING_BIGINTEGER_BIGINTEGER_INTEGER_INTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 54;
+	int GLT_OPEN_API_CLIENT___GET_ALARM_LOG_TIMELINE__STRING_BIGINTEGER_BIGINTEGER_INTEGER_INTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 58;
 
 	/**
 	 * The operation id for the '<em>Get Alarm Log Timeline Statistics</em>' operation.
@@ -4518,7 +4976,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALARM_LOG_TIMELINE_STATISTICS__STRING_BIGINTEGER_BIGINTEGER_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 55;
+	int GLT_OPEN_API_CLIENT___GET_ALARM_LOG_TIMELINE_STATISTICS__STRING_BIGINTEGER_BIGINTEGER_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 59;
 
 	/**
 	 * The operation id for the '<em>Get Alarm Logs</em>' operation.
@@ -4527,7 +4985,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALARM_LOGS__ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 56;
+	int GLT_OPEN_API_CLIENT___GET_ALARM_LOGS__ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 60;
 
 	/**
 	 * The operation id for the '<em>Get Alarm Logs 1</em>' operation.
@@ -4536,7 +4994,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALARM_LOGS_1__STRING_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 57;
+	int GLT_OPEN_API_CLIENT___GET_ALARM_LOGS_1__STRING_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 61;
 
 	/**
 	 * The operation id for the '<em>Get Alarm Logs For State</em>' operation.
@@ -4545,7 +5003,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALARM_LOGS_FOR_STATE__STRING_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 58;
+	int GLT_OPEN_API_CLIENT___GET_ALARM_LOGS_FOR_STATE__STRING_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 62;
 
 	/**
 	 * The operation id for the '<em>Get Alarm Logs For States</em>' operation.
@@ -4554,7 +5012,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALARM_LOGS_FOR_STATES__ELIST_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 59;
+	int GLT_OPEN_API_CLIENT___GET_ALARM_LOGS_FOR_STATES__ELIST_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 63;
 
 	/**
 	 * The operation id for the '<em>Get Alarm Logs Timeline</em>' operation.
@@ -4563,7 +5021,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALARM_LOGS_TIMELINE__STRING_BIGINTEGER_BIGINTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 60;
+	int GLT_OPEN_API_CLIENT___GET_ALARM_LOGS_TIMELINE__STRING_BIGINTEGER_BIGINTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 64;
 
 	/**
 	 * The operation id for the '<em>Get Alarms For State</em>' operation.
@@ -4572,7 +5030,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALARMS_FOR_STATE__STRING_STRING_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 61;
+	int GLT_OPEN_API_CLIENT___GET_ALARMS_FOR_STATE__STRING_STRING_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 65;
 
 	/**
 	 * The operation id for the '<em>Get Alarms For States</em>' operation.
@@ -4581,7 +5039,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALARMS_FOR_STATES__STRING_ELIST_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 62;
+	int GLT_OPEN_API_CLIENT___GET_ALARMS_FOR_STATES__STRING_ELIST_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 66;
 
 	/**
 	 * The operation id for the '<em>Get Entity Monitoring</em>' operation.
@@ -4590,7 +5048,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ENTITY_MONITORING__INTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 63;
+	int GLT_OPEN_API_CLIENT___GET_ENTITY_MONITORING__INTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 67;
 
 	/**
 	 * The operation id for the '<em>Get Entity Monitoring 1</em>' operation.
@@ -4599,7 +5057,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ENTITY_MONITORING_1__INTEGER_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 64;
+	int GLT_OPEN_API_CLIENT___GET_ENTITY_MONITORING_1__INTEGER_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 68;
 
 	/**
 	 * The operation id for the '<em>Update Entity Monitoring</em>' operation.
@@ -4608,7 +5066,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___UPDATE_ENTITY_MONITORING__INTEGER_STRING_INTEGER_STRING_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 65;
+	int GLT_OPEN_API_CLIENT___UPDATE_ENTITY_MONITORING__INTEGER_STRING_INTEGER_STRING_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 69;
 
 	/**
 	 * The operation id for the '<em>Get Log</em>' operation.
@@ -4617,7 +5075,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_LOG__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 66;
+	int GLT_OPEN_API_CLIENT___GET_LOG__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 70;
 
 	/**
 	 * The operation id for the '<em>Get Logs</em>' operation.
@@ -4626,7 +5084,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_LOGS = OPEN_API_CLIENT_OPERATION_COUNT + 67;
+	int GLT_OPEN_API_CLIENT___GET_LOGS = OPEN_API_CLIENT_OPERATION_COUNT + 71;
 
 	/**
 	 * The operation id for the '<em>Get Logs For State</em>' operation.
@@ -4635,7 +5093,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_LOGS_FOR_STATE__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 68;
+	int GLT_OPEN_API_CLIENT___GET_LOGS_FOR_STATE__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 72;
 
 	/**
 	 * The operation id for the '<em>Get Statistics</em>' operation.
@@ -4644,7 +5102,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_STATISTICS__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 69;
+	int GLT_OPEN_API_CLIENT___GET_STATISTICS__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 73;
 
 	/**
 	 * The operation id for the '<em>Get Status Logs</em>' operation.
@@ -4653,7 +5111,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_STATUS_LOGS = OPEN_API_CLIENT_OPERATION_COUNT + 70;
+	int GLT_OPEN_API_CLIENT___GET_STATUS_LOGS = OPEN_API_CLIENT_OPERATION_COUNT + 74;
 
 	/**
 	 * The operation id for the '<em>Upsert Status Log</em>' operation.
@@ -4662,7 +5120,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___UPSERT_STATUS_LOG__STATUSLOGREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 71;
+	int GLT_OPEN_API_CLIENT___UPSERT_STATUS_LOG__STATUSLOGREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 75;
 
 	/**
 	 * The operation id for the '<em>Get Status Logs 1</em>' operation.
@@ -4671,7 +5129,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_STATUS_LOGS_1__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 72;
+	int GLT_OPEN_API_CLIENT___GET_STATUS_LOGS_1__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 76;
 
 	/**
 	 * The operation id for the '<em>Get Status Logs Timeline</em>' operation.
@@ -4680,7 +5138,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_STATUS_LOGS_TIMELINE__STRING_BIGINTEGER_BIGINTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 73;
+	int GLT_OPEN_API_CLIENT___GET_STATUS_LOGS_TIMELINE__STRING_BIGINTEGER_BIGINTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 77;
 
 	/**
 	 * The operation id for the '<em>Get Tracked</em>' operation.
@@ -4689,7 +5147,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_TRACKED__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 74;
+	int GLT_OPEN_API_CLIENT___GET_TRACKED__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 78;
 
 	/**
 	 * The operation id for the '<em>Is Flaky</em>' operation.
@@ -4698,7 +5156,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___IS_FLAKY__STRING_STRING_BIGINTEGER_BIGINTEGER_INTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 75;
+	int GLT_OPEN_API_CLIENT___IS_FLAKY__STRING_STRING_BIGINTEGER_BIGINTEGER_INTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 79;
 
 	/**
 	 * The operation id for the '<em>Logs For States</em>' operation.
@@ -4707,7 +5165,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___LOGS_FOR_STATES__ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 76;
+	int GLT_OPEN_API_CLIENT___LOGS_FOR_STATES__ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 80;
 
 	/**
 	 * The operation id for the '<em>Refresh System</em>' operation.
@@ -4716,7 +5174,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___REFRESH_SYSTEM__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 77;
+	int GLT_OPEN_API_CLIENT___REFRESH_SYSTEM__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 81;
 
 	/**
 	 * The operation id for the '<em>Update Alarm State</em>' operation.
@@ -4725,7 +5183,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___UPDATE_ALARM_STATE__STRING_UPDATESTATEREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 78;
+	int GLT_OPEN_API_CLIENT___UPDATE_ALARM_STATE__STRING_UPDATESTATEREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 82;
 
 	/**
 	 * The operation id for the '<em>Get Changelog 1</em>' operation.
@@ -4734,7 +5192,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_CHANGELOG_1__INTEGER_INTEGER_ELIST_BOOLEAN_ELIST_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 79;
+	int GLT_OPEN_API_CLIENT___GET_CHANGELOG_1__INTEGER_INTEGER_ELIST_BOOLEAN_ELIST_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 83;
 
 	/**
 	 * The operation id for the '<em>Get Changelog Count 1</em>' operation.
@@ -4743,7 +5201,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_CHANGELOG_COUNT_1__ELIST_BOOLEAN_ELIST_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 80;
+	int GLT_OPEN_API_CLIENT___GET_CHANGELOG_COUNT_1__ELIST_BOOLEAN_ELIST_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 84;
 
 	/**
 	 * The operation id for the '<em>Get Time Schedule Block History</em>' operation.
@@ -4752,7 +5210,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_TIME_SCHEDULE_BLOCK_HISTORY__INTEGER_ELIST_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 81;
+	int GLT_OPEN_API_CLIENT___GET_TIME_SCHEDULE_BLOCK_HISTORY__INTEGER_ELIST_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 85;
 
 	/**
 	 * The operation id for the '<em>Get Time Schedule Blocks</em>' operation.
@@ -4761,7 +5219,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_TIME_SCHEDULE_BLOCKS__INTEGER_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 82;
+	int GLT_OPEN_API_CLIENT___GET_TIME_SCHEDULE_BLOCKS__INTEGER_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 86;
 
 	/**
 	 * The operation id for the '<em>Update Time Schedule Blocks</em>' operation.
@@ -4770,7 +5228,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___UPDATE_TIME_SCHEDULE_BLOCKS__INTEGER_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 83;
+	int GLT_OPEN_API_CLIENT___UPDATE_TIME_SCHEDULE_BLOCKS__INTEGER_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 87;
 
 	/**
 	 * The operation id for the '<em>Get Time Schedule State History</em>' operation.
@@ -4779,7 +5237,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_TIME_SCHEDULE_STATE_HISTORY__INTEGER_ELIST_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 84;
+	int GLT_OPEN_API_CLIENT___GET_TIME_SCHEDULE_STATE_HISTORY__INTEGER_ELIST_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 88;
 
 	/**
 	 * The operation id for the '<em>Get Time Schedule States</em>' operation.
@@ -4788,7 +5246,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_TIME_SCHEDULE_STATES__INTEGER_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 85;
+	int GLT_OPEN_API_CLIENT___GET_TIME_SCHEDULE_STATES__INTEGER_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 89;
 
 	/**
 	 * The operation id for the '<em>Update Time Schedule States</em>' operation.
@@ -4797,7 +5255,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___UPDATE_TIME_SCHEDULE_STATES__INTEGER_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 86;
+	int GLT_OPEN_API_CLIENT___UPDATE_TIME_SCHEDULE_STATES__INTEGER_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 90;
 
 	/**
 	 * The operation id for the '<em>Get Version</em>' operation.
@@ -4806,7 +5264,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_VERSION__INTEGER_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 87;
+	int GLT_OPEN_API_CLIENT___GET_VERSION__INTEGER_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 91;
 
 	/**
 	 * The operation id for the '<em>Point</em>' operation.
@@ -4815,7 +5273,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___POINT__POINTRECORD = OPEN_API_CLIENT_OPERATION_COUNT + 88;
+	int GLT_OPEN_API_CLIENT___POINT__POINTRECORD = OPEN_API_CLIENT_OPERATION_COUNT + 92;
 
 	/**
 	 * The operation id for the '<em>Timeschedule</em>' operation.
@@ -4824,7 +5282,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___TIMESCHEDULE__TIMESCHEDULERECORD = OPEN_API_CLIENT_OPERATION_COUNT + 89;
+	int GLT_OPEN_API_CLIENT___TIMESCHEDULE__TIMESCHEDULERECORD = OPEN_API_CLIENT_OPERATION_COUNT + 93;
 
 	/**
 	 * The operation id for the '<em>Get</em>' operation.
@@ -4833,7 +5291,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 90;
+	int GLT_OPEN_API_CLIENT___GET__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 94;
 
 	/**
 	 * The operation id for the '<em>Create Or Update</em>' operation.
@@ -4842,7 +5300,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___CREATE_OR_UPDATE__STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 91;
+	int GLT_OPEN_API_CLIENT___CREATE_OR_UPDATE__STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 95;
 
 	/**
 	 * The operation id for the '<em>Create</em>' operation.
@@ -4851,7 +5309,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___CREATE__STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 92;
+	int GLT_OPEN_API_CLIENT___CREATE__STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 96;
 
 	/**
 	 * The operation id for the '<em>Delete</em>' operation.
@@ -4860,7 +5318,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___DELETE__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 93;
+	int GLT_OPEN_API_CLIENT___DELETE__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 97;
 
 	/**
 	 * The operation id for the '<em>Get All Settings</em>' operation.
@@ -4869,7 +5327,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALL_SETTINGS = OPEN_API_CLIENT_OPERATION_COUNT + 94;
+	int GLT_OPEN_API_CLIENT___GET_ALL_SETTINGS = OPEN_API_CLIENT_OPERATION_COUNT + 98;
 
 	/**
 	 * The operation id for the '<em>Get Auth Status</em>' operation.
@@ -4878,7 +5336,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_AUTH_STATUS = OPEN_API_CLIENT_OPERATION_COUNT + 95;
+	int GLT_OPEN_API_CLIENT___GET_AUTH_STATUS = OPEN_API_CLIENT_OPERATION_COUNT + 99;
 
 	/**
 	 * The operation id for the '<em>Get Status</em>' operation.
@@ -4887,7 +5345,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_STATUS = OPEN_API_CLIENT_OPERATION_COUNT + 96;
+	int GLT_OPEN_API_CLIENT___GET_STATUS = OPEN_API_CLIENT_OPERATION_COUNT + 100;
 
 	/**
 	 * The operation id for the '<em>Get System</em>' operation.
@@ -4896,7 +5354,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_SYSTEM__STRING_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 97;
+	int GLT_OPEN_API_CLIENT___GET_SYSTEM__STRING_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 101;
 
 	/**
 	 * The operation id for the '<em>Update System</em>' operation.
@@ -4905,7 +5363,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___UPDATE_SYSTEM__STRING_SYSTEMDESCRIPTIONREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 98;
+	int GLT_OPEN_API_CLIENT___UPDATE_SYSTEM__STRING_SYSTEMDESCRIPTIONREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 102;
 
 	/**
 	 * The operation id for the '<em>Create System Description</em>' operation.
@@ -4914,7 +5372,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___CREATE_SYSTEM_DESCRIPTION__STRING_SYSTEMDESCRIPTIONREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 99;
+	int GLT_OPEN_API_CLIENT___CREATE_SYSTEM_DESCRIPTION__STRING_SYSTEMDESCRIPTIONREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 103;
 
 	/**
 	 * The operation id for the '<em>Delete System</em>' operation.
@@ -4923,7 +5381,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___DELETE_SYSTEM__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 100;
+	int GLT_OPEN_API_CLIENT___DELETE_SYSTEM__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 104;
 
 	/**
 	 * The operation id for the '<em>Get Contacts</em>' operation.
@@ -4932,7 +5390,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_CONTACTS__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 101;
+	int GLT_OPEN_API_CLIENT___GET_CONTACTS__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 105;
 
 	/**
 	 * The operation id for the '<em>Get Contracts</em>' operation.
@@ -4941,7 +5399,16 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_CONTRACTS__STRING_STRING_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 102;
+	int GLT_OPEN_API_CLIENT___GET_CONTRACTS__STRING_STRING_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 106;
+
+	/**
+	 * The operation id for the '<em>Get System Ids</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLT_OPEN_API_CLIENT___GET_SYSTEM_IDS__BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 107;
 
 	/**
 	 * The operation id for the '<em>Get Systems</em>' operation.
@@ -4950,7 +5417,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_SYSTEMS__BOOLEAN_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 103;
+	int GLT_OPEN_API_CLIENT___GET_SYSTEMS__BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 108;
 
 	/**
 	 * The operation id for the '<em>Get Tech Facilities</em>' operation.
@@ -4959,7 +5426,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_TECH_FACILITIES__STRING_STRING_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 104;
+	int GLT_OPEN_API_CLIENT___GET_TECH_FACILITIES__STRING_STRING_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 109;
 
 	/**
 	 * The operation id for the '<em>Get Entities</em>' operation.
@@ -4968,7 +5435,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ENTITIES__ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 105;
+	int GLT_OPEN_API_CLIENT___GET_ENTITIES__ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 110;
 
 	/**
 	 * The operation id for the '<em>Get Entities By Type</em>' operation.
@@ -4977,7 +5444,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ENTITIES_BY_TYPE__INTEGER_STRING_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 106;
+	int GLT_OPEN_API_CLIENT___GET_ENTITIES_BY_TYPE__INTEGER_STRING_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 111;
 
 	/**
 	 * The operation id for the '<em>Get Entities By Types</em>' operation.
@@ -4986,7 +5453,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ENTITIES_BY_TYPES__INTEGER_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 107;
+	int GLT_OPEN_API_CLIENT___GET_ENTITIES_BY_TYPES__INTEGER_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 112;
 
 	/**
 	 * The operation id for the '<em>Get System Entities</em>' operation.
@@ -4995,7 +5462,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_SYSTEM_ENTITIES__INTEGER_INTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 108;
+	int GLT_OPEN_API_CLIENT___GET_SYSTEM_ENTITIES__INTEGER_INTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 113;
 
 	/**
 	 * The operation id for the '<em>Get System Entity</em>' operation.
@@ -5004,7 +5471,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_SYSTEM_ENTITY__INTEGER_STRING_INTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 109;
+	int GLT_OPEN_API_CLIENT___GET_SYSTEM_ENTITY__INTEGER_STRING_INTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 114;
 
 	/**
 	 * The operation id for the '<em>Import Systems</em>' operation.
@@ -5013,7 +5480,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___IMPORT_SYSTEMS__BOOLEAN_BOOLEAN_BOOLEAN_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 110;
+	int GLT_OPEN_API_CLIENT___IMPORT_SYSTEMS__BOOLEAN_BOOLEAN_BOOLEAN_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 115;
 
 	/**
 	 * The operation id for the '<em>Cleanup Texts</em>' operation.
@@ -5022,7 +5489,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___CLEANUP_TEXTS = OPEN_API_CLIENT_OPERATION_COUNT + 111;
+	int GLT_OPEN_API_CLIENT___CLEANUP_TEXTS = OPEN_API_CLIENT_OPERATION_COUNT + 116;
 
 	/**
 	 * The operation id for the '<em>Create Text</em>' operation.
@@ -5031,7 +5498,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___CREATE_TEXT__TEXTREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 112;
+	int GLT_OPEN_API_CLIENT___CREATE_TEXT__TEXTREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 117;
 
 	/**
 	 * The operation id for the '<em>Get Text</em>' operation.
@@ -5040,7 +5507,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_TEXT__INTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 113;
+	int GLT_OPEN_API_CLIENT___GET_TEXT__INTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 118;
 
 	/**
 	 * The operation id for the '<em>Update Text</em>' operation.
@@ -5049,7 +5516,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___UPDATE_TEXT__INTEGER_TEXTREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 114;
+	int GLT_OPEN_API_CLIENT___UPDATE_TEXT__INTEGER_TEXTREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 119;
 
 	/**
 	 * The operation id for the '<em>Delete Text</em>' operation.
@@ -5058,7 +5525,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___DELETE_TEXT__INTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 115;
+	int GLT_OPEN_API_CLIENT___DELETE_TEXT__INTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 120;
 
 	/**
 	 * The operation id for the '<em>Get Text Ids</em>' operation.
@@ -5067,7 +5534,16 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_TEXT_IDS__BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 116;
+	int GLT_OPEN_API_CLIENT___GET_TEXT_IDS = OPEN_API_CLIENT_OPERATION_COUNT + 121;
+
+	/**
+	 * The operation id for the '<em>Get Text Ids 1</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLT_OPEN_API_CLIENT___GET_TEXT_IDS_1__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 122;
 
 	/**
 	 * The operation id for the '<em>Get Texts</em>' operation.
@@ -5076,7 +5552,16 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_TEXTS__STRING_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 117;
+	int GLT_OPEN_API_CLIENT___GET_TEXTS = OPEN_API_CLIENT_OPERATION_COUNT + 123;
+
+	/**
+	 * The operation id for the '<em>Get Texts 1</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLT_OPEN_API_CLIENT___GET_TEXTS_1__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 124;
 
 	/**
 	 * The operation id for the '<em>Get Groups</em>' operation.
@@ -5085,7 +5570,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_GROUPS = OPEN_API_CLIENT_OPERATION_COUNT + 118;
+	int GLT_OPEN_API_CLIENT___GET_GROUPS = OPEN_API_CLIENT_OPERATION_COUNT + 125;
 
 	/**
 	 * The operation id for the '<em>Add Group</em>' operation.
@@ -5094,7 +5579,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___ADD_GROUP__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 119;
+	int GLT_OPEN_API_CLIENT___ADD_GROUP__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 126;
 
 	/**
 	 * The operation id for the '<em>Add Member To Group</em>' operation.
@@ -5103,7 +5588,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___ADD_MEMBER_TO_GROUP__STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 120;
+	int GLT_OPEN_API_CLIENT___ADD_MEMBER_TO_GROUP__STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 127;
 
 	/**
 	 * The operation id for the '<em>Add Property To Role</em>' operation.
@@ -5112,7 +5597,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___ADD_PROPERTY_TO_ROLE__STRING_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 121;
+	int GLT_OPEN_API_CLIENT___ADD_PROPERTY_TO_ROLE__STRING_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 128;
 
 	/**
 	 * The operation id for the '<em>Remove Property From Role</em>' operation.
@@ -5121,7 +5606,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___REMOVE_PROPERTY_FROM_ROLE__STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 122;
+	int GLT_OPEN_API_CLIENT___REMOVE_PROPERTY_FROM_ROLE__STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 129;
 
 	/**
 	 * The operation id for the '<em>Get Users</em>' operation.
@@ -5130,7 +5615,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_USERS = OPEN_API_CLIENT_OPERATION_COUNT + 123;
+	int GLT_OPEN_API_CLIENT___GET_USERS = OPEN_API_CLIENT_OPERATION_COUNT + 130;
 
 	/**
 	 * The operation id for the '<em>Add User</em>' operation.
@@ -5139,7 +5624,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___ADD_USER__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 124;
+	int GLT_OPEN_API_CLIENT___ADD_USER__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 131;
 
 	/**
 	 * The operation id for the '<em>Current Role</em>' operation.
@@ -5148,7 +5633,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___CURRENT_ROLE = OPEN_API_CLIENT_OPERATION_COUNT + 125;
+	int GLT_OPEN_API_CLIENT___CURRENT_ROLE = OPEN_API_CLIENT_OPERATION_COUNT + 132;
 
 	/**
 	 * The operation id for the '<em>Get Role</em>' operation.
@@ -5157,7 +5642,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ROLE__STRING_BOOLEAN_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 126;
+	int GLT_OPEN_API_CLIENT___GET_ROLE__STRING_BOOLEAN_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 133;
 
 	/**
 	 * The operation id for the '<em>Remove Member From Group</em>' operation.
@@ -5166,7 +5651,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___REMOVE_MEMBER_FROM_GROUP__STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 127;
+	int GLT_OPEN_API_CLIENT___REMOVE_MEMBER_FROM_GROUP__STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 134;
 
 	/**
 	 * The operation id for the '<em>Remove Role</em>' operation.
@@ -5175,7 +5660,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___REMOVE_ROLE__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 128;
+	int GLT_OPEN_API_CLIENT___REMOVE_ROLE__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 135;
 
 	/**
 	 * The operation id for the '<em>Update Suspect</em>' operation.
@@ -5184,7 +5669,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___UPDATE_SUSPECT__STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 129;
+	int GLT_OPEN_API_CLIENT___UPDATE_SUSPECT__STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 136;
 
 	/**
 	 * The operation id for the '<em>Delete Suspect</em>' operation.
@@ -5193,7 +5678,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___DELETE_SUSPECT__STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 130;
+	int GLT_OPEN_API_CLIENT___DELETE_SUSPECT__STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 137;
 
 	/**
 	 * The operation id for the '<em>Get Suspects</em>' operation.
@@ -5202,7 +5687,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_SUSPECTS__ELIST_ELIST_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 131;
+	int GLT_OPEN_API_CLIENT___GET_SUSPECTS__ELIST_ELIST_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 138;
 
 	/**
 	 * The operation id for the '<em>Get Suspects 1</em>' operation.
@@ -5211,7 +5696,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_SUSPECTS_1__STRING_ELIST_ELIST_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 132;
+	int GLT_OPEN_API_CLIENT___GET_SUSPECTS_1__STRING_ELIST_ELIST_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 139;
 
 	/**
 	 * The number of operations of the '<em>Open Api Client</em>' class.
@@ -5220,35 +5705,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT_OPERATION_COUNT = OPEN_API_CLIENT_OPERATION_COUNT + 133;
-
-	/**
-	 * The meta object id for the '{@link de.jena.model.glt.impl.JsonNodeImpl <em>Json Node</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.jena.model.glt.impl.JsonNodeImpl
-	 * @see de.jena.model.glt.impl.GltPackageImpl#getJsonNode()
-	 * @generated
-	 */
-	int JSON_NODE = 46;
-
-	/**
-	 * The number of structural features of the '<em>Json Node</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JSON_NODE_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Json Node</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JSON_NODE_OPERATION_COUNT = 0;
+	int GLT_OPEN_API_CLIENT_OPERATION_COUNT = OPEN_API_CLIENT_OPERATION_COUNT + 140;
 
 	/**
 	 * The meta object id for the '<em>JResponse</em>' data type.
@@ -5258,7 +5715,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getJResponse()
 	 * @generated
 	 */
-	int JRESPONSE = 47;
+	int JRESPONSE = 54;
 
 
 	/**
@@ -5283,10 +5740,10 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getAlarm_Flags();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.jena.model.glt.Alarm#getId <em>Id</em>}'.
+	 * Returns the meta object for the containment reference '{@link de.jena.model.glt.Alarm#getId <em>Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Id</em>'.
+	 * @return the meta object for the containment reference '<em>Id</em>'.
 	 * @see de.jena.model.glt.Alarm#getId()
 	 * @see #getAlarm()
 	 * @generated
@@ -5544,10 +6001,10 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getAlarmPojo();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.jena.model.glt.AlarmPojo#getId <em>Id</em>}'.
+	 * Returns the meta object for the containment reference '{@link de.jena.model.glt.AlarmPojo#getId <em>Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Id</em>'.
+	 * @return the meta object for the containment reference '<em>Id</em>'.
 	 * @see de.jena.model.glt.AlarmPojo#getId()
 	 * @see #getAlarmPojo()
 	 * @generated
@@ -5643,6 +6100,38 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getAlarmPojo_PriorityWinter();
 
 	/**
+	 * Returns the meta object for class '{@link de.jena.model.glt.LinkedIdString <em>Linked Id String</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Linked Id String</em>'.
+	 * @see de.jena.model.glt.LinkedIdString
+	 * @generated
+	 */
+	EClass getLinkedIdString();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.LinkedIdString#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see de.jena.model.glt.LinkedIdString#getId()
+	 * @see #getLinkedIdString()
+	 * @generated
+	 */
+	EAttribute getLinkedIdString_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.LinkedIdString#getLinks <em>Links</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Links</em>'.
+	 * @see de.jena.model.glt.LinkedIdString#getLinks()
+	 * @see #getLinkedIdString()
+	 * @generated
+	 */
+	EAttribute getLinkedIdString_Links();
+
+	/**
 	 * Returns the meta object for class '{@link de.jena.model.glt.InstructionsPojo <em>Instructions Pojo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5664,10 +6153,10 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getInstructionsPojo_AlarmId();
 
 	/**
-	 * Returns the meta object for the reference list '{@link de.jena.model.glt.InstructionsPojo#getRelations <em>Relations</em>}'.
+	 * Returns the meta object for the containment reference list '{@link de.jena.model.glt.InstructionsPojo#getRelations <em>Relations</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Relations</em>'.
+	 * @return the meta object for the containment reference list '<em>Relations</em>'.
 	 * @see de.jena.model.glt.InstructionsPojo#getRelations()
 	 * @see #getInstructionsPojo()
 	 * @generated
@@ -5705,6 +6194,60 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EAttribute getRelationPojo_Instructions();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.model.glt.CalenderEventRequest <em>Calender Event Request</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Calender Event Request</em>'.
+	 * @see de.jena.model.glt.CalenderEventRequest
+	 * @generated
+	 */
+	EClass getCalenderEventRequest();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.CalenderEventRequest#getFrom <em>From</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>From</em>'.
+	 * @see de.jena.model.glt.CalenderEventRequest#getFrom()
+	 * @see #getCalenderEventRequest()
+	 * @generated
+	 */
+	EAttribute getCalenderEventRequest_From();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.CalenderEventRequest#getTo <em>To</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>To</em>'.
+	 * @see de.jena.model.glt.CalenderEventRequest#getTo()
+	 * @see #getCalenderEventRequest()
+	 * @generated
+	 */
+	EAttribute getCalenderEventRequest_To();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.CalenderEventRequest#getNote <em>Note</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Note</em>'.
+	 * @see de.jena.model.glt.CalenderEventRequest#getNote()
+	 * @see #getCalenderEventRequest()
+	 * @generated
+	 */
+	EAttribute getCalenderEventRequest_Note();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.CalenderEventRequest#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see de.jena.model.glt.CalenderEventRequest#getType()
+	 * @see #getCalenderEventRequest()
+	 * @generated
+	 */
+	EAttribute getCalenderEventRequest_Type();
 
 	/**
 	 * Returns the meta object for class '{@link de.jena.model.glt.CalendarEventPojo <em>Calendar Event Pojo</em>}'.
@@ -5805,60 +6348,6 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getCalendarEventPojo_SystemId();
 
 	/**
-	 * Returns the meta object for class '{@link de.jena.model.glt.CalenderEventRequest <em>Calender Event Request</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Calender Event Request</em>'.
-	 * @see de.jena.model.glt.CalenderEventRequest
-	 * @generated
-	 */
-	EClass getCalenderEventRequest();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.CalenderEventRequest#getFrom <em>From</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>From</em>'.
-	 * @see de.jena.model.glt.CalenderEventRequest#getFrom()
-	 * @see #getCalenderEventRequest()
-	 * @generated
-	 */
-	EAttribute getCalenderEventRequest_From();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.CalenderEventRequest#getTo <em>To</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>To</em>'.
-	 * @see de.jena.model.glt.CalenderEventRequest#getTo()
-	 * @see #getCalenderEventRequest()
-	 * @generated
-	 */
-	EAttribute getCalenderEventRequest_To();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.CalenderEventRequest#getNote <em>Note</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Note</em>'.
-	 * @see de.jena.model.glt.CalenderEventRequest#getNote()
-	 * @see #getCalenderEventRequest()
-	 * @generated
-	 */
-	EAttribute getCalenderEventRequest_Note();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.CalenderEventRequest#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see de.jena.model.glt.CalenderEventRequest#getType()
-	 * @see #getCalenderEventRequest()
-	 * @generated
-	 */
-	EAttribute getCalenderEventRequest_Type();
-
-	/**
 	 * Returns the meta object for class '{@link de.jena.model.glt.CommentPojo <em>Comment Pojo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5946,10 +6435,10 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getCommentPojo_OwnerType();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.jena.model.glt.CommentPojo#getStatus <em>Status</em>}'.
+	 * Returns the meta object for the containment reference '{@link de.jena.model.glt.CommentPojo#getStatus <em>Status</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Status</em>'.
+	 * @return the meta object for the containment reference '<em>Status</em>'.
 	 * @see de.jena.model.glt.CommentPojo#getStatus()
 	 * @see #getCommentPojo()
 	 * @generated
@@ -6030,6 +6519,254 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EAttribute getCommentRequest_Type();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.model.glt.DeviceBuildingPojo <em>Device Building Pojo</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Device Building Pojo</em>'.
+	 * @see de.jena.model.glt.DeviceBuildingPojo
+	 * @generated
+	 */
+	EClass getDeviceBuildingPojo();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.DeviceBuildingPojo#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see de.jena.model.glt.DeviceBuildingPojo#getId()
+	 * @see #getDeviceBuildingPojo()
+	 * @generated
+	 */
+	EAttribute getDeviceBuildingPojo_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.DeviceBuildingPojo#getSystemId <em>System Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>System Id</em>'.
+	 * @see de.jena.model.glt.DeviceBuildingPojo#getSystemId()
+	 * @see #getDeviceBuildingPojo()
+	 * @generated
+	 */
+	EAttribute getDeviceBuildingPojo_SystemId();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.jena.model.glt.DeviceBuildingPojo#getDevices <em>Devices</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Devices</em>'.
+	 * @see de.jena.model.glt.DeviceBuildingPojo#getDevices()
+	 * @see #getDeviceBuildingPojo()
+	 * @generated
+	 */
+	EReference getDeviceBuildingPojo_Devices();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.model.glt.DevicePojo <em>Device Pojo</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Device Pojo</em>'.
+	 * @see de.jena.model.glt.DevicePojo
+	 * @generated
+	 */
+	EClass getDevicePojo();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.DevicePojo#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see de.jena.model.glt.DevicePojo#getId()
+	 * @see #getDevicePojo()
+	 * @generated
+	 */
+	EAttribute getDevicePojo_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.DevicePojo#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see de.jena.model.glt.DevicePojo#getType()
+	 * @see #getDevicePojo()
+	 * @generated
+	 */
+	EAttribute getDevicePojo_Type();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.jena.model.glt.DevicePojo#getConnections <em>Connections</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Connections</em>'.
+	 * @see de.jena.model.glt.DevicePojo#getConnections()
+	 * @see #getDevicePojo()
+	 * @generated
+	 */
+	EReference getDevicePojo_Connections();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.model.glt.DeviceConnectionPojo <em>Device Connection Pojo</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Device Connection Pojo</em>'.
+	 * @see de.jena.model.glt.DeviceConnectionPojo
+	 * @generated
+	 */
+	EClass getDeviceConnectionPojo();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.DeviceConnectionPojo#getTimestamp <em>Timestamp</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Timestamp</em>'.
+	 * @see de.jena.model.glt.DeviceConnectionPojo#getTimestamp()
+	 * @see #getDeviceConnectionPojo()
+	 * @generated
+	 */
+	EAttribute getDeviceConnectionPojo_Timestamp();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.DeviceConnectionPojo#getIp <em>Ip</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Ip</em>'.
+	 * @see de.jena.model.glt.DeviceConnectionPojo#getIp()
+	 * @see #getDeviceConnectionPojo()
+	 * @generated
+	 */
+	EAttribute getDeviceConnectionPojo_Ip();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.DeviceConnectionPojo#getReachable <em>Reachable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Reachable</em>'.
+	 * @see de.jena.model.glt.DeviceConnectionPojo#getReachable()
+	 * @see #getDeviceConnectionPojo()
+	 * @generated
+	 */
+	EAttribute getDeviceConnectionPojo_Reachable();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.DeviceConnectionPojo#getSince <em>Since</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Since</em>'.
+	 * @see de.jena.model.glt.DeviceConnectionPojo#getSince()
+	 * @see #getDeviceConnectionPojo()
+	 * @generated
+	 */
+	EAttribute getDeviceConnectionPojo_Since();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.model.glt.DevicesCollectionPojo <em>Devices Collection Pojo</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Devices Collection Pojo</em>'.
+	 * @see de.jena.model.glt.DevicesCollectionPojo
+	 * @generated
+	 */
+	EClass getDevicesCollectionPojo();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.jena.model.glt.DevicesCollectionPojo#getBuildings <em>Buildings</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Buildings</em>'.
+	 * @see de.jena.model.glt.DevicesCollectionPojo#getBuildings()
+	 * @see #getDevicesCollectionPojo()
+	 * @generated
+	 */
+	EReference getDevicesCollectionPojo_Buildings();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.model.glt.DeviceAdapterPojo <em>Device Adapter Pojo</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Device Adapter Pojo</em>'.
+	 * @see de.jena.model.glt.DeviceAdapterPojo
+	 * @generated
+	 */
+	EClass getDeviceAdapterPojo();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.DeviceAdapterPojo#getBuildingId <em>Building Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Building Id</em>'.
+	 * @see de.jena.model.glt.DeviceAdapterPojo#getBuildingId()
+	 * @see #getDeviceAdapterPojo()
+	 * @generated
+	 */
+	EAttribute getDeviceAdapterPojo_BuildingId();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.DeviceAdapterPojo#getDeviceId <em>Device Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Device Id</em>'.
+	 * @see de.jena.model.glt.DeviceAdapterPojo#getDeviceId()
+	 * @see #getDeviceAdapterPojo()
+	 * @generated
+	 */
+	EAttribute getDeviceAdapterPojo_DeviceId();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.DeviceAdapterPojo#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see de.jena.model.glt.DeviceAdapterPojo#getType()
+	 * @see #getDeviceAdapterPojo()
+	 * @generated
+	 */
+	EAttribute getDeviceAdapterPojo_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.DeviceAdapterPojo#getTimestamp <em>Timestamp</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Timestamp</em>'.
+	 * @see de.jena.model.glt.DeviceAdapterPojo#getTimestamp()
+	 * @see #getDeviceAdapterPojo()
+	 * @generated
+	 */
+	EAttribute getDeviceAdapterPojo_Timestamp();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.DeviceAdapterPojo#getIp <em>Ip</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Ip</em>'.
+	 * @see de.jena.model.glt.DeviceAdapterPojo#getIp()
+	 * @see #getDeviceAdapterPojo()
+	 * @generated
+	 */
+	EAttribute getDeviceAdapterPojo_Ip();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.DeviceAdapterPojo#getReachable <em>Reachable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Reachable</em>'.
+	 * @see de.jena.model.glt.DeviceAdapterPojo#getReachable()
+	 * @see #getDeviceAdapterPojo()
+	 * @generated
+	 */
+	EAttribute getDeviceAdapterPojo_Reachable();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.DeviceAdapterPojo#getSince <em>Since</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Since</em>'.
+	 * @see de.jena.model.glt.DeviceAdapterPojo#getSince()
+	 * @see #getDeviceAdapterPojo()
+	 * @generated
+	 */
+	EAttribute getDeviceAdapterPojo_Since();
 
 	/**
 	 * Returns the meta object for class '{@link de.jena.model.glt.AlarmLogPojo <em>Alarm Log Pojo</em>}'.
@@ -6359,10 +7096,10 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getDatalogContentPojo_IsError();
 
 	/**
-	 * Returns the meta object for the reference list '{@link de.jena.model.glt.DatalogContentPojo#getComments <em>Comments</em>}'.
+	 * Returns the meta object for the containment reference list '{@link de.jena.model.glt.DatalogContentPojo#getComments <em>Comments</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Comments</em>'.
+	 * @return the meta object for the containment reference list '<em>Comments</em>'.
 	 * @see de.jena.model.glt.DatalogContentPojo#getComments()
 	 * @see #getDatalogContentPojo()
 	 * @generated
@@ -6468,10 +7205,10 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getPointValuePojo_IsUnknown();
 
 	/**
-	 * Returns the meta object for the reference list '{@link de.jena.model.glt.PointValuePojo#getComments <em>Comments</em>}'.
+	 * Returns the meta object for the containment reference list '{@link de.jena.model.glt.PointValuePojo#getComments <em>Comments</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Comments</em>'.
+	 * @return the meta object for the containment reference list '<em>Comments</em>'.
 	 * @see de.jena.model.glt.PointValuePojo#getComments()
 	 * @see #getPointValuePojo()
 	 * @generated
@@ -6489,10 +7226,10 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getAlarmLogTimelinePojo();
 
 	/**
-	 * Returns the meta object for the reference list '{@link de.jena.model.glt.AlarmLogTimelinePojo#getAlarmLogs <em>Alarm Logs</em>}'.
+	 * Returns the meta object for the containment reference list '{@link de.jena.model.glt.AlarmLogTimelinePojo#getAlarmLogs <em>Alarm Logs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Alarm Logs</em>'.
+	 * @return the meta object for the containment reference list '<em>Alarm Logs</em>'.
 	 * @see de.jena.model.glt.AlarmLogTimelinePojo#getAlarmLogs()
 	 * @see #getAlarmLogTimelinePojo()
 	 * @generated
@@ -6521,10 +7258,10 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getStatisticEntry();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.jena.model.glt.StatisticEntry#getTimeWindow <em>Time Window</em>}'.
+	 * Returns the meta object for the containment reference '{@link de.jena.model.glt.StatisticEntry#getTimeWindow <em>Time Window</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Time Window</em>'.
+	 * @return the meta object for the containment reference '<em>Time Window</em>'.
 	 * @see de.jena.model.glt.StatisticEntry#getTimeWindow()
 	 * @see #getStatisticEntry()
 	 * @generated
@@ -7097,10 +7834,10 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getTimeScheduleBlockPojo_IsUnknown();
 
 	/**
-	 * Returns the meta object for the reference list '{@link de.jena.model.glt.TimeScheduleBlockPojo#getComments <em>Comments</em>}'.
+	 * Returns the meta object for the containment reference list '{@link de.jena.model.glt.TimeScheduleBlockPojo#getComments <em>Comments</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Comments</em>'.
+	 * @return the meta object for the containment reference list '<em>Comments</em>'.
 	 * @see de.jena.model.glt.TimeScheduleBlockPojo#getComments()
 	 * @see #getTimeScheduleBlockPojo()
 	 * @generated
@@ -7184,10 +7921,10 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getTimeScheduleStatePojo_IsUnknown();
 
 	/**
-	 * Returns the meta object for the reference list '{@link de.jena.model.glt.TimeScheduleStatePojo#getComments <em>Comments</em>}'.
+	 * Returns the meta object for the containment reference list '{@link de.jena.model.glt.TimeScheduleStatePojo#getComments <em>Comments</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Comments</em>'.
+	 * @return the meta object for the containment reference list '<em>Comments</em>'.
 	 * @see de.jena.model.glt.TimeScheduleStatePojo#getComments()
 	 * @see #getTimeScheduleStatePojo()
 	 * @generated
@@ -7454,6 +8191,16 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EAttribute getTimeScheduleRecord_Author();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.model.glt.JsonNode <em>Json Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Json Node</em>'.
+	 * @see de.jena.model.glt.JsonNode
+	 * @generated
+	 */
+	EClass getJsonNode();
 
 	/**
 	 * Returns the meta object for class '{@link de.jena.model.glt.AddressPojo <em>Address Pojo</em>}'.
@@ -7751,10 +8498,10 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getSystemDescriptionPojo_ExternalId();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.jena.model.glt.SystemDescriptionPojo#getAddress <em>Address</em>}'.
+	 * Returns the meta object for the containment reference '{@link de.jena.model.glt.SystemDescriptionPojo#getAddress <em>Address</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Address</em>'.
+	 * @return the meta object for the containment reference '<em>Address</em>'.
 	 * @see de.jena.model.glt.SystemDescriptionPojo#getAddress()
 	 * @see #getSystemDescriptionPojo()
 	 * @generated
@@ -7773,10 +8520,10 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getSystemDescriptionPojo_Source();
 
 	/**
-	 * Returns the meta object for the reference list '{@link de.jena.model.glt.SystemDescriptionPojo#getChildren <em>Children</em>}'.
+	 * Returns the meta object for the containment reference list '{@link de.jena.model.glt.SystemDescriptionPojo#getChildren <em>Children</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Children</em>'.
+	 * @return the meta object for the containment reference list '<em>Children</em>'.
 	 * @see de.jena.model.glt.SystemDescriptionPojo#getChildren()
 	 * @see #getSystemDescriptionPojo()
 	 * @generated
@@ -8024,10 +8771,10 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getContactPojo_Title();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.jena.model.glt.ContactPojo#getAddress <em>Address</em>}'.
+	 * Returns the meta object for the containment reference '{@link de.jena.model.glt.ContactPojo#getAddress <em>Address</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Address</em>'.
+	 * @return the meta object for the containment reference '<em>Address</em>'.
 	 * @see de.jena.model.glt.ContactPojo#getAddress()
 	 * @see #getContactPojo()
 	 * @generated
@@ -8035,10 +8782,10 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getContactPojo_Address();
 
 	/**
-	 * Returns the meta object for the reference list '{@link de.jena.model.glt.ContactPojo#getPhones <em>Phones</em>}'.
+	 * Returns the meta object for the containment reference list '{@link de.jena.model.glt.ContactPojo#getPhones <em>Phones</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Phones</em>'.
+	 * @return the meta object for the containment reference list '<em>Phones</em>'.
 	 * @see de.jena.model.glt.ContactPojo#getPhones()
 	 * @see #getContactPojo()
 	 * @generated
@@ -8165,10 +8912,10 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getContractPojo_Comment();
 
 	/**
-	 * Returns the meta object for the reference list '{@link de.jena.model.glt.ContractPojo#getContacts <em>Contacts</em>}'.
+	 * Returns the meta object for the containment reference list '{@link de.jena.model.glt.ContractPojo#getContacts <em>Contacts</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Contacts</em>'.
+	 * @return the meta object for the containment reference list '<em>Contacts</em>'.
 	 * @see de.jena.model.glt.ContractPojo#getContacts()
 	 * @see #getContractPojo()
 	 * @generated
@@ -8209,10 +8956,10 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getContractPojo_Number();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.jena.model.glt.ContractPojo#getPartner <em>Partner</em>}'.
+	 * Returns the meta object for the containment reference '{@link de.jena.model.glt.ContractPojo#getPartner <em>Partner</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Partner</em>'.
+	 * @return the meta object for the containment reference '<em>Partner</em>'.
 	 * @see de.jena.model.glt.ContractPojo#getPartner()
 	 * @see #getContractPojo()
 	 * @generated
@@ -8220,10 +8967,10 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getContractPojo_Partner();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.jena.model.glt.ContractPojo#getReferee <em>Referee</em>}'.
+	 * Returns the meta object for the containment reference '{@link de.jena.model.glt.ContractPojo#getReferee <em>Referee</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Referee</em>'.
+	 * @return the meta object for the containment reference '<em>Referee</em>'.
 	 * @see de.jena.model.glt.ContractPojo#getReferee()
 	 * @see #getContractPojo()
 	 * @generated
@@ -8362,10 +9109,10 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getTechFacilityPojo_LaunchDate();
 
 	/**
-	 * Returns the meta object for the reference list '{@link de.jena.model.glt.TechFacilityPojo#getContracts <em>Contracts</em>}'.
+	 * Returns the meta object for the containment reference list '{@link de.jena.model.glt.TechFacilityPojo#getContracts <em>Contracts</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Contracts</em>'.
+	 * @return the meta object for the containment reference list '<em>Contracts</em>'.
 	 * @see de.jena.model.glt.TechFacilityPojo#getContracts()
 	 * @see #getTechFacilityPojo()
 	 * @generated
@@ -8535,10 +9282,10 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getCylonNetworkPojo_Count();
 
 	/**
-	 * Returns the meta object for the reference list '{@link de.jena.model.glt.CylonNetworkPojo#getChildren <em>Children</em>}'.
+	 * Returns the meta object for the containment reference list '{@link de.jena.model.glt.CylonNetworkPojo#getChildren <em>Children</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Children</em>'.
+	 * @return the meta object for the containment reference list '<em>Children</em>'.
 	 * @see de.jena.model.glt.CylonNetworkPojo#getChildren()
 	 * @see #getCylonNetworkPojo()
 	 * @generated
@@ -8567,10 +9314,10 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getImportStatisticPojo();
 
 	/**
-	 * Returns the meta object for the reference list '{@link de.jena.model.glt.ImportStatisticPojo#getAdd <em>Add</em>}'.
+	 * Returns the meta object for the containment reference list '{@link de.jena.model.glt.ImportStatisticPojo#getAdd <em>Add</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Add</em>'.
+	 * @return the meta object for the containment reference list '<em>Add</em>'.
 	 * @see de.jena.model.glt.ImportStatisticPojo#getAdd()
 	 * @see #getImportStatisticPojo()
 	 * @generated
@@ -8578,10 +9325,10 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getImportStatisticPojo_Add();
 
 	/**
-	 * Returns the meta object for the reference list '{@link de.jena.model.glt.ImportStatisticPojo#getRemove <em>Remove</em>}'.
+	 * Returns the meta object for the containment reference list '{@link de.jena.model.glt.ImportStatisticPojo#getRemove <em>Remove</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Remove</em>'.
+	 * @return the meta object for the containment reference list '<em>Remove</em>'.
 	 * @see de.jena.model.glt.ImportStatisticPojo#getRemove()
 	 * @see #getImportStatisticPojo()
 	 * @generated
@@ -8589,10 +9336,10 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getImportStatisticPojo_Remove();
 
 	/**
-	 * Returns the meta object for the reference list '{@link de.jena.model.glt.ImportStatisticPojo#getUpdate <em>Update</em>}'.
+	 * Returns the meta object for the containment reference list '{@link de.jena.model.glt.ImportStatisticPojo#getUpdate <em>Update</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Update</em>'.
+	 * @return the meta object for the containment reference list '<em>Update</em>'.
 	 * @see de.jena.model.glt.ImportStatisticPojo#getUpdate()
 	 * @see #getImportStatisticPojo()
 	 * @generated
@@ -8684,6 +9431,38 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EAttribute getTextRequest_Type();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.model.glt.LinkedIdInteger <em>Linked Id Integer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Linked Id Integer</em>'.
+	 * @see de.jena.model.glt.LinkedIdInteger
+	 * @generated
+	 */
+	EClass getLinkedIdInteger();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.LinkedIdInteger#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see de.jena.model.glt.LinkedIdInteger#getId()
+	 * @see #getLinkedIdInteger()
+	 * @generated
+	 */
+	EAttribute getLinkedIdInteger_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.LinkedIdInteger#getLinks <em>Links</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Links</em>'.
+	 * @see de.jena.model.glt.LinkedIdInteger#getLinks()
+	 * @see #getLinkedIdInteger()
+	 * @generated
+	 */
+	EAttribute getLinkedIdInteger_Links();
 
 	/**
 	 * Returns the meta object for class '{@link de.jena.model.glt.RolePojo <em>Role Pojo</em>}'.
@@ -8892,10 +9671,10 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getResponse_Response();
 
 	/**
-	 * Returns the meta object for the reference list '{@link de.jena.model.glt.Response#getResult <em>Result</em>}'.
+	 * Returns the meta object for the containment reference list '{@link de.jena.model.glt.Response#getResult <em>Result</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Result</em>'.
+	 * @return the meta object for the containment reference list '<em>Result</em>'.
 	 * @see de.jena.model.glt.Response#getResult()
 	 * @see #getResponse()
 	 * @generated
@@ -8993,6 +9772,16 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EOperation getGltOpenApiClient__CreateAlarm__String_AlarmRequest();
 
 	/**
+	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getAlarmIds(java.lang.String) <em>Get Alarm Ids</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Alarm Ids</em>' operation.
+	 * @see de.jena.model.glt.GltOpenApiClient#getAlarmIds(java.lang.String)
+	 * @generated
+	 */
+	EOperation getGltOpenApiClient__GetAlarmIds__String();
+
+	/**
 	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getAlarmInstructions(java.lang.String) <em>Get Alarm Instructions</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9023,14 +9812,24 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EOperation getGltOpenApiClient__GetAlarms__EList_String();
 
 	/**
-	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#usage(java.lang.Integer, java.lang.Boolean) <em>Usage</em>}' operation.
+	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#usage(java.lang.Integer) <em>Usage</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Usage</em>' operation.
-	 * @see de.jena.model.glt.GltOpenApiClient#usage(java.lang.Integer, java.lang.Boolean)
+	 * @see de.jena.model.glt.GltOpenApiClient#usage(java.lang.Integer)
 	 * @generated
 	 */
-	EOperation getGltOpenApiClient__Usage__Integer_Boolean();
+	EOperation getGltOpenApiClient__Usage__Integer();
+
+	/**
+	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#usageIds(java.lang.Integer) <em>Usage Ids</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Usage Ids</em>' operation.
+	 * @see de.jena.model.glt.GltOpenApiClient#usageIds(java.lang.Integer)
+	 * @generated
+	 */
+	EOperation getGltOpenApiClient__UsageIds__Integer();
 
 	/**
 	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getEventsForAlarm(java.lang.String, java.lang.String, java.lang.String, java.lang.String) <em>Get Events For Alarm</em>}' operation.
@@ -9243,14 +10042,14 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EOperation getGltOpenApiClient__GetDeviceName__EList();
 
 	/**
-	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getDevices(java.lang.Boolean) <em>Get Devices</em>}' operation.
+	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getDevices() <em>Get Devices</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Devices</em>' operation.
-	 * @see de.jena.model.glt.GltOpenApiClient#getDevices(java.lang.Boolean)
+	 * @see de.jena.model.glt.GltOpenApiClient#getDevices()
 	 * @generated
 	 */
-	EOperation getGltOpenApiClient__GetDevices__Boolean();
+	EOperation getGltOpenApiClient__GetDevices();
 
 	/**
 	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getDevicesCount() <em>Get Devices Count</em>}' operation.
@@ -9261,6 +10060,16 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EOperation getGltOpenApiClient__GetDevicesCount();
+
+	/**
+	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getDevicesFlat() <em>Get Devices Flat</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Devices Flat</em>' operation.
+	 * @see de.jena.model.glt.GltOpenApiClient#getDevicesFlat()
+	 * @generated
+	 */
+	EOperation getGltOpenApiClient__GetDevicesFlat();
 
 	/**
 	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getAlarmsWithMismatchedSystems() <em>Get Alarms With Mismatched Systems</em>}' operation.
@@ -9463,14 +10272,24 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EOperation getGltOpenApiClient__GetAlarmCountByState__String_EList_EList();
 
 	/**
-	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getAlarmCountByState_1(org.eclipse.emf.common.util.EList, java.lang.Boolean, org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList) <em>Get Alarm Count By State 1</em>}' operation.
+	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getAlarmCountByState_1(org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList) <em>Get Alarm Count By State 1</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Alarm Count By State 1</em>' operation.
-	 * @see de.jena.model.glt.GltOpenApiClient#getAlarmCountByState_1(org.eclipse.emf.common.util.EList, java.lang.Boolean, org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList)
+	 * @see de.jena.model.glt.GltOpenApiClient#getAlarmCountByState_1(org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList)
 	 * @generated
 	 */
-	EOperation getGltOpenApiClient__GetAlarmCountByState_1__EList_Boolean_EList_EList();
+	EOperation getGltOpenApiClient__GetAlarmCountByState_1__EList_EList_EList();
+
+	/**
+	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getAlarmCountByStateAndSystem(org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList) <em>Get Alarm Count By State And System</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Alarm Count By State And System</em>' operation.
+	 * @see de.jena.model.glt.GltOpenApiClient#getAlarmCountByStateAndSystem(org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList)
+	 * @generated
+	 */
+	EOperation getGltOpenApiClient__GetAlarmCountByStateAndSystem__EList_EList_EList();
 
 	/**
 	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getAlarmCountForSystem(java.lang.String, org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList) <em>Get Alarm Count For System</em>}' operation.
@@ -9983,14 +10802,24 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EOperation getGltOpenApiClient__GetContracts__String_String_Boolean();
 
 	/**
-	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getSystems(java.lang.Boolean, java.lang.Boolean) <em>Get Systems</em>}' operation.
+	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getSystemIds(java.lang.Boolean) <em>Get System Ids</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get System Ids</em>' operation.
+	 * @see de.jena.model.glt.GltOpenApiClient#getSystemIds(java.lang.Boolean)
+	 * @generated
+	 */
+	EOperation getGltOpenApiClient__GetSystemIds__Boolean();
+
+	/**
+	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getSystems(java.lang.Boolean) <em>Get Systems</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Systems</em>' operation.
-	 * @see de.jena.model.glt.GltOpenApiClient#getSystems(java.lang.Boolean, java.lang.Boolean)
+	 * @see de.jena.model.glt.GltOpenApiClient#getSystems(java.lang.Boolean)
 	 * @generated
 	 */
-	EOperation getGltOpenApiClient__GetSystems__Boolean_Boolean();
+	EOperation getGltOpenApiClient__GetSystems__Boolean();
 
 	/**
 	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getTechFacilities(java.lang.String, java.lang.String, java.lang.Boolean) <em>Get Tech Facilities</em>}' operation.
@@ -10113,24 +10942,44 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EOperation getGltOpenApiClient__DeleteText__Integer();
 
 	/**
-	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getTextIds(java.lang.Boolean) <em>Get Text Ids</em>}' operation.
+	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getTextIds() <em>Get Text Ids</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Text Ids</em>' operation.
-	 * @see de.jena.model.glt.GltOpenApiClient#getTextIds(java.lang.Boolean)
+	 * @see de.jena.model.glt.GltOpenApiClient#getTextIds()
 	 * @generated
 	 */
-	EOperation getGltOpenApiClient__GetTextIds__Boolean();
+	EOperation getGltOpenApiClient__GetTextIds();
 
 	/**
-	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getTexts(java.lang.String, java.lang.Boolean) <em>Get Texts</em>}' operation.
+	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getTextIds_1(java.lang.String) <em>Get Text Ids 1</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Text Ids 1</em>' operation.
+	 * @see de.jena.model.glt.GltOpenApiClient#getTextIds_1(java.lang.String)
+	 * @generated
+	 */
+	EOperation getGltOpenApiClient__GetTextIds_1__String();
+
+	/**
+	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getTexts() <em>Get Texts</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Texts</em>' operation.
-	 * @see de.jena.model.glt.GltOpenApiClient#getTexts(java.lang.String, java.lang.Boolean)
+	 * @see de.jena.model.glt.GltOpenApiClient#getTexts()
 	 * @generated
 	 */
-	EOperation getGltOpenApiClient__GetTexts__String_Boolean();
+	EOperation getGltOpenApiClient__GetTexts();
+
+	/**
+	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getTexts_1(java.lang.String) <em>Get Texts 1</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Texts 1</em>' operation.
+	 * @see de.jena.model.glt.GltOpenApiClient#getTexts_1(java.lang.String)
+	 * @generated
+	 */
+	EOperation getGltOpenApiClient__GetTexts_1__String();
 
 	/**
 	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getGroups() <em>Get Groups</em>}' operation.
@@ -10281,16 +11130,6 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EOperation getGltOpenApiClient__GetSuspects_1__String_EList_EList_Boolean();
-
-	/**
-	 * Returns the meta object for class '{@link de.jena.model.glt.JsonNode <em>Json Node</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Json Node</em>'.
-	 * @see de.jena.model.glt.JsonNode
-	 * @generated
-	 */
-	EClass getJsonNode();
 
 	/**
 	 * Returns the meta object for data type '{@link jakarta.ws.rs.core.Response <em>JResponse</em>}'.

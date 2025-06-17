@@ -10,6 +10,7 @@ import de.jena.model.glt.PhonePojo;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -20,7 +21,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -208,7 +210,7 @@ public class ContactPojoImpl extends MinimalEObjectImpl.Container implements Con
 	protected String title = TITLE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getAddress() <em>Address</em>}' reference.
+	 * The cached value of the '{@link #getAddress() <em>Address</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getAddress()
@@ -218,7 +220,7 @@ public class ContactPojoImpl extends MinimalEObjectImpl.Container implements Con
 	protected AddressPojo address;
 
 	/**
-	 * The cached value of the '{@link #getPhones() <em>Phones</em>}' reference list.
+	 * The cached value of the '{@link #getPhones() <em>Phones</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getPhones()
@@ -457,14 +459,6 @@ public class ContactPojoImpl extends MinimalEObjectImpl.Container implements Con
 	 */
 	@Override
 	public AddressPojo getAddress() {
-		if (address != null && address.eIsProxy()) {
-			InternalEObject oldAddress = (InternalEObject)address;
-			address = (AddressPojo)eResolveProxy(oldAddress);
-			if (address != oldAddress) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GltPackage.CONTACT_POJO__ADDRESS, oldAddress, address));
-			}
-		}
 		return address;
 	}
 
@@ -473,8 +467,14 @@ public class ContactPojoImpl extends MinimalEObjectImpl.Container implements Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AddressPojo basicGetAddress() {
-		return address;
+	public NotificationChain basicSetAddress(AddressPojo newAddress, NotificationChain msgs) {
+		AddressPojo oldAddress = address;
+		address = newAddress;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GltPackage.CONTACT_POJO__ADDRESS, oldAddress, newAddress);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -484,10 +484,17 @@ public class ContactPojoImpl extends MinimalEObjectImpl.Container implements Con
 	 */
 	@Override
 	public void setAddress(AddressPojo newAddress) {
-		AddressPojo oldAddress = address;
-		address = newAddress;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.CONTACT_POJO__ADDRESS, oldAddress, address));
+		if (newAddress != address) {
+			NotificationChain msgs = null;
+			if (address != null)
+				msgs = ((InternalEObject)address).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GltPackage.CONTACT_POJO__ADDRESS, null, msgs);
+			if (newAddress != null)
+				msgs = ((InternalEObject)newAddress).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GltPackage.CONTACT_POJO__ADDRESS, null, msgs);
+			msgs = basicSetAddress(newAddress, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.CONTACT_POJO__ADDRESS, newAddress, newAddress));
 	}
 
 	/**
@@ -498,7 +505,7 @@ public class ContactPojoImpl extends MinimalEObjectImpl.Container implements Con
 	@Override
 	public EList<PhonePojo> getPhones() {
 		if (phones == null) {
-			phones = new EObjectResolvingEList<PhonePojo>(PhonePojo.class, this, GltPackage.CONTACT_POJO__PHONES);
+			phones = new EObjectContainmentEList<PhonePojo>(PhonePojo.class, this, GltPackage.CONTACT_POJO__PHONES);
 		}
 		return phones;
 	}
@@ -535,6 +542,22 @@ public class ContactPojoImpl extends MinimalEObjectImpl.Container implements Con
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case GltPackage.CONTACT_POJO__ADDRESS:
+				return basicSetAddress(null, msgs);
+			case GltPackage.CONTACT_POJO__PHONES:
+				return ((InternalEList<?>)getPhones()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case GltPackage.CONTACT_POJO__NAME:
@@ -554,8 +577,7 @@ public class ContactPojoImpl extends MinimalEObjectImpl.Container implements Con
 			case GltPackage.CONTACT_POJO__TITLE:
 				return getTitle();
 			case GltPackage.CONTACT_POJO__ADDRESS:
-				if (resolve) return getAddress();
-				return basicGetAddress();
+				return getAddress();
 			case GltPackage.CONTACT_POJO__PHONES:
 				return getPhones();
 			case GltPackage.CONTACT_POJO__EMAILS:

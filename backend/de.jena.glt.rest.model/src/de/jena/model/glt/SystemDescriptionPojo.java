@@ -284,22 +284,22 @@ public interface SystemDescriptionPojo extends EObject {
 	void setExternalId(Integer value);
 
 	/**
-	 * Returns the value of the '<em><b>Address</b></em>' reference.
+	 * Returns the value of the '<em><b>Address</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Address</em>' reference.
+	 * @return the value of the '<em>Address</em>' containment reference.
 	 * @see #setAddress(AddressPojo)
 	 * @see de.jena.model.glt.GltPackage#getSystemDescriptionPojo_Address()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	AddressPojo getAddress();
 
 	/**
-	 * Sets the value of the '{@link de.jena.model.glt.SystemDescriptionPojo#getAddress <em>Address</em>}' reference.
+	 * Sets the value of the '{@link de.jena.model.glt.SystemDescriptionPojo#getAddress <em>Address</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Address</em>' reference.
+	 * @param value the new value of the '<em>Address</em>' containment reference.
 	 * @see #getAddress()
 	 * @generated
 	 */
@@ -328,13 +328,13 @@ public interface SystemDescriptionPojo extends EObject {
 	void setSource(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Children</b></em>' reference list.
+	 * Returns the value of the '<em><b>Children</b></em>' containment reference list.
 	 * The list contents are of type {@link de.jena.model.glt.SystemDescriptionPojo}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Children</em>' reference list.
+	 * @return the value of the '<em>Children</em>' containment reference list.
 	 * @see de.jena.model.glt.GltPackage#getSystemDescriptionPojo_Children()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<SystemDescriptionPojo> getChildren();

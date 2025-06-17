@@ -212,13 +212,13 @@ public interface CylonNetworkPojo extends EObject {
 	void setCount(Integer value);
 
 	/**
-	 * Returns the value of the '<em><b>Children</b></em>' reference list.
+	 * Returns the value of the '<em><b>Children</b></em>' containment reference list.
 	 * The list contents are of type {@link de.jena.model.glt.EntityPojo}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Children</em>' reference list.
+	 * @return the value of the '<em>Children</em>' containment reference list.
 	 * @see de.jena.model.glt.GltPackage#getCylonNetworkPojo_Children()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<EntityPojo> getChildren();
