@@ -1,9 +1,16 @@
+//Blackbox to convert dates
+import de.jena.icesensor.sensinact.mmt.util.ToInstantBlackbox;
+
 modeltype ECORE "strict" uses ecore('http://www.eclipse.org/emf/2002/Ecore');
 modeltype SENSOR uses "https://jena.de/models/icesensor/1.0";
 modeltype SENSINACT uses "https://jena.de/models/icesensor/sensinact/1.0";
 modeltype PROVIDER uses "https://eclipse.org/sensinact/core/provider/1.0";
 
 transformation project2projectApi(in sensor : SENSOR, out sensinact : SENSINACT);
+
+query getENow() : EInstant {
+    return getNow().oclAsType(EInstant);
+}
 
 main() {
 	sensor.rootObjects()[SENSOR::IceSENSOR] -> map sensorToRervice(); 
@@ -97,6 +104,7 @@ mapping SENSOR::SensorData::toMetadata(friendlyNameParam : String, unit : String
 helper SENSOR::SensorData::toCustomMetadata(key : String, theValue : String): PROVIDER::FeatureCustomMetadata{
 	var entry := object PROVIDER::FeatureCustomMetadata{
 		name := key;
+		timestamp := getENow();
 		value := theValue;
 	};
 	return entry;

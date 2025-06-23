@@ -51,7 +51,7 @@ public class IbisDateTimeToInstantBlackbox {
 		}
 		return null;
 	}
-	
+
 	@Operation(description = "Converts from IBISIPDate into milliseconds")
 	public Long getMillis(IBISIPDate ibisDate) {
 		if(ibisDate != null) {			
@@ -59,12 +59,17 @@ public class IbisDateTimeToInstantBlackbox {
 		}
 		return null;
 	}
-	
+
 	@Operation(description = "Converts from milliseconds to Instant")
 	public Instant getInstant(Long millis) {
 		if(millis !=  null) {
 			return Instant.ofEpochMilli(millis);
 		}
 		return null;
+	}
+
+	@Operation(description = "Instant now")
+	public Instant getNow() {
+			return Instant.now();
 	}
 }
