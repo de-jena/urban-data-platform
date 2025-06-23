@@ -68,7 +68,6 @@ public class GltConverter {
 	public void activate(GltConfiguration config) {
 		this.conf = config;
 		logger.log(Level.INFO, "activate GLT for system id " + config.systemID());
-		initSide();
 		executor = Executors.newScheduledThreadPool(1);
 		executor.scheduleAtFixedRate(this::update, 0, config.interval(), TimeUnit.MINUTES);
 	}
@@ -127,6 +126,7 @@ public class GltConverter {
 				GltSide glt = GltFactory.eINSTANCE.createGltSide();
 				Admin admin = ProviderFactory.eINSTANCE.createAdmin();
 				glt.setAdmin(admin);
+				if(friendlyName == null) initSide();
 				admin.setLocation(geoJson);
 				admin.setFriendlyName(friendlyName);
 				glt.setId(conf.systemID());
