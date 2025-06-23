@@ -39,7 +39,7 @@ public interface SyncLogPojo extends EObject {
 	 * @return the value of the '<em>System Id</em>' attribute.
 	 * @see #setSystemId(String)
 	 * @see de.jena.model.glt.GltPackage#getSyncLogPojo_SystemId()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getSystemId();
@@ -61,7 +61,7 @@ public interface SyncLogPojo extends EObject {
 	 * @return the value of the '<em>State</em>' attribute.
 	 * @see #setState(String)
 	 * @see de.jena.model.glt.GltPackage#getSyncLogPojo_State()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getState();
@@ -83,7 +83,7 @@ public interface SyncLogPojo extends EObject {
 	 * @return the value of the '<em>Latest Ringbuffer Timestamp</em>' attribute.
 	 * @see #setLatestRingbufferTimestamp(BigInteger)
 	 * @see de.jena.model.glt.GltPackage#getSyncLogPojo_LatestRingbufferTimestamp()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	BigInteger getLatestRingbufferTimestamp();
@@ -105,7 +105,7 @@ public interface SyncLogPojo extends EObject {
 	 * @return the value of the '<em>Last Access Time Ms</em>' attribute.
 	 * @see #setLastAccessTimeMs(BigInteger)
 	 * @see de.jena.model.glt.GltPackage#getSyncLogPojo_LastAccessTimeMs()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	BigInteger getLastAccessTimeMs();
@@ -127,7 +127,7 @@ public interface SyncLogPojo extends EObject {
 	 * @return the value of the '<em>Average Access Time Ms</em>' attribute.
 	 * @see #setAverageAccessTimeMs(Double)
 	 * @see de.jena.model.glt.GltPackage#getSyncLogPojo_AverageAccessTimeMs()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Double getAverageAccessTimeMs();
@@ -149,7 +149,7 @@ public interface SyncLogPojo extends EObject {
 	 * @return the value of the '<em>Timestamp</em>' attribute.
 	 * @see #setTimestamp(BigInteger)
 	 * @see de.jena.model.glt.GltPackage#getSyncLogPojo_Timestamp()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	BigInteger getTimestamp();
@@ -171,7 +171,7 @@ public interface SyncLogPojo extends EObject {
 	 * @return the value of the '<em>State Since</em>' attribute.
 	 * @see #setStateSince(BigInteger)
 	 * @see de.jena.model.glt.GltPackage#getSyncLogPojo_StateSince()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	BigInteger getStateSince();

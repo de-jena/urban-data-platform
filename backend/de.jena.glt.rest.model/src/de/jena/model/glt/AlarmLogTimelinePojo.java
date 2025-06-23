@@ -48,7 +48,7 @@ public interface AlarmLogTimelinePojo extends EObject {
 	 * @return the value of the '<em>Total</em>' attribute.
 	 * @see #setTotal(BigInteger)
 	 * @see de.jena.model.glt.GltPackage#getAlarmLogTimelinePojo_Total()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	BigInteger getTotal();

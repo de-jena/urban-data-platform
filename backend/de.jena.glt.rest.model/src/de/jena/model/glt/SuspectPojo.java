@@ -39,7 +39,7 @@ public interface SuspectPojo extends EObject {
 	 * @return the value of the '<em>System Id</em>' attribute.
 	 * @see #setSystemId(String)
 	 * @see de.jena.model.glt.GltPackage#getSuspectPojo_SystemId()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getSystemId();
@@ -61,7 +61,7 @@ public interface SuspectPojo extends EObject {
 	 * @return the value of the '<em>Alarm Id</em>' attribute.
 	 * @see #setAlarmId(String)
 	 * @see de.jena.model.glt.GltPackage#getSuspectPojo_AlarmId()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getAlarmId();
@@ -83,7 +83,7 @@ public interface SuspectPojo extends EObject {
 	 * @return the value of the '<em>State</em>' attribute.
 	 * @see #setState(String)
 	 * @see de.jena.model.glt.GltPackage#getSuspectPojo_State()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getState();
@@ -105,7 +105,7 @@ public interface SuspectPojo extends EObject {
 	 * @return the value of the '<em>Timestamp</em>' attribute.
 	 * @see #setTimestamp(BigInteger)
 	 * @see de.jena.model.glt.GltPackage#getSuspectPojo_Timestamp()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	BigInteger getTimestamp();
@@ -127,7 +127,7 @@ public interface SuspectPojo extends EObject {
 	 * @return the value of the '<em>Severity</em>' attribute.
 	 * @see #setSeverity(Integer)
 	 * @see de.jena.model.glt.GltPackage#getSuspectPojo_Severity()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getSeverity();
@@ -149,7 +149,7 @@ public interface SuspectPojo extends EObject {
 	 * @return the value of the '<em>Recognized</em>' attribute.
 	 * @see #setRecognized(String)
 	 * @see de.jena.model.glt.GltPackage#getSuspectPojo_Recognized()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getRecognized();
@@ -171,7 +171,7 @@ public interface SuspectPojo extends EObject {
 	 * @return the value of the '<em>By</em>' attribute.
 	 * @see #setBy(String)
 	 * @see de.jena.model.glt.GltPackage#getSuspectPojo_By()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getBy();

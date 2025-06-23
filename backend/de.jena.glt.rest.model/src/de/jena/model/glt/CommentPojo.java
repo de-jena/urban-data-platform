@@ -40,7 +40,7 @@ public interface CommentPojo extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(Integer)
 	 * @see de.jena.model.glt.GltPackage#getCommentPojo_Id()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getId();
@@ -62,7 +62,7 @@ public interface CommentPojo extends EObject {
 	 * @return the value of the '<em>Author</em>' attribute.
 	 * @see #setAuthor(String)
 	 * @see de.jena.model.glt.GltPackage#getCommentPojo_Author()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getAuthor();
@@ -84,7 +84,7 @@ public interface CommentPojo extends EObject {
 	 * @return the value of the '<em>Timestamp</em>' attribute.
 	 * @see #setTimestamp(String)
 	 * @see de.jena.model.glt.GltPackage#getCommentPojo_Timestamp()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getTimestamp();
@@ -106,7 +106,7 @@ public interface CommentPojo extends EObject {
 	 * @return the value of the '<em>Content</em>' attribute.
 	 * @see #setContent(String)
 	 * @see de.jena.model.glt.GltPackage#getCommentPojo_Content()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getContent();
@@ -128,7 +128,7 @@ public interface CommentPojo extends EObject {
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see #setType(String)
 	 * @see de.jena.model.glt.GltPackage#getCommentPojo_Type()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getType();
@@ -150,7 +150,7 @@ public interface CommentPojo extends EObject {
 	 * @return the value of the '<em>Owner Id</em>' attribute.
 	 * @see #setOwnerId(BigInteger)
 	 * @see de.jena.model.glt.GltPackage#getCommentPojo_OwnerId()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	BigInteger getOwnerId();
@@ -172,7 +172,7 @@ public interface CommentPojo extends EObject {
 	 * @return the value of the '<em>Owner Type</em>' attribute.
 	 * @see #setOwnerType(String)
 	 * @see de.jena.model.glt.GltPackage#getCommentPojo_OwnerType()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getOwnerType();

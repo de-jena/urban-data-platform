@@ -49,7 +49,7 @@ public interface DatalogContentPojo extends EObject {
 	 * @return the value of the '<em>System Id</em>' attribute.
 	 * @see #setSystemId(Integer)
 	 * @see de.jena.model.glt.GltPackage#getDatalogContentPojo_SystemId()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getSystemId();
@@ -71,7 +71,7 @@ public interface DatalogContentPojo extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(Integer)
 	 * @see de.jena.model.glt.GltPackage#getDatalogContentPojo_Id()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getId();
@@ -93,7 +93,7 @@ public interface DatalogContentPojo extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see de.jena.model.glt.GltPackage#getDatalogContentPojo_Name()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getName();
@@ -115,7 +115,7 @@ public interface DatalogContentPojo extends EObject {
 	 * @return the value of the '<em>Value Type</em>' attribute.
 	 * @see #setValueType(String)
 	 * @see de.jena.model.glt.GltPackage#getDatalogContentPojo_ValueType()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getValueType();
@@ -137,7 +137,7 @@ public interface DatalogContentPojo extends EObject {
 	 * @return the value of the '<em>Datalog Type</em>' attribute.
 	 * @see #setDatalogType(String)
 	 * @see de.jena.model.glt.GltPackage#getDatalogContentPojo_DatalogType()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getDatalogType();
@@ -159,7 +159,7 @@ public interface DatalogContentPojo extends EObject {
 	 * @return the value of the '<em>Point Number</em>' attribute.
 	 * @see #setPointNumber(Integer)
 	 * @see de.jena.model.glt.GltPackage#getDatalogContentPojo_PointNumber()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getPointNumber();
@@ -181,7 +181,7 @@ public interface DatalogContentPojo extends EObject {
 	 * @return the value of the '<em>Point Name</em>' attribute.
 	 * @see #setPointName(String)
 	 * @see de.jena.model.glt.GltPackage#getDatalogContentPojo_PointName()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getPointName();
@@ -203,7 +203,7 @@ public interface DatalogContentPojo extends EObject {
 	 * @return the value of the '<em>Point Id</em>' attribute.
 	 * @see #setPointId(Integer)
 	 * @see de.jena.model.glt.GltPackage#getDatalogContentPojo_PointId()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getPointId();
@@ -225,7 +225,7 @@ public interface DatalogContentPojo extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Entries T</em>' attribute list.
 	 * @see de.jena.model.glt.GltPackage#getDatalogContentPojo_EntriesT()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	EList<String> getEntriesT();
@@ -237,7 +237,7 @@ public interface DatalogContentPojo extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Entries V</em>' attribute list.
 	 * @see de.jena.model.glt.GltPackage#getDatalogContentPojo_EntriesV()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	EList<Float> getEntriesV();
@@ -249,7 +249,7 @@ public interface DatalogContentPojo extends EObject {
 	 * @return the value of the '<em>Time</em>' attribute.
 	 * @see #setTime(String)
 	 * @see de.jena.model.glt.GltPackage#getDatalogContentPojo_Time()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getTime();
@@ -271,7 +271,7 @@ public interface DatalogContentPojo extends EObject {
 	 * @return the value of the '<em>Time Controller</em>' attribute.
 	 * @see #setTimeController(String)
 	 * @see de.jena.model.glt.GltPackage#getDatalogContentPojo_TimeController()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getTimeController();
@@ -293,7 +293,7 @@ public interface DatalogContentPojo extends EObject {
 	 * @return the value of the '<em>Counter</em>' attribute.
 	 * @see #setCounter(Integer)
 	 * @see de.jena.model.glt.GltPackage#getDatalogContentPojo_Counter()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getCounter();
@@ -315,7 +315,7 @@ public interface DatalogContentPojo extends EObject {
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(Float)
 	 * @see de.jena.model.glt.GltPackage#getDatalogContentPojo_Value()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Float getValue();
@@ -337,7 +337,7 @@ public interface DatalogContentPojo extends EObject {
 	 * @return the value of the '<em>Is Unknown</em>' attribute.
 	 * @see #setIsUnknown(Boolean)
 	 * @see de.jena.model.glt.GltPackage#getDatalogContentPojo_IsUnknown()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Boolean getIsUnknown();
@@ -359,7 +359,7 @@ public interface DatalogContentPojo extends EObject {
 	 * @return the value of the '<em>Is Error</em>' attribute.
 	 * @see #setIsError(Boolean)
 	 * @see de.jena.model.glt.GltPackage#getDatalogContentPojo_IsError()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Boolean getIsError();

@@ -31,7 +31,7 @@ public interface EntityPojo extends EObject {
 	 * @return the value of the '<em>Entity</em>' attribute.
 	 * @see #setEntity(String)
 	 * @see de.jena.model.glt.GltPackage#getEntityPojo_Entity()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getEntity();

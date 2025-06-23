@@ -34,7 +34,7 @@ public interface InstructionsPojo extends EObject {
 	 * @return the value of the '<em>Alarm Id</em>' attribute.
 	 * @see #setAlarmId(String)
 	 * @see de.jena.model.glt.GltPackage#getInstructionsPojo_AlarmId()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getAlarmId();

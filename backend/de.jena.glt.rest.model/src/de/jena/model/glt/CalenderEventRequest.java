@@ -34,7 +34,7 @@ public interface CalenderEventRequest extends EObject {
 	 * @return the value of the '<em>From</em>' attribute.
 	 * @see #setFrom(String)
 	 * @see de.jena.model.glt.GltPackage#getCalenderEventRequest_From()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getFrom();
@@ -56,7 +56,7 @@ public interface CalenderEventRequest extends EObject {
 	 * @return the value of the '<em>To</em>' attribute.
 	 * @see #setTo(String)
 	 * @see de.jena.model.glt.GltPackage#getCalenderEventRequest_To()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getTo();
@@ -78,7 +78,7 @@ public interface CalenderEventRequest extends EObject {
 	 * @return the value of the '<em>Note</em>' attribute.
 	 * @see #setNote(String)
 	 * @see de.jena.model.glt.GltPackage#getCalenderEventRequest_Note()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getNote();
@@ -100,7 +100,7 @@ public interface CalenderEventRequest extends EObject {
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see #setType(String)
 	 * @see de.jena.model.glt.GltPackage#getCalenderEventRequest_Type()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getType();

@@ -53,7 +53,7 @@ import de.jena.model.glt.SystemDescriptionPojo;
 		@Property(key = "type", value = "json") })
 @WithFactoryConfiguration(factoryPid = "GltOpenApi", location = "?", name = "glt", properties = {
 		@Property(key = "url", value = "https://glt.jena.de/rest/v1"),
-		@Property(key = "apiKey", value = "") })
+		@Property(key = "apiKey", value = "mRi9qsN9y4v2cJMVqKH-vKcFMg57uWJL") })
 public class GltOpenApiClientTest {
 
 	@BeforeEach

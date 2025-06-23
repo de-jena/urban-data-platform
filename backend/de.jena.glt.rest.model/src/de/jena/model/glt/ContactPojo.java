@@ -44,7 +44,7 @@ public interface ContactPojo extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see de.jena.model.glt.GltPackage#getContactPojo_Name()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getName();
@@ -66,7 +66,7 @@ public interface ContactPojo extends EObject {
 	 * @return the value of the '<em>Task</em>' attribute.
 	 * @see #setTask(String)
 	 * @see de.jena.model.glt.GltPackage#getContactPojo_Task()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getTask();
@@ -88,7 +88,7 @@ public interface ContactPojo extends EObject {
 	 * @return the value of the '<em>Additional</em>' attribute.
 	 * @see #setAdditional(String)
 	 * @see de.jena.model.glt.GltPackage#getContactPojo_Additional()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getAdditional();
@@ -110,7 +110,7 @@ public interface ContactPojo extends EObject {
 	 * @return the value of the '<em>First Name</em>' attribute.
 	 * @see #setFirstName(String)
 	 * @see de.jena.model.glt.GltPackage#getContactPojo_FirstName()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getFirstName();
@@ -132,7 +132,7 @@ public interface ContactPojo extends EObject {
 	 * @return the value of the '<em>Last Name</em>' attribute.
 	 * @see #setLastName(String)
 	 * @see de.jena.model.glt.GltPackage#getContactPojo_LastName()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getLastName();
@@ -154,7 +154,7 @@ public interface ContactPojo extends EObject {
 	 * @return the value of the '<em>Salutation</em>' attribute.
 	 * @see #setSalutation(String)
 	 * @see de.jena.model.glt.GltPackage#getContactPojo_Salutation()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getSalutation();
@@ -176,7 +176,7 @@ public interface ContactPojo extends EObject {
 	 * @return the value of the '<em>Short Name</em>' attribute.
 	 * @see #setShortName(String)
 	 * @see de.jena.model.glt.GltPackage#getContactPojo_ShortName()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getShortName();
@@ -198,7 +198,7 @@ public interface ContactPojo extends EObject {
 	 * @return the value of the '<em>Title</em>' attribute.
 	 * @see #setTitle(String)
 	 * @see de.jena.model.glt.GltPackage#getContactPojo_Title()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getTitle();
@@ -254,7 +254,7 @@ public interface ContactPojo extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Emails</em>' attribute list.
 	 * @see de.jena.model.glt.GltPackage#getContactPojo_Emails()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	EList<String> getEmails();
@@ -266,7 +266,7 @@ public interface ContactPojo extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Comments</em>' attribute list.
 	 * @see de.jena.model.glt.GltPackage#getContactPojo_Comments()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	EList<String> getComments();

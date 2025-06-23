@@ -61,7 +61,7 @@ public interface AlarmPojo extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see de.jena.model.glt.GltPackage#getAlarmPojo_Name()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getName();
@@ -83,7 +83,7 @@ public interface AlarmPojo extends EObject {
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(Integer)
 	 * @see de.jena.model.glt.GltPackage#getAlarmPojo_Description()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getDescription();
@@ -105,7 +105,7 @@ public interface AlarmPojo extends EObject {
 	 * @return the value of the '<em>Flags</em>' attribute.
 	 * @see #setFlags(Integer)
 	 * @see de.jena.model.glt.GltPackage#getAlarmPojo_Flags()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getFlags();
@@ -127,7 +127,7 @@ public interface AlarmPojo extends EObject {
 	 * @return the value of the '<em>Consequence</em>' attribute.
 	 * @see #setConsequence(Integer)
 	 * @see de.jena.model.glt.GltPackage#getAlarmPojo_Consequence()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getConsequence();
@@ -149,7 +149,7 @@ public interface AlarmPojo extends EObject {
 	 * @return the value of the '<em>Cause</em>' attribute.
 	 * @see #setCause(Integer)
 	 * @see de.jena.model.glt.GltPackage#getAlarmPojo_Cause()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getCause();
@@ -171,7 +171,7 @@ public interface AlarmPojo extends EObject {
 	 * @return the value of the '<em>Sl24schedule</em>' attribute.
 	 * @see #setSl24schedule(Integer)
 	 * @see de.jena.model.glt.GltPackage#getAlarmPojo_Sl24schedule()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getSl24schedule();
@@ -193,7 +193,7 @@ public interface AlarmPojo extends EObject {
 	 * @return the value of the '<em>Priority Summer</em>' attribute.
 	 * @see #setPrioritySummer(Integer)
 	 * @see de.jena.model.glt.GltPackage#getAlarmPojo_PrioritySummer()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getPrioritySummer();
@@ -215,7 +215,7 @@ public interface AlarmPojo extends EObject {
 	 * @return the value of the '<em>Priority Winter</em>' attribute.
 	 * @see #setPriorityWinter(Integer)
 	 * @see de.jena.model.glt.GltPackage#getAlarmPojo_PriorityWinter()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getPriorityWinter();

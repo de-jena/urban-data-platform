@@ -5,6 +5,7 @@ import java.lang.System.Logger.Level;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
+import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 import java.util.concurrent.Executors;
@@ -115,11 +116,11 @@ public class GltConverter {
 		int systemId = Integer.parseInt(conf.systemID());
 		EList<Integer> point = ECollections.asEList(Arrays.stream(conf.points()).boxed().toList());
 //		String from = DateTimeFormatter.ISO_LOCAL_DATE_TIME.format(LocalDateTime.now().minusMinutes(conf.interval()));
-//		String from = DateTimeFormatter.ISO_OFFSET_DATE_TIME.format(LocalDateTime.now().minusYears(conf.interval()).atOffset(ZoneOffset.of("+00:00")));
-		String from = DateTimeFormatter.ISO_LOCAL_DATE_TIME.format(LocalDateTime.now().minusHours(conf.interval()))+"+00:00";
+//		String from = DateTimeFormatter.ISO_OFFSET_DATE_TIME.format(LocalDateTime.now().minusMinutes(conf.back()).atOffset(ZoneOffset.of("+00:00")));
+		String from = DateTimeFormatter.ISO_LOCAL_DATE_TIME.format(LocalDateTime.now().minusMinutes(conf.back()))+"+00:00";
 //		String to = DateTimeFormatter.ISO_LOCAL_DATE_TIME.format(LocalDateTime.now().plusMinutes(1));
-//		String to = DateTimeFormatter.ISO_OFFSET_DATE_TIME.format(LocalDateTime.now().plusMinutes(1).atOffset(ZoneOffset.of("+00:00")));
-		String to = DateTimeFormatter.ISO_LOCAL_DATE_TIME.format(LocalDateTime.now().plusMinutes(1))+"+00:00";
+		String to = DateTimeFormatter.ISO_OFFSET_DATE_TIME.format(LocalDateTime.now().plusMinutes(1).atOffset(ZoneOffset.of("+00:00")));
+//		String to = DateTimeFormatter.ISO_LOCAL_DATE_TIME.format(LocalDateTime.now().plusMinutes(1))+"+00:00";
 		try {
 			Response response = gltOpenApi.getDatalogContent(systemId, point, from, to);
 			int code = response.getCode();
@@ -163,12 +164,20 @@ public class GltConverter {
 		Instant instant = LocalDateTime.parse(time, DateTimeFormatter.ISO_OFFSET_DATE_TIME)
 				.atZone(ZoneId.of("Europe/Berlin")).toInstant();
 		md.setTimestamp(instant);
+//		md.getExtra().put("name", createCustomMetadata(dc.getName()));
+//		md.getExtra().put("pointNumber", createCustomMetadata(dc.getPointNumber()));
+//		md.getExtra().put("pointId", createCustomMetadata(dc.getPointId()));
 		md.getExtra().add(createCustomMetadata("name", dc.getName()));
 		md.getExtra().add(createCustomMetadata("number", dc.getPointNumber()));
 		md.getExtra().add(createCustomMetadata("id", dc.getPointId()));
 		metadata.put(GltPackage.eINSTANCE.getMonitoringData_Value(), md);
 	}
 
+//	private FeatureCustomMetadata createCustomMetadata(Object value) {
+//		FeatureCustomMetadata fcmd = ProviderFactory.eINSTANCE.createFeatureCustomMetadata();
+//		fcmd.setValue(value);
+//		return fcmd;
+//	}
 	private FeatureCustomMetadata createCustomMetadata(String key, Object value) {
 		FeatureCustomMetadata fcmd = ProviderFactory.eINSTANCE.createFeatureCustomMetadata();
 		fcmd.setName(key);

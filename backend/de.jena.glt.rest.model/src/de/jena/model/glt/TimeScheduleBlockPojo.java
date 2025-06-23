@@ -28,6 +28,7 @@ import org.osgi.annotation.versioning.ProviderType;
  *   <li>{@link de.jena.model.glt.TimeScheduleBlockPojo#getTimes <em>Times</em>}</li>
  *   <li>{@link de.jena.model.glt.TimeScheduleBlockPojo#getTime <em>Time</em>}</li>
  *   <li>{@link de.jena.model.glt.TimeScheduleBlockPojo#getIsUnknown <em>Is Unknown</em>}</li>
+ *   <li>{@link de.jena.model.glt.TimeScheduleBlockPojo#getAuthor <em>Author</em>}</li>
  *   <li>{@link de.jena.model.glt.TimeScheduleBlockPojo#getComments <em>Comments</em>}</li>
  * </ul>
  *
@@ -44,7 +45,7 @@ public interface TimeScheduleBlockPojo extends EObject {
 	 * @return the value of the '<em>System Id</em>' attribute.
 	 * @see #setSystemId(Integer)
 	 * @see de.jena.model.glt.GltPackage#getTimeScheduleBlockPojo_SystemId()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getSystemId();
@@ -66,7 +67,7 @@ public interface TimeScheduleBlockPojo extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(Integer)
 	 * @see de.jena.model.glt.GltPackage#getTimeScheduleBlockPojo_Id()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getId();
@@ -88,7 +89,7 @@ public interface TimeScheduleBlockPojo extends EObject {
 	 * @return the value of the '<em>Block</em>' attribute.
 	 * @see #setBlock(Integer)
 	 * @see de.jena.model.glt.GltPackage#getTimeScheduleBlockPojo_Block()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getBlock();
@@ -110,7 +111,7 @@ public interface TimeScheduleBlockPojo extends EObject {
 	 * @return the value of the '<em>Exception Start Day</em>' attribute.
 	 * @see #setExceptionStartDay(Integer)
 	 * @see de.jena.model.glt.GltPackage#getTimeScheduleBlockPojo_ExceptionStartDay()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getExceptionStartDay();
@@ -132,7 +133,7 @@ public interface TimeScheduleBlockPojo extends EObject {
 	 * @return the value of the '<em>Exception Start Month</em>' attribute.
 	 * @see #setExceptionStartMonth(Integer)
 	 * @see de.jena.model.glt.GltPackage#getTimeScheduleBlockPojo_ExceptionStartMonth()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getExceptionStartMonth();
@@ -154,7 +155,7 @@ public interface TimeScheduleBlockPojo extends EObject {
 	 * @return the value of the '<em>Exception End Day</em>' attribute.
 	 * @see #setExceptionEndDay(Integer)
 	 * @see de.jena.model.glt.GltPackage#getTimeScheduleBlockPojo_ExceptionEndDay()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getExceptionEndDay();
@@ -176,7 +177,7 @@ public interface TimeScheduleBlockPojo extends EObject {
 	 * @return the value of the '<em>Exception End Month</em>' attribute.
 	 * @see #setExceptionEndMonth(Integer)
 	 * @see de.jena.model.glt.GltPackage#getTimeScheduleBlockPojo_ExceptionEndMonth()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getExceptionEndMonth();
@@ -198,7 +199,7 @@ public interface TimeScheduleBlockPojo extends EObject {
 	 * @return the value of the '<em>Year</em>' attribute.
 	 * @see #setYear(Integer)
 	 * @see de.jena.model.glt.GltPackage#getTimeScheduleBlockPojo_Year()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getYear();
@@ -220,7 +221,7 @@ public interface TimeScheduleBlockPojo extends EObject {
 	 * @return the value of the '<em>Times</em>' attribute.
 	 * @see #setTimes(Object)
 	 * @see de.jena.model.glt.GltPackage#getTimeScheduleBlockPojo_Times()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Object getTimes();
@@ -242,7 +243,7 @@ public interface TimeScheduleBlockPojo extends EObject {
 	 * @return the value of the '<em>Time</em>' attribute.
 	 * @see #setTime(String)
 	 * @see de.jena.model.glt.GltPackage#getTimeScheduleBlockPojo_Time()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getTime();
@@ -264,7 +265,7 @@ public interface TimeScheduleBlockPojo extends EObject {
 	 * @return the value of the '<em>Is Unknown</em>' attribute.
 	 * @see #setIsUnknown(Boolean)
 	 * @see de.jena.model.glt.GltPackage#getTimeScheduleBlockPojo_IsUnknown()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Boolean getIsUnknown();
@@ -278,6 +279,28 @@ public interface TimeScheduleBlockPojo extends EObject {
 	 * @generated
 	 */
 	void setIsUnknown(Boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Author</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Author</em>' attribute.
+	 * @see #setAuthor(String)
+	 * @see de.jena.model.glt.GltPackage#getTimeScheduleBlockPojo_Author()
+	 * @model unique="false"
+	 * @generated
+	 */
+	String getAuthor();
+
+	/**
+	 * Sets the value of the '{@link de.jena.model.glt.TimeScheduleBlockPojo#getAuthor <em>Author</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Author</em>' attribute.
+	 * @see #getAuthor()
+	 * @generated
+	 */
+	void setAuthor(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Comments</b></em>' containment reference list.

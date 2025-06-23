@@ -40,7 +40,7 @@ public interface SystemDescriptionRequest extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(String)
 	 * @see de.jena.model.glt.GltPackage#getSystemDescriptionRequest_Id()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getId();
@@ -62,7 +62,7 @@ public interface SystemDescriptionRequest extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see de.jena.model.glt.GltPackage#getSystemDescriptionRequest_Name()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getName();
@@ -84,7 +84,7 @@ public interface SystemDescriptionRequest extends EObject {
 	 * @return the value of the '<em>Directory</em>' attribute.
 	 * @see #setDirectory(String)
 	 * @see de.jena.model.glt.GltPackage#getSystemDescriptionRequest_Directory()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getDirectory();
@@ -106,7 +106,7 @@ public interface SystemDescriptionRequest extends EObject {
 	 * @return the value of the '<em>Port</em>' attribute.
 	 * @see #setPort(Integer)
 	 * @see de.jena.model.glt.GltPackage#getSystemDescriptionRequest_Port()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getPort();
@@ -128,7 +128,7 @@ public interface SystemDescriptionRequest extends EObject {
 	 * @return the value of the '<em>External Id</em>' attribute.
 	 * @see #setExternalId(Integer)
 	 * @see de.jena.model.glt.GltPackage#getSystemDescriptionRequest_ExternalId()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getExternalId();
@@ -150,7 +150,7 @@ public interface SystemDescriptionRequest extends EObject {
 	 * @return the value of the '<em>Ip</em>' attribute.
 	 * @see #setIp(String)
 	 * @see de.jena.model.glt.GltPackage#getSystemDescriptionRequest_Ip()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getIp();
@@ -172,7 +172,7 @@ public interface SystemDescriptionRequest extends EObject {
 	 * @return the value of the '<em>Lon</em>' attribute.
 	 * @see #setLon(Double)
 	 * @see de.jena.model.glt.GltPackage#getSystemDescriptionRequest_Lon()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Double getLon();
@@ -194,7 +194,7 @@ public interface SystemDescriptionRequest extends EObject {
 	 * @return the value of the '<em>Lat</em>' attribute.
 	 * @see #setLat(Double)
 	 * @see de.jena.model.glt.GltPackage#getSystemDescriptionRequest_Lat()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Double getLat();
@@ -216,7 +216,7 @@ public interface SystemDescriptionRequest extends EObject {
 	 * @return the value of the '<em>Excluded</em>' attribute.
 	 * @see #setExcluded(Boolean)
 	 * @see de.jena.model.glt.GltPackage#getSystemDescriptionRequest_Excluded()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Boolean getExcluded();
@@ -238,7 +238,7 @@ public interface SystemDescriptionRequest extends EObject {
 	 * @return the value of the '<em>Flags</em>' attribute.
 	 * @see #setFlags(Integer)
 	 * @see de.jena.model.glt.GltPackage#getSystemDescriptionRequest_Flags()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getFlags();

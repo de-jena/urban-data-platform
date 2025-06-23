@@ -160,11 +160,11 @@
 	org.eclipse.sensinact.gateway.southbound.mqtt.mqtt-device-factory;version='[0.0.2,0.0.3)';startlevel=1570,\
 	org.gecko.adapter.mqtt.common;version='[1.1.1,1.1.2)';startlevel=1580,\
 	org.gecko.adapter.mqtt.v5;version='[1.1.1,1.1.2)';startlevel=1590,\
-	org.gecko.codec;version='[1.0.0,1.0.1)';startlevel=1600,\
-	org.gecko.codec.emfjson;version='[1.0.0,1.0.1)';startlevel=1610,\
-	org.gecko.codec.info;version='[1.0.0,1.0.1)';startlevel=1620,\
+	org.gecko.codec;version='[1.0.1,1.0.2)';startlevel=1600,\
+	org.gecko.codec.emfjson;version='[1.0.1,1.0.2)';startlevel=1610,\
+	org.gecko.codec.info;version='[1.0.1,1.0.2)';startlevel=1620,\
 	org.gecko.codec.info.model;version='[1.0.0,1.0.1)';startlevel=1630,\
-	org.gecko.codec.json;version='[1.0.0,1.0.1)';startlevel=1640,\
+	org.gecko.codec.json;version='[1.0.1,1.0.2)';startlevel=1640,\
 	org.gecko.emf.collections;version='[2.2.2,2.2.3)';startlevel=1650,\
 	org.gecko.emf.json;version='[1.5.1,1.5.2)';startlevel=1660,\
 	org.gecko.emf.mongo.component;version='[6.2.0,6.2.1)';startlevel=1670,\

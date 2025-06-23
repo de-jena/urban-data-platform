@@ -54,7 +54,7 @@ public interface StatisticEntry extends EObject {
 	 * @return the value of the '<em>Values</em>' attribute.
 	 * @see #setValues(Object)
 	 * @see de.jena.model.glt.GltPackage#getStatisticEntry_Values()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Object getValues();

@@ -513,6 +513,17 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
+	 * Will return point change authors for input filters.
+	 * <!-- end-model-doc -->
+	 * @model systemIdsMany="true" identifiersMany="true"
+	 * @generated
+	 */
+	Response getAuthors(EList<Integer> systemIds, EList<Integer> identifiers, Boolean external, String from, String to);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
 	 * Will return point changes for input filters.
 	 * <!-- end-model-doc -->
 	 * @model systemIdsMany="true" authorMany="true"
@@ -926,6 +937,17 @@ public interface GltOpenApiClient extends OpenApiClient {
 	 * @generated
 	 */
 	Response updateAlarmState(String systemId, UpdateStateRequest request);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Will return block change authors for input filters.
+	 * <!-- end-model-doc -->
+	 * @model systemIdsMany="true" identifiersMany="true"
+	 * @generated
+	 */
+	Response getAuthors_1(EList<Integer> systemIds, EList<Integer> identifiers, Boolean external, String from, String to);
 
 	/**
 	 * <!-- begin-user-doc -->

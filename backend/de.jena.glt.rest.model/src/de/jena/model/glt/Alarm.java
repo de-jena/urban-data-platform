@@ -41,7 +41,7 @@ public interface Alarm extends EObject {
 	 * @return the value of the '<em>Flags</em>' attribute.
 	 * @see #setFlags(Integer)
 	 * @see de.jena.model.glt.GltPackage#getAlarm_Flags()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getFlags();
@@ -85,7 +85,7 @@ public interface Alarm extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see de.jena.model.glt.GltPackage#getAlarm_Name()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getName();
@@ -107,7 +107,7 @@ public interface Alarm extends EObject {
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(Integer)
 	 * @see de.jena.model.glt.GltPackage#getAlarm_Description()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getDescription();
@@ -129,7 +129,7 @@ public interface Alarm extends EObject {
 	 * @return the value of the '<em>Consequence</em>' attribute.
 	 * @see #setConsequence(Integer)
 	 * @see de.jena.model.glt.GltPackage#getAlarm_Consequence()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getConsequence();
@@ -151,7 +151,7 @@ public interface Alarm extends EObject {
 	 * @return the value of the '<em>Cause</em>' attribute.
 	 * @see #setCause(Integer)
 	 * @see de.jena.model.glt.GltPackage#getAlarm_Cause()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getCause();
@@ -173,7 +173,7 @@ public interface Alarm extends EObject {
 	 * @return the value of the '<em>Sl24schedule</em>' attribute.
 	 * @see #setSl24schedule(Integer)
 	 * @see de.jena.model.glt.GltPackage#getAlarm_Sl24schedule()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getSl24schedule();
@@ -195,7 +195,7 @@ public interface Alarm extends EObject {
 	 * @return the value of the '<em>Priority Summer</em>' attribute.
 	 * @see #setPrioritySummer(Integer)
 	 * @see de.jena.model.glt.GltPackage#getAlarm_PrioritySummer()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getPrioritySummer();
@@ -217,7 +217,7 @@ public interface Alarm extends EObject {
 	 * @return the value of the '<em>Priority Winter</em>' attribute.
 	 * @see #setPriorityWinter(Integer)
 	 * @see de.jena.model.glt.GltPackage#getAlarm_PriorityWinter()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getPriorityWinter();
@@ -239,7 +239,7 @@ public interface Alarm extends EObject {
 	 * @return the value of the '<em>System Id</em>' attribute.
 	 * @see #setSystemId(String)
 	 * @see de.jena.model.glt.GltPackage#getAlarm_SystemId()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getSystemId();
@@ -261,7 +261,7 @@ public interface Alarm extends EObject {
 	 * @return the value of the '<em>Flag</em>' attribute.
 	 * @see #setFlag(String)
 	 * @see de.jena.model.glt.GltPackage#getAlarm_Flag()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getFlag();

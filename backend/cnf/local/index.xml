@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="Local" increment="1749628040287">
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="Local" increment="1724069207949">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="license" value="Eclipse Public License 1.0"/>
@@ -48,112 +48,6 @@
     </requirement>
     <requirement namespace="osgi.ee">
       <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
-    </requirement>
-  </resource>
-  <resource>
-    <capability namespace="osgi.identity">
-      <attribute name="license" value="Eclipse Public License 2.0"/>
-      <attribute name="copyright" value="Data In Motion Consuling GmbH - All rights reserved"/>
-      <attribute name="osgi.identity" value="org.gecko.codec.json"/>
-      <attribute name="documentation" value="https://github.com/geckoprojects-org/org.gecko.codec"/>
-      <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="1.0.0.202506110746-SNAPSHOT" type="Version"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.eclipse.emf.common.util,org.eclipse.emf.ecore.resource,org.eclipse.emf.ecore.resource.impl,org.gecko.codec.configurator,org.gecko.codec.info,org.gecko.codec.jackson.module,org.gecko.codec.jackson.resource"/>
-      <attribute name="bundle-symbolic-name" value="org.gecko.codec.json"/>
-      <attribute name="bundle-version" value="1.0.0.202506110746-SNAPSHOT" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.gecko.codec.json.resource"/>
-      <attribute name="version" value="1.0.0" type="Version"/>
-      <attribute name="bnd.hashes" value="175235116,1349787380,-1923478059" type="List&lt;Long&gt;"/>
-    </capability>
-    <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="1.0.0.202506110746-SNAPSHOT" type="Version"/>
-      <attribute name="osgi.wiring.bundle" value="org.gecko.codec.json"/>
-    </capability>
-    <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="1.0.0.202506110746-SNAPSHOT" type="Version"/>
-      <attribute name="osgi.wiring.host" value="org.gecko.codec.json"/>
-    </capability>
-    <capability namespace="osgi.content">
-      <attribute name="size" value="16997" type="Long"/>
-      <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="url" value="org.gecko.codec.json/org.gecko.codec.json-1.0.0.jar"/>
-      <attribute name="osgi.content" value="260EB7FDFC6D4C38D7FF9D4F4B4E73F3FDC85C71B2174C4E32A35881C3A0D0FA"/>
-    </capability>
-    <capability namespace="osgi.service">
-      <directive name="uses" value="org.eclipse.emf.ecore.resource,org.gecko.codec.json.resource"/>
-      <attribute name="objectClass" value="org.eclipse.emf.ecore.resource.Resource$Factory,org.gecko.codec.json.resource.JsonResourceFactory" type="List&lt;String&gt;"/>
-    </capability>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.databind)(version&gt;=2.16.0)(!(version&gt;=3.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.databind.cfg)(version&gt;=2.16.0)(!(version&gt;=3.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.cfg"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(osgi.wiring.package=java.io)"/>
-      <attribute name="osgi.wiring.package" value="java.io"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(osgi.wiring.package=java.lang)"/>
-      <attribute name="osgi.wiring.package" value="java.lang"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(osgi.wiring.package=java.util)"/>
-      <attribute name="osgi.wiring.package" value="java.util"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.emf.common.util)(version&gt;=2.29.0)(!(version&gt;=3.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.eclipse.emf.common.util"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.emf.ecore.resource)(version&gt;=2.35.0)(!(version&gt;=3.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.resource"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.emf.ecore.resource.impl)(version&gt;=2.35.0)(!(version&gt;=3.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.resource.impl"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.emfcloud.jackson.databind)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.eclipse.emfcloud.jackson.databind"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.codec.configurator)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.gecko.codec.configurator"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.codec.info)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.gecko.codec.info"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.codec.jackson.module)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.gecko.codec.jackson.module"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.codec.jackson.resource)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.gecko.codec.jackson.resource"/>
-    </requirement>
-    <requirement namespace="osgi.ee">
-      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=17))"/>
-    </requirement>
-    <requirement namespace="osgi.extender">
-      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))"/>
-    </requirement>
-    <requirement namespace="osgi.service">
-      <directive name="filter" value="(objectClass=org.gecko.codec.configurator.CodecModuleConfigurator)"/>
-      <directive name="effective" value="active"/>
-    </requirement>
-    <requirement namespace="osgi.service">
-      <directive name="filter" value="(objectClass=org.gecko.codec.configurator.ObjectMapperConfigurator)"/>
-      <directive name="effective" value="active"/>
-    </requirement>
-    <requirement namespace="osgi.service">
-      <directive name="filter" value="(objectClass=org.gecko.codec.info.CodecModelInfo)"/>
-      <directive name="effective" value="active"/>
     </requirement>
   </resource>
   <resource>

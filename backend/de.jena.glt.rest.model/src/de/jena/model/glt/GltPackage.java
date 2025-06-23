@@ -1679,13 +1679,22 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int POINT_VALUE_POJO__IS_UNKNOWN = 7;
 
 	/**
+	 * The feature id for the '<em><b>Author</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_VALUE_POJO__AUTHOR = 8;
+
+	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POINT_VALUE_POJO__COMMENTS = 8;
+	int POINT_VALUE_POJO__COMMENTS = 9;
 
 	/**
 	 * The number of structural features of the '<em>Point Value Pojo</em>' class.
@@ -1694,7 +1703,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POINT_VALUE_POJO_FEATURE_COUNT = 9;
+	int POINT_VALUE_POJO_FEATURE_COUNT = 10;
 
 	/**
 	 * The number of operations of the '<em>Point Value Pojo</em>' class.
@@ -2372,13 +2381,22 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int TIME_SCHEDULE_BLOCK_POJO__IS_UNKNOWN = 10;
 
 	/**
+	 * The feature id for the '<em><b>Author</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_SCHEDULE_BLOCK_POJO__AUTHOR = 11;
+
+	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TIME_SCHEDULE_BLOCK_POJO__COMMENTS = 11;
+	int TIME_SCHEDULE_BLOCK_POJO__COMMENTS = 12;
 
 	/**
 	 * The number of structural features of the '<em>Time Schedule Block Pojo</em>' class.
@@ -2387,7 +2405,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TIME_SCHEDULE_BLOCK_POJO_FEATURE_COUNT = 12;
+	int TIME_SCHEDULE_BLOCK_POJO_FEATURE_COUNT = 13;
 
 	/**
 	 * The number of operations of the '<em>Time Schedule Block Pojo</em>' class.
@@ -4844,13 +4862,22 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int GLT_OPEN_API_CLIENT___UPDATE_DATALOG_CONTENT__INTEGER_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 44;
 
 	/**
+	 * The operation id for the '<em>Get Authors</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLT_OPEN_API_CLIENT___GET_AUTHORS__ELIST_ELIST_BOOLEAN_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 45;
+
+	/**
 	 * The operation id for the '<em>Get Changelog</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_CHANGELOG__INTEGER_INTEGER_ELIST_BOOLEAN_ELIST_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 45;
+	int GLT_OPEN_API_CLIENT___GET_CHANGELOG__INTEGER_INTEGER_ELIST_BOOLEAN_ELIST_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 46;
 
 	/**
 	 * The operation id for the '<em>Get Changelog Count</em>' operation.
@@ -4859,7 +4886,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_CHANGELOG_COUNT__ELIST_BOOLEAN_ELIST_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 46;
+	int GLT_OPEN_API_CLIENT___GET_CHANGELOG_COUNT__ELIST_BOOLEAN_ELIST_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 47;
 
 	/**
 	 * The operation id for the '<em>Get Point Value History</em>' operation.
@@ -4868,7 +4895,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_POINT_VALUE_HISTORY__INTEGER_ELIST_BOOLEAN_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 47;
+	int GLT_OPEN_API_CLIENT___GET_POINT_VALUE_HISTORY__INTEGER_ELIST_BOOLEAN_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 48;
 
 	/**
 	 * The operation id for the '<em>Get Point Values</em>' operation.
@@ -4877,7 +4904,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_POINT_VALUES__INTEGER_STRING_STRING_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 48;
+	int GLT_OPEN_API_CLIENT___GET_POINT_VALUES__INTEGER_STRING_STRING_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 49;
 
 	/**
 	 * The operation id for the '<em>Update Point Values</em>' operation.
@@ -4886,7 +4913,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___UPDATE_POINT_VALUES__INTEGER_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 49;
+	int GLT_OPEN_API_CLIENT___UPDATE_POINT_VALUES__INTEGER_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 50;
 
 	/**
 	 * The operation id for the '<em>Get Alarm Count</em>' operation.
@@ -4895,7 +4922,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALARM_COUNT__ELIST_BIGINTEGER_BIGINTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 50;
+	int GLT_OPEN_API_CLIENT___GET_ALARM_COUNT__ELIST_BIGINTEGER_BIGINTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 51;
 
 	/**
 	 * The operation id for the '<em>Get Alarm Count Post</em>' operation.
@@ -4904,7 +4931,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALARM_COUNT_POST__BIGINTEGER_BIGINTEGER_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 51;
+	int GLT_OPEN_API_CLIENT___GET_ALARM_COUNT_POST__BIGINTEGER_BIGINTEGER_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 52;
 
 	/**
 	 * The operation id for the '<em>Get Alarm Count 1</em>' operation.
@@ -4913,7 +4940,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALARM_COUNT_1__STRING_STRING_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 52;
+	int GLT_OPEN_API_CLIENT___GET_ALARM_COUNT_1__STRING_STRING_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 53;
 
 	/**
 	 * The operation id for the '<em>Get Alarm Count By State</em>' operation.
@@ -4922,7 +4949,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALARM_COUNT_BY_STATE__STRING_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 53;
+	int GLT_OPEN_API_CLIENT___GET_ALARM_COUNT_BY_STATE__STRING_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 54;
 
 	/**
 	 * The operation id for the '<em>Get Alarm Count By State 1</em>' operation.
@@ -4931,7 +4958,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALARM_COUNT_BY_STATE_1__ELIST_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 54;
+	int GLT_OPEN_API_CLIENT___GET_ALARM_COUNT_BY_STATE_1__ELIST_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 55;
 
 	/**
 	 * The operation id for the '<em>Get Alarm Count By State And System</em>' operation.
@@ -4940,7 +4967,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALARM_COUNT_BY_STATE_AND_SYSTEM__ELIST_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 55;
+	int GLT_OPEN_API_CLIENT___GET_ALARM_COUNT_BY_STATE_AND_SYSTEM__ELIST_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 56;
 
 	/**
 	 * The operation id for the '<em>Get Alarm Count For System</em>' operation.
@@ -4949,7 +4976,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALARM_COUNT_FOR_SYSTEM__STRING_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 56;
+	int GLT_OPEN_API_CLIENT___GET_ALARM_COUNT_FOR_SYSTEM__STRING_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 57;
 
 	/**
 	 * The operation id for the '<em>Get Alarm For State Count</em>' operation.
@@ -4958,7 +4985,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALARM_FOR_STATE_COUNT__STRING_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 57;
+	int GLT_OPEN_API_CLIENT___GET_ALARM_FOR_STATE_COUNT__STRING_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 58;
 
 	/**
 	 * The operation id for the '<em>Get Alarm Log Timeline</em>' operation.
@@ -4967,7 +4994,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALARM_LOG_TIMELINE__STRING_BIGINTEGER_BIGINTEGER_INTEGER_INTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 58;
+	int GLT_OPEN_API_CLIENT___GET_ALARM_LOG_TIMELINE__STRING_BIGINTEGER_BIGINTEGER_INTEGER_INTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 59;
 
 	/**
 	 * The operation id for the '<em>Get Alarm Log Timeline Statistics</em>' operation.
@@ -4976,7 +5003,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALARM_LOG_TIMELINE_STATISTICS__STRING_BIGINTEGER_BIGINTEGER_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 59;
+	int GLT_OPEN_API_CLIENT___GET_ALARM_LOG_TIMELINE_STATISTICS__STRING_BIGINTEGER_BIGINTEGER_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 60;
 
 	/**
 	 * The operation id for the '<em>Get Alarm Logs</em>' operation.
@@ -4985,7 +5012,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALARM_LOGS__ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 60;
+	int GLT_OPEN_API_CLIENT___GET_ALARM_LOGS__ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 61;
 
 	/**
 	 * The operation id for the '<em>Get Alarm Logs 1</em>' operation.
@@ -4994,7 +5021,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALARM_LOGS_1__STRING_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 61;
+	int GLT_OPEN_API_CLIENT___GET_ALARM_LOGS_1__STRING_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 62;
 
 	/**
 	 * The operation id for the '<em>Get Alarm Logs For State</em>' operation.
@@ -5003,7 +5030,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALARM_LOGS_FOR_STATE__STRING_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 62;
+	int GLT_OPEN_API_CLIENT___GET_ALARM_LOGS_FOR_STATE__STRING_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 63;
 
 	/**
 	 * The operation id for the '<em>Get Alarm Logs For States</em>' operation.
@@ -5012,7 +5039,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALARM_LOGS_FOR_STATES__ELIST_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 63;
+	int GLT_OPEN_API_CLIENT___GET_ALARM_LOGS_FOR_STATES__ELIST_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 64;
 
 	/**
 	 * The operation id for the '<em>Get Alarm Logs Timeline</em>' operation.
@@ -5021,7 +5048,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALARM_LOGS_TIMELINE__STRING_BIGINTEGER_BIGINTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 64;
+	int GLT_OPEN_API_CLIENT___GET_ALARM_LOGS_TIMELINE__STRING_BIGINTEGER_BIGINTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 65;
 
 	/**
 	 * The operation id for the '<em>Get Alarms For State</em>' operation.
@@ -5030,7 +5057,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALARMS_FOR_STATE__STRING_STRING_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 65;
+	int GLT_OPEN_API_CLIENT___GET_ALARMS_FOR_STATE__STRING_STRING_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 66;
 
 	/**
 	 * The operation id for the '<em>Get Alarms For States</em>' operation.
@@ -5039,7 +5066,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALARMS_FOR_STATES__STRING_ELIST_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 66;
+	int GLT_OPEN_API_CLIENT___GET_ALARMS_FOR_STATES__STRING_ELIST_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 67;
 
 	/**
 	 * The operation id for the '<em>Get Entity Monitoring</em>' operation.
@@ -5048,7 +5075,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ENTITY_MONITORING__INTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 67;
+	int GLT_OPEN_API_CLIENT___GET_ENTITY_MONITORING__INTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 68;
 
 	/**
 	 * The operation id for the '<em>Get Entity Monitoring 1</em>' operation.
@@ -5057,7 +5084,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ENTITY_MONITORING_1__INTEGER_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 68;
+	int GLT_OPEN_API_CLIENT___GET_ENTITY_MONITORING_1__INTEGER_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 69;
 
 	/**
 	 * The operation id for the '<em>Update Entity Monitoring</em>' operation.
@@ -5066,7 +5093,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___UPDATE_ENTITY_MONITORING__INTEGER_STRING_INTEGER_STRING_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 69;
+	int GLT_OPEN_API_CLIENT___UPDATE_ENTITY_MONITORING__INTEGER_STRING_INTEGER_STRING_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 70;
 
 	/**
 	 * The operation id for the '<em>Get Log</em>' operation.
@@ -5075,7 +5102,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_LOG__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 70;
+	int GLT_OPEN_API_CLIENT___GET_LOG__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 71;
 
 	/**
 	 * The operation id for the '<em>Get Logs</em>' operation.
@@ -5084,7 +5111,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_LOGS = OPEN_API_CLIENT_OPERATION_COUNT + 71;
+	int GLT_OPEN_API_CLIENT___GET_LOGS = OPEN_API_CLIENT_OPERATION_COUNT + 72;
 
 	/**
 	 * The operation id for the '<em>Get Logs For State</em>' operation.
@@ -5093,7 +5120,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_LOGS_FOR_STATE__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 72;
+	int GLT_OPEN_API_CLIENT___GET_LOGS_FOR_STATE__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 73;
 
 	/**
 	 * The operation id for the '<em>Get Statistics</em>' operation.
@@ -5102,7 +5129,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_STATISTICS__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 73;
+	int GLT_OPEN_API_CLIENT___GET_STATISTICS__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 74;
 
 	/**
 	 * The operation id for the '<em>Get Status Logs</em>' operation.
@@ -5111,7 +5138,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_STATUS_LOGS = OPEN_API_CLIENT_OPERATION_COUNT + 74;
+	int GLT_OPEN_API_CLIENT___GET_STATUS_LOGS = OPEN_API_CLIENT_OPERATION_COUNT + 75;
 
 	/**
 	 * The operation id for the '<em>Upsert Status Log</em>' operation.
@@ -5120,7 +5147,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___UPSERT_STATUS_LOG__STATUSLOGREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 75;
+	int GLT_OPEN_API_CLIENT___UPSERT_STATUS_LOG__STATUSLOGREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 76;
 
 	/**
 	 * The operation id for the '<em>Get Status Logs 1</em>' operation.
@@ -5129,7 +5156,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_STATUS_LOGS_1__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 76;
+	int GLT_OPEN_API_CLIENT___GET_STATUS_LOGS_1__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 77;
 
 	/**
 	 * The operation id for the '<em>Get Status Logs Timeline</em>' operation.
@@ -5138,7 +5165,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_STATUS_LOGS_TIMELINE__STRING_BIGINTEGER_BIGINTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 77;
+	int GLT_OPEN_API_CLIENT___GET_STATUS_LOGS_TIMELINE__STRING_BIGINTEGER_BIGINTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 78;
 
 	/**
 	 * The operation id for the '<em>Get Tracked</em>' operation.
@@ -5147,7 +5174,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_TRACKED__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 78;
+	int GLT_OPEN_API_CLIENT___GET_TRACKED__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 79;
 
 	/**
 	 * The operation id for the '<em>Is Flaky</em>' operation.
@@ -5156,7 +5183,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___IS_FLAKY__STRING_STRING_BIGINTEGER_BIGINTEGER_INTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 79;
+	int GLT_OPEN_API_CLIENT___IS_FLAKY__STRING_STRING_BIGINTEGER_BIGINTEGER_INTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 80;
 
 	/**
 	 * The operation id for the '<em>Logs For States</em>' operation.
@@ -5165,7 +5192,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___LOGS_FOR_STATES__ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 80;
+	int GLT_OPEN_API_CLIENT___LOGS_FOR_STATES__ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 81;
 
 	/**
 	 * The operation id for the '<em>Refresh System</em>' operation.
@@ -5174,7 +5201,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___REFRESH_SYSTEM__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 81;
+	int GLT_OPEN_API_CLIENT___REFRESH_SYSTEM__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 82;
 
 	/**
 	 * The operation id for the '<em>Update Alarm State</em>' operation.
@@ -5183,7 +5210,16 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___UPDATE_ALARM_STATE__STRING_UPDATESTATEREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 82;
+	int GLT_OPEN_API_CLIENT___UPDATE_ALARM_STATE__STRING_UPDATESTATEREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 83;
+
+	/**
+	 * The operation id for the '<em>Get Authors 1</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLT_OPEN_API_CLIENT___GET_AUTHORS_1__ELIST_ELIST_BOOLEAN_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 84;
 
 	/**
 	 * The operation id for the '<em>Get Changelog 1</em>' operation.
@@ -5192,7 +5228,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_CHANGELOG_1__INTEGER_INTEGER_ELIST_BOOLEAN_ELIST_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 83;
+	int GLT_OPEN_API_CLIENT___GET_CHANGELOG_1__INTEGER_INTEGER_ELIST_BOOLEAN_ELIST_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 85;
 
 	/**
 	 * The operation id for the '<em>Get Changelog Count 1</em>' operation.
@@ -5201,7 +5237,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_CHANGELOG_COUNT_1__ELIST_BOOLEAN_ELIST_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 84;
+	int GLT_OPEN_API_CLIENT___GET_CHANGELOG_COUNT_1__ELIST_BOOLEAN_ELIST_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 86;
 
 	/**
 	 * The operation id for the '<em>Get Time Schedule Block History</em>' operation.
@@ -5210,7 +5246,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_TIME_SCHEDULE_BLOCK_HISTORY__INTEGER_ELIST_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 85;
+	int GLT_OPEN_API_CLIENT___GET_TIME_SCHEDULE_BLOCK_HISTORY__INTEGER_ELIST_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 87;
 
 	/**
 	 * The operation id for the '<em>Get Time Schedule Blocks</em>' operation.
@@ -5219,7 +5255,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_TIME_SCHEDULE_BLOCKS__INTEGER_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 86;
+	int GLT_OPEN_API_CLIENT___GET_TIME_SCHEDULE_BLOCKS__INTEGER_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 88;
 
 	/**
 	 * The operation id for the '<em>Update Time Schedule Blocks</em>' operation.
@@ -5228,7 +5264,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___UPDATE_TIME_SCHEDULE_BLOCKS__INTEGER_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 87;
+	int GLT_OPEN_API_CLIENT___UPDATE_TIME_SCHEDULE_BLOCKS__INTEGER_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 89;
 
 	/**
 	 * The operation id for the '<em>Get Time Schedule State History</em>' operation.
@@ -5237,7 +5273,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_TIME_SCHEDULE_STATE_HISTORY__INTEGER_ELIST_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 88;
+	int GLT_OPEN_API_CLIENT___GET_TIME_SCHEDULE_STATE_HISTORY__INTEGER_ELIST_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 90;
 
 	/**
 	 * The operation id for the '<em>Get Time Schedule States</em>' operation.
@@ -5246,7 +5282,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_TIME_SCHEDULE_STATES__INTEGER_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 89;
+	int GLT_OPEN_API_CLIENT___GET_TIME_SCHEDULE_STATES__INTEGER_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 91;
 
 	/**
 	 * The operation id for the '<em>Update Time Schedule States</em>' operation.
@@ -5255,7 +5291,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___UPDATE_TIME_SCHEDULE_STATES__INTEGER_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 90;
+	int GLT_OPEN_API_CLIENT___UPDATE_TIME_SCHEDULE_STATES__INTEGER_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 92;
 
 	/**
 	 * The operation id for the '<em>Get Version</em>' operation.
@@ -5264,7 +5300,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_VERSION__INTEGER_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 91;
+	int GLT_OPEN_API_CLIENT___GET_VERSION__INTEGER_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 93;
 
 	/**
 	 * The operation id for the '<em>Point</em>' operation.
@@ -5273,7 +5309,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___POINT__POINTRECORD = OPEN_API_CLIENT_OPERATION_COUNT + 92;
+	int GLT_OPEN_API_CLIENT___POINT__POINTRECORD = OPEN_API_CLIENT_OPERATION_COUNT + 94;
 
 	/**
 	 * The operation id for the '<em>Timeschedule</em>' operation.
@@ -5282,7 +5318,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___TIMESCHEDULE__TIMESCHEDULERECORD = OPEN_API_CLIENT_OPERATION_COUNT + 93;
+	int GLT_OPEN_API_CLIENT___TIMESCHEDULE__TIMESCHEDULERECORD = OPEN_API_CLIENT_OPERATION_COUNT + 95;
 
 	/**
 	 * The operation id for the '<em>Get</em>' operation.
@@ -5291,7 +5327,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 94;
+	int GLT_OPEN_API_CLIENT___GET__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 96;
 
 	/**
 	 * The operation id for the '<em>Create Or Update</em>' operation.
@@ -5300,7 +5336,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___CREATE_OR_UPDATE__STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 95;
+	int GLT_OPEN_API_CLIENT___CREATE_OR_UPDATE__STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 97;
 
 	/**
 	 * The operation id for the '<em>Create</em>' operation.
@@ -5309,7 +5345,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___CREATE__STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 96;
+	int GLT_OPEN_API_CLIENT___CREATE__STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 98;
 
 	/**
 	 * The operation id for the '<em>Delete</em>' operation.
@@ -5318,7 +5354,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___DELETE__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 97;
+	int GLT_OPEN_API_CLIENT___DELETE__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 99;
 
 	/**
 	 * The operation id for the '<em>Get All Settings</em>' operation.
@@ -5327,7 +5363,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ALL_SETTINGS = OPEN_API_CLIENT_OPERATION_COUNT + 98;
+	int GLT_OPEN_API_CLIENT___GET_ALL_SETTINGS = OPEN_API_CLIENT_OPERATION_COUNT + 100;
 
 	/**
 	 * The operation id for the '<em>Get Auth Status</em>' operation.
@@ -5336,7 +5372,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_AUTH_STATUS = OPEN_API_CLIENT_OPERATION_COUNT + 99;
+	int GLT_OPEN_API_CLIENT___GET_AUTH_STATUS = OPEN_API_CLIENT_OPERATION_COUNT + 101;
 
 	/**
 	 * The operation id for the '<em>Get Status</em>' operation.
@@ -5345,7 +5381,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_STATUS = OPEN_API_CLIENT_OPERATION_COUNT + 100;
+	int GLT_OPEN_API_CLIENT___GET_STATUS = OPEN_API_CLIENT_OPERATION_COUNT + 102;
 
 	/**
 	 * The operation id for the '<em>Get System</em>' operation.
@@ -5354,7 +5390,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_SYSTEM__STRING_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 101;
+	int GLT_OPEN_API_CLIENT___GET_SYSTEM__STRING_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 103;
 
 	/**
 	 * The operation id for the '<em>Update System</em>' operation.
@@ -5363,7 +5399,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___UPDATE_SYSTEM__STRING_SYSTEMDESCRIPTIONREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 102;
+	int GLT_OPEN_API_CLIENT___UPDATE_SYSTEM__STRING_SYSTEMDESCRIPTIONREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 104;
 
 	/**
 	 * The operation id for the '<em>Create System Description</em>' operation.
@@ -5372,7 +5408,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___CREATE_SYSTEM_DESCRIPTION__STRING_SYSTEMDESCRIPTIONREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 103;
+	int GLT_OPEN_API_CLIENT___CREATE_SYSTEM_DESCRIPTION__STRING_SYSTEMDESCRIPTIONREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 105;
 
 	/**
 	 * The operation id for the '<em>Delete System</em>' operation.
@@ -5381,7 +5417,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___DELETE_SYSTEM__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 104;
+	int GLT_OPEN_API_CLIENT___DELETE_SYSTEM__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 106;
 
 	/**
 	 * The operation id for the '<em>Get Contacts</em>' operation.
@@ -5390,7 +5426,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_CONTACTS__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 105;
+	int GLT_OPEN_API_CLIENT___GET_CONTACTS__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 107;
 
 	/**
 	 * The operation id for the '<em>Get Contracts</em>' operation.
@@ -5399,7 +5435,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_CONTRACTS__STRING_STRING_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 106;
+	int GLT_OPEN_API_CLIENT___GET_CONTRACTS__STRING_STRING_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 108;
 
 	/**
 	 * The operation id for the '<em>Get System Ids</em>' operation.
@@ -5408,7 +5444,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_SYSTEM_IDS__BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 107;
+	int GLT_OPEN_API_CLIENT___GET_SYSTEM_IDS__BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 109;
 
 	/**
 	 * The operation id for the '<em>Get Systems</em>' operation.
@@ -5417,7 +5453,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_SYSTEMS__BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 108;
+	int GLT_OPEN_API_CLIENT___GET_SYSTEMS__BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 110;
 
 	/**
 	 * The operation id for the '<em>Get Tech Facilities</em>' operation.
@@ -5426,7 +5462,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_TECH_FACILITIES__STRING_STRING_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 109;
+	int GLT_OPEN_API_CLIENT___GET_TECH_FACILITIES__STRING_STRING_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 111;
 
 	/**
 	 * The operation id for the '<em>Get Entities</em>' operation.
@@ -5435,7 +5471,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ENTITIES__ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 110;
+	int GLT_OPEN_API_CLIENT___GET_ENTITIES__ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 112;
 
 	/**
 	 * The operation id for the '<em>Get Entities By Type</em>' operation.
@@ -5444,7 +5480,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ENTITIES_BY_TYPE__INTEGER_STRING_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 111;
+	int GLT_OPEN_API_CLIENT___GET_ENTITIES_BY_TYPE__INTEGER_STRING_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 113;
 
 	/**
 	 * The operation id for the '<em>Get Entities By Types</em>' operation.
@@ -5453,7 +5489,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ENTITIES_BY_TYPES__INTEGER_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 112;
+	int GLT_OPEN_API_CLIENT___GET_ENTITIES_BY_TYPES__INTEGER_ELIST_ELIST = OPEN_API_CLIENT_OPERATION_COUNT + 114;
 
 	/**
 	 * The operation id for the '<em>Get System Entities</em>' operation.
@@ -5462,7 +5498,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_SYSTEM_ENTITIES__INTEGER_INTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 113;
+	int GLT_OPEN_API_CLIENT___GET_SYSTEM_ENTITIES__INTEGER_INTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 115;
 
 	/**
 	 * The operation id for the '<em>Get System Entity</em>' operation.
@@ -5471,7 +5507,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_SYSTEM_ENTITY__INTEGER_STRING_INTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 114;
+	int GLT_OPEN_API_CLIENT___GET_SYSTEM_ENTITY__INTEGER_STRING_INTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 116;
 
 	/**
 	 * The operation id for the '<em>Import Systems</em>' operation.
@@ -5480,7 +5516,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___IMPORT_SYSTEMS__BOOLEAN_BOOLEAN_BOOLEAN_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 115;
+	int GLT_OPEN_API_CLIENT___IMPORT_SYSTEMS__BOOLEAN_BOOLEAN_BOOLEAN_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 117;
 
 	/**
 	 * The operation id for the '<em>Cleanup Texts</em>' operation.
@@ -5489,7 +5525,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___CLEANUP_TEXTS = OPEN_API_CLIENT_OPERATION_COUNT + 116;
+	int GLT_OPEN_API_CLIENT___CLEANUP_TEXTS = OPEN_API_CLIENT_OPERATION_COUNT + 118;
 
 	/**
 	 * The operation id for the '<em>Create Text</em>' operation.
@@ -5498,7 +5534,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___CREATE_TEXT__TEXTREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 117;
+	int GLT_OPEN_API_CLIENT___CREATE_TEXT__TEXTREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 119;
 
 	/**
 	 * The operation id for the '<em>Get Text</em>' operation.
@@ -5507,7 +5543,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_TEXT__INTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 118;
+	int GLT_OPEN_API_CLIENT___GET_TEXT__INTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 120;
 
 	/**
 	 * The operation id for the '<em>Update Text</em>' operation.
@@ -5516,7 +5552,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___UPDATE_TEXT__INTEGER_TEXTREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 119;
+	int GLT_OPEN_API_CLIENT___UPDATE_TEXT__INTEGER_TEXTREQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 121;
 
 	/**
 	 * The operation id for the '<em>Delete Text</em>' operation.
@@ -5525,7 +5561,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___DELETE_TEXT__INTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 120;
+	int GLT_OPEN_API_CLIENT___DELETE_TEXT__INTEGER = OPEN_API_CLIENT_OPERATION_COUNT + 122;
 
 	/**
 	 * The operation id for the '<em>Get Text Ids</em>' operation.
@@ -5534,7 +5570,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_TEXT_IDS = OPEN_API_CLIENT_OPERATION_COUNT + 121;
+	int GLT_OPEN_API_CLIENT___GET_TEXT_IDS = OPEN_API_CLIENT_OPERATION_COUNT + 123;
 
 	/**
 	 * The operation id for the '<em>Get Text Ids 1</em>' operation.
@@ -5543,7 +5579,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_TEXT_IDS_1__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 122;
+	int GLT_OPEN_API_CLIENT___GET_TEXT_IDS_1__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 124;
 
 	/**
 	 * The operation id for the '<em>Get Texts</em>' operation.
@@ -5552,7 +5588,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_TEXTS = OPEN_API_CLIENT_OPERATION_COUNT + 123;
+	int GLT_OPEN_API_CLIENT___GET_TEXTS = OPEN_API_CLIENT_OPERATION_COUNT + 125;
 
 	/**
 	 * The operation id for the '<em>Get Texts 1</em>' operation.
@@ -5561,7 +5597,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_TEXTS_1__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 124;
+	int GLT_OPEN_API_CLIENT___GET_TEXTS_1__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 126;
 
 	/**
 	 * The operation id for the '<em>Get Groups</em>' operation.
@@ -5570,7 +5606,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_GROUPS = OPEN_API_CLIENT_OPERATION_COUNT + 125;
+	int GLT_OPEN_API_CLIENT___GET_GROUPS = OPEN_API_CLIENT_OPERATION_COUNT + 127;
 
 	/**
 	 * The operation id for the '<em>Add Group</em>' operation.
@@ -5579,7 +5615,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___ADD_GROUP__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 126;
+	int GLT_OPEN_API_CLIENT___ADD_GROUP__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 128;
 
 	/**
 	 * The operation id for the '<em>Add Member To Group</em>' operation.
@@ -5588,7 +5624,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___ADD_MEMBER_TO_GROUP__STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 127;
+	int GLT_OPEN_API_CLIENT___ADD_MEMBER_TO_GROUP__STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 129;
 
 	/**
 	 * The operation id for the '<em>Add Property To Role</em>' operation.
@@ -5597,7 +5633,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___ADD_PROPERTY_TO_ROLE__STRING_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 128;
+	int GLT_OPEN_API_CLIENT___ADD_PROPERTY_TO_ROLE__STRING_STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 130;
 
 	/**
 	 * The operation id for the '<em>Remove Property From Role</em>' operation.
@@ -5606,7 +5642,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___REMOVE_PROPERTY_FROM_ROLE__STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 129;
+	int GLT_OPEN_API_CLIENT___REMOVE_PROPERTY_FROM_ROLE__STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 131;
 
 	/**
 	 * The operation id for the '<em>Get Users</em>' operation.
@@ -5615,7 +5651,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_USERS = OPEN_API_CLIENT_OPERATION_COUNT + 130;
+	int GLT_OPEN_API_CLIENT___GET_USERS = OPEN_API_CLIENT_OPERATION_COUNT + 132;
 
 	/**
 	 * The operation id for the '<em>Add User</em>' operation.
@@ -5624,7 +5660,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___ADD_USER__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 131;
+	int GLT_OPEN_API_CLIENT___ADD_USER__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 133;
 
 	/**
 	 * The operation id for the '<em>Current Role</em>' operation.
@@ -5633,7 +5669,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___CURRENT_ROLE = OPEN_API_CLIENT_OPERATION_COUNT + 132;
+	int GLT_OPEN_API_CLIENT___CURRENT_ROLE = OPEN_API_CLIENT_OPERATION_COUNT + 134;
 
 	/**
 	 * The operation id for the '<em>Get Role</em>' operation.
@@ -5642,7 +5678,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_ROLE__STRING_BOOLEAN_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 133;
+	int GLT_OPEN_API_CLIENT___GET_ROLE__STRING_BOOLEAN_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 135;
 
 	/**
 	 * The operation id for the '<em>Remove Member From Group</em>' operation.
@@ -5651,7 +5687,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___REMOVE_MEMBER_FROM_GROUP__STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 134;
+	int GLT_OPEN_API_CLIENT___REMOVE_MEMBER_FROM_GROUP__STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 136;
 
 	/**
 	 * The operation id for the '<em>Remove Role</em>' operation.
@@ -5660,7 +5696,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___REMOVE_ROLE__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 135;
+	int GLT_OPEN_API_CLIENT___REMOVE_ROLE__STRING = OPEN_API_CLIENT_OPERATION_COUNT + 137;
 
 	/**
 	 * The operation id for the '<em>Update Suspect</em>' operation.
@@ -5669,7 +5705,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___UPDATE_SUSPECT__STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 136;
+	int GLT_OPEN_API_CLIENT___UPDATE_SUSPECT__STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 138;
 
 	/**
 	 * The operation id for the '<em>Delete Suspect</em>' operation.
@@ -5678,7 +5714,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___DELETE_SUSPECT__STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 137;
+	int GLT_OPEN_API_CLIENT___DELETE_SUSPECT__STRING_STRING = OPEN_API_CLIENT_OPERATION_COUNT + 139;
 
 	/**
 	 * The operation id for the '<em>Get Suspects</em>' operation.
@@ -5687,7 +5723,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_SUSPECTS__ELIST_ELIST_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 138;
+	int GLT_OPEN_API_CLIENT___GET_SUSPECTS__ELIST_ELIST_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 140;
 
 	/**
 	 * The operation id for the '<em>Get Suspects 1</em>' operation.
@@ -5696,7 +5732,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT___GET_SUSPECTS_1__STRING_ELIST_ELIST_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 139;
+	int GLT_OPEN_API_CLIENT___GET_SUSPECTS_1__STRING_ELIST_ELIST_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 141;
 
 	/**
 	 * The number of operations of the '<em>Open Api Client</em>' class.
@@ -5705,7 +5741,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLT_OPEN_API_CLIENT_OPERATION_COUNT = OPEN_API_CLIENT_OPERATION_COUNT + 140;
+	int GLT_OPEN_API_CLIENT_OPERATION_COUNT = OPEN_API_CLIENT_OPERATION_COUNT + 142;
 
 	/**
 	 * The meta object id for the '<em>JResponse</em>' data type.
@@ -7205,6 +7241,17 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getPointValuePojo_IsUnknown();
 
 	/**
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.PointValuePojo#getAuthor <em>Author</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Author</em>'.
+	 * @see de.jena.model.glt.PointValuePojo#getAuthor()
+	 * @see #getPointValuePojo()
+	 * @generated
+	 */
+	EAttribute getPointValuePojo_Author();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link de.jena.model.glt.PointValuePojo#getComments <em>Comments</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7832,6 +7879,17 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EAttribute getTimeScheduleBlockPojo_IsUnknown();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.TimeScheduleBlockPojo#getAuthor <em>Author</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Author</em>'.
+	 * @see de.jena.model.glt.TimeScheduleBlockPojo#getAuthor()
+	 * @see #getTimeScheduleBlockPojo()
+	 * @generated
+	 */
+	EAttribute getTimeScheduleBlockPojo_Author();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link de.jena.model.glt.TimeScheduleBlockPojo#getComments <em>Comments</em>}'.
@@ -10182,6 +10240,16 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EOperation getGltOpenApiClient__UpdateDatalogContent__Integer_EList();
 
 	/**
+	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getAuthors(org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList, java.lang.Boolean, java.lang.String, java.lang.String) <em>Get Authors</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Authors</em>' operation.
+	 * @see de.jena.model.glt.GltOpenApiClient#getAuthors(org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList, java.lang.Boolean, java.lang.String, java.lang.String)
+	 * @generated
+	 */
+	EOperation getGltOpenApiClient__GetAuthors__EList_EList_Boolean_String_String();
+
+	/**
 	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getChangelog(java.lang.Integer, java.lang.Integer, org.eclipse.emf.common.util.EList, java.lang.Boolean, org.eclipse.emf.common.util.EList, java.lang.String, java.lang.String) <em>Get Changelog</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10560,6 +10628,16 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EOperation getGltOpenApiClient__UpdateAlarmState__String_UpdateStateRequest();
+
+	/**
+	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getAuthors_1(org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList, java.lang.Boolean, java.lang.String, java.lang.String) <em>Get Authors 1</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Authors 1</em>' operation.
+	 * @see de.jena.model.glt.GltOpenApiClient#getAuthors_1(org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList, java.lang.Boolean, java.lang.String, java.lang.String)
+	 * @generated
+	 */
+	EOperation getGltOpenApiClient__GetAuthors_1__EList_EList_Boolean_String_String();
 
 	/**
 	 * Returns the meta object for the '{@link de.jena.model.glt.GltOpenApiClient#getChangelog_1(java.lang.Integer, java.lang.Integer, org.eclipse.emf.common.util.EList, java.lang.Boolean, org.eclipse.emf.common.util.EList, java.lang.String, java.lang.String) <em>Get Changelog 1</em>}' operation.

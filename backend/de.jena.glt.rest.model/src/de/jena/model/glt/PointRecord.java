@@ -38,7 +38,7 @@ public interface PointRecord extends EObject {
 	 * @return the value of the '<em>System Id</em>' attribute.
 	 * @see #setSystemId(Integer)
 	 * @see de.jena.model.glt.GltPackage#getPointRecord_SystemId()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getSystemId();
@@ -60,7 +60,7 @@ public interface PointRecord extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(Integer)
 	 * @see de.jena.model.glt.GltPackage#getPointRecord_Id()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getId();
@@ -82,7 +82,7 @@ public interface PointRecord extends EObject {
 	 * @return the value of the '<em>Address</em>' attribute.
 	 * @see #setAddress(String)
 	 * @see de.jena.model.glt.GltPackage#getPointRecord_Address()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getAddress();
@@ -104,7 +104,7 @@ public interface PointRecord extends EObject {
 	 * @return the value of the '<em>New Value</em>' attribute.
 	 * @see #setNewValue(Float)
 	 * @see de.jena.model.glt.GltPackage#getPointRecord_NewValue()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Float getNewValue();
@@ -126,7 +126,7 @@ public interface PointRecord extends EObject {
 	 * @return the value of the '<em>Old Value</em>' attribute.
 	 * @see #setOldValue(Float)
 	 * @see de.jena.model.glt.GltPackage#getPointRecord_OldValue()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Float getOldValue();
@@ -148,7 +148,7 @@ public interface PointRecord extends EObject {
 	 * @return the value of the '<em>Override Status</em>' attribute.
 	 * @see #setOverrideStatus(Integer)
 	 * @see de.jena.model.glt.GltPackage#getPointRecord_OverrideStatus()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getOverrideStatus();
@@ -170,7 +170,7 @@ public interface PointRecord extends EObject {
 	 * @return the value of the '<em>Note</em>' attribute.
 	 * @see #setNote(String)
 	 * @see de.jena.model.glt.GltPackage#getPointRecord_Note()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getNote();
@@ -192,7 +192,7 @@ public interface PointRecord extends EObject {
 	 * @return the value of the '<em>Author</em>' attribute.
 	 * @see #setAuthor(String)
 	 * @see de.jena.model.glt.GltPackage#getPointRecord_Author()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getAuthor();

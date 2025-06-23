@@ -37,7 +37,7 @@ public interface TimeScheduleRecord extends EObject {
 	 * @return the value of the '<em>System Id</em>' attribute.
 	 * @see #setSystemId(Integer)
 	 * @see de.jena.model.glt.GltPackage#getTimeScheduleRecord_SystemId()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getSystemId();
@@ -59,7 +59,7 @@ public interface TimeScheduleRecord extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(Integer)
 	 * @see de.jena.model.glt.GltPackage#getTimeScheduleRecord_Id()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getId();
@@ -81,7 +81,7 @@ public interface TimeScheduleRecord extends EObject {
 	 * @return the value of the '<em>Address</em>' attribute.
 	 * @see #setAddress(String)
 	 * @see de.jena.model.glt.GltPackage#getTimeScheduleRecord_Address()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getAddress();
@@ -103,7 +103,7 @@ public interface TimeScheduleRecord extends EObject {
 	 * @return the value of the '<em>Old Value</em>' attribute.
 	 * @see #setOldValue(String)
 	 * @see de.jena.model.glt.GltPackage#getTimeScheduleRecord_OldValue()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getOldValue();
@@ -125,7 +125,7 @@ public interface TimeScheduleRecord extends EObject {
 	 * @return the value of the '<em>New Value</em>' attribute.
 	 * @see #setNewValue(String)
 	 * @see de.jena.model.glt.GltPackage#getTimeScheduleRecord_NewValue()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getNewValue();
@@ -147,7 +147,7 @@ public interface TimeScheduleRecord extends EObject {
 	 * @return the value of the '<em>Note</em>' attribute.
 	 * @see #setNote(String)
 	 * @see de.jena.model.glt.GltPackage#getTimeScheduleRecord_Note()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getNote();
@@ -169,7 +169,7 @@ public interface TimeScheduleRecord extends EObject {
 	 * @return the value of the '<em>Author</em>' attribute.
 	 * @see #setAuthor(String)
 	 * @see de.jena.model.glt.GltPackage#getTimeScheduleRecord_Author()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getAuthor();

@@ -37,7 +37,7 @@ public interface ChangeItem extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(Integer)
 	 * @see de.jena.model.glt.GltPackage#getChangeItem_Id()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getId();
@@ -59,7 +59,7 @@ public interface ChangeItem extends EObject {
 	 * @return the value of the '<em>Timestamp</em>' attribute.
 	 * @see #setTimestamp(String)
 	 * @see de.jena.model.glt.GltPackage#getChangeItem_Timestamp()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getTimestamp();
@@ -81,7 +81,7 @@ public interface ChangeItem extends EObject {
 	 * @return the value of the '<em>Source</em>' attribute.
 	 * @see #setSource(String)
 	 * @see de.jena.model.glt.GltPackage#getChangeItem_Source()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getSource();
@@ -103,7 +103,7 @@ public interface ChangeItem extends EObject {
 	 * @return the value of the '<em>Operation</em>' attribute.
 	 * @see #setOperation(String)
 	 * @see de.jena.model.glt.GltPackage#getChangeItem_Operation()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getOperation();
@@ -125,7 +125,7 @@ public interface ChangeItem extends EObject {
 	 * @return the value of the '<em>Target</em>' attribute.
 	 * @see #setTarget(String)
 	 * @see de.jena.model.glt.GltPackage#getChangeItem_Target()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getTarget();
@@ -147,7 +147,7 @@ public interface ChangeItem extends EObject {
 	 * @return the value of the '<em>Change</em>' attribute.
 	 * @see #setChange(String)
 	 * @see de.jena.model.glt.GltPackage#getChangeItem_Change()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getChange();
@@ -169,7 +169,7 @@ public interface ChangeItem extends EObject {
 	 * @return the value of the '<em>Author</em>' attribute.
 	 * @see #setAuthor(String)
 	 * @see de.jena.model.glt.GltPackage#getChangeItem_Author()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getAuthor();

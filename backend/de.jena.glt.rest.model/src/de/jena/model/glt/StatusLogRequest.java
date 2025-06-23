@@ -38,7 +38,7 @@ public interface StatusLogRequest extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(BigInteger)
 	 * @see de.jena.model.glt.GltPackage#getStatusLogRequest_Id()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	BigInteger getId();
@@ -60,7 +60,7 @@ public interface StatusLogRequest extends EObject {
 	 * @return the value of the '<em>System Id</em>' attribute.
 	 * @see #setSystemId(String)
 	 * @see de.jena.model.glt.GltPackage#getStatusLogRequest_SystemId()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getSystemId();
@@ -82,7 +82,7 @@ public interface StatusLogRequest extends EObject {
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see #setType(Integer)
 	 * @see de.jena.model.glt.GltPackage#getStatusLogRequest_Type()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getType();
@@ -104,7 +104,7 @@ public interface StatusLogRequest extends EObject {
 	 * @return the value of the '<em>Severity</em>' attribute.
 	 * @see #setSeverity(Integer)
 	 * @see de.jena.model.glt.GltPackage#getStatusLogRequest_Severity()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getSeverity();
@@ -126,7 +126,7 @@ public interface StatusLogRequest extends EObject {
 	 * @return the value of the '<em>Message</em>' attribute.
 	 * @see #setMessage(String)
 	 * @see de.jena.model.glt.GltPackage#getStatusLogRequest_Message()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getMessage();
@@ -148,7 +148,7 @@ public interface StatusLogRequest extends EObject {
 	 * @return the value of the '<em>Timestamp</em>' attribute.
 	 * @see #setTimestamp(BigInteger)
 	 * @see de.jena.model.glt.GltPackage#getStatusLogRequest_Timestamp()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	BigInteger getTimestamp();

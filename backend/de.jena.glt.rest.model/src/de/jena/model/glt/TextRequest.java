@@ -33,7 +33,7 @@ public interface TextRequest extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(String)
 	 * @see de.jena.model.glt.GltPackage#getTextRequest_Id()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getId();
@@ -55,7 +55,7 @@ public interface TextRequest extends EObject {
 	 * @return the value of the '<em>Content</em>' attribute.
 	 * @see #setContent(String)
 	 * @see de.jena.model.glt.GltPackage#getTextRequest_Content()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getContent();
@@ -77,7 +77,7 @@ public interface TextRequest extends EObject {
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see #setType(String)
 	 * @see de.jena.model.glt.GltPackage#getTextRequest_Type()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getType();

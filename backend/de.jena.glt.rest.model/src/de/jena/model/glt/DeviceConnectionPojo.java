@@ -36,7 +36,7 @@ public interface DeviceConnectionPojo extends EObject {
 	 * @return the value of the '<em>Timestamp</em>' attribute.
 	 * @see #setTimestamp(BigInteger)
 	 * @see de.jena.model.glt.GltPackage#getDeviceConnectionPojo_Timestamp()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	BigInteger getTimestamp();
@@ -58,7 +58,7 @@ public interface DeviceConnectionPojo extends EObject {
 	 * @return the value of the '<em>Ip</em>' attribute.
 	 * @see #setIp(String)
 	 * @see de.jena.model.glt.GltPackage#getDeviceConnectionPojo_Ip()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getIp();
@@ -80,7 +80,7 @@ public interface DeviceConnectionPojo extends EObject {
 	 * @return the value of the '<em>Reachable</em>' attribute.
 	 * @see #setReachable(Boolean)
 	 * @see de.jena.model.glt.GltPackage#getDeviceConnectionPojo_Reachable()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Boolean getReachable();
@@ -102,7 +102,7 @@ public interface DeviceConnectionPojo extends EObject {
 	 * @return the value of the '<em>Since</em>' attribute.
 	 * @see #setSince(BigInteger)
 	 * @see de.jena.model.glt.GltPackage#getDeviceConnectionPojo_Since()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	BigInteger getSince();

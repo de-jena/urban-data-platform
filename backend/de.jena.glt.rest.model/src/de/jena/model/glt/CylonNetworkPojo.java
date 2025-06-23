@@ -42,7 +42,7 @@ public interface CylonNetworkPojo extends EObject {
 	 * @return the value of the '<em>Entity</em>' attribute.
 	 * @see #setEntity(String)
 	 * @see de.jena.model.glt.GltPackage#getCylonNetworkPojo_Entity()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getEntity();
@@ -64,7 +64,7 @@ public interface CylonNetworkPojo extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(Integer)
 	 * @see de.jena.model.glt.GltPackage#getCylonNetworkPojo_Id()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getId();
@@ -86,7 +86,7 @@ public interface CylonNetworkPojo extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see de.jena.model.glt.GltPackage#getCylonNetworkPojo_Name()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getName();
@@ -108,7 +108,7 @@ public interface CylonNetworkPojo extends EObject {
 	 * @return the value of the '<em>System Id</em>' attribute.
 	 * @see #setSystemId(Integer)
 	 * @see de.jena.model.glt.GltPackage#getCylonNetworkPojo_SystemId()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getSystemId();
@@ -130,7 +130,7 @@ public interface CylonNetworkPojo extends EObject {
 	 * @return the value of the '<em>Directory</em>' attribute.
 	 * @see #setDirectory(String)
 	 * @see de.jena.model.glt.GltPackage#getCylonNetworkPojo_Directory()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getDirectory();
@@ -152,7 +152,7 @@ public interface CylonNetworkPojo extends EObject {
 	 * @return the value of the '<em>Ip</em>' attribute.
 	 * @see #setIp(String)
 	 * @see de.jena.model.glt.GltPackage#getCylonNetworkPojo_Ip()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getIp();
@@ -174,7 +174,7 @@ public interface CylonNetworkPojo extends EObject {
 	 * @return the value of the '<em>Port</em>' attribute.
 	 * @see #setPort(Integer)
 	 * @see de.jena.model.glt.GltPackage#getCylonNetworkPojo_Port()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getPort();
@@ -196,7 +196,7 @@ public interface CylonNetworkPojo extends EObject {
 	 * @return the value of the '<em>Count</em>' attribute.
 	 * @see #setCount(Integer)
 	 * @see de.jena.model.glt.GltPackage#getCylonNetworkPojo_Count()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getCount();
@@ -230,7 +230,7 @@ public interface CylonNetworkPojo extends EObject {
 	 * @return the value of the '<em>Summary</em>' attribute.
 	 * @see #setSummary(Object)
 	 * @see de.jena.model.glt.GltPackage#getCylonNetworkPojo_Summary()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Object getSummary();

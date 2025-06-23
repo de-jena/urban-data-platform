@@ -34,7 +34,7 @@ public interface RelationPojo extends EObject {
 	 * @return the value of the '<em>Condition</em>' attribute.
 	 * @see #setCondition(Integer)
 	 * @see de.jena.model.glt.GltPackage#getRelationPojo_Condition()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getCondition();
@@ -56,7 +56,7 @@ public interface RelationPojo extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Instructions</em>' attribute list.
 	 * @see de.jena.model.glt.GltPackage#getRelationPojo_Instructions()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	EList<Integer> getInstructions();

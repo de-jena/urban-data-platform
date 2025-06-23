@@ -36,7 +36,7 @@ public interface VersionInfo extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(Integer)
 	 * @see de.jena.model.glt.GltPackage#getVersionInfo_Id()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getId();
@@ -58,7 +58,7 @@ public interface VersionInfo extends EObject {
 	 * @return the value of the '<em>Coordinates</em>' attribute.
 	 * @see #setCoordinates(String)
 	 * @see de.jena.model.glt.GltPackage#getVersionInfo_Coordinates()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getCoordinates();
@@ -80,7 +80,7 @@ public interface VersionInfo extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see de.jena.model.glt.GltPackage#getVersionInfo_Name()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getName();
@@ -102,7 +102,7 @@ public interface VersionInfo extends EObject {
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see #setType(Integer)
 	 * @see de.jena.model.glt.GltPackage#getVersionInfo_Type()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getType();
@@ -124,7 +124,7 @@ public interface VersionInfo extends EObject {
 	 * @return the value of the '<em>Version</em>' attribute.
 	 * @see #setVersion(String)
 	 * @see de.jena.model.glt.GltPackage#getVersionInfo_Version()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getVersion();
@@ -146,7 +146,7 @@ public interface VersionInfo extends EObject {
 	 * @return the value of the '<em>Serial</em>' attribute.
 	 * @see #setSerial(String)
 	 * @see de.jena.model.glt.GltPackage#getVersionInfo_Serial()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getSerial();

@@ -32,7 +32,7 @@ public interface PhonePojo extends EObject {
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see #setType(String)
 	 * @see de.jena.model.glt.GltPackage#getPhonePojo_Type()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getType();
@@ -54,7 +54,7 @@ public interface PhonePojo extends EObject {
 	 * @return the value of the '<em>Number</em>' attribute.
 	 * @see #setNumber(String)
 	 * @see de.jena.model.glt.GltPackage#getPhonePojo_Number()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getNumber();

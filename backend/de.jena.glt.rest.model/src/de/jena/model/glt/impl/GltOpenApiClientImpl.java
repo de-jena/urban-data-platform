@@ -746,6 +746,25 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
+	public Response getAuthors(final EList<Integer> systemIds, final EList<Integer> identifiers, final Boolean external, final String from, final String to) {
+		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
+		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
+		String endpoint = "/monitoring/points/history/authors";
+		EClass resultEClass = org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEObject();
+		if ( null != systemIds ) queryParameter.put("systemIds", toQueryString("systemIds",systemIds));
+		if ( null != identifiers ) queryParameter.put("identifiers", toQueryString("identifiers",identifiers));
+		if ( null != external ) queryParameter.put("external", toQueryString("external",external));
+		if ( null != from ) queryParameter.put("from", toQueryString("from",from));
+		if ( null != to ) queryParameter.put("to", toQueryString("to",to));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Response getChangelog(final Integer offset, final Integer limit, final EList<Integer> systemIds, final Boolean external, final EList<String> author, final String from, final String to) {
 		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
@@ -1349,6 +1368,25 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Response getAuthors_1(final EList<Integer> systemIds, final EList<Integer> identifiers, final Boolean external, final String from, final String to) {
+		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
+		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
+		String endpoint = "/monitoring/timeschedule/block/history/authors";
+		EClass resultEClass = org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEObject();
+		if ( null != systemIds ) queryParameter.put("systemIds", toQueryString("systemIds",systemIds));
+		if ( null != identifiers ) queryParameter.put("identifiers", toQueryString("identifiers",identifiers));
+		if ( null != external ) queryParameter.put("external", toQueryString("external",external));
+		if ( null != from ) queryParameter.put("from", toQueryString("from",from));
+		if ( null != to ) queryParameter.put("to", toQueryString("to",to));
+		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
 
 	/**
@@ -2320,6 +2358,8 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 				return getDatalogInfo((Integer)arguments.get(0), (EList<Integer>)arguments.get(1));
 			case GltPackage.GLT_OPEN_API_CLIENT___UPDATE_DATALOG_CONTENT__INTEGER_ELIST:
 				return updateDatalogContent((Integer)arguments.get(0), (EList<Integer>)arguments.get(1));
+			case GltPackage.GLT_OPEN_API_CLIENT___GET_AUTHORS__ELIST_ELIST_BOOLEAN_STRING_STRING:
+				return getAuthors((EList<Integer>)arguments.get(0), (EList<Integer>)arguments.get(1), (Boolean)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4));
 			case GltPackage.GLT_OPEN_API_CLIENT___GET_CHANGELOG__INTEGER_INTEGER_ELIST_BOOLEAN_ELIST_STRING_STRING:
 				return getChangelog((Integer)arguments.get(0), (Integer)arguments.get(1), (EList<Integer>)arguments.get(2), (Boolean)arguments.get(3), (EList<String>)arguments.get(4), (String)arguments.get(5), (String)arguments.get(6));
 			case GltPackage.GLT_OPEN_API_CLIENT___GET_CHANGELOG_COUNT__ELIST_BOOLEAN_ELIST_STRING_STRING:
@@ -2396,6 +2436,8 @@ public abstract class GltOpenApiClientImpl extends MinimalEObjectImpl.Container 
 				return refreshSystem((String)arguments.get(0));
 			case GltPackage.GLT_OPEN_API_CLIENT___UPDATE_ALARM_STATE__STRING_UPDATESTATEREQUEST:
 				return updateAlarmState((String)arguments.get(0), (UpdateStateRequest)arguments.get(1));
+			case GltPackage.GLT_OPEN_API_CLIENT___GET_AUTHORS_1__ELIST_ELIST_BOOLEAN_STRING_STRING:
+				return getAuthors_1((EList<Integer>)arguments.get(0), (EList<Integer>)arguments.get(1), (Boolean)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4));
 			case GltPackage.GLT_OPEN_API_CLIENT___GET_CHANGELOG_1__INTEGER_INTEGER_ELIST_BOOLEAN_ELIST_STRING_STRING:
 				return getChangelog_1((Integer)arguments.get(0), (Integer)arguments.get(1), (EList<Integer>)arguments.get(2), (Boolean)arguments.get(3), (EList<String>)arguments.get(4), (String)arguments.get(5), (String)arguments.get(6));
 			case GltPackage.GLT_OPEN_API_CLIENT___GET_CHANGELOG_COUNT_1__ELIST_BOOLEAN_ELIST_STRING_STRING:

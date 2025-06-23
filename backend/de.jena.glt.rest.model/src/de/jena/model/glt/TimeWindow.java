@@ -36,7 +36,7 @@ public interface TimeWindow extends EObject {
 	 * @return the value of the '<em>Timestamp</em>' attribute.
 	 * @see #setTimestamp(BigInteger)
 	 * @see de.jena.model.glt.GltPackage#getTimeWindow_Timestamp()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	BigInteger getTimestamp();
@@ -58,7 +58,7 @@ public interface TimeWindow extends EObject {
 	 * @return the value of the '<em>Identifier</em>' attribute.
 	 * @see #setIdentifier(String)
 	 * @see de.jena.model.glt.GltPackage#getTimeWindow_Identifier()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getIdentifier();
@@ -80,7 +80,7 @@ public interface TimeWindow extends EObject {
 	 * @return the value of the '<em>Unit</em>' attribute.
 	 * @see #setUnit(String)
 	 * @see de.jena.model.glt.GltPackage#getTimeWindow_Unit()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getUnit();
@@ -102,7 +102,7 @@ public interface TimeWindow extends EObject {
 	 * @return the value of the '<em>Zone Id</em>' attribute.
 	 * @see #setZoneId(String)
 	 * @see de.jena.model.glt.GltPackage#getTimeWindow_ZoneId()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getZoneId();

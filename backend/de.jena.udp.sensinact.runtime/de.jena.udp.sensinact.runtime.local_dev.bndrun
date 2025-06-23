@@ -13,4 +13,3 @@
 	org.apache.felix.configadmin.plugin.interpolation.secretsdir=${.}/runtime/secrets
 
 -runtrace: true
--resolve: never

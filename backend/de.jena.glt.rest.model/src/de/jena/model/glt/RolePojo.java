@@ -38,7 +38,7 @@ public interface RolePojo extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see de.jena.model.glt.GltPackage#getRolePojo_Name()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getName();
@@ -60,7 +60,7 @@ public interface RolePojo extends EObject {
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see #setType(String)
 	 * @see de.jena.model.glt.GltPackage#getRolePojo_Type()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getType();
@@ -82,7 +82,7 @@ public interface RolePojo extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Groups</em>' attribute list.
 	 * @see de.jena.model.glt.GltPackage#getRolePojo_Groups()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	EList<String> getGroups();
@@ -94,7 +94,7 @@ public interface RolePojo extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Roles</em>' attribute list.
 	 * @see de.jena.model.glt.GltPackage#getRolePojo_Roles()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	EList<String> getRoles();
@@ -106,7 +106,7 @@ public interface RolePojo extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Members</em>' attribute list.
 	 * @see de.jena.model.glt.GltPackage#getRolePojo_Members()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	EList<String> getMembers();
@@ -118,7 +118,7 @@ public interface RolePojo extends EObject {
 	 * @return the value of the '<em>Properties</em>' attribute.
 	 * @see #setProperties(Object)
 	 * @see de.jena.model.glt.GltPackage#getRolePojo_Properties()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Object getProperties();

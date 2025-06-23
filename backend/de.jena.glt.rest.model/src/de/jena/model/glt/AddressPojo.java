@@ -44,7 +44,7 @@ public interface AddressPojo extends EObject {
 	 * @return the value of the '<em>Address</em>' attribute.
 	 * @see #setAddress(String)
 	 * @see de.jena.model.glt.GltPackage#getAddressPojo_Address()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getAddress();
@@ -66,7 +66,7 @@ public interface AddressPojo extends EObject {
 	 * @return the value of the '<em>Community</em>' attribute.
 	 * @see #setCommunity(String)
 	 * @see de.jena.model.glt.GltPackage#getAddressPojo_Community()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getCommunity();
@@ -88,7 +88,7 @@ public interface AddressPojo extends EObject {
 	 * @return the value of the '<em>County</em>' attribute.
 	 * @see #setCounty(String)
 	 * @see de.jena.model.glt.GltPackage#getAddressPojo_County()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getCounty();
@@ -110,7 +110,7 @@ public interface AddressPojo extends EObject {
 	 * @return the value of the '<em>Country</em>' attribute.
 	 * @see #setCountry(String)
 	 * @see de.jena.model.glt.GltPackage#getAddressPojo_Country()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getCountry();
@@ -132,7 +132,7 @@ public interface AddressPojo extends EObject {
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
 	 * @see de.jena.model.glt.GltPackage#getAddressPojo_Description()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getDescription();
@@ -154,7 +154,7 @@ public interface AddressPojo extends EObject {
 	 * @return the value of the '<em>District</em>' attribute.
 	 * @see #setDistrict(String)
 	 * @see de.jena.model.glt.GltPackage#getAddressPojo_District()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getDistrict();
@@ -176,7 +176,7 @@ public interface AddressPojo extends EObject {
 	 * @return the value of the '<em>Extended</em>' attribute.
 	 * @see #setExtended(String)
 	 * @see de.jena.model.glt.GltPackage#getAddressPojo_Extended()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getExtended();
@@ -198,7 +198,7 @@ public interface AddressPojo extends EObject {
 	 * @return the value of the '<em>Federal State</em>' attribute.
 	 * @see #setFederalState(String)
 	 * @see de.jena.model.glt.GltPackage#getAddressPojo_FederalState()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getFederalState();
@@ -220,7 +220,7 @@ public interface AddressPojo extends EObject {
 	 * @return the value of the '<em>Location</em>' attribute.
 	 * @see #setLocation(String)
 	 * @see de.jena.model.glt.GltPackage#getAddressPojo_Location()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getLocation();
@@ -242,7 +242,7 @@ public interface AddressPojo extends EObject {
 	 * @return the value of the '<em>Number</em>' attribute.
 	 * @see #setNumber(String)
 	 * @see de.jena.model.glt.GltPackage#getAddressPojo_Number()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getNumber();
@@ -264,7 +264,7 @@ public interface AddressPojo extends EObject {
 	 * @return the value of the '<em>Post Box</em>' attribute.
 	 * @see #setPostBox(String)
 	 * @see de.jena.model.glt.GltPackage#getAddressPojo_PostBox()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getPostBox();
@@ -286,7 +286,7 @@ public interface AddressPojo extends EObject {
 	 * @return the value of the '<em>Post Code</em>' attribute.
 	 * @see #setPostCode(String)
 	 * @see de.jena.model.glt.GltPackage#getAddressPojo_PostCode()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getPostCode();
@@ -308,7 +308,7 @@ public interface AddressPojo extends EObject {
 	 * @return the value of the '<em>Street</em>' attribute.
 	 * @see #setStreet(String)
 	 * @see de.jena.model.glt.GltPackage#getAddressPojo_Street()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getStreet();
@@ -330,7 +330,7 @@ public interface AddressPojo extends EObject {
 	 * @return the value of the '<em>Representation</em>' attribute.
 	 * @see #setRepresentation(String)
 	 * @see de.jena.model.glt.GltPackage#getAddressPojo_Representation()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getRepresentation();

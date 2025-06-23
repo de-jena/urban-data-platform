@@ -48,7 +48,7 @@ public interface ContractPojo extends EObject {
 	 * @return the value of the '<em>Art</em>' attribute.
 	 * @see #setArt(Integer)
 	 * @see de.jena.model.glt.GltPackage#getContractPojo_Art()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getArt();
@@ -70,7 +70,7 @@ public interface ContractPojo extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see de.jena.model.glt.GltPackage#getContractPojo_Name()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getName();
@@ -92,7 +92,7 @@ public interface ContractPojo extends EObject {
 	 * @return the value of the '<em>Displayname</em>' attribute.
 	 * @see #setDisplayname(String)
 	 * @see de.jena.model.glt.GltPackage#getContractPojo_Displayname()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getDisplayname();
@@ -114,7 +114,7 @@ public interface ContractPojo extends EObject {
 	 * @return the value of the '<em>Conclusion Date</em>' attribute.
 	 * @see #setConclusionDate(String)
 	 * @see de.jena.model.glt.GltPackage#getContractPojo_ConclusionDate()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getConclusionDate();
@@ -136,7 +136,7 @@ public interface ContractPojo extends EObject {
 	 * @return the value of the '<em>Comment</em>' attribute.
 	 * @see #setComment(String)
 	 * @see de.jena.model.glt.GltPackage#getContractPojo_Comment()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getComment();
@@ -170,7 +170,7 @@ public interface ContractPojo extends EObject {
 	 * @return the value of the '<em>Customer Id</em>' attribute.
 	 * @see #setCustomerId(String)
 	 * @see de.jena.model.glt.GltPackage#getContractPojo_CustomerId()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getCustomerId();
@@ -192,7 +192,7 @@ public interface ContractPojo extends EObject {
 	 * @return the value of the '<em>End</em>' attribute.
 	 * @see #setEnd(String)
 	 * @see de.jena.model.glt.GltPackage#getContractPojo_End()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getEnd();
@@ -214,7 +214,7 @@ public interface ContractPojo extends EObject {
 	 * @return the value of the '<em>Number</em>' attribute.
 	 * @see #setNumber(String)
 	 * @see de.jena.model.glt.GltPackage#getContractPojo_Number()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getNumber();
@@ -280,7 +280,7 @@ public interface ContractPojo extends EObject {
 	 * @return the value of the '<em>Start</em>' attribute.
 	 * @see #setStart(String)
 	 * @see de.jena.model.glt.GltPackage#getContractPojo_Start()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getStart();
@@ -302,7 +302,7 @@ public interface ContractPojo extends EObject {
 	 * @return the value of the '<em>State</em>' attribute.
 	 * @see #setState(String)
 	 * @see de.jena.model.glt.GltPackage#getContractPojo_State()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getState();
@@ -324,7 +324,7 @@ public interface ContractPojo extends EObject {
 	 * @return the value of the '<em>Subject</em>' attribute.
 	 * @see #setSubject(String)
 	 * @see de.jena.model.glt.GltPackage#getContractPojo_Subject()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getSubject();
@@ -346,7 +346,7 @@ public interface ContractPojo extends EObject {
 	 * @return the value of the '<em>Termination</em>' attribute.
 	 * @see #setTermination(String)
 	 * @see de.jena.model.glt.GltPackage#getContractPojo_Termination()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getTermination();
@@ -368,7 +368,7 @@ public interface ContractPojo extends EObject {
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see #setType(Integer)
 	 * @see de.jena.model.glt.GltPackage#getContractPojo_Type()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getType();

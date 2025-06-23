@@ -25,6 +25,7 @@ import org.osgi.annotation.versioning.ProviderType;
  *   <li>{@link de.jena.model.glt.PointValuePojo#getTime <em>Time</em>}</li>
  *   <li>{@link de.jena.model.glt.PointValuePojo#getOverrideState <em>Override State</em>}</li>
  *   <li>{@link de.jena.model.glt.PointValuePojo#getIsUnknown <em>Is Unknown</em>}</li>
+ *   <li>{@link de.jena.model.glt.PointValuePojo#getAuthor <em>Author</em>}</li>
  *   <li>{@link de.jena.model.glt.PointValuePojo#getComments <em>Comments</em>}</li>
  * </ul>
  *
@@ -41,7 +42,7 @@ public interface PointValuePojo extends EObject {
 	 * @return the value of the '<em>System Id</em>' attribute.
 	 * @see #setSystemId(Integer)
 	 * @see de.jena.model.glt.GltPackage#getPointValuePojo_SystemId()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getSystemId();
@@ -63,7 +64,7 @@ public interface PointValuePojo extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(Integer)
 	 * @see de.jena.model.glt.GltPackage#getPointValuePojo_Id()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getId();
@@ -85,7 +86,7 @@ public interface PointValuePojo extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see de.jena.model.glt.GltPackage#getPointValuePojo_Name()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getName();
@@ -107,7 +108,7 @@ public interface PointValuePojo extends EObject {
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(Float)
 	 * @see de.jena.model.glt.GltPackage#getPointValuePojo_Value()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Float getValue();
@@ -129,7 +130,7 @@ public interface PointValuePojo extends EObject {
 	 * @return the value of the '<em>Value Prev</em>' attribute.
 	 * @see #setValuePrev(Float)
 	 * @see de.jena.model.glt.GltPackage#getPointValuePojo_ValuePrev()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Float getValuePrev();
@@ -151,7 +152,7 @@ public interface PointValuePojo extends EObject {
 	 * @return the value of the '<em>Time</em>' attribute.
 	 * @see #setTime(String)
 	 * @see de.jena.model.glt.GltPackage#getPointValuePojo_Time()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getTime();
@@ -173,7 +174,7 @@ public interface PointValuePojo extends EObject {
 	 * @return the value of the '<em>Override State</em>' attribute.
 	 * @see #setOverrideState(Integer)
 	 * @see de.jena.model.glt.GltPackage#getPointValuePojo_OverrideState()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getOverrideState();
@@ -195,7 +196,7 @@ public interface PointValuePojo extends EObject {
 	 * @return the value of the '<em>Is Unknown</em>' attribute.
 	 * @see #setIsUnknown(Boolean)
 	 * @see de.jena.model.glt.GltPackage#getPointValuePojo_IsUnknown()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Boolean getIsUnknown();
@@ -209,6 +210,28 @@ public interface PointValuePojo extends EObject {
 	 * @generated
 	 */
 	void setIsUnknown(Boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Author</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Author</em>' attribute.
+	 * @see #setAuthor(String)
+	 * @see de.jena.model.glt.GltPackage#getPointValuePojo_Author()
+	 * @model unique="false"
+	 * @generated
+	 */
+	String getAuthor();
+
+	/**
+	 * Sets the value of the '{@link de.jena.model.glt.PointValuePojo#getAuthor <em>Author</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Author</em>' attribute.
+	 * @see #getAuthor()
+	 * @generated
+	 */
+	void setAuthor(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Comments</b></em>' containment reference list.

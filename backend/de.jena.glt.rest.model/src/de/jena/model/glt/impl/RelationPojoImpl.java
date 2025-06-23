@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.util.EDataTypeEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -113,7 +113,7 @@ public class RelationPojoImpl extends MinimalEObjectImpl.Container implements Re
 	@Override
 	public EList<Integer> getInstructions() {
 		if (instructions == null) {
-			instructions = new EDataTypeUniqueEList<Integer>(Integer.class, this, GltPackage.RELATION_POJO__INSTRUCTIONS);
+			instructions = new EDataTypeEList<Integer>(Integer.class, this, GltPackage.RELATION_POJO__INSTRUCTIONS);
 		}
 		return instructions;
 	}

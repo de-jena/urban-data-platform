@@ -38,6 +38,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.jena.model.glt.impl.PointValuePojoImpl#getTime <em>Time</em>}</li>
  *   <li>{@link de.jena.model.glt.impl.PointValuePojoImpl#getOverrideState <em>Override State</em>}</li>
  *   <li>{@link de.jena.model.glt.impl.PointValuePojoImpl#getIsUnknown <em>Is Unknown</em>}</li>
+ *   <li>{@link de.jena.model.glt.impl.PointValuePojoImpl#getAuthor <em>Author</em>}</li>
  *   <li>{@link de.jena.model.glt.impl.PointValuePojoImpl#getComments <em>Comments</em>}</li>
  * </ul>
  *
@@ -203,6 +204,26 @@ public class PointValuePojoImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected Boolean isUnknown = IS_UNKNOWN_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAuthor() <em>Author</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAuthor()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String AUTHOR_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getAuthor() <em>Author</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAuthor()
+	 * @generated
+	 * @ordered
+	 */
+	protected String author = AUTHOR_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getComments() <em>Comments</em>}' containment reference list.
@@ -423,6 +444,29 @@ public class PointValuePojoImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	@Override
+	public String getAuthor() {
+		return author;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAuthor(String newAuthor) {
+		String oldAuthor = author;
+		author = newAuthor;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.POINT_VALUE_POJO__AUTHOR, oldAuthor, author));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EList<CommentPojo> getComments() {
 		if (comments == null) {
 			comments = new EObjectContainmentEList<CommentPojo>(CommentPojo.class, this, GltPackage.POINT_VALUE_POJO__COMMENTS);
@@ -468,6 +512,8 @@ public class PointValuePojoImpl extends MinimalEObjectImpl.Container implements 
 				return getOverrideState();
 			case GltPackage.POINT_VALUE_POJO__IS_UNKNOWN:
 				return getIsUnknown();
+			case GltPackage.POINT_VALUE_POJO__AUTHOR:
+				return getAuthor();
 			case GltPackage.POINT_VALUE_POJO__COMMENTS:
 				return getComments();
 		}
@@ -506,6 +552,9 @@ public class PointValuePojoImpl extends MinimalEObjectImpl.Container implements 
 				return;
 			case GltPackage.POINT_VALUE_POJO__IS_UNKNOWN:
 				setIsUnknown((Boolean)newValue);
+				return;
+			case GltPackage.POINT_VALUE_POJO__AUTHOR:
+				setAuthor((String)newValue);
 				return;
 			case GltPackage.POINT_VALUE_POJO__COMMENTS:
 				getComments().clear();
@@ -547,6 +596,9 @@ public class PointValuePojoImpl extends MinimalEObjectImpl.Container implements 
 			case GltPackage.POINT_VALUE_POJO__IS_UNKNOWN:
 				setIsUnknown(IS_UNKNOWN_EDEFAULT);
 				return;
+			case GltPackage.POINT_VALUE_POJO__AUTHOR:
+				setAuthor(AUTHOR_EDEFAULT);
+				return;
 			case GltPackage.POINT_VALUE_POJO__COMMENTS:
 				getComments().clear();
 				return;
@@ -578,6 +630,8 @@ public class PointValuePojoImpl extends MinimalEObjectImpl.Container implements 
 				return OVERRIDE_STATE_EDEFAULT == null ? overrideState != null : !OVERRIDE_STATE_EDEFAULT.equals(overrideState);
 			case GltPackage.POINT_VALUE_POJO__IS_UNKNOWN:
 				return IS_UNKNOWN_EDEFAULT == null ? isUnknown != null : !IS_UNKNOWN_EDEFAULT.equals(isUnknown);
+			case GltPackage.POINT_VALUE_POJO__AUTHOR:
+				return AUTHOR_EDEFAULT == null ? author != null : !AUTHOR_EDEFAULT.equals(author);
 			case GltPackage.POINT_VALUE_POJO__COMMENTS:
 				return comments != null && !comments.isEmpty();
 		}
@@ -610,6 +664,8 @@ public class PointValuePojoImpl extends MinimalEObjectImpl.Container implements 
 		result.append(overrideState);
 		result.append(", isUnknown: ");
 		result.append(isUnknown);
+		result.append(", author: ");
+		result.append(author);
 		result.append(')');
 		return result.toString();
 	}

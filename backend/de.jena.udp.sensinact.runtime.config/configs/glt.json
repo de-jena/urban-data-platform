@@ -15,6 +15,6 @@
     },
     "GltOpenApi~glt": {
         "url": "https://glt.jena.de/rest/v1",
-        "apiKey": "$[env:GLT_API_KEY;default=$[prop:GLT_API_KEY;default=mRi9qsN9y4v2cJMVqKH-vKcFMg57uWJL]]"
+        "apiKey": "$[env:GLT_API_KEY;default=$[prop:GLT_API_KEY;default=]]"
     }
 }

@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.util.EDataTypeEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -518,7 +518,7 @@ public class ContactPojoImpl extends MinimalEObjectImpl.Container implements Con
 	@Override
 	public EList<String> getEmails() {
 		if (emails == null) {
-			emails = new EDataTypeUniqueEList<String>(String.class, this, GltPackage.CONTACT_POJO__EMAILS);
+			emails = new EDataTypeEList<String>(String.class, this, GltPackage.CONTACT_POJO__EMAILS);
 		}
 		return emails;
 	}
@@ -531,7 +531,7 @@ public class ContactPojoImpl extends MinimalEObjectImpl.Container implements Con
 	@Override
 	public EList<String> getComments() {
 		if (comments == null) {
-			comments = new EDataTypeUniqueEList<String>(String.class, this, GltPackage.CONTACT_POJO__COMMENTS);
+			comments = new EDataTypeEList<String>(String.class, this, GltPackage.CONTACT_POJO__COMMENTS);
 		}
 		return comments;
 	}

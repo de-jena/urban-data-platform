@@ -39,7 +39,7 @@ public interface TechFacilityPojo extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see de.jena.model.glt.GltPackage#getTechFacilityPojo_Name()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getName();
@@ -61,7 +61,7 @@ public interface TechFacilityPojo extends EObject {
 	 * @return the value of the '<em>Facility Class</em>' attribute.
 	 * @see #setFacilityClass(String)
 	 * @see de.jena.model.glt.GltPackage#getTechFacilityPojo_FacilityClass()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getFacilityClass();
@@ -83,7 +83,7 @@ public interface TechFacilityPojo extends EObject {
 	 * @return the value of the '<em>Facility Class Name</em>' attribute.
 	 * @see #setFacilityClassName(String)
 	 * @see de.jena.model.glt.GltPackage#getTechFacilityPojo_FacilityClassName()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getFacilityClassName();
@@ -105,7 +105,7 @@ public interface TechFacilityPojo extends EObject {
 	 * @return the value of the '<em>Room</em>' attribute.
 	 * @see #setRoom(String)
 	 * @see de.jena.model.glt.GltPackage#getTechFacilityPojo_Room()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getRoom();
@@ -127,7 +127,7 @@ public interface TechFacilityPojo extends EObject {
 	 * @return the value of the '<em>Construction Year</em>' attribute.
 	 * @see #setConstructionYear(Integer)
 	 * @see de.jena.model.glt.GltPackage#getTechFacilityPojo_ConstructionYear()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getConstructionYear();
@@ -149,7 +149,7 @@ public interface TechFacilityPojo extends EObject {
 	 * @return the value of the '<em>Launch Date</em>' attribute.
 	 * @see #setLaunchDate(String)
 	 * @see de.jena.model.glt.GltPackage#getTechFacilityPojo_LaunchDate()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getLaunchDate();

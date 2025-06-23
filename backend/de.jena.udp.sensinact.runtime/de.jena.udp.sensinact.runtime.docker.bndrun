@@ -7,4 +7,3 @@
 
 -runbundles.docker:\
 	 de.jena.udp.sensinact.runtime.config.docker
--resolve: never

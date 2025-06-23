@@ -39,7 +39,7 @@ public interface DeviceAdapterPojo extends EObject {
 	 * @return the value of the '<em>Building Id</em>' attribute.
 	 * @see #setBuildingId(BigInteger)
 	 * @see de.jena.model.glt.GltPackage#getDeviceAdapterPojo_BuildingId()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	BigInteger getBuildingId();
@@ -61,7 +61,7 @@ public interface DeviceAdapterPojo extends EObject {
 	 * @return the value of the '<em>Device Id</em>' attribute.
 	 * @see #setDeviceId(BigInteger)
 	 * @see de.jena.model.glt.GltPackage#getDeviceAdapterPojo_DeviceId()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	BigInteger getDeviceId();
@@ -83,7 +83,7 @@ public interface DeviceAdapterPojo extends EObject {
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see #setType(String)
 	 * @see de.jena.model.glt.GltPackage#getDeviceAdapterPojo_Type()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getType();
@@ -105,7 +105,7 @@ public interface DeviceAdapterPojo extends EObject {
 	 * @return the value of the '<em>Timestamp</em>' attribute.
 	 * @see #setTimestamp(BigInteger)
 	 * @see de.jena.model.glt.GltPackage#getDeviceAdapterPojo_Timestamp()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	BigInteger getTimestamp();
@@ -127,7 +127,7 @@ public interface DeviceAdapterPojo extends EObject {
 	 * @return the value of the '<em>Ip</em>' attribute.
 	 * @see #setIp(String)
 	 * @see de.jena.model.glt.GltPackage#getDeviceAdapterPojo_Ip()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getIp();
@@ -149,7 +149,7 @@ public interface DeviceAdapterPojo extends EObject {
 	 * @return the value of the '<em>Reachable</em>' attribute.
 	 * @see #setReachable(Boolean)
 	 * @see de.jena.model.glt.GltPackage#getDeviceAdapterPojo_Reachable()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Boolean getReachable();
@@ -171,7 +171,7 @@ public interface DeviceAdapterPojo extends EObject {
 	 * @return the value of the '<em>Since</em>' attribute.
 	 * @see #setSince(BigInteger)
 	 * @see de.jena.model.glt.GltPackage#getDeviceAdapterPojo_Since()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	BigInteger getSince();

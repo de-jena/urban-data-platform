@@ -35,7 +35,7 @@ public interface EntityMonitoringSettingsPojo extends EObject {
 	 * @return the value of the '<em>System Id</em>' attribute.
 	 * @see #setSystemId(Integer)
 	 * @see de.jena.model.glt.GltPackage#getEntityMonitoringSettingsPojo_SystemId()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getSystemId();
@@ -57,7 +57,7 @@ public interface EntityMonitoringSettingsPojo extends EObject {
 	 * @return the value of the '<em>Identifier</em>' attribute.
 	 * @see #setIdentifier(Integer)
 	 * @see de.jena.model.glt.GltPackage#getEntityMonitoringSettingsPojo_Identifier()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getIdentifier();
@@ -79,7 +79,7 @@ public interface EntityMonitoringSettingsPojo extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see de.jena.model.glt.GltPackage#getEntityMonitoringSettingsPojo_Name()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getName();
@@ -101,7 +101,7 @@ public interface EntityMonitoringSettingsPojo extends EObject {
 	 * @return the value of the '<em>Included</em>' attribute.
 	 * @see #setIncluded(Boolean)
 	 * @see de.jena.model.glt.GltPackage#getEntityMonitoringSettingsPojo_Included()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Boolean getIncluded();
@@ -123,7 +123,7 @@ public interface EntityMonitoringSettingsPojo extends EObject {
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see #setType(String)
 	 * @see de.jena.model.glt.GltPackage#getEntityMonitoringSettingsPojo_Type()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getType();

@@ -33,7 +33,7 @@ public interface EntityRequest extends EObject {
 	 * @return the value of the '<em>System Id</em>' attribute.
 	 * @see #setSystemId(Integer)
 	 * @see de.jena.model.glt.GltPackage#getEntityRequest_SystemId()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getSystemId();
@@ -55,7 +55,7 @@ public interface EntityRequest extends EObject {
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see #setType(String)
 	 * @see de.jena.model.glt.GltPackage#getEntityRequest_Type()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getType();
@@ -77,7 +77,7 @@ public interface EntityRequest extends EObject {
 	 * @return the value of the '<em>Identifier</em>' attribute.
 	 * @see #setIdentifier(Integer)
 	 * @see de.jena.model.glt.GltPackage#getEntityRequest_Identifier()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getIdentifier();

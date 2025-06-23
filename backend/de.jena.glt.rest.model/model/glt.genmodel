@@ -165,6 +165,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glt.ecore#//PointValuePojo/time"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glt.ecore#//PointValuePojo/overrideState"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glt.ecore#//PointValuePojo/isUnknown"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glt.ecore#//PointValuePojo/author"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EReference glt.ecore#//PointValuePojo/comments"/>
     </genClasses>
     <genClasses ecoreClass="glt.ecore#//AlarmLogTimelinePojo">
@@ -232,6 +233,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glt.ecore#//TimeScheduleBlockPojo/times"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glt.ecore#//TimeScheduleBlockPojo/time"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glt.ecore#//TimeScheduleBlockPojo/isUnknown"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glt.ecore#//TimeScheduleBlockPojo/author"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EReference glt.ecore#//TimeScheduleBlockPojo/comments"/>
     </genClasses>
     <genClasses ecoreClass="glt.ecore#//TimeScheduleStatePojo">
@@ -651,6 +653,13 @@
         <genParameters ecoreParameter="glt.ecore#//GltOpenApiClient/updateDatalogContent/systemId"/>
         <genParameters ecoreParameter="glt.ecore#//GltOpenApiClient/updateDatalogContent/id"/>
       </genOperations>
+      <genOperations ecoreOperation="glt.ecore#//GltOpenApiClient/getAuthors" body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/monitoring/points/history/authors&quot;;&#xA;EClass resultEClass = org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEObject();&#xA;if ( null != systemIds ) queryParameter.put(&quot;systemIds&quot;, toQueryString(&quot;systemIds&quot;,systemIds));&#xA;if ( null != identifiers ) queryParameter.put(&quot;identifiers&quot;, toQueryString(&quot;identifiers&quot;,identifiers));&#xA;if ( null != external ) queryParameter.put(&quot;external&quot;, toQueryString(&quot;external&quot;,external));&#xA;if ( null != from ) queryParameter.put(&quot;from&quot;, toQueryString(&quot;from&quot;,from));&#xA;if ( null != to ) queryParameter.put(&quot;to&quot;, toQueryString(&quot;to&quot;,to));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">
+        <genParameters ecoreParameter="glt.ecore#//GltOpenApiClient/getAuthors/systemIds"/>
+        <genParameters ecoreParameter="glt.ecore#//GltOpenApiClient/getAuthors/identifiers"/>
+        <genParameters ecoreParameter="glt.ecore#//GltOpenApiClient/getAuthors/external"/>
+        <genParameters ecoreParameter="glt.ecore#//GltOpenApiClient/getAuthors/from"/>
+        <genParameters ecoreParameter="glt.ecore#//GltOpenApiClient/getAuthors/to"/>
+      </genOperations>
       <genOperations ecoreOperation="glt.ecore#//GltOpenApiClient/getChangelog" body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/monitoring/points/history/{offset}-{limit}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getPointValuePojo();&#xA;pathParameter.put(&quot;offset&quot;, toQueryString(&quot;offset&quot;,offset));&#xA;pathParameter.put(&quot;limit&quot;, toQueryString(&quot;limit&quot;,limit));&#xA;if ( null != systemIds ) queryParameter.put(&quot;systemIds&quot;, toQueryString(&quot;systemIds&quot;,systemIds));&#xA;if ( null != external ) queryParameter.put(&quot;external&quot;, toQueryString(&quot;external&quot;,external));&#xA;if ( null != author ) queryParameter.put(&quot;author&quot;, toQueryString(&quot;author&quot;,author));&#xA;if ( null != from ) queryParameter.put(&quot;from&quot;, toQueryString(&quot;from&quot;,from));&#xA;if ( null != to ) queryParameter.put(&quot;to&quot;, toQueryString(&quot;to&quot;,to));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">
         <genParameters ecoreParameter="glt.ecore#//GltOpenApiClient/getChangelog/offset"/>
         <genParameters ecoreParameter="glt.ecore#//GltOpenApiClient/getChangelog/limit"/>
@@ -851,6 +860,13 @@
       <genOperations ecoreOperation="glt.ecore#//GltOpenApiClient/updateAlarmState">
         <genParameters ecoreParameter="glt.ecore#//GltOpenApiClient/updateAlarmState/systemId"/>
         <genParameters ecoreParameter="glt.ecore#//GltOpenApiClient/updateAlarmState/request"/>
+      </genOperations>
+      <genOperations ecoreOperation="glt.ecore#//GltOpenApiClient/getAuthors_1" body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/monitoring/timeschedule/block/history/authors&quot;;&#xA;EClass resultEClass = org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEObject();&#xA;if ( null != systemIds ) queryParameter.put(&quot;systemIds&quot;, toQueryString(&quot;systemIds&quot;,systemIds));&#xA;if ( null != identifiers ) queryParameter.put(&quot;identifiers&quot;, toQueryString(&quot;identifiers&quot;,identifiers));&#xA;if ( null != external ) queryParameter.put(&quot;external&quot;, toQueryString(&quot;external&quot;,external));&#xA;if ( null != from ) queryParameter.put(&quot;from&quot;, toQueryString(&quot;from&quot;,from));&#xA;if ( null != to ) queryParameter.put(&quot;to&quot;, toQueryString(&quot;to&quot;,to));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">
+        <genParameters ecoreParameter="glt.ecore#//GltOpenApiClient/getAuthors_1/systemIds"/>
+        <genParameters ecoreParameter="glt.ecore#//GltOpenApiClient/getAuthors_1/identifiers"/>
+        <genParameters ecoreParameter="glt.ecore#//GltOpenApiClient/getAuthors_1/external"/>
+        <genParameters ecoreParameter="glt.ecore#//GltOpenApiClient/getAuthors_1/from"/>
+        <genParameters ecoreParameter="glt.ecore#//GltOpenApiClient/getAuthors_1/to"/>
       </genOperations>
       <genOperations ecoreOperation="glt.ecore#//GltOpenApiClient/getChangelog_1"
           body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/monitoring/timeschedule/block/history/{offset}-{limit}&quot;;&#xA;EClass resultEClass = GltPackage.eINSTANCE.getTimeScheduleBlockPojo();&#xA;pathParameter.put(&quot;offset&quot;, toQueryString(&quot;offset&quot;,offset));&#xA;pathParameter.put(&quot;limit&quot;, toQueryString(&quot;limit&quot;,limit));&#xA;if ( null != systemIds ) queryParameter.put(&quot;systemIds&quot;, toQueryString(&quot;systemIds&quot;,systemIds));&#xA;if ( null != external ) queryParameter.put(&quot;external&quot;, toQueryString(&quot;external&quot;,external));&#xA;if ( null != author ) queryParameter.put(&quot;author&quot;, toQueryString(&quot;author&quot;,author));&#xA;if ( null != from ) queryParameter.put(&quot;from&quot;, toQueryString(&quot;from&quot;,from));&#xA;if ( null != to ) queryParameter.put(&quot;to&quot;, toQueryString(&quot;to&quot;,to));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">

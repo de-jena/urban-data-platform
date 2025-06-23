@@ -33,7 +33,7 @@ public interface StatusPojo extends EObject {
 	 * @return the value of the '<em>Timestamp</em>' attribute.
 	 * @see #setTimestamp(String)
 	 * @see de.jena.model.glt.GltPackage#getStatusPojo_Timestamp()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getTimestamp();
@@ -55,7 +55,7 @@ public interface StatusPojo extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see de.jena.model.glt.GltPackage#getStatusPojo_Name()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getName();
@@ -77,7 +77,7 @@ public interface StatusPojo extends EObject {
 	 * @return the value of the '<em>Author</em>' attribute.
 	 * @see #setAuthor(String)
 	 * @see de.jena.model.glt.GltPackage#getStatusPojo_Author()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getAuthor();

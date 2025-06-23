@@ -32,7 +32,7 @@ public interface LinkedIdInteger extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(Integer)
 	 * @see de.jena.model.glt.GltPackage#getLinkedIdInteger_Id()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getId();
@@ -54,7 +54,7 @@ public interface LinkedIdInteger extends EObject {
 	 * @return the value of the '<em>Links</em>' attribute.
 	 * @see #setLinks(Object)
 	 * @see de.jena.model.glt.GltPackage#getLinkedIdInteger_Links()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Object getLinks();

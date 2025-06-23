@@ -38,7 +38,7 @@ public interface CalendarEventPojo extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(Integer)
 	 * @see de.jena.model.glt.GltPackage#getCalendarEventPojo_Id()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getId();
@@ -60,7 +60,7 @@ public interface CalendarEventPojo extends EObject {
 	 * @return the value of the '<em>From</em>' attribute.
 	 * @see #setFrom(String)
 	 * @see de.jena.model.glt.GltPackage#getCalendarEventPojo_From()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getFrom();
@@ -82,7 +82,7 @@ public interface CalendarEventPojo extends EObject {
 	 * @return the value of the '<em>To</em>' attribute.
 	 * @see #setTo(String)
 	 * @see de.jena.model.glt.GltPackage#getCalendarEventPojo_To()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getTo();
@@ -104,7 +104,7 @@ public interface CalendarEventPojo extends EObject {
 	 * @return the value of the '<em>Note</em>' attribute.
 	 * @see #setNote(String)
 	 * @see de.jena.model.glt.GltPackage#getCalendarEventPojo_Note()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getNote();
@@ -126,7 +126,7 @@ public interface CalendarEventPojo extends EObject {
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see #setType(String)
 	 * @see de.jena.model.glt.GltPackage#getCalendarEventPojo_Type()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getType();
@@ -148,7 +148,7 @@ public interface CalendarEventPojo extends EObject {
 	 * @return the value of the '<em>Author</em>' attribute.
 	 * @see #setAuthor(String)
 	 * @see de.jena.model.glt.GltPackage#getCalendarEventPojo_Author()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getAuthor();
@@ -170,7 +170,7 @@ public interface CalendarEventPojo extends EObject {
 	 * @return the value of the '<em>Alarm Id</em>' attribute.
 	 * @see #setAlarmId(String)
 	 * @see de.jena.model.glt.GltPackage#getCalendarEventPojo_AlarmId()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getAlarmId();
@@ -192,7 +192,7 @@ public interface CalendarEventPojo extends EObject {
 	 * @return the value of the '<em>System Id</em>' attribute.
 	 * @see #setSystemId(String)
 	 * @see de.jena.model.glt.GltPackage#getCalendarEventPojo_SystemId()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getSystemId();

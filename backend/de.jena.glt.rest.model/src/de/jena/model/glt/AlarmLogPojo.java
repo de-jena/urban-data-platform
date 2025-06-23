@@ -36,7 +36,7 @@ public interface AlarmLogPojo extends EObject {
 	 * @return the value of the '<em>System Id</em>' attribute.
 	 * @see #setSystemId(String)
 	 * @see de.jena.model.glt.GltPackage#getAlarmLogPojo_SystemId()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getSystemId();
@@ -58,7 +58,7 @@ public interface AlarmLogPojo extends EObject {
 	 * @return the value of the '<em>Alarm Id</em>' attribute.
 	 * @see #setAlarmId(String)
 	 * @see de.jena.model.glt.GltPackage#getAlarmLogPojo_AlarmId()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getAlarmId();
@@ -80,7 +80,7 @@ public interface AlarmLogPojo extends EObject {
 	 * @return the value of the '<em>State</em>' attribute.
 	 * @see #setState(String)
 	 * @see de.jena.model.glt.GltPackage#getAlarmLogPojo_State()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getState();
@@ -102,7 +102,7 @@ public interface AlarmLogPojo extends EObject {
 	 * @return the value of the '<em>Timestamp</em>' attribute.
 	 * @see #setTimestamp(BigInteger)
 	 * @see de.jena.model.glt.GltPackage#getAlarmLogPojo_Timestamp()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	BigInteger getTimestamp();

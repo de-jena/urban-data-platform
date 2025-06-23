@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.util.EDataTypeEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -574,7 +574,7 @@ public class DatalogContentPojoImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public EList<String> getEntriesT() {
 		if (entriesT == null) {
-			entriesT = new EDataTypeUniqueEList<String>(String.class, this, GltPackage.DATALOG_CONTENT_POJO__ENTRIES_T);
+			entriesT = new EDataTypeEList<String>(String.class, this, GltPackage.DATALOG_CONTENT_POJO__ENTRIES_T);
 		}
 		return entriesT;
 	}
@@ -587,7 +587,7 @@ public class DatalogContentPojoImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public EList<Float> getEntriesV() {
 		if (entriesV == null) {
-			entriesV = new EDataTypeUniqueEList<Float>(Float.class, this, GltPackage.DATALOG_CONTENT_POJO__ENTRIES_V);
+			entriesV = new EDataTypeEList<Float>(Float.class, this, GltPackage.DATALOG_CONTENT_POJO__ENTRIES_V);
 		}
 		return entriesV;
 	}

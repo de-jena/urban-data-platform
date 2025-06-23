@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.util.EDataTypeEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -200,7 +200,7 @@ public class RolePojoImpl extends MinimalEObjectImpl.Container implements RolePo
 	@Override
 	public EList<String> getGroups() {
 		if (groups == null) {
-			groups = new EDataTypeUniqueEList<String>(String.class, this, GltPackage.ROLE_POJO__GROUPS);
+			groups = new EDataTypeEList<String>(String.class, this, GltPackage.ROLE_POJO__GROUPS);
 		}
 		return groups;
 	}
@@ -213,7 +213,7 @@ public class RolePojoImpl extends MinimalEObjectImpl.Container implements RolePo
 	@Override
 	public EList<String> getRoles() {
 		if (roles == null) {
-			roles = new EDataTypeUniqueEList<String>(String.class, this, GltPackage.ROLE_POJO__ROLES);
+			roles = new EDataTypeEList<String>(String.class, this, GltPackage.ROLE_POJO__ROLES);
 		}
 		return roles;
 	}
@@ -226,7 +226,7 @@ public class RolePojoImpl extends MinimalEObjectImpl.Container implements RolePo
 	@Override
 	public EList<String> getMembers() {
 		if (members == null) {
-			members = new EDataTypeUniqueEList<String>(String.class, this, GltPackage.ROLE_POJO__MEMBERS);
+			members = new EDataTypeEList<String>(String.class, this, GltPackage.ROLE_POJO__MEMBERS);
 		}
 		return members;
 	}

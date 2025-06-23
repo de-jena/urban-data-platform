@@ -33,7 +33,7 @@ public interface AlarmId extends EObject {
 	 * @return the value of the '<em>System Id</em>' attribute.
 	 * @see #setSystemId(String)
 	 * @see de.jena.model.glt.GltPackage#getAlarmId_SystemId()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getSystemId();
@@ -55,7 +55,7 @@ public interface AlarmId extends EObject {
 	 * @return the value of the '<em>Building Id</em>' attribute.
 	 * @see #setBuildingId(String)
 	 * @see de.jena.model.glt.GltPackage#getAlarmId_BuildingId()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getBuildingId();
@@ -77,7 +77,7 @@ public interface AlarmId extends EObject {
 	 * @return the value of the '<em>Alarm Id</em>' attribute.
 	 * @see #setAlarmId(String)
 	 * @see de.jena.model.glt.GltPackage#getAlarmId_AlarmId()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getAlarmId();

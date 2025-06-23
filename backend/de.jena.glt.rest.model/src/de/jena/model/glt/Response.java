@@ -36,7 +36,7 @@ public interface Response extends EObject {
 	 * @return the value of the '<em>Code</em>' attribute.
 	 * @see #setCode(int)
 	 * @see de.jena.model.glt.GltPackage#getResponse_Code()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	int getCode();
@@ -58,7 +58,7 @@ public interface Response extends EObject {
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
 	 * @see de.jena.model.glt.GltPackage#getResponse_Description()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getDescription();
@@ -80,7 +80,7 @@ public interface Response extends EObject {
 	 * @return the value of the '<em>Response</em>' attribute.
 	 * @see #setResponse(jakarta.ws.rs.core.Response)
 	 * @see de.jena.model.glt.GltPackage#getResponse_Response()
-	 * @model dataType="de.jena.model.glt.JResponse"
+	 * @model unique="false" dataType="de.jena.model.glt.JResponse"
 	 * @generated
 	 */
 	jakarta.ws.rs.core.Response getResponse();

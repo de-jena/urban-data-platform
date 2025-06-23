@@ -41,6 +41,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.jena.model.glt.impl.TimeScheduleBlockPojoImpl#getTimes <em>Times</em>}</li>
  *   <li>{@link de.jena.model.glt.impl.TimeScheduleBlockPojoImpl#getTime <em>Time</em>}</li>
  *   <li>{@link de.jena.model.glt.impl.TimeScheduleBlockPojoImpl#getIsUnknown <em>Is Unknown</em>}</li>
+ *   <li>{@link de.jena.model.glt.impl.TimeScheduleBlockPojoImpl#getAuthor <em>Author</em>}</li>
  *   <li>{@link de.jena.model.glt.impl.TimeScheduleBlockPojoImpl#getComments <em>Comments</em>}</li>
  * </ul>
  *
@@ -266,6 +267,26 @@ public class TimeScheduleBlockPojoImpl extends MinimalEObjectImpl.Container impl
 	 * @ordered
 	 */
 	protected Boolean isUnknown = IS_UNKNOWN_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAuthor() <em>Author</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAuthor()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String AUTHOR_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getAuthor() <em>Author</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAuthor()
+	 * @generated
+	 * @ordered
+	 */
+	protected String author = AUTHOR_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getComments() <em>Comments</em>}' containment reference list.
@@ -555,6 +576,29 @@ public class TimeScheduleBlockPojoImpl extends MinimalEObjectImpl.Container impl
 	 * @generated
 	 */
 	@Override
+	public String getAuthor() {
+		return author;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAuthor(String newAuthor) {
+		String oldAuthor = author;
+		author = newAuthor;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GltPackage.TIME_SCHEDULE_BLOCK_POJO__AUTHOR, oldAuthor, author));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EList<CommentPojo> getComments() {
 		if (comments == null) {
 			comments = new EObjectContainmentEList<CommentPojo>(CommentPojo.class, this, GltPackage.TIME_SCHEDULE_BLOCK_POJO__COMMENTS);
@@ -606,6 +650,8 @@ public class TimeScheduleBlockPojoImpl extends MinimalEObjectImpl.Container impl
 				return getTime();
 			case GltPackage.TIME_SCHEDULE_BLOCK_POJO__IS_UNKNOWN:
 				return getIsUnknown();
+			case GltPackage.TIME_SCHEDULE_BLOCK_POJO__AUTHOR:
+				return getAuthor();
 			case GltPackage.TIME_SCHEDULE_BLOCK_POJO__COMMENTS:
 				return getComments();
 		}
@@ -653,6 +699,9 @@ public class TimeScheduleBlockPojoImpl extends MinimalEObjectImpl.Container impl
 				return;
 			case GltPackage.TIME_SCHEDULE_BLOCK_POJO__IS_UNKNOWN:
 				setIsUnknown((Boolean)newValue);
+				return;
+			case GltPackage.TIME_SCHEDULE_BLOCK_POJO__AUTHOR:
+				setAuthor((String)newValue);
 				return;
 			case GltPackage.TIME_SCHEDULE_BLOCK_POJO__COMMENTS:
 				getComments().clear();
@@ -703,6 +752,9 @@ public class TimeScheduleBlockPojoImpl extends MinimalEObjectImpl.Container impl
 			case GltPackage.TIME_SCHEDULE_BLOCK_POJO__IS_UNKNOWN:
 				setIsUnknown(IS_UNKNOWN_EDEFAULT);
 				return;
+			case GltPackage.TIME_SCHEDULE_BLOCK_POJO__AUTHOR:
+				setAuthor(AUTHOR_EDEFAULT);
+				return;
 			case GltPackage.TIME_SCHEDULE_BLOCK_POJO__COMMENTS:
 				getComments().clear();
 				return;
@@ -740,6 +792,8 @@ public class TimeScheduleBlockPojoImpl extends MinimalEObjectImpl.Container impl
 				return TIME_EDEFAULT == null ? time != null : !TIME_EDEFAULT.equals(time);
 			case GltPackage.TIME_SCHEDULE_BLOCK_POJO__IS_UNKNOWN:
 				return IS_UNKNOWN_EDEFAULT == null ? isUnknown != null : !IS_UNKNOWN_EDEFAULT.equals(isUnknown);
+			case GltPackage.TIME_SCHEDULE_BLOCK_POJO__AUTHOR:
+				return AUTHOR_EDEFAULT == null ? author != null : !AUTHOR_EDEFAULT.equals(author);
 			case GltPackage.TIME_SCHEDULE_BLOCK_POJO__COMMENTS:
 				return comments != null && !comments.isEmpty();
 		}
@@ -778,6 +832,8 @@ public class TimeScheduleBlockPojoImpl extends MinimalEObjectImpl.Container impl
 		result.append(time);
 		result.append(", isUnknown: ");
 		result.append(isUnknown);
+		result.append(", author: ");
+		result.append(author);
 		result.append(')');
 		return result.toString();
 	}

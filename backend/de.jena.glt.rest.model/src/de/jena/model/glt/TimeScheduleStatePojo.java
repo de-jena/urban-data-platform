@@ -39,7 +39,7 @@ public interface TimeScheduleStatePojo extends EObject {
 	 * @return the value of the '<em>System Id</em>' attribute.
 	 * @see #setSystemId(Integer)
 	 * @see de.jena.model.glt.GltPackage#getTimeScheduleStatePojo_SystemId()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getSystemId();
@@ -61,7 +61,7 @@ public interface TimeScheduleStatePojo extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(Integer)
 	 * @see de.jena.model.glt.GltPackage#getTimeScheduleStatePojo_Id()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getId();
@@ -83,7 +83,7 @@ public interface TimeScheduleStatePojo extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see de.jena.model.glt.GltPackage#getTimeScheduleStatePojo_Name()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getName();
@@ -105,7 +105,7 @@ public interface TimeScheduleStatePojo extends EObject {
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(Float)
 	 * @see de.jena.model.glt.GltPackage#getTimeScheduleStatePojo_Value()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Float getValue();
@@ -127,7 +127,7 @@ public interface TimeScheduleStatePojo extends EObject {
 	 * @return the value of the '<em>Time</em>' attribute.
 	 * @see #setTime(String)
 	 * @see de.jena.model.glt.GltPackage#getTimeScheduleStatePojo_Time()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getTime();
@@ -149,7 +149,7 @@ public interface TimeScheduleStatePojo extends EObject {
 	 * @return the value of the '<em>Is Unknown</em>' attribute.
 	 * @see #setIsUnknown(Boolean)
 	 * @see de.jena.model.glt.GltPackage#getTimeScheduleStatePojo_IsUnknown()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Boolean getIsUnknown();

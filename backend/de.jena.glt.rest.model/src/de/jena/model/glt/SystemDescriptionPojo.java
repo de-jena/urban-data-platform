@@ -48,7 +48,7 @@ public interface SystemDescriptionPojo extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(String)
 	 * @see de.jena.model.glt.GltPackage#getSystemDescriptionPojo_Id()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getId();
@@ -70,7 +70,7 @@ public interface SystemDescriptionPojo extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see de.jena.model.glt.GltPackage#getSystemDescriptionPojo_Name()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getName();
@@ -92,7 +92,7 @@ public interface SystemDescriptionPojo extends EObject {
 	 * @return the value of the '<em>Prefix</em>' attribute.
 	 * @see #setPrefix(String)
 	 * @see de.jena.model.glt.GltPackage#getSystemDescriptionPojo_Prefix()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getPrefix();
@@ -114,7 +114,7 @@ public interface SystemDescriptionPojo extends EObject {
 	 * @return the value of the '<em>Ip</em>' attribute.
 	 * @see #setIp(String)
 	 * @see de.jena.model.glt.GltPackage#getSystemDescriptionPojo_Ip()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getIp();
@@ -136,7 +136,7 @@ public interface SystemDescriptionPojo extends EObject {
 	 * @return the value of the '<em>Directory</em>' attribute.
 	 * @see #setDirectory(String)
 	 * @see de.jena.model.glt.GltPackage#getSystemDescriptionPojo_Directory()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getDirectory();
@@ -158,7 +158,7 @@ public interface SystemDescriptionPojo extends EObject {
 	 * @return the value of the '<em>Port</em>' attribute.
 	 * @see #setPort(Integer)
 	 * @see de.jena.model.glt.GltPackage#getSystemDescriptionPojo_Port()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getPort();
@@ -180,7 +180,7 @@ public interface SystemDescriptionPojo extends EObject {
 	 * @return the value of the '<em>Lon</em>' attribute.
 	 * @see #setLon(Double)
 	 * @see de.jena.model.glt.GltPackage#getSystemDescriptionPojo_Lon()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Double getLon();
@@ -202,7 +202,7 @@ public interface SystemDescriptionPojo extends EObject {
 	 * @return the value of the '<em>Lat</em>' attribute.
 	 * @see #setLat(Double)
 	 * @see de.jena.model.glt.GltPackage#getSystemDescriptionPojo_Lat()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Double getLat();
@@ -224,7 +224,7 @@ public interface SystemDescriptionPojo extends EObject {
 	 * @return the value of the '<em>Shallow</em>' attribute.
 	 * @see #setShallow(Boolean)
 	 * @see de.jena.model.glt.GltPackage#getSystemDescriptionPojo_Shallow()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Boolean getShallow();
@@ -246,7 +246,7 @@ public interface SystemDescriptionPojo extends EObject {
 	 * @return the value of the '<em>Excluded</em>' attribute.
 	 * @see #setExcluded(Boolean)
 	 * @see de.jena.model.glt.GltPackage#getSystemDescriptionPojo_Excluded()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Boolean getExcluded();
@@ -268,7 +268,7 @@ public interface SystemDescriptionPojo extends EObject {
 	 * @return the value of the '<em>External Id</em>' attribute.
 	 * @see #setExternalId(Integer)
 	 * @see de.jena.model.glt.GltPackage#getSystemDescriptionPojo_ExternalId()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getExternalId();
@@ -312,7 +312,7 @@ public interface SystemDescriptionPojo extends EObject {
 	 * @return the value of the '<em>Source</em>' attribute.
 	 * @see #setSource(String)
 	 * @see de.jena.model.glt.GltPackage#getSystemDescriptionPojo_Source()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getSource();
@@ -346,7 +346,7 @@ public interface SystemDescriptionPojo extends EObject {
 	 * @return the value of the '<em>Flags</em>' attribute.
 	 * @see #setFlags(Integer)
 	 * @see de.jena.model.glt.GltPackage#getSystemDescriptionPojo_Flags()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Integer getFlags();
@@ -368,7 +368,7 @@ public interface SystemDescriptionPojo extends EObject {
 	 * @return the value of the '<em>Cylon Network</em>' attribute.
 	 * @see #setCylonNetwork(Boolean)
 	 * @see de.jena.model.glt.GltPackage#getSystemDescriptionPojo_CylonNetwork()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Boolean getCylonNetwork();

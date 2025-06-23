@@ -37,7 +37,7 @@ public interface DevicePojo extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(BigInteger)
 	 * @see de.jena.model.glt.GltPackage#getDevicePojo_Id()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	BigInteger getId();
@@ -59,7 +59,7 @@ public interface DevicePojo extends EObject {
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see #setType(String)
 	 * @see de.jena.model.glt.GltPackage#getDevicePojo_Type()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getType();
