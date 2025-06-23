@@ -62,6 +62,8 @@ public class GltConverter {
 
 	private GeoJsonObject geoJson;
 
+	private String friendlyName;
+
 	@Activate
 	public void activate(GltConfiguration config) {
 		this.conf = config;
@@ -85,7 +87,7 @@ public class GltConverter {
 				SystemDescriptionPojo site = (SystemDescriptionPojo) result.get(0);
 				logger.log(Level.INFO, "Init side: {0}", site.getName());
 				initGeo(site);
-				// TODO: Metadaten
+				friendlyName = site.getName();
 			}
 		} else if (code == 404) {
 			logger.log(Level.WARNING, "Response Code: " + code + " System with id " + systemId);
@@ -115,12 +117,8 @@ public class GltConverter {
 	private void update() {
 		int systemId = Integer.parseInt(conf.systemID());
 		EList<Integer> point = ECollections.asEList(Arrays.stream(conf.points()).boxed().toList());
-//		String from = DateTimeFormatter.ISO_LOCAL_DATE_TIME.format(LocalDateTime.now().minusMinutes(conf.interval()));
-//		String from = DateTimeFormatter.ISO_OFFSET_DATE_TIME.format(LocalDateTime.now().minusMinutes(conf.back()).atOffset(ZoneOffset.of("+00:00")));
-		String from = DateTimeFormatter.ISO_LOCAL_DATE_TIME.format(LocalDateTime.now().minusMinutes(conf.back()))+"+00:00";
-//		String to = DateTimeFormatter.ISO_LOCAL_DATE_TIME.format(LocalDateTime.now().plusMinutes(1));
+		String from = DateTimeFormatter.ISO_OFFSET_DATE_TIME.format(LocalDateTime.now().minusMinutes(conf.back()).atOffset(ZoneOffset.of("+00:00")));
 		String to = DateTimeFormatter.ISO_OFFSET_DATE_TIME.format(LocalDateTime.now().plusMinutes(1).atOffset(ZoneOffset.of("+00:00")));
-//		String to = DateTimeFormatter.ISO_LOCAL_DATE_TIME.format(LocalDateTime.now().plusMinutes(1))+"+00:00";
 		try {
 			Response response = gltOpenApi.getDatalogContent(systemId, point, from, to);
 			int code = response.getCode();
@@ -130,6 +128,7 @@ public class GltConverter {
 				Admin admin = ProviderFactory.eINSTANCE.createAdmin();
 				glt.setAdmin(admin);
 				admin.setLocation(geoJson);
+				admin.setFriendlyName(friendlyName);
 				glt.setId(conf.systemID());
 				for (EObject object : result) {
 					DatalogContentPojo dc = (DatalogContentPojo) object;
@@ -144,7 +143,6 @@ public class GltConverter {
 						addMetaData(dc, service, time);
 						glt.getServices().put("" + dc.getId(), service);
 					}
-//				dc.getTime();
 				}
 				sensiNact.pushUpdate(glt);
 
