@@ -7,11 +7,6 @@
 		"user": "$[env:TIMESCALE_USER;default=$[prop:TIMESCALE_USER;default=snaHistory]]",
 		".password": "$[env:TIMESCALE_PWD;default=$[prop:TIMESCALE_PWD;default=]]",
 		"provider": "brokerHistory",
-		"include.resources": [
-			"{\"model\": {\"value\":\"065\",\"type\":\"EXACT\"}}",
-			"{\"model\": {\"value\":\"Dragino_LSE01\",\"type\":\"EXACT\"}}",
-			"{\"model\": {\"value\":\"MoistureSensor\",\"type\":\"EXACT\"}}"
-		],
 		"exclude.resources": [
 			"{\"resource\": {\"value\": \"observedArea\",\"type\":\"EXACT\"}} ",
 			"{\"resource\": {\"value\": \"objects\",\"type\":\"EXACT\"}} ",
