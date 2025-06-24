@@ -96,21 +96,18 @@ public class GltConverter {
 	}
 
 	private void initGeo(SystemDescriptionPojo site) {
-//		FeatureCollection fc = new FeatureCollection();
-//		Feature castFeature = new Feature();
 		Point point = new Point();
 		Double lon = site.getLon();
 		Double lat = site.getLat();
-		if (lon != null && lat != null) {
-			Coordinates coordinates = new Coordinates();
-			point.coordinates = coordinates;
-			coordinates.longitude = lon;
-			coordinates.latitude = lat;
+		if (lon == null || lat == null) {
+			lat = 50.928685;
+			lon = 11.583359;
 		}
+		Coordinates coordinates = new Coordinates();
+		point.coordinates = coordinates;
+		coordinates.longitude = lon;
+		coordinates.latitude = lat;
 		geoJson = point;
-//		castFeature.geometry = pg;
-//		fc.features.add(castFeature);
-//		geoJson = fc;
 	}
 
 	private void update() {
@@ -124,25 +121,12 @@ public class GltConverter {
 			if (code == 200) {
 				EList<EObject> result = response.getResult();
 				GltSide glt = GltFactory.eINSTANCE.createGltSide();
-				Admin admin = ProviderFactory.eINSTANCE.createAdmin();
-				glt.setAdmin(admin);
-				if(friendlyName == null) initSide();
-				admin.setLocation(geoJson);
-				admin.setFriendlyName(friendlyName);
 				glt.setId(conf.systemID());
+				updateAdmin(glt);
 				for (EObject object : result) {
 					DatalogContentPojo dc = (DatalogContentPojo) object;
 					logger.log(Level.INFO, "Data: " + dc);
-					MonitoringData service = GltFactory.eINSTANCE.createMonitoringData();
-					EList<String> timeEntries = dc.getEntriesT();
-					if (!timeEntries.isEmpty()) {
-						String time = timeEntries.get(timeEntries.size() - 1);
-						EList<Float> valueEntries = dc.getEntriesV();
-						Float value = valueEntries.get(valueEntries.size() - 1); 
-						service.setValue(value);
-						addMetaData(dc, service, time);
-						glt.getServices().put("" + dc.getId(), service);
-					}
+					updateService(glt, dc);
 				}
 				sensiNact.pushUpdate(glt);
 
@@ -153,6 +137,27 @@ public class GltConverter {
 			}
 		} catch (Exception e) {
 			logger.log(Level.ERROR, "Error while updating datalog content for system {0}", conf.systemID(), e);
+		}
+	}
+
+	private void updateAdmin(GltSide glt) {
+		Admin admin = ProviderFactory.eINSTANCE.createAdmin();
+		glt.setAdmin(admin);
+		if(friendlyName == null) initSide();
+		admin.setLocation(geoJson);
+		admin.setFriendlyName(friendlyName);
+	}
+
+	private void updateService(GltSide glt, DatalogContentPojo dc) {
+		MonitoringData service = GltFactory.eINSTANCE.createMonitoringData();
+		EList<String> timeEntries = dc.getEntriesT();
+		if (!timeEntries.isEmpty()) {
+			String time = timeEntries.get(timeEntries.size() - 1);
+			EList<Float> valueEntries = dc.getEntriesV();
+			Float value = valueEntries.get(valueEntries.size() - 1); 
+			service.setValue(value);
+			addMetaData(dc, service, time);
+			glt.getServices().put("" + dc.getId(), service);
 		}
 	}
 
