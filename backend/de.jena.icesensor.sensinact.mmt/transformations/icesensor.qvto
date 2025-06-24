@@ -85,7 +85,7 @@ mapping SENSOR::SensorData::sensorToRervice(friendlyServiceName : String, type :
 
 mapping SENSOR::SensorData::toMetadataEntry(feature : ECORE::EStructuralFeature, friendlyServiceName : String, unit : String, hide : String, type : String): PROVIDER::FeatureMetadata {
 	key := feature;
-	value := self.map toMetadata(friendlyServiceName + "-" + feature.name, unit, hide, type); 
+	value := self.map toMetadata(friendlyServiceName + "-" + feature.name, unit, hide, type);
 }
 
 mapping SENSOR::SensorData::toMetadata(friendlyNameParam : String, unit : String, hide : String, type : String): PROVIDER::ResourceValueMetadata {
@@ -100,6 +100,7 @@ mapping SENSOR::SensorData::toMetadata(friendlyNameParam : String, unit : String
 	if(type.oclIsUndefined().not()){
 		extra += self.toCustomMetadata("sensorthings.datastream.type", type);
 	};
+	timestamp := getENow();
 }
 helper SENSOR::SensorData::toCustomMetadata(key : String, theValue : String): PROVIDER::FeatureCustomMetadata{
 	var entry := object PROVIDER::FeatureCustomMetadata{
