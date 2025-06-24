@@ -107,7 +107,8 @@ public class TrafficConflictNotification implements TypedEventHandler<ResourceDa
 		this.config = configuration;
 		provider = ConflictFactory.eINSTANCE.createTrafficConflictProvider();
 		TrafficConflictAdmin admin = ConflictFactory.eINSTANCE.createTrafficConflictAdmin();
-		provider.setId("FelsenkellerRadAuto");
+		admin.setFriendlyName("Conflict Bike Car Felsenkeller");
+		provider.setId("Conflict01");
 		provider.setAdmin(admin);
 		admin.setLocation(createViewport());
 		conflict = ConflictFactory.eINSTANCE.createConflict();

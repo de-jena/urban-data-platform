@@ -282,21 +282,23 @@ public class TrafiCam {
 		return p;
 	}
 
-	private FeatureCollection createLocation(String camId) {
-		FeatureCollection geo = new FeatureCollection();
+	private Point createLocation(String camId) {
+		Point point = new Point();
+
 		CamConfig camConfig = configs.get(camId);
 		if (camConfig == null) {
 			logger.log(Level.WARNING, "Warn: configuration for {0} not loaded.", camId);
-			return geo;
+			return point;
 		}
 
 		GpsCoordinates gps = camConfig.getLocation();
 		if (gps == null) {
-			return geo;
+			return point;
 		}
-		Feature f = createFeature(gps);
-		geo.features.add(f);
-		return geo;
+		point.coordinates = new Coordinates();
+		point.coordinates.latitude = gps.getLatitude();
+		point.coordinates.longitude = gps.getLongitude();
+		return point;
 	}
 
 	private Feature createFeature(GpsCoordinates gps) {
@@ -320,6 +322,7 @@ public class TrafiCam {
 			traficamProvider.setId(camId);
 			traficamProvider.setAdmin(traficamAdmin);
 			traficamAdmin.setLocation(createLocation(camId));
+			traficamAdmin.setFriendlyName("Camera " + camId);
 			FeatureCollection viewport = createFeatureCollection(camId);
 			traficamAdmin.setViewport(viewport);
 			ObservedObjects area = TraficamproviderFactory.eINSTANCE.createObservedObjects();

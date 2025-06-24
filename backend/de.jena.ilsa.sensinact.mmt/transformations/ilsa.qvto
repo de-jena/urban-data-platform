@@ -19,7 +19,7 @@ mapping ILSA::TLConfiguration::toProvider(): SENSINACT::Ilsa {
 
 
 mapping ILSA::TLConfiguration::toAdmin(): PROVIDER::Admin {
-	friendlyName := self.intersectionName;
+	friendlyName := "ILSA " + self.intersectionName;
 	location := self.geoJson.convertToFeatureCollection();
 }
 
