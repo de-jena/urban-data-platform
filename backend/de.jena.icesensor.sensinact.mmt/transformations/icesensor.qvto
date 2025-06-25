@@ -89,24 +89,31 @@ mapping SENSOR::SensorData::toMetadataEntry(feature : ECORE::EStructuralFeature,
 }
 
 mapping SENSOR::SensorData::toMetadata(friendlyNameParam : String, unit : String, hide : String, type : String): PROVIDER::ResourceValueMetadata {
-	extra += self.toCustomMetadata("friendlyName", friendlyNameParam);
+	extra += toMetadataValueMap("friendlyName", friendlyNameParam);
 	if(unit != null and unit != ""){
-		extra += self.toCustomMetadata("unit", unit);
-		extra += self.toCustomMetadata("sensorthings.unit.name", unit);
+		extra += toMetadataValueMap("unit", unit);
+		extra += toMetadataValueMap("sensorthings.unit.name", unit);
 	};
 	if(hide.oclIsUndefined().not()){
-		extra += self.toCustomMetadata("sensorthings.hide", hide);
+		extra += toMetadataValueMap("sensorthings.hide", hide);
 	};
 	if(type.oclIsUndefined().not()){
-		extra += self.toCustomMetadata("sensorthings.datastream.type", type);
+		extra += toMetadataValueMap("sensorthings.datastream.type", type);
 	};
 	timestamp := getENow();
 }
-helper SENSOR::SensorData::toCustomMetadata(key : String, theValue : String): PROVIDER::FeatureCustomMetadata{
-	var entry := object PROVIDER::FeatureCustomMetadata{
-		name := key;
-		timestamp := getENow();
-		value := theValue;
-	};
-	return entry;
+
+helper toMetadataValueMap(theKey : String, theValue : String): PROVIDER::MetadataValueMap {
+    var entry := object PROVIDER::MetadataValueMap{
+       key := theKey;
+       value := toMetadataValue(theValue)
+    };
+    return entry;
+}
+helper toMetadataValue(theValue : String): PROVIDER::MetadataValue {
+    var entry := object PROVIDER::MetadataValue{
+        timestamp := getENow();
+        value := theValue;
+    };
+    return entry;
 }

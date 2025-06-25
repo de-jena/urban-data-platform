@@ -150,10 +150,12 @@ public class IbisConnector {
 			point.coordinates = new Coordinates();
 			point.coordinates.latitude = gnssLocationData.getLatitudeDegree();
 			point.coordinates.longitude = gnssLocationData.getLongitudeDegree();
-			point.coordinates.elevation = gnssLocationData.getAltitude();
+//			point.coordinates.elevation = gnssLocationData.getAltitude(); NO Z axis in sensinact 
 			ibisAdmin.setLocation(point);
 		}
 		device.setIbisAdmin(ibisAdmin);
+		device.setAdmin(ibisAdmin);
+		
 		return Optional.of(device);
 	}
 }

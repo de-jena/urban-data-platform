@@ -37,7 +37,7 @@ import org.eclipse.sensinact.core.push.dto.GenericDto;
 import org.eclipse.sensinact.gateway.geojson.Coordinates;
 import org.eclipse.sensinact.gateway.geojson.Point;
 import org.eclipse.sensinact.model.core.provider.Admin;
-import org.eclipse.sensinact.model.core.provider.FeatureCustomMetadata;
+import org.eclipse.sensinact.model.core.provider.MetadataValue;
 import org.eclipse.sensinact.model.core.provider.ProviderFactory;
 import org.eclipse.sensinact.model.core.provider.ResourceValueMetadata;
 import org.eclipse.sensinact.model.core.provider.Service;
@@ -172,11 +172,10 @@ public class TrafficLight {
 		}
 	}
 
-	private FeatureCustomMetadata createCustomMetadata(String key, Object value) {
-		FeatureCustomMetadata fcmd = ProviderFactory.eINSTANCE.createFeatureCustomMetadata();
-		fcmd.setName(key);
-		fcmd.setValue(value);
-		return fcmd;
+	private MetadataValue createMetadata(Object value) {
+		MetadataValue mv = ProviderFactory.eINSTANCE.createMetadataValue();
+		mv.setValue(value);
+		return mv;
 	}
 
 	private void updateConfig(Message message) {
@@ -215,8 +214,8 @@ public class TrafficLight {
 		Service signal = services.get(serviceId);
 		EMap<ETypedElement, ResourceValueMetadata> metadata = signal.getMetadata();
 		ResourceValueMetadata md = ProviderFactory.eINSTANCE.createResourceValueMetadata();
-		md.getExtra().add(createCustomMetadata("type", signalState.getSignalType()));
-		md.getExtra().add(createCustomMetadata("signalGroup", signalState.getSignalGroup().getId()));
+		md.getExtra().put("type", createMetadata(signalState.getSignalType()));
+		md.getExtra().put("signalGroup", createMetadata(signalState.getSignalGroup().getId()));
 		metadata.put(IlsaPackage.eINSTANCE.getSignal_Color(), md);
 	}
 

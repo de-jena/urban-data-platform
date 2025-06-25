@@ -22,7 +22,7 @@ import org.eclipse.sensinact.gateway.geojson.Coordinates;
 import org.eclipse.sensinact.gateway.geojson.GeoJsonObject;
 import org.eclipse.sensinact.gateway.geojson.Point;
 import org.eclipse.sensinact.model.core.provider.Admin;
-import org.eclipse.sensinact.model.core.provider.FeatureCustomMetadata;
+import org.eclipse.sensinact.model.core.provider.MetadataValue;
 import org.eclipse.sensinact.model.core.provider.ProviderFactory;
 import org.eclipse.sensinact.model.core.provider.ResourceValueMetadata;
 import org.osgi.service.component.annotations.Activate;
@@ -167,25 +167,16 @@ public class GltConverter {
 		Instant instant = LocalDateTime.parse(time, DateTimeFormatter.ISO_OFFSET_DATE_TIME)
 				.atZone(ZoneId.of("Europe/Berlin")).toInstant();
 		md.setTimestamp(instant);
-//		md.getExtra().put("name", createCustomMetadata(dc.getName()));
-//		md.getExtra().put("pointNumber", createCustomMetadata(dc.getPointNumber()));
-//		md.getExtra().put("pointId", createCustomMetadata(dc.getPointId()));
-		md.getExtra().add(createCustomMetadata("name", dc.getName()));
-		md.getExtra().add(createCustomMetadata("number", dc.getPointNumber()));
-		md.getExtra().add(createCustomMetadata("id", dc.getPointId()));
+		md.getExtra().put("name", createCustomMetadata(dc.getName()));
+		md.getExtra().put("pointNumber", createCustomMetadata(dc.getPointNumber()));
+		md.getExtra().put("pointId", createCustomMetadata(dc.getPointId()));
 		metadata.put(GltPackage.eINSTANCE.getMonitoringData_Value(), md);
 	}
 
-//	private FeatureCustomMetadata createCustomMetadata(Object value) {
-//		FeatureCustomMetadata fcmd = ProviderFactory.eINSTANCE.createFeatureCustomMetadata();
-//		fcmd.setValue(value);
-//		return fcmd;
-//	}
-	private FeatureCustomMetadata createCustomMetadata(String key, Object value) {
-		FeatureCustomMetadata fcmd = ProviderFactory.eINSTANCE.createFeatureCustomMetadata();
-		fcmd.setName(key);
-		fcmd.setValue(value);
-		return fcmd;
+	private MetadataValue createCustomMetadata(Object value) {
+		MetadataValue mv = ProviderFactory.eINSTANCE.createMetadataValue();
+		mv.setValue(value);
+		return mv;
 	}
 }
 // 16842753 16842754  16842755
