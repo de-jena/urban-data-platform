@@ -59,12 +59,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glt.ecore#//RelationPojo/condition"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glt.ecore#//RelationPojo/instructions"/>
     </genClasses>
-    <genClasses ecoreClass="glt.ecore#//CalenderEventRequest">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glt.ecore#//CalenderEventRequest/from"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glt.ecore#//CalenderEventRequest/to"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glt.ecore#//CalenderEventRequest/note"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glt.ecore#//CalenderEventRequest/type"/>
-    </genClasses>
     <genClasses ecoreClass="glt.ecore#//CalendarEventPojo">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glt.ecore#//CalendarEventPojo/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glt.ecore#//CalendarEventPojo/from"/>
@@ -74,6 +68,12 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glt.ecore#//CalendarEventPojo/author"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glt.ecore#//CalendarEventPojo/alarmId"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glt.ecore#//CalendarEventPojo/systemId"/>
+    </genClasses>
+    <genClasses ecoreClass="glt.ecore#//CalenderEventRequest">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glt.ecore#//CalenderEventRequest/from"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glt.ecore#//CalenderEventRequest/to"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glt.ecore#//CalenderEventRequest/note"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glt.ecore#//CalenderEventRequest/type"/>
     </genClasses>
     <genClasses ecoreClass="glt.ecore#//CommentPojo">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glt.ecore#//CommentPojo/id"/>
@@ -366,6 +366,9 @@
     </genClasses>
     <genClasses ecoreClass="glt.ecore#//EntityPojo">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glt.ecore#//EntityPojo/entity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glt.ecore#//EntityPojo/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glt.ecore#//EntityPojo/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glt.ecore#//EntityPojo/systemId"/>
     </genClasses>
     <genClasses ecoreClass="glt.ecore#//EntityRequest">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glt.ecore#//EntityRequest/systemId"/>

@@ -88,15 +88,6 @@ public interface GltFactory extends EFactory {
 	RelationPojo createRelationPojo();
 
 	/**
-	 * Returns a new object of class '<em>Calender Event Request</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Calender Event Request</em>'.
-	 * @generated
-	 */
-	CalenderEventRequest createCalenderEventRequest();
-
-	/**
 	 * Returns a new object of class '<em>Calendar Event Pojo</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -104,6 +95,15 @@ public interface GltFactory extends EFactory {
 	 * @generated
 	 */
 	CalendarEventPojo createCalendarEventPojo();
+
+	/**
+	 * Returns a new object of class '<em>Calender Event Request</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Calender Event Request</em>'.
+	 * @generated
+	 */
+	CalenderEventRequest createCalenderEventRequest();
 
 	/**
 	 * Returns a new object of class '<em>Comment Pojo</em>'.

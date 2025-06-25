@@ -102,7 +102,7 @@ public class GltOpenApi extends GltOpenApiClientImpl {
 			requestURL = requestURL.replace("{" + param.getKey() + "}", param.getValue());
 		}
 		if (!queryParameters.isEmpty()) {
-			requestURL = queryParameters.keySet().stream().map(key -> key + "=" + queryParameters.get(key))
+			requestURL = queryParameters.keySet().stream().filter(key -> !queryParameters.get(key).isEmpty()).map(key -> key + "=" + queryParameters.get(key))
 					.collect(Collectors.joining("&", requestURL + "?", ""));
 
 		}

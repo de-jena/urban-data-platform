@@ -108,15 +108,15 @@ public class GltSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case GltPackage.CALENDER_EVENT_REQUEST: {
-				CalenderEventRequest calenderEventRequest = (CalenderEventRequest)theEObject;
-				T result = caseCalenderEventRequest(calenderEventRequest);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case GltPackage.CALENDAR_EVENT_POJO: {
 				CalendarEventPojo calendarEventPojo = (CalendarEventPojo)theEObject;
 				T result = caseCalendarEventPojo(calendarEventPojo);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GltPackage.CALENDER_EVENT_REQUEST: {
+				CalenderEventRequest calenderEventRequest = (CalenderEventRequest)theEObject;
+				T result = caseCalenderEventRequest(calenderEventRequest);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -501,21 +501,6 @@ public class GltSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Calender Event Request</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Calender Event Request</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseCalenderEventRequest(CalenderEventRequest object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Calendar Event Pojo</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -527,6 +512,21 @@ public class GltSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCalendarEventPojo(CalendarEventPojo object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Calender Event Request</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Calender Event Request</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCalenderEventRequest(CalenderEventRequest object) {
 		return null;
 	}
 

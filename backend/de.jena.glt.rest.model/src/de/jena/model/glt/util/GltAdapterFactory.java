@@ -96,12 +96,12 @@ public class GltAdapterFactory extends AdapterFactoryImpl {
 				return createRelationPojoAdapter();
 			}
 			@Override
-			public Adapter caseCalenderEventRequest(CalenderEventRequest object) {
-				return createCalenderEventRequestAdapter();
-			}
-			@Override
 			public Adapter caseCalendarEventPojo(CalendarEventPojo object) {
 				return createCalendarEventPojoAdapter();
+			}
+			@Override
+			public Adapter caseCalenderEventRequest(CalenderEventRequest object) {
+				return createCalenderEventRequestAdapter();
 			}
 			@Override
 			public Adapter caseCommentPojo(CommentPojo object) {
@@ -402,20 +402,6 @@ public class GltAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.jena.model.glt.CalenderEventRequest <em>Calender Event Request</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.jena.model.glt.CalenderEventRequest
-	 * @generated
-	 */
-	public Adapter createCalenderEventRequestAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link de.jena.model.glt.CalendarEventPojo <em>Calendar Event Pojo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -426,6 +412,20 @@ public class GltAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCalendarEventPojoAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.model.glt.CalenderEventRequest <em>Calender Event Request</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.model.glt.CalenderEventRequest
+	 * @generated
+	 */
+	public Adapter createCalenderEventRequestAdapter() {
 		return null;
 	}
 

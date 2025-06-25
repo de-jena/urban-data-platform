@@ -64,8 +64,8 @@ public class GltFactoryImpl extends EFactoryImpl implements GltFactory {
 			case GltPackage.LINKED_ID_STRING: return createLinkedIdString();
 			case GltPackage.INSTRUCTIONS_POJO: return createInstructionsPojo();
 			case GltPackage.RELATION_POJO: return createRelationPojo();
-			case GltPackage.CALENDER_EVENT_REQUEST: return createCalenderEventRequest();
 			case GltPackage.CALENDAR_EVENT_POJO: return createCalendarEventPojo();
+			case GltPackage.CALENDER_EVENT_REQUEST: return createCalenderEventRequest();
 			case GltPackage.COMMENT_POJO: return createCommentPojo();
 			case GltPackage.STATUS_POJO: return createStatusPojo();
 			case GltPackage.COMMENT_REQUEST: return createCommentRequest();
@@ -227,9 +227,9 @@ public class GltFactoryImpl extends EFactoryImpl implements GltFactory {
 	 * @generated
 	 */
 	@Override
-	public CalenderEventRequest createCalenderEventRequest() {
-		CalenderEventRequestImpl calenderEventRequest = new CalenderEventRequestImpl();
-		return calenderEventRequest;
+	public CalendarEventPojo createCalendarEventPojo() {
+		CalendarEventPojoImpl calendarEventPojo = new CalendarEventPojoImpl();
+		return calendarEventPojo;
 	}
 
 	/**
@@ -238,9 +238,9 @@ public class GltFactoryImpl extends EFactoryImpl implements GltFactory {
 	 * @generated
 	 */
 	@Override
-	public CalendarEventPojo createCalendarEventPojo() {
-		CalendarEventPojoImpl calendarEventPojo = new CalendarEventPojoImpl();
-		return calendarEventPojo;
+	public CalenderEventRequest createCalenderEventRequest() {
+		CalenderEventRequestImpl calenderEventRequest = new CalenderEventRequestImpl();
+		return calenderEventRequest;
 	}
 
 	/**

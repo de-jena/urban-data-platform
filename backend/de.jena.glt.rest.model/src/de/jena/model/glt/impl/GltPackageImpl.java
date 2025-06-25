@@ -94,14 +94,14 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass calenderEventRequestEClass = null;
+	private EClass calendarEventPojoEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass calendarEventPojoEClass = null;
+	private EClass calenderEventRequestEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -950,59 +950,6 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getCalenderEventRequest() {
-		if (calenderEventRequestEClass == null) {
-			calenderEventRequestEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(GltPackage.eNS_URI).getEClassifiers().get(8);
-		}
-		return calenderEventRequestEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getCalenderEventRequest_From() {
-        return (EAttribute)getCalenderEventRequest().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getCalenderEventRequest_To() {
-        return (EAttribute)getCalenderEventRequest().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getCalenderEventRequest_Note() {
-        return (EAttribute)getCalenderEventRequest().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getCalenderEventRequest_Type() {
-        return (EAttribute)getCalenderEventRequest().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getCalendarEventPojo() {
 		if (calendarEventPojoEClass == null) {
 			calendarEventPojoEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(GltPackage.eNS_URI).getEClassifiers().get(7);
@@ -1088,6 +1035,59 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	@Override
 	public EAttribute getCalendarEventPojo_SystemId() {
         return (EAttribute)getCalendarEventPojo().getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getCalenderEventRequest() {
+		if (calenderEventRequestEClass == null) {
+			calenderEventRequestEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(GltPackage.eNS_URI).getEClassifiers().get(8);
+		}
+		return calenderEventRequestEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCalenderEventRequest_From() {
+        return (EAttribute)getCalenderEventRequest().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCalenderEventRequest_To() {
+        return (EAttribute)getCalenderEventRequest().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCalenderEventRequest_Note() {
+        return (EAttribute)getCalenderEventRequest().getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCalenderEventRequest_Type() {
+        return (EAttribute)getCalenderEventRequest().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -3780,6 +3780,36 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	@Override
 	public EAttribute getEntityPojo_Entity() {
         return (EAttribute)getEntityPojo().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEntityPojo_Id() {
+        return (EAttribute)getEntityPojo().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEntityPojo_Name() {
+        return (EAttribute)getEntityPojo().getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEntityPojo_SystemId() {
+        return (EAttribute)getEntityPojo().getEStructuralFeatures().get(3);
 	}
 
 	/**

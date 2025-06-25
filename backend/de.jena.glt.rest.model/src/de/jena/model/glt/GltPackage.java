@@ -594,70 +594,6 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int RELATION_POJO_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link de.jena.model.glt.impl.CalenderEventRequestImpl <em>Calender Event Request</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.jena.model.glt.impl.CalenderEventRequestImpl
-	 * @see de.jena.model.glt.impl.GltPackageImpl#getCalenderEventRequest()
-	 * @generated
-	 */
-	int CALENDER_EVENT_REQUEST = 7;
-
-	/**
-	 * The feature id for the '<em><b>From</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALENDER_EVENT_REQUEST__FROM = 0;
-
-	/**
-	 * The feature id for the '<em><b>To</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALENDER_EVENT_REQUEST__TO = 1;
-
-	/**
-	 * The feature id for the '<em><b>Note</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALENDER_EVENT_REQUEST__NOTE = 2;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALENDER_EVENT_REQUEST__TYPE = 3;
-
-	/**
-	 * The number of structural features of the '<em>Calender Event Request</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALENDER_EVENT_REQUEST_FEATURE_COUNT = 4;
-
-	/**
-	 * The number of operations of the '<em>Calender Event Request</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALENDER_EVENT_REQUEST_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link de.jena.model.glt.impl.CalendarEventPojoImpl <em>Calendar Event Pojo</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -665,7 +601,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.model.glt.impl.GltPackageImpl#getCalendarEventPojo()
 	 * @generated
 	 */
-	int CALENDAR_EVENT_POJO = 8;
+	int CALENDAR_EVENT_POJO = 7;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -756,6 +692,70 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @ordered
 	 */
 	int CALENDAR_EVENT_POJO_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.model.glt.impl.CalenderEventRequestImpl <em>Calender Event Request</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.model.glt.impl.CalenderEventRequestImpl
+	 * @see de.jena.model.glt.impl.GltPackageImpl#getCalenderEventRequest()
+	 * @generated
+	 */
+	int CALENDER_EVENT_REQUEST = 8;
+
+	/**
+	 * The feature id for the '<em><b>From</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALENDER_EVENT_REQUEST__FROM = 0;
+
+	/**
+	 * The feature id for the '<em><b>To</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALENDER_EVENT_REQUEST__TO = 1;
+
+	/**
+	 * The feature id for the '<em><b>Note</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALENDER_EVENT_REQUEST__NOTE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALENDER_EVENT_REQUEST__TYPE = 3;
+
+	/**
+	 * The number of structural features of the '<em>Calender Event Request</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALENDER_EVENT_REQUEST_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Calender Event Request</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALENDER_EVENT_REQUEST_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link de.jena.model.glt.impl.CommentPojoImpl <em>Comment Pojo</em>}' class.
@@ -3717,13 +3717,40 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int ENTITY_POJO__ENTITY = 0;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_POJO__ID = 1;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_POJO__NAME = 2;
+
+	/**
+	 * The feature id for the '<em><b>System Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_POJO__SYSTEM_ID = 3;
+
+	/**
 	 * The number of structural features of the '<em>Entity Pojo</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_POJO_FEATURE_COUNT = 1;
+	int ENTITY_POJO_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Entity Pojo</em>' class.
@@ -6232,60 +6259,6 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getRelationPojo_Instructions();
 
 	/**
-	 * Returns the meta object for class '{@link de.jena.model.glt.CalenderEventRequest <em>Calender Event Request</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Calender Event Request</em>'.
-	 * @see de.jena.model.glt.CalenderEventRequest
-	 * @generated
-	 */
-	EClass getCalenderEventRequest();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.CalenderEventRequest#getFrom <em>From</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>From</em>'.
-	 * @see de.jena.model.glt.CalenderEventRequest#getFrom()
-	 * @see #getCalenderEventRequest()
-	 * @generated
-	 */
-	EAttribute getCalenderEventRequest_From();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.CalenderEventRequest#getTo <em>To</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>To</em>'.
-	 * @see de.jena.model.glt.CalenderEventRequest#getTo()
-	 * @see #getCalenderEventRequest()
-	 * @generated
-	 */
-	EAttribute getCalenderEventRequest_To();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.CalenderEventRequest#getNote <em>Note</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Note</em>'.
-	 * @see de.jena.model.glt.CalenderEventRequest#getNote()
-	 * @see #getCalenderEventRequest()
-	 * @generated
-	 */
-	EAttribute getCalenderEventRequest_Note();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.glt.CalenderEventRequest#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see de.jena.model.glt.CalenderEventRequest#getType()
-	 * @see #getCalenderEventRequest()
-	 * @generated
-	 */
-	EAttribute getCalenderEventRequest_Type();
-
-	/**
 	 * Returns the meta object for class '{@link de.jena.model.glt.CalendarEventPojo <em>Calendar Event Pojo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6382,6 +6355,60 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EAttribute getCalendarEventPojo_SystemId();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.model.glt.CalenderEventRequest <em>Calender Event Request</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Calender Event Request</em>'.
+	 * @see de.jena.model.glt.CalenderEventRequest
+	 * @generated
+	 */
+	EClass getCalenderEventRequest();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.CalenderEventRequest#getFrom <em>From</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>From</em>'.
+	 * @see de.jena.model.glt.CalenderEventRequest#getFrom()
+	 * @see #getCalenderEventRequest()
+	 * @generated
+	 */
+	EAttribute getCalenderEventRequest_From();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.CalenderEventRequest#getTo <em>To</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>To</em>'.
+	 * @see de.jena.model.glt.CalenderEventRequest#getTo()
+	 * @see #getCalenderEventRequest()
+	 * @generated
+	 */
+	EAttribute getCalenderEventRequest_To();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.CalenderEventRequest#getNote <em>Note</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Note</em>'.
+	 * @see de.jena.model.glt.CalenderEventRequest#getNote()
+	 * @see #getCalenderEventRequest()
+	 * @generated
+	 */
+	EAttribute getCalenderEventRequest_Note();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.CalenderEventRequest#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see de.jena.model.glt.CalenderEventRequest#getType()
+	 * @see #getCalenderEventRequest()
+	 * @generated
+	 */
+	EAttribute getCalenderEventRequest_Type();
 
 	/**
 	 * Returns the meta object for class '{@link de.jena.model.glt.CommentPojo <em>Comment Pojo</em>}'.
@@ -9197,6 +9224,39 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EAttribute getEntityPojo_Entity();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.EntityPojo#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see de.jena.model.glt.EntityPojo#getId()
+	 * @see #getEntityPojo()
+	 * @generated
+	 */
+	EAttribute getEntityPojo_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.EntityPojo#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see de.jena.model.glt.EntityPojo#getName()
+	 * @see #getEntityPojo()
+	 * @generated
+	 */
+	EAttribute getEntityPojo_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.model.glt.EntityPojo#getSystemId <em>System Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>System Id</em>'.
+	 * @see de.jena.model.glt.EntityPojo#getSystemId()
+	 * @see #getEntityPojo()
+	 * @generated
+	 */
+	EAttribute getEntityPojo_SystemId();
 
 	/**
 	 * Returns the meta object for class '{@link de.jena.model.glt.EntityRequest <em>Entity Request</em>}'.

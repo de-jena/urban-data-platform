@@ -5,9 +5,10 @@ import java.lang.System.Logger.Level;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
-import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.util.Arrays;
+import java.util.Locale;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -37,6 +38,7 @@ import de.jena.glt.sensinact.model.glt.GltPackage;
 import de.jena.glt.sensinact.model.glt.GltSide;
 import de.jena.glt.sensinact.model.glt.MonitoringData;
 import de.jena.model.glt.DatalogContentPojo;
+import de.jena.model.glt.EntityPojo;
 import de.jena.model.glt.Response;
 import de.jena.model.glt.SystemDescriptionPojo;
 
@@ -51,6 +53,8 @@ import de.jena.model.glt.SystemDescriptionPojo;
 public class GltConverter {
 	private static final Logger logger = System.getLogger(GltConverter.class.getName());
 
+	private DateTimeFormatter dateFormat = DateTimeFormatter.ISO_OFFSET_DATE_TIME.withLocale(Locale.GERMANY).withZone( ZoneId.of("CET"));
+	
 	@Reference
 	private GltOpenApi gltOpenApi;
 	@Reference
@@ -64,6 +68,8 @@ public class GltConverter {
 
 	private String friendlyName;
 
+	private int[] points;
+
 	@Activate
 	public void activate(GltConfiguration config) {
 		this.conf = config;
@@ -76,6 +82,24 @@ public class GltConverter {
 		executor.shutdown();
 	}
 
+	private void initPoints() {
+		if(points != null) {
+			return;
+		}
+		if(conf.points().length != 0) {
+			points = conf.points();
+		} else {
+			int systemId = Integer.parseInt(conf.systemID());
+			Response entitiesByTypes = gltOpenApi.getEntitiesByTypes(systemId, ECollections.asEList("DATALOG","ANALOG_HARDWARE","DIGITAL_HARDWARE") , ECollections.emptyEList());
+			EList<EObject> result = entitiesByTypes.getResult();
+			logger.log(Level.INFO, "Load points from {0}", systemId);
+			points = result.stream() //
+					.filter(EntityPojo.class::isInstance).map(EntityPojo.class::cast) //
+					.mapToInt(EntityPojo::getId).toArray();
+		}
+		
+	}
+	
 	private void initSide() {
 		String systemId = conf.systemID();
 		Response response = gltOpenApi.getSystem(systemId, false);
@@ -111,11 +135,13 @@ public class GltConverter {
 	}
 
 	private void update() {
-		int systemId = Integer.parseInt(conf.systemID());
-		EList<Integer> point = ECollections.asEList(Arrays.stream(conf.points()).boxed().toList());
-		String from = DateTimeFormatter.ISO_OFFSET_DATE_TIME.format(LocalDateTime.now().minusMinutes(conf.back()).atOffset(ZoneOffset.of("+00:00")));
-		String to = DateTimeFormatter.ISO_OFFSET_DATE_TIME.format(LocalDateTime.now().plusMinutes(1).atOffset(ZoneOffset.of("+00:00")));
 		try {
+			initPoints();
+			int systemId = Integer.parseInt(conf.systemID());
+			EList<Integer> point = ECollections.asEList(Arrays.stream(points).boxed().toList());
+			
+			String from = dateFormat.format(Instant.now().minus(conf.back(), ChronoUnit.MINUTES));
+			String to = dateFormat.format(Instant.now().plus(1, ChronoUnit.MINUTES));
 			Response response = gltOpenApi.getDatalogContent(systemId, point, from, to);
 			int code = response.getCode();
 			if (code == 200) {
@@ -125,7 +151,7 @@ public class GltConverter {
 				updateAdmin(glt);
 				for (EObject object : result) {
 					DatalogContentPojo dc = (DatalogContentPojo) object;
-					logger.log(Level.INFO, "Data: " + dc);
+					logger.log(Level.DEBUG, "Data: " + dc);
 					updateService(glt, dc);
 				}
 				sensiNact.pushUpdate(glt);
@@ -136,7 +162,7 @@ public class GltConverter {
 				logger.log(Level.INFO, "Response Code: " + code + " : " + response.getDescription());
 			}
 		} catch (Exception e) {
-			logger.log(Level.ERROR, "Error while updating datalog content for system {0}", conf.systemID(), e);
+			logger.log(Level.ERROR, "Error while updating datalog content for system " + conf.systemID(), e);
 		}
 	}
 
