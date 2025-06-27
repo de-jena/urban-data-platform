@@ -28,6 +28,7 @@ import org.eclipse.sensinact.gateway.geojson.Coordinates;
 import org.eclipse.sensinact.gateway.geojson.Feature;
 import org.eclipse.sensinact.gateway.geojson.FeatureCollection;
 import org.eclipse.sensinact.gateway.geojson.Polygon;
+import org.eclipse.sensinact.gateway.geojson.utils.GeoJsonUtils;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.ConfigurationPolicy;
@@ -110,7 +111,8 @@ public class TrafficConflictNotification implements TypedEventHandler<ResourceDa
 		admin.setFriendlyName("Conflict Bike Car Felsenkeller");
 		provider.setId("Conflict01");
 		provider.setAdmin(admin);
-		admin.setLocation(createViewport());
+		admin.setViewport(createViewport());
+		admin.setLocation(GeoJsonUtils.point(11.581274, 50.921142));
 		conflict = ConflictFactory.eINSTANCE.createConflict();
 		conflict.setConflict(true);
 		provider.setConflict(conflict);
@@ -126,11 +128,11 @@ public class TrafficConflictNotification implements TypedEventHandler<ResourceDa
 	
 	@Override
 	public void notify(String topic, ResourceDataNotification event) {
-		promiseFactory.submit(() -> handleNotify(topic, event))
+		promiseFactory.submit(() -> handleNotify(event))
 				.onFailure(e -> logger.log(Level.ERROR, "Error while handling notification from {0}.\n{1}", topic, e));
 	}
 
-	public boolean handleNotify(String topic, ResourceDataNotification event) {
+	public boolean handleNotify(ResourceDataNotification event) {
 
 		logger.log(Level.DEBUG, "Event: {0} - {1}", event.getTopic(), event.timestamp());
 
