@@ -19,9 +19,8 @@ import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.ETypedElement;
 import org.eclipse.sensinact.core.push.DataUpdate;
-import org.eclipse.sensinact.gateway.geojson.Coordinates;
 import org.eclipse.sensinact.gateway.geojson.GeoJsonObject;
-import org.eclipse.sensinact.gateway.geojson.Point;
+import org.eclipse.sensinact.gateway.geojson.utils.GeoJsonUtils;
 import org.eclipse.sensinact.model.core.provider.Admin;
 import org.eclipse.sensinact.model.core.provider.MetadataValue;
 import org.eclipse.sensinact.model.core.provider.ProviderFactory;
@@ -120,18 +119,13 @@ public class GltConverter {
 	}
 
 	private void initGeo(SystemDescriptionPojo site) {
-		Point point = new Point();
 		Double lon = site.getLon();
 		Double lat = site.getLat();
 		if (lon == null || lat == null) {
 			lat = 50.928685;
 			lon = 11.583359;
 		}
-		Coordinates coordinates = new Coordinates();
-		point.coordinates = coordinates;
-		coordinates.longitude = lon;
-		coordinates.latitude = lat;
-		geoJson = point;
+		geoJson = GeoJsonUtils.point(lon, lat);
 	}
 
 	private void update() {

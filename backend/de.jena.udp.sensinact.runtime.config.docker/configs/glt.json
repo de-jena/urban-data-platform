@@ -1,0 +1,14 @@
+{
+    ":configurator:resource-version": 1,
+    ":configurator:version": "1.0.0",
+    ":configurator:symbolic-name": "GLT Config",
+    "Glt~Leichtathletikstadion": {
+        "systemID": "065",
+        "interval": "1",
+        "back": 1440
+    },
+    "GltOpenApi~glt": {
+        "url": "https://glt.jena.de/rest/v1",
+        "apiKey": "$[env:GLT_API_KEY;default=$[prop:GLT_API_KEY;default=]]"
+    }
+}
