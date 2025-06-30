@@ -24,6 +24,7 @@ import org.eclipse.sensinact.gateway.geojson.utils.GeoJsonUtils;
 import org.eclipse.sensinact.model.core.provider.Admin;
 import org.eclipse.sensinact.model.core.provider.MetadataValue;
 import org.eclipse.sensinact.model.core.provider.ProviderFactory;
+import org.eclipse.sensinact.model.core.provider.ProviderPackage;
 import org.eclipse.sensinact.model.core.provider.ResourceValueMetadata;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
@@ -68,6 +69,8 @@ public class GltConverter {
 	private String friendlyName;
 
 	private int[] points;
+
+	private Instant locationTimestamp;
 
 	@Activate
 	public void activate(GltConfiguration config) {
@@ -145,7 +148,7 @@ public class GltConverter {
 				updateAdmin(glt);
 				for (EObject object : result) {
 					DatalogContentPojo dc = (DatalogContentPojo) object;
-					logger.log(Level.DEBUG, "Data: " + dc);
+					logger.log(Level.INFO, "Data: " + dc);
 					updateService(glt, dc);
 				}
 				sensiNact.pushUpdate(glt);
@@ -162,9 +165,15 @@ public class GltConverter {
 
 	private void updateAdmin(GltSide glt) {
 		Admin admin = ProviderFactory.eINSTANCE.createAdmin();
+		if(locationTimestamp == null) {
+			locationTimestamp = Instant.now();
+		}
 		glt.setAdmin(admin);
 		if(friendlyName == null) initSide();
 		admin.setLocation(geoJson);
+		ResourceValueMetadata meta = ProviderFactory.eINSTANCE.createResourceValueMetadata();
+		meta.setTimestamp(locationTimestamp);
+		admin.getMetadata().put(ProviderPackage.Literals.ADMIN__LOCATION, meta );
 		admin.setFriendlyName(friendlyName);
 	}
 

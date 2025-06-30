@@ -4,7 +4,7 @@
     ":configurator:symbolic-name": "GLT Config",
     "Glt~Leichtathletikstadion": {
         "systemID": "065",
-        "interval": "1",
+        "interval": "10",
         "back": 1440
     },
     "GltOpenApi~glt": {
