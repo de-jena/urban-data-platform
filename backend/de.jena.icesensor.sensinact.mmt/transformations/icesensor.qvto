@@ -13,10 +13,10 @@ query getENow() : EInstant {
 }
 
 main() {
-	sensor.rootObjects()[SENSOR::IceSENSOR] -> map sensorToRervice(); 
+	sensor.rootObjects()[SENSOR::IceSENSOR] -> map sensorToService(); 
 }
 
-mapping SENSOR::IceSENSOR::sensorToRervice(): SENSINACT::IceSensor {
+mapping SENSOR::IceSENSOR::sensorToService(): SENSINACT::IceSensor {
 	var eClass := SENSINACT::SensorData.oclAsType(ECORE::EClass);
 	
 	id := self.ice_id;
@@ -36,7 +36,7 @@ mapping SENSOR::IceSENSOR::sensorToRervice(): SENSINACT::IceSensor {
 	_2_5p := self.data._2_5p.map sensorToRervice("2.5P", "PM_2_5");
 }
 
-mapping SENSOR::IceSENSOR::toAdmin(): PROVIDER::Admin{
+mapping SENSOR::IceSENSOR::toAdmin(): PROVIDER::Admin {
 	friendlyName := "ICECat Sensor - " + self.ice_id;
 }
 mapping SENSOR::SensorData::sensorToRervice(friendlyServiceName : String, type : String): SENSINACT::SensorData {
