@@ -10,54 +10,59 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ibisAdmin" eType="#//IbisAdmin"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="customerInfoAllData" eType="#//CustomerInfoAllData"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="customerInfoAll" eType="#//CustomerInfoAll"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="customerInfoCurrentStopIndexData"
-        eType="#//CustomerInfoCurrentStopIndexData" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="customerInfoCurrentStopPointData"
-        eType="#//CustomerInfoCurrentStopPointData" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="customerInfoTripData" eType="#//CustomerInfoTripData"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="customerInfoCurrentStopIndex"
+        eType="#//CustomerInfoCurrentStopIndex" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="customerInfoCurrentStopPoint"
+        eType="#//CustomerInfoCurrentStopPoint" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="customerInfoTrip" eType="#//CustomerInfoTrip"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="customerInfoVehicleData"
-        eType="#//CustomerInfoVehicleData" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="customerInfoCurrentAnnouncementData"
-        eType="#//CustomerInfoCurrentAnnouncementData" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="customerInfoCurrentConnectionData"
-        eType="#//CustomerInfoCurrentConnectionData" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="customerInfoCurrentDisplayContentData"
-        eType="#//CustomerInfoCurrentDisplayContentData" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="door1CountingState" eType="#//PassengerCountingDoorCountingState"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="customerInfoVehicle" eType="#//CustomerInfoVehicle"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="customerInfoCurrentAnnouncement"
+        eType="#//CustomerInfoCurrentAnnouncement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="customerInfoCurrentConnection"
+        eType="#//CustomerInfoCurrentConnection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="customerInfoCurrentDisplayContent"
+        eType="#//CustomerInfoCurrentDisplayContent" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="door1CountingState" eType="#//PassengerCountingDoorCounting"
         unsettable="true" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="door2CountingState" eType="#//PassengerCountingDoorCountingState"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="door2CountingState" eType="#//PassengerCountingDoorCounting"
         unsettable="true" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="door3CountingState" eType="#//PassengerCountingDoorCountingState"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="door3CountingState" eType="#//PassengerCountingDoorCounting"
         unsettable="true" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="door4CountingState" eType="#//PassengerCountingDoorCountingState"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="door4CountingState" eType="#//PassengerCountingDoorCounting"
         unsettable="true" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="door1State" eType="#//DoorState"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="door1State" eType="#//Door"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="door2State" eType="#//DoorState"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="door2State" eType="#//Door"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="door3State" eType="#//DoorState"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="door3State" eType="#//Door"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="door4State" eType="#//DoorState"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="door4State" eType="#//Door"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="stopRequested" eType="#//StopRequested"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="gnssLocationData" eType="#//GNSSLocationData"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gnssLocation" eType="#//GNSSLocation"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="currentTariffStopData"
-        eType="#//TicketValidationCurrentTariffStopData" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="razziaData" eType="#//TicketValidationRazziaData"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="currentTariffStop" eType="#//TicketValidationCurrentTariffStop"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="currentLineData" eType="#//TicketValidationCurrentLineData"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="razzia" eType="#//TicketValidationRazzia"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="vehicleData" eType="#//TicketValidationVehicleData"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="currentLine" eType="#//TicketValidationCurrentLine"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vehicle" eType="#//TicketValidationVehicle"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tripInfo" eType="#//TripInfo"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CustomerInfoAllData" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+  <eClassifiers xsi:type="ecore:EClass" name="IbisResource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CustomerInfoAll" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resource" eType="#//CustomerInfoAllData"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CustomerInfoAllData" eSuperTypes="#//IbisResource">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceName" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceOperation" lowerBound="1"
@@ -84,7 +89,11 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tripState" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CustomerInfoCurrentStopIndexData" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+  <eClassifiers xsi:type="ecore:EClass" name="CustomerInfoCurrentStopIndex" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resource" eType="#//CustomerInfoCurrentStopIndexData"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CustomerInfoCurrentStopIndexData" eSuperTypes="#//IbisResource">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceName" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceOperation" lowerBound="1"
@@ -94,7 +103,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentStopIndex" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="-1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CustomerInfoCurrentStopPointData" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+  <eClassifiers xsi:type="ecore:EClass" name="CustomerInfoCurrentStopPoint" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resource" eType="#//CustomerInfoCurrentStopPointData"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CustomerInfoCurrentStopPointData" eSuperTypes="#//IbisResource">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceName" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceOperation" lowerBound="1"
@@ -120,7 +133,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fareZone" upperBound="-1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CustomerInfoTripData" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+  <eClassifiers xsi:type="ecore:EClass" name="CustomerInfoTrip" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resource" eType="#//CustomerInfoTripData"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CustomerInfoTripData" eSuperTypes="#//IbisResource">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceName" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceOperation" lowerBound="1"
@@ -160,7 +177,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="additionalTextMsg8" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="additionalTextMsg9" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CustomerInfoVehicleData" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+  <eClassifiers xsi:type="ecore:EClass" name="CustomerInfoVehicle" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resource" eType="#//CustomerInfoVehicleData"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CustomerInfoVehicleData" eSuperTypes="#//IbisResource">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceName" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceOperation" lowerBound="1"
@@ -183,8 +204,12 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tripState" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CustomerInfoCurrentAnnouncement" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resource" eType="#//CustomerInfoCurrentAnnouncementData"
+        containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CustomerInfoCurrentAnnouncementData"
-      eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+      eSuperTypes="#//IbisResource">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceName" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceOperation" lowerBound="1"
@@ -198,7 +223,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="announcementTTSText" upperBound="-1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CustomerInfoCurrentConnectionData" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+  <eClassifiers xsi:type="ecore:EClass" name="CustomerInfoCurrentConnection" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resource" eType="#//CustomerInfoCurrentConnectionData"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CustomerInfoCurrentConnectionData" eSuperTypes="#//IbisResource">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceName" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceOperation" lowerBound="1"
@@ -206,8 +235,12 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" lowerBound="1"
         eType="ecore:EDataType ../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//EInstant"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CustomerInfoCurrentDisplayContent" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resource" eType="#//CustomerInfoCurrentDisplayContentData"
+        containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CustomerInfoCurrentDisplayContentData"
-      eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+      eSuperTypes="#//IbisResource">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceName" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceOperation" lowerBound="1"
@@ -219,8 +252,12 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="deviceType" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PassengerCountingDoorCounting" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resource" eType="#//PassengerCountingDoorCountingState"
+        containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PassengerCountingDoorCountingState"
-      eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+      eSuperTypes="#//IbisResource">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceName" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceOperation" lowerBound="1"
@@ -234,7 +271,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="in" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="out" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DoorState" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+  <eClassifiers xsi:type="ecore:EClass" name="Door" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resource" eType="#//DoorState"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DoorState" eSuperTypes="#//IbisResource">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceName" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceOperation" lowerBound="1"
@@ -255,7 +296,11 @@
         eType="ecore:EDataType ../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//EInstant"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="stopRequested" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GNSSLocationData" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+  <eClassifiers xsi:type="ecore:EClass" name="GNSSLocation" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resource" eType="#//GNSSLocationData"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GNSSLocationData" eSuperTypes="#//IbisResource">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceName" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceOperation" lowerBound="1"
@@ -285,8 +330,12 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="gNSSCoordinateSystem" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TicketValidationCurrentTariffStop" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resource" eType="#//TicketValidationCurrentTariffStopData"
+        containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TicketValidationCurrentTariffStopData"
-      eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+      eSuperTypes="#//IbisResource">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceName" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceOperation" lowerBound="1"
@@ -312,7 +361,10 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentTripRef" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TicketValidationRazziaData" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+  <eClassifiers xsi:type="ecore:EClass" name="TicketValidationRazzia" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resource" eType="#//TicketValidationRazziaData"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TicketValidationRazziaData" eSuperTypes="#//IbisResource">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceName" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceOperation" lowerBound="1"
@@ -321,7 +373,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="razziaState" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TicketValidationCurrentLineData" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+  <eClassifiers xsi:type="ecore:EClass" name="TicketValidationCurrentLine" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resource" eType="#//TicketValidationCurrentLineData"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TicketValidationCurrentLineData" eSuperTypes="#//IbisResource">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceName" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceOperation" lowerBound="1"
@@ -338,7 +394,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lineCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="-1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TicketValidationVehicleData" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+  <eClassifiers xsi:type="ecore:EClass" name="TicketValidationVehicle" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resource" eType="#//TicketValidationVehicleData"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TicketValidationVehicleData" eSuperTypes="#//IbisResource">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceName" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceOperation" lowerBound="1"
@@ -355,6 +415,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="driverNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TripInfo" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resource" eType="#//TripInfoData"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TripInfoData" eSuperTypes="#//IbisResource">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="deviceType" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lineName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

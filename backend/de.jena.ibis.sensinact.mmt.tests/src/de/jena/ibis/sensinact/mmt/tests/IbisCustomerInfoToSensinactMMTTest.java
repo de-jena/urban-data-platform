@@ -59,15 +59,22 @@ import de.jena.model.ibis.enumerations.RouteDeviationEnumeration;
 import de.jena.model.ibis.enumerations.RouteDirectionEnumeration;
 import de.jena.model.ibis.enumerations.TripStateEnumeration;
 import de.jena.model.ibis.enumerations.VehicleModeEnumeration;
+import de.jena.model.sensinact.ibis.CustomerInfoAll;
 import de.jena.model.sensinact.ibis.CustomerInfoAllData;
+import de.jena.model.sensinact.ibis.CustomerInfoCurrentAnnouncement;
 import de.jena.model.sensinact.ibis.CustomerInfoCurrentAnnouncementData;
+import de.jena.model.sensinact.ibis.CustomerInfoCurrentConnection;
 import de.jena.model.sensinact.ibis.CustomerInfoCurrentConnectionData;
+import de.jena.model.sensinact.ibis.CustomerInfoCurrentDisplayContent;
 import de.jena.model.sensinact.ibis.CustomerInfoCurrentDisplayContentData;
+import de.jena.model.sensinact.ibis.CustomerInfoCurrentStopIndex;
 import de.jena.model.sensinact.ibis.CustomerInfoCurrentStopIndexData;
+import de.jena.model.sensinact.ibis.CustomerInfoCurrentStopPoint;
 import de.jena.model.sensinact.ibis.CustomerInfoCurrentStopPointData;
+import de.jena.model.sensinact.ibis.CustomerInfoTrip;
 import de.jena.model.sensinact.ibis.CustomerInfoTripData;
+import de.jena.model.sensinact.ibis.CustomerInfoVehicle;
 import de.jena.model.sensinact.ibis.CustomerInfoVehicleData;
-import de.jena.model.sensinact.ibis.IbisDevice;
 
 
 /**
@@ -111,11 +118,8 @@ public class IbisCustomerInfoToSensinactMMTTest {
 		data.setTripState(TripStateEnumeration.OFF_DUTY);
 		response.setAllData(data);
 		
-		
-		IbisDevice sensinactDevice = (IbisDevice) transformator.doTransformation(response);
-		assertThat(sensinactDevice).isNotNull();
-		
-		CustomerInfoAllData sensinactData = sensinactDevice.getCustomerInfoAllData();
+		CustomerInfoAll customerInfoAll = transformator.doTransformation(response);
+		CustomerInfoAllData sensinactData = customerInfoAll.getResource();
 		assertThat(sensinactData).isNotNull();
 		assertThat(sensinactData.getTimestamp()).isNotNull();
 		assertThat(sensinactData.getDefaultLanguage()).isEqualTo("en");
@@ -132,8 +136,8 @@ public class IbisCustomerInfoToSensinactMMTTest {
 		assertThat(sensinactData.getVehicleMode()).isEqualTo(VehicleModeEnumeration.BUS.getLiteral());
 		assertThat(sensinactData.getTripState()).isEqualTo(TripStateEnumeration.OFF_DUTY.getLiteral());
 		
-		assertThat(sensinactData.getMetadata()).isNotEmpty();
-		assertThat(sensinactData.getMetadata()).hasSize(13);		
+		assertThat(customerInfoAll.getMetadata()).isNotEmpty();
+		assertThat(customerInfoAll.getMetadata()).hasSize(13);		
 	}
 	
 	@Test
@@ -145,13 +149,11 @@ public class IbisCustomerInfoToSensinactMMTTest {
 		
 		response.setCurrentConnectionData(data);
 		
-		IbisDevice sensinactDevice = (IbisDevice) transformator.doTransformation(response);
-		assertThat(sensinactDevice).isNotNull();
-		
-		CustomerInfoCurrentConnectionData sensinactData = sensinactDevice.getCustomerInfoCurrentConnectionData();
+		CustomerInfoCurrentConnection service = transformator.doTransformation(response);
+		CustomerInfoCurrentConnectionData sensinactData = service.getResource();
 		assertThat(sensinactData).isNotNull();
 		assertThat(sensinactData.getTimestamp()).isNotNull();
-		assertThat(sensinactData.getMetadata()).isEmpty();
+		assertThat(service.getMetadata()).isEmpty();
 	}
 	
 	@Test
@@ -162,13 +164,11 @@ public class IbisCustomerInfoToSensinactMMTTest {
 		data.setTimeStamp(IbisToSensinactTestHelper.createIbisDateTime(new Date()));		
 		response.setCurrentDisplayContentData(data);
 		
-		IbisDevice sensinactDevice = (IbisDevice) transformator.doTransformation(response);
-		assertThat(sensinactDevice).isNotNull();
-		
-		CustomerInfoCurrentDisplayContentData sensinactData = sensinactDevice.getCustomerInfoCurrentDisplayContentData();
+		CustomerInfoCurrentDisplayContent service = transformator.doTransformation(response);
+		CustomerInfoCurrentDisplayContentData sensinactData = service.getResource();
 		assertThat(sensinactData).isNotNull();
 		assertThat(sensinactData.getTimestamp()).isNotNull();
-		assertThat(sensinactData.getMetadata()).isEmpty();		
+		assertThat(service.getMetadata()).isEmpty();		
 	}
 	
 	@Test
@@ -188,10 +188,8 @@ public class IbisCustomerInfoToSensinactMMTTest {
 		
 		response.setCurrentAnnouncementData(data);
 		
-		IbisDevice sensinactDevice = (IbisDevice) transformator.doTransformation(response);
-		assertThat(sensinactDevice).isNotNull();
-		
-		CustomerInfoCurrentAnnouncementData sensinactData = sensinactDevice.getCustomerInfoCurrentAnnouncementData();
+		CustomerInfoCurrentAnnouncement service = transformator.doTransformation(response);
+		CustomerInfoCurrentAnnouncementData sensinactData = service.getResource();
 		assertThat(sensinactData).isNotNull();
 		assertThat(sensinactData.getTimestamp()).isNotNull();
 		assertThat(sensinactData.getAnnouncementRef()).isEqualTo("annRefTest");
@@ -200,8 +198,8 @@ public class IbisCustomerInfoToSensinactMMTTest {
 		assertThat(sensinactData.getAnnouncementTTSText()).hasSize(2);
 		assertThat(sensinactData.getAnnouncementTTSText()).contains("TTS Ann 1", "TTS Ann 2");
 		
-		assertThat(sensinactData.getMetadata()).isNotEmpty();
-		assertThat(sensinactData.getMetadata()).hasSize(3);		
+		assertThat(service.getMetadata()).isNotEmpty();
+		assertThat(service.getMetadata()).hasSize(3);		
 	}
 	
 	@Test
@@ -213,17 +211,15 @@ public class IbisCustomerInfoToSensinactMMTTest {
 		data.setCurrentStopIndex(IbisToSensinactTestHelper.createIbisInt(7));
 		
 		response.setCurrentStopIndexData(data);
-		
-		IbisDevice sensinactDevice = (IbisDevice) transformator.doTransformation(response);
-		assertThat(sensinactDevice).isNotNull();
-		
-		CustomerInfoCurrentStopIndexData sensinactData = sensinactDevice.getCustomerInfoCurrentStopIndexData();
+
+		CustomerInfoCurrentStopIndex service = transformator.doTransformation(response);
+		CustomerInfoCurrentStopIndexData sensinactData = service.getResource();
 		assertThat(sensinactData).isNotNull();
 		assertThat(sensinactData.getTimestamp()).isNotNull();
 		assertThat(sensinactData.getCurrentStopIndex()).isEqualTo(7);
 	
-		assertThat(sensinactData.getMetadata()).isNotEmpty();
-		assertThat(sensinactData.getMetadata()).hasSize(1);		
+		assertThat(service.getMetadata()).isNotEmpty();
+		assertThat(service.getMetadata()).hasSize(1);		
 	}
 	
 	@Test
@@ -252,10 +248,8 @@ public class IbisCustomerInfoToSensinactMMTTest {
 		data.setCurrentStopPoint(stopInfo);
 		response.setCurrentStopPointData(data);
 		
-		IbisDevice sensinactDevice = (IbisDevice) transformator.doTransformation(response);
-		assertThat(sensinactDevice).isNotNull();
-		
-		CustomerInfoCurrentStopPointData sensinactData = sensinactDevice.getCustomerInfoCurrentStopPointData();
+		CustomerInfoCurrentStopPoint service = transformator.doTransformation(response);
+		CustomerInfoCurrentStopPointData sensinactData = service.getResource();
 		assertThat(sensinactData).isNotNull();
 		assertThat(sensinactData.getTimestamp()).isNotNull();
 		assertThat(sensinactData.getArrivalExpected()).isNotNull();
@@ -274,8 +268,8 @@ public class IbisCustomerInfoToSensinactMMTTest {
 		assertThat(sensinactData.getFareZone()).hasSize(2);
 		assertThat(sensinactData.getFareZone()).contains("Fare Zone 1", "Fare Zone 2");
 		
-		assertThat(sensinactData.getMetadata()).isNotEmpty();
-		assertThat(sensinactData.getMetadata()).hasSize(12);		
+		assertThat(service.getMetadata()).isNotEmpty();
+		assertThat(service.getMetadata()).hasSize(12);		
 	}
 	
 	@Test
@@ -310,10 +304,8 @@ public class IbisCustomerInfoToSensinactMMTTest {
 		data.setTripInformation(tripInfo);
 		response.setTripData(data);
 		
-		IbisDevice sensinactDevice = (IbisDevice) transformator.doTransformation(response);
-		assertThat(sensinactDevice).isNotNull();
-		
-		CustomerInfoTripData sensinactData = sensinactDevice.getCustomerInfoTripData();
+		CustomerInfoTrip service = transformator.doTransformation(response);
+		CustomerInfoTripData sensinactData = service.getResource();
 		assertThat(sensinactData).isNotNull();
 		assertThat(sensinactData.getTimestamp()).isNotNull();
 		assertThat(sensinactData.getDefaultLanguage()).isEqualTo("en");
@@ -337,8 +329,8 @@ public class IbisCustomerInfoToSensinactMMTTest {
 		assertThat(sensinactData.getAdditionalTextMsg8()).isEqualTo("Msg8");
 		assertThat(sensinactData.getAdditionalTextMsg9()).isEqualTo("Msg9");
 		
-		assertThat(sensinactData.getMetadata()).isNotEmpty();
-		assertThat(sensinactData.getMetadata()).hasSize(20);		
+		assertThat(service.getMetadata()).isNotEmpty();
+		assertThat(service.getMetadata()).hasSize(20);		
 	}
 	
 	@Test
@@ -361,10 +353,8 @@ public class IbisCustomerInfoToSensinactMMTTest {
 		
 		response.setVehicleData(data);
 		
-		IbisDevice sensinactDevice = (IbisDevice) transformator.doTransformation(response);
-		assertThat(sensinactDevice).isNotNull();
-		
-		CustomerInfoVehicleData sensinactData = sensinactDevice.getCustomerInfoVehicleData();
+		CustomerInfoVehicle service = transformator.doTransformation(response);
+		CustomerInfoVehicleData sensinactData = service.getResource();
 		assertThat(sensinactData).isNotNull();
 		assertThat(sensinactData.getTimestamp()).isNotNull();
 		assertThat(sensinactData.getVehicleRef()).isEqualTo("vehicleRefTest");
@@ -379,7 +369,7 @@ public class IbisCustomerInfoToSensinactMMTTest {
 		assertThat(sensinactData.getVehicleMode()).isEqualTo(VehicleModeEnumeration.BUS.getLiteral());
 		assertThat(sensinactData.getTripState()).isEqualTo(TripStateEnumeration.OFF_DUTY.getLiteral());
 		
-		assertThat(sensinactData.getMetadata()).isNotEmpty();
-		assertThat(sensinactData.getMetadata()).hasSize(11);		
+		assertThat(service.getMetadata()).isNotEmpty();
+		assertThat(service.getMetadata()).hasSize(11);		
 	}
 }

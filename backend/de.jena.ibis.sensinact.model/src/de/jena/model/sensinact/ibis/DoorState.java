@@ -15,8 +15,6 @@ package de.jena.model.sensinact.ibis;
 
 import java.time.Instant;
 
-import org.eclipse.sensinact.model.core.provider.Service;
-
 import org.osgi.annotation.versioning.ProviderType;
 
 /**
@@ -41,7 +39,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-public interface DoorState extends Service {
+public interface DoorState extends IbisResource {
 	/**
 	 * Returns the value of the '<em><b>Service Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

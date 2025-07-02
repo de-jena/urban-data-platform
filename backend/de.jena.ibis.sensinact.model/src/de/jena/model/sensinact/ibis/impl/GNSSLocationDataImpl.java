@@ -24,8 +24,6 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.sensinact.model.core.provider.impl.ServiceImpl;
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>GNSS Location Data</b></em>'.
@@ -57,7 +55,7 @@ import org.eclipse.sensinact.model.core.provider.impl.ServiceImpl;
  *
  * @generated
  */
-public class GNSSLocationDataImpl extends ServiceImpl implements GNSSLocationData {
+public class GNSSLocationDataImpl extends IbisResourceImpl implements GNSSLocationData {
 	/**
 	 * The default value of the '{@link #getServiceName() <em>Service Name</em>}' attribute.
 	 * <!-- begin-user-doc -->

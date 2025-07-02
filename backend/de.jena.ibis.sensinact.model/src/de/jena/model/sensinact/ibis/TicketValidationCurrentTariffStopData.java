@@ -17,8 +17,6 @@ import java.time.Instant;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.sensinact.model.core.provider.Service;
-
 import org.osgi.annotation.versioning.ProviderType;
 
 /**
@@ -53,7 +51,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-public interface TicketValidationCurrentTariffStopData extends Service {
+public interface TicketValidationCurrentTariffStopData extends IbisResource {
 	/**
 	 * Returns the value of the '<em><b>Service Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

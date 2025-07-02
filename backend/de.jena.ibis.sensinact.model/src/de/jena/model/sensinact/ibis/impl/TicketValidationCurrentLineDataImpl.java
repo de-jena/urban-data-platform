@@ -30,8 +30,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
-import org.eclipse.sensinact.model.core.provider.impl.ServiceImpl;
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Ticket Validation Current Line Data</b></em>'.
@@ -52,7 +50,7 @@ import org.eclipse.sensinact.model.core.provider.impl.ServiceImpl;
  *
  * @generated
  */
-public class TicketValidationCurrentLineDataImpl extends ServiceImpl implements TicketValidationCurrentLineData {
+public class TicketValidationCurrentLineDataImpl extends IbisResourceImpl implements TicketValidationCurrentLineData {
 	/**
 	 * The default value of the '{@link #getServiceName() <em>Service Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
