@@ -45,10 +45,13 @@ import de.jena.model.ibis.ticketvalidationservice.RazziaData;
 import de.jena.model.ibis.ticketvalidationservice.RazziaResponse;
 import de.jena.model.ibis.ticketvalidationservice.VehicleData;
 import de.jena.model.ibis.ticketvalidationservice.VehicleDataResponse;
-import de.jena.model.sensinact.ibis.IbisDevice;
+import de.jena.model.sensinact.ibis.TicketValidationCurrentLine;
 import de.jena.model.sensinact.ibis.TicketValidationCurrentLineData;
+import de.jena.model.sensinact.ibis.TicketValidationCurrentTariffStop;
 import de.jena.model.sensinact.ibis.TicketValidationCurrentTariffStopData;
+import de.jena.model.sensinact.ibis.TicketValidationRazzia;
 import de.jena.model.sensinact.ibis.TicketValidationRazziaData;
+import de.jena.model.sensinact.ibis.TicketValidationVehicle;
 import de.jena.model.sensinact.ibis.TicketValidationVehicleData;
 
 
@@ -92,9 +95,8 @@ public class IbisTicketValidationToSensinactMMTTest {
 		data.setCurrentTariffStop(stopInfo);
 		response.setCurrentTariffStopData(data);
 		
-		IbisDevice sensinactDevice = (IbisDevice) transformator.doTransformation(response);
-		assertThat(sensinactDevice).isNotNull();
-		TicketValidationCurrentTariffStopData sensinactData = sensinactDevice.getCurrentTariffStopData();
+		TicketValidationCurrentTariffStop service = transformator.doTransformation(response);
+		TicketValidationCurrentTariffStopData sensinactData = service.getResource();
 		assertThat(sensinactData).isNotNull();
 		assertThat(sensinactData.getTimestamp()).isNotNull();
 		assertThat(sensinactData.getArrivalExpected()).isNotNull();
@@ -114,8 +116,8 @@ public class IbisTicketValidationToSensinactMMTTest {
 		assertThat(sensinactData.getFareZone()).contains("Fare Zone 1", "Fare Zone 2");
 		assertThat(sensinactData.getCurrentTripRef()).isEqualTo("testTripRef");
 
-		assertThat(sensinactData.getMetadata()).isNotEmpty();
-		assertThat(sensinactData.getMetadata()).hasSize(13);		
+		assertThat(service.getMetadata()).isNotEmpty();
+		assertThat(service.getMetadata()).hasSize(13);		
 	}
 	
 	@Test
@@ -128,16 +130,15 @@ public class IbisTicketValidationToSensinactMMTTest {
 	
 		response.setRazziaData(data);
 		
-		IbisDevice sensinactDevice = (IbisDevice) transformator.doTransformation(response);
-		assertThat(sensinactDevice).isNotNull();
-		TicketValidationRazziaData sensinactData = sensinactDevice.getRazziaData();
+		TicketValidationRazzia service = transformator.doTransformation(response);
+		TicketValidationRazziaData sensinactData = service.getResource();
 		assertThat(sensinactData).isNotNull();
 		assertThat(sensinactData.getTimestamp()).isNotNull();
 		assertThat(sensinactData.getRazziaState()).isEqualTo(TicketRazziaInformationEnumeration.RAZZIA.getLiteral());
 		
 
-		assertThat(sensinactData.getMetadata()).isNotEmpty();
-		assertThat(sensinactData.getMetadata()).hasSize(1);		
+		assertThat(service.getMetadata()).isNotEmpty();
+		assertThat(service.getMetadata()).hasSize(1);		
 	}
 	
 	@Test
@@ -158,9 +159,8 @@ public class IbisTicketValidationToSensinactMMTTest {
 		
 		response.setCurrentLineData(data);
 		
-		IbisDevice sensinactDevice = (IbisDevice) transformator.doTransformation(response);
-		assertThat(sensinactDevice).isNotNull();
-		TicketValidationCurrentLineData sensinactData = sensinactDevice.getCurrentLineData();
+		TicketValidationCurrentLine service = transformator.doTransformation(response);
+		TicketValidationCurrentLineData sensinactData = service.getResource();
 		assertThat(sensinactData).isNotNull();
 		assertThat(sensinactData.getTimestamp()).isNotNull();
 		assertThat(sensinactData.getLineRef()).isEqualTo("lineRef");
@@ -169,8 +169,8 @@ public class IbisTicketValidationToSensinactMMTTest {
 		assertThat(sensinactData.getLineName()).contains("name1", "name2");
 		assertThat(sensinactData.getLineShortName()).contains("n1", "n2");
 		
-		assertThat(sensinactData.getMetadata()).isNotEmpty();
-		assertThat(sensinactData.getMetadata()).hasSize(5);		
+		assertThat(service.getMetadata()).isNotEmpty();
+		assertThat(service.getMetadata()).hasSize(5);		
 	}
 	
 	@Test
@@ -187,9 +187,8 @@ public class IbisTicketValidationToSensinactMMTTest {
 		
 		response.setVehicleData(data);
 				
-		IbisDevice sensinactDevice = (IbisDevice) transformator.doTransformation(response);
-		assertThat(sensinactDevice).isNotNull();
-		TicketValidationVehicleData sensinactData = sensinactDevice.getVehicleData();
+		TicketValidationVehicle service = transformator.doTransformation(response);
+		TicketValidationVehicleData sensinactData = service.getResource();
 		assertThat(sensinactData).isNotNull();
 		assertThat(sensinactData.getTimestamp()).isNotNull();
 		assertThat(sensinactData.getVehicleRef()).isEqualTo("vehicleRefTest");
@@ -199,7 +198,7 @@ public class IbisTicketValidationToSensinactMMTTest {
 		assertThat(sensinactData.getVehicleMode()).isEqualTo(VehicleModeEnumeration.BUS.getLiteral());
 		assertThat(sensinactData.getDriverNumber()).isEqualTo("driver123");	
 		
-		assertThat(sensinactData.getMetadata()).isNotEmpty();
-		assertThat(sensinactData.getMetadata()).hasSize(6);		
+		assertThat(service.getMetadata()).isNotEmpty();
+		assertThat(service.getMetadata()).hasSize(6);		
 	}
 }

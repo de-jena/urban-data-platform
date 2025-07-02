@@ -24,8 +24,6 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.sensinact.model.core.provider.impl.ServiceImpl;
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Customer Info Trip Data</b></em>'.
@@ -61,7 +59,7 @@ import org.eclipse.sensinact.model.core.provider.impl.ServiceImpl;
  *
  * @generated
  */
-public class CustomerInfoTripDataImpl extends ServiceImpl implements CustomerInfoTripData {
+public class CustomerInfoTripDataImpl extends IbisResourceImpl implements CustomerInfoTripData {
 	/**
 	 * The default value of the '{@link #getServiceName() <em>Service Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
