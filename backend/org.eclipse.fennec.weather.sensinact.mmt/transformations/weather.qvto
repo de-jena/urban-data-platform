@@ -1,0 +1,61 @@
+import org.eclipse.fennec.weather.sensinact.util.LocationToGeoJsonBlackbox;
+
+modeltype ECORE "strict" uses ecore('http://www.eclipse.org/emf/2002/Ecore');
+modeltype WEATHER uses "http://cdc.dwd.de/common/weather";
+modeltype SENSINACT uses "https://fennec.eclipse.org/sensinact/weather/1.0";
+modeltype PROVIDER uses "https://eclipse.org/sensinact/core/provider/1.0";
+
+transformation Weather2Sensinact(in weather : WEATHER, out sensinact : SENSINACT);
+
+main() {
+	weather.rootObjects()[WEATHER::MOSMIXSWeatherReport] -> map toSensinactWeatherReport(); 
+}
+
+mapping WEATHER::MOSMIXSWeatherReport::toSensinactWeatherReport(): SENSINACT::WeatherProvider {
+
+	id := self.id;
+	admin := self.map toAdmin();
+	windData := self.map toWindData();
+	cloudData := self.map toCloudData();
+
+	//id := self.endDeviceIds.deviceId;
+//	admin := self.map uplinkToAdmin();
+//	data := self.uplinkMessage.map uplinkToData(); 
+}
+
+mapping WEATHER::MOSMIXSWeatherReport::toCloudData() : SENSINACT::CloudData {
+	cloudCoverTotal := self.cloudCoverTotal;
+	cloudCoverBelow500 := self.cloudCoverBelow500;
+}
+
+mapping WEATHER::MOSMIXSWeatherReport::toWindData() : SENSINACT::WindData {
+	windDirection := self.windDirection;
+	windSpeed := self.windSpeed;
+}
+
+mapping WEATHER::MOSMIXSWeatherReport::toAdmin(): PROVIDER::Admin {
+	friendlyName := self.id;	
+	location := self.station.location.toGeoJson();
+}
+
+
+//mapping TTN::TtnUplinkPayload::uplinkToAdmin(): PROVIDER::Admin {
+//	friendlyName := self.endDeviceIds.deviceId;
+//	metadata := self.rxMetadata.map rxMetaToMeta();
+//	location := self.rxMetadata.location.toGeoJson();
+//}
+
+//mapping TTN::RxMetadata::rxMetaToMeta(): PROVIDER::FeatureMetadata {
+//key := self.???;
+//value := self.???;
+//}
+
+//mapping TTN::UplinkMessage::uplinkToData(): SENSINACT::SensorData {
+//	rawPayload := self.frmPayload;
+//	payload := self.decodedPayload.map mapToMap();
+//}
+//mapping  StringToObjectMap::mapToMap(): SENSINACT::StringToObjectMap {
+//	key := self.key;
+//	value := self.value;				
+//};
+	

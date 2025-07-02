@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="weatherprovider" nsURI="https://fennec.eclipse.org/sensinact/weather/1.0"
+    nsPrefix="weatherprovider">
+  <eAnnotations source="Version">
+    <details key="value" value="1.0"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="WeatherProvider" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//DynamicProvider">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="station" eType="#//Station"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="windData" eType="#//WindData"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cloudData" eType="#//CloudData"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WindData" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="windDirection" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="windSpeed" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CloudData" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cloudCoverTotal" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cloudCoverBelow500" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Station" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Admin"/>
+</ecore:EPackage>

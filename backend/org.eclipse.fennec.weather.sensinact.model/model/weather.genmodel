@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipse.fennec.weather.sensinact.model/src"
+    modelPluginID="org.eclipse.fennec.weather.sensinact.model" modelName="weather"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" suppressGenModelAnnotations="false" copyrightFields="false"
+    usedGenPackages="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.genmodel#//provider"
+    operationReflection="true" importOrganizing="true" oSGiCompatible="true">
+  <foreignModel>weather.ecore</foreignModel>
+  <genPackages prefix="Weather" basePackage="org.eclipse.fennec.model.sensinact" resource="XMI"
+      disposableProviderFactory="true" ecorePackage="weather.ecore#/">
+    <genClasses ecoreClass="weather.ecore#//WeatherProvider">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference weather.ecore#//WeatherProvider/station"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference weather.ecore#//WeatherProvider/windData"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference weather.ecore#//WeatherProvider/cloudData"/>
+    </genClasses>
+    <genClasses ecoreClass="weather.ecore#//WindData">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WindData/windDirection"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WindData/windSpeed"/>
+    </genClasses>
+    <genClasses ecoreClass="weather.ecore#//CloudData">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//CloudData/cloudCoverTotal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//CloudData/cloudCoverBelow500"/>
+    </genClasses>
+    <genClasses ecoreClass="weather.ecore#//Station"/>
+  </genPackages>
+</genmodel:GenModel>
