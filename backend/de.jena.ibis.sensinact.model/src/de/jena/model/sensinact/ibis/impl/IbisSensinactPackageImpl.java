@@ -1729,6 +1729,26 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
+	public EAttribute getCustomerInfoCurrentDisplayContentData_DestinationName() {
+		return (EAttribute)customerInfoCurrentDisplayContentDataEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCustomerInfoCurrentDisplayContentData_LineName() {
+		return (EAttribute)customerInfoCurrentDisplayContentDataEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getIbisAdmin() {
 		return ibisAdminEClass;
 	}
@@ -2983,6 +3003,8 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 		createEAttribute(customerInfoCurrentDisplayContentDataEClass, CUSTOMER_INFO_CURRENT_DISPLAY_CONTENT_DATA__SERVICE_NAME);
 		createEAttribute(customerInfoCurrentDisplayContentDataEClass, CUSTOMER_INFO_CURRENT_DISPLAY_CONTENT_DATA__SERVICE_OPERATION);
 		createEAttribute(customerInfoCurrentDisplayContentDataEClass, CUSTOMER_INFO_CURRENT_DISPLAY_CONTENT_DATA__TIMESTAMP);
+		createEAttribute(customerInfoCurrentDisplayContentDataEClass, CUSTOMER_INFO_CURRENT_DISPLAY_CONTENT_DATA__DESTINATION_NAME);
+		createEAttribute(customerInfoCurrentDisplayContentDataEClass, CUSTOMER_INFO_CURRENT_DISPLAY_CONTENT_DATA__LINE_NAME);
 
 		ibisAdminEClass = createEClass(IBIS_ADMIN);
 		createEAttribute(ibisAdminEClass, IBIS_ADMIN__DEVICE_TYPE);
@@ -3330,6 +3352,8 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 		initEAttribute(getCustomerInfoCurrentDisplayContentData_ServiceName(), ecorePackage.getEString(), "serviceName", null, 1, 1, CustomerInfoCurrentDisplayContentData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCustomerInfoCurrentDisplayContentData_ServiceOperation(), ecorePackage.getEString(), "serviceOperation", null, 1, 1, CustomerInfoCurrentDisplayContentData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCustomerInfoCurrentDisplayContentData_Timestamp(), theProviderPackage.getEInstant(), "timestamp", null, 1, 1, CustomerInfoCurrentDisplayContentData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCustomerInfoCurrentDisplayContentData_DestinationName(), ecorePackage.getEString(), "destinationName", null, 0, 1, CustomerInfoCurrentDisplayContentData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCustomerInfoCurrentDisplayContentData_LineName(), ecorePackage.getEString(), "lineName", null, 0, 1, CustomerInfoCurrentDisplayContentData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(ibisAdminEClass, IbisAdmin.class, "IbisAdmin", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getIbisAdmin_DeviceType(), ecorePackage.getEString(), "deviceType", null, 1, 1, IbisAdmin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

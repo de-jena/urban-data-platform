@@ -7,6 +7,35 @@
 
 [OpenAPI](http://localhost:8080/udp/swagger-api/index.html)
 
+## Documentation
+### Sensinact / History
+https://eclipse-sensinact.readthedocs.io/en/latest/southbound/history/history.html
+
+## Resources 
+All examples are for a localhost development environment. But can be adapted for:
+* staging https://udp-broker-stage.nomad-dmz.jena.de/
+* produtive https://udp-broker.nomad-dmz.jena.de
+
+### Sensorthings
+http://localhost:8080/udp/rest/v1.1/
+
+ILSA K1 Felsenkeller: http://localhost:8080/udp/rest/v1.1/Datastreams(K440~K1_1~color)/Observations
+
+### Rest api
+List of providers
+http://localhost:8080/udp/rest/sensinact/providers/
+
+### log files
+List of available log files:
+http://localhost:8080/udp/rest/control/logs
+Content of one log file from the list:
+http://localhost:8080/udp/rest/control/logs/log-2025-06-25.log
+
+### Felix Web console
+http://localhost:8080/udp/system/console
+
+
+
 ## Links
 
 * [Documentation](https://github.com/de-jena/urban-data-platform)

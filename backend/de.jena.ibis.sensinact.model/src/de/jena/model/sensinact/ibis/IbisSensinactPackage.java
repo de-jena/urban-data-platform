@@ -1796,13 +1796,31 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	int CUSTOMER_INFO_CURRENT_DISPLAY_CONTENT_DATA__TIMESTAMP = IBIS_RESOURCE_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Destination Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_INFO_CURRENT_DISPLAY_CONTENT_DATA__DESTINATION_NAME = IBIS_RESOURCE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Line Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_INFO_CURRENT_DISPLAY_CONTENT_DATA__LINE_NAME = IBIS_RESOURCE_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Customer Info Current Display Content Data</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_CURRENT_DISPLAY_CONTENT_DATA_FEATURE_COUNT = IBIS_RESOURCE_FEATURE_COUNT + 3;
+	int CUSTOMER_INFO_CURRENT_DISPLAY_CONTENT_DATA_FEATURE_COUNT = IBIS_RESOURCE_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Customer Info Current Display Content Data</em>' class.
@@ -4801,6 +4819,28 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getCustomerInfoCurrentDisplayContentData_Timestamp();
 
 	/**
+	 * Returns the meta object for the attribute '{@link de.jena.model.sensinact.ibis.CustomerInfoCurrentDisplayContentData#getDestinationName <em>Destination Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Destination Name</em>'.
+	 * @see de.jena.model.sensinact.ibis.CustomerInfoCurrentDisplayContentData#getDestinationName()
+	 * @see #getCustomerInfoCurrentDisplayContentData()
+	 * @generated
+	 */
+	EAttribute getCustomerInfoCurrentDisplayContentData_DestinationName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.model.sensinact.ibis.CustomerInfoCurrentDisplayContentData#getLineName <em>Line Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Line Name</em>'.
+	 * @see de.jena.model.sensinact.ibis.CustomerInfoCurrentDisplayContentData#getLineName()
+	 * @see #getCustomerInfoCurrentDisplayContentData()
+	 * @generated
+	 */
+	EAttribute getCustomerInfoCurrentDisplayContentData_LineName();
+
+	/**
 	 * Returns the meta object for class '{@link de.jena.model.sensinact.ibis.IbisAdmin <em>Ibis Admin</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7100,6 +7140,22 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 		 * @generated
 		 */
 		EAttribute CUSTOMER_INFO_CURRENT_DISPLAY_CONTENT_DATA__TIMESTAMP = eINSTANCE.getCustomerInfoCurrentDisplayContentData_Timestamp();
+
+		/**
+		 * The meta object literal for the '<em><b>Destination Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CUSTOMER_INFO_CURRENT_DISPLAY_CONTENT_DATA__DESTINATION_NAME = eINSTANCE.getCustomerInfoCurrentDisplayContentData_DestinationName();
+
+		/**
+		 * The meta object literal for the '<em><b>Line Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CUSTOMER_INFO_CURRENT_DISPLAY_CONTENT_DATA__LINE_NAME = eINSTANCE.getCustomerInfoCurrentDisplayContentData_LineName();
 
 		/**
 		 * The meta object literal for the '{@link de.jena.model.sensinact.ibis.impl.IbisAdminImpl <em>Ibis Admin</em>}' class.

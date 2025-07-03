@@ -18,10 +18,12 @@ import java.io.IOException;
 import java.lang.System.Logger;
 import java.lang.System.Logger.Level;
 import java.util.Collections;
+import java.util.Optional;
 import java.util.UUID;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.fennec.qvt.osgi.api.ModelTransformator;
@@ -39,7 +41,6 @@ import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.component.annotations.ReferenceScope;
-import org.osgi.util.promise.Promise;
 import org.osgi.util.pushstream.PushEvent;
 import org.osgi.util.pushstream.PushEvent.EventType;
 import org.osgi.util.pushstream.PushStream;
@@ -54,6 +55,7 @@ import de.jena.model.sensinact.ibis.CustomerInfoTrip;
 import de.jena.model.sensinact.ibis.CustomerInfoVehicle;
 import de.jena.model.sensinact.ibis.GNSSLocation;
 import de.jena.model.sensinact.ibis.GNSSLocationData;
+import de.jena.model.sensinact.ibis.IbisResource;
 import de.jena.model.sensinact.ibis.IbisSensinactPackage;
 
 /**
@@ -133,11 +135,14 @@ public class IbisConnector {
 		Resource resource = resourceSet.createResource(URI.createFileURI(UUID.randomUUID() + "-ibis.json"));
 		try {
 			resource.load(new ByteArrayInputStream(message.payload().array()), Collections.emptyMap());
-			IbisDto dto = transform(deviceId, resource.getContents().get(0));
-			Promise<?> promise = sensiNact.pushUpdate(dto);
-			promise.onFailure(e -> LOGGER.log(Level.ERROR, "Error while pushing signal to sensinact.", e));
-			if (dto.serviceRef == IbisSensinactPackage.Literals.IBIS_DEVICE__GNSS_LOCATION) {
-				updateAdmin(deviceId, dto);
+			Optional<IbisDto> oDto = transform(deviceId, resource.getContents().get(0));
+			if (oDto.isPresent()) {
+				IbisDto dto = oDto.get();
+				sensiNact.pushUpdate(dto)
+						.onFailure(e -> LOGGER.log(Level.ERROR, "Error while pushing signal to sensinact.", e));
+				if (dto.serviceRef == IbisSensinactPackage.Literals.IBIS_DEVICE__GNSS_LOCATION) {
+					updateAdmin(deviceId, dto);
+				}
 			}
 		} catch (IOException e) {
 			LOGGER.log(Level.ERROR, "Error while parsing json.", e);
@@ -155,40 +160,46 @@ public class IbisConnector {
 				.onFailure(e -> LOGGER.log(Level.ERROR, "Error while pushing signal to sensinact.", e));
 	}
 
-	private IbisDto transform(String deviceId, EObject eo) {
+	private Optional<IbisDto> transform(String deviceId, EObject eo) {
 		Service service = transformator.doTransformation(eo);
-		return getDTO(deviceId, service);
-	}
-
-	private IbisDto getDTO(String deviceId, Service service) {
-		if (service instanceof CustomerInfoAll ibisService)
-			return new IbisDto(deviceId, IbisSensinactPackage.Literals.IBIS_DEVICE__CUSTOMER_INFO_ALL,
-					ibisService.getResource());
-		if (service instanceof CustomerInfoCurrentAnnouncement ibisService)
-			return new IbisDto(deviceId, IbisSensinactPackage.Literals.IBIS_DEVICE__CUSTOMER_INFO_CURRENT_ANNOUNCEMENT,
-					ibisService.getResource());
-		if (service instanceof CustomerInfoCurrentStopIndex ibisService)
-			return new IbisDto(deviceId, IbisSensinactPackage.Literals.IBIS_DEVICE__CUSTOMER_INFO_CURRENT_STOP_INDEX,
-					ibisService.getResource());
-		if (service instanceof CustomerInfoCurrentStopPoint ibisService)
-			return new IbisDto(deviceId, IbisSensinactPackage.Literals.IBIS_DEVICE__CUSTOMER_INFO_CURRENT_STOP_POINT,
-					ibisService.getResource());
-		if (service instanceof CustomerInfoCurrentConnection ibisService)
-			return new IbisDto(deviceId, IbisSensinactPackage.Literals.IBIS_DEVICE__CUSTOMER_INFO_CURRENT_CONNECTION,
-					ibisService.getResource());
-		if (service instanceof CustomerInfoCurrentDisplayContent ibisService)
-			return new IbisDto(deviceId,
-					IbisSensinactPackage.Literals.IBIS_DEVICE__CUSTOMER_INFO_CURRENT_DISPLAY_CONTENT,
-					ibisService.getResource());
-		if (service instanceof CustomerInfoTrip ibisService)
-			return new IbisDto(deviceId, IbisSensinactPackage.Literals.IBIS_DEVICE__CUSTOMER_INFO_TRIP,
-					ibisService.getResource());
-		if (service instanceof CustomerInfoVehicle ibisService)
-			return new IbisDto(deviceId, IbisSensinactPackage.Literals.IBIS_DEVICE__CUSTOMER_INFO_VEHICLE,
-					ibisService.getResource());
-		if (service instanceof GNSSLocation ibisService)
-			return new IbisDto(deviceId, IbisSensinactPackage.Literals.IBIS_DEVICE__GNSS_LOCATION,
-					ibisService.getResource());
-		return null;
+		EReference serviceRef = null;
+		IbisResource resource = null;
+		if (service instanceof CustomerInfoAll ibisService) {
+			serviceRef = IbisSensinactPackage.Literals.IBIS_DEVICE__CUSTOMER_INFO_ALL;
+			resource = ibisService.getResource();
+		}
+		if (service instanceof CustomerInfoCurrentAnnouncement ibisService) {
+			serviceRef = IbisSensinactPackage.Literals.IBIS_DEVICE__CUSTOMER_INFO_CURRENT_ANNOUNCEMENT;
+			resource = ibisService.getResource();
+		}
+		if (service instanceof CustomerInfoCurrentStopIndex ibisService) {
+			serviceRef = IbisSensinactPackage.Literals.IBIS_DEVICE__CUSTOMER_INFO_CURRENT_STOP_INDEX;
+			resource = ibisService.getResource();
+		}
+		if (service instanceof CustomerInfoCurrentStopPoint ibisService) {
+			serviceRef = IbisSensinactPackage.Literals.IBIS_DEVICE__CUSTOMER_INFO_CURRENT_STOP_POINT;
+			resource = ibisService.getResource();
+		}
+		if (service instanceof CustomerInfoCurrentConnection ibisService) {
+			serviceRef = IbisSensinactPackage.Literals.IBIS_DEVICE__CUSTOMER_INFO_CURRENT_CONNECTION;
+			resource = ibisService.getResource();
+		}
+		if (service instanceof CustomerInfoCurrentDisplayContent ibisService) {
+			serviceRef = IbisSensinactPackage.Literals.IBIS_DEVICE__CUSTOMER_INFO_CURRENT_DISPLAY_CONTENT;
+			resource = ibisService.getResource();
+		}
+		if (service instanceof CustomerInfoTrip ibisService) {
+			serviceRef = IbisSensinactPackage.Literals.IBIS_DEVICE__CUSTOMER_INFO_TRIP;
+			resource = ibisService.getResource();
+		}
+		if (service instanceof CustomerInfoVehicle ibisService) {
+			serviceRef = IbisSensinactPackage.Literals.IBIS_DEVICE__CUSTOMER_INFO_VEHICLE;
+			resource = ibisService.getResource();
+		}
+		if (service instanceof GNSSLocation ibisService) {
+			serviceRef = IbisSensinactPackage.Literals.IBIS_DEVICE__GNSS_LOCATION;
+			resource = ibisService.getResource();
+		}
+		return serviceRef != null ? Optional.of(new IbisDto(deviceId, serviceRef, resource)) : Optional.empty();
 	}
 }

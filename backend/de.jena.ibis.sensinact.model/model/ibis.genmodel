@@ -159,6 +159,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ibis.ecore#//CustomerInfoCurrentDisplayContentData/serviceName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ibis.ecore#//CustomerInfoCurrentDisplayContentData/serviceOperation"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ibis.ecore#//CustomerInfoCurrentDisplayContentData/timestamp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ibis.ecore#//CustomerInfoCurrentDisplayContentData/destinationName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ibis.ecore#//CustomerInfoCurrentDisplayContentData/lineName"/>
     </genClasses>
     <genClasses ecoreClass="ibis.ecore#//IbisAdmin">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ibis.ecore#//IbisAdmin/deviceType"/>

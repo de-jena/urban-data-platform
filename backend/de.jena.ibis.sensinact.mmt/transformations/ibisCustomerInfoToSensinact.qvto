@@ -35,6 +35,9 @@ mapping CUSTOMERINFO::CurrentDisplayContentResponse::displayToService(): SENSINA
     	timestamp := self.currentDisplayContentData.timeStamp.getEInstant();	
     	serviceName := "CustomerInformationService";
     	serviceOperation := "CurrentDisplayContent";
+    	var d := self.currentDisplayContentData.currentDisplayContent-> first();
+    	lineName := d.lineInformation.lineName->first().value;
+    	destinationName := d.destination.destinationName->first().value;
     //	TODO: add display content list to sensinact model
     };
 }
@@ -70,7 +73,6 @@ mapping CUSTOMERINFO::CurrentStopPointResponse::stopPointToService(): SENSINACT:
 }
 
 mapping CUSTOMERINFO::TripDataResponse::tripToService(): SENSINACT::CustomerInfoTrip {
-	var eClass := SENSINACT::CustomerInfoTripData.oclAsType(ECORE::EClass);
 	resource := object SENSINACT::CustomerInfoTripData {
     	timestamp := self.tripData.timeStamp.getEInstant();
     	serviceName := "CustomerInformationService";
@@ -100,8 +102,6 @@ mapping CUSTOMERINFO::TripDataResponse::tripToService(): SENSINACT::CustomerInfo
 }
 
 mapping CUSTOMERINFO::VehicleDataResponse::vehicleToService(): SENSINACT::CustomerInfoVehicle {
-	var eClass := SENSINACT::CustomerInfoVehicleData.oclAsType(ECORE::EClass);
-	var friendlyServiceName := "CustomerInformationService";
 	resource := object SENSINACT::CustomerInfoVehicleData {
     	timestamp := self.vehicleData.timeStamp.getEInstant();
     	serviceName := "CustomerInformationService";
