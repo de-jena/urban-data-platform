@@ -173,7 +173,7 @@ public class GltConverter {
 		admin.setLocation(geoJson);
 		ResourceValueMetadata meta = ProviderFactory.eINSTANCE.createResourceValueMetadata();
 		meta.setTimestamp(locationTimestamp);
-		admin.getMetadata().put(ProviderPackage.Literals.ADMIN__LOCATION, meta );
+		admin.getMetadata().put(ProviderPackage.Literals.ADMIN__LOCATION, meta);
 		admin.setFriendlyName(friendlyName);
 	}
 
@@ -196,7 +196,7 @@ public class GltConverter {
 		Instant instant = LocalDateTime.parse(time, DateTimeFormatter.ISO_OFFSET_DATE_TIME)
 				.atZone(ZoneId.of("Europe/Berlin")).toInstant();
 		md.setTimestamp(instant);
-		md.getExtra().put("name", createCustomMetadata(dc.getName()));
+		md.getExtra().put("description", createCustomMetadata(dc.getName()));
 		md.getExtra().put("pointNumber", createCustomMetadata(dc.getPointNumber()));
 		md.getExtra().put("pointId", createCustomMetadata(dc.getPointId()));
 		metadata.put(GltPackage.eINSTANCE.getMonitoringData_Value(), md);
