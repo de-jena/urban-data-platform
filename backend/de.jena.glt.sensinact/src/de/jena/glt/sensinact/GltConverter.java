@@ -148,7 +148,7 @@ public class GltConverter {
 				updateAdmin(glt);
 				for (EObject object : result) {
 					DatalogContentPojo dc = (DatalogContentPojo) object;
-					logger.log(Level.INFO, "Data: " + dc);
+					logger.log(Level.DEBUG, "Data: " + dc);
 					updateService(glt, dc);
 				}
 				sensiNact.pushUpdate(glt);
