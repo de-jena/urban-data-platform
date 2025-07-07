@@ -102,7 +102,7 @@
 	org.apache.felix.http.servlet-api;version='[2.1.0,2.1.1)';startlevel=990,\
 	org.apache.felix.inventory;version='[1.0.6,1.0.7)';startlevel=1000,\
 	org.apache.felix.scr;version='[2.2.12,2.2.13)';startlevel=1010,\
-	org.apache.felix.webconsole;version='[5.0.2,5.0.3)';startlevel=1020,\
+	org.apache.felix.webconsole;version='[5.0.12,5.0.13)';startlevel=1020,\
 	org.apache.felix.webconsole.plugins.ds;version='[2.3.0,2.3.1)';startlevel=1030,\
 	org.apache.felix.webconsole.plugins.event;version='[1.2.0,1.2.1)';startlevel=1040,\
 	org.apache.felix.webconsole.plugins.memoryusage;version='[1.1.0,1.1.1)';startlevel=1050,\
