@@ -1,4 +1,6 @@
 import org.eclipse.fennec.weather.sensinact.util.LocationToGeoJsonBlackbox;
+import org.eclipse.fennec.weather.sensinact.util.ToInstantBlackBox;
+
 
 modeltype ECORE "strict" uses ecore('http://www.eclipse.org/emf/2002/Ecore');
 modeltype WEATHER uses "http://cdc.dwd.de/common/weather";
@@ -15,47 +17,134 @@ mapping WEATHER::MOSMIXSWeatherReport::toSensinactWeatherReport(): SENSINACT::We
 
 	id := self.id;
 	admin := self.map toAdmin();
-	windData := self.map toWindData();
-	cloudData := self.map toCloudData();
-
-	//id := self.endDeviceIds.deviceId;
-//	admin := self.map uplinkToAdmin();
-//	data := self.uplinkMessage.map uplinkToData(); 
-}
-
-mapping WEATHER::MOSMIXSWeatherReport::toCloudData() : SENSINACT::CloudData {
-	cloudCoverTotal := self.cloudCoverTotal;
-	cloudCoverBelow500 := self.cloudCoverBelow500;
-}
-
-mapping WEATHER::MOSMIXSWeatherReport::toWindData() : SENSINACT::WindData {
-	windDirection := self.windDirection;
-	windSpeed := self.windSpeed;
-}
-
-mapping WEATHER::MOSMIXSWeatherReport::toAdmin(): PROVIDER::Admin {
-	friendlyName := self.id;	
-	location := self.station.location.toGeoJson();
+	windData := self.map toServiceData(SENSINACT::WindData.oclAsType(ECORE::EClass)).oclAsType(SENSINACT::WindData);
+	cloudData := self.map toServiceData(SENSINACT::CloudData.oclAsType(ECORE::EClass)).oclAsType(SENSINACT::CloudData);
+	precipitationData := self.map toServiceData(SENSINACT::PrecipitationData.oclAsType(ECORE::EClass)).oclAsType(SENSINACT::PrecipitationData);
+	temperatureData := self.map toServiceData(SENSINACT::TemperatureData.oclAsType(ECORE::EClass)).oclAsType(SENSINACT::TemperatureData);
+	snowRainData := self.map toServiceData(SENSINACT::SnowRainData.oclAsType(ECORE::EClass)).oclAsType(SENSINACT::SnowRainData);
+	fogData := self.map toServiceData(SENSINACT::FogData.oclAsType(ECORE::EClass)).oclAsType(SENSINACT::FogData);
+	irradianceData := self.map toServiceData(SENSINACT::IrradianceData.oclAsType(ECORE::EClass)).oclAsType(SENSINACT::IrradianceData);
+	pressureData := self.map toServiceData(SENSINACT::PressureData.oclAsType(ECORE::EClass)).oclAsType(SENSINACT::PressureData);
+	visibilityData := self.map toServiceData(SENSINACT::VisibilityData.oclAsType(ECORE::EClass)).oclAsType(SENSINACT::VisibilityData);
 }
 
 
-//mapping TTN::TtnUplinkPayload::uplinkToAdmin(): PROVIDER::Admin {
-//	friendlyName := self.endDeviceIds.deviceId;
-//	metadata := self.rxMetadata.map rxMetaToMeta();
-//	location := self.rxMetadata.location.toGeoJson();
-//}
+query ECORE::EStructuralFeature::toDocumentation(): String {
+	return self.eAnnotations->select(a | a.source = "http://www.eclipse.org/emf/2002/GenModel")->first().details->select(d | d.key = "documentation")->first().value;
+} 
 
-//mapping TTN::RxMetadata::rxMetaToMeta(): PROVIDER::FeatureMetadata {
-//key := self.???;
-//value := self.???;
-//}
+mapping WEATHER::MOSMIXSWeatherReport::toServiceData(eClass : ECORE::EClass) : PROVIDER::Service {
 
-//mapping TTN::UplinkMessage::uplinkToData(): SENSINACT::SensorData {
-//	rawPayload := self.frmPayload;
-//	payload := self.decodedPayload.map mapToMap();
-//}
-//mapping  StringToObjectMap::mapToMap(): SENSINACT::StringToObjectMap {
-//	key := self.key;
-//	value := self.value;				
-//};
+	init{
+		var res := createInstance(eClass);
+		eClass.eStructuralFeatures->forEach(feature) {
+			res.oclAsType(ECORE::EObject).eSet(feature, self.oclAsType(ECORE::EObject).eGet(WEATHER::MOSMIXSWeatherReport.oclAsType(ECORE::EClass).getEStructuralFeature(feature.name)));
+		};	
+		var reportEClass : ECORE::EClass := self.oclAsType(ECORE::EObject).eClass();
+		eClass.eStructuralFeatures->forEach(f) {
+			res.metadata += self.map toMetadataEntry(f, reportEClass.getEStructuralFeature(f.name).toDocumentation());
+		};
+		result := res;
+	}
+}
+
+query createInstance(classType : ECORE::EClass) : PROVIDER::Service {
+    var res : PROVIDER::Service;
+    if (classType != null and classType._abstract.not()) {
+        var factory : ECORE::EFactory := classType.ePackage.eFactoryInstance;
+        var obj := factory.create(classType);
+        res := obj.oclAsType(PROVIDER::Service);
+    } else {
+        log('Cannot instantiate: class is null or abstract.');
+    };
+    return res;
+}
+
+mapping WEATHER::MOSMIXSWeatherReport::toAdmin(): SENSINACT::WeatherAdmin {
+	friendlyName := "Weather Forecast Data from Weather Station " + self.weatherStation.name + " and time " + self.timestamp.toString();	
+	weatherStationId := self.weatherStation.id;
+	weatherStationName := self.weatherStation.name;
+	location := self.weatherStation.location.toGeoJson();
+	metadata += self.map toGeneralMetadataEntry(PROVIDER::Admin.oclAsType(ECORE::EClass).getEStructuralFeature("location"), "description", "The location of the weather station");
+	metadata += self.map toGeneralMetadataEntry(SENSINACT::WeatherAdmin.oclAsType(ECORE::EClass).getEStructuralFeature("weatherStationId"), "description", "The id of the weather station");
 	
+}
+
+mapping WEATHER::MOSMIXSWeatherReport::toGeneralMetadataEntry(feature : ECORE::EStructuralFeature, propKey : String, propValue : String) : PROVIDER::FeatureMetadata {
+	
+	key := feature;
+	value := self.map toGeneralMetadata(propKey, propValue);	
+}
+
+mapping WEATHER::MOSMIXSWeatherReport::toMetadataEntry(feature : ECORE::EStructuralFeature, documentation : String) : PROVIDER::FeatureMetadata {
+	
+	var unit : String := documentation.substringAfter(":").substringBefore("(");
+	var dwdId : String := documentation.substringAfter(":").substringAfter("(").substringBefore(")");
+	key := feature;
+	value := self.map toMetadata(unit, documentation, dwdId);	
+}
+
+mapping WEATHER::MOSMIXSWeatherReport::toMetadata(unit : String, description : String, dwdId : String): PROVIDER::ResourceValueMetadata {
+//	extra += toMetadataValueMap("friendlyName", friendlyNameParam); //this will change the name property of the service 
+	if(unit != null and unit != ""){
+		extra += toMetadataValueMap("unit", unit); //this ends up in unitOfMeasurement.symbol
+		extra += toMetadataValueMap("sensorthings.unit.name", unit); //this ends up in unitOfMeasurement.name
+	};
+	if(dwdId.oclIsUndefined().not()) {
+		extra += toMetadataValueMap("dwdItemId", dwdId);
+	};
+	if(description.oclIsUndefined().not()){
+		extra += toMetadataValueMap("description", description);
+		extra += toMetadataValueMap("sensorthings.unit.definition", description); //this ends up in unitOfMeasurement.definition
+	};
+	timestamp := getENow();
+}
+
+mapping WEATHER::MOSMIXSWeatherReport::toMetadataEntry(feature : ECORE::EStructuralFeature, unit : String, description : String): PROVIDER::FeatureMetadata {
+	key := feature;
+	value := self.map toMetadata(unit, description);
+}
+
+mapping WEATHER::MOSMIXSWeatherReport::toGeneralMetadata(propKey : String, propValue : String): PROVIDER::ResourceValueMetadata {
+	extra += toMetadataValueMap(propKey, propValue);
+}
+
+mapping WEATHER::MOSMIXSWeatherReport::toMetadata(unit : String, description : String): PROVIDER::ResourceValueMetadata {
+//	extra += toMetadataValueMap("friendlyName", friendlyNameParam); //this will change the name property of the service 
+	if(unit != null and unit != ""){
+		extra += toMetadataValueMap("unit", unit); //this ends up in unitOfMeasurement.symbol
+		extra += toMetadataValueMap("sensorthings.unit.name", unit); //this ends up in unitOfMeasurement.name
+	};
+//	if(hide.oclIsUndefined().not()){
+//		extra += toMetadataValueMap("sensorthings.hide", hide);
+//	};
+	if(description.oclIsUndefined().not()){
+		extra += toMetadataValueMap("description", description);
+		extra += toMetadataValueMap("sensorthings.unit.definition", description); //this ends up in unitOfMeasurement.definition
+	};
+	timestamp := getENow();
+}
+
+helper toMetadataValueMap(theKey : String, theValue : String): PROVIDER::MetadataValueMap {
+    var entry := object PROVIDER::MetadataValueMap{
+       key := theKey;
+       value := toMetadataValue(theKey, theValue)
+    };
+    return entry;
+}
+helper toMetadataValue(theKey: String, theValue : String): PROVIDER::MetadataValue {
+    var entry := object PROVIDER::MetadataValue{
+        timestamp := getENow();
+        if(theKey = "sensorthings.hide") {
+        	value := theValue.toLowerCase() = 'true';
+        } else {
+        	value := theValue;
+        }        
+    };
+    return entry;
+}
+
+query getENow() : EInstant {
+    return getNow().oclAsType(EInstant);
+}
+

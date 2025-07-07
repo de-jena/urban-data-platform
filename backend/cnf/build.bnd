@@ -45,7 +45,9 @@ javac.debug:  on
 	geckoUtil,\
 	fennecQVT,\
 	jakartaREST,\
-	geckoMessaging
+	geckoMessaging,\
+	geckoEMFModels,\
+	geckoSearch
 	
 # This can be replaced, as soon as we have the latest release figuered out
 #	geckoSearch

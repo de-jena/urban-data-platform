@@ -85,8 +85,36 @@ public class WeatherAdapterFactory extends AdapterFactoryImpl {
 				return createCloudDataAdapter();
 			}
 			@Override
-			public Adapter caseStation(Station object) {
-				return createStationAdapter();
+			public Adapter casePrecipitationData(PrecipitationData object) {
+				return createPrecipitationDataAdapter();
+			}
+			@Override
+			public Adapter caseTemperatureData(TemperatureData object) {
+				return createTemperatureDataAdapter();
+			}
+			@Override
+			public Adapter caseFogData(FogData object) {
+				return createFogDataAdapter();
+			}
+			@Override
+			public Adapter caseSnowRainData(SnowRainData object) {
+				return createSnowRainDataAdapter();
+			}
+			@Override
+			public Adapter caseVisibilityData(VisibilityData object) {
+				return createVisibilityDataAdapter();
+			}
+			@Override
+			public Adapter casePressureData(PressureData object) {
+				return createPressureDataAdapter();
+			}
+			@Override
+			public Adapter caseIrradianceData(IrradianceData object) {
+				return createIrradianceDataAdapter();
+			}
+			@Override
+			public Adapter caseWeatherAdmin(WeatherAdmin object) {
+				return createWeatherAdminAdapter();
 			}
 			@Override
 			public Adapter caseProvider(Provider object) {
@@ -167,16 +195,114 @@ public class WeatherAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.fennec.model.sensinact.weatherprovider.Station <em>Station</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.fennec.model.sensinact.weatherprovider.PrecipitationData <em>Precipitation Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.Station
+	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.PrecipitationData
 	 * @generated
 	 */
-	public Adapter createStationAdapter() {
+	public Adapter createPrecipitationDataAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.fennec.model.sensinact.weatherprovider.TemperatureData <em>Temperature Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.TemperatureData
+	 * @generated
+	 */
+	public Adapter createTemperatureDataAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.fennec.model.sensinact.weatherprovider.FogData <em>Fog Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.FogData
+	 * @generated
+	 */
+	public Adapter createFogDataAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.fennec.model.sensinact.weatherprovider.SnowRainData <em>Snow Rain Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.SnowRainData
+	 * @generated
+	 */
+	public Adapter createSnowRainDataAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.fennec.model.sensinact.weatherprovider.VisibilityData <em>Visibility Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.VisibilityData
+	 * @generated
+	 */
+	public Adapter createVisibilityDataAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.fennec.model.sensinact.weatherprovider.PressureData <em>Pressure Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.PressureData
+	 * @generated
+	 */
+	public Adapter createPressureDataAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.fennec.model.sensinact.weatherprovider.IrradianceData <em>Irradiance Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.IrradianceData
+	 * @generated
+	 */
+	public Adapter createIrradianceDataAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherAdmin <em>Admin</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.WeatherAdmin
+	 * @generated
+	 */
+	public Adapter createWeatherAdminAdapter() {
 		return null;
 	}
 

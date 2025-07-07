@@ -93,11 +93,60 @@ public class WeatherSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case WeatherPackage.STATION: {
-				Station station = (Station)theEObject;
-				T result = caseStation(station);
-				if (result == null) result = caseAdmin(station);
-				if (result == null) result = caseService(station);
+			case WeatherPackage.PRECIPITATION_DATA: {
+				PrecipitationData precipitationData = (PrecipitationData)theEObject;
+				T result = casePrecipitationData(precipitationData);
+				if (result == null) result = caseService(precipitationData);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WeatherPackage.TEMPERATURE_DATA: {
+				TemperatureData temperatureData = (TemperatureData)theEObject;
+				T result = caseTemperatureData(temperatureData);
+				if (result == null) result = caseService(temperatureData);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WeatherPackage.FOG_DATA: {
+				FogData fogData = (FogData)theEObject;
+				T result = caseFogData(fogData);
+				if (result == null) result = caseService(fogData);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WeatherPackage.SNOW_RAIN_DATA: {
+				SnowRainData snowRainData = (SnowRainData)theEObject;
+				T result = caseSnowRainData(snowRainData);
+				if (result == null) result = caseService(snowRainData);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WeatherPackage.VISIBILITY_DATA: {
+				VisibilityData visibilityData = (VisibilityData)theEObject;
+				T result = caseVisibilityData(visibilityData);
+				if (result == null) result = caseService(visibilityData);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WeatherPackage.PRESSURE_DATA: {
+				PressureData pressureData = (PressureData)theEObject;
+				T result = casePressureData(pressureData);
+				if (result == null) result = caseService(pressureData);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WeatherPackage.IRRADIANCE_DATA: {
+				IrradianceData irradianceData = (IrradianceData)theEObject;
+				T result = caseIrradianceData(irradianceData);
+				if (result == null) result = caseService(irradianceData);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WeatherPackage.WEATHER_ADMIN: {
+				WeatherAdmin weatherAdmin = (WeatherAdmin)theEObject;
+				T result = caseWeatherAdmin(weatherAdmin);
+				if (result == null) result = caseAdmin(weatherAdmin);
+				if (result == null) result = caseService(weatherAdmin);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -151,17 +200,122 @@ public class WeatherSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Station</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Precipitation Data</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Station</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Precipitation Data</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseStation(Station object) {
+	public T casePrecipitationData(PrecipitationData object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Temperature Data</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Temperature Data</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTemperatureData(TemperatureData object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Fog Data</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Fog Data</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFogData(FogData object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Snow Rain Data</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Snow Rain Data</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSnowRainData(SnowRainData object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Visibility Data</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Visibility Data</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVisibilityData(VisibilityData object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Pressure Data</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Pressure Data</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePressureData(PressureData object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Irradiance Data</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Irradiance Data</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIrradianceData(IrradianceData object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Admin</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Admin</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseWeatherAdmin(WeatherAdmin object) {
 		return null;
 	}
 

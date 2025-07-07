@@ -1,8 +1,6 @@
 {
 	":configurator:resource-version": 1,
-	":configurator:version": "1.0.0",
-	":configurator:symbolic-name": "MMTMainConfig",
-	
+
 	"QVTModelTransformator~weather": {
 		"transformator.id": "Weather2Sensinact",
 		"qvt.template.path": "org.eclipse.fennec.weather.sensinact.mmt/transformations/weather.qvto",

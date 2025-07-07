@@ -1,0 +1,17 @@
+{
+	":configurator:resource-version": 1,
+	
+	"EMFLuceneIndex~dwd-forecast": {
+		"id": "dwd.forecast",
+		"directory.type": "ByteBuffer"
+	},
+	"DWD-MOSMIX-Station~Gera": {
+		"stationId": "10567",
+		"name": "Gera-Leumnitz",
+		"latitude": "50.88",
+		"longitude": "12.13"
+	},
+	"WeatherReportIndex": {
+		"cache.target": "(component.name=SensinactWeatherReportStorage)"
+	}
+}
