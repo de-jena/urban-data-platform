@@ -8,11 +8,14 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider;
 import org.eclipse.fennec.qvt.osgi.api.ModelTransformationConstants;
 import org.eclipse.fennec.qvt.osgi.api.ModelTransformator;
 import org.eclipse.sensinact.core.push.DataUpdate;
 import org.gecko.weather.dwd.fc.WeatherReportStorageHandler;
+import org.gecko.weather.model.weather.WeatherPackage;
 import org.gecko.weather.model.weather.WeatherReport;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
@@ -72,6 +75,9 @@ public class SensinactWeatherReportStorage implements WeatherReportStorageHandle
 	@Override
 	public <R extends WeatherReport> Optional<R> deleteReport(String reportId) {
 		requireNonNull(reportId);
+		if(getReport(reportId).isPresent()) {
+			unsetAllExcept(getReport(reportId).get(), WeatherPackage.Literals.WEATHER_REPORT__ID);
+		}
 		R report = (R) cache.remove(reportId);
 		return Optional.ofNullable(report);
 	}
@@ -95,5 +101,13 @@ public class SensinactWeatherReportStorage implements WeatherReportStorageHandle
 		requireNonNull(report.getTimestamp());
 		String stationId = report.getWeatherStation().getId();
 		return String.format("%s-%s", stationId, sdf.format(report.getTimestamp()));
+	}
+	
+	public static void unsetAllExcept(EObject eObject, EStructuralFeature keepFeature) {
+	    for (EStructuralFeature feature : eObject.eClass().getEAllStructuralFeatures()) {
+	        if (!feature.equals(keepFeature)) {
+	            eObject.eUnset(feature);
+	        }
+	    }
 	}
 }
