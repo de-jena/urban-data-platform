@@ -193,9 +193,8 @@ public class GltConverter {
 	private void addMetaData(DatalogContentPojo dc, MonitoringData service, String time) {
 		EMap<ETypedElement, ResourceValueMetadata> metadata = service.getMetadata();
 		ResourceValueMetadata md = ProviderFactory.eINSTANCE.createResourceValueMetadata();
-		Instant instant = LocalDateTime.parse(time, DateTimeFormatter.ISO_OFFSET_DATE_TIME)
-				.atZone(ZoneId.of("Europe/Berlin")).toInstant();
-		md.setTimestamp(instant);
+		Instant timestamp = LocalDateTime.parse(time, dateFormat).atZone(ZoneId.of("UTC")).toInstant();
+		md.setTimestamp(timestamp);
 		md.getExtra().put("description", createCustomMetadata(dc.getName()));
 		md.getExtra().put("pointNumber", createCustomMetadata(dc.getPointNumber()));
 		md.getExtra().put("pointId", createCustomMetadata(dc.getPointId()));
