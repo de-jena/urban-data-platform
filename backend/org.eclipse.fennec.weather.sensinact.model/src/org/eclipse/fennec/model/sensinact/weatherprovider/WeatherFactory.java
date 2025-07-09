@@ -124,6 +124,15 @@ public interface WeatherFactory extends EFactory {
 	WeatherAdmin createWeatherAdmin();
 
 	/**
+	 * Returns a new object of class '<em>Significant Weather Data</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Significant Weather Data</em>'.
+	 * @generated
+	 */
+	SignificantWeatherData createSignificantWeatherData();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

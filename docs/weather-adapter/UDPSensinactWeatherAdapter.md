@@ -8,6 +8,19 @@ We have modeled the `MOSMIXWeatherReport` from [here](https://github.com/geckopr
 
 The `MOSMIXWeatherReport` is, in sensinact terms, a `Provider`. The different data topologies (e.g. precipitation data, wind data, etc.) have been grouped into corresponding `Service`. 
 
+Currently mapping features are:
+
++ all precipitation data
++ all wind data
++ all cloud data
++ all temperature data
++ all fog data
++ all snow/rain data
++ all visibility data
++ all pressure data
++ all irradiance data
++ the significant weather
+
 ## Runtime Config
 
 We configured a `MOSMIXStation` to get the data from, like 

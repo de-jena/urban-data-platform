@@ -150,6 +150,13 @@ public class WeatherSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case WeatherPackage.SIGNIFICANT_WEATHER_DATA: {
+				SignificantWeatherData significantWeatherData = (SignificantWeatherData)theEObject;
+				T result = caseSignificantWeatherData(significantWeatherData);
+				if (result == null) result = caseService(significantWeatherData);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -316,6 +323,21 @@ public class WeatherSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseWeatherAdmin(WeatherAdmin object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Significant Weather Data</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Significant Weather Data</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSignificantWeatherData(SignificantWeatherData object) {
 		return null;
 	}
 

@@ -11,7 +11,7 @@ Require-Capability: osgi.extender;filter:='(osgi.extender=osgi.configurator)'
 	org.osgi.service.condition,\
 	com.fasterxml.jackson.core.jackson-annotations;version=latest,\
 	org.eclipse.fennec.weather.sensinact.model;version=snapshot,\
-	org.gecko.weather.model,\
-	org.eclipse.sensinact.gateway.core.models.provider
+	org.eclipse.sensinact.gateway.core.models.provider,\
+	org.gecko.weather.model;version='1.1'
 	
 -library: enable-emf

@@ -67,6 +67,7 @@ public class WeatherFactoryImpl extends EFactoryImpl implements WeatherFactory {
 			case WeatherPackage.PRESSURE_DATA: return createPressureData();
 			case WeatherPackage.IRRADIANCE_DATA: return createIrradianceData();
 			case WeatherPackage.WEATHER_ADMIN: return createWeatherAdmin();
+			case WeatherPackage.SIGNIFICANT_WEATHER_DATA: return createSignificantWeatherData();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -191,6 +192,17 @@ public class WeatherFactoryImpl extends EFactoryImpl implements WeatherFactory {
 	public WeatherAdmin createWeatherAdmin() {
 		WeatherAdminImpl weatherAdmin = new WeatherAdminImpl();
 		return weatherAdmin;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public SignificantWeatherData createSignificantWeatherData() {
+		SignificantWeatherDataImpl significantWeatherData = new SignificantWeatherDataImpl();
+		return significantWeatherData;
 	}
 
 	/**

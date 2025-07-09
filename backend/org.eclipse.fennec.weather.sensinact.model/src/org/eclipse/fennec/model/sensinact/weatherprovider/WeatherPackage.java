@@ -193,13 +193,22 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	int WEATHER_PROVIDER__IRRADIANCE_DATA = ProviderPackage.DYNAMIC_PROVIDER_FEATURE_COUNT + 8;
 
 	/**
+	 * The feature id for the '<em><b>Significant Weather Data</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEATHER_PROVIDER__SIGNIFICANT_WEATHER_DATA = ProviderPackage.DYNAMIC_PROVIDER_FEATURE_COUNT + 9;
+
+	/**
 	 * The number of structural features of the '<em>Provider</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_PROVIDER_FEATURE_COUNT = ProviderPackage.DYNAMIC_PROVIDER_FEATURE_COUNT + 9;
+	int WEATHER_PROVIDER_FEATURE_COUNT = ProviderPackage.DYNAMIC_PROVIDER_FEATURE_COUNT + 10;
 
 	/**
 	 * The operation id for the '<em>Get Service</em>' operation.
@@ -1075,6 +1084,79 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 */
 	int WEATHER_ADMIN_OPERATION_COUNT = ProviderPackage.ADMIN_OPERATION_COUNT + 0;
 
+	/**
+	 * The meta object id for the '{@link org.eclipse.fennec.model.sensinact.weatherprovider.impl.SignificantWeatherDataImpl <em>Significant Weather Data</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.impl.SignificantWeatherDataImpl
+	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.impl.WeatherPackageImpl#getSignificantWeatherData()
+	 * @generated
+	 */
+	int SIGNIFICANT_WEATHER_DATA = 11;
+
+	/**
+	 * The feature id for the '<em><b>Metadata</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNIFICANT_WEATHER_DATA__METADATA = ProviderPackage.SERVICE__METADATA;
+
+	/**
+	 * The feature id for the '<em><b>Ww</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNIFICANT_WEATHER_DATA__WW = ProviderPackage.SERVICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>W1w2 w1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNIFICANT_WEATHER_DATA__W1W2_W1 = ProviderPackage.SERVICE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>W1w2 w2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNIFICANT_WEATHER_DATA__W1W2_W2 = ProviderPackage.SERVICE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Significant Weather Data</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNIFICANT_WEATHER_DATA_FEATURE_COUNT = ProviderPackage.SERVICE_FEATURE_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>EIs Set</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNIFICANT_WEATHER_DATA___EIS_SET__ESTRUCTURALFEATURE = ProviderPackage.SERVICE___EIS_SET__ESTRUCTURALFEATURE;
+
+	/**
+	 * The number of operations of the '<em>Significant Weather Data</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNIFICANT_WEATHER_DATA_OPERATION_COUNT = ProviderPackage.SERVICE_OPERATION_COUNT + 0;
+
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider <em>Provider</em>}'.
@@ -1184,6 +1266,17 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EReference getWeatherProvider_IrradianceData();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getSignificantWeatherData <em>Significant Weather Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Significant Weather Data</em>'.
+	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getSignificantWeatherData()
+	 * @see #getWeatherProvider()
+	 * @generated
+	 */
+	EReference getWeatherProvider_SignificantWeatherData();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WindData <em>Wind Data</em>}'.
@@ -1715,6 +1808,49 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getWeatherAdmin_WeatherStationName();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipse.fennec.model.sensinact.weatherprovider.SignificantWeatherData <em>Significant Weather Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Significant Weather Data</em>'.
+	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.SignificantWeatherData
+	 * @generated
+	 */
+	EClass getSignificantWeatherData();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.fennec.model.sensinact.weatherprovider.SignificantWeatherData#getWw <em>Ww</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Ww</em>'.
+	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.SignificantWeatherData#getWw()
+	 * @see #getSignificantWeatherData()
+	 * @generated
+	 */
+	EAttribute getSignificantWeatherData_Ww();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.fennec.model.sensinact.weatherprovider.SignificantWeatherData#getW1w2_w1 <em>W1w2 w1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>W1w2 w1</em>'.
+	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.SignificantWeatherData#getW1w2_w1()
+	 * @see #getSignificantWeatherData()
+	 * @generated
+	 */
+	EAttribute getSignificantWeatherData_W1w2_w1();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.fennec.model.sensinact.weatherprovider.SignificantWeatherData#getW1w2_w2 <em>W1w2 w2</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>W1w2 w2</em>'.
+	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.SignificantWeatherData#getW1w2_w2()
+	 * @see #getSignificantWeatherData()
+	 * @generated
+	 */
+	EAttribute getSignificantWeatherData_W1w2_w2();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1818,6 +1954,14 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 		 * @generated
 		 */
 		EReference WEATHER_PROVIDER__IRRADIANCE_DATA = eINSTANCE.getWeatherProvider_IrradianceData();
+
+		/**
+		 * The meta object literal for the '<em><b>Significant Weather Data</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WEATHER_PROVIDER__SIGNIFICANT_WEATHER_DATA = eINSTANCE.getWeatherProvider_SignificantWeatherData();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.fennec.model.sensinact.weatherprovider.impl.WindDataImpl <em>Wind Data</em>}' class.
@@ -2230,6 +2374,40 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 		 * @generated
 		 */
 		EAttribute WEATHER_ADMIN__WEATHER_STATION_NAME = eINSTANCE.getWeatherAdmin_WeatherStationName();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.fennec.model.sensinact.weatherprovider.impl.SignificantWeatherDataImpl <em>Significant Weather Data</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.fennec.model.sensinact.weatherprovider.impl.SignificantWeatherDataImpl
+		 * @see org.eclipse.fennec.model.sensinact.weatherprovider.impl.WeatherPackageImpl#getSignificantWeatherData()
+		 * @generated
+		 */
+		EClass SIGNIFICANT_WEATHER_DATA = eINSTANCE.getSignificantWeatherData();
+
+		/**
+		 * The meta object literal for the '<em><b>Ww</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SIGNIFICANT_WEATHER_DATA__WW = eINSTANCE.getSignificantWeatherData_Ww();
+
+		/**
+		 * The meta object literal for the '<em><b>W1w2 w1</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SIGNIFICANT_WEATHER_DATA__W1W2_W1 = eINSTANCE.getSignificantWeatherData_W1w2_w1();
+
+		/**
+		 * The meta object literal for the '<em><b>W1w2 w2</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SIGNIFICANT_WEATHER_DATA__W1W2_W2 = eINSTANCE.getSignificantWeatherData_W1w2_w2();
 
 	}
 

@@ -24,6 +24,7 @@ import org.osgi.annotation.versioning.ProviderType;
  *   <li>{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getVisibilityData <em>Visibility Data</em>}</li>
  *   <li>{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getPressureData <em>Pressure Data</em>}</li>
  *   <li>{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getIrradianceData <em>Irradiance Data</em>}</li>
+ *   <li>{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getSignificantWeatherData <em>Significant Weather Data</em>}</li>
  * </ul>
  *
  * @see org.eclipse.fennec.model.sensinact.weatherprovider.WeatherPackage#getWeatherProvider()
@@ -229,5 +230,27 @@ public interface WeatherProvider extends DynamicProvider {
 	 * @generated
 	 */
 	void setIrradianceData(IrradianceData value);
+
+	/**
+	 * Returns the value of the '<em><b>Significant Weather Data</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Significant Weather Data</em>' reference.
+	 * @see #setSignificantWeatherData(SignificantWeatherData)
+	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.WeatherPackage#getWeatherProvider_SignificantWeatherData()
+	 * @model
+	 * @generated
+	 */
+	SignificantWeatherData getSignificantWeatherData();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getSignificantWeatherData <em>Significant Weather Data</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Significant Weather Data</em>' reference.
+	 * @see #getSignificantWeatherData()
+	 * @generated
+	 */
+	void setSignificantWeatherData(SignificantWeatherData value);
 
 } // WeatherProvider

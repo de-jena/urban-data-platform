@@ -14,6 +14,7 @@ import org.eclipse.fennec.model.sensinact.weatherprovider.FogData;
 import org.eclipse.fennec.model.sensinact.weatherprovider.IrradianceData;
 import org.eclipse.fennec.model.sensinact.weatherprovider.PrecipitationData;
 import org.eclipse.fennec.model.sensinact.weatherprovider.PressureData;
+import org.eclipse.fennec.model.sensinact.weatherprovider.SignificantWeatherData;
 import org.eclipse.fennec.model.sensinact.weatherprovider.SnowRainData;
 import org.eclipse.fennec.model.sensinact.weatherprovider.TemperatureData;
 import org.eclipse.fennec.model.sensinact.weatherprovider.VisibilityData;
@@ -108,6 +109,13 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	private EClass weatherAdminEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass significantWeatherDataEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -270,6 +278,16 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	@Override
 	public EReference getWeatherProvider_IrradianceData() {
 		return (EReference)weatherProviderEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getWeatherProvider_SignificantWeatherData() {
+		return (EReference)weatherProviderEClass.getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -768,6 +786,46 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getSignificantWeatherData() {
+		return significantWeatherDataEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getSignificantWeatherData_Ww() {
+		return (EAttribute)significantWeatherDataEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getSignificantWeatherData_W1w2_w1() {
+		return (EAttribute)significantWeatherDataEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getSignificantWeatherData_W1w2_w2() {
+		return (EAttribute)significantWeatherDataEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public WeatherFactory getWeatherFactory() {
 		return (WeatherFactory)getEFactoryInstance();
 	}
@@ -801,6 +859,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 		createEReference(weatherProviderEClass, WEATHER_PROVIDER__VISIBILITY_DATA);
 		createEReference(weatherProviderEClass, WEATHER_PROVIDER__PRESSURE_DATA);
 		createEReference(weatherProviderEClass, WEATHER_PROVIDER__IRRADIANCE_DATA);
+		createEReference(weatherProviderEClass, WEATHER_PROVIDER__SIGNIFICANT_WEATHER_DATA);
 
 		windDataEClass = createEClass(WIND_DATA);
 		createEAttribute(windDataEClass, WIND_DATA__WIND_DIRECTION);
@@ -860,6 +919,11 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 		weatherAdminEClass = createEClass(WEATHER_ADMIN);
 		createEAttribute(weatherAdminEClass, WEATHER_ADMIN__WEATHER_STATION_ID);
 		createEAttribute(weatherAdminEClass, WEATHER_ADMIN__WEATHER_STATION_NAME);
+
+		significantWeatherDataEClass = createEClass(SIGNIFICANT_WEATHER_DATA);
+		createEAttribute(significantWeatherDataEClass, SIGNIFICANT_WEATHER_DATA__WW);
+		createEAttribute(significantWeatherDataEClass, SIGNIFICANT_WEATHER_DATA__W1W2_W1);
+		createEAttribute(significantWeatherDataEClass, SIGNIFICANT_WEATHER_DATA__W1W2_W2);
 	}
 
 	/**
@@ -904,6 +968,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 		pressureDataEClass.getESuperTypes().add(theProviderPackage.getService());
 		irradianceDataEClass.getESuperTypes().add(theProviderPackage.getService());
 		weatherAdminEClass.getESuperTypes().add(theProviderPackage.getAdmin());
+		significantWeatherDataEClass.getESuperTypes().add(theProviderPackage.getService());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(weatherProviderEClass, WeatherProvider.class, "WeatherProvider", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -916,6 +981,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 		initEReference(getWeatherProvider_VisibilityData(), this.getVisibilityData(), null, "visibilityData", null, 0, 1, WeatherProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWeatherProvider_PressureData(), this.getPressureData(), null, "pressureData", null, 0, 1, WeatherProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWeatherProvider_IrradianceData(), this.getIrradianceData(), null, "irradianceData", null, 0, 1, WeatherProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWeatherProvider_SignificantWeatherData(), this.getSignificantWeatherData(), null, "significantWeatherData", null, 0, 1, WeatherProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(windDataEClass, WindData.class, "WindData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getWindData_WindDirection(), ecorePackage.getEFloatObject(), "windDirection", null, 0, 1, WindData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -975,6 +1041,11 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 		initEClass(weatherAdminEClass, WeatherAdmin.class, "WeatherAdmin", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getWeatherAdmin_WeatherStationId(), ecorePackage.getEString(), "weatherStationId", null, 0, 1, WeatherAdmin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWeatherAdmin_WeatherStationName(), ecorePackage.getEString(), "weatherStationName", null, 0, 1, WeatherAdmin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(significantWeatherDataEClass, SignificantWeatherData.class, "SignificantWeatherData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSignificantWeatherData_Ww(), ecorePackage.getEString(), "ww", null, 0, 1, SignificantWeatherData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSignificantWeatherData_W1w2_w1(), ecorePackage.getEString(), "w1w2_w1", null, 0, 1, SignificantWeatherData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSignificantWeatherData_W1w2_w2(), ecorePackage.getEString(), "w1w2_w2", null, 0, 1, SignificantWeatherData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

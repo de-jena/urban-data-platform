@@ -15,6 +15,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="visibilityData" eType="#//VisibilityData"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="pressureData" eType="#//PressureData"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="irradianceData" eType="#//IrradianceData"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="significantWeatherData"
+        eType="#//SignificantWeatherData"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="WindData" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="windDirection" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject">
@@ -235,5 +237,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="WeatherAdmin" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Admin">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="weatherStationId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="weatherStationName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SignificantWeatherData" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ww" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="w1w2_w1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="w1w2_w2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

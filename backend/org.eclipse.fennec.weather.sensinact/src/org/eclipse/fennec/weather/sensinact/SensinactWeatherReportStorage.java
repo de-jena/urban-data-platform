@@ -15,7 +15,6 @@ import org.eclipse.fennec.qvt.osgi.api.ModelTransformationConstants;
 import org.eclipse.fennec.qvt.osgi.api.ModelTransformator;
 import org.eclipse.sensinact.core.push.DataUpdate;
 import org.gecko.weather.dwd.fc.WeatherReportStorageHandler;
-import org.gecko.weather.model.weather.WeatherPackage;
 import org.gecko.weather.model.weather.WeatherReport;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
@@ -71,15 +70,9 @@ public class SensinactWeatherReportStorage implements WeatherReportStorageHandle
 	 * (non-Javadoc)
 	 * @see org.gecko.weather.dwd.fc.WeatherReportStorageHandler#deleteReport(java.lang.String)
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public <R extends WeatherReport> Optional<R> deleteReport(String reportId) {
-		requireNonNull(reportId);
-		if(getReport(reportId).isPresent()) {
-			unsetAllExcept(getReport(reportId).get(), WeatherPackage.Literals.WEATHER_REPORT__ID);
-		}
-		R report = (R) cache.remove(reportId);
-		return Optional.ofNullable(report);
+		throw new UnsupportedOperationException("This operation should not be relevant for sensinact, thus it is not implemented!");
 	}
 
 	/* 

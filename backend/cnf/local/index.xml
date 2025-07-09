@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="Local" increment="1751612427955">
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="Local" increment="1752041491803">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="license" value="Eclipse Public License 2.0"/>
@@ -8,38 +8,38 @@
       <attribute name="documentation" value="https://github.com/geckoprojects-org/org.gecko.weather"/>
       <attribute name="description" value="Gecko Weather - Generic weather model with generated code"/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="1.1.0.202507040659-SNAPSHOT" type="Version"/>
+      <attribute name="version" value="1.1.0.202507090545-SNAPSHOT" type="Version"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="org.eclipse.emf.common.util,org.eclipse.emf.ecore"/>
       <attribute name="bundle-symbolic-name" value="org.gecko.weather.model"/>
-      <attribute name="bundle-version" value="1.1.0.202507040659-SNAPSHOT" type="Version"/>
+      <attribute name="bundle-version" value="1.1.0.202507090545-SNAPSHOT" type="Version"/>
       <attribute name="osgi.wiring.package" value="org.gecko.weather.model.weather"/>
       <attribute name="version" value="1.0.0" type="Version"/>
-      <attribute name="bnd.hashes" value="280308588,1865231054,-1160123822,1665559307,1495192544,1584356190,645944186,1483127917,502974240,-144931940,-1965089780,-232482540,1744950460,1598112406,1425955268,1882932690,-1956126168,792859328,-1923478059" type="List&lt;Long&gt;"/>
+      <attribute name="bnd.hashes" value="280308588,1865231054,-1160123822,1665559307,1495192544,1584356190,645944186,1483127917,502974240,-144931940,-1965089780,-232482540,1744950460,2641653,-480302750,1598112406,1425955268,1882932690,-1956126168,792859328,-1923478059" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="org.eclipse.emf.common.notify,org.eclipse.emf.common.util,org.eclipse.emf.ecore,org.eclipse.emf.ecore.impl,org.gecko.weather.model.weather"/>
       <attribute name="bundle-symbolic-name" value="org.gecko.weather.model"/>
-      <attribute name="bundle-version" value="1.1.0.202507040659-SNAPSHOT" type="Version"/>
+      <attribute name="bundle-version" value="1.1.0.202507090545-SNAPSHOT" type="Version"/>
       <attribute name="osgi.wiring.package" value="org.gecko.weather.model.weather.impl"/>
       <attribute name="version" value="1.0.0" type="Version"/>
-      <attribute name="bnd.hashes" value="305949612,1812064782,-1938077806,886490059,1140111904,-1768336738,2130238650,348886061,-2027614880,672934876,-1900213172,-1385380524,896789756,-2127241770,-1295850734,-218274712,-962754304,-1923478059" type="List&lt;Long&gt;"/>
+      <attribute name="bnd.hashes" value="305949612,1812064782,-1938077806,886490059,1140111904,-1768336738,2130238650,348886061,-2027614880,672934876,-1900213172,-1385380524,896789756,82879157,-2127241770,-1295850734,-218274712,-962754304,-1923478059" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="org.eclipse.emf.common.notify,org.eclipse.emf.common.notify.impl,org.eclipse.emf.common.util,org.eclipse.emf.ecore,org.eclipse.emf.ecore.resource,org.eclipse.emf.ecore.resource.impl,org.eclipse.emf.ecore.util,org.eclipse.emf.ecore.xmi.impl,org.gecko.weather.model.weather"/>
       <attribute name="bundle-symbolic-name" value="org.gecko.weather.model"/>
-      <attribute name="bundle-version" value="1.1.0.202507040659-SNAPSHOT" type="Version"/>
+      <attribute name="bundle-version" value="1.1.0.202507090545-SNAPSHOT" type="Version"/>
       <attribute name="osgi.wiring.package" value="org.gecko.weather.model.weather.util"/>
       <attribute name="version" value="1.0.0" type="Version"/>
       <attribute name="bnd.hashes" value="-1722812497,1949892840,-3872446,-1911077848,-1923478059" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="1.1.0.202507040659-SNAPSHOT" type="Version"/>
+      <attribute name="bundle-version" value="1.1.0.202507090545-SNAPSHOT" type="Version"/>
       <attribute name="osgi.wiring.bundle" value="org.gecko.weather.model"/>
     </capability>
     <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="1.1.0.202507040659-SNAPSHOT" type="Version"/>
+      <attribute name="bundle-version" value="1.1.0.202507090545-SNAPSHOT" type="Version"/>
       <attribute name="osgi.wiring.host" value="org.gecko.weather.model"/>
     </capability>
     <capability namespace="org.eclipse.emf.ecore.generated_package">
@@ -51,10 +51,10 @@
       <attribute name="genModelSourceLocations" value="model/dwd-weather.genmodel,org.gecko.weather.model/model/dwd-weather.genmodel" type="List&lt;String&gt;"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="size" value="168904" type="Long"/>
+      <attribute name="size" value="199158" type="Long"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
       <attribute name="url" value="org.gecko.weather.model/org.gecko.weather.model-1.1.0.jar"/>
-      <attribute name="osgi.content" value="3183ED64803331F10AE9F0BA9B19CCCA07F9FC4190C8BE514B22B13F7E6DA545"/>
+      <attribute name="osgi.content" value="9EA5254BC0E97758C55307CB8A9BBFB3C0C33B1B86432ABC9B6BD36457407ACB"/>
     </capability>
     <capability namespace="osgi.service">
       <directive name="uses" value="org.eclipse.emf.ecore,org.gecko.weather.model.weather"/>
@@ -163,33 +163,145 @@
     <capability namespace="osgi.identity">
       <attribute name="license" value="Eclipse Public License 2.0"/>
       <attribute name="copyright" value="Data In Motion Consulting GmbH - All rights reserved"/>
+      <attribute name="osgi.identity" value="org.gecko.weather.api"/>
+      <attribute name="documentation" value="https://github.com/geckoprojects-org/org.gecko.weather"/>
+      <attribute name="description" value="Gecko Weather - General API"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.1.0.202507090549-SNAPSHOT" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.gecko.weather.model.weather"/>
+      <attribute name="bundle-symbolic-name" value="org.gecko.weather.api"/>
+      <attribute name="bundle-version" value="1.1.0.202507090549-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.weather.api"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="682607017,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.eclipse.emf.ecore,org.eclipse.emf.ecore.resource"/>
+      <attribute name="bundle-symbolic-name" value="org.gecko.weather.api"/>
+      <attribute name="bundle-version" value="1.1.0.202507090549-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.weather.api.fetcher"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-2034339014,141727126,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="de.dwd.cdc.metelements,net.opengis.kml,org.eclipse.emf.ecore,org.gecko.weather.model.weather"/>
+      <attribute name="bundle-symbolic-name" value="org.gecko.weather.api"/>
+      <attribute name="bundle-version" value="1.1.0.202507090549-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.weather.api.util"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="184269088,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.1.0.202507090549-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.gecko.weather.api"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.1.0.202507090549-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.gecko.weather.api"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="34817" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="org.gecko.weather.api/org.gecko.weather.api-1.1.0.jar"/>
+      <attribute name="osgi.content" value="6CDAED023C5B79AA04C8BDE14EA0294D03AF78A134504FE13BFBB2F90C1C00A1"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=de.dwd.cdc.metelements)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="de.dwd.cdc.metelements"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.io)"/>
+      <attribute name="osgi.wiring.package" value="java.io"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.lang)"/>
+      <attribute name="osgi.wiring.package" value="java.lang"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.lang.invoke)"/>
+      <attribute name="osgi.wiring.package" value="java.lang.invoke"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.net)"/>
+      <attribute name="osgi.wiring.package" value="java.net"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.nio.file)"/>
+      <attribute name="osgi.wiring.package" value="java.nio.file"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.time)"/>
+      <attribute name="osgi.wiring.package" value="java.time"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util)"/>
+      <attribute name="osgi.wiring.package" value="java.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util.zip)"/>
+      <attribute name="osgi.wiring.package" value="java.util.zip"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=net.opengis.kml)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="net.opengis.kml"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.emf.common.util)(version&gt;=2.29.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.common.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.emf.ecore)(version&gt;=2.35.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.emf.ecore.resource)(version&gt;=2.35.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.resource"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.weather.api.util)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.weather.api.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.weather.model.weather)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.weather.model.weather"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=17))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="Eclipse Public License 2.0"/>
+      <attribute name="copyright" value="Data In Motion Consulting GmbH - All rights reserved"/>
       <attribute name="osgi.identity" value="org.gecko.weather.dwd.forecast"/>
       <attribute name="documentation" value="https://github.com/geckoprojects-org/org.gecko.weather"/>
       <attribute name="description" value="Gecko Weather Forecast Services for DWD data"/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="1.1.0.202507030726-SNAPSHOT" type="Version"/>
+      <attribute name="version" value="1.1.0.202507090603-SNAPSHOT" type="Version"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="org.eclipse.emf.ecore,org.gecko.weather.model.weather"/>
       <attribute name="bundle-symbolic-name" value="org.gecko.weather.dwd.forecast"/>
-      <attribute name="bundle-version" value="1.1.0.202507030726-SNAPSHOT" type="Version"/>
+      <attribute name="bundle-version" value="1.1.0.202507090603-SNAPSHOT" type="Version"/>
       <attribute name="osgi.wiring.package" value="org.gecko.weather.dwd.fc"/>
       <attribute name="version" value="1.0.0" type="Version"/>
       <attribute name="bnd.hashes" value="-1003198037,1823436682,969864688,2065286295,-1923478059" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="1.1.0.202507030726-SNAPSHOT" type="Version"/>
+      <attribute name="bundle-version" value="1.1.0.202507090603-SNAPSHOT" type="Version"/>
       <attribute name="osgi.wiring.bundle" value="org.gecko.weather.dwd.forecast"/>
     </capability>
     <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="1.1.0.202507030726-SNAPSHOT" type="Version"/>
+      <attribute name="bundle-version" value="1.1.0.202507090603-SNAPSHOT" type="Version"/>
       <attribute name="osgi.wiring.host" value="org.gecko.weather.dwd.forecast"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="size" value="111707" type="Long"/>
+      <attribute name="size" value="111965" type="Long"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
       <attribute name="url" value="org.gecko.weather.dwd.forecast/org.gecko.weather.dwd.forecast-1.1.0.jar"/>
-      <attribute name="osgi.content" value="10A46C7425233176F538F4E5E03696B57F82139EB072FC9E9461D88CB6217A70"/>
+      <attribute name="osgi.content" value="92DFC29E6DEC8061F1B3D4D61982BB57F4E66E08A0DAD15A0C13115E121F521B"/>
     </capability>
     <capability namespace="osgi.service">
       <directive name="uses" value="biz.aQute.scheduler.api"/>

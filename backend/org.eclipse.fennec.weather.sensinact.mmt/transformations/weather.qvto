@@ -26,10 +26,33 @@ mapping WEATHER::MOSMIXSWeatherReport::toSensinactWeatherReport(): SENSINACT::We
 	irradianceData := self.map toServiceData(SENSINACT::IrradianceData.oclAsType(ECORE::EClass)).oclAsType(SENSINACT::IrradianceData);
 	pressureData := self.map toServiceData(SENSINACT::PressureData.oclAsType(ECORE::EClass)).oclAsType(SENSINACT::PressureData);
 	visibilityData := self.map toServiceData(SENSINACT::VisibilityData.oclAsType(ECORE::EClass)).oclAsType(SENSINACT::VisibilityData);
+	significantWeatherData := self.map toSignificantWeather();
+}
+
+mapping WEATHER::MOSMIXSWeatherReport:: toSignificantWeather() : SENSINACT::SignificantWeatherData {
+	ww := self.significantWeather3Hours.toString();
+	w1w2_w1 := self.significantWeather6Hours.w1.toString();
+	w1w2_w2 := self.significantWeather6Hours.w2.toString();
+	var ww_meaning : String := WEATHER::WMOWeatherCodeType.oclAsType(ECORE::EEnum).getEEnumLiteralByLiteral(self.significantWeather3Hours.toString()).toDocumentation();
+	var w1_meaning : String := WEATHER::WMOWeatherCodeType.oclAsType(ECORE::EEnum).getEEnumLiteralByLiteral(self.significantWeather6Hours.w1.toString()).toDocumentation();
+	var w2_meaning : String := WEATHER::WMOWeatherCodeType.oclAsType(ECORE::EEnum).getEEnumLiteralByLiteral(self.significantWeather6Hours.w2.toString()).toDocumentation();
+	
+	var ww_def : String := WEATHER::MOSMIXSWeatherReport.oclAsType(ECORE::EClass).getEStructuralFeature("significantWeather3Hours").toDocumentation();
+	var w1_def : String := WEATHER::W1W2.oclAsType(ECORE::EClass).getEStructuralFeature("w1").toDocumentation();
+	var w2_def : String := WEATHER::W1W2.oclAsType(ECORE::EClass).getEStructuralFeature("w2").toDocumentation();
+	
+	var metadataKeys := Sequence{"description", "sensorthings.unit.definition", "sensorthings.unit.name", "unit", "observation.value.meaning", "dwd.item.id"};
+	var ww_metadataValues := Sequence{ww_def, ww_def, ww_def, "00...99", ww_meaning, "ww"};
+	var w1_metadataValues := Sequence{w1_def, w1_def, w1_def, "00...99", w1_meaning, "w1w2 (w1 part)"};
+	var w2_metadataValues := Sequence{w2_def, w2_def, w2_def, "00...99", w2_meaning, "w1w2 (w2 part)"};
+	
+	metadata += self.map toGeneralMetadataEntry(SENSINACT::SignificantWeatherData.oclAsType(ECORE::EClass).getEStructuralFeature("ww"), metadataKeys, ww_metadataValues);
+	metadata += self.map toGeneralMetadataEntry(SENSINACT::SignificantWeatherData.oclAsType(ECORE::EClass).getEStructuralFeature("w1w2_w1"), metadataKeys, w1_metadataValues);
+	metadata += self.map toGeneralMetadataEntry(SENSINACT::SignificantWeatherData.oclAsType(ECORE::EClass).getEStructuralFeature("w1w2_w2"), metadataKeys, w2_metadataValues);
 }
 
 
-query ECORE::EStructuralFeature::toDocumentation(): String {
+query ECORE::EModelElement::toDocumentation(): String {
 	return self.eAnnotations->select(a | a.source = "http://www.eclipse.org/emf/2002/GenModel")->first().details->select(d | d.key = "documentation")->first().value;
 } 
 
@@ -70,6 +93,12 @@ mapping WEATHER::MOSMIXSWeatherReport::toAdmin(): SENSINACT::WeatherAdmin {
 	
 }
 
+mapping WEATHER::MOSMIXSWeatherReport::toGeneralMetadataEntry(feature : ECORE::EStructuralFeature, keys : Sequence(String), values : Sequence(String)) : PROVIDER::FeatureMetadata {
+	
+	key := feature;
+	value := self.map toGeneralMetadata(keys, values);	
+}
+
 mapping WEATHER::MOSMIXSWeatherReport::toGeneralMetadataEntry(feature : ECORE::EStructuralFeature, propKey : String, propValue : String) : PROVIDER::FeatureMetadata {
 	
 	key := feature;
@@ -91,7 +120,7 @@ mapping WEATHER::MOSMIXSWeatherReport::toMetadata(unit : String, description : S
 		extra += toMetadataValueMap("sensorthings.unit.name", unit); //this ends up in unitOfMeasurement.name
 	};
 	if(dwdId.oclIsUndefined().not()) {
-		extra += toMetadataValueMap("dwdItemId", dwdId);
+		extra += toMetadataValueMap("dwd.item.id", dwdId);
 	};
 	if(description.oclIsUndefined().not()){
 		extra += toMetadataValueMap("description", description);
@@ -107,6 +136,18 @@ mapping WEATHER::MOSMIXSWeatherReport::toMetadataEntry(feature : ECORE::EStructu
 
 mapping WEATHER::MOSMIXSWeatherReport::toGeneralMetadata(propKey : String, propValue : String): PROVIDER::ResourceValueMetadata {
 	extra += toMetadataValueMap(propKey, propValue);
+}
+
+mapping WEATHER::MOSMIXSWeatherReport::toGeneralMetadata(keys : Sequence(String), values : Sequence(String)): PROVIDER::ResourceValueMetadata {
+
+	var i : Integer := 1;
+    while (i <= keys->size()) {
+        var key : String := keys->at(i);
+        var value : String := values->at(i);
+       	extra += toMetadataValueMap(key, value);
+        i := i + 1;
+    }
+    
 }
 
 mapping WEATHER::MOSMIXSWeatherReport::toMetadata(unit : String, description : String): PROVIDER::ResourceValueMetadata {

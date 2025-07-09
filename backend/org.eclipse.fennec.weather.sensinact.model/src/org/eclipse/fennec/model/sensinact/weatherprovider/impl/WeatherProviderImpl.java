@@ -14,6 +14,7 @@ import org.eclipse.fennec.model.sensinact.weatherprovider.FogData;
 import org.eclipse.fennec.model.sensinact.weatherprovider.IrradianceData;
 import org.eclipse.fennec.model.sensinact.weatherprovider.PrecipitationData;
 import org.eclipse.fennec.model.sensinact.weatherprovider.PressureData;
+import org.eclipse.fennec.model.sensinact.weatherprovider.SignificantWeatherData;
 import org.eclipse.fennec.model.sensinact.weatherprovider.SnowRainData;
 import org.eclipse.fennec.model.sensinact.weatherprovider.TemperatureData;
 import org.eclipse.fennec.model.sensinact.weatherprovider.VisibilityData;
@@ -40,6 +41,7 @@ import org.eclipse.sensinact.model.core.provider.impl.DynamicProviderImpl;
  *   <li>{@link org.eclipse.fennec.model.sensinact.weatherprovider.impl.WeatherProviderImpl#getVisibilityData <em>Visibility Data</em>}</li>
  *   <li>{@link org.eclipse.fennec.model.sensinact.weatherprovider.impl.WeatherProviderImpl#getPressureData <em>Pressure Data</em>}</li>
  *   <li>{@link org.eclipse.fennec.model.sensinact.weatherprovider.impl.WeatherProviderImpl#getIrradianceData <em>Irradiance Data</em>}</li>
+ *   <li>{@link org.eclipse.fennec.model.sensinact.weatherprovider.impl.WeatherProviderImpl#getSignificantWeatherData <em>Significant Weather Data</em>}</li>
  * </ul>
  *
  * @generated
@@ -134,6 +136,16 @@ public class WeatherProviderImpl extends DynamicProviderImpl implements WeatherP
 	 * @ordered
 	 */
 	protected IrradianceData irradianceData;
+
+	/**
+	 * The cached value of the '{@link #getSignificantWeatherData() <em>Significant Weather Data</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSignificantWeatherData()
+	 * @generated
+	 * @ordered
+	 */
+	protected SignificantWeatherData significantWeatherData;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -520,6 +532,46 @@ public class WeatherProviderImpl extends DynamicProviderImpl implements WeatherP
 	 * @generated
 	 */
 	@Override
+	public SignificantWeatherData getSignificantWeatherData() {
+		if (significantWeatherData != null && significantWeatherData.eIsProxy()) {
+			InternalEObject oldSignificantWeatherData = (InternalEObject)significantWeatherData;
+			significantWeatherData = (SignificantWeatherData)eResolveProxy(oldSignificantWeatherData);
+			if (significantWeatherData != oldSignificantWeatherData) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WeatherPackage.WEATHER_PROVIDER__SIGNIFICANT_WEATHER_DATA, oldSignificantWeatherData, significantWeatherData));
+			}
+		}
+		return significantWeatherData;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SignificantWeatherData basicGetSignificantWeatherData() {
+		return significantWeatherData;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSignificantWeatherData(SignificantWeatherData newSignificantWeatherData) {
+		SignificantWeatherData oldSignificantWeatherData = significantWeatherData;
+		significantWeatherData = newSignificantWeatherData;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__SIGNIFICANT_WEATHER_DATA, oldSignificantWeatherData, significantWeatherData));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case WeatherPackage.WEATHER_PROVIDER__WIND_DATA:
@@ -549,6 +601,9 @@ public class WeatherProviderImpl extends DynamicProviderImpl implements WeatherP
 			case WeatherPackage.WEATHER_PROVIDER__IRRADIANCE_DATA:
 				if (resolve) return getIrradianceData();
 				return basicGetIrradianceData();
+			case WeatherPackage.WEATHER_PROVIDER__SIGNIFICANT_WEATHER_DATA:
+				if (resolve) return getSignificantWeatherData();
+				return basicGetSignificantWeatherData();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -587,6 +642,9 @@ public class WeatherProviderImpl extends DynamicProviderImpl implements WeatherP
 				return;
 			case WeatherPackage.WEATHER_PROVIDER__IRRADIANCE_DATA:
 				setIrradianceData((IrradianceData)newValue);
+				return;
+			case WeatherPackage.WEATHER_PROVIDER__SIGNIFICANT_WEATHER_DATA:
+				setSignificantWeatherData((SignificantWeatherData)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -627,6 +685,9 @@ public class WeatherProviderImpl extends DynamicProviderImpl implements WeatherP
 			case WeatherPackage.WEATHER_PROVIDER__IRRADIANCE_DATA:
 				setIrradianceData((IrradianceData)null);
 				return;
+			case WeatherPackage.WEATHER_PROVIDER__SIGNIFICANT_WEATHER_DATA:
+				setSignificantWeatherData((SignificantWeatherData)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -657,6 +718,8 @@ public class WeatherProviderImpl extends DynamicProviderImpl implements WeatherP
 				return pressureData != null;
 			case WeatherPackage.WEATHER_PROVIDER__IRRADIANCE_DATA:
 				return irradianceData != null;
+			case WeatherPackage.WEATHER_PROVIDER__SIGNIFICANT_WEATHER_DATA:
+				return significantWeatherData != null;
 		}
 		return super.eIsSet(featureID);
 	}
