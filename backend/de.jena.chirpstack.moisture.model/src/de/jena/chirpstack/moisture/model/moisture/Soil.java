@@ -44,7 +44,7 @@ public interface Soil extends Service {
 	 * @return the value of the '<em>Temperature</em>' attribute.
 	 * @see #setTemperature(double)
 	 * @see de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage#getSoil_Temperature()
-	 * @model
+	 * @model annotation="mapping path='object/temp_SOIL_f'"
 	 * @generated
 	 */
 	double getTemperature();
@@ -66,7 +66,7 @@ public interface Soil extends Service {
 	 * @return the value of the '<em>Water</em>' attribute.
 	 * @see #setWater(double)
 	 * @see de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage#getSoil_Water()
-	 * @model
+	 * @model annotation="mapping path='object/water_SOIL_f'"
 	 * @generated
 	 */
 	double getWater();
@@ -88,7 +88,7 @@ public interface Soil extends Service {
 	 * @return the value of the '<em>Conduct</em>' attribute.
 	 * @see #setConduct(double)
 	 * @see de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage#getSoil_Conduct()
-	 * @model
+	 * @model annotation="mapping path='object/conduct_SOIL_f'"
 	 * @generated
 	 */
 	double getConduct();

@@ -46,7 +46,7 @@ public interface Sensor extends Service {
 	 * @return the value of the '<em>Battery</em>' attribute.
 	 * @see #setBattery(double)
 	 * @see de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage#getSensor_Battery()
-	 * @model
+	 * @model annotation="mapping path='object/BatV'"
 	 * @generated
 	 */
 	double getBattery();
@@ -68,7 +68,7 @@ public interface Sensor extends Service {
 	 * @return the value of the '<em>Iflag</em>' attribute.
 	 * @see #setIflag(double)
 	 * @see de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage#getSensor_Iflag()
-	 * @model
+	 * @model annotation="mapping path='object/i_flag'"
 	 * @generated
 	 */
 	double getIflag();
@@ -90,7 +90,7 @@ public interface Sensor extends Service {
 	 * @return the value of the '<em>Sflag</em>' attribute.
 	 * @see #setSflag(double)
 	 * @see de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage#getSensor_Sflag()
-	 * @model
+	 * @model annotation="mapping path='object/s_flag'"
 	 * @generated
 	 */
 	double getSflag();
@@ -112,7 +112,7 @@ public interface Sensor extends Service {
 	 * @return the value of the '<em>Mod</em>' attribute.
 	 * @see #setMod(double)
 	 * @see de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage#getSensor_Mod()
-	 * @model
+	 * @model annotation="mapping path='object/Mod'"
 	 * @generated
 	 */
 	double getMod();
@@ -134,7 +134,7 @@ public interface Sensor extends Service {
 	 * @return the value of the '<em>Temperature DS18B20</em>' attribute.
 	 * @see #setTemperatureDS18B20(float)
 	 * @see de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage#getSensor_TemperatureDS18B20()
-	 * @model
+	 * @model annotation="mapping path='object/temp_DS18B20' type='float'"
 	 * @generated
 	 */
 	float getTemperatureDS18B20();

@@ -1,0 +1,69 @@
+{
+    "deduplicationId": "9c33e88c-e604-4775-bf21-9841948cfd48",
+    "time": "2025-07-09T07:31:17.836573+00:00",
+    "deviceInfo": {
+        "tenantId": "52f14cd4-c6f1-4fbd-8f87-4025e1d49242",
+        "tenantName": "Jena",
+        "applicationId": "6e3f1860-3644-4d13-806c-bcbc6f9b89b6",
+        "applicationName": "MPI für Chemische Ökologie",
+        "deviceProfileId": "ff75ebd2-7d16-4506-b85b-1b5e9b07214e",
+        "deviceProfileName": "SenseCAP S2106 LoRaWAN® pH Sensor",
+        "deviceName": "2CF7F1C051100027",
+        "devEui": "2cf7f1c051100027",
+        "tags": {
+        }
+    },
+    "devAddr": "01577476",
+    "adr": true,
+    "dr": 4,
+    "fCnt": 67800,
+    "fPort": 2,
+    "confirmed": true,
+    "data": "AQEQQjsAAAEKEEsnAAAYMA==",
+    "object": {
+        "messages": [
+            {
+                "measurementId": 4097.0,
+                "measurementValue": 15.17,
+                "type": "report_telemetry"
+            },
+            {
+                "type": "report_telemetry",
+                "measurementId": 4106.0,
+                "measurementValue": 10.059
+            }
+        ],
+        "valid": true,
+        "payload": "010110423B0000010A104B2700001830",
+        "err": 0.0
+    },
+    "rxInfo": [
+        {
+            "gatewayId": "503139535d604750",
+            "uplinkId": 65281,
+            "time": "2025-07-09T07:31:17.836573+00:00",
+            "rssi": -116,
+            "snr": -8.5,
+            "channel": 3,
+            "location": {
+                "latitude": 50.88423992258394,
+                "longitude": 11.596755981445314
+            },
+            "context": "hn4ujA==",
+            "metadata": {
+                "region_common_name": "EU868",
+                "region_name": "eu868"
+            }
+        }
+    ],
+    "txInfo": {
+        "frequency": 867100000,
+        "modulation": {
+            "lora": {
+                "bandwidth": 125000,
+                "spreadingFactor": 8,
+                "codeRate": "CR_4_5"
+            }
+        }
+    }
+}

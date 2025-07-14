@@ -16,26 +16,91 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Sensor" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="battery" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="iflag" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sflag" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Mod" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="temperatureDS18B20" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="battery" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/BatV"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="iflag" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/i_flag"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sflag" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/s_flag"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Mod" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/Mod"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="temperatureDS18B20" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/temp_DS18B20"/>
+        <details key="type" value="float"/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Soil" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="temperature" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="water" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="conduct" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="temperature" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/temp_SOIL_f"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="water" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/water_SOIL_f"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="conduct" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/conduct_SOIL_f"/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Device" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="DevEUI" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="profileId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="profileName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tenantId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tenantName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="applicationId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="applicationName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="DevEUI" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="mapping">
+        <details key="path" value="deviceInfo/devEui"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="mapping">
+        <details key="path" value="deviceInfo/deviceName"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="profileId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="mapping">
+        <details key="path" value="deviceInfo/deviceProfileId"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="profileName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="mapping">
+        <details key="path" value="deviceInfo/deviceProfileName"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tenantId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="mapping">
+        <details key="path" value="deviceInfo/tenantId"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tenantName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="mapping">
+        <details key="path" value="deviceInfo/tenantName"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="applicationId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="mapping">
+        <details key="path" value="deviceInfo/applicationId"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="applicationName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="mapping">
+        <details key="path" value="deviceInfo/applicationName"/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MoistureSensor" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Provider">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -65,5 +130,174 @@
     <eLiterals name="silt" value="1"/>
     <eLiterals name="loam" value="2"/>
     <eLiterals name="clay" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SenseCap" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Provider">
+    <eAnnotations source="model">
+      <details key="name" value="SenseCAP S2120 8-in-1 LoRaWAN Wetterstation"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="air" eType="#//Air" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rain" eType="#//Rain" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="light" eType="#//Light"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SenseCap2" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Provider">
+    <eAnnotations source="model">
+      <details key="name" value="SenseCAP Wetterstation 2.0"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="air" eType="#//Air" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rain" eType="#//Rain" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="light" eType="#//Light"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SenseCap3" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Provider">
+    <eAnnotations source="model">
+      <details key="name" value="SenseCAP_Wetterstation_2_0"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="air" eType="#//Air" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rain" eType="#//Rain" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="light" eType="#//Light"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Air" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="airTemperature" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/messages/0/0/measurementValue"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="airHumidity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/messages/0/1/measurementValue"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="barometricPressure" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/messages/1/2/measurementValue"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="peakWindGust" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/messages/2/0/measurementValue"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="windSpeed" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/messages/0/4/measurementValue"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="windDirectionSensor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/messages/1/0/measurementValue"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Rain" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rainGauge" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/messages/1/1/measurementValue"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rainAccumulation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/messages/2/1/measurementValue"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Light" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lightIntensity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/messages/0/2/measurementValue"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uvIndex" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/messages/0/3/measurementValue"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TEKTELIC" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Provider">
+    <eAnnotations source="model">
+      <details key="name" value="TEKTELIC KIWI Agriculture Sensor"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="soil" eType="#//TSoil"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TSoil" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="soilWaterTension1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/soil_water_tension1"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="soilWaterTension2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/soil_water_tension2"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="soilMoistureRaw1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/soil_moisture_raw1"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="soilMoistureRaw2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/soil_moisture_raw2"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ambientLight" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/ambient_light"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EM310" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Provider">
+    <eAnnotations source="model">
+      <details key="name" value="EM310-UDL"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="trash" eType="#//Trash"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Trash" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="distance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/distance"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/position"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="battery" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/battery"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SN50" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Provider">
+    <eAnnotations source="model">
+      <details key="name" value="SN50v3-LB/LS"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sensor" eType="#//SN" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SN" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="adc1v" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/ADC1_V"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="battery" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/BatV"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="adc2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/ADC2"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="adc3" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/ADC3"/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
 </ecore:EPackage>

@@ -99,6 +99,114 @@ public interface ChirpstackMoistureFactory extends EFactory {
 	MoistureAdmin createMoistureAdmin();
 
 	/**
+	 * Returns a new object of class '<em>Sense Cap</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Sense Cap</em>'.
+	 * @generated
+	 */
+	SenseCap createSenseCap();
+
+	/**
+	 * Returns a new object of class '<em>Sense Cap2</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Sense Cap2</em>'.
+	 * @generated
+	 */
+	SenseCap2 createSenseCap2();
+
+	/**
+	 * Returns a new object of class '<em>Sense Cap3</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Sense Cap3</em>'.
+	 * @generated
+	 */
+	SenseCap3 createSenseCap3();
+
+	/**
+	 * Returns a new object of class '<em>Air</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Air</em>'.
+	 * @generated
+	 */
+	Air createAir();
+
+	/**
+	 * Returns a new object of class '<em>Rain</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Rain</em>'.
+	 * @generated
+	 */
+	Rain createRain();
+
+	/**
+	 * Returns a new object of class '<em>Light</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Light</em>'.
+	 * @generated
+	 */
+	Light createLight();
+
+	/**
+	 * Returns a new object of class '<em>TEKTELIC</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>TEKTELIC</em>'.
+	 * @generated
+	 */
+	TEKTELIC createTEKTELIC();
+
+	/**
+	 * Returns a new object of class '<em>TSoil</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>TSoil</em>'.
+	 * @generated
+	 */
+	TSoil createTSoil();
+
+	/**
+	 * Returns a new object of class '<em>EM310</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>EM310</em>'.
+	 * @generated
+	 */
+	EM310 createEM310();
+
+	/**
+	 * Returns a new object of class '<em>Trash</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Trash</em>'.
+	 * @generated
+	 */
+	Trash createTrash();
+
+	/**
+	 * Returns a new object of class '<em>SN50</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>SN50</em>'.
+	 * @generated
+	 */
+	SN50 createSN50();
+
+	/**
+	 * Returns a new object of class '<em>SN</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>SN</em>'.
+	 * @generated
+	 */
+	SN createSN();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
