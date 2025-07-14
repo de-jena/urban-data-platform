@@ -75,6 +75,18 @@ public class ChirpstackMoistureFactoryImpl extends EFactoryImpl implements Chirp
 			case ChirpstackMoisturePackage.MOISTURE_SENSOR: return createMoistureSensor();
 			case ChirpstackMoisturePackage.MOISTURE_STATUS: return createMoistureStatus();
 			case ChirpstackMoisturePackage.MOISTURE_ADMIN: return createMoistureAdmin();
+			case ChirpstackMoisturePackage.SENSE_CAP: return createSenseCap();
+			case ChirpstackMoisturePackage.SENSE_CAP2: return createSenseCap2();
+			case ChirpstackMoisturePackage.SENSE_CAP3: return createSenseCap3();
+			case ChirpstackMoisturePackage.AIR: return createAir();
+			case ChirpstackMoisturePackage.RAIN: return createRain();
+			case ChirpstackMoisturePackage.LIGHT: return createLight();
+			case ChirpstackMoisturePackage.TEKTELIC: return createTEKTELIC();
+			case ChirpstackMoisturePackage.TSOIL: return createTSoil();
+			case ChirpstackMoisturePackage.EM310: return createEM310();
+			case ChirpstackMoisturePackage.TRASH: return createTrash();
+			case ChirpstackMoisturePackage.SN50: return createSN50();
+			case ChirpstackMoisturePackage.SN: return createSN();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -185,6 +197,138 @@ public class ChirpstackMoistureFactoryImpl extends EFactoryImpl implements Chirp
 	public MoistureAdmin createMoistureAdmin() {
 		MoistureAdminImpl moistureAdmin = new MoistureAdminImpl();
 		return moistureAdmin;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public SenseCap createSenseCap() {
+		SenseCapImpl senseCap = new SenseCapImpl();
+		return senseCap;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public SenseCap2 createSenseCap2() {
+		SenseCap2Impl senseCap2 = new SenseCap2Impl();
+		return senseCap2;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public SenseCap3 createSenseCap3() {
+		SenseCap3Impl senseCap3 = new SenseCap3Impl();
+		return senseCap3;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Air createAir() {
+		AirImpl air = new AirImpl();
+		return air;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Rain createRain() {
+		RainImpl rain = new RainImpl();
+		return rain;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Light createLight() {
+		LightImpl light = new LightImpl();
+		return light;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public TEKTELIC createTEKTELIC() {
+		TEKTELICImpl tektelic = new TEKTELICImpl();
+		return tektelic;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public TSoil createTSoil() {
+		TSoilImpl tSoil = new TSoilImpl();
+		return tSoil;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EM310 createEM310() {
+		EM310Impl em310 = new EM310Impl();
+		return em310;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Trash createTrash() {
+		TrashImpl trash = new TrashImpl();
+		return trash;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public SN50 createSN50() {
+		SN50Impl sn50 = new SN50Impl();
+		return sn50;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public SN createSN() {
+		SNImpl sn = new SNImpl();
+		return sn;
 	}
 
 	/**

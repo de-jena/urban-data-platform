@@ -1,0 +1,131 @@
+{
+    "deduplicationId": "1d7fa8ae-a7d6-40ed-9943-a5d9d035f081",
+    "time": "2025-07-14T12:52:49.129+00:00",
+    "deviceInfo": {
+        "tenantId": "52f14cd4-c6f1-4fbd-8f87-4025e1d49242",
+        "tenantName": "Jena",
+        "applicationId": "20290ceb-2231-4219-a61c-33eea6fc38f7",
+        "applicationName": "Forst Wetter",
+        "deviceProfileId": "a610241d-86c3-4d4a-af88-bfa1754f1610",
+        "deviceProfileName": "SN50v3-LB/LS",
+        "deviceName": "SN50_01",
+        "devEui": "a8404168e1824892",
+        "tags": {
+        }
+    },
+    "devAddr": "00c63e87",
+    "adr": true,
+    "dr": 0,
+    "fCnt": 293,
+    "fPort": 2,
+    "confirmed": true,
+    "data": "DSh//wklHAA1AJ4=",
+    "object": {
+        "ADC3": 0.158,
+        "ADC2": 0.053,
+        "BatV": 3.368,
+        "ADC1_V": 2.341
+    },
+    "rxInfo": [
+        {
+            "gatewayId": "7076ff0056083448",
+            "uplinkId": 35495,
+            "timeSinceGpsEpoch": "1436532787.129s",
+            "rssi": -116,
+            "snr": -6.8,
+            "channel": 6,
+            "location": {
+                "latitude": 50.9390754699707,
+                "longitude": 11.633731842041016,
+                "altitude": 394.0
+            },
+            "context": "dIO/vA==",
+            "metadata": {
+                "region_name": "eu868",
+                "region_common_name": "EU868"
+            }
+        },
+        {
+            "gatewayId": "ac1f09fffe01662d",
+            "uplinkId": 27154,
+            "rssi": -123,
+            "snr": -9.8,
+            "channel": 1,
+            "rfChain": 1,
+            "location": {
+                "latitude": 50.943428471454034,
+                "longitude": 11.605188846588137
+            },
+            "context": "FRmHTA==",
+            "metadata": {
+                "region_name": "eu868",
+                "region_common_name": "EU868"
+            }
+        },
+        {
+            "gatewayId": "7076ff0056083509",
+            "uplinkId": 43102,
+            "timeSinceGpsEpoch": "1436532787.129s",
+            "rssi": -112,
+            "snr": -12.5,
+            "channel": 6,
+            "location": {
+                "latitude": 50.94755172729492,
+                "longitude": 11.564462661743164,
+                "altitude": 369.0
+            },
+            "context": "E0qhXA==",
+            "metadata": {
+                "region_common_name": "EU868",
+                "region_name": "eu868"
+            }
+        },
+        {
+            "gatewayId": "7076ff0056080c0c",
+            "uplinkId": 13916,
+            "timeSinceGpsEpoch": "1436532787.129s",
+            "rssi": -90,
+            "snr": 10.0,
+            "channel": 6,
+            "board": 262,
+            "location": {
+                "latitude": 50.91753387451172,
+                "longitude": 11.547609329223633,
+                "altitude": 363.0
+            },
+            "context": "uUleXA==",
+            "metadata": {
+                "region_common_name": "EU868",
+                "region_name": "eu868"
+            }
+        },
+        {
+            "gatewayId": "503139535d604750",
+            "uplinkId": 31233,
+            "time": "2025-07-14T12:47:39.062625+00:00",
+            "rssi": -109,
+            "snr": -10.5,
+            "channel": 1,
+            "rfChain": 1,
+            "location": {
+                "latitude": 50.88423992258394,
+                "longitude": 11.596755981445314
+            },
+            "context": "h0VsRA==",
+            "metadata": {
+                "region_name": "eu868",
+                "region_common_name": "EU868"
+            }
+        }
+    ],
+    "txInfo": {
+        "frequency": 868300000,
+        "modulation": {
+            "lora": {
+                "bandwidth": 125000,
+                "spreadingFactor": 12,
+                "codeRate": "CR_4_5"
+            }
+        }
+    }
+}

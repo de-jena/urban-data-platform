@@ -1,0 +1,169 @@
+{
+    "deduplicationId": "94d61a2c-b809-4ec7-ba85-f10fbf2360c3",
+    "time": "2025-07-03T14:07:30.917+00:00",
+    "deviceInfo": {
+        "tenantId": "52f14cd4-c6f1-4fbd-8f87-4025e1d49242",
+        "tenantName": "Jena",
+        "applicationId": "3a24ad7f-be3e-4679-bdd6-789209c75560",
+        "applicationName": "SenseCAPS2120 Wetterstationen",
+        "deviceProfileId": "b6a1cea0-c82d-4261-b32c-cf4d2e1f97fb",
+        "deviceProfileName": "SenseCAP Wetterstation 2.0",
+        "deviceName": "SenseCAP_S2120_003",
+        "devEui": "2cf7f1c0443002c8",
+        "tags": {
+        }
+    },
+    "devAddr": "01c3568f",
+    "adr": true,
+    "dr": 5,
+    "fCnt": 8377,
+    "fPort": 3,
+    "confirmed": true,
+    "data": "SgD0JAABRc01AClLAWIAAAAAJ0ZMAE0ABEBu",
+    "object": {
+        "payload": "4A00F424000145CD3500294B01620000000027464C004D0004406E",
+        "err": 0.0,
+        "valid": true,
+        "messages": [
+            [
+                {
+                    "measurementValue": 24.4,
+                    "measurementId": "4097",
+                    "type": "Air Temperature"
+                },
+                {
+                    "measurementValue": 36.0,
+                    "measurementId": "4098",
+                    "type": "Air Humidity"
+                },
+                {
+                    "measurementValue": 83405.0,
+                    "type": "Light Intensity",
+                    "measurementId": "4099"
+                },
+                {
+                    "measurementValue": 5.3,
+                    "measurementId": "4190",
+                    "type": "UV Index"
+                },
+                {
+                    "measurementValue": 4.1,
+                    "type": "Wind Speed",
+                    "measurementId": "4105"
+                }
+            ],
+            [
+                {
+                    "type": "Wind Direction Sensor",
+                    "measurementValue": 354.0,
+                    "measurementId": "4104"
+                },
+                {
+                    "measurementId": "4113",
+                    "measurementValue": 0.0,
+                    "type": "Rain Gauge"
+                },
+                {
+                    "measurementId": "4101",
+                    "measurementValue": 100540.0,
+                    "type": "Barometric Pressure"
+                }
+            ],
+            [
+                {
+                    "measurementId": "4191",
+                    "type": " Peak Wind Gust",
+                    "measurementValue": 7.7
+                },
+                {
+                    "type": "Rain Accumulation",
+                    "measurementId": "4213",
+                    "measurementValue": 278.638
+                }
+            ]
+        ]
+    },
+    "rxInfo": [
+        {
+            "gatewayId": "7076ff0056083451",
+            "uplinkId": 4594,
+            "timeSinceGpsEpoch": "1435586868.917s",
+            "rssi": -94,
+            "snr": 8.0,
+            "channel": 1,
+            "location": {
+                "latitude": 50.96432113647461,
+                "longitude": 11.597691535949707,
+                "altitude": 348.0
+            },
+            "context": "1VNBRA==",
+            "metadata": {
+                "region_name": "eu868",
+                "region_common_name": "EU868"
+            }
+        },
+        {
+            "gatewayId": "7076ff005608344f",
+            "uplinkId": 34217,
+            "timeSinceGpsEpoch": "1435586868.917s",
+            "rssi": -101,
+            "snr": 5.2,
+            "channel": 1,
+            "location": {
+                "latitude": 50.94133758544922,
+                "longitude": 11.576445579528809,
+                "altitude": 343.0
+            },
+            "context": "1fyLgw==",
+            "metadata": {
+                "region_common_name": "EU868",
+                "region_name": "eu868"
+            }
+        },
+        {
+            "gatewayId": "ac1f09fffe01662d",
+            "uplinkId": 52234,
+            "rssi": -100,
+            "snr": 8.5,
+            "channel": 4,
+            "location": {
+                "latitude": 50.943428471454034,
+                "longitude": 11.605188846588137
+            },
+            "context": "6S1Fkw==",
+            "metadata": {
+                "region_name": "eu868",
+                "region_common_name": "EU868"
+            }
+        },
+        {
+            "gatewayId": "a84041ffff1f4e40",
+            "uplinkId": 14225,
+            "time": "2025-07-03T14:08:10.794023+00:00",
+            "timeSinceGpsEpoch": "40.794s",
+            "rssi": -114,
+            "snr": -1.8,
+            "channel": 4,
+            "location": {
+                "latitude": 50.927568,
+                "longitude": 11.574187,
+                "altitude": 212.0
+            },
+            "context": "AEEbAw==",
+            "metadata": {
+                "region_common_name": "EU868",
+                "region_name": "eu868"
+            }
+        }
+    ],
+    "txInfo": {
+        "frequency": 867300000,
+        "modulation": {
+            "lora": {
+                "bandwidth": 125000,
+                "spreadingFactor": 7,
+                "codeRate": "CR_4_5"
+            }
+        }
+    }
+}

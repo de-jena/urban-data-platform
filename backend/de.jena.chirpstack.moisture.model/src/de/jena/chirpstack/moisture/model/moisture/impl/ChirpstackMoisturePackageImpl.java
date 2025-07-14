@@ -13,16 +13,24 @@
  */
 package de.jena.chirpstack.moisture.model.moisture.impl;
 
+import de.jena.chirpstack.moisture.model.moisture.Air;
 import de.jena.chirpstack.moisture.model.moisture.ChirpstackMoistureFactory;
 import de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage;
 import de.jena.chirpstack.moisture.model.moisture.Device;
 import de.jena.chirpstack.moisture.model.moisture.Dragino;
+import de.jena.chirpstack.moisture.model.moisture.Light;
 import de.jena.chirpstack.moisture.model.moisture.MoistureAdmin;
 import de.jena.chirpstack.moisture.model.moisture.MoistureSensor;
 import de.jena.chirpstack.moisture.model.moisture.MoistureStatus;
+import de.jena.chirpstack.moisture.model.moisture.Rain;
+import de.jena.chirpstack.moisture.model.moisture.SenseCap;
+import de.jena.chirpstack.moisture.model.moisture.SenseCap2;
+import de.jena.chirpstack.moisture.model.moisture.SenseCap3;
 import de.jena.chirpstack.moisture.model.moisture.Sensor;
 import de.jena.chirpstack.moisture.model.moisture.Soil;
 import de.jena.chirpstack.moisture.model.moisture.SoilType;
+import de.jena.chirpstack.moisture.model.moisture.TSoil;
+import de.jena.chirpstack.moisture.model.moisture.Trash;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -89,6 +97,90 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 	 * @generated
 	 */
 	private EClass moistureAdminEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass senseCapEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass senseCap2EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass senseCap3EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass airEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass rainEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass lightEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tektelicEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tSoilEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass em310EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass trashEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass sn50EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass snEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -506,6 +598,466 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 	 * @generated
 	 */
 	@Override
+	public EClass getSenseCap() {
+		return senseCapEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSenseCap_Air() {
+		return (EReference)senseCapEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSenseCap_Rain() {
+		return (EReference)senseCapEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSenseCap_Light() {
+		return (EReference)senseCapEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSenseCap2() {
+		return senseCap2EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSenseCap2_Air() {
+		return (EReference)senseCap2EClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSenseCap2_Rain() {
+		return (EReference)senseCap2EClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSenseCap2_Light() {
+		return (EReference)senseCap2EClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSenseCap3() {
+		return senseCap3EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSenseCap3_Air() {
+		return (EReference)senseCap3EClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSenseCap3_Rain() {
+		return (EReference)senseCap3EClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSenseCap3_Light() {
+		return (EReference)senseCap3EClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getAir() {
+		return airEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAir_AirTemperature() {
+		return (EAttribute)airEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAir_AirHumidity() {
+		return (EAttribute)airEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAir_BarometricPressure() {
+		return (EAttribute)airEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAir_PeakWindGust() {
+		return (EAttribute)airEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAir_WindSpeed() {
+		return (EAttribute)airEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAir_WindDirectionSensor() {
+		return (EAttribute)airEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getRain() {
+		return rainEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getRain_RainGauge() {
+		return (EAttribute)rainEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getRain_RainAccumulation() {
+		return (EAttribute)rainEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getLight() {
+		return lightEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getLight_LightIntensity() {
+		return (EAttribute)lightEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getLight_UvIndex() {
+		return (EAttribute)lightEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getTEKTELIC() {
+		return tektelicEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getTEKTELIC_Soil() {
+		return (EReference)tektelicEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getTSoil() {
+		return tSoilEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTSoil_SoilWaterTension1() {
+		return (EAttribute)tSoilEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTSoil_SoilWaterTension2() {
+		return (EAttribute)tSoilEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTSoil_SoilMoistureRaw1() {
+		return (EAttribute)tSoilEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTSoil_SoilMoistureRaw2() {
+		return (EAttribute)tSoilEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTSoil_AmbientLight() {
+		return (EAttribute)tSoilEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getEM310() {
+		return em310EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getEM310_Trash() {
+		return (EReference)em310EClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getTrash() {
+		return trashEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTrash_Distance() {
+		return (EAttribute)trashEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTrash_Position() {
+		return (EAttribute)trashEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTrash_Battery() {
+		return (EAttribute)trashEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSN50() {
+		return sn50EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSN50_Sensor() {
+		return (EReference)sn50EClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSN() {
+		return snEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getSN_Adc1v() {
+		return (EAttribute)snEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getSN_Battery() {
+		return (EAttribute)snEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getSN_Adc2() {
+		return (EAttribute)snEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getSN_Adc3() {
+		return (EAttribute)snEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getSoilType() {
 		return soilTypeEEnum;
 	}
@@ -580,6 +1132,64 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 		moistureAdminEClass = createEClass(MOISTURE_ADMIN);
 		createEAttribute(moistureAdminEClass, MOISTURE_ADMIN__SOIL_TYPE);
 
+		senseCapEClass = createEClass(SENSE_CAP);
+		createEReference(senseCapEClass, SENSE_CAP__AIR);
+		createEReference(senseCapEClass, SENSE_CAP__RAIN);
+		createEReference(senseCapEClass, SENSE_CAP__LIGHT);
+
+		senseCap2EClass = createEClass(SENSE_CAP2);
+		createEReference(senseCap2EClass, SENSE_CAP2__AIR);
+		createEReference(senseCap2EClass, SENSE_CAP2__RAIN);
+		createEReference(senseCap2EClass, SENSE_CAP2__LIGHT);
+
+		senseCap3EClass = createEClass(SENSE_CAP3);
+		createEReference(senseCap3EClass, SENSE_CAP3__AIR);
+		createEReference(senseCap3EClass, SENSE_CAP3__RAIN);
+		createEReference(senseCap3EClass, SENSE_CAP3__LIGHT);
+
+		airEClass = createEClass(AIR);
+		createEAttribute(airEClass, AIR__AIR_TEMPERATURE);
+		createEAttribute(airEClass, AIR__AIR_HUMIDITY);
+		createEAttribute(airEClass, AIR__BAROMETRIC_PRESSURE);
+		createEAttribute(airEClass, AIR__PEAK_WIND_GUST);
+		createEAttribute(airEClass, AIR__WIND_SPEED);
+		createEAttribute(airEClass, AIR__WIND_DIRECTION_SENSOR);
+
+		rainEClass = createEClass(RAIN);
+		createEAttribute(rainEClass, RAIN__RAIN_GAUGE);
+		createEAttribute(rainEClass, RAIN__RAIN_ACCUMULATION);
+
+		lightEClass = createEClass(LIGHT);
+		createEAttribute(lightEClass, LIGHT__LIGHT_INTENSITY);
+		createEAttribute(lightEClass, LIGHT__UV_INDEX);
+
+		tektelicEClass = createEClass(TEKTELIC);
+		createEReference(tektelicEClass, TEKTELIC__SOIL);
+
+		tSoilEClass = createEClass(TSOIL);
+		createEAttribute(tSoilEClass, TSOIL__SOIL_WATER_TENSION1);
+		createEAttribute(tSoilEClass, TSOIL__SOIL_WATER_TENSION2);
+		createEAttribute(tSoilEClass, TSOIL__SOIL_MOISTURE_RAW1);
+		createEAttribute(tSoilEClass, TSOIL__SOIL_MOISTURE_RAW2);
+		createEAttribute(tSoilEClass, TSOIL__AMBIENT_LIGHT);
+
+		em310EClass = createEClass(EM310);
+		createEReference(em310EClass, EM310__TRASH);
+
+		trashEClass = createEClass(TRASH);
+		createEAttribute(trashEClass, TRASH__DISTANCE);
+		createEAttribute(trashEClass, TRASH__POSITION);
+		createEAttribute(trashEClass, TRASH__BATTERY);
+
+		sn50EClass = createEClass(SN50);
+		createEReference(sn50EClass, SN50__SENSOR);
+
+		snEClass = createEClass(SN);
+		createEAttribute(snEClass, SN__ADC1V);
+		createEAttribute(snEClass, SN__BATTERY);
+		createEAttribute(snEClass, SN__ADC2);
+		createEAttribute(snEClass, SN__ADC3);
+
 		// Create enums
 		soilTypeEEnum = createEEnum(SOIL_TYPE);
 	}
@@ -622,6 +1232,18 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 		moistureSensorEClass.getESuperTypes().add(theProviderPackage.getProvider());
 		moistureStatusEClass.getESuperTypes().add(theProviderPackage.getService());
 		moistureAdminEClass.getESuperTypes().add(theProviderPackage.getAdmin());
+		senseCapEClass.getESuperTypes().add(theProviderPackage.getProvider());
+		senseCap2EClass.getESuperTypes().add(theProviderPackage.getProvider());
+		senseCap3EClass.getESuperTypes().add(theProviderPackage.getProvider());
+		airEClass.getESuperTypes().add(theProviderPackage.getService());
+		rainEClass.getESuperTypes().add(theProviderPackage.getService());
+		lightEClass.getESuperTypes().add(theProviderPackage.getService());
+		tektelicEClass.getESuperTypes().add(theProviderPackage.getProvider());
+		tSoilEClass.getESuperTypes().add(theProviderPackage.getService());
+		em310EClass.getESuperTypes().add(theProviderPackage.getProvider());
+		trashEClass.getESuperTypes().add(theProviderPackage.getService());
+		sn50EClass.getESuperTypes().add(theProviderPackage.getProvider());
+		snEClass.getESuperTypes().add(theProviderPackage.getService());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(draginoEClass, Dragino.class, "Dragino", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -665,6 +1287,64 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 		initEClass(moistureAdminEClass, MoistureAdmin.class, "MoistureAdmin", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMoistureAdmin_SoilType(), this.getSoilType(), "soilType", null, 0, 1, MoistureAdmin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(senseCapEClass, SenseCap.class, "SenseCap", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSenseCap_Air(), this.getAir(), null, "air", null, 0, 1, SenseCap.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSenseCap_Rain(), this.getRain(), null, "rain", null, 0, 1, SenseCap.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSenseCap_Light(), this.getLight(), null, "light", null, 0, 1, SenseCap.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(senseCap2EClass, SenseCap2.class, "SenseCap2", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSenseCap2_Air(), this.getAir(), null, "air", null, 0, 1, SenseCap2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSenseCap2_Rain(), this.getRain(), null, "rain", null, 0, 1, SenseCap2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSenseCap2_Light(), this.getLight(), null, "light", null, 0, 1, SenseCap2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(senseCap3EClass, SenseCap3.class, "SenseCap3", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSenseCap3_Air(), this.getAir(), null, "air", null, 0, 1, SenseCap3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSenseCap3_Rain(), this.getRain(), null, "rain", null, 0, 1, SenseCap3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSenseCap3_Light(), this.getLight(), null, "light", null, 0, 1, SenseCap3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(airEClass, Air.class, "Air", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAir_AirTemperature(), ecorePackage.getEDouble(), "airTemperature", null, 0, 1, Air.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAir_AirHumidity(), ecorePackage.getEDouble(), "airHumidity", null, 0, 1, Air.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAir_BarometricPressure(), ecorePackage.getEDouble(), "barometricPressure", null, 0, 1, Air.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAir_PeakWindGust(), ecorePackage.getEDouble(), "peakWindGust", null, 0, 1, Air.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAir_WindSpeed(), ecorePackage.getEDouble(), "windSpeed", null, 0, 1, Air.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAir_WindDirectionSensor(), ecorePackage.getEDouble(), "windDirectionSensor", null, 0, 1, Air.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(rainEClass, Rain.class, "Rain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getRain_RainGauge(), ecorePackage.getEDouble(), "rainGauge", null, 0, 1, Rain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRain_RainAccumulation(), ecorePackage.getEDouble(), "rainAccumulation", null, 0, 1, Rain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(lightEClass, Light.class, "Light", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getLight_LightIntensity(), ecorePackage.getEDouble(), "lightIntensity", null, 0, 1, Light.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLight_UvIndex(), ecorePackage.getEDouble(), "uvIndex", null, 0, 1, Light.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(tektelicEClass, de.jena.chirpstack.moisture.model.moisture.TEKTELIC.class, "TEKTELIC", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTEKTELIC_Soil(), this.getTSoil(), null, "soil", null, 0, 1, de.jena.chirpstack.moisture.model.moisture.TEKTELIC.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(tSoilEClass, TSoil.class, "TSoil", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTSoil_SoilWaterTension1(), ecorePackage.getEDouble(), "soilWaterTension1", null, 0, 1, TSoil.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTSoil_SoilWaterTension2(), ecorePackage.getEDouble(), "soilWaterTension2", null, 0, 1, TSoil.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTSoil_SoilMoistureRaw1(), ecorePackage.getEDouble(), "soilMoistureRaw1", null, 0, 1, TSoil.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTSoil_SoilMoistureRaw2(), ecorePackage.getEDouble(), "soilMoistureRaw2", null, 0, 1, TSoil.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTSoil_AmbientLight(), ecorePackage.getEDouble(), "ambientLight", null, 0, 1, TSoil.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(em310EClass, de.jena.chirpstack.moisture.model.moisture.EM310.class, "EM310", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getEM310_Trash(), this.getTrash(), null, "trash", null, 0, 1, de.jena.chirpstack.moisture.model.moisture.EM310.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(trashEClass, Trash.class, "Trash", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTrash_Distance(), ecorePackage.getEDouble(), "distance", null, 0, 1, Trash.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTrash_Position(), ecorePackage.getEString(), "position", null, 0, 1, Trash.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTrash_Battery(), ecorePackage.getEDouble(), "battery", null, 0, 1, Trash.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(sn50EClass, de.jena.chirpstack.moisture.model.moisture.SN50.class, "SN50", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSN50_Sensor(), this.getSN(), null, "sensor", null, 0, 1, de.jena.chirpstack.moisture.model.moisture.SN50.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(snEClass, de.jena.chirpstack.moisture.model.moisture.SN.class, "SN", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSN_Adc1v(), ecorePackage.getEDouble(), "adc1v", null, 0, 1, de.jena.chirpstack.moisture.model.moisture.SN.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSN_Battery(), ecorePackage.getEDouble(), "battery", null, 0, 1, de.jena.chirpstack.moisture.model.moisture.SN.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSN_Adc2(), ecorePackage.getEDouble(), "adc2", null, 0, 1, de.jena.chirpstack.moisture.model.moisture.SN.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSN_Adc3(), ecorePackage.getEDouble(), "adc3", null, 0, 1, de.jena.chirpstack.moisture.model.moisture.SN.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		// Initialize enums and add enum literals
 		initEEnum(soilTypeEEnum, SoilType.class, "SoilType");
 		addEEnumLiteral(soilTypeEEnum, SoilType.SAND);
@@ -680,6 +1360,8 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 		createVersionAnnotations();
 		// model
 		createModelAnnotations();
+		// mapping
+		createMappingAnnotations();
 		// Metadata
 		createMetadataAnnotations();
 	}
@@ -713,6 +1395,281 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 		   source,
 		   new String[] {
 			   "name", "Dragino_LSE01"
+		   });
+		addAnnotation
+		  (senseCapEClass,
+		   source,
+		   new String[] {
+			   "name", "SenseCAP S2120 8-in-1 LoRaWAN Wetterstation"
+		   });
+		addAnnotation
+		  (senseCap2EClass,
+		   source,
+		   new String[] {
+			   "name", "SenseCAP Wetterstation 2.0"
+		   });
+		addAnnotation
+		  (senseCap3EClass,
+		   source,
+		   new String[] {
+			   "name", "SenseCAP_Wetterstation_2_0"
+		   });
+		addAnnotation
+		  (tektelicEClass,
+		   source,
+		   new String[] {
+			   "name", "TEKTELIC KIWI Agriculture Sensor"
+		   });
+		addAnnotation
+		  (em310EClass,
+		   source,
+		   new String[] {
+			   "name", "EM310-UDL"
+		   });
+		addAnnotation
+		  (sn50EClass,
+		   source,
+		   new String[] {
+			   "name", "SN50v3-LB/LS"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>mapping</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createMappingAnnotations() {
+		String source = "mapping";
+		addAnnotation
+		  (getSensor_Battery(),
+		   source,
+		   new String[] {
+			   "path", "object/BatV"
+		   });
+		addAnnotation
+		  (getSensor_Iflag(),
+		   source,
+		   new String[] {
+			   "path", "object/i_flag"
+		   });
+		addAnnotation
+		  (getSensor_Sflag(),
+		   source,
+		   new String[] {
+			   "path", "object/s_flag"
+		   });
+		addAnnotation
+		  (getSensor_Mod(),
+		   source,
+		   new String[] {
+			   "path", "object/Mod"
+		   });
+		addAnnotation
+		  (getSensor_TemperatureDS18B20(),
+		   source,
+		   new String[] {
+			   "path", "object/temp_DS18B20",
+			   "type", "float"
+		   });
+		addAnnotation
+		  (getSoil_Temperature(),
+		   source,
+		   new String[] {
+			   "path", "object/temp_SOIL_f"
+		   });
+		addAnnotation
+		  (getSoil_Water(),
+		   source,
+		   new String[] {
+			   "path", "object/water_SOIL_f"
+		   });
+		addAnnotation
+		  (getSoil_Conduct(),
+		   source,
+		   new String[] {
+			   "path", "object/conduct_SOIL_f"
+		   });
+		addAnnotation
+		  (getDevice_DevEUI(),
+		   source,
+		   new String[] {
+			   "path", "deviceInfo/devEui"
+		   });
+		addAnnotation
+		  (getDevice_Name(),
+		   source,
+		   new String[] {
+			   "path", "deviceInfo/deviceName"
+		   });
+		addAnnotation
+		  (getDevice_ProfileId(),
+		   source,
+		   new String[] {
+			   "path", "deviceInfo/deviceProfileId"
+		   });
+		addAnnotation
+		  (getDevice_ProfileName(),
+		   source,
+		   new String[] {
+			   "path", "deviceInfo/deviceProfileName"
+		   });
+		addAnnotation
+		  (getDevice_TenantId(),
+		   source,
+		   new String[] {
+			   "path", "deviceInfo/tenantId"
+		   });
+		addAnnotation
+		  (getDevice_TenantName(),
+		   source,
+		   new String[] {
+			   "path", "deviceInfo/tenantName"
+		   });
+		addAnnotation
+		  (getDevice_ApplicationId(),
+		   source,
+		   new String[] {
+			   "path", "deviceInfo/applicationId"
+		   });
+		addAnnotation
+		  (getDevice_ApplicationName(),
+		   source,
+		   new String[] {
+			   "path", "deviceInfo/applicationName"
+		   });
+		addAnnotation
+		  (getAir_AirTemperature(),
+		   source,
+		   new String[] {
+			   "path", "object/messages/0/0/measurementValue"
+		   });
+		addAnnotation
+		  (getAir_AirHumidity(),
+		   source,
+		   new String[] {
+			   "path", "object/messages/0/1/measurementValue"
+		   });
+		addAnnotation
+		  (getAir_BarometricPressure(),
+		   source,
+		   new String[] {
+			   "path", "object/messages/1/2/measurementValue"
+		   });
+		addAnnotation
+		  (getAir_PeakWindGust(),
+		   source,
+		   new String[] {
+			   "path", "object/messages/2/0/measurementValue"
+		   });
+		addAnnotation
+		  (getAir_WindSpeed(),
+		   source,
+		   new String[] {
+			   "path", "object/messages/0/4/measurementValue"
+		   });
+		addAnnotation
+		  (getAir_WindDirectionSensor(),
+		   source,
+		   new String[] {
+			   "path", "object/messages/1/0/measurementValue"
+		   });
+		addAnnotation
+		  (getRain_RainGauge(),
+		   source,
+		   new String[] {
+			   "path", "object/messages/1/1/measurementValue"
+		   });
+		addAnnotation
+		  (getRain_RainAccumulation(),
+		   source,
+		   new String[] {
+			   "path", "object/messages/2/1/measurementValue"
+		   });
+		addAnnotation
+		  (getLight_LightIntensity(),
+		   source,
+		   new String[] {
+			   "path", "object/messages/0/2/measurementValue"
+		   });
+		addAnnotation
+		  (getLight_UvIndex(),
+		   source,
+		   new String[] {
+			   "path", "object/messages/0/3/measurementValue"
+		   });
+		addAnnotation
+		  (getTSoil_SoilWaterTension1(),
+		   source,
+		   new String[] {
+			   "path", "object/soil_water_tension1"
+		   });
+		addAnnotation
+		  (getTSoil_SoilWaterTension2(),
+		   source,
+		   new String[] {
+			   "path", "object/soil_water_tension2"
+		   });
+		addAnnotation
+		  (getTSoil_SoilMoistureRaw1(),
+		   source,
+		   new String[] {
+			   "path", "object/soil_moisture_raw1"
+		   });
+		addAnnotation
+		  (getTSoil_SoilMoistureRaw2(),
+		   source,
+		   new String[] {
+			   "path", "object/soil_moisture_raw2"
+		   });
+		addAnnotation
+		  (getTSoil_AmbientLight(),
+		   source,
+		   new String[] {
+			   "path", "object/ambient_light"
+		   });
+		addAnnotation
+		  (getTrash_Distance(),
+		   source,
+		   new String[] {
+			   "path", "object/distance"
+		   });
+		addAnnotation
+		  (getTrash_Position(),
+		   source,
+		   new String[] {
+			   "path", "object/position"
+		   });
+		addAnnotation
+		  (getTrash_Battery(),
+		   source,
+		   new String[] {
+			   "path", "object/battery"
+		   });
+		addAnnotation
+		  (getSN_Adc1v(),
+		   source,
+		   new String[] {
+			   "path", "object/ADC1_V"
+		   });
+		addAnnotation
+		  (getSN_Battery(),
+		   source,
+		   new String[] {
+			   "path", "object/BatV"
+		   });
+		addAnnotation
+		  (getSN_Adc2(),
+		   source,
+		   new String[] {
+			   "path", "object/ADC2"
+		   });
+		addAnnotation
+		  (getSN_Adc3(),
+		   source,
+		   new String[] {
+			   "path", "object/ADC3"
 		   });
 	}
 
