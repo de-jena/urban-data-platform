@@ -111,6 +111,54 @@ public class ChirpstackMoistureAdapterFactory extends AdapterFactoryImpl {
 				return createMoistureAdminAdapter();
 			}
 			@Override
+			public Adapter caseSenseCap(SenseCap object) {
+				return createSenseCapAdapter();
+			}
+			@Override
+			public Adapter caseSenseCap2(SenseCap2 object) {
+				return createSenseCap2Adapter();
+			}
+			@Override
+			public Adapter caseSenseCap3(SenseCap3 object) {
+				return createSenseCap3Adapter();
+			}
+			@Override
+			public Adapter caseAir(Air object) {
+				return createAirAdapter();
+			}
+			@Override
+			public Adapter caseRain(Rain object) {
+				return createRainAdapter();
+			}
+			@Override
+			public Adapter caseLight(Light object) {
+				return createLightAdapter();
+			}
+			@Override
+			public Adapter caseTEKTELIC(TEKTELIC object) {
+				return createTEKTELICAdapter();
+			}
+			@Override
+			public Adapter caseTSoil(TSoil object) {
+				return createTSoilAdapter();
+			}
+			@Override
+			public Adapter caseEM310(EM310 object) {
+				return createEM310Adapter();
+			}
+			@Override
+			public Adapter caseTrash(Trash object) {
+				return createTrashAdapter();
+			}
+			@Override
+			public Adapter caseSN50(SN50 object) {
+				return createSN50Adapter();
+			}
+			@Override
+			public Adapter caseSN(SN object) {
+				return createSNAdapter();
+			}
+			@Override
 			public Adapter caseProvider(Provider object) {
 				return createProviderAdapter();
 			}
@@ -237,6 +285,174 @@ public class ChirpstackMoistureAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMoistureAdminAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.chirpstack.moisture.model.moisture.SenseCap <em>Sense Cap</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.chirpstack.moisture.model.moisture.SenseCap
+	 * @generated
+	 */
+	public Adapter createSenseCapAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.chirpstack.moisture.model.moisture.SenseCap2 <em>Sense Cap2</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.chirpstack.moisture.model.moisture.SenseCap2
+	 * @generated
+	 */
+	public Adapter createSenseCap2Adapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.chirpstack.moisture.model.moisture.SenseCap3 <em>Sense Cap3</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.chirpstack.moisture.model.moisture.SenseCap3
+	 * @generated
+	 */
+	public Adapter createSenseCap3Adapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.chirpstack.moisture.model.moisture.Air <em>Air</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.chirpstack.moisture.model.moisture.Air
+	 * @generated
+	 */
+	public Adapter createAirAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.chirpstack.moisture.model.moisture.Rain <em>Rain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.chirpstack.moisture.model.moisture.Rain
+	 * @generated
+	 */
+	public Adapter createRainAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.chirpstack.moisture.model.moisture.Light <em>Light</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.chirpstack.moisture.model.moisture.Light
+	 * @generated
+	 */
+	public Adapter createLightAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.chirpstack.moisture.model.moisture.TEKTELIC <em>TEKTELIC</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.chirpstack.moisture.model.moisture.TEKTELIC
+	 * @generated
+	 */
+	public Adapter createTEKTELICAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.chirpstack.moisture.model.moisture.TSoil <em>TSoil</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.chirpstack.moisture.model.moisture.TSoil
+	 * @generated
+	 */
+	public Adapter createTSoilAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.chirpstack.moisture.model.moisture.EM310 <em>EM310</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.chirpstack.moisture.model.moisture.EM310
+	 * @generated
+	 */
+	public Adapter createEM310Adapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.chirpstack.moisture.model.moisture.Trash <em>Trash</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.chirpstack.moisture.model.moisture.Trash
+	 * @generated
+	 */
+	public Adapter createTrashAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.chirpstack.moisture.model.moisture.SN50 <em>SN50</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.chirpstack.moisture.model.moisture.SN50
+	 * @generated
+	 */
+	public Adapter createSN50Adapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.chirpstack.moisture.model.moisture.SN <em>SN</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.chirpstack.moisture.model.moisture.SN
+	 * @generated
+	 */
+	public Adapter createSNAdapter() {
 		return null;
 	}
 

@@ -131,6 +131,90 @@ public class ChirpstackMoistureSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ChirpstackMoisturePackage.SENSE_CAP: {
+				SenseCap senseCap = (SenseCap)theEObject;
+				T result = caseSenseCap(senseCap);
+				if (result == null) result = caseProvider(senseCap);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ChirpstackMoisturePackage.SENSE_CAP2: {
+				SenseCap2 senseCap2 = (SenseCap2)theEObject;
+				T result = caseSenseCap2(senseCap2);
+				if (result == null) result = caseProvider(senseCap2);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ChirpstackMoisturePackage.SENSE_CAP3: {
+				SenseCap3 senseCap3 = (SenseCap3)theEObject;
+				T result = caseSenseCap3(senseCap3);
+				if (result == null) result = caseProvider(senseCap3);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ChirpstackMoisturePackage.AIR: {
+				Air air = (Air)theEObject;
+				T result = caseAir(air);
+				if (result == null) result = caseService(air);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ChirpstackMoisturePackage.RAIN: {
+				Rain rain = (Rain)theEObject;
+				T result = caseRain(rain);
+				if (result == null) result = caseService(rain);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ChirpstackMoisturePackage.LIGHT: {
+				Light light = (Light)theEObject;
+				T result = caseLight(light);
+				if (result == null) result = caseService(light);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ChirpstackMoisturePackage.TEKTELIC: {
+				TEKTELIC tektelic = (TEKTELIC)theEObject;
+				T result = caseTEKTELIC(tektelic);
+				if (result == null) result = caseProvider(tektelic);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ChirpstackMoisturePackage.TSOIL: {
+				TSoil tSoil = (TSoil)theEObject;
+				T result = caseTSoil(tSoil);
+				if (result == null) result = caseService(tSoil);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ChirpstackMoisturePackage.EM310: {
+				EM310 em310 = (EM310)theEObject;
+				T result = caseEM310(em310);
+				if (result == null) result = caseProvider(em310);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ChirpstackMoisturePackage.TRASH: {
+				Trash trash = (Trash)theEObject;
+				T result = caseTrash(trash);
+				if (result == null) result = caseService(trash);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ChirpstackMoisturePackage.SN50: {
+				SN50 sn50 = (SN50)theEObject;
+				T result = caseSN50(sn50);
+				if (result == null) result = caseProvider(sn50);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ChirpstackMoisturePackage.SN: {
+				SN sn = (SN)theEObject;
+				T result = caseSN(sn);
+				if (result == null) result = caseService(sn);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -237,6 +321,186 @@ public class ChirpstackMoistureSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMoistureAdmin(MoistureAdmin object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Sense Cap</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Sense Cap</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSenseCap(SenseCap object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Sense Cap2</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Sense Cap2</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSenseCap2(SenseCap2 object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Sense Cap3</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Sense Cap3</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSenseCap3(SenseCap3 object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Air</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Air</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAir(Air object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Rain</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Rain</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRain(Rain object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Light</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Light</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLight(Light object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>TEKTELIC</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>TEKTELIC</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTEKTELIC(TEKTELIC object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>TSoil</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>TSoil</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTSoil(TSoil object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>EM310</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>EM310</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEM310(EM310 object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Trash</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Trash</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTrash(Trash object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>SN50</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>SN50</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSN50(SN50 object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>SN</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>SN</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSN(SN object) {
 		return null;
 	}
 

@@ -6,12 +6,18 @@ Require-Capability: \
 	org.osgi.service.cm,\
 	org.osgi.service.component.annotations,\
 	org.osgi.service.metatype.annotations,\
-	org.eclipse.sensinact.gateway.core.api,\
-	de.jena.chirpstack.moisture.model,\
-	org.eclipse.sensinact.gateway.core.geo-json,\
-	org.eclipse.sensinact.gateway.core.models.provider,\
-	org.eclipse.emf.common,\
-	org.eclipse.emf.ecore,\
+	org.osgi.service.typedevent,\
 	org.osgi.util.function,\
 	org.osgi.util.promise,\
-	org.osgi.service.typedevent
+	de.jena.chirpstack.moisture.model,\
+	org.eclipse.emf.common,\
+	org.eclipse.emf.ecore,\
+	org.gecko.emf.osgi.api,\
+	org.eclipse.sensinact.gateway.southbound.device-factory.device-factory-core,\
+	org.eclipse.sensinact.gateway.core.api,\
+	org.eclipse.sensinact.gateway.core.annotation,\
+	org.eclipse.sensinact.gateway.core.models.provider,\
+	org.eclipse.sensinact.gateway.core.geo-json,\
+	com.fasterxml.jackson.core.jackson-databind,\
+	com.fasterxml.jackson.core.jackson-core,\
+	com.fasterxml.jackson.core.jackson-annotations

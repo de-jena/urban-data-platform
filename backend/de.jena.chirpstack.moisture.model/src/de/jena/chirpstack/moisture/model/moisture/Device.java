@@ -49,7 +49,7 @@ public interface Device extends Service {
 	 * @return the value of the '<em>Dev EUI</em>' attribute.
 	 * @see #setDevEUI(String)
 	 * @see de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage#getDevice_DevEUI()
-	 * @model
+	 * @model annotation="mapping path='deviceInfo/devEui'"
 	 * @generated
 	 */
 	String getDevEUI();
@@ -71,7 +71,7 @@ public interface Device extends Service {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage#getDevice_Name()
-	 * @model
+	 * @model annotation="mapping path='deviceInfo/deviceName'"
 	 * @generated
 	 */
 	String getName();
@@ -93,7 +93,7 @@ public interface Device extends Service {
 	 * @return the value of the '<em>Profile Id</em>' attribute.
 	 * @see #setProfileId(String)
 	 * @see de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage#getDevice_ProfileId()
-	 * @model
+	 * @model annotation="mapping path='deviceInfo/deviceProfileId'"
 	 * @generated
 	 */
 	String getProfileId();
@@ -115,7 +115,7 @@ public interface Device extends Service {
 	 * @return the value of the '<em>Profile Name</em>' attribute.
 	 * @see #setProfileName(String)
 	 * @see de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage#getDevice_ProfileName()
-	 * @model
+	 * @model annotation="mapping path='deviceInfo/deviceProfileName'"
 	 * @generated
 	 */
 	String getProfileName();
@@ -137,7 +137,7 @@ public interface Device extends Service {
 	 * @return the value of the '<em>Tenant Id</em>' attribute.
 	 * @see #setTenantId(String)
 	 * @see de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage#getDevice_TenantId()
-	 * @model
+	 * @model annotation="mapping path='deviceInfo/tenantId'"
 	 * @generated
 	 */
 	String getTenantId();
@@ -159,7 +159,7 @@ public interface Device extends Service {
 	 * @return the value of the '<em>Tenant Name</em>' attribute.
 	 * @see #setTenantName(String)
 	 * @see de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage#getDevice_TenantName()
-	 * @model
+	 * @model annotation="mapping path='deviceInfo/tenantName'"
 	 * @generated
 	 */
 	String getTenantName();
@@ -181,7 +181,7 @@ public interface Device extends Service {
 	 * @return the value of the '<em>Application Id</em>' attribute.
 	 * @see #setApplicationId(String)
 	 * @see de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage#getDevice_ApplicationId()
-	 * @model
+	 * @model annotation="mapping path='deviceInfo/applicationId'"
 	 * @generated
 	 */
 	String getApplicationId();
@@ -203,7 +203,7 @@ public interface Device extends Service {
 	 * @return the value of the '<em>Application Name</em>' attribute.
 	 * @see #setApplicationName(String)
 	 * @see de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage#getDevice_ApplicationName()
-	 * @model
+	 * @model annotation="mapping path='deviceInfo/applicationName'"
 	 * @generated
 	 */
 	String getApplicationName();

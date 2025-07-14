@@ -3,37 +3,23 @@
 	":configurator:symbolic-name": "ChirpstackConfig",
 	":configurator:version": "0.0.1",
 	
-	"ChirpstackConfig~bodenfeuchte": 
+	"ChirpstackConfig": 
 	{
-		"id": "chirpstack-bodenfeuchte",
-		"mappingFile": "/opt/sensinact/chirpstack/KSJ_Bodenfeuchte_Stadtforst/mapping.json",
+		"id": "chirpstack-all",
 		"protocol": "ssl",
 		"host": "chirpstack.jena.de",
 		"port": 8883,
 		"topics": [
-			"application/5bb92de6-49b3-49af-a366-34667f2230be/device/+/event/up"
+			"application/5bb92de6-49b3-49af-a366-34667f2230be/device/+/event/up",
+			"application/20290ceb-2231-4219-a61c-33eea6fc38f7/device/+/event/up",
+			"application/e8d62144-b9b6-4fee-937f-5d8248eee499/device/+/event/up",
+			"application/6e3f1860-3644-4d13-806c-bcbc6f9b89b6/device/+/event/up",
+			"application/3a24ad7f-be3e-4679-bdd6-789209c75560/device/+/event/up",
+			"application/b186270e-812c-40c2-bb03-a06ffb640f03/device/+/event/up"
 		],
 		"certPath": "$[env:CHIRPSTACK_CERT;default=$[prop:CHIRPSTACK_CERT;default=/opt/sensinact/chirpstack/certificates/cert.pem]]",
 		"certKey": "$[env:CHIRPSTACK_KEY;default=$[prop:CHIRPSTACK_KEY;default=/opt/sensinact/chirpstack/certificates/private.key]]",
 		"caPath": "$[env:CHIRPSTACK_CA;default=$[prop:CHIRPSTACK_CA;default=/opt/sensinact/chirpstack/certificates/ca.pem]]",
-		"caChainPath": [
-			"/opt/sensinact/chirpstack/certificates/ISRG_Root_X1_DST_Root_CA_X3_.cer",
-			"/opt/sensinact/chirpstack/certificates/R3_ISRG_Root_X1_.cer"
-		]
-	},
-	"ChirpstackConfig~baumpflege": 
-	{
-		"id": "chirpstack-baumpflege",
-		"mappingFile": "/opt/sensinact/chirpstack/KSJ_Stadtbaumpflege/mapping.json",
-		"protocol": "ssl",
-		"host": "chirpstack.jena.de",
-		"port": 8883,
-		"topics": [
-			"application/b186270e-812c-40c2-bb03-a06ffb640f03/device/+/event/up"
-		],
-        "certPath": "$[env:CHIRPSTACK_CERT;default=$[prop:CHIRPSTACK_CERT;default=/opt/sensinact/chirpstack/certificates/cert.pem]]",
-        "certKey": "$[env:CHIRPSTACK_KEY;default=$[prop:CHIRPSTACK_KEY;default=/opt/sensinact/chirpstack/certificates/private.key]]",
-        "caPath": "$[env:CHIRPSTACK_CA;default=$[prop:CHIRPSTACK_CA;default=/opt/sensinact/chirpstack/certificates/ca.pem]]",
 		"caChainPath": [
 			"/opt/sensinact/chirpstack/certificates/ISRG_Root_X1_DST_Root_CA_X3_.cer",
 			"/opt/sensinact/chirpstack/certificates/R3_ISRG_Root_X1_.cer"

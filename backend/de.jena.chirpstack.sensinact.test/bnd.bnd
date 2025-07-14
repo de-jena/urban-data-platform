@@ -1,0 +1,24 @@
+Test-Cases: ${classes;HIERARCHY_INDIRECTLY_ANNOTATED;org.junit.platform.commons.annotation.Testable;CONCRETE}
+
+-library: enableOSGi-Test
+
+# sets the usually required buildpath using the bnd library, you can extend it with the normal -buildpath to your liking
+-buildpath: \
+	org.osgi.framework;version=latest,\
+	org.eclipse.sensinact.gateway.southbound.device-factory.device-factory-core,\
+	org.eclipse.sensinact.gateway.core.annotation,\
+	org.eclipse.sensinact.gateway.core.models.provider,\
+	org.eclipse.sensinact.gateway.core.geo-json,\
+	com.fasterxml.jackson.core.jackson-databind,\
+	com.fasterxml.jackson.core.jackson-core,\
+	com.fasterxml.jackson.core.jackson-annotations,\
+	de.jena.chirpstack.moisture.model,\
+	org.eclipse.emf.ecore,\
+	org.eclipse.emf.common,\
+	org.gecko.emf.osgi.api
+	
+	
+Private-Package: de.jena.chirpstack.sensinact.test
+
+# Sometimes without DynamicImport Mockito will not find certain classes
+#DynamicImport-Package: *
