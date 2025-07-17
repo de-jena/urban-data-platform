@@ -23,6 +23,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TimeZone;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -101,6 +102,9 @@ public class TrafficLight {
 			logger.log(Level.ERROR, "Error subscribing mqtt {0}.\n{1}", TOPIC, e);
 		}
 		logger.log(Level.INFO, "Sensinact Traffic Light started.");
+
+		logger.log(Level.INFO, "+++ default TimeZone " + TimeZone.getDefault());
+
 	}
 
 	@Deactivate
