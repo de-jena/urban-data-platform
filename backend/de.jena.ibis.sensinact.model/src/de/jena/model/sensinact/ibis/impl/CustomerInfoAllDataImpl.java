@@ -16,8 +16,6 @@ package de.jena.model.sensinact.ibis.impl;
 import de.jena.model.sensinact.ibis.CustomerInfoAllData;
 import de.jena.model.sensinact.ibis.IbisSensinactPackage;
 
-import java.time.Instant;
-
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -34,7 +32,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link de.jena.model.sensinact.ibis.impl.CustomerInfoAllDataImpl#getServiceName <em>Service Name</em>}</li>
  *   <li>{@link de.jena.model.sensinact.ibis.impl.CustomerInfoAllDataImpl#getServiceOperation <em>Service Operation</em>}</li>
- *   <li>{@link de.jena.model.sensinact.ibis.impl.CustomerInfoAllDataImpl#getTimestamp <em>Timestamp</em>}</li>
  *   <li>{@link de.jena.model.sensinact.ibis.impl.CustomerInfoAllDataImpl#getVehicleRef <em>Vehicle Ref</em>}</li>
  *   <li>{@link de.jena.model.sensinact.ibis.impl.CustomerInfoAllDataImpl#getDefaultLanguage <em>Default Language</em>}</li>
  *   <li>{@link de.jena.model.sensinact.ibis.impl.CustomerInfoAllDataImpl#getCurrentStopIndex <em>Current Stop Index</em>}</li>
@@ -92,26 +89,6 @@ public class CustomerInfoAllDataImpl extends IbisResourceImpl implements Custome
 	 * @ordered
 	 */
 	protected String serviceOperation = SERVICE_OPERATION_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getTimestamp() <em>Timestamp</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTimestamp()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Instant TIMESTAMP_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getTimestamp() <em>Timestamp</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTimestamp()
-	 * @generated
-	 * @ordered
-	 */
-	protected Instant timestamp = TIMESTAMP_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getVehicleRef() <em>Vehicle Ref</em>}' attribute.
@@ -444,29 +421,6 @@ public class CustomerInfoAllDataImpl extends IbisResourceImpl implements Custome
 	 * @generated
 	 */
 	@Override
-	public Instant getTimestamp() {
-		return timestamp;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setTimestamp(Instant newTimestamp) {
-		Instant oldTimestamp = timestamp;
-		timestamp = newTimestamp;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IbisSensinactPackage.CUSTOMER_INFO_ALL_DATA__TIMESTAMP, oldTimestamp, timestamp));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String getVehicleRef() {
 		return vehicleRef;
 	}
@@ -772,8 +726,6 @@ public class CustomerInfoAllDataImpl extends IbisResourceImpl implements Custome
 				return getServiceName();
 			case IbisSensinactPackage.CUSTOMER_INFO_ALL_DATA__SERVICE_OPERATION:
 				return getServiceOperation();
-			case IbisSensinactPackage.CUSTOMER_INFO_ALL_DATA__TIMESTAMP:
-				return getTimestamp();
 			case IbisSensinactPackage.CUSTOMER_INFO_ALL_DATA__VEHICLE_REF:
 				return getVehicleRef();
 			case IbisSensinactPackage.CUSTOMER_INFO_ALL_DATA__DEFAULT_LANGUAGE:
@@ -817,9 +769,6 @@ public class CustomerInfoAllDataImpl extends IbisResourceImpl implements Custome
 				return;
 			case IbisSensinactPackage.CUSTOMER_INFO_ALL_DATA__SERVICE_OPERATION:
 				setServiceOperation((String)newValue);
-				return;
-			case IbisSensinactPackage.CUSTOMER_INFO_ALL_DATA__TIMESTAMP:
-				setTimestamp((Instant)newValue);
 				return;
 			case IbisSensinactPackage.CUSTOMER_INFO_ALL_DATA__VEHICLE_REF:
 				setVehicleRef((String)newValue);
@@ -878,9 +827,6 @@ public class CustomerInfoAllDataImpl extends IbisResourceImpl implements Custome
 			case IbisSensinactPackage.CUSTOMER_INFO_ALL_DATA__SERVICE_OPERATION:
 				setServiceOperation(SERVICE_OPERATION_EDEFAULT);
 				return;
-			case IbisSensinactPackage.CUSTOMER_INFO_ALL_DATA__TIMESTAMP:
-				setTimestamp(TIMESTAMP_EDEFAULT);
-				return;
 			case IbisSensinactPackage.CUSTOMER_INFO_ALL_DATA__VEHICLE_REF:
 				setVehicleRef(VEHICLE_REF_EDEFAULT);
 				return;
@@ -936,8 +882,6 @@ public class CustomerInfoAllDataImpl extends IbisResourceImpl implements Custome
 				return SERVICE_NAME_EDEFAULT == null ? serviceName != null : !SERVICE_NAME_EDEFAULT.equals(serviceName);
 			case IbisSensinactPackage.CUSTOMER_INFO_ALL_DATA__SERVICE_OPERATION:
 				return SERVICE_OPERATION_EDEFAULT == null ? serviceOperation != null : !SERVICE_OPERATION_EDEFAULT.equals(serviceOperation);
-			case IbisSensinactPackage.CUSTOMER_INFO_ALL_DATA__TIMESTAMP:
-				return TIMESTAMP_EDEFAULT == null ? timestamp != null : !TIMESTAMP_EDEFAULT.equals(timestamp);
 			case IbisSensinactPackage.CUSTOMER_INFO_ALL_DATA__VEHICLE_REF:
 				return VEHICLE_REF_EDEFAULT == null ? vehicleRef != null : !VEHICLE_REF_EDEFAULT.equals(vehicleRef);
 			case IbisSensinactPackage.CUSTOMER_INFO_ALL_DATA__DEFAULT_LANGUAGE:
@@ -982,8 +926,6 @@ public class CustomerInfoAllDataImpl extends IbisResourceImpl implements Custome
 		result.append(serviceName);
 		result.append(", serviceOperation: ");
 		result.append(serviceOperation);
-		result.append(", timestamp: ");
-		result.append(timestamp);
 		result.append(", vehicleRef: ");
 		result.append(vehicleRef);
 		result.append(", defaultLanguage: ");

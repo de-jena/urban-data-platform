@@ -40,6 +40,7 @@ public class IbisDto {
 		this.id = id;
 		this.serviceRef = serviceRef;
 		this.data = data;
+		this.timestamp = data.getTimestamp();
 	}
 	@Model
 	public EClass ibis = IbisSensinactPackage.Literals.IBIS_DEVICE;
@@ -55,6 +56,6 @@ public class IbisDto {
 	public IbisResource data;
 
 	@Timestamp
-	public Instant timestamp = Instant.now();
+	public Instant timestamp;
 
 }

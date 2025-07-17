@@ -16,8 +16,6 @@ package de.jena.model.sensinact.ibis.impl;
 import de.jena.model.sensinact.ibis.CustomerInfoCurrentConnectionData;
 import de.jena.model.sensinact.ibis.IbisSensinactPackage;
 
-import java.time.Instant;
-
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -34,7 +32,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link de.jena.model.sensinact.ibis.impl.CustomerInfoCurrentConnectionDataImpl#getServiceName <em>Service Name</em>}</li>
  *   <li>{@link de.jena.model.sensinact.ibis.impl.CustomerInfoCurrentConnectionDataImpl#getServiceOperation <em>Service Operation</em>}</li>
- *   <li>{@link de.jena.model.sensinact.ibis.impl.CustomerInfoCurrentConnectionDataImpl#getTimestamp <em>Timestamp</em>}</li>
  * </ul>
  *
  * @generated
@@ -79,26 +76,6 @@ public class CustomerInfoCurrentConnectionDataImpl extends IbisResourceImpl impl
 	 * @ordered
 	 */
 	protected String serviceOperation = SERVICE_OPERATION_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getTimestamp() <em>Timestamp</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTimestamp()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Instant TIMESTAMP_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getTimestamp() <em>Timestamp</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTimestamp()
-	 * @generated
-	 * @ordered
-	 */
-	protected Instant timestamp = TIMESTAMP_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -171,37 +148,12 @@ public class CustomerInfoCurrentConnectionDataImpl extends IbisResourceImpl impl
 	 * @generated
 	 */
 	@Override
-	public Instant getTimestamp() {
-		return timestamp;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setTimestamp(Instant newTimestamp) {
-		Instant oldTimestamp = timestamp;
-		timestamp = newTimestamp;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IbisSensinactPackage.CUSTOMER_INFO_CURRENT_CONNECTION_DATA__TIMESTAMP, oldTimestamp, timestamp));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_CONNECTION_DATA__SERVICE_NAME:
 				return getServiceName();
 			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_CONNECTION_DATA__SERVICE_OPERATION:
 				return getServiceOperation();
-			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_CONNECTION_DATA__TIMESTAMP:
-				return getTimestamp();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -219,9 +171,6 @@ public class CustomerInfoCurrentConnectionDataImpl extends IbisResourceImpl impl
 				return;
 			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_CONNECTION_DATA__SERVICE_OPERATION:
 				setServiceOperation((String)newValue);
-				return;
-			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_CONNECTION_DATA__TIMESTAMP:
-				setTimestamp((Instant)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -241,9 +190,6 @@ public class CustomerInfoCurrentConnectionDataImpl extends IbisResourceImpl impl
 			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_CONNECTION_DATA__SERVICE_OPERATION:
 				setServiceOperation(SERVICE_OPERATION_EDEFAULT);
 				return;
-			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_CONNECTION_DATA__TIMESTAMP:
-				setTimestamp(TIMESTAMP_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -260,8 +206,6 @@ public class CustomerInfoCurrentConnectionDataImpl extends IbisResourceImpl impl
 				return SERVICE_NAME_EDEFAULT == null ? serviceName != null : !SERVICE_NAME_EDEFAULT.equals(serviceName);
 			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_CONNECTION_DATA__SERVICE_OPERATION:
 				return SERVICE_OPERATION_EDEFAULT == null ? serviceOperation != null : !SERVICE_OPERATION_EDEFAULT.equals(serviceOperation);
-			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_CONNECTION_DATA__TIMESTAMP:
-				return TIMESTAMP_EDEFAULT == null ? timestamp != null : !TIMESTAMP_EDEFAULT.equals(timestamp);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -280,8 +224,6 @@ public class CustomerInfoCurrentConnectionDataImpl extends IbisResourceImpl impl
 		result.append(serviceName);
 		result.append(", serviceOperation: ");
 		result.append(serviceOperation);
-		result.append(", timestamp: ");
-		result.append(timestamp);
 		result.append(')');
 		return result.toString();
 	}

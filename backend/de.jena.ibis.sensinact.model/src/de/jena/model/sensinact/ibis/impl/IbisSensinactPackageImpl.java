@@ -649,6 +649,16 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
+	public EAttribute getIbisResource_Timestamp() {
+		return (EAttribute)ibisResourceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getCustomerInfoAll() {
 		return customerInfoAllEClass;
 	}
@@ -699,7 +709,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoAllData_Timestamp() {
+	public EAttribute getCustomerInfoAllData_VehicleRef() {
 		return (EAttribute)customerInfoAllDataEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -709,7 +719,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoAllData_VehicleRef() {
+	public EAttribute getCustomerInfoAllData_DefaultLanguage() {
 		return (EAttribute)customerInfoAllDataEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -719,7 +729,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoAllData_DefaultLanguage() {
+	public EAttribute getCustomerInfoAllData_CurrentStopIndex() {
 		return (EAttribute)customerInfoAllDataEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -729,7 +739,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoAllData_CurrentStopIndex() {
+	public EAttribute getCustomerInfoAllData_RouteDeviation() {
 		return (EAttribute)customerInfoAllDataEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -739,7 +749,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoAllData_RouteDeviation() {
+	public EAttribute getCustomerInfoAllData_DoorState() {
 		return (EAttribute)customerInfoAllDataEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -749,7 +759,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoAllData_DoorState() {
+	public EAttribute getCustomerInfoAllData_InPanic() {
 		return (EAttribute)customerInfoAllDataEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -759,7 +769,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoAllData_InPanic() {
+	public EAttribute getCustomerInfoAllData_VehicleStopRequested() {
 		return (EAttribute)customerInfoAllDataEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -769,7 +779,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoAllData_VehicleStopRequested() {
+	public EAttribute getCustomerInfoAllData_ExitSide() {
 		return (EAttribute)customerInfoAllDataEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -779,7 +789,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoAllData_ExitSide() {
+	public EAttribute getCustomerInfoAllData_MovingDirectionForward() {
 		return (EAttribute)customerInfoAllDataEClass.getEStructuralFeatures().get(10);
 	}
 
@@ -789,7 +799,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoAllData_MovingDirectionForward() {
+	public EAttribute getCustomerInfoAllData_VehicleMode() {
 		return (EAttribute)customerInfoAllDataEClass.getEStructuralFeatures().get(11);
 	}
 
@@ -799,7 +809,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoAllData_VehicleMode() {
+	public EAttribute getCustomerInfoAllData_SpeakerActive() {
 		return (EAttribute)customerInfoAllDataEClass.getEStructuralFeatures().get(12);
 	}
 
@@ -809,7 +819,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoAllData_SpeakerActive() {
+	public EAttribute getCustomerInfoAllData_StopInformationActive() {
 		return (EAttribute)customerInfoAllDataEClass.getEStructuralFeatures().get(13);
 	}
 
@@ -819,18 +829,8 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoAllData_StopInformationActive() {
-		return (EAttribute)customerInfoAllDataEClass.getEStructuralFeatures().get(14);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getCustomerInfoAllData_TripState() {
-		return (EAttribute)customerInfoAllDataEClass.getEStructuralFeatures().get(15);
+		return (EAttribute)customerInfoAllDataEClass.getEStructuralFeatures().get(14);
 	}
 
 	/**
@@ -889,18 +889,8 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoCurrentStopIndexData_Timestamp() {
-		return (EAttribute)customerInfoCurrentStopIndexDataEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getCustomerInfoCurrentStopIndexData_CurrentStopIndex() {
-		return (EAttribute)customerInfoCurrentStopIndexDataEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)customerInfoCurrentStopIndexDataEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -959,7 +949,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoCurrentStopPointData_Timestamp() {
+	public EAttribute getCustomerInfoCurrentStopPointData_StopIndex() {
 		return (EAttribute)customerInfoCurrentStopPointDataEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -969,7 +959,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoCurrentStopPointData_StopIndex() {
+	public EAttribute getCustomerInfoCurrentStopPointData_StopRef() {
 		return (EAttribute)customerInfoCurrentStopPointDataEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -979,7 +969,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoCurrentStopPointData_StopRef() {
+	public EAttribute getCustomerInfoCurrentStopPointData_StopName() {
 		return (EAttribute)customerInfoCurrentStopPointDataEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -989,7 +979,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoCurrentStopPointData_StopName() {
+	public EAttribute getCustomerInfoCurrentStopPointData_StopAlternativeName() {
 		return (EAttribute)customerInfoCurrentStopPointDataEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -999,7 +989,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoCurrentStopPointData_StopAlternativeName() {
+	public EAttribute getCustomerInfoCurrentStopPointData_Platform() {
 		return (EAttribute)customerInfoCurrentStopPointDataEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -1009,7 +999,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoCurrentStopPointData_Platform() {
+	public EAttribute getCustomerInfoCurrentStopPointData_ArrivalScheduled() {
 		return (EAttribute)customerInfoCurrentStopPointDataEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -1019,7 +1009,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoCurrentStopPointData_ArrivalScheduled() {
+	public EAttribute getCustomerInfoCurrentStopPointData_ArrivalExpected() {
 		return (EAttribute)customerInfoCurrentStopPointDataEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -1029,7 +1019,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoCurrentStopPointData_ArrivalExpected() {
+	public EAttribute getCustomerInfoCurrentStopPointData_DepartureScheduled() {
 		return (EAttribute)customerInfoCurrentStopPointDataEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -1039,7 +1029,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoCurrentStopPointData_DepartureScheduled() {
+	public EAttribute getCustomerInfoCurrentStopPointData_DepartureExpected() {
 		return (EAttribute)customerInfoCurrentStopPointDataEClass.getEStructuralFeatures().get(10);
 	}
 
@@ -1049,7 +1039,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoCurrentStopPointData_DepartureExpected() {
+	public EAttribute getCustomerInfoCurrentStopPointData_RecordedArrivalTime() {
 		return (EAttribute)customerInfoCurrentStopPointDataEClass.getEStructuralFeatures().get(11);
 	}
 
@@ -1059,7 +1049,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoCurrentStopPointData_RecordedArrivalTime() {
+	public EAttribute getCustomerInfoCurrentStopPointData_DistanceToNextStop() {
 		return (EAttribute)customerInfoCurrentStopPointDataEClass.getEStructuralFeatures().get(12);
 	}
 
@@ -1069,18 +1059,8 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoCurrentStopPointData_DistanceToNextStop() {
-		return (EAttribute)customerInfoCurrentStopPointDataEClass.getEStructuralFeatures().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getCustomerInfoCurrentStopPointData_FareZone() {
-		return (EAttribute)customerInfoCurrentStopPointDataEClass.getEStructuralFeatures().get(14);
+		return (EAttribute)customerInfoCurrentStopPointDataEClass.getEStructuralFeatures().get(13);
 	}
 
 	/**
@@ -1139,7 +1119,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoTripData_Timestamp() {
+	public EAttribute getCustomerInfoTripData_VehicleRef() {
 		return (EAttribute)customerInfoTripDataEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1149,7 +1129,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoTripData_VehicleRef() {
+	public EAttribute getCustomerInfoTripData_DefaultLanguage() {
 		return (EAttribute)customerInfoTripDataEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -1159,7 +1139,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoTripData_DefaultLanguage() {
+	public EAttribute getCustomerInfoTripData_CurrentStopIndex() {
 		return (EAttribute)customerInfoTripDataEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -1169,7 +1149,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoTripData_CurrentStopIndex() {
+	public EAttribute getCustomerInfoTripData_TripRef() {
 		return (EAttribute)customerInfoTripDataEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -1179,7 +1159,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoTripData_TripRef() {
+	public EAttribute getCustomerInfoTripData_LocationState() {
 		return (EAttribute)customerInfoTripDataEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -1189,7 +1169,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoTripData_LocationState() {
+	public EAttribute getCustomerInfoTripData_TimetableDelay() {
 		return (EAttribute)customerInfoTripDataEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -1199,7 +1179,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoTripData_TimetableDelay() {
+	public EAttribute getCustomerInfoTripData_RouteDirection() {
 		return (EAttribute)customerInfoTripDataEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -1209,7 +1189,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoTripData_RouteDirection() {
+	public EAttribute getCustomerInfoTripData_RunNumber() {
 		return (EAttribute)customerInfoTripDataEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -1219,7 +1199,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoTripData_RunNumber() {
+	public EAttribute getCustomerInfoTripData_PatternNumber() {
 		return (EAttribute)customerInfoTripDataEClass.getEStructuralFeatures().get(10);
 	}
 
@@ -1229,7 +1209,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoTripData_PatternNumber() {
+	public EAttribute getCustomerInfoTripData_PathDestinationNumber() {
 		return (EAttribute)customerInfoTripDataEClass.getEStructuralFeatures().get(11);
 	}
 
@@ -1239,7 +1219,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoTripData_PathDestinationNumber() {
+	public EAttribute getCustomerInfoTripData_AdditionalTextMsg() {
 		return (EAttribute)customerInfoTripDataEClass.getEStructuralFeatures().get(12);
 	}
 
@@ -1249,7 +1229,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoTripData_AdditionalTextMsg() {
+	public EAttribute getCustomerInfoTripData_AdditionalTextMsg1() {
 		return (EAttribute)customerInfoTripDataEClass.getEStructuralFeatures().get(13);
 	}
 
@@ -1259,7 +1239,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoTripData_AdditionalTextMsg1() {
+	public EAttribute getCustomerInfoTripData_AdditionalTextMsg2() {
 		return (EAttribute)customerInfoTripDataEClass.getEStructuralFeatures().get(14);
 	}
 
@@ -1269,7 +1249,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoTripData_AdditionalTextMsg2() {
+	public EAttribute getCustomerInfoTripData_AdditionalTextMsg3() {
 		return (EAttribute)customerInfoTripDataEClass.getEStructuralFeatures().get(15);
 	}
 
@@ -1279,7 +1259,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoTripData_AdditionalTextMsg3() {
+	public EAttribute getCustomerInfoTripData_AdditionalTextMsg4() {
 		return (EAttribute)customerInfoTripDataEClass.getEStructuralFeatures().get(16);
 	}
 
@@ -1289,7 +1269,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoTripData_AdditionalTextMsg4() {
+	public EAttribute getCustomerInfoTripData_AdditionalTextMsg5() {
 		return (EAttribute)customerInfoTripDataEClass.getEStructuralFeatures().get(17);
 	}
 
@@ -1299,7 +1279,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoTripData_AdditionalTextMsg5() {
+	public EAttribute getCustomerInfoTripData_AdditionalTextMsg6() {
 		return (EAttribute)customerInfoTripDataEClass.getEStructuralFeatures().get(18);
 	}
 
@@ -1309,7 +1289,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoTripData_AdditionalTextMsg6() {
+	public EAttribute getCustomerInfoTripData_AdditionalTextMsg7() {
 		return (EAttribute)customerInfoTripDataEClass.getEStructuralFeatures().get(19);
 	}
 
@@ -1319,7 +1299,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoTripData_AdditionalTextMsg7() {
+	public EAttribute getCustomerInfoTripData_AdditionalTextMsg8() {
 		return (EAttribute)customerInfoTripDataEClass.getEStructuralFeatures().get(20);
 	}
 
@@ -1329,18 +1309,8 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoTripData_AdditionalTextMsg8() {
-		return (EAttribute)customerInfoTripDataEClass.getEStructuralFeatures().get(21);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getCustomerInfoTripData_AdditionalTextMsg9() {
-		return (EAttribute)customerInfoTripDataEClass.getEStructuralFeatures().get(22);
+		return (EAttribute)customerInfoTripDataEClass.getEStructuralFeatures().get(21);
 	}
 
 	/**
@@ -1399,7 +1369,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoVehicleData_Timestamp() {
+	public EAttribute getCustomerInfoVehicleData_VehicleRef() {
 		return (EAttribute)customerInfoVehicleDataEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1409,7 +1379,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoVehicleData_VehicleRef() {
+	public EAttribute getCustomerInfoVehicleData_RouteDeviation() {
 		return (EAttribute)customerInfoVehicleDataEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -1419,7 +1389,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoVehicleData_RouteDeviation() {
+	public EAttribute getCustomerInfoVehicleData_DoorState() {
 		return (EAttribute)customerInfoVehicleDataEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -1429,7 +1399,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoVehicleData_DoorState() {
+	public EAttribute getCustomerInfoVehicleData_InPanic() {
 		return (EAttribute)customerInfoVehicleDataEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -1439,7 +1409,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoVehicleData_InPanic() {
+	public EAttribute getCustomerInfoVehicleData_VehicleStopRequested() {
 		return (EAttribute)customerInfoVehicleDataEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -1449,7 +1419,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoVehicleData_VehicleStopRequested() {
+	public EAttribute getCustomerInfoVehicleData_ExitSide() {
 		return (EAttribute)customerInfoVehicleDataEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -1459,7 +1429,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoVehicleData_ExitSide() {
+	public EAttribute getCustomerInfoVehicleData_MovingDirectionForward() {
 		return (EAttribute)customerInfoVehicleDataEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -1469,7 +1439,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoVehicleData_MovingDirectionForward() {
+	public EAttribute getCustomerInfoVehicleData_VehicleMode() {
 		return (EAttribute)customerInfoVehicleDataEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -1479,7 +1449,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoVehicleData_VehicleMode() {
+	public EAttribute getCustomerInfoVehicleData_SpeakerActive() {
 		return (EAttribute)customerInfoVehicleDataEClass.getEStructuralFeatures().get(10);
 	}
 
@@ -1489,7 +1459,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoVehicleData_SpeakerActive() {
+	public EAttribute getCustomerInfoVehicleData_StopInformationActive() {
 		return (EAttribute)customerInfoVehicleDataEClass.getEStructuralFeatures().get(11);
 	}
 
@@ -1499,18 +1469,8 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoVehicleData_StopInformationActive() {
-		return (EAttribute)customerInfoVehicleDataEClass.getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getCustomerInfoVehicleData_TripState() {
-		return (EAttribute)customerInfoVehicleDataEClass.getEStructuralFeatures().get(13);
+		return (EAttribute)customerInfoVehicleDataEClass.getEStructuralFeatures().get(12);
 	}
 
 	/**
@@ -1569,7 +1529,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoCurrentAnnouncementData_Timestamp() {
+	public EAttribute getCustomerInfoCurrentAnnouncementData_AnnouncementRef() {
 		return (EAttribute)customerInfoCurrentAnnouncementDataEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1579,7 +1539,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoCurrentAnnouncementData_AnnouncementRef() {
+	public EAttribute getCustomerInfoCurrentAnnouncementData_AnnouncementText() {
 		return (EAttribute)customerInfoCurrentAnnouncementDataEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -1589,18 +1549,8 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoCurrentAnnouncementData_AnnouncementText() {
-		return (EAttribute)customerInfoCurrentAnnouncementDataEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getCustomerInfoCurrentAnnouncementData_AnnouncementTTSText() {
-		return (EAttribute)customerInfoCurrentAnnouncementDataEClass.getEStructuralFeatures().get(5);
+		return (EAttribute)customerInfoCurrentAnnouncementDataEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1659,16 +1609,6 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoCurrentConnectionData_Timestamp() {
-		return (EAttribute)customerInfoCurrentConnectionDataEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getCustomerInfoCurrentDisplayContent() {
 		return customerInfoCurrentDisplayContentEClass;
 	}
@@ -1719,7 +1659,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoCurrentDisplayContentData_Timestamp() {
+	public EAttribute getCustomerInfoCurrentDisplayContentData_DestinationName() {
 		return (EAttribute)customerInfoCurrentDisplayContentDataEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1729,18 +1669,8 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCustomerInfoCurrentDisplayContentData_DestinationName() {
-		return (EAttribute)customerInfoCurrentDisplayContentDataEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getCustomerInfoCurrentDisplayContentData_LineName() {
-		return (EAttribute)customerInfoCurrentDisplayContentDataEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)customerInfoCurrentDisplayContentDataEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1819,7 +1749,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getPassengerCountingDoorCountingState_Timestamp() {
+	public EAttribute getPassengerCountingDoorCountingState_DoorId() {
 		return (EAttribute)passengerCountingDoorCountingStateEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1829,7 +1759,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getPassengerCountingDoorCountingState_DoorId() {
+	public EAttribute getPassengerCountingDoorCountingState_ExitSide() {
 		return (EAttribute)passengerCountingDoorCountingStateEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -1839,7 +1769,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getPassengerCountingDoorCountingState_ExitSide() {
+	public EAttribute getPassengerCountingDoorCountingState_DoorCountingType() {
 		return (EAttribute)passengerCountingDoorCountingStateEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -1849,7 +1779,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getPassengerCountingDoorCountingState_DoorCountingType() {
+	public EAttribute getPassengerCountingDoorCountingState_In() {
 		return (EAttribute)passengerCountingDoorCountingStateEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -1859,18 +1789,8 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getPassengerCountingDoorCountingState_In() {
-		return (EAttribute)passengerCountingDoorCountingStateEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getPassengerCountingDoorCountingState_Out() {
-		return (EAttribute)passengerCountingDoorCountingStateEClass.getEStructuralFeatures().get(7);
+		return (EAttribute)passengerCountingDoorCountingStateEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -1929,7 +1849,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDoorState_Timestamp() {
+	public EAttribute getDoorState_DoorId() {
 		return (EAttribute)doorStateEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1939,7 +1859,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDoorState_DoorId() {
+	public EAttribute getDoorState_ExitSide() {
 		return (EAttribute)doorStateEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -1949,18 +1869,8 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDoorState_ExitSide() {
-		return (EAttribute)doorStateEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getDoorState_DoorState() {
-		return (EAttribute)doorStateEClass.getEStructuralFeatures().get(5);
+		return (EAttribute)doorStateEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -2069,7 +1979,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getGNSSLocationData_Timestamp() {
+	public EAttribute getGNSSLocationData_Date() {
 		return (EAttribute)gnssLocationDataEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -2079,7 +1989,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getGNSSLocationData_Date() {
+	public EAttribute getGNSSLocationData_Time() {
 		return (EAttribute)gnssLocationDataEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -2089,7 +1999,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getGNSSLocationData_Time() {
+	public EAttribute getGNSSLocationData_LatitudeDegree() {
 		return (EAttribute)gnssLocationDataEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -2099,7 +2009,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getGNSSLocationData_LatitudeDegree() {
+	public EAttribute getGNSSLocationData_LongitudeDegree() {
 		return (EAttribute)gnssLocationDataEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -2109,7 +2019,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getGNSSLocationData_LongitudeDegree() {
+	public EAttribute getGNSSLocationData_LatitudeDirection() {
 		return (EAttribute)gnssLocationDataEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -2119,7 +2029,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getGNSSLocationData_LatitudeDirection() {
+	public EAttribute getGNSSLocationData_LongitudeDirection() {
 		return (EAttribute)gnssLocationDataEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -2129,7 +2039,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getGNSSLocationData_LongitudeDirection() {
+	public EAttribute getGNSSLocationData_Altitude() {
 		return (EAttribute)gnssLocationDataEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -2139,7 +2049,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getGNSSLocationData_Altitude() {
+	public EAttribute getGNSSLocationData_SpeedOverGround() {
 		return (EAttribute)gnssLocationDataEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -2149,7 +2059,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getGNSSLocationData_SpeedOverGround() {
+	public EAttribute getGNSSLocationData_SignalQuality() {
 		return (EAttribute)gnssLocationDataEClass.getEStructuralFeatures().get(10);
 	}
 
@@ -2159,7 +2069,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getGNSSLocationData_SignalQuality() {
+	public EAttribute getGNSSLocationData_NumberOfSatellites() {
 		return (EAttribute)gnssLocationDataEClass.getEStructuralFeatures().get(11);
 	}
 
@@ -2169,7 +2079,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getGNSSLocationData_NumberOfSatellites() {
+	public EAttribute getGNSSLocationData_HorizontalDilutionOfPrecision() {
 		return (EAttribute)gnssLocationDataEClass.getEStructuralFeatures().get(12);
 	}
 
@@ -2179,7 +2089,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getGNSSLocationData_HorizontalDilutionOfPrecision() {
+	public EAttribute getGNSSLocationData_VerticalDilutionOfPrecision() {
 		return (EAttribute)gnssLocationDataEClass.getEStructuralFeatures().get(13);
 	}
 
@@ -2189,7 +2099,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getGNSSLocationData_VerticalDilutionOfPrecision() {
+	public EAttribute getGNSSLocationData_TrackDegreeTrue() {
 		return (EAttribute)gnssLocationDataEClass.getEStructuralFeatures().get(14);
 	}
 
@@ -2199,7 +2109,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getGNSSLocationData_TrackDegreeTrue() {
+	public EAttribute getGNSSLocationData_TrackDegreeMagnetic() {
 		return (EAttribute)gnssLocationDataEClass.getEStructuralFeatures().get(15);
 	}
 
@@ -2209,7 +2119,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getGNSSLocationData_TrackDegreeMagnetic() {
+	public EAttribute getGNSSLocationData_GNSSType() {
 		return (EAttribute)gnssLocationDataEClass.getEStructuralFeatures().get(16);
 	}
 
@@ -2219,18 +2129,8 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getGNSSLocationData_GNSSType() {
-		return (EAttribute)gnssLocationDataEClass.getEStructuralFeatures().get(17);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getGNSSLocationData_GNSSCoordinateSystem() {
-		return (EAttribute)gnssLocationDataEClass.getEStructuralFeatures().get(18);
+		return (EAttribute)gnssLocationDataEClass.getEStructuralFeatures().get(17);
 	}
 
 	/**
@@ -2289,7 +2189,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTicketValidationCurrentTariffStopData_Timestamp() {
+	public EAttribute getTicketValidationCurrentTariffStopData_StopIndex() {
 		return (EAttribute)ticketValidationCurrentTariffStopDataEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -2299,7 +2199,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTicketValidationCurrentTariffStopData_StopIndex() {
+	public EAttribute getTicketValidationCurrentTariffStopData_StopRef() {
 		return (EAttribute)ticketValidationCurrentTariffStopDataEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -2309,7 +2209,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTicketValidationCurrentTariffStopData_StopRef() {
+	public EAttribute getTicketValidationCurrentTariffStopData_StopName() {
 		return (EAttribute)ticketValidationCurrentTariffStopDataEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -2319,7 +2219,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTicketValidationCurrentTariffStopData_StopName() {
+	public EAttribute getTicketValidationCurrentTariffStopData_StopAlternativeName() {
 		return (EAttribute)ticketValidationCurrentTariffStopDataEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -2329,7 +2229,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTicketValidationCurrentTariffStopData_StopAlternativeName() {
+	public EAttribute getTicketValidationCurrentTariffStopData_Platform() {
 		return (EAttribute)ticketValidationCurrentTariffStopDataEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -2339,7 +2239,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTicketValidationCurrentTariffStopData_Platform() {
+	public EAttribute getTicketValidationCurrentTariffStopData_ArrivalScheduled() {
 		return (EAttribute)ticketValidationCurrentTariffStopDataEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -2349,7 +2249,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTicketValidationCurrentTariffStopData_ArrivalScheduled() {
+	public EAttribute getTicketValidationCurrentTariffStopData_ArrivalExpected() {
 		return (EAttribute)ticketValidationCurrentTariffStopDataEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -2359,7 +2259,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTicketValidationCurrentTariffStopData_ArrivalExpected() {
+	public EAttribute getTicketValidationCurrentTariffStopData_DepartureScheduled() {
 		return (EAttribute)ticketValidationCurrentTariffStopDataEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -2369,7 +2269,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTicketValidationCurrentTariffStopData_DepartureScheduled() {
+	public EAttribute getTicketValidationCurrentTariffStopData_DepartureExpected() {
 		return (EAttribute)ticketValidationCurrentTariffStopDataEClass.getEStructuralFeatures().get(10);
 	}
 
@@ -2379,7 +2279,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTicketValidationCurrentTariffStopData_DepartureExpected() {
+	public EAttribute getTicketValidationCurrentTariffStopData_RecordedArrivalTime() {
 		return (EAttribute)ticketValidationCurrentTariffStopDataEClass.getEStructuralFeatures().get(11);
 	}
 
@@ -2389,7 +2289,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTicketValidationCurrentTariffStopData_RecordedArrivalTime() {
+	public EAttribute getTicketValidationCurrentTariffStopData_DistanceToNextStop() {
 		return (EAttribute)ticketValidationCurrentTariffStopDataEClass.getEStructuralFeatures().get(12);
 	}
 
@@ -2399,7 +2299,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTicketValidationCurrentTariffStopData_DistanceToNextStop() {
+	public EAttribute getTicketValidationCurrentTariffStopData_FareZone() {
 		return (EAttribute)ticketValidationCurrentTariffStopDataEClass.getEStructuralFeatures().get(13);
 	}
 
@@ -2409,18 +2309,8 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTicketValidationCurrentTariffStopData_FareZone() {
-		return (EAttribute)ticketValidationCurrentTariffStopDataEClass.getEStructuralFeatures().get(14);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getTicketValidationCurrentTariffStopData_CurrentTripRef() {
-		return (EAttribute)ticketValidationCurrentTariffStopDataEClass.getEStructuralFeatures().get(15);
+		return (EAttribute)ticketValidationCurrentTariffStopDataEClass.getEStructuralFeatures().get(14);
 	}
 
 	/**
@@ -2479,18 +2369,8 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTicketValidationRazziaData_Timestamp() {
-		return (EAttribute)ticketValidationRazziaDataEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getTicketValidationRazziaData_RazziaState() {
-		return (EAttribute)ticketValidationRazziaDataEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)ticketValidationRazziaDataEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -2549,7 +2429,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTicketValidationCurrentLineData_Timestamp() {
+	public EAttribute getTicketValidationCurrentLineData_LineRef() {
 		return (EAttribute)ticketValidationCurrentLineDataEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -2559,7 +2439,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTicketValidationCurrentLineData_LineRef() {
+	public EAttribute getTicketValidationCurrentLineData_LineName() {
 		return (EAttribute)ticketValidationCurrentLineDataEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -2569,7 +2449,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTicketValidationCurrentLineData_LineName() {
+	public EAttribute getTicketValidationCurrentLineData_LineShortName() {
 		return (EAttribute)ticketValidationCurrentLineDataEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -2579,7 +2459,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTicketValidationCurrentLineData_LineShortName() {
+	public EAttribute getTicketValidationCurrentLineData_LineNumber() {
 		return (EAttribute)ticketValidationCurrentLineDataEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -2589,18 +2469,8 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTicketValidationCurrentLineData_LineNumber() {
-		return (EAttribute)ticketValidationCurrentLineDataEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getTicketValidationCurrentLineData_LineCode() {
-		return (EAttribute)ticketValidationCurrentLineDataEClass.getEStructuralFeatures().get(7);
+		return (EAttribute)ticketValidationCurrentLineDataEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -2659,7 +2529,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTicketValidationVehicleData_Timestamp() {
+	public EAttribute getTicketValidationVehicleData_VehicleRef() {
 		return (EAttribute)ticketValidationVehicleDataEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -2669,7 +2539,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTicketValidationVehicleData_VehicleRef() {
+	public EAttribute getTicketValidationVehicleData_RouteDeviation() {
 		return (EAttribute)ticketValidationVehicleDataEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -2679,7 +2549,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTicketValidationVehicleData_RouteDeviation() {
+	public EAttribute getTicketValidationVehicleData_DoorState() {
 		return (EAttribute)ticketValidationVehicleDataEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -2689,7 +2559,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTicketValidationVehicleData_DoorState() {
+	public EAttribute getTicketValidationVehicleData_MovingDirectionForward() {
 		return (EAttribute)ticketValidationVehicleDataEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -2699,7 +2569,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTicketValidationVehicleData_MovingDirectionForward() {
+	public EAttribute getTicketValidationVehicleData_VehicleMode() {
 		return (EAttribute)ticketValidationVehicleDataEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -2709,18 +2579,8 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTicketValidationVehicleData_VehicleMode() {
-		return (EAttribute)ticketValidationVehicleDataEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getTicketValidationVehicleData_DriverNumber() {
-		return (EAttribute)ticketValidationVehicleDataEClass.getEStructuralFeatures().get(8);
+		return (EAttribute)ticketValidationVehicleDataEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -2879,6 +2739,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 		createEReference(ibisDeviceEClass, IBIS_DEVICE__TRIP_INFO);
 
 		ibisResourceEClass = createEClass(IBIS_RESOURCE);
+		createEAttribute(ibisResourceEClass, IBIS_RESOURCE__TIMESTAMP);
 
 		customerInfoAllEClass = createEClass(CUSTOMER_INFO_ALL);
 		createEReference(customerInfoAllEClass, CUSTOMER_INFO_ALL__RESOURCE);
@@ -2886,7 +2747,6 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 		customerInfoAllDataEClass = createEClass(CUSTOMER_INFO_ALL_DATA);
 		createEAttribute(customerInfoAllDataEClass, CUSTOMER_INFO_ALL_DATA__SERVICE_NAME);
 		createEAttribute(customerInfoAllDataEClass, CUSTOMER_INFO_ALL_DATA__SERVICE_OPERATION);
-		createEAttribute(customerInfoAllDataEClass, CUSTOMER_INFO_ALL_DATA__TIMESTAMP);
 		createEAttribute(customerInfoAllDataEClass, CUSTOMER_INFO_ALL_DATA__VEHICLE_REF);
 		createEAttribute(customerInfoAllDataEClass, CUSTOMER_INFO_ALL_DATA__DEFAULT_LANGUAGE);
 		createEAttribute(customerInfoAllDataEClass, CUSTOMER_INFO_ALL_DATA__CURRENT_STOP_INDEX);
@@ -2907,7 +2767,6 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 		customerInfoCurrentStopIndexDataEClass = createEClass(CUSTOMER_INFO_CURRENT_STOP_INDEX_DATA);
 		createEAttribute(customerInfoCurrentStopIndexDataEClass, CUSTOMER_INFO_CURRENT_STOP_INDEX_DATA__SERVICE_NAME);
 		createEAttribute(customerInfoCurrentStopIndexDataEClass, CUSTOMER_INFO_CURRENT_STOP_INDEX_DATA__SERVICE_OPERATION);
-		createEAttribute(customerInfoCurrentStopIndexDataEClass, CUSTOMER_INFO_CURRENT_STOP_INDEX_DATA__TIMESTAMP);
 		createEAttribute(customerInfoCurrentStopIndexDataEClass, CUSTOMER_INFO_CURRENT_STOP_INDEX_DATA__CURRENT_STOP_INDEX);
 
 		customerInfoCurrentStopPointEClass = createEClass(CUSTOMER_INFO_CURRENT_STOP_POINT);
@@ -2916,7 +2775,6 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 		customerInfoCurrentStopPointDataEClass = createEClass(CUSTOMER_INFO_CURRENT_STOP_POINT_DATA);
 		createEAttribute(customerInfoCurrentStopPointDataEClass, CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__SERVICE_NAME);
 		createEAttribute(customerInfoCurrentStopPointDataEClass, CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__SERVICE_OPERATION);
-		createEAttribute(customerInfoCurrentStopPointDataEClass, CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__TIMESTAMP);
 		createEAttribute(customerInfoCurrentStopPointDataEClass, CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__STOP_INDEX);
 		createEAttribute(customerInfoCurrentStopPointDataEClass, CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__STOP_REF);
 		createEAttribute(customerInfoCurrentStopPointDataEClass, CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__STOP_NAME);
@@ -2936,7 +2794,6 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 		customerInfoTripDataEClass = createEClass(CUSTOMER_INFO_TRIP_DATA);
 		createEAttribute(customerInfoTripDataEClass, CUSTOMER_INFO_TRIP_DATA__SERVICE_NAME);
 		createEAttribute(customerInfoTripDataEClass, CUSTOMER_INFO_TRIP_DATA__SERVICE_OPERATION);
-		createEAttribute(customerInfoTripDataEClass, CUSTOMER_INFO_TRIP_DATA__TIMESTAMP);
 		createEAttribute(customerInfoTripDataEClass, CUSTOMER_INFO_TRIP_DATA__VEHICLE_REF);
 		createEAttribute(customerInfoTripDataEClass, CUSTOMER_INFO_TRIP_DATA__DEFAULT_LANGUAGE);
 		createEAttribute(customerInfoTripDataEClass, CUSTOMER_INFO_TRIP_DATA__CURRENT_STOP_INDEX);
@@ -2964,7 +2821,6 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 		customerInfoVehicleDataEClass = createEClass(CUSTOMER_INFO_VEHICLE_DATA);
 		createEAttribute(customerInfoVehicleDataEClass, CUSTOMER_INFO_VEHICLE_DATA__SERVICE_NAME);
 		createEAttribute(customerInfoVehicleDataEClass, CUSTOMER_INFO_VEHICLE_DATA__SERVICE_OPERATION);
-		createEAttribute(customerInfoVehicleDataEClass, CUSTOMER_INFO_VEHICLE_DATA__TIMESTAMP);
 		createEAttribute(customerInfoVehicleDataEClass, CUSTOMER_INFO_VEHICLE_DATA__VEHICLE_REF);
 		createEAttribute(customerInfoVehicleDataEClass, CUSTOMER_INFO_VEHICLE_DATA__ROUTE_DEVIATION);
 		createEAttribute(customerInfoVehicleDataEClass, CUSTOMER_INFO_VEHICLE_DATA__DOOR_STATE);
@@ -2983,7 +2839,6 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 		customerInfoCurrentAnnouncementDataEClass = createEClass(CUSTOMER_INFO_CURRENT_ANNOUNCEMENT_DATA);
 		createEAttribute(customerInfoCurrentAnnouncementDataEClass, CUSTOMER_INFO_CURRENT_ANNOUNCEMENT_DATA__SERVICE_NAME);
 		createEAttribute(customerInfoCurrentAnnouncementDataEClass, CUSTOMER_INFO_CURRENT_ANNOUNCEMENT_DATA__SERVICE_OPERATION);
-		createEAttribute(customerInfoCurrentAnnouncementDataEClass, CUSTOMER_INFO_CURRENT_ANNOUNCEMENT_DATA__TIMESTAMP);
 		createEAttribute(customerInfoCurrentAnnouncementDataEClass, CUSTOMER_INFO_CURRENT_ANNOUNCEMENT_DATA__ANNOUNCEMENT_REF);
 		createEAttribute(customerInfoCurrentAnnouncementDataEClass, CUSTOMER_INFO_CURRENT_ANNOUNCEMENT_DATA__ANNOUNCEMENT_TEXT);
 		createEAttribute(customerInfoCurrentAnnouncementDataEClass, CUSTOMER_INFO_CURRENT_ANNOUNCEMENT_DATA__ANNOUNCEMENT_TTS_TEXT);
@@ -2994,7 +2849,6 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 		customerInfoCurrentConnectionDataEClass = createEClass(CUSTOMER_INFO_CURRENT_CONNECTION_DATA);
 		createEAttribute(customerInfoCurrentConnectionDataEClass, CUSTOMER_INFO_CURRENT_CONNECTION_DATA__SERVICE_NAME);
 		createEAttribute(customerInfoCurrentConnectionDataEClass, CUSTOMER_INFO_CURRENT_CONNECTION_DATA__SERVICE_OPERATION);
-		createEAttribute(customerInfoCurrentConnectionDataEClass, CUSTOMER_INFO_CURRENT_CONNECTION_DATA__TIMESTAMP);
 
 		customerInfoCurrentDisplayContentEClass = createEClass(CUSTOMER_INFO_CURRENT_DISPLAY_CONTENT);
 		createEReference(customerInfoCurrentDisplayContentEClass, CUSTOMER_INFO_CURRENT_DISPLAY_CONTENT__RESOURCE);
@@ -3002,7 +2856,6 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 		customerInfoCurrentDisplayContentDataEClass = createEClass(CUSTOMER_INFO_CURRENT_DISPLAY_CONTENT_DATA);
 		createEAttribute(customerInfoCurrentDisplayContentDataEClass, CUSTOMER_INFO_CURRENT_DISPLAY_CONTENT_DATA__SERVICE_NAME);
 		createEAttribute(customerInfoCurrentDisplayContentDataEClass, CUSTOMER_INFO_CURRENT_DISPLAY_CONTENT_DATA__SERVICE_OPERATION);
-		createEAttribute(customerInfoCurrentDisplayContentDataEClass, CUSTOMER_INFO_CURRENT_DISPLAY_CONTENT_DATA__TIMESTAMP);
 		createEAttribute(customerInfoCurrentDisplayContentDataEClass, CUSTOMER_INFO_CURRENT_DISPLAY_CONTENT_DATA__DESTINATION_NAME);
 		createEAttribute(customerInfoCurrentDisplayContentDataEClass, CUSTOMER_INFO_CURRENT_DISPLAY_CONTENT_DATA__LINE_NAME);
 
@@ -3015,7 +2868,6 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 		passengerCountingDoorCountingStateEClass = createEClass(PASSENGER_COUNTING_DOOR_COUNTING_STATE);
 		createEAttribute(passengerCountingDoorCountingStateEClass, PASSENGER_COUNTING_DOOR_COUNTING_STATE__SERVICE_NAME);
 		createEAttribute(passengerCountingDoorCountingStateEClass, PASSENGER_COUNTING_DOOR_COUNTING_STATE__SERVICE_OPERATION);
-		createEAttribute(passengerCountingDoorCountingStateEClass, PASSENGER_COUNTING_DOOR_COUNTING_STATE__TIMESTAMP);
 		createEAttribute(passengerCountingDoorCountingStateEClass, PASSENGER_COUNTING_DOOR_COUNTING_STATE__DOOR_ID);
 		createEAttribute(passengerCountingDoorCountingStateEClass, PASSENGER_COUNTING_DOOR_COUNTING_STATE__EXIT_SIDE);
 		createEAttribute(passengerCountingDoorCountingStateEClass, PASSENGER_COUNTING_DOOR_COUNTING_STATE__DOOR_COUNTING_TYPE);
@@ -3028,7 +2880,6 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 		doorStateEClass = createEClass(DOOR_STATE);
 		createEAttribute(doorStateEClass, DOOR_STATE__SERVICE_NAME);
 		createEAttribute(doorStateEClass, DOOR_STATE__SERVICE_OPERATION);
-		createEAttribute(doorStateEClass, DOOR_STATE__TIMESTAMP);
 		createEAttribute(doorStateEClass, DOOR_STATE__DOOR_ID);
 		createEAttribute(doorStateEClass, DOOR_STATE__EXIT_SIDE);
 		createEAttribute(doorStateEClass, DOOR_STATE__DOOR_STATE);
@@ -3045,7 +2896,6 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 		gnssLocationDataEClass = createEClass(GNSS_LOCATION_DATA);
 		createEAttribute(gnssLocationDataEClass, GNSS_LOCATION_DATA__SERVICE_NAME);
 		createEAttribute(gnssLocationDataEClass, GNSS_LOCATION_DATA__SERVICE_OPERATION);
-		createEAttribute(gnssLocationDataEClass, GNSS_LOCATION_DATA__TIMESTAMP);
 		createEAttribute(gnssLocationDataEClass, GNSS_LOCATION_DATA__DATE);
 		createEAttribute(gnssLocationDataEClass, GNSS_LOCATION_DATA__TIME);
 		createEAttribute(gnssLocationDataEClass, GNSS_LOCATION_DATA__LATITUDE_DEGREE);
@@ -3069,7 +2919,6 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 		ticketValidationCurrentTariffStopDataEClass = createEClass(TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA);
 		createEAttribute(ticketValidationCurrentTariffStopDataEClass, TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA__SERVICE_NAME);
 		createEAttribute(ticketValidationCurrentTariffStopDataEClass, TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA__SERVICE_OPERATION);
-		createEAttribute(ticketValidationCurrentTariffStopDataEClass, TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA__TIMESTAMP);
 		createEAttribute(ticketValidationCurrentTariffStopDataEClass, TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA__STOP_INDEX);
 		createEAttribute(ticketValidationCurrentTariffStopDataEClass, TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA__STOP_REF);
 		createEAttribute(ticketValidationCurrentTariffStopDataEClass, TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA__STOP_NAME);
@@ -3090,7 +2939,6 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 		ticketValidationRazziaDataEClass = createEClass(TICKET_VALIDATION_RAZZIA_DATA);
 		createEAttribute(ticketValidationRazziaDataEClass, TICKET_VALIDATION_RAZZIA_DATA__SERVICE_NAME);
 		createEAttribute(ticketValidationRazziaDataEClass, TICKET_VALIDATION_RAZZIA_DATA__SERVICE_OPERATION);
-		createEAttribute(ticketValidationRazziaDataEClass, TICKET_VALIDATION_RAZZIA_DATA__TIMESTAMP);
 		createEAttribute(ticketValidationRazziaDataEClass, TICKET_VALIDATION_RAZZIA_DATA__RAZZIA_STATE);
 
 		ticketValidationCurrentLineEClass = createEClass(TICKET_VALIDATION_CURRENT_LINE);
@@ -3099,7 +2947,6 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 		ticketValidationCurrentLineDataEClass = createEClass(TICKET_VALIDATION_CURRENT_LINE_DATA);
 		createEAttribute(ticketValidationCurrentLineDataEClass, TICKET_VALIDATION_CURRENT_LINE_DATA__SERVICE_NAME);
 		createEAttribute(ticketValidationCurrentLineDataEClass, TICKET_VALIDATION_CURRENT_LINE_DATA__SERVICE_OPERATION);
-		createEAttribute(ticketValidationCurrentLineDataEClass, TICKET_VALIDATION_CURRENT_LINE_DATA__TIMESTAMP);
 		createEAttribute(ticketValidationCurrentLineDataEClass, TICKET_VALIDATION_CURRENT_LINE_DATA__LINE_REF);
 		createEAttribute(ticketValidationCurrentLineDataEClass, TICKET_VALIDATION_CURRENT_LINE_DATA__LINE_NAME);
 		createEAttribute(ticketValidationCurrentLineDataEClass, TICKET_VALIDATION_CURRENT_LINE_DATA__LINE_SHORT_NAME);
@@ -3112,7 +2959,6 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 		ticketValidationVehicleDataEClass = createEClass(TICKET_VALIDATION_VEHICLE_DATA);
 		createEAttribute(ticketValidationVehicleDataEClass, TICKET_VALIDATION_VEHICLE_DATA__SERVICE_NAME);
 		createEAttribute(ticketValidationVehicleDataEClass, TICKET_VALIDATION_VEHICLE_DATA__SERVICE_OPERATION);
-		createEAttribute(ticketValidationVehicleDataEClass, TICKET_VALIDATION_VEHICLE_DATA__TIMESTAMP);
 		createEAttribute(ticketValidationVehicleDataEClass, TICKET_VALIDATION_VEHICLE_DATA__VEHICLE_REF);
 		createEAttribute(ticketValidationVehicleDataEClass, TICKET_VALIDATION_VEHICLE_DATA__ROUTE_DEVIATION);
 		createEAttribute(ticketValidationVehicleDataEClass, TICKET_VALIDATION_VEHICLE_DATA__DOOR_STATE);
@@ -3228,6 +3074,7 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 		initEReference(getIbisDevice_TripInfo(), this.getTripInfo(), null, "tripInfo", null, 0, 1, IbisDevice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(ibisResourceEClass, IbisResource.class, "IbisResource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getIbisResource_Timestamp(), theProviderPackage.getEInstant(), "timestamp", null, 1, 1, IbisResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(customerInfoAllEClass, CustomerInfoAll.class, "CustomerInfoAll", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCustomerInfoAll_Resource(), this.getCustomerInfoAllData(), null, "resource", null, 0, 1, CustomerInfoAll.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3235,7 +3082,6 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 		initEClass(customerInfoAllDataEClass, CustomerInfoAllData.class, "CustomerInfoAllData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCustomerInfoAllData_ServiceName(), ecorePackage.getEString(), "serviceName", null, 1, 1, CustomerInfoAllData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCustomerInfoAllData_ServiceOperation(), ecorePackage.getEString(), "serviceOperation", null, 1, 1, CustomerInfoAllData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCustomerInfoAllData_Timestamp(), theProviderPackage.getEInstant(), "timestamp", null, 1, 1, CustomerInfoAllData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCustomerInfoAllData_VehicleRef(), ecorePackage.getEString(), "vehicleRef", null, 1, 1, CustomerInfoAllData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCustomerInfoAllData_DefaultLanguage(), ecorePackage.getEString(), "defaultLanguage", null, 1, 1, CustomerInfoAllData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCustomerInfoAllData_CurrentStopIndex(), ecorePackage.getEInt(), "currentStopIndex", "-1", 1, 1, CustomerInfoAllData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3256,7 +3102,6 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 		initEClass(customerInfoCurrentStopIndexDataEClass, CustomerInfoCurrentStopIndexData.class, "CustomerInfoCurrentStopIndexData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCustomerInfoCurrentStopIndexData_ServiceName(), ecorePackage.getEString(), "serviceName", null, 1, 1, CustomerInfoCurrentStopIndexData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCustomerInfoCurrentStopIndexData_ServiceOperation(), ecorePackage.getEString(), "serviceOperation", null, 1, 1, CustomerInfoCurrentStopIndexData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCustomerInfoCurrentStopIndexData_Timestamp(), theProviderPackage.getEInstant(), "timestamp", null, 1, 1, CustomerInfoCurrentStopIndexData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCustomerInfoCurrentStopIndexData_CurrentStopIndex(), ecorePackage.getEInt(), "currentStopIndex", "-1", 1, 1, CustomerInfoCurrentStopIndexData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(customerInfoCurrentStopPointEClass, CustomerInfoCurrentStopPoint.class, "CustomerInfoCurrentStopPoint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -3265,7 +3110,6 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 		initEClass(customerInfoCurrentStopPointDataEClass, CustomerInfoCurrentStopPointData.class, "CustomerInfoCurrentStopPointData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCustomerInfoCurrentStopPointData_ServiceName(), ecorePackage.getEString(), "serviceName", null, 1, 1, CustomerInfoCurrentStopPointData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCustomerInfoCurrentStopPointData_ServiceOperation(), ecorePackage.getEString(), "serviceOperation", null, 1, 1, CustomerInfoCurrentStopPointData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCustomerInfoCurrentStopPointData_Timestamp(), theProviderPackage.getEInstant(), "timestamp", null, 1, 1, CustomerInfoCurrentStopPointData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCustomerInfoCurrentStopPointData_StopIndex(), ecorePackage.getEInt(), "stopIndex", "-1", 1, 1, CustomerInfoCurrentStopPointData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCustomerInfoCurrentStopPointData_StopRef(), ecorePackage.getEString(), "stopRef", null, 1, 1, CustomerInfoCurrentStopPointData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCustomerInfoCurrentStopPointData_StopName(), ecorePackage.getEString(), "stopName", null, 1, -1, CustomerInfoCurrentStopPointData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3285,7 +3129,6 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 		initEClass(customerInfoTripDataEClass, CustomerInfoTripData.class, "CustomerInfoTripData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCustomerInfoTripData_ServiceName(), ecorePackage.getEString(), "serviceName", null, 1, 1, CustomerInfoTripData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCustomerInfoTripData_ServiceOperation(), ecorePackage.getEString(), "serviceOperation", null, 1, 1, CustomerInfoTripData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCustomerInfoTripData_Timestamp(), theProviderPackage.getEInstant(), "timestamp", null, 1, 1, CustomerInfoTripData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCustomerInfoTripData_VehicleRef(), ecorePackage.getEString(), "vehicleRef", null, 1, 1, CustomerInfoTripData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCustomerInfoTripData_DefaultLanguage(), ecorePackage.getEString(), "defaultLanguage", null, 1, 1, CustomerInfoTripData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCustomerInfoTripData_CurrentStopIndex(), ecorePackage.getEInt(), "currentStopIndex", "-1", 1, 1, CustomerInfoTripData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3313,7 +3156,6 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 		initEClass(customerInfoVehicleDataEClass, CustomerInfoVehicleData.class, "CustomerInfoVehicleData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCustomerInfoVehicleData_ServiceName(), ecorePackage.getEString(), "serviceName", null, 1, 1, CustomerInfoVehicleData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCustomerInfoVehicleData_ServiceOperation(), ecorePackage.getEString(), "serviceOperation", null, 1, 1, CustomerInfoVehicleData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCustomerInfoVehicleData_Timestamp(), theProviderPackage.getEInstant(), "timestamp", null, 1, 1, CustomerInfoVehicleData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCustomerInfoVehicleData_VehicleRef(), ecorePackage.getEString(), "vehicleRef", null, 1, 1, CustomerInfoVehicleData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCustomerInfoVehicleData_RouteDeviation(), ecorePackage.getEString(), "routeDeviation", null, 1, 1, CustomerInfoVehicleData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCustomerInfoVehicleData_DoorState(), ecorePackage.getEString(), "doorState", null, 0, 1, CustomerInfoVehicleData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3332,7 +3174,6 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 		initEClass(customerInfoCurrentAnnouncementDataEClass, CustomerInfoCurrentAnnouncementData.class, "CustomerInfoCurrentAnnouncementData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCustomerInfoCurrentAnnouncementData_ServiceName(), ecorePackage.getEString(), "serviceName", null, 1, 1, CustomerInfoCurrentAnnouncementData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCustomerInfoCurrentAnnouncementData_ServiceOperation(), ecorePackage.getEString(), "serviceOperation", null, 1, 1, CustomerInfoCurrentAnnouncementData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCustomerInfoCurrentAnnouncementData_Timestamp(), theProviderPackage.getEInstant(), "timestamp", null, 1, 1, CustomerInfoCurrentAnnouncementData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCustomerInfoCurrentAnnouncementData_AnnouncementRef(), ecorePackage.getEString(), "announcementRef", null, 1, 1, CustomerInfoCurrentAnnouncementData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCustomerInfoCurrentAnnouncementData_AnnouncementText(), ecorePackage.getEString(), "announcementText", null, 0, -1, CustomerInfoCurrentAnnouncementData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCustomerInfoCurrentAnnouncementData_AnnouncementTTSText(), ecorePackage.getEString(), "announcementTTSText", null, 0, -1, CustomerInfoCurrentAnnouncementData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3343,7 +3184,6 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 		initEClass(customerInfoCurrentConnectionDataEClass, CustomerInfoCurrentConnectionData.class, "CustomerInfoCurrentConnectionData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCustomerInfoCurrentConnectionData_ServiceName(), ecorePackage.getEString(), "serviceName", null, 1, 1, CustomerInfoCurrentConnectionData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCustomerInfoCurrentConnectionData_ServiceOperation(), ecorePackage.getEString(), "serviceOperation", null, 1, 1, CustomerInfoCurrentConnectionData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCustomerInfoCurrentConnectionData_Timestamp(), theProviderPackage.getEInstant(), "timestamp", null, 1, 1, CustomerInfoCurrentConnectionData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(customerInfoCurrentDisplayContentEClass, CustomerInfoCurrentDisplayContent.class, "CustomerInfoCurrentDisplayContent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCustomerInfoCurrentDisplayContent_Resource(), this.getCustomerInfoCurrentDisplayContentData(), null, "resource", null, 0, 1, CustomerInfoCurrentDisplayContent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3351,7 +3191,6 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 		initEClass(customerInfoCurrentDisplayContentDataEClass, CustomerInfoCurrentDisplayContentData.class, "CustomerInfoCurrentDisplayContentData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCustomerInfoCurrentDisplayContentData_ServiceName(), ecorePackage.getEString(), "serviceName", null, 1, 1, CustomerInfoCurrentDisplayContentData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCustomerInfoCurrentDisplayContentData_ServiceOperation(), ecorePackage.getEString(), "serviceOperation", null, 1, 1, CustomerInfoCurrentDisplayContentData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCustomerInfoCurrentDisplayContentData_Timestamp(), theProviderPackage.getEInstant(), "timestamp", null, 1, 1, CustomerInfoCurrentDisplayContentData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCustomerInfoCurrentDisplayContentData_DestinationName(), ecorePackage.getEString(), "destinationName", null, 0, 1, CustomerInfoCurrentDisplayContentData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCustomerInfoCurrentDisplayContentData_LineName(), ecorePackage.getEString(), "lineName", null, 0, 1, CustomerInfoCurrentDisplayContentData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -3364,7 +3203,6 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 		initEClass(passengerCountingDoorCountingStateEClass, PassengerCountingDoorCountingState.class, "PassengerCountingDoorCountingState", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPassengerCountingDoorCountingState_ServiceName(), ecorePackage.getEString(), "serviceName", null, 1, 1, PassengerCountingDoorCountingState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPassengerCountingDoorCountingState_ServiceOperation(), ecorePackage.getEString(), "serviceOperation", null, 1, 1, PassengerCountingDoorCountingState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPassengerCountingDoorCountingState_Timestamp(), theProviderPackage.getEInstant(), "timestamp", null, 1, 1, PassengerCountingDoorCountingState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPassengerCountingDoorCountingState_DoorId(), ecorePackage.getEString(), "doorId", null, 1, 1, PassengerCountingDoorCountingState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPassengerCountingDoorCountingState_ExitSide(), ecorePackage.getEString(), "exitSide", null, 0, 1, PassengerCountingDoorCountingState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPassengerCountingDoorCountingState_DoorCountingType(), ecorePackage.getEString(), "doorCountingType", null, 0, 1, PassengerCountingDoorCountingState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3377,7 +3215,6 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 		initEClass(doorStateEClass, DoorState.class, "DoorState", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDoorState_ServiceName(), ecorePackage.getEString(), "serviceName", null, 1, 1, DoorState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDoorState_ServiceOperation(), ecorePackage.getEString(), "serviceOperation", null, 1, 1, DoorState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDoorState_Timestamp(), theProviderPackage.getEInstant(), "timestamp", null, 1, 1, DoorState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDoorState_DoorId(), ecorePackage.getEString(), "doorId", null, 1, 1, DoorState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDoorState_ExitSide(), ecorePackage.getEString(), "exitSide", null, 0, 1, DoorState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDoorState_DoorState(), ecorePackage.getEString(), "doorState", null, 0, 1, DoorState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3394,7 +3231,6 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 		initEClass(gnssLocationDataEClass, GNSSLocationData.class, "GNSSLocationData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGNSSLocationData_ServiceName(), ecorePackage.getEString(), "serviceName", null, 1, 1, GNSSLocationData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGNSSLocationData_ServiceOperation(), ecorePackage.getEString(), "serviceOperation", null, 1, 1, GNSSLocationData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGNSSLocationData_Timestamp(), theProviderPackage.getEInstant(), "timestamp", null, 0, 1, GNSSLocationData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGNSSLocationData_Date(), theProviderPackage.getEInstant(), "date", null, 0, 1, GNSSLocationData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGNSSLocationData_Time(), theProviderPackage.getEInstant(), "time", null, 0, 1, GNSSLocationData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGNSSLocationData_LatitudeDegree(), ecorePackage.getEDouble(), "latitudeDegree", null, 1, 1, GNSSLocationData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3418,7 +3254,6 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 		initEClass(ticketValidationCurrentTariffStopDataEClass, TicketValidationCurrentTariffStopData.class, "TicketValidationCurrentTariffStopData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTicketValidationCurrentTariffStopData_ServiceName(), ecorePackage.getEString(), "serviceName", null, 1, 1, TicketValidationCurrentTariffStopData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTicketValidationCurrentTariffStopData_ServiceOperation(), ecorePackage.getEString(), "serviceOperation", null, 1, 1, TicketValidationCurrentTariffStopData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTicketValidationCurrentTariffStopData_Timestamp(), theProviderPackage.getEInstant(), "timestamp", null, 0, 1, TicketValidationCurrentTariffStopData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTicketValidationCurrentTariffStopData_StopIndex(), ecorePackage.getEInt(), "stopIndex", "-1", 1, 1, TicketValidationCurrentTariffStopData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTicketValidationCurrentTariffStopData_StopRef(), ecorePackage.getEString(), "stopRef", null, 1, 1, TicketValidationCurrentTariffStopData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTicketValidationCurrentTariffStopData_StopName(), ecorePackage.getEString(), "stopName", null, 1, -1, TicketValidationCurrentTariffStopData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3439,7 +3274,6 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 		initEClass(ticketValidationRazziaDataEClass, TicketValidationRazziaData.class, "TicketValidationRazziaData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTicketValidationRazziaData_ServiceName(), ecorePackage.getEString(), "serviceName", null, 1, 1, TicketValidationRazziaData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTicketValidationRazziaData_ServiceOperation(), ecorePackage.getEString(), "serviceOperation", null, 1, 1, TicketValidationRazziaData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTicketValidationRazziaData_Timestamp(), theProviderPackage.getEInstant(), "timestamp", null, 0, 1, TicketValidationRazziaData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTicketValidationRazziaData_RazziaState(), ecorePackage.getEString(), "razziaState", null, 1, 1, TicketValidationRazziaData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(ticketValidationCurrentLineEClass, TicketValidationCurrentLine.class, "TicketValidationCurrentLine", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -3448,7 +3282,6 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 		initEClass(ticketValidationCurrentLineDataEClass, TicketValidationCurrentLineData.class, "TicketValidationCurrentLineData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTicketValidationCurrentLineData_ServiceName(), ecorePackage.getEString(), "serviceName", null, 1, 1, TicketValidationCurrentLineData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTicketValidationCurrentLineData_ServiceOperation(), ecorePackage.getEString(), "serviceOperation", null, 1, 1, TicketValidationCurrentLineData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTicketValidationCurrentLineData_Timestamp(), theProviderPackage.getEInstant(), "timestamp", null, 0, 1, TicketValidationCurrentLineData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTicketValidationCurrentLineData_LineRef(), ecorePackage.getEString(), "lineRef", null, 1, 1, TicketValidationCurrentLineData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTicketValidationCurrentLineData_LineName(), ecorePackage.getEString(), "lineName", null, 0, -1, TicketValidationCurrentLineData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTicketValidationCurrentLineData_LineShortName(), ecorePackage.getEString(), "lineShortName", null, 0, -1, TicketValidationCurrentLineData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3461,7 +3294,6 @@ public class IbisSensinactPackageImpl extends EPackageImpl implements IbisSensin
 		initEClass(ticketValidationVehicleDataEClass, TicketValidationVehicleData.class, "TicketValidationVehicleData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTicketValidationVehicleData_ServiceName(), ecorePackage.getEString(), "serviceName", null, 1, 1, TicketValidationVehicleData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTicketValidationVehicleData_ServiceOperation(), ecorePackage.getEString(), "serviceOperation", null, 1, 1, TicketValidationVehicleData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTicketValidationVehicleData_Timestamp(), theProviderPackage.getEInstant(), "timestamp", null, 1, 1, TicketValidationVehicleData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTicketValidationVehicleData_VehicleRef(), ecorePackage.getEString(), "vehicleRef", null, 1, 1, TicketValidationVehicleData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTicketValidationVehicleData_RouteDeviation(), ecorePackage.getEString(), "routeDeviation", null, 0, 1, TicketValidationVehicleData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTicketValidationVehicleData_DoorState(), ecorePackage.getEString(), "doorState", null, 0, 1, TicketValidationVehicleData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

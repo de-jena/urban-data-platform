@@ -40,7 +40,6 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
  * <ul>
  *   <li>{@link de.jena.model.sensinact.ibis.impl.CustomerInfoCurrentStopPointDataImpl#getServiceName <em>Service Name</em>}</li>
  *   <li>{@link de.jena.model.sensinact.ibis.impl.CustomerInfoCurrentStopPointDataImpl#getServiceOperation <em>Service Operation</em>}</li>
- *   <li>{@link de.jena.model.sensinact.ibis.impl.CustomerInfoCurrentStopPointDataImpl#getTimestamp <em>Timestamp</em>}</li>
  *   <li>{@link de.jena.model.sensinact.ibis.impl.CustomerInfoCurrentStopPointDataImpl#getStopIndex <em>Stop Index</em>}</li>
  *   <li>{@link de.jena.model.sensinact.ibis.impl.CustomerInfoCurrentStopPointDataImpl#getStopRef <em>Stop Ref</em>}</li>
  *   <li>{@link de.jena.model.sensinact.ibis.impl.CustomerInfoCurrentStopPointDataImpl#getStopName <em>Stop Name</em>}</li>
@@ -97,26 +96,6 @@ public class CustomerInfoCurrentStopPointDataImpl extends IbisResourceImpl imple
 	 * @ordered
 	 */
 	protected String serviceOperation = SERVICE_OPERATION_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getTimestamp() <em>Timestamp</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTimestamp()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Instant TIMESTAMP_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getTimestamp() <em>Timestamp</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTimestamp()
-	 * @generated
-	 * @ordered
-	 */
-	protected Instant timestamp = TIMESTAMP_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getStopIndex() <em>Stop Index</em>}' attribute.
@@ -399,29 +378,6 @@ public class CustomerInfoCurrentStopPointDataImpl extends IbisResourceImpl imple
 	 * @generated
 	 */
 	@Override
-	public Instant getTimestamp() {
-		return timestamp;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setTimestamp(Instant newTimestamp) {
-		Instant oldTimestamp = timestamp;
-		timestamp = newTimestamp;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IbisSensinactPackage.CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__TIMESTAMP, oldTimestamp, timestamp));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public int getStopIndex() {
 		return stopIndex;
 	}
@@ -674,8 +630,6 @@ public class CustomerInfoCurrentStopPointDataImpl extends IbisResourceImpl imple
 				return getServiceName();
 			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__SERVICE_OPERATION:
 				return getServiceOperation();
-			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__TIMESTAMP:
-				return getTimestamp();
 			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__STOP_INDEX:
 				return getStopIndex();
 			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__STOP_REF:
@@ -718,9 +672,6 @@ public class CustomerInfoCurrentStopPointDataImpl extends IbisResourceImpl imple
 				return;
 			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__SERVICE_OPERATION:
 				setServiceOperation((String)newValue);
-				return;
-			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__TIMESTAMP:
-				setTimestamp((Instant)newValue);
 				return;
 			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__STOP_INDEX:
 				setStopIndex((Integer)newValue);
@@ -779,9 +730,6 @@ public class CustomerInfoCurrentStopPointDataImpl extends IbisResourceImpl imple
 			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__SERVICE_OPERATION:
 				setServiceOperation(SERVICE_OPERATION_EDEFAULT);
 				return;
-			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__TIMESTAMP:
-				setTimestamp(TIMESTAMP_EDEFAULT);
-				return;
 			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__STOP_INDEX:
 				setStopIndex(STOP_INDEX_EDEFAULT);
 				return;
@@ -834,8 +782,6 @@ public class CustomerInfoCurrentStopPointDataImpl extends IbisResourceImpl imple
 				return SERVICE_NAME_EDEFAULT == null ? serviceName != null : !SERVICE_NAME_EDEFAULT.equals(serviceName);
 			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__SERVICE_OPERATION:
 				return SERVICE_OPERATION_EDEFAULT == null ? serviceOperation != null : !SERVICE_OPERATION_EDEFAULT.equals(serviceOperation);
-			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__TIMESTAMP:
-				return TIMESTAMP_EDEFAULT == null ? timestamp != null : !TIMESTAMP_EDEFAULT.equals(timestamp);
 			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__STOP_INDEX:
 				return stopIndex != STOP_INDEX_EDEFAULT;
 			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__STOP_REF:
@@ -878,8 +824,6 @@ public class CustomerInfoCurrentStopPointDataImpl extends IbisResourceImpl imple
 		result.append(serviceName);
 		result.append(", serviceOperation: ");
 		result.append(serviceOperation);
-		result.append(", timestamp: ");
-		result.append(timestamp);
 		result.append(", stopIndex: ");
 		result.append(stopIndex);
 		result.append(", stopRef: ");

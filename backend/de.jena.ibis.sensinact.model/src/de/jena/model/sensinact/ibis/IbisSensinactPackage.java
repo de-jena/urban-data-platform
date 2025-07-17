@@ -376,13 +376,22 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	int IBIS_RESOURCE = 1;
 
 	/**
+	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBIS_RESOURCE__TIMESTAMP = 0;
+
+	/**
 	 * The number of structural features of the '<em>Ibis Resource</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IBIS_RESOURCE_FEATURE_COUNT = 0;
+	int IBIS_RESOURCE_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Ibis Resource</em>' class.
@@ -459,6 +468,15 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	int CUSTOMER_INFO_ALL_DATA = 3;
 
 	/**
+	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_INFO_ALL_DATA__TIMESTAMP = IBIS_RESOURCE__TIMESTAMP;
+
+	/**
 	 * The feature id for the '<em><b>Service Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -477,22 +495,13 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	int CUSTOMER_INFO_ALL_DATA__SERVICE_OPERATION = IBIS_RESOURCE_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER_INFO_ALL_DATA__TIMESTAMP = IBIS_RESOURCE_FEATURE_COUNT + 2;
-
-	/**
 	 * The feature id for the '<em><b>Vehicle Ref</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_ALL_DATA__VEHICLE_REF = IBIS_RESOURCE_FEATURE_COUNT + 3;
+	int CUSTOMER_INFO_ALL_DATA__VEHICLE_REF = IBIS_RESOURCE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Default Language</b></em>' attribute.
@@ -501,7 +510,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_ALL_DATA__DEFAULT_LANGUAGE = IBIS_RESOURCE_FEATURE_COUNT + 4;
+	int CUSTOMER_INFO_ALL_DATA__DEFAULT_LANGUAGE = IBIS_RESOURCE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Current Stop Index</b></em>' attribute.
@@ -510,7 +519,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_ALL_DATA__CURRENT_STOP_INDEX = IBIS_RESOURCE_FEATURE_COUNT + 5;
+	int CUSTOMER_INFO_ALL_DATA__CURRENT_STOP_INDEX = IBIS_RESOURCE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Route Deviation</b></em>' attribute.
@@ -519,7 +528,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_ALL_DATA__ROUTE_DEVIATION = IBIS_RESOURCE_FEATURE_COUNT + 6;
+	int CUSTOMER_INFO_ALL_DATA__ROUTE_DEVIATION = IBIS_RESOURCE_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Door State</b></em>' attribute.
@@ -528,7 +537,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_ALL_DATA__DOOR_STATE = IBIS_RESOURCE_FEATURE_COUNT + 7;
+	int CUSTOMER_INFO_ALL_DATA__DOOR_STATE = IBIS_RESOURCE_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>In Panic</b></em>' attribute.
@@ -537,7 +546,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_ALL_DATA__IN_PANIC = IBIS_RESOURCE_FEATURE_COUNT + 8;
+	int CUSTOMER_INFO_ALL_DATA__IN_PANIC = IBIS_RESOURCE_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Vehicle Stop Requested</b></em>' attribute.
@@ -546,7 +555,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_ALL_DATA__VEHICLE_STOP_REQUESTED = IBIS_RESOURCE_FEATURE_COUNT + 9;
+	int CUSTOMER_INFO_ALL_DATA__VEHICLE_STOP_REQUESTED = IBIS_RESOURCE_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Exit Side</b></em>' attribute.
@@ -555,7 +564,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_ALL_DATA__EXIT_SIDE = IBIS_RESOURCE_FEATURE_COUNT + 10;
+	int CUSTOMER_INFO_ALL_DATA__EXIT_SIDE = IBIS_RESOURCE_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Moving Direction Forward</b></em>' attribute.
@@ -564,7 +573,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_ALL_DATA__MOVING_DIRECTION_FORWARD = IBIS_RESOURCE_FEATURE_COUNT + 11;
+	int CUSTOMER_INFO_ALL_DATA__MOVING_DIRECTION_FORWARD = IBIS_RESOURCE_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Vehicle Mode</b></em>' attribute.
@@ -573,7 +582,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_ALL_DATA__VEHICLE_MODE = IBIS_RESOURCE_FEATURE_COUNT + 12;
+	int CUSTOMER_INFO_ALL_DATA__VEHICLE_MODE = IBIS_RESOURCE_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Speaker Active</b></em>' attribute.
@@ -582,7 +591,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_ALL_DATA__SPEAKER_ACTIVE = IBIS_RESOURCE_FEATURE_COUNT + 13;
+	int CUSTOMER_INFO_ALL_DATA__SPEAKER_ACTIVE = IBIS_RESOURCE_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Stop Information Active</b></em>' attribute.
@@ -591,7 +600,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_ALL_DATA__STOP_INFORMATION_ACTIVE = IBIS_RESOURCE_FEATURE_COUNT + 14;
+	int CUSTOMER_INFO_ALL_DATA__STOP_INFORMATION_ACTIVE = IBIS_RESOURCE_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Trip State</b></em>' attribute.
@@ -600,7 +609,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_ALL_DATA__TRIP_STATE = IBIS_RESOURCE_FEATURE_COUNT + 15;
+	int CUSTOMER_INFO_ALL_DATA__TRIP_STATE = IBIS_RESOURCE_FEATURE_COUNT + 14;
 
 	/**
 	 * The number of structural features of the '<em>Customer Info All Data</em>' class.
@@ -609,7 +618,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_ALL_DATA_FEATURE_COUNT = IBIS_RESOURCE_FEATURE_COUNT + 16;
+	int CUSTOMER_INFO_ALL_DATA_FEATURE_COUNT = IBIS_RESOURCE_FEATURE_COUNT + 15;
 
 	/**
 	 * The number of operations of the '<em>Customer Info All Data</em>' class.
@@ -686,6 +695,15 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	int CUSTOMER_INFO_CURRENT_STOP_INDEX_DATA = 5;
 
 	/**
+	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_INFO_CURRENT_STOP_INDEX_DATA__TIMESTAMP = IBIS_RESOURCE__TIMESTAMP;
+
+	/**
 	 * The feature id for the '<em><b>Service Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -704,22 +722,13 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	int CUSTOMER_INFO_CURRENT_STOP_INDEX_DATA__SERVICE_OPERATION = IBIS_RESOURCE_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER_INFO_CURRENT_STOP_INDEX_DATA__TIMESTAMP = IBIS_RESOURCE_FEATURE_COUNT + 2;
-
-	/**
 	 * The feature id for the '<em><b>Current Stop Index</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_CURRENT_STOP_INDEX_DATA__CURRENT_STOP_INDEX = IBIS_RESOURCE_FEATURE_COUNT + 3;
+	int CUSTOMER_INFO_CURRENT_STOP_INDEX_DATA__CURRENT_STOP_INDEX = IBIS_RESOURCE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Customer Info Current Stop Index Data</em>' class.
@@ -728,7 +737,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_CURRENT_STOP_INDEX_DATA_FEATURE_COUNT = IBIS_RESOURCE_FEATURE_COUNT + 4;
+	int CUSTOMER_INFO_CURRENT_STOP_INDEX_DATA_FEATURE_COUNT = IBIS_RESOURCE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Customer Info Current Stop Index Data</em>' class.
@@ -805,6 +814,15 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	int CUSTOMER_INFO_CURRENT_STOP_POINT_DATA = 7;
 
 	/**
+	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__TIMESTAMP = IBIS_RESOURCE__TIMESTAMP;
+
+	/**
 	 * The feature id for the '<em><b>Service Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -823,22 +841,13 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	int CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__SERVICE_OPERATION = IBIS_RESOURCE_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__TIMESTAMP = IBIS_RESOURCE_FEATURE_COUNT + 2;
-
-	/**
 	 * The feature id for the '<em><b>Stop Index</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__STOP_INDEX = IBIS_RESOURCE_FEATURE_COUNT + 3;
+	int CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__STOP_INDEX = IBIS_RESOURCE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Stop Ref</b></em>' attribute.
@@ -847,7 +856,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__STOP_REF = IBIS_RESOURCE_FEATURE_COUNT + 4;
+	int CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__STOP_REF = IBIS_RESOURCE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Stop Name</b></em>' attribute list.
@@ -856,7 +865,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__STOP_NAME = IBIS_RESOURCE_FEATURE_COUNT + 5;
+	int CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__STOP_NAME = IBIS_RESOURCE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Stop Alternative Name</b></em>' attribute list.
@@ -865,7 +874,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__STOP_ALTERNATIVE_NAME = IBIS_RESOURCE_FEATURE_COUNT + 6;
+	int CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__STOP_ALTERNATIVE_NAME = IBIS_RESOURCE_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Platform</b></em>' attribute.
@@ -874,7 +883,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__PLATFORM = IBIS_RESOURCE_FEATURE_COUNT + 7;
+	int CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__PLATFORM = IBIS_RESOURCE_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Arrival Scheduled</b></em>' attribute.
@@ -883,7 +892,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__ARRIVAL_SCHEDULED = IBIS_RESOURCE_FEATURE_COUNT + 8;
+	int CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__ARRIVAL_SCHEDULED = IBIS_RESOURCE_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Arrival Expected</b></em>' attribute.
@@ -892,7 +901,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__ARRIVAL_EXPECTED = IBIS_RESOURCE_FEATURE_COUNT + 9;
+	int CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__ARRIVAL_EXPECTED = IBIS_RESOURCE_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Departure Scheduled</b></em>' attribute.
@@ -901,7 +910,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__DEPARTURE_SCHEDULED = IBIS_RESOURCE_FEATURE_COUNT + 10;
+	int CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__DEPARTURE_SCHEDULED = IBIS_RESOURCE_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Departure Expected</b></em>' attribute.
@@ -910,7 +919,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__DEPARTURE_EXPECTED = IBIS_RESOURCE_FEATURE_COUNT + 11;
+	int CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__DEPARTURE_EXPECTED = IBIS_RESOURCE_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Recorded Arrival Time</b></em>' attribute.
@@ -919,7 +928,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__RECORDED_ARRIVAL_TIME = IBIS_RESOURCE_FEATURE_COUNT + 12;
+	int CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__RECORDED_ARRIVAL_TIME = IBIS_RESOURCE_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Distance To Next Stop</b></em>' attribute.
@@ -928,7 +937,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__DISTANCE_TO_NEXT_STOP = IBIS_RESOURCE_FEATURE_COUNT + 13;
+	int CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__DISTANCE_TO_NEXT_STOP = IBIS_RESOURCE_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Fare Zone</b></em>' attribute list.
@@ -937,7 +946,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__FARE_ZONE = IBIS_RESOURCE_FEATURE_COUNT + 14;
+	int CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__FARE_ZONE = IBIS_RESOURCE_FEATURE_COUNT + 13;
 
 	/**
 	 * The number of structural features of the '<em>Customer Info Current Stop Point Data</em>' class.
@@ -946,7 +955,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_CURRENT_STOP_POINT_DATA_FEATURE_COUNT = IBIS_RESOURCE_FEATURE_COUNT + 15;
+	int CUSTOMER_INFO_CURRENT_STOP_POINT_DATA_FEATURE_COUNT = IBIS_RESOURCE_FEATURE_COUNT + 14;
 
 	/**
 	 * The number of operations of the '<em>Customer Info Current Stop Point Data</em>' class.
@@ -1023,6 +1032,15 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	int CUSTOMER_INFO_TRIP_DATA = 9;
 
 	/**
+	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_INFO_TRIP_DATA__TIMESTAMP = IBIS_RESOURCE__TIMESTAMP;
+
+	/**
 	 * The feature id for the '<em><b>Service Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1041,22 +1059,13 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	int CUSTOMER_INFO_TRIP_DATA__SERVICE_OPERATION = IBIS_RESOURCE_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER_INFO_TRIP_DATA__TIMESTAMP = IBIS_RESOURCE_FEATURE_COUNT + 2;
-
-	/**
 	 * The feature id for the '<em><b>Vehicle Ref</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_TRIP_DATA__VEHICLE_REF = IBIS_RESOURCE_FEATURE_COUNT + 3;
+	int CUSTOMER_INFO_TRIP_DATA__VEHICLE_REF = IBIS_RESOURCE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Default Language</b></em>' attribute.
@@ -1065,7 +1074,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_TRIP_DATA__DEFAULT_LANGUAGE = IBIS_RESOURCE_FEATURE_COUNT + 4;
+	int CUSTOMER_INFO_TRIP_DATA__DEFAULT_LANGUAGE = IBIS_RESOURCE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Current Stop Index</b></em>' attribute.
@@ -1074,7 +1083,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_TRIP_DATA__CURRENT_STOP_INDEX = IBIS_RESOURCE_FEATURE_COUNT + 5;
+	int CUSTOMER_INFO_TRIP_DATA__CURRENT_STOP_INDEX = IBIS_RESOURCE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Trip Ref</b></em>' attribute.
@@ -1083,7 +1092,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_TRIP_DATA__TRIP_REF = IBIS_RESOURCE_FEATURE_COUNT + 6;
+	int CUSTOMER_INFO_TRIP_DATA__TRIP_REF = IBIS_RESOURCE_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Location State</b></em>' attribute.
@@ -1092,7 +1101,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_TRIP_DATA__LOCATION_STATE = IBIS_RESOURCE_FEATURE_COUNT + 7;
+	int CUSTOMER_INFO_TRIP_DATA__LOCATION_STATE = IBIS_RESOURCE_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Timetable Delay</b></em>' attribute.
@@ -1101,7 +1110,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_TRIP_DATA__TIMETABLE_DELAY = IBIS_RESOURCE_FEATURE_COUNT + 8;
+	int CUSTOMER_INFO_TRIP_DATA__TIMETABLE_DELAY = IBIS_RESOURCE_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Route Direction</b></em>' attribute.
@@ -1110,7 +1119,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_TRIP_DATA__ROUTE_DIRECTION = IBIS_RESOURCE_FEATURE_COUNT + 9;
+	int CUSTOMER_INFO_TRIP_DATA__ROUTE_DIRECTION = IBIS_RESOURCE_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Run Number</b></em>' attribute.
@@ -1119,7 +1128,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_TRIP_DATA__RUN_NUMBER = IBIS_RESOURCE_FEATURE_COUNT + 10;
+	int CUSTOMER_INFO_TRIP_DATA__RUN_NUMBER = IBIS_RESOURCE_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Pattern Number</b></em>' attribute.
@@ -1128,7 +1137,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_TRIP_DATA__PATTERN_NUMBER = IBIS_RESOURCE_FEATURE_COUNT + 11;
+	int CUSTOMER_INFO_TRIP_DATA__PATTERN_NUMBER = IBIS_RESOURCE_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Path Destination Number</b></em>' attribute.
@@ -1137,7 +1146,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_TRIP_DATA__PATH_DESTINATION_NUMBER = IBIS_RESOURCE_FEATURE_COUNT + 12;
+	int CUSTOMER_INFO_TRIP_DATA__PATH_DESTINATION_NUMBER = IBIS_RESOURCE_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Additional Text Msg</b></em>' attribute.
@@ -1146,7 +1155,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_TRIP_DATA__ADDITIONAL_TEXT_MSG = IBIS_RESOURCE_FEATURE_COUNT + 13;
+	int CUSTOMER_INFO_TRIP_DATA__ADDITIONAL_TEXT_MSG = IBIS_RESOURCE_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Additional Text Msg1</b></em>' attribute.
@@ -1155,7 +1164,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_TRIP_DATA__ADDITIONAL_TEXT_MSG1 = IBIS_RESOURCE_FEATURE_COUNT + 14;
+	int CUSTOMER_INFO_TRIP_DATA__ADDITIONAL_TEXT_MSG1 = IBIS_RESOURCE_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Additional Text Msg2</b></em>' attribute.
@@ -1164,7 +1173,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_TRIP_DATA__ADDITIONAL_TEXT_MSG2 = IBIS_RESOURCE_FEATURE_COUNT + 15;
+	int CUSTOMER_INFO_TRIP_DATA__ADDITIONAL_TEXT_MSG2 = IBIS_RESOURCE_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Additional Text Msg3</b></em>' attribute.
@@ -1173,7 +1182,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_TRIP_DATA__ADDITIONAL_TEXT_MSG3 = IBIS_RESOURCE_FEATURE_COUNT + 16;
+	int CUSTOMER_INFO_TRIP_DATA__ADDITIONAL_TEXT_MSG3 = IBIS_RESOURCE_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Additional Text Msg4</b></em>' attribute.
@@ -1182,7 +1191,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_TRIP_DATA__ADDITIONAL_TEXT_MSG4 = IBIS_RESOURCE_FEATURE_COUNT + 17;
+	int CUSTOMER_INFO_TRIP_DATA__ADDITIONAL_TEXT_MSG4 = IBIS_RESOURCE_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Additional Text Msg5</b></em>' attribute.
@@ -1191,7 +1200,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_TRIP_DATA__ADDITIONAL_TEXT_MSG5 = IBIS_RESOURCE_FEATURE_COUNT + 18;
+	int CUSTOMER_INFO_TRIP_DATA__ADDITIONAL_TEXT_MSG5 = IBIS_RESOURCE_FEATURE_COUNT + 17;
 
 	/**
 	 * The feature id for the '<em><b>Additional Text Msg6</b></em>' attribute.
@@ -1200,7 +1209,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_TRIP_DATA__ADDITIONAL_TEXT_MSG6 = IBIS_RESOURCE_FEATURE_COUNT + 19;
+	int CUSTOMER_INFO_TRIP_DATA__ADDITIONAL_TEXT_MSG6 = IBIS_RESOURCE_FEATURE_COUNT + 18;
 
 	/**
 	 * The feature id for the '<em><b>Additional Text Msg7</b></em>' attribute.
@@ -1209,7 +1218,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_TRIP_DATA__ADDITIONAL_TEXT_MSG7 = IBIS_RESOURCE_FEATURE_COUNT + 20;
+	int CUSTOMER_INFO_TRIP_DATA__ADDITIONAL_TEXT_MSG7 = IBIS_RESOURCE_FEATURE_COUNT + 19;
 
 	/**
 	 * The feature id for the '<em><b>Additional Text Msg8</b></em>' attribute.
@@ -1218,7 +1227,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_TRIP_DATA__ADDITIONAL_TEXT_MSG8 = IBIS_RESOURCE_FEATURE_COUNT + 21;
+	int CUSTOMER_INFO_TRIP_DATA__ADDITIONAL_TEXT_MSG8 = IBIS_RESOURCE_FEATURE_COUNT + 20;
 
 	/**
 	 * The feature id for the '<em><b>Additional Text Msg9</b></em>' attribute.
@@ -1227,7 +1236,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_TRIP_DATA__ADDITIONAL_TEXT_MSG9 = IBIS_RESOURCE_FEATURE_COUNT + 22;
+	int CUSTOMER_INFO_TRIP_DATA__ADDITIONAL_TEXT_MSG9 = IBIS_RESOURCE_FEATURE_COUNT + 21;
 
 	/**
 	 * The number of structural features of the '<em>Customer Info Trip Data</em>' class.
@@ -1236,7 +1245,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_TRIP_DATA_FEATURE_COUNT = IBIS_RESOURCE_FEATURE_COUNT + 23;
+	int CUSTOMER_INFO_TRIP_DATA_FEATURE_COUNT = IBIS_RESOURCE_FEATURE_COUNT + 22;
 
 	/**
 	 * The number of operations of the '<em>Customer Info Trip Data</em>' class.
@@ -1313,6 +1322,15 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	int CUSTOMER_INFO_VEHICLE_DATA = 11;
 
 	/**
+	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_INFO_VEHICLE_DATA__TIMESTAMP = IBIS_RESOURCE__TIMESTAMP;
+
+	/**
 	 * The feature id for the '<em><b>Service Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1331,22 +1349,13 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	int CUSTOMER_INFO_VEHICLE_DATA__SERVICE_OPERATION = IBIS_RESOURCE_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER_INFO_VEHICLE_DATA__TIMESTAMP = IBIS_RESOURCE_FEATURE_COUNT + 2;
-
-	/**
 	 * The feature id for the '<em><b>Vehicle Ref</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_VEHICLE_DATA__VEHICLE_REF = IBIS_RESOURCE_FEATURE_COUNT + 3;
+	int CUSTOMER_INFO_VEHICLE_DATA__VEHICLE_REF = IBIS_RESOURCE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Route Deviation</b></em>' attribute.
@@ -1355,7 +1364,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_VEHICLE_DATA__ROUTE_DEVIATION = IBIS_RESOURCE_FEATURE_COUNT + 4;
+	int CUSTOMER_INFO_VEHICLE_DATA__ROUTE_DEVIATION = IBIS_RESOURCE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Door State</b></em>' attribute.
@@ -1364,7 +1373,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_VEHICLE_DATA__DOOR_STATE = IBIS_RESOURCE_FEATURE_COUNT + 5;
+	int CUSTOMER_INFO_VEHICLE_DATA__DOOR_STATE = IBIS_RESOURCE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>In Panic</b></em>' attribute.
@@ -1373,7 +1382,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_VEHICLE_DATA__IN_PANIC = IBIS_RESOURCE_FEATURE_COUNT + 6;
+	int CUSTOMER_INFO_VEHICLE_DATA__IN_PANIC = IBIS_RESOURCE_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Vehicle Stop Requested</b></em>' attribute.
@@ -1382,7 +1391,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_VEHICLE_DATA__VEHICLE_STOP_REQUESTED = IBIS_RESOURCE_FEATURE_COUNT + 7;
+	int CUSTOMER_INFO_VEHICLE_DATA__VEHICLE_STOP_REQUESTED = IBIS_RESOURCE_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Exit Side</b></em>' attribute.
@@ -1391,7 +1400,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_VEHICLE_DATA__EXIT_SIDE = IBIS_RESOURCE_FEATURE_COUNT + 8;
+	int CUSTOMER_INFO_VEHICLE_DATA__EXIT_SIDE = IBIS_RESOURCE_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Moving Direction Forward</b></em>' attribute.
@@ -1400,7 +1409,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_VEHICLE_DATA__MOVING_DIRECTION_FORWARD = IBIS_RESOURCE_FEATURE_COUNT + 9;
+	int CUSTOMER_INFO_VEHICLE_DATA__MOVING_DIRECTION_FORWARD = IBIS_RESOURCE_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Vehicle Mode</b></em>' attribute.
@@ -1409,7 +1418,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_VEHICLE_DATA__VEHICLE_MODE = IBIS_RESOURCE_FEATURE_COUNT + 10;
+	int CUSTOMER_INFO_VEHICLE_DATA__VEHICLE_MODE = IBIS_RESOURCE_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Speaker Active</b></em>' attribute.
@@ -1418,7 +1427,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_VEHICLE_DATA__SPEAKER_ACTIVE = IBIS_RESOURCE_FEATURE_COUNT + 11;
+	int CUSTOMER_INFO_VEHICLE_DATA__SPEAKER_ACTIVE = IBIS_RESOURCE_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Stop Information Active</b></em>' attribute.
@@ -1427,7 +1436,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_VEHICLE_DATA__STOP_INFORMATION_ACTIVE = IBIS_RESOURCE_FEATURE_COUNT + 12;
+	int CUSTOMER_INFO_VEHICLE_DATA__STOP_INFORMATION_ACTIVE = IBIS_RESOURCE_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Trip State</b></em>' attribute.
@@ -1436,7 +1445,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_VEHICLE_DATA__TRIP_STATE = IBIS_RESOURCE_FEATURE_COUNT + 13;
+	int CUSTOMER_INFO_VEHICLE_DATA__TRIP_STATE = IBIS_RESOURCE_FEATURE_COUNT + 12;
 
 	/**
 	 * The number of structural features of the '<em>Customer Info Vehicle Data</em>' class.
@@ -1445,7 +1454,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_VEHICLE_DATA_FEATURE_COUNT = IBIS_RESOURCE_FEATURE_COUNT + 14;
+	int CUSTOMER_INFO_VEHICLE_DATA_FEATURE_COUNT = IBIS_RESOURCE_FEATURE_COUNT + 13;
 
 	/**
 	 * The number of operations of the '<em>Customer Info Vehicle Data</em>' class.
@@ -1522,6 +1531,15 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	int CUSTOMER_INFO_CURRENT_ANNOUNCEMENT_DATA = 13;
 
 	/**
+	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_INFO_CURRENT_ANNOUNCEMENT_DATA__TIMESTAMP = IBIS_RESOURCE__TIMESTAMP;
+
+	/**
 	 * The feature id for the '<em><b>Service Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1540,22 +1558,13 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	int CUSTOMER_INFO_CURRENT_ANNOUNCEMENT_DATA__SERVICE_OPERATION = IBIS_RESOURCE_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER_INFO_CURRENT_ANNOUNCEMENT_DATA__TIMESTAMP = IBIS_RESOURCE_FEATURE_COUNT + 2;
-
-	/**
 	 * The feature id for the '<em><b>Announcement Ref</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_CURRENT_ANNOUNCEMENT_DATA__ANNOUNCEMENT_REF = IBIS_RESOURCE_FEATURE_COUNT + 3;
+	int CUSTOMER_INFO_CURRENT_ANNOUNCEMENT_DATA__ANNOUNCEMENT_REF = IBIS_RESOURCE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Announcement Text</b></em>' attribute list.
@@ -1564,7 +1573,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_CURRENT_ANNOUNCEMENT_DATA__ANNOUNCEMENT_TEXT = IBIS_RESOURCE_FEATURE_COUNT + 4;
+	int CUSTOMER_INFO_CURRENT_ANNOUNCEMENT_DATA__ANNOUNCEMENT_TEXT = IBIS_RESOURCE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Announcement TTS Text</b></em>' attribute list.
@@ -1573,7 +1582,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_CURRENT_ANNOUNCEMENT_DATA__ANNOUNCEMENT_TTS_TEXT = IBIS_RESOURCE_FEATURE_COUNT + 5;
+	int CUSTOMER_INFO_CURRENT_ANNOUNCEMENT_DATA__ANNOUNCEMENT_TTS_TEXT = IBIS_RESOURCE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Customer Info Current Announcement Data</em>' class.
@@ -1582,7 +1591,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_CURRENT_ANNOUNCEMENT_DATA_FEATURE_COUNT = IBIS_RESOURCE_FEATURE_COUNT + 6;
+	int CUSTOMER_INFO_CURRENT_ANNOUNCEMENT_DATA_FEATURE_COUNT = IBIS_RESOURCE_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Customer Info Current Announcement Data</em>' class.
@@ -1659,6 +1668,15 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	int CUSTOMER_INFO_CURRENT_CONNECTION_DATA = 15;
 
 	/**
+	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_INFO_CURRENT_CONNECTION_DATA__TIMESTAMP = IBIS_RESOURCE__TIMESTAMP;
+
+	/**
 	 * The feature id for the '<em><b>Service Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1677,22 +1695,13 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	int CUSTOMER_INFO_CURRENT_CONNECTION_DATA__SERVICE_OPERATION = IBIS_RESOURCE_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER_INFO_CURRENT_CONNECTION_DATA__TIMESTAMP = IBIS_RESOURCE_FEATURE_COUNT + 2;
-
-	/**
 	 * The number of structural features of the '<em>Customer Info Current Connection Data</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_CURRENT_CONNECTION_DATA_FEATURE_COUNT = IBIS_RESOURCE_FEATURE_COUNT + 3;
+	int CUSTOMER_INFO_CURRENT_CONNECTION_DATA_FEATURE_COUNT = IBIS_RESOURCE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Customer Info Current Connection Data</em>' class.
@@ -1769,6 +1778,15 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	int CUSTOMER_INFO_CURRENT_DISPLAY_CONTENT_DATA = 17;
 
 	/**
+	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_INFO_CURRENT_DISPLAY_CONTENT_DATA__TIMESTAMP = IBIS_RESOURCE__TIMESTAMP;
+
+	/**
 	 * The feature id for the '<em><b>Service Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1787,22 +1805,13 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	int CUSTOMER_INFO_CURRENT_DISPLAY_CONTENT_DATA__SERVICE_OPERATION = IBIS_RESOURCE_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER_INFO_CURRENT_DISPLAY_CONTENT_DATA__TIMESTAMP = IBIS_RESOURCE_FEATURE_COUNT + 2;
-
-	/**
 	 * The feature id for the '<em><b>Destination Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_CURRENT_DISPLAY_CONTENT_DATA__DESTINATION_NAME = IBIS_RESOURCE_FEATURE_COUNT + 3;
+	int CUSTOMER_INFO_CURRENT_DISPLAY_CONTENT_DATA__DESTINATION_NAME = IBIS_RESOURCE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Line Name</b></em>' attribute.
@@ -1811,7 +1820,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_CURRENT_DISPLAY_CONTENT_DATA__LINE_NAME = IBIS_RESOURCE_FEATURE_COUNT + 4;
+	int CUSTOMER_INFO_CURRENT_DISPLAY_CONTENT_DATA__LINE_NAME = IBIS_RESOURCE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Customer Info Current Display Content Data</em>' class.
@@ -1820,7 +1829,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_INFO_CURRENT_DISPLAY_CONTENT_DATA_FEATURE_COUNT = IBIS_RESOURCE_FEATURE_COUNT + 5;
+	int CUSTOMER_INFO_CURRENT_DISPLAY_CONTENT_DATA_FEATURE_COUNT = IBIS_RESOURCE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Customer Info Current Display Content Data</em>' class.
@@ -1988,6 +1997,15 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	int PASSENGER_COUNTING_DOOR_COUNTING_STATE = 20;
 
 	/**
+	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PASSENGER_COUNTING_DOOR_COUNTING_STATE__TIMESTAMP = IBIS_RESOURCE__TIMESTAMP;
+
+	/**
 	 * The feature id for the '<em><b>Service Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2006,22 +2024,13 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	int PASSENGER_COUNTING_DOOR_COUNTING_STATE__SERVICE_OPERATION = IBIS_RESOURCE_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PASSENGER_COUNTING_DOOR_COUNTING_STATE__TIMESTAMP = IBIS_RESOURCE_FEATURE_COUNT + 2;
-
-	/**
 	 * The feature id for the '<em><b>Door Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PASSENGER_COUNTING_DOOR_COUNTING_STATE__DOOR_ID = IBIS_RESOURCE_FEATURE_COUNT + 3;
+	int PASSENGER_COUNTING_DOOR_COUNTING_STATE__DOOR_ID = IBIS_RESOURCE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Exit Side</b></em>' attribute.
@@ -2030,7 +2039,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PASSENGER_COUNTING_DOOR_COUNTING_STATE__EXIT_SIDE = IBIS_RESOURCE_FEATURE_COUNT + 4;
+	int PASSENGER_COUNTING_DOOR_COUNTING_STATE__EXIT_SIDE = IBIS_RESOURCE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Door Counting Type</b></em>' attribute.
@@ -2039,7 +2048,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PASSENGER_COUNTING_DOOR_COUNTING_STATE__DOOR_COUNTING_TYPE = IBIS_RESOURCE_FEATURE_COUNT + 5;
+	int PASSENGER_COUNTING_DOOR_COUNTING_STATE__DOOR_COUNTING_TYPE = IBIS_RESOURCE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>In</b></em>' attribute.
@@ -2048,7 +2057,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PASSENGER_COUNTING_DOOR_COUNTING_STATE__IN = IBIS_RESOURCE_FEATURE_COUNT + 6;
+	int PASSENGER_COUNTING_DOOR_COUNTING_STATE__IN = IBIS_RESOURCE_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Out</b></em>' attribute.
@@ -2057,7 +2066,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PASSENGER_COUNTING_DOOR_COUNTING_STATE__OUT = IBIS_RESOURCE_FEATURE_COUNT + 7;
+	int PASSENGER_COUNTING_DOOR_COUNTING_STATE__OUT = IBIS_RESOURCE_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>Passenger Counting Door Counting State</em>' class.
@@ -2066,7 +2075,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PASSENGER_COUNTING_DOOR_COUNTING_STATE_FEATURE_COUNT = IBIS_RESOURCE_FEATURE_COUNT + 8;
+	int PASSENGER_COUNTING_DOOR_COUNTING_STATE_FEATURE_COUNT = IBIS_RESOURCE_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>Passenger Counting Door Counting State</em>' class.
@@ -2143,6 +2152,15 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	int DOOR_STATE = 22;
 
 	/**
+	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOOR_STATE__TIMESTAMP = IBIS_RESOURCE__TIMESTAMP;
+
+	/**
 	 * The feature id for the '<em><b>Service Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2161,22 +2179,13 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	int DOOR_STATE__SERVICE_OPERATION = IBIS_RESOURCE_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOOR_STATE__TIMESTAMP = IBIS_RESOURCE_FEATURE_COUNT + 2;
-
-	/**
 	 * The feature id for the '<em><b>Door Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOOR_STATE__DOOR_ID = IBIS_RESOURCE_FEATURE_COUNT + 3;
+	int DOOR_STATE__DOOR_ID = IBIS_RESOURCE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Exit Side</b></em>' attribute.
@@ -2185,7 +2194,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOOR_STATE__EXIT_SIDE = IBIS_RESOURCE_FEATURE_COUNT + 4;
+	int DOOR_STATE__EXIT_SIDE = IBIS_RESOURCE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Door State</b></em>' attribute.
@@ -2194,7 +2203,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOOR_STATE__DOOR_STATE = IBIS_RESOURCE_FEATURE_COUNT + 5;
+	int DOOR_STATE__DOOR_STATE = IBIS_RESOURCE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Door State</em>' class.
@@ -2203,7 +2212,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOOR_STATE_FEATURE_COUNT = IBIS_RESOURCE_FEATURE_COUNT + 6;
+	int DOOR_STATE_FEATURE_COUNT = IBIS_RESOURCE_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Door State</em>' class.
@@ -2362,6 +2371,15 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	int GNSS_LOCATION_DATA = 25;
 
 	/**
+	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GNSS_LOCATION_DATA__TIMESTAMP = IBIS_RESOURCE__TIMESTAMP;
+
+	/**
 	 * The feature id for the '<em><b>Service Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2380,22 +2398,13 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	int GNSS_LOCATION_DATA__SERVICE_OPERATION = IBIS_RESOURCE_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GNSS_LOCATION_DATA__TIMESTAMP = IBIS_RESOURCE_FEATURE_COUNT + 2;
-
-	/**
 	 * The feature id for the '<em><b>Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GNSS_LOCATION_DATA__DATE = IBIS_RESOURCE_FEATURE_COUNT + 3;
+	int GNSS_LOCATION_DATA__DATE = IBIS_RESOURCE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -2404,7 +2413,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GNSS_LOCATION_DATA__TIME = IBIS_RESOURCE_FEATURE_COUNT + 4;
+	int GNSS_LOCATION_DATA__TIME = IBIS_RESOURCE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Latitude Degree</b></em>' attribute.
@@ -2413,7 +2422,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GNSS_LOCATION_DATA__LATITUDE_DEGREE = IBIS_RESOURCE_FEATURE_COUNT + 5;
+	int GNSS_LOCATION_DATA__LATITUDE_DEGREE = IBIS_RESOURCE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Longitude Degree</b></em>' attribute.
@@ -2422,7 +2431,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GNSS_LOCATION_DATA__LONGITUDE_DEGREE = IBIS_RESOURCE_FEATURE_COUNT + 6;
+	int GNSS_LOCATION_DATA__LONGITUDE_DEGREE = IBIS_RESOURCE_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Latitude Direction</b></em>' attribute.
@@ -2431,7 +2440,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GNSS_LOCATION_DATA__LATITUDE_DIRECTION = IBIS_RESOURCE_FEATURE_COUNT + 7;
+	int GNSS_LOCATION_DATA__LATITUDE_DIRECTION = IBIS_RESOURCE_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Longitude Direction</b></em>' attribute.
@@ -2440,7 +2449,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GNSS_LOCATION_DATA__LONGITUDE_DIRECTION = IBIS_RESOURCE_FEATURE_COUNT + 8;
+	int GNSS_LOCATION_DATA__LONGITUDE_DIRECTION = IBIS_RESOURCE_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Altitude</b></em>' attribute.
@@ -2449,7 +2458,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GNSS_LOCATION_DATA__ALTITUDE = IBIS_RESOURCE_FEATURE_COUNT + 9;
+	int GNSS_LOCATION_DATA__ALTITUDE = IBIS_RESOURCE_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Speed Over Ground</b></em>' attribute.
@@ -2458,7 +2467,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GNSS_LOCATION_DATA__SPEED_OVER_GROUND = IBIS_RESOURCE_FEATURE_COUNT + 10;
+	int GNSS_LOCATION_DATA__SPEED_OVER_GROUND = IBIS_RESOURCE_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Signal Quality</b></em>' attribute.
@@ -2467,7 +2476,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GNSS_LOCATION_DATA__SIGNAL_QUALITY = IBIS_RESOURCE_FEATURE_COUNT + 11;
+	int GNSS_LOCATION_DATA__SIGNAL_QUALITY = IBIS_RESOURCE_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Number Of Satellites</b></em>' attribute.
@@ -2476,7 +2485,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GNSS_LOCATION_DATA__NUMBER_OF_SATELLITES = IBIS_RESOURCE_FEATURE_COUNT + 12;
+	int GNSS_LOCATION_DATA__NUMBER_OF_SATELLITES = IBIS_RESOURCE_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Horizontal Dilution Of Precision</b></em>' attribute.
@@ -2485,7 +2494,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GNSS_LOCATION_DATA__HORIZONTAL_DILUTION_OF_PRECISION = IBIS_RESOURCE_FEATURE_COUNT + 13;
+	int GNSS_LOCATION_DATA__HORIZONTAL_DILUTION_OF_PRECISION = IBIS_RESOURCE_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Vertical Dilution Of Precision</b></em>' attribute.
@@ -2494,7 +2503,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GNSS_LOCATION_DATA__VERTICAL_DILUTION_OF_PRECISION = IBIS_RESOURCE_FEATURE_COUNT + 14;
+	int GNSS_LOCATION_DATA__VERTICAL_DILUTION_OF_PRECISION = IBIS_RESOURCE_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Track Degree True</b></em>' attribute.
@@ -2503,7 +2512,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GNSS_LOCATION_DATA__TRACK_DEGREE_TRUE = IBIS_RESOURCE_FEATURE_COUNT + 15;
+	int GNSS_LOCATION_DATA__TRACK_DEGREE_TRUE = IBIS_RESOURCE_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Track Degree Magnetic</b></em>' attribute.
@@ -2512,7 +2521,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GNSS_LOCATION_DATA__TRACK_DEGREE_MAGNETIC = IBIS_RESOURCE_FEATURE_COUNT + 16;
+	int GNSS_LOCATION_DATA__TRACK_DEGREE_MAGNETIC = IBIS_RESOURCE_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>GNSS Type</b></em>' attribute.
@@ -2521,7 +2530,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GNSS_LOCATION_DATA__GNSS_TYPE = IBIS_RESOURCE_FEATURE_COUNT + 17;
+	int GNSS_LOCATION_DATA__GNSS_TYPE = IBIS_RESOURCE_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>GNSS Coordinate System</b></em>' attribute.
@@ -2530,7 +2539,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GNSS_LOCATION_DATA__GNSS_COORDINATE_SYSTEM = IBIS_RESOURCE_FEATURE_COUNT + 18;
+	int GNSS_LOCATION_DATA__GNSS_COORDINATE_SYSTEM = IBIS_RESOURCE_FEATURE_COUNT + 17;
 
 	/**
 	 * The number of structural features of the '<em>GNSS Location Data</em>' class.
@@ -2539,7 +2548,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GNSS_LOCATION_DATA_FEATURE_COUNT = IBIS_RESOURCE_FEATURE_COUNT + 19;
+	int GNSS_LOCATION_DATA_FEATURE_COUNT = IBIS_RESOURCE_FEATURE_COUNT + 18;
 
 	/**
 	 * The number of operations of the '<em>GNSS Location Data</em>' class.
@@ -2616,6 +2625,15 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	int TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA = 27;
 
 	/**
+	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA__TIMESTAMP = IBIS_RESOURCE__TIMESTAMP;
+
+	/**
 	 * The feature id for the '<em><b>Service Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2634,22 +2652,13 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	int TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA__SERVICE_OPERATION = IBIS_RESOURCE_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA__TIMESTAMP = IBIS_RESOURCE_FEATURE_COUNT + 2;
-
-	/**
 	 * The feature id for the '<em><b>Stop Index</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA__STOP_INDEX = IBIS_RESOURCE_FEATURE_COUNT + 3;
+	int TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA__STOP_INDEX = IBIS_RESOURCE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Stop Ref</b></em>' attribute.
@@ -2658,7 +2667,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA__STOP_REF = IBIS_RESOURCE_FEATURE_COUNT + 4;
+	int TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA__STOP_REF = IBIS_RESOURCE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Stop Name</b></em>' attribute list.
@@ -2667,7 +2676,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA__STOP_NAME = IBIS_RESOURCE_FEATURE_COUNT + 5;
+	int TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA__STOP_NAME = IBIS_RESOURCE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Stop Alternative Name</b></em>' attribute list.
@@ -2676,7 +2685,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA__STOP_ALTERNATIVE_NAME = IBIS_RESOURCE_FEATURE_COUNT + 6;
+	int TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA__STOP_ALTERNATIVE_NAME = IBIS_RESOURCE_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Platform</b></em>' attribute.
@@ -2685,7 +2694,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA__PLATFORM = IBIS_RESOURCE_FEATURE_COUNT + 7;
+	int TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA__PLATFORM = IBIS_RESOURCE_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Arrival Scheduled</b></em>' attribute.
@@ -2694,7 +2703,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA__ARRIVAL_SCHEDULED = IBIS_RESOURCE_FEATURE_COUNT + 8;
+	int TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA__ARRIVAL_SCHEDULED = IBIS_RESOURCE_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Arrival Expected</b></em>' attribute.
@@ -2703,7 +2712,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA__ARRIVAL_EXPECTED = IBIS_RESOURCE_FEATURE_COUNT + 9;
+	int TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA__ARRIVAL_EXPECTED = IBIS_RESOURCE_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Departure Scheduled</b></em>' attribute.
@@ -2712,7 +2721,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA__DEPARTURE_SCHEDULED = IBIS_RESOURCE_FEATURE_COUNT + 10;
+	int TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA__DEPARTURE_SCHEDULED = IBIS_RESOURCE_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Departure Expected</b></em>' attribute.
@@ -2721,7 +2730,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA__DEPARTURE_EXPECTED = IBIS_RESOURCE_FEATURE_COUNT + 11;
+	int TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA__DEPARTURE_EXPECTED = IBIS_RESOURCE_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Recorded Arrival Time</b></em>' attribute.
@@ -2730,7 +2739,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA__RECORDED_ARRIVAL_TIME = IBIS_RESOURCE_FEATURE_COUNT + 12;
+	int TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA__RECORDED_ARRIVAL_TIME = IBIS_RESOURCE_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Distance To Next Stop</b></em>' attribute.
@@ -2739,7 +2748,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA__DISTANCE_TO_NEXT_STOP = IBIS_RESOURCE_FEATURE_COUNT + 13;
+	int TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA__DISTANCE_TO_NEXT_STOP = IBIS_RESOURCE_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Fare Zone</b></em>' attribute list.
@@ -2748,7 +2757,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA__FARE_ZONE = IBIS_RESOURCE_FEATURE_COUNT + 14;
+	int TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA__FARE_ZONE = IBIS_RESOURCE_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Current Trip Ref</b></em>' attribute.
@@ -2757,7 +2766,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA__CURRENT_TRIP_REF = IBIS_RESOURCE_FEATURE_COUNT + 15;
+	int TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA__CURRENT_TRIP_REF = IBIS_RESOURCE_FEATURE_COUNT + 14;
 
 	/**
 	 * The number of structural features of the '<em>Ticket Validation Current Tariff Stop Data</em>' class.
@@ -2766,7 +2775,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA_FEATURE_COUNT = IBIS_RESOURCE_FEATURE_COUNT + 16;
+	int TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA_FEATURE_COUNT = IBIS_RESOURCE_FEATURE_COUNT + 15;
 
 	/**
 	 * The number of operations of the '<em>Ticket Validation Current Tariff Stop Data</em>' class.
@@ -2843,6 +2852,15 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	int TICKET_VALIDATION_RAZZIA_DATA = 29;
 
 	/**
+	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TICKET_VALIDATION_RAZZIA_DATA__TIMESTAMP = IBIS_RESOURCE__TIMESTAMP;
+
+	/**
 	 * The feature id for the '<em><b>Service Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2861,22 +2879,13 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	int TICKET_VALIDATION_RAZZIA_DATA__SERVICE_OPERATION = IBIS_RESOURCE_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TICKET_VALIDATION_RAZZIA_DATA__TIMESTAMP = IBIS_RESOURCE_FEATURE_COUNT + 2;
-
-	/**
 	 * The feature id for the '<em><b>Razzia State</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TICKET_VALIDATION_RAZZIA_DATA__RAZZIA_STATE = IBIS_RESOURCE_FEATURE_COUNT + 3;
+	int TICKET_VALIDATION_RAZZIA_DATA__RAZZIA_STATE = IBIS_RESOURCE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Ticket Validation Razzia Data</em>' class.
@@ -2885,7 +2894,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TICKET_VALIDATION_RAZZIA_DATA_FEATURE_COUNT = IBIS_RESOURCE_FEATURE_COUNT + 4;
+	int TICKET_VALIDATION_RAZZIA_DATA_FEATURE_COUNT = IBIS_RESOURCE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Ticket Validation Razzia Data</em>' class.
@@ -2962,6 +2971,15 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	int TICKET_VALIDATION_CURRENT_LINE_DATA = 31;
 
 	/**
+	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TICKET_VALIDATION_CURRENT_LINE_DATA__TIMESTAMP = IBIS_RESOURCE__TIMESTAMP;
+
+	/**
 	 * The feature id for the '<em><b>Service Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2980,22 +2998,13 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	int TICKET_VALIDATION_CURRENT_LINE_DATA__SERVICE_OPERATION = IBIS_RESOURCE_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TICKET_VALIDATION_CURRENT_LINE_DATA__TIMESTAMP = IBIS_RESOURCE_FEATURE_COUNT + 2;
-
-	/**
 	 * The feature id for the '<em><b>Line Ref</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TICKET_VALIDATION_CURRENT_LINE_DATA__LINE_REF = IBIS_RESOURCE_FEATURE_COUNT + 3;
+	int TICKET_VALIDATION_CURRENT_LINE_DATA__LINE_REF = IBIS_RESOURCE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Line Name</b></em>' attribute list.
@@ -3004,7 +3013,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TICKET_VALIDATION_CURRENT_LINE_DATA__LINE_NAME = IBIS_RESOURCE_FEATURE_COUNT + 4;
+	int TICKET_VALIDATION_CURRENT_LINE_DATA__LINE_NAME = IBIS_RESOURCE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Line Short Name</b></em>' attribute list.
@@ -3013,7 +3022,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TICKET_VALIDATION_CURRENT_LINE_DATA__LINE_SHORT_NAME = IBIS_RESOURCE_FEATURE_COUNT + 5;
+	int TICKET_VALIDATION_CURRENT_LINE_DATA__LINE_SHORT_NAME = IBIS_RESOURCE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Line Number</b></em>' attribute.
@@ -3022,7 +3031,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TICKET_VALIDATION_CURRENT_LINE_DATA__LINE_NUMBER = IBIS_RESOURCE_FEATURE_COUNT + 6;
+	int TICKET_VALIDATION_CURRENT_LINE_DATA__LINE_NUMBER = IBIS_RESOURCE_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Line Code</b></em>' attribute.
@@ -3031,7 +3040,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TICKET_VALIDATION_CURRENT_LINE_DATA__LINE_CODE = IBIS_RESOURCE_FEATURE_COUNT + 7;
+	int TICKET_VALIDATION_CURRENT_LINE_DATA__LINE_CODE = IBIS_RESOURCE_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>Ticket Validation Current Line Data</em>' class.
@@ -3040,7 +3049,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TICKET_VALIDATION_CURRENT_LINE_DATA_FEATURE_COUNT = IBIS_RESOURCE_FEATURE_COUNT + 8;
+	int TICKET_VALIDATION_CURRENT_LINE_DATA_FEATURE_COUNT = IBIS_RESOURCE_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>Ticket Validation Current Line Data</em>' class.
@@ -3117,6 +3126,15 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	int TICKET_VALIDATION_VEHICLE_DATA = 33;
 
 	/**
+	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TICKET_VALIDATION_VEHICLE_DATA__TIMESTAMP = IBIS_RESOURCE__TIMESTAMP;
+
+	/**
 	 * The feature id for the '<em><b>Service Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3135,22 +3153,13 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	int TICKET_VALIDATION_VEHICLE_DATA__SERVICE_OPERATION = IBIS_RESOURCE_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TICKET_VALIDATION_VEHICLE_DATA__TIMESTAMP = IBIS_RESOURCE_FEATURE_COUNT + 2;
-
-	/**
 	 * The feature id for the '<em><b>Vehicle Ref</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TICKET_VALIDATION_VEHICLE_DATA__VEHICLE_REF = IBIS_RESOURCE_FEATURE_COUNT + 3;
+	int TICKET_VALIDATION_VEHICLE_DATA__VEHICLE_REF = IBIS_RESOURCE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Route Deviation</b></em>' attribute.
@@ -3159,7 +3168,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TICKET_VALIDATION_VEHICLE_DATA__ROUTE_DEVIATION = IBIS_RESOURCE_FEATURE_COUNT + 4;
+	int TICKET_VALIDATION_VEHICLE_DATA__ROUTE_DEVIATION = IBIS_RESOURCE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Door State</b></em>' attribute.
@@ -3168,7 +3177,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TICKET_VALIDATION_VEHICLE_DATA__DOOR_STATE = IBIS_RESOURCE_FEATURE_COUNT + 5;
+	int TICKET_VALIDATION_VEHICLE_DATA__DOOR_STATE = IBIS_RESOURCE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Moving Direction Forward</b></em>' attribute.
@@ -3177,7 +3186,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TICKET_VALIDATION_VEHICLE_DATA__MOVING_DIRECTION_FORWARD = IBIS_RESOURCE_FEATURE_COUNT + 6;
+	int TICKET_VALIDATION_VEHICLE_DATA__MOVING_DIRECTION_FORWARD = IBIS_RESOURCE_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Vehicle Mode</b></em>' attribute.
@@ -3186,7 +3195,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TICKET_VALIDATION_VEHICLE_DATA__VEHICLE_MODE = IBIS_RESOURCE_FEATURE_COUNT + 7;
+	int TICKET_VALIDATION_VEHICLE_DATA__VEHICLE_MODE = IBIS_RESOURCE_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Driver Number</b></em>' attribute.
@@ -3195,7 +3204,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TICKET_VALIDATION_VEHICLE_DATA__DRIVER_NUMBER = IBIS_RESOURCE_FEATURE_COUNT + 8;
+	int TICKET_VALIDATION_VEHICLE_DATA__DRIVER_NUMBER = IBIS_RESOURCE_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>Ticket Validation Vehicle Data</em>' class.
@@ -3204,7 +3213,7 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TICKET_VALIDATION_VEHICLE_DATA_FEATURE_COUNT = IBIS_RESOURCE_FEATURE_COUNT + 9;
+	int TICKET_VALIDATION_VEHICLE_DATA_FEATURE_COUNT = IBIS_RESOURCE_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of operations of the '<em>Ticket Validation Vehicle Data</em>' class.
@@ -3279,6 +3288,15 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	int TRIP_INFO_DATA = 35;
+
+	/**
+	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRIP_INFO_DATA__TIMESTAMP = IBIS_RESOURCE__TIMESTAMP;
 
 	/**
 	 * The feature id for the '<em><b>Device Type</b></em>' attribute.
@@ -3647,6 +3665,17 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getIbisResource();
 
 	/**
+	 * Returns the meta object for the attribute '{@link de.jena.model.sensinact.ibis.IbisResource#getTimestamp <em>Timestamp</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Timestamp</em>'.
+	 * @see de.jena.model.sensinact.ibis.IbisResource#getTimestamp()
+	 * @see #getIbisResource()
+	 * @generated
+	 */
+	EAttribute getIbisResource_Timestamp();
+
+	/**
 	 * Returns the meta object for class '{@link de.jena.model.sensinact.ibis.CustomerInfoAll <em>Customer Info All</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3698,17 +3727,6 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EAttribute getCustomerInfoAllData_ServiceOperation();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.sensinact.ibis.CustomerInfoAllData#getTimestamp <em>Timestamp</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Timestamp</em>'.
-	 * @see de.jena.model.sensinact.ibis.CustomerInfoAllData#getTimestamp()
-	 * @see #getCustomerInfoAllData()
-	 * @generated
-	 */
-	EAttribute getCustomerInfoAllData_Timestamp();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.jena.model.sensinact.ibis.CustomerInfoAllData#getVehicleRef <em>Vehicle Ref</em>}'.
@@ -3907,17 +3925,6 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getCustomerInfoCurrentStopIndexData_ServiceOperation();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.sensinact.ibis.CustomerInfoCurrentStopIndexData#getTimestamp <em>Timestamp</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Timestamp</em>'.
-	 * @see de.jena.model.sensinact.ibis.CustomerInfoCurrentStopIndexData#getTimestamp()
-	 * @see #getCustomerInfoCurrentStopIndexData()
-	 * @generated
-	 */
-	EAttribute getCustomerInfoCurrentStopIndexData_Timestamp();
-
-	/**
 	 * Returns the meta object for the attribute '{@link de.jena.model.sensinact.ibis.CustomerInfoCurrentStopIndexData#getCurrentStopIndex <em>Current Stop Index</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3980,17 +3987,6 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EAttribute getCustomerInfoCurrentStopPointData_ServiceOperation();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.sensinact.ibis.CustomerInfoCurrentStopPointData#getTimestamp <em>Timestamp</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Timestamp</em>'.
-	 * @see de.jena.model.sensinact.ibis.CustomerInfoCurrentStopPointData#getTimestamp()
-	 * @see #getCustomerInfoCurrentStopPointData()
-	 * @generated
-	 */
-	EAttribute getCustomerInfoCurrentStopPointData_Timestamp();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.jena.model.sensinact.ibis.CustomerInfoCurrentStopPointData#getStopIndex <em>Stop Index</em>}'.
@@ -4176,17 +4172,6 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EAttribute getCustomerInfoTripData_ServiceOperation();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.sensinact.ibis.CustomerInfoTripData#getTimestamp <em>Timestamp</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Timestamp</em>'.
-	 * @see de.jena.model.sensinact.ibis.CustomerInfoTripData#getTimestamp()
-	 * @see #getCustomerInfoTripData()
-	 * @generated
-	 */
-	EAttribute getCustomerInfoTripData_Timestamp();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.jena.model.sensinact.ibis.CustomerInfoTripData#getVehicleRef <em>Vehicle Ref</em>}'.
@@ -4462,17 +4447,6 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getCustomerInfoVehicleData_ServiceOperation();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.sensinact.ibis.CustomerInfoVehicleData#getTimestamp <em>Timestamp</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Timestamp</em>'.
-	 * @see de.jena.model.sensinact.ibis.CustomerInfoVehicleData#getTimestamp()
-	 * @see #getCustomerInfoVehicleData()
-	 * @generated
-	 */
-	EAttribute getCustomerInfoVehicleData_Timestamp();
-
-	/**
 	 * Returns the meta object for the attribute '{@link de.jena.model.sensinact.ibis.CustomerInfoVehicleData#getVehicleRef <em>Vehicle Ref</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4647,17 +4621,6 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getCustomerInfoCurrentAnnouncementData_ServiceOperation();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.sensinact.ibis.CustomerInfoCurrentAnnouncementData#getTimestamp <em>Timestamp</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Timestamp</em>'.
-	 * @see de.jena.model.sensinact.ibis.CustomerInfoCurrentAnnouncementData#getTimestamp()
-	 * @see #getCustomerInfoCurrentAnnouncementData()
-	 * @generated
-	 */
-	EAttribute getCustomerInfoCurrentAnnouncementData_Timestamp();
-
-	/**
 	 * Returns the meta object for the attribute '{@link de.jena.model.sensinact.ibis.CustomerInfoCurrentAnnouncementData#getAnnouncementRef <em>Announcement Ref</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4744,17 +4707,6 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getCustomerInfoCurrentConnectionData_ServiceOperation();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.sensinact.ibis.CustomerInfoCurrentConnectionData#getTimestamp <em>Timestamp</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Timestamp</em>'.
-	 * @see de.jena.model.sensinact.ibis.CustomerInfoCurrentConnectionData#getTimestamp()
-	 * @see #getCustomerInfoCurrentConnectionData()
-	 * @generated
-	 */
-	EAttribute getCustomerInfoCurrentConnectionData_Timestamp();
-
-	/**
 	 * Returns the meta object for class '{@link de.jena.model.sensinact.ibis.CustomerInfoCurrentDisplayContent <em>Customer Info Current Display Content</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4806,17 +4758,6 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EAttribute getCustomerInfoCurrentDisplayContentData_ServiceOperation();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.sensinact.ibis.CustomerInfoCurrentDisplayContentData#getTimestamp <em>Timestamp</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Timestamp</em>'.
-	 * @see de.jena.model.sensinact.ibis.CustomerInfoCurrentDisplayContentData#getTimestamp()
-	 * @see #getCustomerInfoCurrentDisplayContentData()
-	 * @generated
-	 */
-	EAttribute getCustomerInfoCurrentDisplayContentData_Timestamp();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.jena.model.sensinact.ibis.CustomerInfoCurrentDisplayContentData#getDestinationName <em>Destination Name</em>}'.
@@ -4913,17 +4854,6 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EAttribute getPassengerCountingDoorCountingState_ServiceOperation();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.sensinact.ibis.PassengerCountingDoorCountingState#getTimestamp <em>Timestamp</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Timestamp</em>'.
-	 * @see de.jena.model.sensinact.ibis.PassengerCountingDoorCountingState#getTimestamp()
-	 * @see #getPassengerCountingDoorCountingState()
-	 * @generated
-	 */
-	EAttribute getPassengerCountingDoorCountingState_Timestamp();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.jena.model.sensinact.ibis.PassengerCountingDoorCountingState#getDoorId <em>Door Id</em>}'.
@@ -5032,17 +4962,6 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EAttribute getDoorState_ServiceOperation();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.sensinact.ibis.DoorState#getTimestamp <em>Timestamp</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Timestamp</em>'.
-	 * @see de.jena.model.sensinact.ibis.DoorState#getTimestamp()
-	 * @see #getDoorState()
-	 * @generated
-	 */
-	EAttribute getDoorState_Timestamp();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.jena.model.sensinact.ibis.DoorState#getDoorId <em>Door Id</em>}'.
@@ -5183,17 +5102,6 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EAttribute getGNSSLocationData_ServiceOperation();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.sensinact.ibis.GNSSLocationData#getTimestamp <em>Timestamp</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Timestamp</em>'.
-	 * @see de.jena.model.sensinact.ibis.GNSSLocationData#getTimestamp()
-	 * @see #getGNSSLocationData()
-	 * @generated
-	 */
-	EAttribute getGNSSLocationData_Timestamp();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.jena.model.sensinact.ibis.GNSSLocationData#getDate <em>Date</em>}'.
@@ -5425,17 +5333,6 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getTicketValidationCurrentTariffStopData_ServiceOperation();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.sensinact.ibis.TicketValidationCurrentTariffStopData#getTimestamp <em>Timestamp</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Timestamp</em>'.
-	 * @see de.jena.model.sensinact.ibis.TicketValidationCurrentTariffStopData#getTimestamp()
-	 * @see #getTicketValidationCurrentTariffStopData()
-	 * @generated
-	 */
-	EAttribute getTicketValidationCurrentTariffStopData_Timestamp();
-
-	/**
 	 * Returns the meta object for the attribute '{@link de.jena.model.sensinact.ibis.TicketValidationCurrentTariffStopData#getStopIndex <em>Stop Index</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5632,17 +5529,6 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getTicketValidationRazziaData_ServiceOperation();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.sensinact.ibis.TicketValidationRazziaData#getTimestamp <em>Timestamp</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Timestamp</em>'.
-	 * @see de.jena.model.sensinact.ibis.TicketValidationRazziaData#getTimestamp()
-	 * @see #getTicketValidationRazziaData()
-	 * @generated
-	 */
-	EAttribute getTicketValidationRazziaData_Timestamp();
-
-	/**
 	 * Returns the meta object for the attribute '{@link de.jena.model.sensinact.ibis.TicketValidationRazziaData#getRazziaState <em>Razzia State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5705,17 +5591,6 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EAttribute getTicketValidationCurrentLineData_ServiceOperation();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.sensinact.ibis.TicketValidationCurrentLineData#getTimestamp <em>Timestamp</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Timestamp</em>'.
-	 * @see de.jena.model.sensinact.ibis.TicketValidationCurrentLineData#getTimestamp()
-	 * @see #getTicketValidationCurrentLineData()
-	 * @generated
-	 */
-	EAttribute getTicketValidationCurrentLineData_Timestamp();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.jena.model.sensinact.ibis.TicketValidationCurrentLineData#getLineRef <em>Line Ref</em>}'.
@@ -5824,17 +5699,6 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EAttribute getTicketValidationVehicleData_ServiceOperation();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.jena.model.sensinact.ibis.TicketValidationVehicleData#getTimestamp <em>Timestamp</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Timestamp</em>'.
-	 * @see de.jena.model.sensinact.ibis.TicketValidationVehicleData#getTimestamp()
-	 * @see #getTicketValidationVehicleData()
-	 * @generated
-	 */
-	EAttribute getTicketValidationVehicleData_Timestamp();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.jena.model.sensinact.ibis.TicketValidationVehicleData#getVehicleRef <em>Vehicle Ref</em>}'.
@@ -6246,6 +6110,14 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 		EClass IBIS_RESOURCE = eINSTANCE.getIbisResource();
 
 		/**
+		 * The meta object literal for the '<em><b>Timestamp</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IBIS_RESOURCE__TIMESTAMP = eINSTANCE.getIbisResource_Timestamp();
+
+		/**
 		 * The meta object literal for the '{@link de.jena.model.sensinact.ibis.impl.CustomerInfoAllImpl <em>Customer Info All</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6288,14 +6160,6 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 		 * @generated
 		 */
 		EAttribute CUSTOMER_INFO_ALL_DATA__SERVICE_OPERATION = eINSTANCE.getCustomerInfoAllData_ServiceOperation();
-
-		/**
-		 * The meta object literal for the '<em><b>Timestamp</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CUSTOMER_INFO_ALL_DATA__TIMESTAMP = eINSTANCE.getCustomerInfoAllData_Timestamp();
 
 		/**
 		 * The meta object literal for the '<em><b>Vehicle Ref</b></em>' attribute feature.
@@ -6446,14 +6310,6 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 		EAttribute CUSTOMER_INFO_CURRENT_STOP_INDEX_DATA__SERVICE_OPERATION = eINSTANCE.getCustomerInfoCurrentStopIndexData_ServiceOperation();
 
 		/**
-		 * The meta object literal for the '<em><b>Timestamp</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CUSTOMER_INFO_CURRENT_STOP_INDEX_DATA__TIMESTAMP = eINSTANCE.getCustomerInfoCurrentStopIndexData_Timestamp();
-
-		/**
 		 * The meta object literal for the '<em><b>Current Stop Index</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6504,14 +6360,6 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 		 * @generated
 		 */
 		EAttribute CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__SERVICE_OPERATION = eINSTANCE.getCustomerInfoCurrentStopPointData_ServiceOperation();
-
-		/**
-		 * The meta object literal for the '<em><b>Timestamp</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CUSTOMER_INFO_CURRENT_STOP_POINT_DATA__TIMESTAMP = eINSTANCE.getCustomerInfoCurrentStopPointData_Timestamp();
 
 		/**
 		 * The meta object literal for the '<em><b>Stop Index</b></em>' attribute feature.
@@ -6652,14 +6500,6 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 		 * @generated
 		 */
 		EAttribute CUSTOMER_INFO_TRIP_DATA__SERVICE_OPERATION = eINSTANCE.getCustomerInfoTripData_ServiceOperation();
-
-		/**
-		 * The meta object literal for the '<em><b>Timestamp</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CUSTOMER_INFO_TRIP_DATA__TIMESTAMP = eINSTANCE.getCustomerInfoTripData_Timestamp();
 
 		/**
 		 * The meta object literal for the '<em><b>Vehicle Ref</b></em>' attribute feature.
@@ -6866,14 +6706,6 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 		EAttribute CUSTOMER_INFO_VEHICLE_DATA__SERVICE_OPERATION = eINSTANCE.getCustomerInfoVehicleData_ServiceOperation();
 
 		/**
-		 * The meta object literal for the '<em><b>Timestamp</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CUSTOMER_INFO_VEHICLE_DATA__TIMESTAMP = eINSTANCE.getCustomerInfoVehicleData_Timestamp();
-
-		/**
 		 * The meta object literal for the '<em><b>Vehicle Ref</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7006,14 +6838,6 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 		EAttribute CUSTOMER_INFO_CURRENT_ANNOUNCEMENT_DATA__SERVICE_OPERATION = eINSTANCE.getCustomerInfoCurrentAnnouncementData_ServiceOperation();
 
 		/**
-		 * The meta object literal for the '<em><b>Timestamp</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CUSTOMER_INFO_CURRENT_ANNOUNCEMENT_DATA__TIMESTAMP = eINSTANCE.getCustomerInfoCurrentAnnouncementData_Timestamp();
-
-		/**
 		 * The meta object literal for the '<em><b>Announcement Ref</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7082,14 +6906,6 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 		EAttribute CUSTOMER_INFO_CURRENT_CONNECTION_DATA__SERVICE_OPERATION = eINSTANCE.getCustomerInfoCurrentConnectionData_ServiceOperation();
 
 		/**
-		 * The meta object literal for the '<em><b>Timestamp</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CUSTOMER_INFO_CURRENT_CONNECTION_DATA__TIMESTAMP = eINSTANCE.getCustomerInfoCurrentConnectionData_Timestamp();
-
-		/**
 		 * The meta object literal for the '{@link de.jena.model.sensinact.ibis.impl.CustomerInfoCurrentDisplayContentImpl <em>Customer Info Current Display Content</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7132,14 +6948,6 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 		 * @generated
 		 */
 		EAttribute CUSTOMER_INFO_CURRENT_DISPLAY_CONTENT_DATA__SERVICE_OPERATION = eINSTANCE.getCustomerInfoCurrentDisplayContentData_ServiceOperation();
-
-		/**
-		 * The meta object literal for the '<em><b>Timestamp</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CUSTOMER_INFO_CURRENT_DISPLAY_CONTENT_DATA__TIMESTAMP = eINSTANCE.getCustomerInfoCurrentDisplayContentData_Timestamp();
 
 		/**
 		 * The meta object literal for the '<em><b>Destination Name</b></em>' attribute feature.
@@ -7218,14 +7026,6 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 		 * @generated
 		 */
 		EAttribute PASSENGER_COUNTING_DOOR_COUNTING_STATE__SERVICE_OPERATION = eINSTANCE.getPassengerCountingDoorCountingState_ServiceOperation();
-
-		/**
-		 * The meta object literal for the '<em><b>Timestamp</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PASSENGER_COUNTING_DOOR_COUNTING_STATE__TIMESTAMP = eINSTANCE.getPassengerCountingDoorCountingState_Timestamp();
 
 		/**
 		 * The meta object literal for the '<em><b>Door Id</b></em>' attribute feature.
@@ -7310,14 +7110,6 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 		 * @generated
 		 */
 		EAttribute DOOR_STATE__SERVICE_OPERATION = eINSTANCE.getDoorState_ServiceOperation();
-
-		/**
-		 * The meta object literal for the '<em><b>Timestamp</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DOOR_STATE__TIMESTAMP = eINSTANCE.getDoorState_Timestamp();
 
 		/**
 		 * The meta object literal for the '<em><b>Door Id</b></em>' attribute feature.
@@ -7428,14 +7220,6 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 		 * @generated
 		 */
 		EAttribute GNSS_LOCATION_DATA__SERVICE_OPERATION = eINSTANCE.getGNSSLocationData_ServiceOperation();
-
-		/**
-		 * The meta object literal for the '<em><b>Timestamp</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GNSS_LOCATION_DATA__TIMESTAMP = eINSTANCE.getGNSSLocationData_Timestamp();
 
 		/**
 		 * The meta object literal for the '<em><b>Date</b></em>' attribute feature.
@@ -7610,14 +7394,6 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 		EAttribute TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA__SERVICE_OPERATION = eINSTANCE.getTicketValidationCurrentTariffStopData_ServiceOperation();
 
 		/**
-		 * The meta object literal for the '<em><b>Timestamp</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA__TIMESTAMP = eINSTANCE.getTicketValidationCurrentTariffStopData_Timestamp();
-
-		/**
 		 * The meta object literal for the '<em><b>Stop Index</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7766,14 +7542,6 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 		EAttribute TICKET_VALIDATION_RAZZIA_DATA__SERVICE_OPERATION = eINSTANCE.getTicketValidationRazziaData_ServiceOperation();
 
 		/**
-		 * The meta object literal for the '<em><b>Timestamp</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TICKET_VALIDATION_RAZZIA_DATA__TIMESTAMP = eINSTANCE.getTicketValidationRazziaData_Timestamp();
-
-		/**
 		 * The meta object literal for the '<em><b>Razzia State</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7824,14 +7592,6 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 		 * @generated
 		 */
 		EAttribute TICKET_VALIDATION_CURRENT_LINE_DATA__SERVICE_OPERATION = eINSTANCE.getTicketValidationCurrentLineData_ServiceOperation();
-
-		/**
-		 * The meta object literal for the '<em><b>Timestamp</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TICKET_VALIDATION_CURRENT_LINE_DATA__TIMESTAMP = eINSTANCE.getTicketValidationCurrentLineData_Timestamp();
 
 		/**
 		 * The meta object literal for the '<em><b>Line Ref</b></em>' attribute feature.
@@ -7916,14 +7676,6 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 		 * @generated
 		 */
 		EAttribute TICKET_VALIDATION_VEHICLE_DATA__SERVICE_OPERATION = eINSTANCE.getTicketValidationVehicleData_ServiceOperation();
-
-		/**
-		 * The meta object literal for the '<em><b>Timestamp</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TICKET_VALIDATION_VEHICLE_DATA__TIMESTAMP = eINSTANCE.getTicketValidationVehicleData_Timestamp();
 
 		/**
 		 * The meta object literal for the '<em><b>Vehicle Ref</b></em>' attribute feature.

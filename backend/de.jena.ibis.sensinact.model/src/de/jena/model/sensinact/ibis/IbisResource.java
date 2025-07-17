@@ -13,6 +13,8 @@
  */
 package de.jena.model.sensinact.ibis;
 
+import java.time.Instant;
+
 import org.eclipse.emf.ecore.EObject;
 
 import org.osgi.annotation.versioning.ProviderType;
@@ -22,6 +24,12 @@ import org.osgi.annotation.versioning.ProviderType;
  * A representation of the model object '<em><b>Ibis Resource</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link de.jena.model.sensinact.ibis.IbisResource#getTimestamp <em>Timestamp</em>}</li>
+ * </ul>
  *
  * @see de.jena.model.sensinact.ibis.IbisSensinactPackage#getIbisResource()
  * @model
@@ -29,4 +37,26 @@ import org.osgi.annotation.versioning.ProviderType;
  */
 @ProviderType
 public interface IbisResource extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Timestamp</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Timestamp</em>' attribute.
+	 * @see #setTimestamp(Instant)
+	 * @see de.jena.model.sensinact.ibis.IbisSensinactPackage#getIbisResource_Timestamp()
+	 * @model dataType="org.eclipse.sensinact.model.core.provider.EInstant" required="true"
+	 * @generated
+	 */
+	Instant getTimestamp();
+
+	/**
+	 * Sets the value of the '{@link de.jena.model.sensinact.ibis.IbisResource#getTimestamp <em>Timestamp</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Timestamp</em>' attribute.
+	 * @see #getTimestamp()
+	 * @generated
+	 */
+	void setTimestamp(Instant value);
+
 } // IbisResource

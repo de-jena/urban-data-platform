@@ -34,7 +34,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link de.jena.model.sensinact.ibis.impl.GNSSLocationDataImpl#getServiceName <em>Service Name</em>}</li>
  *   <li>{@link de.jena.model.sensinact.ibis.impl.GNSSLocationDataImpl#getServiceOperation <em>Service Operation</em>}</li>
- *   <li>{@link de.jena.model.sensinact.ibis.impl.GNSSLocationDataImpl#getTimestamp <em>Timestamp</em>}</li>
  *   <li>{@link de.jena.model.sensinact.ibis.impl.GNSSLocationDataImpl#getDate <em>Date</em>}</li>
  *   <li>{@link de.jena.model.sensinact.ibis.impl.GNSSLocationDataImpl#getTime <em>Time</em>}</li>
  *   <li>{@link de.jena.model.sensinact.ibis.impl.GNSSLocationDataImpl#getLatitudeDegree <em>Latitude Degree</em>}</li>
@@ -95,26 +94,6 @@ public class GNSSLocationDataImpl extends IbisResourceImpl implements GNSSLocati
 	 * @ordered
 	 */
 	protected String serviceOperation = SERVICE_OPERATION_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getTimestamp() <em>Timestamp</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTimestamp()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Instant TIMESTAMP_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getTimestamp() <em>Timestamp</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTimestamp()
-	 * @generated
-	 * @ordered
-	 */
-	protected Instant timestamp = TIMESTAMP_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDate() <em>Date</em>}' attribute.
@@ -507,29 +486,6 @@ public class GNSSLocationDataImpl extends IbisResourceImpl implements GNSSLocati
 	 * @generated
 	 */
 	@Override
-	public Instant getTimestamp() {
-		return timestamp;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setTimestamp(Instant newTimestamp) {
-		Instant oldTimestamp = timestamp;
-		timestamp = newTimestamp;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IbisSensinactPackage.GNSS_LOCATION_DATA__TIMESTAMP, oldTimestamp, timestamp));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Instant getDate() {
 		return date;
 	}
@@ -904,8 +860,6 @@ public class GNSSLocationDataImpl extends IbisResourceImpl implements GNSSLocati
 				return getServiceName();
 			case IbisSensinactPackage.GNSS_LOCATION_DATA__SERVICE_OPERATION:
 				return getServiceOperation();
-			case IbisSensinactPackage.GNSS_LOCATION_DATA__TIMESTAMP:
-				return getTimestamp();
 			case IbisSensinactPackage.GNSS_LOCATION_DATA__DATE:
 				return getDate();
 			case IbisSensinactPackage.GNSS_LOCATION_DATA__TIME:
@@ -955,9 +909,6 @@ public class GNSSLocationDataImpl extends IbisResourceImpl implements GNSSLocati
 				return;
 			case IbisSensinactPackage.GNSS_LOCATION_DATA__SERVICE_OPERATION:
 				setServiceOperation((String)newValue);
-				return;
-			case IbisSensinactPackage.GNSS_LOCATION_DATA__TIMESTAMP:
-				setTimestamp((Instant)newValue);
 				return;
 			case IbisSensinactPackage.GNSS_LOCATION_DATA__DATE:
 				setDate((Instant)newValue);
@@ -1025,9 +976,6 @@ public class GNSSLocationDataImpl extends IbisResourceImpl implements GNSSLocati
 			case IbisSensinactPackage.GNSS_LOCATION_DATA__SERVICE_OPERATION:
 				setServiceOperation(SERVICE_OPERATION_EDEFAULT);
 				return;
-			case IbisSensinactPackage.GNSS_LOCATION_DATA__TIMESTAMP:
-				setTimestamp(TIMESTAMP_EDEFAULT);
-				return;
 			case IbisSensinactPackage.GNSS_LOCATION_DATA__DATE:
 				setDate(DATE_EDEFAULT);
 				return;
@@ -1092,8 +1040,6 @@ public class GNSSLocationDataImpl extends IbisResourceImpl implements GNSSLocati
 				return SERVICE_NAME_EDEFAULT == null ? serviceName != null : !SERVICE_NAME_EDEFAULT.equals(serviceName);
 			case IbisSensinactPackage.GNSS_LOCATION_DATA__SERVICE_OPERATION:
 				return SERVICE_OPERATION_EDEFAULT == null ? serviceOperation != null : !SERVICE_OPERATION_EDEFAULT.equals(serviceOperation);
-			case IbisSensinactPackage.GNSS_LOCATION_DATA__TIMESTAMP:
-				return TIMESTAMP_EDEFAULT == null ? timestamp != null : !TIMESTAMP_EDEFAULT.equals(timestamp);
 			case IbisSensinactPackage.GNSS_LOCATION_DATA__DATE:
 				return DATE_EDEFAULT == null ? date != null : !DATE_EDEFAULT.equals(date);
 			case IbisSensinactPackage.GNSS_LOCATION_DATA__TIME:
@@ -1144,8 +1090,6 @@ public class GNSSLocationDataImpl extends IbisResourceImpl implements GNSSLocati
 		result.append(serviceName);
 		result.append(", serviceOperation: ");
 		result.append(serviceOperation);
-		result.append(", timestamp: ");
-		result.append(timestamp);
 		result.append(", date: ");
 		result.append(date);
 		result.append(", time: ");
