@@ -13,7 +13,7 @@
 
 package de.jena.ilsa.sensinact;
 
-import java.time.temporal.ChronoUnit;
+import java.time.Instant;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.sensinact.core.annotation.dto.Data;
@@ -65,7 +65,7 @@ public class TrafficLightDto {
 	@Data
 	public String data;
 
-	@Timestamp(ChronoUnit.MILLIS)
-	public long timestamp;
+	@Timestamp
+	public Instant timestamp;
 
 }

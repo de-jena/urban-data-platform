@@ -161,7 +161,7 @@ public class TrafficLight {
 			TLSignalState signalState = (TLSignalState) resource.getContents().get(0);
 			String serviceId = signalState.getId().replace("/", "_");
 			TrafficLightDto dto = new TrafficLightDto(intersectionId, serviceId, signalState.getState());
-			dto.timestamp = signalState.getTimestamp().getTime();
+			dto.timestamp = signalState.getTimestamp().toInstant();
 			logger.log(Level.DEBUG, "push {0} {1} {2}", intersectionId, serviceId, signalState.getState());
 			Promise<?> promise = sensiNact.pushUpdate(dto);
 			promise.onFailure(e -> logger.log(Level.ERROR, "Error while pushing signal to sensinact.", e));
