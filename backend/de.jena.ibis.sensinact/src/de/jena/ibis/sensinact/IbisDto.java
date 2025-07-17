@@ -13,7 +13,7 @@
 
 package de.jena.ibis.sensinact;
 
-import java.time.temporal.ChronoUnit;
+import java.time.Instant;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EReference;
@@ -54,7 +54,7 @@ public class IbisDto {
 	@Data
 	public IbisResource data;
 
-	@Timestamp(ChronoUnit.MILLIS)
-	public long timestamp;
+	@Timestamp
+	public Instant timestamp = Instant.now();
 
 }
