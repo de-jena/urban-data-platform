@@ -25,6 +25,7 @@ import org.eclipse.sensinact.core.annotation.dto.Service;
 import org.eclipse.sensinact.core.annotation.dto.Timestamp;
 
 import de.jena.ilsa.sensinact.model.ilsa.IlsaPackage;
+import de.jena.udp.model.trafficos.trafficlight.TLSignalState;
 
 @ModelPackageUri(IlsaPackage.eNS_URI)
 @Model("Ilsa")
@@ -35,12 +36,13 @@ public class TrafficLightDto {
 	 * 
 	 * @param intersectionId
 	 * @param id
-	 * @param state
+	 * @param signalState
 	 */
-	public TrafficLightDto(String intersectionId, String id, String state) {
+	public TrafficLightDto(String intersectionId, String id, TLSignalState signalState) {
 		intersection = intersectionId;
 		signal = id;
-		data = state;
+		data = signalState.getState();
+		timestamp = signalState.getTimestamp().toInstant();
 	}
 
 	@Provider
@@ -51,15 +53,6 @@ public class TrafficLightDto {
 
 	@Service
 	public EClass serviceEClass = IlsaPackage.Literals.SIGNAL;
-
-//	@Service
-//	public EReference serviceRef = IlsaPackage.Literals.ILSA__THERMAL;
-
-//	@Resource
-//	public EAttribute res = IlsaPackage.Literals.SIGNAL__COLOR;
-
-//	@Resource
-//	public String resource = "color";
 
 	@Resource("color")
 	@Data

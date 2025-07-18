@@ -44,6 +44,7 @@ import org.eclipse.sensinact.model.core.provider.ResourceValueMetadata;
 import org.eclipse.sensinact.model.core.provider.Service;
 import org.gecko.codec.constants.CodecResourceOptions;
 import org.gecko.emf.json.annotation.RequireEMFJson;
+import org.gecko.emf.json.constants.EMFJs;
 import org.gecko.emf.osgi.constants.EMFNamespaces;
 import org.gecko.osgi.messaging.Message;
 import org.gecko.osgi.messaging.MessagingService;
@@ -77,6 +78,8 @@ public class TrafficLight {
 	private static final String TOPIC = "5g/ilsa/";
 	private static final Pattern TOPIC_PATTERN = Pattern.compile(TOPIC + "(\\w+)/(\\w+)/([A-Za-z0-9-]+)/([0-9])");
 	private static final URI TEMP_URI = URI.createFileURI("temp.json");
+	private static final Map<String, Object> EMF_CONFIG = Collections.singletonMap(EMFJs.OPTION_DATE_FORMAT,
+			"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'zzz");
 
 	@Reference(target = "(" + EMFNamespaces.EMF_CONFIGURATOR_NAME
 			+ "=EMFJson)", scope = ReferenceScope.PROTOTYPE_REQUIRED)
@@ -161,11 +164,10 @@ public class TrafficLight {
 		ResourceSet resourceSet = serviceObjects.getService();
 		Resource resource = resourceSet.createResource(TEMP_URI);
 		try (ByteArrayInputStream bas = new ByteArrayInputStream(message.payload().array())) {
-			resource.load(bas, Collections.emptyMap());
+			resource.load(bas, EMF_CONFIG);
 			TLSignalState signalState = (TLSignalState) resource.getContents().get(0);
 			String serviceId = signalState.getId().replace("/", "_");
-			TrafficLightDto dto = new TrafficLightDto(intersectionId, serviceId, signalState.getState());
-			dto.timestamp = signalState.getTimestamp().toInstant();
+			TrafficLightDto dto = new TrafficLightDto(intersectionId, serviceId, signalState);
 			logger.log(Level.DEBUG, "push {0} {1} {2}", intersectionId, serviceId, signalState.getState());
 			Promise<?> promise = sensiNact.pushUpdate(dto);
 			promise.onFailure(e -> logger.log(Level.ERROR, "Error while pushing signal to sensinact.", e));
