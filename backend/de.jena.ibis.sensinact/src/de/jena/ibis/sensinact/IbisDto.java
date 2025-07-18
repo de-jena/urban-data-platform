@@ -40,7 +40,7 @@ public class IbisDto {
 		this.id = id;
 		this.serviceRef = serviceRef;
 		this.data = data;
-		this.timestamp = data.getTimestamp();
+		this.timestamp = data.getTimestamp() != null ? data.getTimestamp() : Instant.now();
 	}
 	@Model
 	public EClass ibis = IbisSensinactPackage.Literals.IBIS_DEVICE;

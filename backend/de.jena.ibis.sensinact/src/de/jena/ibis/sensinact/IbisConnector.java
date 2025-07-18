@@ -18,6 +18,7 @@ import java.io.IOException;
 import java.lang.System.Logger;
 import java.lang.System.Logger.Level;
 import java.util.Collections;
+import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -31,6 +32,7 @@ import org.eclipse.sensinact.core.push.DataUpdate;
 import org.eclipse.sensinact.gateway.geojson.utils.GeoJsonUtils;
 import org.eclipse.sensinact.model.core.provider.Service;
 import org.gecko.emf.json.annotation.RequireEMFJson;
+import org.gecko.emf.json.constants.EMFJs;
 import org.gecko.emf.osgi.constants.EMFNamespaces;
 import org.gecko.osgi.messaging.Message;
 import org.gecko.osgi.messaging.MessagingService;
@@ -68,8 +70,9 @@ import de.jena.model.sensinact.ibis.IbisSensinactPackage;
 public class IbisConnector {
 
 	private static final Logger LOGGER = System.getLogger(IbisConnector.class.getName());
-
 	private static final String TOPIC = "5g/ibis/";
+	private static final Map<String, Object> EMF_CONFIG = Collections.singletonMap(EMFJs.OPTION_DATE_FORMAT,
+			"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'zzz");
 
 	@Reference(target = "(" + EMFNamespaces.EMF_CONFIGURATOR_NAME
 			+ "=EMFJson)", scope = ReferenceScope.PROTOTYPE_REQUIRED)
@@ -134,7 +137,7 @@ public class IbisConnector {
 		ResourceSet resourceSet = serviceObjects.getService();
 		Resource resource = resourceSet.createResource(URI.createFileURI(UUID.randomUUID() + "-ibis.json"));
 		try {
-			resource.load(new ByteArrayInputStream(message.payload().array()), Collections.emptyMap());
+			resource.load(new ByteArrayInputStream(message.payload().array()), EMF_CONFIG);
 			Optional<IbisDto> oDto = transform(deviceId, resource.getContents().get(0));
 			if (oDto.isPresent()) {
 				IbisDto dto = oDto.get();
