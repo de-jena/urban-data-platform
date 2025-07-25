@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="Local" increment="1753449863092">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="license" value="Eclipse Public License 1.0"/>
@@ -48,6 +48,264 @@
     </requirement>
     <requirement namespace="osgi.ee">
       <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="&quot;EPL 2.0&quot;;link=&quot;http://www.eclipse.org/legal/epl-2.0&quot;;description=&quot;Except for 3rd party content and examples.&quot;"/>
+      <attribute name="copyright" value="Copyright (c) (2024) Contributors to the Eclipse Foundation."/>
+      <attribute name="osgi.identity" value="org.eclipse.sensinact.gateway.southbound.history.history-api"/>
+      <attribute name="documentation" value="https://projects.eclipse.org/projects/technology.sensinact/southbound/history/history-api"/>
+      <attribute name="description" value="This reactor contains connectors that are used for recording and accessing historical data"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="0.0.2.202411261618" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.eclipse.sensinact.core.annotation.verb,org.eclipse.sensinact.core.twin"/>
+      <attribute name="bundle-symbolic-name" value="org.eclipse.sensinact.gateway.southbound.history.history-api"/>
+      <attribute name="bundle-version" value="0.0.2.202411261618" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.sensinact.gateway.southbound.history.api"/>
+      <attribute name="version" value="0.2.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-671384804,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="0.0.2.202411261618" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.eclipse.sensinact.gateway.southbound.history.history-api"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="0.0.2.202411261618" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.eclipse.sensinact.gateway.southbound.history.history-api"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="5065" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="org.eclipse.sensinact.gateway.southbound.history.history-api/org.eclipse.sensinact.gateway.southbound.history.history-api-0.0.2.jar"/>
+      <attribute name="osgi.content" value="C7B635ED46568EE291DCE170B07FAE9F394F32BD5B3A2619FA882D647B3F528B"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.lang)"/>
+      <attribute name="osgi.wiring.package" value="java.lang"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.time)"/>
+      <attribute name="osgi.wiring.package" value="java.time"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util)"/>
+      <attribute name="osgi.wiring.package" value="java.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.sensinact.core.annotation.verb)(version&gt;=0.2.0)(!(version&gt;=1.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.sensinact.core.annotation.verb"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.sensinact.core.twin)(version&gt;=0.2.0)(!(version&gt;=1.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.sensinact.core.twin"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=11))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="&quot;EPL 2.0&quot;;link=&quot;http://www.eclipse.org/legal/epl-2.0&quot;;description=&quot;Except for 3rd party content and examples.&quot;"/>
+      <attribute name="copyright" value="Copyright (c) (2024) Contributors to the Eclipse Foundation."/>
+      <attribute name="osgi.identity" value="org.eclipse.sensinact.gateway.northbound.sensorthings.dto"/>
+      <attribute name="documentation" value="https://projects.eclipse.org/projects/technology.sensinact/northbound/sensorthings/dto"/>
+      <attribute name="description" value="This reactor contains northbound connectors that are used to interact with sensiNact"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="0.0.2.202411261618" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.annotation,org.eclipse.sensinact.gateway.geojson"/>
+      <attribute name="bundle-symbolic-name" value="org.eclipse.sensinact.gateway.northbound.sensorthings.dto"/>
+      <attribute name="bundle-version" value="0.0.2.202411261618" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.sensinact.sensorthings.sensing.dto"/>
+      <attribute name="version" value="0.0.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-108383286,983707031,-564890945,2363,1965687765,-1990003631,1790214156,-1254584099,1421374075,-908371260,602941606,276581219,2573164,-1822081062,80778446,-1960483295,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="0.0.2.202411261618" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.eclipse.sensinact.gateway.northbound.sensorthings.dto"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="0.0.2.202411261618" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.eclipse.sensinact.gateway.northbound.sensorthings.dto"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="14410" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="org.eclipse.sensinact.gateway.northbound.sensorthings.dto/org.eclipse.sensinact.gateway.northbound.sensorthings.dto-0.0.2.jar"/>
+      <attribute name="osgi.content" value="7271A37BAEE29159334A780FFD1D13F2E621CF6778F756DEC93FB274829DACCE"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.annotation)(version&gt;=2.16.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.annotation"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.lang)"/>
+      <attribute name="osgi.wiring.package" value="java.lang"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.time)"/>
+      <attribute name="osgi.wiring.package" value="java.time"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util)"/>
+      <attribute name="osgi.wiring.package" value="java.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.sensinact.gateway.geojson)(version&gt;=0.0.0)(!(version&gt;=1.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.sensinact.gateway.geojson"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=11))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="&quot;EPL 2.0&quot;;link=&quot;http://www.eclipse.org/legal/epl-2.0&quot;;description=&quot;Except for 3rd party content and examples.&quot;"/>
+      <attribute name="copyright" value="Copyright (c) (2024) Contributors to the Eclipse Foundation."/>
+      <attribute name="osgi.identity" value="org.eclipse.sensinact.gateway.northbound.sensorthings.rest.gateway"/>
+      <attribute name="documentation" value="https://projects.eclipse.org/projects/technology.sensinact/northbound/sensorthings/rest.gateway"/>
+      <attribute name="description" value="This reactor contains northbound connectors that are used to interact with sensiNact"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="0.0.2.202411261619" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="0.0.2.202411261619" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.eclipse.sensinact.gateway.northbound.sensorthings.rest.gateway"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="0.0.2.202411261619" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.eclipse.sensinact.gateway.northbound.sensorthings.rest.gateway"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="51994" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="org.eclipse.sensinact.gateway.northbound.sensorthings.rest.gateway/org.eclipse.sensinact.gateway.northbound.sensorthings.rest.gateway-0.0.2.jar"/>
+      <attribute name="osgi.content" value="ABA5012208C735A80C070CD7F96F78F6DE7E1B69B4CE48E29D8EFB1A13730ECC"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <directive name="uses" value="jakarta.ws.rs.core"/>
+      <attribute name="objectClass" value="jakarta.ws.rs.core.Application" type="List&lt;String&gt;"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.core)(version&gt;=2.16.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.databind)(version&gt;=2.16.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=jakarta.ws.rs)(version&gt;=3.1.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="jakarta.ws.rs"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=jakarta.ws.rs.container)(version&gt;=3.1.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="jakarta.ws.rs.container"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=jakarta.ws.rs.core)(version&gt;=3.1.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="jakarta.ws.rs.core"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=jakarta.ws.rs.ext)(version&gt;=3.1.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="jakarta.ws.rs.ext"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.lang)"/>
+      <attribute name="osgi.wiring.package" value="java.lang"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.lang.annotation)"/>
+      <attribute name="osgi.wiring.package" value="java.lang.annotation"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.lang.invoke)"/>
+      <attribute name="osgi.wiring.package" value="java.lang.invoke"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.net)"/>
+      <attribute name="osgi.wiring.package" value="java.net"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.time)"/>
+      <attribute name="osgi.wiring.package" value="java.time"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.time.temporal)"/>
+      <attribute name="osgi.wiring.package" value="java.time.temporal"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util)"/>
+      <attribute name="osgi.wiring.package" value="java.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util.function)"/>
+      <attribute name="osgi.wiring.package" value="java.util.function"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util.stream)"/>
+      <attribute name="osgi.wiring.package" value="java.util.stream"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.sensinact.core.snapshot)(version&gt;=0.2.0)(!(version&gt;=1.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.sensinact.core.snapshot"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.sensinact.core.twin)(version&gt;=0.2.0)(!(version&gt;=1.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.sensinact.core.twin"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.sensinact.filters.api)(version&gt;=0.0.0)(!(version&gt;=1.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.sensinact.filters.api"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.sensinact.gateway.geojson)(version&gt;=0.0.0)(!(version&gt;=1.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.sensinact.gateway.geojson"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.sensinact.northbound.filters.sensorthings)(version&gt;=0.0.0)(!(version&gt;=1.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.sensinact.northbound.filters.sensorthings"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.sensinact.northbound.security.api)(version&gt;=0.2.0)(!(version&gt;=1.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.sensinact.northbound.security.api"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.sensinact.northbound.session)(version&gt;=0.2.0)(!(version&gt;=1.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.sensinact.northbound.session"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.sensinact.sensorthings.sensing.dto)(version&gt;=0.0.0)(!(version&gt;=1.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.sensinact.sensorthings.sensing.dto"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.sensinact.sensorthings.sensing.rest)(version&gt;=0.0.0)(!(version&gt;=1.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.sensinact.sensorthings.sensing.rest"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.sensinact.sensorthings.sensing.rest.annotation)(version&gt;=0.0.0)(!(version&gt;=1.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.sensinact.sensorthings.sensing.rest.annotation"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=11))"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.implementation">
+      <directive name="filter" value="(&amp;(osgi.implementation=osgi.jakartars)(version&gt;=2.0.0)(!(version&gt;=3.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=org.eclipse.sensinact.northbound.filters.sensorthings.ISensorthingsFilterParser)"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=org.eclipse.sensinact.northbound.session.SensiNactSessionManager)"/>
+      <directive name="effective" value="active"/>
     </requirement>
   </resource>
   <resource>
@@ -124,6 +382,168 @@
     </requirement>
     <requirement namespace="osgi.service">
       <directive name="filter" value="(objectClass=org.gecko.emf.repository.EMFRepository)"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="&quot;EPL 2.0&quot;;link=&quot;http://www.eclipse.org/legal/epl-2.0&quot;;description=&quot;Except for 3rd party content and examples.&quot;"/>
+      <attribute name="copyright" value="Copyright (c) (2024) Contributors to the Eclipse Foundation."/>
+      <attribute name="osgi.identity" value="org.eclipse.sensinact.gateway.southbound.history.timescale-provider"/>
+      <attribute name="documentation" value="https://projects.eclipse.org/projects/technology.sensinact/southbound/history/timescale-provider"/>
+      <attribute name="description" value="This reactor contains connectors that are used for recording and accessing historical data"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="0.0.2.202411261618" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="0.0.2.202411261618" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.eclipse.sensinact.gateway.southbound.history.timescale-provider"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="0.0.2.202411261618" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.eclipse.sensinact.gateway.southbound.history.timescale-provider"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="21097" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="org.eclipse.sensinact.gateway.southbound.history.timescale-provider/org.eclipse.sensinact.gateway.southbound.history.timescale-provider-0.0.2.jar"/>
+      <attribute name="osgi.content" value="4A50AB46338E76109351CECC549BE485EE1C508EA01721316DD9694E4C300925"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.core)(version&gt;=2.16.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.databind)(version&gt;=2.16.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.lang)"/>
+      <attribute name="osgi.wiring.package" value="java.lang"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.lang.annotation)"/>
+      <attribute name="osgi.wiring.package" value="java.lang.annotation"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.lang.invoke)"/>
+      <attribute name="osgi.wiring.package" value="java.lang.invoke"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.math)"/>
+      <attribute name="osgi.wiring.package" value="java.math"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.sql)"/>
+      <attribute name="osgi.wiring.package" value="java.sql"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.time)"/>
+      <attribute name="osgi.wiring.package" value="java.time"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util)"/>
+      <attribute name="osgi.wiring.package" value="java.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util.concurrent)"/>
+      <attribute name="osgi.wiring.package" value="java.util.concurrent"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util.concurrent.atomic)"/>
+      <attribute name="osgi.wiring.package" value="java.util.concurrent.atomic"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util.function)"/>
+      <attribute name="osgi.wiring.package" value="java.util.function"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util.stream)"/>
+      <attribute name="osgi.wiring.package" value="java.util.stream"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.sql)"/>
+      <attribute name="osgi.wiring.package" value="javax.sql"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.sensinact.core.command)(version&gt;=0.2.0)(!(version&gt;=1.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.sensinact.core.command"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.sensinact.core.notification)(version&gt;=0.2.0)(!(version&gt;=1.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.sensinact.core.notification"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.sensinact.core.snapshot)(version&gt;=0.2.0)(!(version&gt;=1.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.sensinact.core.snapshot"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.sensinact.core.twin)(version&gt;=0.2.0)(!(version&gt;=1.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.sensinact.core.twin"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.sensinact.filters.resource.selector.api)(version&gt;=0.0.0)(!(version&gt;=1.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.sensinact.filters.resource.selector.api"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.sensinact.gateway.geojson)(version&gt;=0.0.0)(!(version&gt;=1.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.sensinact.gateway.geojson"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.sensinact.gateway.southbound.history.api)(version&gt;=0.2.0)(!(version&gt;=1.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.sensinact.gateway.southbound.history.api"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.9.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.transaction.control)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.service.transaction.control"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.transaction.control.jdbc)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.service.transaction.control.jdbc"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.typedevent)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.service.typedevent"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.promise)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.util.promise"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.postgresql.ds)(version&gt;=42.5.0)(!(version&gt;=43.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.postgresql.ds"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.slf4j)(version&gt;=2.0.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.slf4j"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=11))"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.implementation">
+      <directive name="filter" value="(&amp;(osgi.implementation=osgi.typedevent)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=org.eclipse.sensinact.core.command.GatewayThread)"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=org.eclipse.sensinact.filters.resource.selector.api.ResourceSelectorFilterFactory)"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=org.osgi.service.transaction.control.TransactionControl)"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=org.osgi.service.transaction.control.jdbc.JDBCConnectionProviderFactory)"/>
       <directive name="effective" value="active"/>
     </requirement>
   </resource>
