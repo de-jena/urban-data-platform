@@ -220,7 +220,7 @@ public class TrafficLight {
 		Service signal = services.get(serviceId);
 		EMap<ETypedElement, ResourceValueMetadata> metadata = signal.getMetadata();
 		ResourceValueMetadata md = ProviderFactory.eINSTANCE.createResourceValueMetadata();
-		md.getExtra().put("type", createMetadata(signalState.getSignalType()));
+		md.getExtra().put("type", createMetadata(signalState.getSignalType().getName()));
 		md.getExtra().put("signalGroup", createMetadata(signalState.getSignalGroup().getId()));
 		metadata.put(IlsaPackage.eINSTANCE.getSignal_Color(), md);
 	}

@@ -260,6 +260,15 @@ public interface IlsaPackage extends org.eclipse.emf.ecore.EPackage {
 	int THERMAL__FRIENDLY_NAME = ProviderPackage.ADMIN__FRIENDLY_NAME;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int THERMAL__DESCRIPTION = ProviderPackage.ADMIN__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Location</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
