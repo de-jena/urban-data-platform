@@ -13,7 +13,6 @@
 
 package de.jena.glt.sensinact;
 
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.sensinact.core.annotation.dto.Data;
 import org.eclipse.sensinact.core.annotation.dto.Model;
 import org.eclipse.sensinact.core.annotation.dto.ModelPackageUri;
@@ -25,11 +24,12 @@ import org.eclipse.sensinact.core.annotation.dto.Timestamp;
 import de.jena.glt.sensinact.model.glt.GltPackage;
 
 @ModelPackageUri(GltPackage.eNS_URI)
-@Model("Glt")
+@Model("GltSide")
 public class GltDto {
 
-	public GltDto(String systemId, String classId, Number value, String timestamp) {
+	public GltDto(String systemId, String service, Number value, String timestamp) {
 		this.system = systemId;
+		this.service = service;
 		this.value = value;
 		this.timestamp = timestamp;
 	}
@@ -38,7 +38,7 @@ public class GltDto {
 	public String system;
 
 	@Service
-	public EClass serviceEClass = GltPackage.Literals.MONITORING_DATA;
+	public String service;
 
 	@Resource("value")
 	@Data

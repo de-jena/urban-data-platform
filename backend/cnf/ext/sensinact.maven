@@ -21,9 +21,9 @@ org.eclipse.sensinact.gateway.northbound.security:security-api:${sensinact.versi
 org.eclipse.sensinact.gateway.northbound.security:openid-connect:${sensinact.version}
 
 ## sensorethings
-#org.eclipse.sensinact.gateway.northbound.sensorthings:dto:${sensinact.version}
+org.eclipse.sensinact.gateway.northbound.sensorthings:dto:${sensinact.version}
 org.eclipse.sensinact.gateway.northbound.sensorthings:rest.api:${sensinact.version}
-#org.eclipse.sensinact.gateway.northbound.sensorthings:rest.gateway:${sensinact.version}
+org.eclipse.sensinact.gateway.northbound.sensorthings:rest.gateway:${sensinact.version}
 org.eclipse.sensinact.gateway.northbound.sensorthings:filter:${sensinact.version}
 org.eclipse.sensinact.gateway.northbound.sensorthings:mqtt:${sensinact.version}
 
@@ -66,8 +66,8 @@ org.eclipse.sensinact.gateway.southbound.mqtt:mqtt-device-factory:${sensinact.ve
 ## virtual
 org.eclipse.sensinact.gateway.southbound.virtual:virtual-temperature-sensor:${sensinact.version}
 ## history
-#org.eclipse.sensinact.gateway.southbound.history:history-api:${sensinact.version}
-#org.eclipse.sensinact.gateway.southbound.history:timescale-provider:${sensinact.version}
+org.eclipse.sensinact.gateway.southbound.history:history-api:${sensinact.version}
+org.eclipse.sensinact.gateway.southbound.history:timescale-provider:${sensinact.version}
 org.postgresql:postgresql:42.7.3
 org.apache.aries.tx-control:tx-control-service-local:1.0.1
 org.apache.aries.tx-control:tx-control-provider-jdbc-local:1.0.1
