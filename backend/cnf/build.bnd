@@ -78,6 +78,7 @@ Bundle-Version: ${broker-base-version}
   test;member=${filter;${p};.*\.*test*},\
   upd_runtime;member=${filter;${p};.*\.udp\.runtime\.*},\
   5g_runtime;member=${filter;${p};.*\.5g\.runtime\.*},\
+  civitas_runtime;member=${filter;${p};.*\.civitas\.runtime\.*},\
   icesensor;member=${filter;${p};.*\.icesensor\.*},\
   traficam;member=${filter;${p};.*\.traficam\.*},\
   ilsa;member=${filter;${p};.*\.ilsa\.*},\

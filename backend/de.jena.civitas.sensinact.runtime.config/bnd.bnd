@@ -1,0 +1,7 @@
+-resourceonly: true
+-includeresource: OSGI-INF/configurator/=configs/
+Require-Capability: \
+	osgi.extender;filter:='(osgi.extender=osgi.configurator)',\
+	osgi.implementation;filter:='(&(osgi.implementation=org.eclipse.osgitech.rest.adapter)(provider=osgi.http))'
+
+-workingset: civitas_runtime

@@ -1,0 +1,15 @@
+-include: 	de.jena.civitas.sensinact.runtime.base.bndrun,\
+			-secrets.bndrun
+
+-runbundles.local:\
+	de.jena.civitas.sensinact.runtime.config.local
+
+-runvm.localdev: -Duser.dir=${.}/generated/tmp
+ 	
+-runproperties.local: \
+	base.path=${.},\
+	logback.configurationFile=file:${.}/runtime/etc/logback.xml,\
+	gecko.log.dir=${.}/runtime/logs,\
+	org.apache.felix.configadmin.plugin.interpolation.secretsdir=${.}/runtime/secrets
+
+-runtrace: true
