@@ -109,30 +109,53 @@ pipeline  {
 
 			}
 		}
-	
-		stage('Resolve UDP Broker') {
+    
+        stage('Resolve UDP Broker') {
 
-			steps {
-				echo "I am building app on branch: ${env.GIT_BRANCH}"
+            steps {
+                echo "I am building app on branch: ${env.GIT_BRANCH}"
 
-				dir("udp/backend") {
-					sh "./gradlew :de.jena.udp.sensinact.runtime:resolve.de.jena.udp.sensinact.runtime.base --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2"
-				}
-			}
-		}
+                dir("udp/backend") {
+                    sh "./gradlew :de.jena.udp.sensinact.runtime:resolve.de.jena.udp.sensinact.runtime.base --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2"
+                }
+            }
+        }
 
-		stage('UDP Broker Export') {
-			when {
-				branch 'main'
-			}
-			steps {
-				echo "I am building app on branch: ${env.GIT_BRANCH}"
+        stage('UDP Broker Export') {
+            when {
+                branch 'main'
+            }
+            steps {
+                echo "I am building app on branch: ${env.GIT_BRANCH}"
 
-				dir("udp/backend") {
-					sh "./gradlew :de.jena.udp.sensinact.runtime:export.de.jena.udp.sensinact.runtime.docker --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2"
-				}
-			}
-		}
+                dir("udp/backend") {
+                    sh "./gradlew :de.jena.udp.sensinact.runtime:export.de.jena.udp.sensinact.runtime.docker --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2"
+                }
+            }
+        }   
+        stage('Resolve Civitas Sensinact') {
+
+            steps {
+                echo "I am building app on branch: ${env.GIT_BRANCH}"
+
+                dir("udp/backend") {
+                    sh "./gradlew :de.jena.civitas.sensinact.runtime:resolve.de.jena.civitas.sensinact.runtime.base --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2"
+                }
+            }
+        }
+
+        stage('Civitas Sensinact Export') {
+            when {
+                branch 'civitas'
+            }
+            steps {
+                echo "I am building app on branch: ${env.GIT_BRANCH}"
+
+                dir("udp/backend") {
+                    sh "./gradlew :de.jena.civitas.sensinact.runtime:export.de.jena.civitas.sensinact.runtime.docker --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2"
+                }
+            }
+        }
 
         stage('Resolve MQTT Bridge') {
 
@@ -160,7 +183,10 @@ pipeline  {
 	
 		stage('Prepare UDP Docker') {
 			when {
-				branch 'main'
+                anyOf {
+				    branch 'main';
+				    branch 'civitas'
+                }
 			}
 			steps  {
 				echo "I am preparing docker: ${env.GIT_BRANCH}"
@@ -172,6 +198,23 @@ pipeline  {
 
 		}
 
+        stage('Docker Civitas Image build'){
+            when {
+                branch 'civitas'
+            }
+
+            steps  {
+                echo "I am building and publishing a docker image on branch: ${env.GIT_BRANCH}"
+
+                step([$class: 'DockerBuilderPublisher',
+                      dockerFileDirectory: 'udp/docker/civitas',
+                            cloud: 'docker',
+                            tagsString: """devel.data-in-motion.biz:6000/civitas/sensinact:latest
+                                        devel.data-in-motion.biz:6000/civitas/sensinact-broker:0.1.0.${VERSION}""",
+                            pushOnSuccess: true,
+                            pushCredentialsId: 'dim-nexus'])
+          }
+        }
 		stage('Docker UDP Image build'){
 			when {
 				branch 'main'

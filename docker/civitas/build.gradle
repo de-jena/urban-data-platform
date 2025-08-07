@@ -1,0 +1,26 @@
+/*
+ * build Gradle build script
+ */
+
+task prepareDocker(){
+	def stageDir = file('content')
+	def runtimeDir = new File(stageDir, 'runtime')
+	doFirst {
+		stageDir.deleteDir()
+    }
+    doLast {
+		println "Prepare Docker build"
+		stageDir.mkdirs()
+	     // copy all necessary files to  build/docker/ dir
+    	copy {
+	        from new File("../../backend/de.jena.civitas.sensinact.runtime/generated/distributions/executable/de.jena.civitas.sensinact.runtime.docker.jar")
+	        into stageDir
+	        rename("de.jena.civitas.sensinact.runtime.docker.jar", "de.jena.civitas.sensinact.runtime.jar")
+	    }
+	    copy {
+	        from new File("../../backend/de.jena.civitas.sensinact.runtime/runtime/")
+	        into new File(stageDir, "runtime")
+	    }
+    }
+}
+
