@@ -1,0 +1,18 @@
+-buildpath: \
+	org.osgi.service.component.annotations,\
+	org.osgi.util.pushstream,\
+	org.osgi.util.promise,\
+	org.osgi.util.function,\
+	org.gecko.osgi.messaging,\
+	org.osgi.service.component,\
+	org.gecko.emf.json,\
+	org.eclipse.sensinact.gateway.core.models.provider;version='0.0',\
+	com.fasterxml.jackson.core.jackson-databind,\
+	com.fasterxml.jackson.core.jackson-core,\
+	org.eclipse.emfcloud.emfjson-jackson,\
+	org.eclipse.sensinact.gateway.core.geo-json,\
+	org.eclipse.sensinact.gateway.core.annotation,\
+	org.eclipse.sensinact.gateway.core.api,\
+	org.gecko.codec.constants
+	
+-library: enable-emf
