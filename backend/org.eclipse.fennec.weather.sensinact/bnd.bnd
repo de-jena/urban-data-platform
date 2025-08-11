@@ -5,6 +5,6 @@
 	org.eclipse.fennec.qvt.api,\
 	org.eclipse.fennec.weather.sensinact.model;version=snapshot,\
 	org.eclipse.sensinact.gateway.core.models.provider,\
-	org.gecko.weather.model;version='1.1',\
-	org.osgi.util.promise
+	org.osgi.util.promise,\
+	org.gecko.weather.model
 	

@@ -17,7 +17,6 @@ import org.osgi.service.component.annotations.ReferenceCardinality;
 @Component(immediate = true, name = "SensinactWeatherReportStorage")
 public class SensinactWeatherReportStorage implements WeatherReportStorageHandler<WeatherReports> {
 	
-//	private static SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHH");
 	
 	@Reference
 	private DataUpdate sensinact;
@@ -70,22 +69,5 @@ public class SensinactWeatherReportStorage implements WeatherReportStorageHandle
 	public <R extends WeatherReports> Optional<R> getReport(String reportId) {
 		throw new UnsupportedOperationException("This operation should not be relevant for sensinact, thus it is not implemented!");
 	}
-
-//	public static String createReportId(WeatherReport report) {
-//		requireNonNull(report);
-//		requireNonNull(report.getWeatherStation());
-//		requireNonNull(report.getWeatherStation().getId());
-//		requireNonNull(report.getTimestamp());
-//		String stationId = report.getWeatherStation().getId();
-//		return String.format("%s-%s", stationId, sdf.format(report.getTimestamp()));
-//	}
-//	
-//	public static void unsetAllExcept(EObject eObject, EStructuralFeature keepFeature) {
-//	    for (EStructuralFeature feature : eObject.eClass().getEAllStructuralFeatures()) {
-//	        if (!feature.equals(keepFeature)) {
-//	            eObject.eUnset(feature);
-//	        }
-//	    }
-//	}
 
 }
