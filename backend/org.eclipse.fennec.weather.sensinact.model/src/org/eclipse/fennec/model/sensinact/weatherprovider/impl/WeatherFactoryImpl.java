@@ -57,17 +57,7 @@ public class WeatherFactoryImpl extends EFactoryImpl implements WeatherFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case WeatherPackage.WEATHER_PROVIDER: return createWeatherProvider();
-			case WeatherPackage.WIND_DATA: return createWindData();
-			case WeatherPackage.CLOUD_DATA: return createCloudData();
-			case WeatherPackage.PRECIPITATION_DATA: return createPrecipitationData();
-			case WeatherPackage.TEMPERATURE_DATA: return createTemperatureData();
-			case WeatherPackage.FOG_DATA: return createFogData();
-			case WeatherPackage.SNOW_RAIN_DATA: return createSnowRainData();
-			case WeatherPackage.VISIBILITY_DATA: return createVisibilityData();
-			case WeatherPackage.PRESSURE_DATA: return createPressureData();
-			case WeatherPackage.IRRADIANCE_DATA: return createIrradianceData();
-			case WeatherPackage.WEATHER_ADMIN: return createWeatherAdmin();
-			case WeatherPackage.SIGNIFICANT_WEATHER_DATA: return createSignificantWeatherData();
+			case WeatherPackage.WEATHER_SERVICE: return createWeatherService();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -90,119 +80,9 @@ public class WeatherFactoryImpl extends EFactoryImpl implements WeatherFactory {
 	 * @generated
 	 */
 	@Override
-	public WindData createWindData() {
-		WindDataImpl windData = new WindDataImpl();
-		return windData;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public CloudData createCloudData() {
-		CloudDataImpl cloudData = new CloudDataImpl();
-		return cloudData;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public PrecipitationData createPrecipitationData() {
-		PrecipitationDataImpl precipitationData = new PrecipitationDataImpl();
-		return precipitationData;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public TemperatureData createTemperatureData() {
-		TemperatureDataImpl temperatureData = new TemperatureDataImpl();
-		return temperatureData;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public FogData createFogData() {
-		FogDataImpl fogData = new FogDataImpl();
-		return fogData;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public SnowRainData createSnowRainData() {
-		SnowRainDataImpl snowRainData = new SnowRainDataImpl();
-		return snowRainData;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public VisibilityData createVisibilityData() {
-		VisibilityDataImpl visibilityData = new VisibilityDataImpl();
-		return visibilityData;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public PressureData createPressureData() {
-		PressureDataImpl pressureData = new PressureDataImpl();
-		return pressureData;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public IrradianceData createIrradianceData() {
-		IrradianceDataImpl irradianceData = new IrradianceDataImpl();
-		return irradianceData;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public WeatherAdmin createWeatherAdmin() {
-		WeatherAdminImpl weatherAdmin = new WeatherAdminImpl();
-		return weatherAdmin;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public SignificantWeatherData createSignificantWeatherData() {
-		SignificantWeatherDataImpl significantWeatherData = new SignificantWeatherDataImpl();
-		return significantWeatherData;
+	public WeatherService createWeatherService() {
+		WeatherServiceImpl weatherService = new WeatherServiceImpl();
+		return weatherService;
 	}
 
 	/**

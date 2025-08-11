@@ -1,77 +1,64 @@
 package org.eclipse.fennec.weather.sensinact;
 
-import static java.util.Objects.isNull;
-import static java.util.Objects.requireNonNull;
 
-import java.text.SimpleDateFormat;
-import java.util.Map;
 import java.util.Optional;
-import java.util.concurrent.ConcurrentHashMap;
 
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider;
 import org.eclipse.fennec.qvt.osgi.api.ModelTransformationConstants;
 import org.eclipse.fennec.qvt.osgi.api.ModelTransformator;
 import org.eclipse.sensinact.core.push.DataUpdate;
 import org.gecko.weather.dwd.fc.WeatherReportStorageHandler;
-import org.gecko.weather.model.weather.WeatherReport;
+import org.gecko.weather.model.weather.WeatherReports;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.component.annotations.ReferenceCardinality;
 
-
 @Component(immediate = true, name = "SensinactWeatherReportStorage")
-public class SensinactWeatherReportStorage implements WeatherReportStorageHandler {
+public class SensinactWeatherReportStorage implements WeatherReportStorageHandler<WeatherReports> {
 	
-	private static SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHH");
+//	private static SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHH");
 	
 	@Reference
 	private DataUpdate sensinact;
 	
 	private ModelTransformator transformator;
 	
-	private final Map<String, WeatherReport> cache = new ConcurrentHashMap<>();
 	
 	@Activate
 	public SensinactWeatherReportStorage(@Reference(target = ("(" + ModelTransformationConstants.TRANSFORMATOR_ID + "=Weather2Sensinact)"), cardinality = ReferenceCardinality.MANDATORY) ModelTransformator modelTransformator) {
 		this.transformator = modelTransformator;
 	}
 
+
 	/* 
 	 * (non-Javadoc)
-	 * @see org.gecko.weather.dwd.fc.WeatherReportStorageHandler#saveReport(org.gecko.weather.model.weather.WeatherReport)
+	 * @see org.gecko.weather.dwd.fc.WeatherReportStorageHandler#saveReport(R)
 	 */
 	@Override
-	public <R extends WeatherReport> R saveReport(R report) {
-		requireNonNull(report);
-		if (isNull(report.getId())) {
-			String id = createReportId(report);
-			report.setId(id);
-		}
-		
-		WeatherProvider sensinactWeatherReport = transformator.doTransformation(report);
-		sensinact.pushUpdate(sensinactWeatherReport);
-		cache.put(report.getId(), report);
+	public <R extends WeatherReports> R saveReport(R report) {
+		WeatherProvider provider = transformator.doTransformation(report);
+		sensinact.pushUpdate(provider);
 		return report;
 	}
 
+
 	/* 
 	 * (non-Javadoc)
-	 * @see org.gecko.weather.dwd.fc.WeatherReportStorageHandler#updateReport(org.gecko.weather.model.weather.WeatherReport)
+	 * @see org.gecko.weather.dwd.fc.WeatherReportStorageHandler#updateReport(R)
 	 */
 	@Override
-	public <R extends WeatherReport> R updateReport(R report) {
+	public <R extends WeatherReports> R updateReport(R report) {
 		return saveReport(report);
 	}
 
+	
 	/* 
 	 * (non-Javadoc)
 	 * @see org.gecko.weather.dwd.fc.WeatherReportStorageHandler#deleteReport(java.lang.String)
 	 */
 	@Override
-	public <R extends WeatherReport> Optional<R> deleteReport(String reportId) {
+	public <R extends WeatherReports> Optional<R> deleteReport(String reportId) {
 		throw new UnsupportedOperationException("This operation should not be relevant for sensinact, thus it is not implemented!");
 	}
 
@@ -79,28 +66,26 @@ public class SensinactWeatherReportStorage implements WeatherReportStorageHandle
 	 * (non-Javadoc)
 	 * @see org.gecko.weather.dwd.fc.WeatherReportStorageHandler#getReport(java.lang.String)
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
-	public <R extends WeatherReport> Optional<R> getReport(String reportId) {
-		requireNonNull(reportId);
-		R report = (R) cache.get(reportId);
-		return Optional.ofNullable(report);
+	public <R extends WeatherReports> Optional<R> getReport(String reportId) {
+		throw new UnsupportedOperationException("This operation should not be relevant for sensinact, thus it is not implemented!");
 	}
 
-	public static String createReportId(WeatherReport report) {
-		requireNonNull(report);
-		requireNonNull(report.getWeatherStation());
-		requireNonNull(report.getWeatherStation().getId());
-		requireNonNull(report.getTimestamp());
-		String stationId = report.getWeatherStation().getId();
-		return String.format("%s-%s", stationId, sdf.format(report.getTimestamp()));
-	}
-	
-	public static void unsetAllExcept(EObject eObject, EStructuralFeature keepFeature) {
-	    for (EStructuralFeature feature : eObject.eClass().getEAllStructuralFeatures()) {
-	        if (!feature.equals(keepFeature)) {
-	            eObject.eUnset(feature);
-	        }
-	    }
-	}
+//	public static String createReportId(WeatherReport report) {
+//		requireNonNull(report);
+//		requireNonNull(report.getWeatherStation());
+//		requireNonNull(report.getWeatherStation().getId());
+//		requireNonNull(report.getTimestamp());
+//		String stationId = report.getWeatherStation().getId();
+//		return String.format("%s-%s", stationId, sdf.format(report.getTimestamp()));
+//	}
+//	
+//	public static void unsetAllExcept(EObject eObject, EStructuralFeature keepFeature) {
+//	    for (EStructuralFeature feature : eObject.eClass().getEAllStructuralFeatures()) {
+//	        if (!feature.equals(keepFeature)) {
+//	            eObject.eUnset(feature);
+//	        }
+//	    }
+//	}
+
 }

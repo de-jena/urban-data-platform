@@ -34,103 +34,13 @@ public interface WeatherFactory extends EFactory {
 	WeatherProvider createWeatherProvider();
 
 	/**
-	 * Returns a new object of class '<em>Wind Data</em>'.
+	 * Returns a new object of class '<em>Service</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Wind Data</em>'.
+	 * @return a new object of class '<em>Service</em>'.
 	 * @generated
 	 */
-	WindData createWindData();
-
-	/**
-	 * Returns a new object of class '<em>Cloud Data</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Cloud Data</em>'.
-	 * @generated
-	 */
-	CloudData createCloudData();
-
-	/**
-	 * Returns a new object of class '<em>Precipitation Data</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Precipitation Data</em>'.
-	 * @generated
-	 */
-	PrecipitationData createPrecipitationData();
-
-	/**
-	 * Returns a new object of class '<em>Temperature Data</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Temperature Data</em>'.
-	 * @generated
-	 */
-	TemperatureData createTemperatureData();
-
-	/**
-	 * Returns a new object of class '<em>Fog Data</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Fog Data</em>'.
-	 * @generated
-	 */
-	FogData createFogData();
-
-	/**
-	 * Returns a new object of class '<em>Snow Rain Data</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Snow Rain Data</em>'.
-	 * @generated
-	 */
-	SnowRainData createSnowRainData();
-
-	/**
-	 * Returns a new object of class '<em>Visibility Data</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Visibility Data</em>'.
-	 * @generated
-	 */
-	VisibilityData createVisibilityData();
-
-	/**
-	 * Returns a new object of class '<em>Pressure Data</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Pressure Data</em>'.
-	 * @generated
-	 */
-	PressureData createPressureData();
-
-	/**
-	 * Returns a new object of class '<em>Irradiance Data</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Irradiance Data</em>'.
-	 * @generated
-	 */
-	IrradianceData createIrradianceData();
-
-	/**
-	 * Returns a new object of class '<em>Admin</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Admin</em>'.
-	 * @generated
-	 */
-	WeatherAdmin createWeatherAdmin();
-
-	/**
-	 * Returns a new object of class '<em>Significant Weather Data</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Significant Weather Data</em>'.
-	 * @generated
-	 */
-	SignificantWeatherData createSignificantWeatherData();
+	WeatherService createWeatherService();
 
 	/**
 	 * Returns the package supported by this factory.

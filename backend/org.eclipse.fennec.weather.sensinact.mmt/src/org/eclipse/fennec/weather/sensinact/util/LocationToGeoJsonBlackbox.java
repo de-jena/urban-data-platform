@@ -46,7 +46,7 @@ public class LocationToGeoJsonBlackbox{
 	
 	@Operation(contextual = true, description = "Converts from UTM into degree latitude")
 	public static GeoJsonObject toGeoJson(GeoPosition l) {
-		return GeoJsonUtils.point(l.getLongitude(), l.getLatitude(), (double) l.getElevation());
+		return GeoJsonUtils.point(l.getLongitude(), l.getLatitude());
 	}
 
 }

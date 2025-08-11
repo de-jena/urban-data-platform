@@ -5,13 +5,14 @@
 		"id": "dwd.forecast",
 		"directory.type": "ByteBuffer"
 	},
-	"DWD-MOSMIX-Station~Gera": {
+	"DWD-MOSMIX-Station~Jena": {
 		"stationId": "10567",
-		"name": "Gera-Leumnitz",
-		"latitude": "50.88",
-		"longitude": "12.13"
+		"name": "Jena",
+		"latitude": "50.9271",
+		"longitude": "11.5892",
+		"reportIndex.target": "(component.name=WeatherReportIndexWithFilter)"
 	},
-	"WeatherReportIndex": {
+	"WeatherReportIndexWithFilter": {
 		"cache.target": "(component.name=SensinactWeatherReportStorage)"
 	}
 }

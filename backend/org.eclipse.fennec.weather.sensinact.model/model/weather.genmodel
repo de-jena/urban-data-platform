@@ -10,80 +10,271 @@
   <genPackages prefix="Weather" basePackage="org.eclipse.fennec.model.sensinact" resource="XMI"
       disposableProviderFactory="true" ecorePackage="weather.ecore#/">
     <genClasses ecoreClass="weather.ecore#//WeatherProvider">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference weather.ecore#//WeatherProvider/windData"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference weather.ecore#//WeatherProvider/cloudData"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference weather.ecore#//WeatherProvider/precipitationData"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference weather.ecore#//WeatherProvider/temperatureData"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference weather.ecore#//WeatherProvider/fogData"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference weather.ecore#//WeatherProvider/snowRainData"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference weather.ecore#//WeatherProvider/visibilityData"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference weather.ecore#//WeatherProvider/pressureData"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference weather.ecore#//WeatherProvider/irradianceData"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference weather.ecore#//WeatherProvider/significantWeatherData"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference weather.ecore#//WeatherProvider/currentWeather"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference weather.ecore#//WeatherProvider/forecast3H"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference weather.ecore#//WeatherProvider/forecast6H"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference weather.ecore#//WeatherProvider/forecast9H"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference weather.ecore#//WeatherProvider/forecast12H"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference weather.ecore#//WeatherProvider/forecast15H"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference weather.ecore#//WeatherProvider/forecast18H"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference weather.ecore#//WeatherProvider/forecast21H"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference weather.ecore#//WeatherProvider/forecast24H"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference weather.ecore#//WeatherProvider/forecast27H"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference weather.ecore#//WeatherProvider/forecast30H"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference weather.ecore#//WeatherProvider/forecast33H"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference weather.ecore#//WeatherProvider/forecast36H"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference weather.ecore#//WeatherProvider/forecast39H"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference weather.ecore#//WeatherProvider/forecast42H"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference weather.ecore#//WeatherProvider/forecast45H"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference weather.ecore#//WeatherProvider/forecast48H"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference weather.ecore#//WeatherProvider/forecast51H"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference weather.ecore#//WeatherProvider/forecast54H"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference weather.ecore#//WeatherProvider/forecast57H"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference weather.ecore#//WeatherProvider/forecast60H"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference weather.ecore#//WeatherProvider/forecast63H"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference weather.ecore#//WeatherProvider/forecast66H"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference weather.ecore#//WeatherProvider/forecast69H"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference weather.ecore#//WeatherProvider/forecast72H"/>
     </genClasses>
-    <genClasses ecoreClass="weather.ecore#//WindData">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WindData/windDirection"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WindData/windSpeed"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WindData/windGustLastHour"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WindData/windGustLastThreeHours"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WindData/windGustMaxLast12Hours"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WindData/windGustProb25"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WindData/windGustProb40"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WindData/windGustProb55"/>
-    </genClasses>
-    <genClasses ecoreClass="weather.ecore#//CloudData">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//CloudData/cloudCoverTotal"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//CloudData/cloudCoverBelow500"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//CloudData/cloudCoverEffective"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//CloudData/cloudCoverHigh"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//CloudData/cloudCoverMid"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//CloudData/cloudCoverLow"/>
-    </genClasses>
-    <genClasses ecoreClass="weather.ecore#//PrecipitationData">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//PrecipitationData/precipitationLarger02Last6"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//PrecipitationData/precipitationLarger50Last6"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//PrecipitationData/precipitationLarger02LastDay"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//PrecipitationData/precipitationLarger50LastDay"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//PrecipitationData/precipitationLarger00Last12"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//PrecipitationData/precipitationLarger02Last12"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//PrecipitationData/precipitationLarger10Last12"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//PrecipitationData/precipitationLarger50Last12"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//PrecipitationData/precipitationSignificantWeatherTotal"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//PrecipitationData/precipitationSignificantWeatherLast3"/>
-    </genClasses>
-    <genClasses ecoreClass="weather.ecore#//TemperatureData">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//TemperatureData/tempAboveSurface5"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//TemperatureData/tempAboveSurface200"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//TemperatureData/tempDewpointAboveSurface200"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//TemperatureData/tempMinLast12"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//TemperatureData/tempMaxLast12"/>
-    </genClasses>
-    <genClasses ecoreClass="weather.ecore#//FogData">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//FogData/fogPropLast1"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//FogData/fogPropLast6"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//FogData/fogPropLast12"/>
-    </genClasses>
-    <genClasses ecoreClass="weather.ecore#//SnowRainData">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//SnowRainData/snowRainEqLast1"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//SnowRainData/snowRainEqLast3"/>
-    </genClasses>
-    <genClasses ecoreClass="weather.ecore#//VisibilityData">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//VisibilityData/visibility"/>
-    </genClasses>
-    <genClasses ecoreClass="weather.ecore#//PressureData">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//PressureData/surfacePressure"/>
-    </genClasses>
-    <genClasses ecoreClass="weather.ecore#//IrradianceData">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//IrradianceData/irRadianceGlobal"/>
-    </genClasses>
-    <genClasses ecoreClass="weather.ecore#//WeatherAdmin">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherAdmin/weatherStationId"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherAdmin/weatherStationName"/>
-    </genClasses>
-    <genClasses ecoreClass="weather.ecore#//SignificantWeatherData">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//SignificantWeatherData/ww"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//SignificantWeatherData/w1w2_w1"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//SignificantWeatherData/w1w2_w2"/>
+    <genClasses ecoreClass="weather.ecore#//WeatherService">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/forecastedWeatherTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/windDirection">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="unit" value="°"/>
+          <details key="dwd.id" value="DD"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/windSpeed">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="unit" value="m/s"/>
+          <details key="dwd.id" value="FF"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/windGustLastHour">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="unit" value="m/s"/>
+          <details key="dwd.id" value="FX1"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/windGustLastThreeHours">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="unit" value="m/s"/>
+          <details key="dwd.id" value="FX3"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/windGustMaxLast12Hours">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="unit" value="m/s"/>
+          <details key="dwd.id" value="FXh"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/windGustProb25">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="unit" value="%"/>
+          <details key="dwd.id" value="FXh25"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/windGustProb40">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="unit" value="%"/>
+          <details key="dwd.id" value="FXh40"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/windGustProb55">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="unit" value="%"/>
+          <details key="dwd.id" value="FXh55"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/cloudCoverTotal">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="unit" value="%"/>
+          <details key="dwd.id" value="N"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/cloudCoverBelow500">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="unit" value="%"/>
+          <details key="dwd.id" value="N05"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/cloudCoverEffective">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="unit" value="%"/>
+          <details key="dwd.id" value="Neff"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/cloudCoverHigh">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="unit" value="%"/>
+          <details key="dwd.id" value="Nh"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/cloudCoverMid">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="unit" value="%"/>
+          <details key="dwd.id" value="Nm"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/cloudCoverLow">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="unit" value="%"/>
+          <details key="dwd.id" value="Nl"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/precipitationLarger02Last6">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="unit" value="%"/>
+          <details key="dwd.id" value="R602"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/precipitationLarger50Last6">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="unit" value="%"/>
+          <details key="dwd.id" value="R650"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/precipitationLarger02LastDay">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="unit" value="%"/>
+          <details key="dwd.id" value="Rd02"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/precipitationLarger50LastDay">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="unit" value="%"/>
+          <details key="dwd.id" value="Rd50"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/precipitationLarger00Last12">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="unit" value="%"/>
+          <details key="dwd.id" value="Rh00"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/precipitationLarger02Last12">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="unit" value="%"/>
+          <details key="dwd.id" value="Rh02"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/precipitationLarger10Last12">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="unit" value="%"/>
+          <details key="dwd.id" value="Rh10"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/precipitationLarger50Last12">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="unit" value="%"/>
+          <details key="dwd.id" value="Rh50"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/precipitationSignificantWeatherTotal">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="unit" value="kg/m2"/>
+          <details key="dwd.id" value="RR1c"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/precipitationSignificantWeatherLast3">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="unit" value="kg/m2"/>
+          <details key="dwd.id" value="RR3c"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/tempAboveSurface5">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="unit" value="K"/>
+          <details key="dwd.id" value="T5cm"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/tempAboveSurface200">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="unit" value="K"/>
+          <details key="dwd.id" value="TTT"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/tempDewpointAboveSurface200">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="unit" value="K"/>
+          <details key="dwd.id" value="Td"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/tempMinLast12">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="unit" value="K"/>
+          <details key="dwd.id" value="TN"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/tempMaxLast12">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="unit" value="K"/>
+          <details key="dwd.id" value="TX"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/fogPropLast1">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="unit" value="%"/>
+          <details key="dwd.id" value="wwM"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/fogPropLast6">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="unit" value="%"/>
+          <details key="dwd.id" value="wwM6"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/fogPropLast12">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="unit" value="%"/>
+          <details key="dwd.id" value="wwMh"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/snowRainEqLast1">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="unit" value="kg/m2"/>
+          <details key="dwd.id" value="RRS1c"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/snowRainEqLast3">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="unit" value="kg/m2"/>
+          <details key="dwd.id" value="RRS3c"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/visibility">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="unit" value="m"/>
+          <details key="dwd.id" value="VV"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/surfacePressure">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="unit" value="Pa"/>
+          <details key="dwd.id" value="PPPP"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/irRadianceGlobal">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="unit" value="kJ/m2"/>
+          <details key="dwd.id" value="Rad1h"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/ww">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="dwd.id" value="ww"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/w1w2_w1">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="dwd.id" value="W1 part of W1W2"/>
+        </genAnnotations>
+      </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/w1w2_w2">
+        <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="dwd.id" value="W2 part of W1W2"/>
+        </genAnnotations>
+      </genFeatures>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

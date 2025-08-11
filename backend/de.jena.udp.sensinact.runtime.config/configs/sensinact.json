@@ -9,6 +9,9 @@
     "sensinact.session.manager": {
     	"auth.policy": "ALLOW_ALL"
     },
+    "sensinact.sensorthings.northbound.rest" : {
+        "history.provider": "brokerHistory"
+    },
     "sensiNact.northbound.sensorthings.mqtt" :
 	{
 		"port" : "$[env:SENSORTHINGS_MQTT_PORT;default=$[prop:SENSORTHINGS_MQTT_PORT;default=1883]]",

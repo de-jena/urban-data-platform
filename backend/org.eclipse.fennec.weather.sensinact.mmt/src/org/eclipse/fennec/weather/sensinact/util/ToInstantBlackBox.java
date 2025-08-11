@@ -14,7 +14,9 @@
 package org.eclipse.fennec.weather.sensinact.util;
 
 import java.time.Instant;
+import java.util.Date;
 
+import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.fennec.qvt.osgi.annotations.ModuleName;
 import org.eclipse.fennec.qvt.osgi.annotations.QvtBlackbox;
 import org.eclipse.fennec.qvt.osgi.annotations.TemplatePath;
@@ -40,13 +42,21 @@ import org.osgi.service.component.annotations.Component;
 @UnitQualifiedName("org.eclipse.fennec.weather.sensinact.util.ToInstantBlackBox")
 @TemplatePath("org.eclipse.fennec.weather.sensinact.mmt/transformations/weather.qvto")
 @TransformatorId("Weather2Sensinact")
-@Module(packageURIs={WeatherPackage.eNS_URI, ProviderPackage.eNS_URI})
+@Module(packageURIs={WeatherPackage.eNS_URI, ProviderPackage.eNS_URI, EcorePackage.eNS_URI})
 public class ToInstantBlackBox {
 
 	@Operation(description = "Converts from milliseconds to Instant")
 	public Instant getInstant(Long millis) {
 		if(millis !=  null) {
 			return Instant.ofEpochMilli(millis);
+		}
+		return null;
+	}
+	
+	@Operation(description = "Converts from EDate to Instant")
+	public Instant getInstant(Date date) {
+		if(date !=  null) {
+			return Instant.ofEpochMilli(date.getTime());
 		}
 		return null;
 	}
