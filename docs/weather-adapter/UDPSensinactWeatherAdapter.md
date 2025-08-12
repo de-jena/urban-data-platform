@@ -6,9 +6,9 @@ This is the sensinact adapter for the weather info obtained from [DWD](https://w
 
 We have modeled the `MOSMIXWeatherReport` from [here](https://github.com/geckoprojects-org/org.gecko.weather/blob/snapshot/org.gecko.weather.model/model/dwd-weather.ecore) into the corresponding sensinact model, located under `org.eclipse.fennec.weather.sensinact.model`.
 
-The `MOSMIXWeatherReport` is, in sensinact terms, a `Provider`. The different data topologies (e.g. precipitation data, wind data, etc.) have been grouped into corresponding `Service`. 
+We have a `WeatherProvider` which is, in sensinact terms, a `Provider`. This has several `WeatherService`, each one representing a `MOSMIXWeatherReport`. The first one is the `currentWeather`, meaning the weather forecast for the hour immediately after the one when the forecast has been asked (e.g. if the forecast is asked at 2:30 pm, then the `currentWeather` contains the forecast for 3 pm). The other reports are the forecast in subsequent 3 hours intervals, up to 72 hours (e.g. if the forecast is asked at 2:30 pm, the `currentWeather` is for 3 pm, then the other ones are for 6 pm, 9 pm, and so on, up to 72 hours).
 
-Currently mapping features are:
+A `WeatherService` contains the following resources:
 
 + all precipitation data
 + all wind data
@@ -23,32 +23,30 @@ Currently mapping features are:
 
 ## Runtime Config
 
-We configured a `MOSMIXStation` to get the data from, like 
+The `weather.json` configuration looks like:
 
 ```json
-"DWD-MOSMIX-Station~Gera": {
+"EMFLuceneIndex~dwd-forecast": {
+		"id": "dwd.forecast",
+		"directory.type": "ByteBuffer"
+	},
+	"DWD-MOSMIX-Station~Jena": {
 		"stationId": "10567",
-		"name": "Gera-Leumnitz",
-		"latitude": "50.88",
-		"longitude": "12.13"
+		"name": "Jena",
+		"latitude": "50.9271",
+		"longitude": "11.5892",
+		"reportIndex.target": "(component.name=WeatherReportIndexWithFilter)"
+	},
+	"WeatherReportIndexWithFilter": {
+		"cache.target": "(component.name=SensinactWeatherReportStorage)"
 	}
 ```
 
-This is the DWD weather station closest to Jena. 
+where we have configured the corresponding index services, responsible of pushing the reports to sensinact, and the `DWD-MOSMIX-Station`. The coordinates are the ones for Jena, and the `stationId` is the closest weather station to Jena (which is located in Gera).
 
 The weather data is collected from this station hourly and at reboot of the application. 
 
-The results are a forecast weather report, which is available hourly for the 10 days subsequent the time of the request.
 
-## Results
-
-The results, once the application is up and running, look like this in sensinact:
-
-![](./UDPSensinactWeatherAdapterProvider.png)
-
-and, following the corresponding `DataStreams` link, among all the other resources, one should see something like:
-
-![](./UDPSensinactWeatherAdapterScreenshot.png)
 
 
 
