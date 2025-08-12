@@ -23,6 +23,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TimeZone;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -43,6 +44,7 @@ import org.eclipse.sensinact.model.core.provider.ResourceValueMetadata;
 import org.eclipse.sensinact.model.core.provider.Service;
 import org.gecko.codec.constants.CodecResourceOptions;
 import org.gecko.emf.json.annotation.RequireEMFJson;
+import org.gecko.emf.json.constants.EMFJs;
 import org.gecko.emf.osgi.constants.EMFNamespaces;
 import org.gecko.osgi.messaging.Message;
 import org.gecko.osgi.messaging.MessagingService;
@@ -76,6 +78,8 @@ public class TrafficLight {
 	private static final String TOPIC = "5g/ilsa/";
 	private static final Pattern TOPIC_PATTERN = Pattern.compile(TOPIC + "(\\w+)/(\\w+)/([A-Za-z0-9-]+)/([0-9])");
 	private static final URI TEMP_URI = URI.createFileURI("temp.json");
+	private static final Map<String, Object> EMF_CONFIG = Collections.singletonMap(EMFJs.OPTION_DATE_FORMAT,
+			"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'zzz");
 
 	@Reference(target = "(" + EMFNamespaces.EMF_CONFIGURATOR_NAME
 			+ "=EMFJson)", scope = ReferenceScope.PROTOTYPE_REQUIRED)
@@ -101,6 +105,9 @@ public class TrafficLight {
 			logger.log(Level.ERROR, "Error subscribing mqtt {0}.\n{1}", TOPIC, e);
 		}
 		logger.log(Level.INFO, "Sensinact Traffic Light started.");
+
+		logger.log(Level.INFO, "+++ default TimeZone " + TimeZone.getDefault());
+
 	}
 
 	@Deactivate
@@ -157,11 +164,10 @@ public class TrafficLight {
 		ResourceSet resourceSet = serviceObjects.getService();
 		Resource resource = resourceSet.createResource(TEMP_URI);
 		try (ByteArrayInputStream bas = new ByteArrayInputStream(message.payload().array())) {
-			resource.load(bas, Collections.emptyMap());
+			resource.load(bas, EMF_CONFIG);
 			TLSignalState signalState = (TLSignalState) resource.getContents().get(0);
 			String serviceId = signalState.getId().replace("/", "_");
-			TrafficLightDto dto = new TrafficLightDto(intersectionId, serviceId, signalState.getState());
-			dto.timestamp = signalState.getTimestamp().getTime();
+			TrafficLightDto dto = new TrafficLightDto(intersectionId, serviceId, signalState);
 			logger.log(Level.DEBUG, "push {0} {1} {2}", intersectionId, serviceId, signalState.getState());
 			Promise<?> promise = sensiNact.pushUpdate(dto);
 			promise.onFailure(e -> logger.log(Level.ERROR, "Error while pushing signal to sensinact.", e));
@@ -214,7 +220,7 @@ public class TrafficLight {
 		Service signal = services.get(serviceId);
 		EMap<ETypedElement, ResourceValueMetadata> metadata = signal.getMetadata();
 		ResourceValueMetadata md = ProviderFactory.eINSTANCE.createResourceValueMetadata();
-		md.getExtra().put("type", createMetadata(signalState.getSignalType()));
+		md.getExtra().put("type", createMetadata(signalState.getSignalType().getName()));
 		md.getExtra().put("signalGroup", createMetadata(signalState.getSignalGroup().getId()));
 		metadata.put(IlsaPackage.eINSTANCE.getSignal_Color(), md);
 	}

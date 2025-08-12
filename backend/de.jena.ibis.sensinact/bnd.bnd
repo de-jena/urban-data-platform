@@ -12,4 +12,6 @@
 	org.osgi.service.component,\
 	org.eclipse.sensinact.gateway.core.models.provider,\
 	org.eclipse.sensinact.gateway.core.geo-json,\
-	de.jena.ibis.sensinact.mmt
+	de.jena.ibis.sensinact.mmt,\
+	org.eclipse.sensinact.gateway.core.annotation,\
+	org.eclipse.sensinact.gateway.core.emf-api

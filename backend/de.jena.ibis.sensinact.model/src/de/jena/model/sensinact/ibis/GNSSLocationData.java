@@ -15,8 +15,6 @@ package de.jena.model.sensinact.ibis;
 
 import java.time.Instant;
 
-import org.eclipse.sensinact.model.core.provider.Service;
-
 import org.osgi.annotation.versioning.ProviderType;
 
 /**
@@ -30,7 +28,6 @@ import org.osgi.annotation.versioning.ProviderType;
  * <ul>
  *   <li>{@link de.jena.model.sensinact.ibis.GNSSLocationData#getServiceName <em>Service Name</em>}</li>
  *   <li>{@link de.jena.model.sensinact.ibis.GNSSLocationData#getServiceOperation <em>Service Operation</em>}</li>
- *   <li>{@link de.jena.model.sensinact.ibis.GNSSLocationData#getTimestamp <em>Timestamp</em>}</li>
  *   <li>{@link de.jena.model.sensinact.ibis.GNSSLocationData#getDate <em>Date</em>}</li>
  *   <li>{@link de.jena.model.sensinact.ibis.GNSSLocationData#getTime <em>Time</em>}</li>
  *   <li>{@link de.jena.model.sensinact.ibis.GNSSLocationData#getLatitudeDegree <em>Latitude Degree</em>}</li>
@@ -54,7 +51,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-public interface GNSSLocationData extends Service {
+public interface GNSSLocationData extends IbisResource {
 	/**
 	 * Returns the value of the '<em><b>Service Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -98,28 +95,6 @@ public interface GNSSLocationData extends Service {
 	 * @generated
 	 */
 	void setServiceOperation(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Timestamp</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Timestamp</em>' attribute.
-	 * @see #setTimestamp(Instant)
-	 * @see de.jena.model.sensinact.ibis.IbisSensinactPackage#getGNSSLocationData_Timestamp()
-	 * @model dataType="org.eclipse.sensinact.model.core.provider.EInstant"
-	 * @generated
-	 */
-	Instant getTimestamp();
-
-	/**
-	 * Sets the value of the '{@link de.jena.model.sensinact.ibis.GNSSLocationData#getTimestamp <em>Timestamp</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Timestamp</em>' attribute.
-	 * @see #getTimestamp()
-	 * @generated
-	 */
-	void setTimestamp(Instant value);
 
 	/**
 	 * Returns the value of the '<em><b>Date</b></em>' attribute.

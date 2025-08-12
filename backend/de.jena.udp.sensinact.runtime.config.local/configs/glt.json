@@ -14,7 +14,7 @@
             17170438
         ],
         "interval": "1",
-        "back": 1440
+        "back": 2880
     },
     "GltOpenApi~glt": {
         "url": "https://glt.jena.de/rest/v1",

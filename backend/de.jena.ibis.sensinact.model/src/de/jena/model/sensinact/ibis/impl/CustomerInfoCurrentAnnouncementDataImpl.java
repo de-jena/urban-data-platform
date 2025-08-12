@@ -16,8 +16,6 @@ package de.jena.model.sensinact.ibis.impl;
 import de.jena.model.sensinact.ibis.CustomerInfoCurrentAnnouncementData;
 import de.jena.model.sensinact.ibis.IbisSensinactPackage;
 
-import java.time.Instant;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -30,8 +28,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
-import org.eclipse.sensinact.model.core.provider.impl.ServiceImpl;
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Customer Info Current Announcement Data</b></em>'.
@@ -42,7 +38,6 @@ import org.eclipse.sensinact.model.core.provider.impl.ServiceImpl;
  * <ul>
  *   <li>{@link de.jena.model.sensinact.ibis.impl.CustomerInfoCurrentAnnouncementDataImpl#getServiceName <em>Service Name</em>}</li>
  *   <li>{@link de.jena.model.sensinact.ibis.impl.CustomerInfoCurrentAnnouncementDataImpl#getServiceOperation <em>Service Operation</em>}</li>
- *   <li>{@link de.jena.model.sensinact.ibis.impl.CustomerInfoCurrentAnnouncementDataImpl#getTimestamp <em>Timestamp</em>}</li>
  *   <li>{@link de.jena.model.sensinact.ibis.impl.CustomerInfoCurrentAnnouncementDataImpl#getAnnouncementRef <em>Announcement Ref</em>}</li>
  *   <li>{@link de.jena.model.sensinact.ibis.impl.CustomerInfoCurrentAnnouncementDataImpl#getAnnouncementText <em>Announcement Text</em>}</li>
  *   <li>{@link de.jena.model.sensinact.ibis.impl.CustomerInfoCurrentAnnouncementDataImpl#getAnnouncementTTSText <em>Announcement TTS Text</em>}</li>
@@ -50,7 +45,7 @@ import org.eclipse.sensinact.model.core.provider.impl.ServiceImpl;
  *
  * @generated
  */
-public class CustomerInfoCurrentAnnouncementDataImpl extends ServiceImpl implements CustomerInfoCurrentAnnouncementData {
+public class CustomerInfoCurrentAnnouncementDataImpl extends IbisResourceImpl implements CustomerInfoCurrentAnnouncementData {
 	/**
 	 * The default value of the '{@link #getServiceName() <em>Service Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -90,26 +85,6 @@ public class CustomerInfoCurrentAnnouncementDataImpl extends ServiceImpl impleme
 	 * @ordered
 	 */
 	protected String serviceOperation = SERVICE_OPERATION_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getTimestamp() <em>Timestamp</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTimestamp()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Instant TIMESTAMP_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getTimestamp() <em>Timestamp</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTimestamp()
-	 * @generated
-	 * @ordered
-	 */
-	protected Instant timestamp = TIMESTAMP_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getAnnouncementRef() <em>Announcement Ref</em>}' attribute.
@@ -222,29 +197,6 @@ public class CustomerInfoCurrentAnnouncementDataImpl extends ServiceImpl impleme
 	 * @generated
 	 */
 	@Override
-	public Instant getTimestamp() {
-		return timestamp;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setTimestamp(Instant newTimestamp) {
-		Instant oldTimestamp = timestamp;
-		timestamp = newTimestamp;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IbisSensinactPackage.CUSTOMER_INFO_CURRENT_ANNOUNCEMENT_DATA__TIMESTAMP, oldTimestamp, timestamp));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String getAnnouncementRef() {
 		return announcementRef;
 	}
@@ -300,8 +252,6 @@ public class CustomerInfoCurrentAnnouncementDataImpl extends ServiceImpl impleme
 				return getServiceName();
 			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_ANNOUNCEMENT_DATA__SERVICE_OPERATION:
 				return getServiceOperation();
-			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_ANNOUNCEMENT_DATA__TIMESTAMP:
-				return getTimestamp();
 			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_ANNOUNCEMENT_DATA__ANNOUNCEMENT_REF:
 				return getAnnouncementRef();
 			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_ANNOUNCEMENT_DATA__ANNOUNCEMENT_TEXT:
@@ -326,9 +276,6 @@ public class CustomerInfoCurrentAnnouncementDataImpl extends ServiceImpl impleme
 				return;
 			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_ANNOUNCEMENT_DATA__SERVICE_OPERATION:
 				setServiceOperation((String)newValue);
-				return;
-			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_ANNOUNCEMENT_DATA__TIMESTAMP:
-				setTimestamp((Instant)newValue);
 				return;
 			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_ANNOUNCEMENT_DATA__ANNOUNCEMENT_REF:
 				setAnnouncementRef((String)newValue);
@@ -359,9 +306,6 @@ public class CustomerInfoCurrentAnnouncementDataImpl extends ServiceImpl impleme
 			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_ANNOUNCEMENT_DATA__SERVICE_OPERATION:
 				setServiceOperation(SERVICE_OPERATION_EDEFAULT);
 				return;
-			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_ANNOUNCEMENT_DATA__TIMESTAMP:
-				setTimestamp(TIMESTAMP_EDEFAULT);
-				return;
 			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_ANNOUNCEMENT_DATA__ANNOUNCEMENT_REF:
 				setAnnouncementRef(ANNOUNCEMENT_REF_EDEFAULT);
 				return;
@@ -387,8 +331,6 @@ public class CustomerInfoCurrentAnnouncementDataImpl extends ServiceImpl impleme
 				return SERVICE_NAME_EDEFAULT == null ? serviceName != null : !SERVICE_NAME_EDEFAULT.equals(serviceName);
 			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_ANNOUNCEMENT_DATA__SERVICE_OPERATION:
 				return SERVICE_OPERATION_EDEFAULT == null ? serviceOperation != null : !SERVICE_OPERATION_EDEFAULT.equals(serviceOperation);
-			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_ANNOUNCEMENT_DATA__TIMESTAMP:
-				return TIMESTAMP_EDEFAULT == null ? timestamp != null : !TIMESTAMP_EDEFAULT.equals(timestamp);
 			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_ANNOUNCEMENT_DATA__ANNOUNCEMENT_REF:
 				return ANNOUNCEMENT_REF_EDEFAULT == null ? announcementRef != null : !ANNOUNCEMENT_REF_EDEFAULT.equals(announcementRef);
 			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_ANNOUNCEMENT_DATA__ANNOUNCEMENT_TEXT:
@@ -413,8 +355,6 @@ public class CustomerInfoCurrentAnnouncementDataImpl extends ServiceImpl impleme
 		result.append(serviceName);
 		result.append(", serviceOperation: ");
 		result.append(serviceOperation);
-		result.append(", timestamp: ");
-		result.append(timestamp);
 		result.append(", announcementRef: ");
 		result.append(announcementRef);
 		result.append(", announcementText: ");
