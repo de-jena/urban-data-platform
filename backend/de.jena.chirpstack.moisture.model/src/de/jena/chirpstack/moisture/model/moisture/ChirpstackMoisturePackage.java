@@ -670,6 +670,15 @@ public interface ChirpstackMoisturePackage extends org.eclipse.emf.ecore.EPackag
 	int MOISTURE_ADMIN__FRIENDLY_NAME = ProviderPackage.ADMIN__FRIENDLY_NAME;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOISTURE_ADMIN__DESCRIPTION = ProviderPackage.ADMIN__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Location</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

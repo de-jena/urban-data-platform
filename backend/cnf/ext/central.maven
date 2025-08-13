@@ -136,3 +136,12 @@ org.apache.aries.typedevent:org.apache.aries.typedevent.bus:1.0.1
 org.apache.aries.component-dsl:org.apache.aries.component-dsl.component-dsl:1.2.2
 org.apache.felix:org.apache.felix.configadmin.plugin.interpolation:1.2.8
 org.apache.felix:org.apache.felix.scr:2.2.12
+
+#Scheduler
+biz.aQute:biz.aQute.api.scheduler:1.11.0-SNAPSHOT
+biz.aQute:biz.aQute.scheduler.basic.provider:1.11.0-SNAPSHOT
+biz.aQute:biz.aQute.gogo.commands.provider:1.11.0-SNAPSHOT
+
+#time4j
+net.time4j:time4j-calendar:4.38
+net.time4j:time4j-base:5.9.4

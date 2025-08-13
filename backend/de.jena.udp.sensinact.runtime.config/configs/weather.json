@@ -1,0 +1,18 @@
+{
+	":configurator:resource-version": 1,
+	
+	"EMFLuceneIndex~dwd-forecast": {
+		"id": "dwd.forecast",
+		"directory.type": "ByteBuffer"
+	},
+	"DWD-MOSMIX-Station~Jena": {
+		"stationId": "10567",
+		"name": "Jena",
+		"latitude": "50.9271",
+		"longitude": "11.5892",
+		"reportIndex.target": "(component.name=WeatherReportIndexWithFilter)"
+	},
+	"WeatherReportIndexWithFilter": {
+		"cache.target": "(component.name=SensinactWeatherReportStorage)"
+	}
+}

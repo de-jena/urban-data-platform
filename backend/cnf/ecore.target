@@ -12,6 +12,9 @@
 		<location type="BndRepositoryLocation">
 			<repository name="DIM_Nexus_Release"/>
 		</location>
+		<location type="BndRepositoryLocation">
+			<repository name="Local"/>
+		</location>
 	</locations>
 	<environment>
 		<arch>x86_64</arch>

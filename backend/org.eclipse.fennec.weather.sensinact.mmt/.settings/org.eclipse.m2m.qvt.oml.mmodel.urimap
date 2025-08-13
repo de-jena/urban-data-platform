@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ASCII"?>
+<uriMap:MappingContainer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:uriMap="http:///www.eclipse.org/m2m/qvt/oml/MModelUriMap/1.0.0">
+  <mapping sourceURI="https://fennec.eclipse.org/sensinact/weather/1.0" targetURI="platform:/resource/org.eclipse.fennec.weather.sensinact.model/model/weather.ecore"/>
+  <mapping sourceURI="http://cdc.dwd.de/common/weather" targetURI="platform:/resource/org.gecko.weather.model/model/dwd-weather.ecore"/>
+  <mapping sourceURI="https://eclipse.org/sensinact/core/provider/1.0" targetURI="platform:/resource/org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore"/>
+  
+</uriMap:MappingContainer>

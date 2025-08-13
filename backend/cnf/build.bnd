@@ -45,7 +45,9 @@ javac.debug:  on
 	geckoUtil,\
 	fennecQVT,\
 	jakartaREST,\
-	geckoMessaging
+	geckoMessaging,\
+	geckoEMFModels,\
+	geckoSearch
 	
 # This can be replaced, as soon as we have the latest release figuered out
 #	geckoSearch
@@ -84,5 +86,6 @@ Bundle-Version: ${broker-base-version}
   trafficos;member=${filter;${p};.*\.trafficos\.*},\
   ibis;member=${filter;${p};.*\.ibis\.*},\
   glt;member=${filter;${p};.*\.glt\.*},\
-  dashboard;member=${filter;${p};.*\.dashboard\.*}
+  dashboard;member=${filter;${p};.*\.dashboard\.*},\
+  weather;member=${filter;${p};.*\.weather\.*}
   

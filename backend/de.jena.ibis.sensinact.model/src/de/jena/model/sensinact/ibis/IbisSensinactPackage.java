@@ -1869,6 +1869,15 @@ public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	int IBIS_ADMIN__FRIENDLY_NAME = ProviderPackage.ADMIN__FRIENDLY_NAME;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBIS_ADMIN__DESCRIPTION = ProviderPackage.ADMIN__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Location</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

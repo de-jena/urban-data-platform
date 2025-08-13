@@ -12,5 +12,6 @@
 			"{\"resource\": {\"value\": \"objects\",\"type\":\"EXACT\"}} ",
 			"{\"resource\": {\"value\": \"viewport\",\"type\":\"EXACT\"}} "
 		]
+		
 	}
 }

@@ -1,0 +1,10 @@
+-library: enable-emf
+-buildpath: \
+	org.gecko.weather.dwd.forecast,\
+	org.eclipse.sensinact.gateway.core.api,\
+	org.eclipse.fennec.qvt.api,\
+	org.eclipse.fennec.weather.sensinact.model;version=snapshot,\
+	org.eclipse.sensinact.gateway.core.models.provider,\
+	org.osgi.util.promise,\
+	org.gecko.weather.model
+	
