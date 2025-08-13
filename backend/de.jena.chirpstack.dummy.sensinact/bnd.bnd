@@ -1,0 +1,24 @@
+
+Require-Capability: \
+	osgi.extender;filter:='(osgi.extender=osgi.configurator)',\
+	osgi.implementation;filter:='(&(osgi.implementation=osgi.cm)(version>=1.6.0)(!(version>=2.0.0)))'
+-buildpath: \
+	org.osgi.service.cm,\
+	org.osgi.service.component.annotations,\
+	org.osgi.service.metatype.annotations,\
+	org.osgi.service.typedevent,\
+	org.osgi.util.function,\
+	org.osgi.util.promise,\
+	de.jena.chirpstack.dummymoisture.model,\
+	org.eclipse.emf.common,\
+	org.eclipse.emf.ecore,\
+	org.gecko.emf.osgi.api,\
+	org.eclipse.sensinact.gateway.core.api,\
+	org.eclipse.sensinact.gateway.core.annotation,\
+	org.eclipse.sensinact.gateway.core.models.provider,\
+	org.eclipse.sensinact.gateway.core.geo-json,\
+	com.fasterxml.jackson.core.jackson-databind,\
+	com.fasterxml.jackson.core.jackson-core,\
+	com.fasterxml.jackson.core.jackson-annotations,\
+	org.osgi.framework,\
+	org.osgi.service.component

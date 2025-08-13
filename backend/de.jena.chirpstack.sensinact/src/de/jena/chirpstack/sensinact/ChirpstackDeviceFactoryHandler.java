@@ -38,7 +38,7 @@ import org.osgi.util.promise.Promise;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage;
+import de.jena.chirpstack.model.chirpstack.ChirpstackPackage;
 
 /**
  * Generic reflective ChirpStack MQTT device factory handler that uses EMF model annotations
@@ -62,7 +62,7 @@ public class ChirpstackDeviceFactoryHandler implements IMqttMessageListener {
     private ObjectMapper objectMapper = new ObjectMapper();
     
     @Reference
-    private ChirpstackMoisturePackage moisturePackage;
+    private ChirpstackPackage chirpstackPackage;
     
     private EClass providerEClass = ProviderPackage.eINSTANCE.getProvider();
 //    private EClass serviceEClass = ProviderPackage.eINSTANCE.getService();
@@ -131,7 +131,7 @@ public class ChirpstackDeviceFactoryHandler implements IMqttMessageListener {
             }
 
             // Create provider instance and populate it reflectively
-            Provider providerInstance = (Provider) moisturePackage.getChirpstackMoistureFactory().create(providerClass.get());
+            Provider providerInstance = (Provider) chirpstackPackage.getChirpstackFactory().create(providerClass.get());
             populateProviderFromJson(providerInstance, payload);
 
             // Set provider ID and location
@@ -167,7 +167,7 @@ public class ChirpstackDeviceFactoryHandler implements IMqttMessageListener {
 	 * "name"
 	 */
 	private Optional<EClass> findProviderClassByName(String deviceProfileName) {
-		return moisturePackage.getEClassifiers().stream().filter(EClass.class::isInstance)//
+		return chirpstackPackage.getEClassifiers().stream().filter(EClass.class::isInstance)//
 				.map(EClass.class::cast) //
 				.filter(e -> hasSuperType(providerEClass, e)) //
 				.filter((Predicate<? super EClass>) ec -> {
@@ -188,7 +188,7 @@ public class ChirpstackDeviceFactoryHandler implements IMqttMessageListener {
         for (EReference reference : providerClass.getEReferences()) {
             if (reference.isContainment()) {
                 EClass serviceClass = (EClass) reference.getEType();
-                EObject serviceInstance = moisturePackage.getChirpstackMoistureFactory().create(serviceClass);
+                EObject serviceInstance = chirpstackPackage.getChirpstackFactory().create(serviceClass);
                 populateServiceFromJson(serviceInstance, payload);
                 provider.eSet(reference, serviceInstance);
                 logger.log(Level.DEBUG, "Created and populated service {0} for provider {1}", 

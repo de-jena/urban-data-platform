@@ -12,7 +12,7 @@ Test-Cases: ${classes;HIERARCHY_INDIRECTLY_ANNOTATED;org.junit.platform.commons.
 	com.fasterxml.jackson.core.jackson-databind,\
 	com.fasterxml.jackson.core.jackson-core,\
 	com.fasterxml.jackson.core.jackson-annotations,\
-	de.jena.chirpstack.moisture.model,\
+	de.jena.chirpstack.model,\
 	org.eclipse.emf.ecore,\
 	org.eclipse.emf.common,\
 	org.gecko.emf.osgi.api
