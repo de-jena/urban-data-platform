@@ -4,14 +4,13 @@
 Require-Capability: osgi.extender;filter:='(osgi.extender=osgi.configurator)'
 	
 -buildpath: \
-	org.eclipse.m2m.qvt.oml,\
+	org.osgi.service.condition,\
 	org.osgi.service.component.annotations;version=latest,\
+	org.eclipse.m2m.qvt.oml,\
 	org.eclipse.fennec.qvt.api,\
 	org.eclipse.sensinact.gateway.core.geo-json,\
-	org.osgi.service.condition,\
-	com.fasterxml.jackson.core.jackson-annotations;version=latest,\
-	org.eclipse.fennec.weather.sensinact.model;version=snapshot,\
 	org.eclipse.sensinact.gateway.core.models.provider,\
+	org.eclipse.fennec.weather.sensinact.model;version=snapshot,\
 	org.gecko.weather.model
 	
 -library: enable-emf

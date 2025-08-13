@@ -80,7 +80,6 @@
 	bnd.identity;id='org.apache.felix.gogo.shell',\
 	bnd.identity;id='org.apache.felix.gogo.command',\
 	bnd.identity;id='de.jena.sensinact.mqtt.5g.topic.bridge',\
-	bnd.identity;id='de.jena.chirpstack.moisture.model',\
 	bnd.identity;id='de.jena.icesensor.model',\
 	bnd.identity;id='de.jena.traficam.model',\
 	bnd.identity;id='de.jena.ttn.model',\
@@ -100,4 +99,6 @@
 	bnd.identity;id='de.jena.udp.trafficos.trafficlight.model',\
 	bnd.identity;id='org.apache.felix.configadmin',\
 	bnd.identity;id='org.apache.felix.configadmin.plugin.interpolation',\
-	bnd.identity;id='org.gecko.adapter.mqtt'
+	bnd.identity;id='org.gecko.adapter.mqtt',\
+	bnd.identity;id='de.jena.chirpstack.model',\
+	bnd.identity;id='de.jena.chirpstack.dummymoisture.model'
