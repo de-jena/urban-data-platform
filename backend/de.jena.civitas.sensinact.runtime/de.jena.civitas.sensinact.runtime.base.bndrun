@@ -174,7 +174,8 @@
 -runblacklist: \
 	bnd.identity;id='de.jena.icesensor.websocket',\
 	bnd.identity;id='jakarta.servlet-api';version:Version='5.0.0',\
-	bnd.identity;id='slf4j.simple'
+	bnd.identity;id='slf4j.simple',\
+	bnd.identity;id='net.opengis.wfs2.model'
 
 -runpath.slf4j: ${slf4j.runpath}
 -runsystempackages.slf4j: ${slf4j.systempackages}
