@@ -75,9 +75,9 @@ public class ChirpstackMoistureFactoryImpl extends EFactoryImpl implements Chirp
 			case ChirpstackMoisturePackage.MOISTURE_SENSOR: return createMoistureSensor();
 			case ChirpstackMoisturePackage.MOISTURE_STATUS: return createMoistureStatus();
 			case ChirpstackMoisturePackage.MOISTURE_ADMIN: return createMoistureAdmin();
+			case ChirpstackMoisturePackage.SENSE_CAP_S2120: return createSenseCapS2120();
+			case ChirpstackMoisturePackage.SENSE_CAP_S2105: return createSenseCapS2105();
 			case ChirpstackMoisturePackage.SENSE_CAP: return createSenseCap();
-			case ChirpstackMoisturePackage.SENSE_CAP2: return createSenseCap2();
-			case ChirpstackMoisturePackage.SENSE_CAP3: return createSenseCap3();
 			case ChirpstackMoisturePackage.AIR: return createAir();
 			case ChirpstackMoisturePackage.RAIN: return createRain();
 			case ChirpstackMoisturePackage.LIGHT: return createLight();
@@ -87,6 +87,8 @@ public class ChirpstackMoistureFactoryImpl extends EFactoryImpl implements Chirp
 			case ChirpstackMoisturePackage.TRASH: return createTrash();
 			case ChirpstackMoisturePackage.SN50: return createSN50();
 			case ChirpstackMoisturePackage.SN: return createSN();
+			case ChirpstackMoisturePackage.SOLIDOS_TEROS21: return createSolidosTeros21();
+			case ChirpstackMoisturePackage.TEROS21: return createTeros21();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -205,31 +207,31 @@ public class ChirpstackMoistureFactoryImpl extends EFactoryImpl implements Chirp
 	 * @generated
 	 */
 	@Override
+	public SenseCapS2120 createSenseCapS2120() {
+		SenseCapS2120Impl senseCapS2120 = new SenseCapS2120Impl();
+		return senseCapS2120;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public SenseCapS2105 createSenseCapS2105() {
+		SenseCapS2105Impl senseCapS2105 = new SenseCapS2105Impl();
+		return senseCapS2105;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public SenseCap createSenseCap() {
 		SenseCapImpl senseCap = new SenseCapImpl();
 		return senseCap;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public SenseCap2 createSenseCap2() {
-		SenseCap2Impl senseCap2 = new SenseCap2Impl();
-		return senseCap2;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public SenseCap3 createSenseCap3() {
-		SenseCap3Impl senseCap3 = new SenseCap3Impl();
-		return senseCap3;
 	}
 
 	/**
@@ -329,6 +331,28 @@ public class ChirpstackMoistureFactoryImpl extends EFactoryImpl implements Chirp
 	public SN createSN() {
 		SNImpl sn = new SNImpl();
 		return sn;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public SolidosTeros21 createSolidosTeros21() {
+		SolidosTeros21Impl solidosTeros21 = new SolidosTeros21Impl();
+		return solidosTeros21;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Teros21 createTeros21() {
+		Teros21Impl teros21 = new Teros21Impl();
+		return teros21;
 	}
 
 	/**

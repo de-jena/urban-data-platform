@@ -30,7 +30,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * </ul>
  *
  * @see de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage#getEM310()
- * @model annotation="model name='EM310-UDL'"
+ * @model annotation="model name='EM310-UDL' profileId='1e6d47f7-1432-4c83-b48d-dd34a7e5e9c6'"
  * @generated
  */
 @ProviderType

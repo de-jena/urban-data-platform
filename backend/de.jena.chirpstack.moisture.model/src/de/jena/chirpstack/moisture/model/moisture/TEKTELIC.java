@@ -30,7 +30,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * </ul>
  *
  * @see de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage#getTEKTELIC()
- * @model annotation="model name='TEKTELIC KIWI Agriculture Sensor'"
+ * @model annotation="model name='TEKTELIC_KIWI_Agriculture_Sensor' profileName='TEKTELIC KIWI Agriculture Sensor' profileId='93f37439-1425-4a5f-a7e7-7eb4b75f1936'"
  * @generated
  */
 @ProviderType

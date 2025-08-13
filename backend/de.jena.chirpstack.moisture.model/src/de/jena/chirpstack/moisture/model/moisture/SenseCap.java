@@ -32,7 +32,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * </ul>
  *
  * @see de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage#getSenseCap()
- * @model annotation="model name='SenseCAP S2120 8-in-1 LoRaWAN Wetterstation'"
+ * @model annotation="model name='SenseCAP_Wetterstation_2_0' profileName='SenseCAP Wetterstation 2.0' profileId='6a1cea0-c82d-4261-b32c-cf4d2e1f97fb'"
  * @generated
  */
 @ProviderType

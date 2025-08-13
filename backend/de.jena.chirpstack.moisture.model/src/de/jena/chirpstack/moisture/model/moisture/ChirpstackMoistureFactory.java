@@ -99,6 +99,24 @@ public interface ChirpstackMoistureFactory extends EFactory {
 	MoistureAdmin createMoistureAdmin();
 
 	/**
+	 * Returns a new object of class '<em>Sense Cap S2120</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Sense Cap S2120</em>'.
+	 * @generated
+	 */
+	SenseCapS2120 createSenseCapS2120();
+
+	/**
+	 * Returns a new object of class '<em>Sense Cap S2105</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Sense Cap S2105</em>'.
+	 * @generated
+	 */
+	SenseCapS2105 createSenseCapS2105();
+
+	/**
 	 * Returns a new object of class '<em>Sense Cap</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -106,24 +124,6 @@ public interface ChirpstackMoistureFactory extends EFactory {
 	 * @generated
 	 */
 	SenseCap createSenseCap();
-
-	/**
-	 * Returns a new object of class '<em>Sense Cap2</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Sense Cap2</em>'.
-	 * @generated
-	 */
-	SenseCap2 createSenseCap2();
-
-	/**
-	 * Returns a new object of class '<em>Sense Cap3</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Sense Cap3</em>'.
-	 * @generated
-	 */
-	SenseCap3 createSenseCap3();
 
 	/**
 	 * Returns a new object of class '<em>Air</em>'.
@@ -205,6 +205,24 @@ public interface ChirpstackMoistureFactory extends EFactory {
 	 * @generated
 	 */
 	SN createSN();
+
+	/**
+	 * Returns a new object of class '<em>Solidos Teros21</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Solidos Teros21</em>'.
+	 * @generated
+	 */
+	SolidosTeros21 createSolidosTeros21();
+
+	/**
+	 * Returns a new object of class '<em>Teros21</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Teros21</em>'.
+	 * @generated
+	 */
+	Teros21 createTeros21();
 
 	/**
 	 * Returns the package supported by this factory.

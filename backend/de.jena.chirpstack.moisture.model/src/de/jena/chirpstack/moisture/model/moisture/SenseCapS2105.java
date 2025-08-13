@@ -19,38 +19,38 @@ import org.osgi.annotation.versioning.ProviderType;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Sense Cap3</b></em>'.
+ * A representation of the model object '<em><b>Sense Cap S2105</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link de.jena.chirpstack.moisture.model.moisture.SenseCap3#getAir <em>Air</em>}</li>
- *   <li>{@link de.jena.chirpstack.moisture.model.moisture.SenseCap3#getRain <em>Rain</em>}</li>
- *   <li>{@link de.jena.chirpstack.moisture.model.moisture.SenseCap3#getLight <em>Light</em>}</li>
+ *   <li>{@link de.jena.chirpstack.moisture.model.moisture.SenseCapS2105#getAir <em>Air</em>}</li>
+ *   <li>{@link de.jena.chirpstack.moisture.model.moisture.SenseCapS2105#getRain <em>Rain</em>}</li>
+ *   <li>{@link de.jena.chirpstack.moisture.model.moisture.SenseCapS2105#getLight <em>Light</em>}</li>
  * </ul>
  *
- * @see de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage#getSenseCap3()
- * @model annotation="model name='SenseCAP_Wetterstation_2_0'"
+ * @see de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage#getSenseCapS2105()
+ * @model annotation="model name='SenseCAP_S2105-LoRaWAN_Soil_Moisture_Temperature_and_EC_Sensor' profileName='SenseCAP S2105-LoRaWAN\256 Soil Moisture, Temperature and EC Sensor' profileId='f74bb315-56ca-48c0-82f8-f7b837f4d917'"
  * @generated
  */
 @ProviderType
-public interface SenseCap3 extends Provider {
+public interface SenseCapS2105 extends Provider {
 	/**
 	 * Returns the value of the '<em><b>Air</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Air</em>' containment reference.
 	 * @see #setAir(Air)
-	 * @see de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage#getSenseCap3_Air()
+	 * @see de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage#getSenseCapS2105_Air()
 	 * @model containment="true"
 	 * @generated
 	 */
 	Air getAir();
 
 	/**
-	 * Sets the value of the '{@link de.jena.chirpstack.moisture.model.moisture.SenseCap3#getAir <em>Air</em>}' containment reference.
+	 * Sets the value of the '{@link de.jena.chirpstack.moisture.model.moisture.SenseCapS2105#getAir <em>Air</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Air</em>' containment reference.
@@ -65,14 +65,14 @@ public interface SenseCap3 extends Provider {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Rain</em>' containment reference.
 	 * @see #setRain(Rain)
-	 * @see de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage#getSenseCap3_Rain()
+	 * @see de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage#getSenseCapS2105_Rain()
 	 * @model containment="true"
 	 * @generated
 	 */
 	Rain getRain();
 
 	/**
-	 * Sets the value of the '{@link de.jena.chirpstack.moisture.model.moisture.SenseCap3#getRain <em>Rain</em>}' containment reference.
+	 * Sets the value of the '{@link de.jena.chirpstack.moisture.model.moisture.SenseCapS2105#getRain <em>Rain</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Rain</em>' containment reference.
@@ -87,14 +87,14 @@ public interface SenseCap3 extends Provider {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Light</em>' containment reference.
 	 * @see #setLight(Light)
-	 * @see de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage#getSenseCap3_Light()
+	 * @see de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage#getSenseCapS2105_Light()
 	 * @model containment="true"
 	 * @generated
 	 */
 	Light getLight();
 
 	/**
-	 * Sets the value of the '{@link de.jena.chirpstack.moisture.model.moisture.SenseCap3#getLight <em>Light</em>}' containment reference.
+	 * Sets the value of the '{@link de.jena.chirpstack.moisture.model.moisture.SenseCapS2105#getLight <em>Light</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Light</em>' containment reference.
@@ -103,4 +103,4 @@ public interface SenseCap3 extends Provider {
 	 */
 	void setLight(Light value);
 
-} // SenseCap3
+} // SenseCapS2105

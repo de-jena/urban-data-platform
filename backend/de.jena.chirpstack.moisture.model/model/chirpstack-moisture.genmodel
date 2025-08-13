@@ -56,20 +56,20 @@
     <genClasses ecoreClass="chirpstack-moisture.ecore#//MoistureAdmin">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack-moisture.ecore#//MoistureAdmin/soilType"/>
     </genClasses>
+    <genClasses ecoreClass="chirpstack-moisture.ecore#//SenseCapS2120">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack-moisture.ecore#//SenseCapS2120/air"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack-moisture.ecore#//SenseCapS2120/rain"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack-moisture.ecore#//SenseCapS2120/light"/>
+    </genClasses>
+    <genClasses ecoreClass="chirpstack-moisture.ecore#//SenseCapS2105">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack-moisture.ecore#//SenseCapS2105/air"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack-moisture.ecore#//SenseCapS2105/rain"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack-moisture.ecore#//SenseCapS2105/light"/>
+    </genClasses>
     <genClasses ecoreClass="chirpstack-moisture.ecore#//SenseCap">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack-moisture.ecore#//SenseCap/air"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack-moisture.ecore#//SenseCap/rain"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack-moisture.ecore#//SenseCap/light"/>
-    </genClasses>
-    <genClasses ecoreClass="chirpstack-moisture.ecore#//SenseCap2">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack-moisture.ecore#//SenseCap2/air"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack-moisture.ecore#//SenseCap2/rain"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack-moisture.ecore#//SenseCap2/light"/>
-    </genClasses>
-    <genClasses ecoreClass="chirpstack-moisture.ecore#//SenseCap3">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack-moisture.ecore#//SenseCap3/air"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack-moisture.ecore#//SenseCap3/rain"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack-moisture.ecore#//SenseCap3/light"/>
     </genClasses>
     <genClasses ecoreClass="chirpstack-moisture.ecore#//Air">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack-moisture.ecore#//Air/airTemperature"/>
@@ -113,6 +113,16 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack-moisture.ecore#//SN/battery"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack-moisture.ecore#//SN/adc2"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack-moisture.ecore#//SN/adc3"/>
+    </genClasses>
+    <genClasses ecoreClass="chirpstack-moisture.ecore#//SolidosTeros21">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack-moisture.ecore#//SolidosTeros21/sensor"/>
+    </genClasses>
+    <genClasses ecoreClass="chirpstack-moisture.ecore#//Teros21">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack-moisture.ecore#//Teros21/potentialWater1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack-moisture.ecore#//Teros21/potentialWater2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack-moisture.ecore#//Teros21/temperatur1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack-moisture.ecore#//Teros21/temperatur2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack-moisture.ecore#//Teros21/battery"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

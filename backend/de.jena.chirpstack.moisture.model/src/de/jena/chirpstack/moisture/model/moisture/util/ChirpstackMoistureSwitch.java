@@ -131,24 +131,24 @@ public class ChirpstackMoistureSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ChirpstackMoisturePackage.SENSE_CAP_S2120: {
+				SenseCapS2120 senseCapS2120 = (SenseCapS2120)theEObject;
+				T result = caseSenseCapS2120(senseCapS2120);
+				if (result == null) result = caseProvider(senseCapS2120);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ChirpstackMoisturePackage.SENSE_CAP_S2105: {
+				SenseCapS2105 senseCapS2105 = (SenseCapS2105)theEObject;
+				T result = caseSenseCapS2105(senseCapS2105);
+				if (result == null) result = caseProvider(senseCapS2105);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ChirpstackMoisturePackage.SENSE_CAP: {
 				SenseCap senseCap = (SenseCap)theEObject;
 				T result = caseSenseCap(senseCap);
 				if (result == null) result = caseProvider(senseCap);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ChirpstackMoisturePackage.SENSE_CAP2: {
-				SenseCap2 senseCap2 = (SenseCap2)theEObject;
-				T result = caseSenseCap2(senseCap2);
-				if (result == null) result = caseProvider(senseCap2);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ChirpstackMoisturePackage.SENSE_CAP3: {
-				SenseCap3 senseCap3 = (SenseCap3)theEObject;
-				T result = caseSenseCap3(senseCap3);
-				if (result == null) result = caseProvider(senseCap3);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -212,6 +212,20 @@ public class ChirpstackMoistureSwitch<T> extends Switch<T> {
 				SN sn = (SN)theEObject;
 				T result = caseSN(sn);
 				if (result == null) result = caseService(sn);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ChirpstackMoisturePackage.SOLIDOS_TEROS21: {
+				SolidosTeros21 solidosTeros21 = (SolidosTeros21)theEObject;
+				T result = caseSolidosTeros21(solidosTeros21);
+				if (result == null) result = caseProvider(solidosTeros21);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ChirpstackMoisturePackage.TEROS21: {
+				Teros21 teros21 = (Teros21)theEObject;
+				T result = caseTeros21(teros21);
+				if (result == null) result = caseService(teros21);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -325,6 +339,36 @@ public class ChirpstackMoistureSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Sense Cap S2120</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Sense Cap S2120</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSenseCapS2120(SenseCapS2120 object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Sense Cap S2105</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Sense Cap S2105</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSenseCapS2105(SenseCapS2105 object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Sense Cap</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -336,36 +380,6 @@ public class ChirpstackMoistureSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSenseCap(SenseCap object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Sense Cap2</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Sense Cap2</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSenseCap2(SenseCap2 object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Sense Cap3</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Sense Cap3</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSenseCap3(SenseCap3 object) {
 		return null;
 	}
 
@@ -501,6 +515,36 @@ public class ChirpstackMoistureSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSN(SN object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Solidos Teros21</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Solidos Teros21</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSolidosTeros21(SolidosTeros21 object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Teros21</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Teros21</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTeros21(Teros21 object) {
 		return null;
 	}
 

@@ -111,16 +111,16 @@ public class ChirpstackMoistureAdapterFactory extends AdapterFactoryImpl {
 				return createMoistureAdminAdapter();
 			}
 			@Override
+			public Adapter caseSenseCapS2120(SenseCapS2120 object) {
+				return createSenseCapS2120Adapter();
+			}
+			@Override
+			public Adapter caseSenseCapS2105(SenseCapS2105 object) {
+				return createSenseCapS2105Adapter();
+			}
+			@Override
 			public Adapter caseSenseCap(SenseCap object) {
 				return createSenseCapAdapter();
-			}
-			@Override
-			public Adapter caseSenseCap2(SenseCap2 object) {
-				return createSenseCap2Adapter();
-			}
-			@Override
-			public Adapter caseSenseCap3(SenseCap3 object) {
-				return createSenseCap3Adapter();
 			}
 			@Override
 			public Adapter caseAir(Air object) {
@@ -157,6 +157,14 @@ public class ChirpstackMoistureAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseSN(SN object) {
 				return createSNAdapter();
+			}
+			@Override
+			public Adapter caseSolidosTeros21(SolidosTeros21 object) {
+				return createSolidosTeros21Adapter();
+			}
+			@Override
+			public Adapter caseTeros21(Teros21 object) {
+				return createTeros21Adapter();
 			}
 			@Override
 			public Adapter caseProvider(Provider object) {
@@ -289,6 +297,34 @@ public class ChirpstackMoistureAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.chirpstack.moisture.model.moisture.SenseCapS2120 <em>Sense Cap S2120</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.chirpstack.moisture.model.moisture.SenseCapS2120
+	 * @generated
+	 */
+	public Adapter createSenseCapS2120Adapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.chirpstack.moisture.model.moisture.SenseCapS2105 <em>Sense Cap S2105</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.chirpstack.moisture.model.moisture.SenseCapS2105
+	 * @generated
+	 */
+	public Adapter createSenseCapS2105Adapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link de.jena.chirpstack.moisture.model.moisture.SenseCap <em>Sense Cap</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -299,34 +335,6 @@ public class ChirpstackMoistureAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSenseCapAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link de.jena.chirpstack.moisture.model.moisture.SenseCap2 <em>Sense Cap2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.jena.chirpstack.moisture.model.moisture.SenseCap2
-	 * @generated
-	 */
-	public Adapter createSenseCap2Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link de.jena.chirpstack.moisture.model.moisture.SenseCap3 <em>Sense Cap3</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.jena.chirpstack.moisture.model.moisture.SenseCap3
-	 * @generated
-	 */
-	public Adapter createSenseCap3Adapter() {
 		return null;
 	}
 
@@ -453,6 +461,34 @@ public class ChirpstackMoistureAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSNAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.chirpstack.moisture.model.moisture.SolidosTeros21 <em>Solidos Teros21</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.chirpstack.moisture.model.moisture.SolidosTeros21
+	 * @generated
+	 */
+	public Adapter createSolidosTeros21Adapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.chirpstack.moisture.model.moisture.Teros21 <em>Teros21</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.chirpstack.moisture.model.moisture.Teros21
+	 * @generated
+	 */
+	public Adapter createTeros21Adapter() {
 		return null;
 	}
 

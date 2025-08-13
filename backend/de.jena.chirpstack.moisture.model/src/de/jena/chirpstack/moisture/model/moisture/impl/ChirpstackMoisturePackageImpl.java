@@ -24,12 +24,14 @@ import de.jena.chirpstack.moisture.model.moisture.MoistureSensor;
 import de.jena.chirpstack.moisture.model.moisture.MoistureStatus;
 import de.jena.chirpstack.moisture.model.moisture.Rain;
 import de.jena.chirpstack.moisture.model.moisture.SenseCap;
-import de.jena.chirpstack.moisture.model.moisture.SenseCap2;
-import de.jena.chirpstack.moisture.model.moisture.SenseCap3;
+import de.jena.chirpstack.moisture.model.moisture.SenseCapS2105;
+import de.jena.chirpstack.moisture.model.moisture.SenseCapS2120;
 import de.jena.chirpstack.moisture.model.moisture.Sensor;
 import de.jena.chirpstack.moisture.model.moisture.Soil;
 import de.jena.chirpstack.moisture.model.moisture.SoilType;
+import de.jena.chirpstack.moisture.model.moisture.SolidosTeros21;
 import de.jena.chirpstack.moisture.model.moisture.TSoil;
+import de.jena.chirpstack.moisture.model.moisture.Teros21;
 import de.jena.chirpstack.moisture.model.moisture.Trash;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -103,21 +105,21 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass senseCapS2120EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass senseCapS2105EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass senseCapEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass senseCap2EClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass senseCap3EClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -181,6 +183,20 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 	 * @generated
 	 */
 	private EClass snEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass solidosTeros21EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass teros21EClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -598,6 +614,86 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 	 * @generated
 	 */
 	@Override
+	public EClass getSenseCapS2120() {
+		return senseCapS2120EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSenseCapS2120_Air() {
+		return (EReference)senseCapS2120EClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSenseCapS2120_Rain() {
+		return (EReference)senseCapS2120EClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSenseCapS2120_Light() {
+		return (EReference)senseCapS2120EClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSenseCapS2105() {
+		return senseCapS2105EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSenseCapS2105_Air() {
+		return (EReference)senseCapS2105EClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSenseCapS2105_Rain() {
+		return (EReference)senseCapS2105EClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSenseCapS2105_Light() {
+		return (EReference)senseCapS2105EClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getSenseCap() {
 		return senseCapEClass;
 	}
@@ -630,86 +726,6 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 	@Override
 	public EReference getSenseCap_Light() {
 		return (EReference)senseCapEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getSenseCap2() {
-		return senseCap2EClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getSenseCap2_Air() {
-		return (EReference)senseCap2EClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getSenseCap2_Rain() {
-		return (EReference)senseCap2EClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getSenseCap2_Light() {
-		return (EReference)senseCap2EClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getSenseCap3() {
-		return senseCap3EClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getSenseCap3_Air() {
-		return (EReference)senseCap3EClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getSenseCap3_Rain() {
-		return (EReference)senseCap3EClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getSenseCap3_Light() {
-		return (EReference)senseCap3EClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1058,6 +1074,86 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 	 * @generated
 	 */
 	@Override
+	public EClass getSolidosTeros21() {
+		return solidosTeros21EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSolidosTeros21_Sensor() {
+		return (EReference)solidosTeros21EClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getTeros21() {
+		return teros21EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTeros21_PotentialWater1() {
+		return (EAttribute)teros21EClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTeros21_PotentialWater2() {
+		return (EAttribute)teros21EClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTeros21_Temperatur1() {
+		return (EAttribute)teros21EClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTeros21_Temperatur2() {
+		return (EAttribute)teros21EClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTeros21_Battery() {
+		return (EAttribute)teros21EClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getSoilType() {
 		return soilTypeEEnum;
 	}
@@ -1132,20 +1228,20 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 		moistureAdminEClass = createEClass(MOISTURE_ADMIN);
 		createEAttribute(moistureAdminEClass, MOISTURE_ADMIN__SOIL_TYPE);
 
+		senseCapS2120EClass = createEClass(SENSE_CAP_S2120);
+		createEReference(senseCapS2120EClass, SENSE_CAP_S2120__AIR);
+		createEReference(senseCapS2120EClass, SENSE_CAP_S2120__RAIN);
+		createEReference(senseCapS2120EClass, SENSE_CAP_S2120__LIGHT);
+
+		senseCapS2105EClass = createEClass(SENSE_CAP_S2105);
+		createEReference(senseCapS2105EClass, SENSE_CAP_S2105__AIR);
+		createEReference(senseCapS2105EClass, SENSE_CAP_S2105__RAIN);
+		createEReference(senseCapS2105EClass, SENSE_CAP_S2105__LIGHT);
+
 		senseCapEClass = createEClass(SENSE_CAP);
 		createEReference(senseCapEClass, SENSE_CAP__AIR);
 		createEReference(senseCapEClass, SENSE_CAP__RAIN);
 		createEReference(senseCapEClass, SENSE_CAP__LIGHT);
-
-		senseCap2EClass = createEClass(SENSE_CAP2);
-		createEReference(senseCap2EClass, SENSE_CAP2__AIR);
-		createEReference(senseCap2EClass, SENSE_CAP2__RAIN);
-		createEReference(senseCap2EClass, SENSE_CAP2__LIGHT);
-
-		senseCap3EClass = createEClass(SENSE_CAP3);
-		createEReference(senseCap3EClass, SENSE_CAP3__AIR);
-		createEReference(senseCap3EClass, SENSE_CAP3__RAIN);
-		createEReference(senseCap3EClass, SENSE_CAP3__LIGHT);
 
 		airEClass = createEClass(AIR);
 		createEAttribute(airEClass, AIR__AIR_TEMPERATURE);
@@ -1190,6 +1286,16 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 		createEAttribute(snEClass, SN__ADC2);
 		createEAttribute(snEClass, SN__ADC3);
 
+		solidosTeros21EClass = createEClass(SOLIDOS_TEROS21);
+		createEReference(solidosTeros21EClass, SOLIDOS_TEROS21__SENSOR);
+
+		teros21EClass = createEClass(TEROS21);
+		createEAttribute(teros21EClass, TEROS21__POTENTIAL_WATER1);
+		createEAttribute(teros21EClass, TEROS21__POTENTIAL_WATER2);
+		createEAttribute(teros21EClass, TEROS21__TEMPERATUR1);
+		createEAttribute(teros21EClass, TEROS21__TEMPERATUR2);
+		createEAttribute(teros21EClass, TEROS21__BATTERY);
+
 		// Create enums
 		soilTypeEEnum = createEEnum(SOIL_TYPE);
 	}
@@ -1232,9 +1338,9 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 		moistureSensorEClass.getESuperTypes().add(theProviderPackage.getProvider());
 		moistureStatusEClass.getESuperTypes().add(theProviderPackage.getService());
 		moistureAdminEClass.getESuperTypes().add(theProviderPackage.getAdmin());
+		senseCapS2120EClass.getESuperTypes().add(theProviderPackage.getProvider());
+		senseCapS2105EClass.getESuperTypes().add(theProviderPackage.getProvider());
 		senseCapEClass.getESuperTypes().add(theProviderPackage.getProvider());
-		senseCap2EClass.getESuperTypes().add(theProviderPackage.getProvider());
-		senseCap3EClass.getESuperTypes().add(theProviderPackage.getProvider());
 		airEClass.getESuperTypes().add(theProviderPackage.getService());
 		rainEClass.getESuperTypes().add(theProviderPackage.getService());
 		lightEClass.getESuperTypes().add(theProviderPackage.getService());
@@ -1244,6 +1350,8 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 		trashEClass.getESuperTypes().add(theProviderPackage.getService());
 		sn50EClass.getESuperTypes().add(theProviderPackage.getProvider());
 		snEClass.getESuperTypes().add(theProviderPackage.getService());
+		solidosTeros21EClass.getESuperTypes().add(theProviderPackage.getProvider());
+		teros21EClass.getESuperTypes().add(theProviderPackage.getService());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(draginoEClass, Dragino.class, "Dragino", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1287,20 +1395,20 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 		initEClass(moistureAdminEClass, MoistureAdmin.class, "MoistureAdmin", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMoistureAdmin_SoilType(), this.getSoilType(), "soilType", null, 0, 1, MoistureAdmin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(senseCapS2120EClass, SenseCapS2120.class, "SenseCapS2120", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSenseCapS2120_Air(), this.getAir(), null, "air", null, 0, 1, SenseCapS2120.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSenseCapS2120_Rain(), this.getRain(), null, "rain", null, 0, 1, SenseCapS2120.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSenseCapS2120_Light(), this.getLight(), null, "light", null, 0, 1, SenseCapS2120.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(senseCapS2105EClass, SenseCapS2105.class, "SenseCapS2105", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSenseCapS2105_Air(), this.getAir(), null, "air", null, 0, 1, SenseCapS2105.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSenseCapS2105_Rain(), this.getRain(), null, "rain", null, 0, 1, SenseCapS2105.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSenseCapS2105_Light(), this.getLight(), null, "light", null, 0, 1, SenseCapS2105.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(senseCapEClass, SenseCap.class, "SenseCap", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSenseCap_Air(), this.getAir(), null, "air", null, 0, 1, SenseCap.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSenseCap_Rain(), this.getRain(), null, "rain", null, 0, 1, SenseCap.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSenseCap_Light(), this.getLight(), null, "light", null, 0, 1, SenseCap.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(senseCap2EClass, SenseCap2.class, "SenseCap2", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSenseCap2_Air(), this.getAir(), null, "air", null, 0, 1, SenseCap2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSenseCap2_Rain(), this.getRain(), null, "rain", null, 0, 1, SenseCap2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSenseCap2_Light(), this.getLight(), null, "light", null, 0, 1, SenseCap2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(senseCap3EClass, SenseCap3.class, "SenseCap3", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSenseCap3_Air(), this.getAir(), null, "air", null, 0, 1, SenseCap3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSenseCap3_Rain(), this.getRain(), null, "rain", null, 0, 1, SenseCap3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSenseCap3_Light(), this.getLight(), null, "light", null, 0, 1, SenseCap3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(airEClass, Air.class, "Air", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAir_AirTemperature(), ecorePackage.getEDouble(), "airTemperature", null, 0, 1, Air.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1344,6 +1452,16 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 		initEAttribute(getSN_Battery(), ecorePackage.getEDouble(), "battery", null, 0, 1, de.jena.chirpstack.moisture.model.moisture.SN.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSN_Adc2(), ecorePackage.getEDouble(), "adc2", null, 0, 1, de.jena.chirpstack.moisture.model.moisture.SN.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSN_Adc3(), ecorePackage.getEDouble(), "adc3", null, 0, 1, de.jena.chirpstack.moisture.model.moisture.SN.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(solidosTeros21EClass, SolidosTeros21.class, "SolidosTeros21", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSolidosTeros21_Sensor(), this.getTeros21(), null, "sensor", null, 0, 1, SolidosTeros21.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(teros21EClass, Teros21.class, "Teros21", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTeros21_PotentialWater1(), ecorePackage.getEDouble(), "potentialWater1", null, 0, 1, Teros21.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTeros21_PotentialWater2(), ecorePackage.getEDouble(), "potentialWater2", null, 0, 1, Teros21.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTeros21_Temperatur1(), ecorePackage.getEDouble(), "temperatur1", null, 0, 1, Teros21.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTeros21_Temperatur2(), ecorePackage.getEDouble(), "temperatur2", null, 0, 1, Teros21.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTeros21_Battery(), ecorePackage.getEDouble(), "battery", null, 0, 1, Teros21.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(soilTypeEEnum, SoilType.class, "SoilType");
@@ -1394,43 +1512,63 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 		  (draginoEClass,
 		   source,
 		   new String[] {
-			   "name", "Dragino_LSE01"
+			   "name", "Dragino_LSE01",
+			   "profileId", "37cf9cbd-e7e1-4269-8c22-b46bb5261a2a"
+		   });
+		addAnnotation
+		  (senseCapS2120EClass,
+		   source,
+		   new String[] {
+			   "name", "SenseCAP_S2120_8-in-1_LoRaWAN_Wetterstation",
+			   "profileName", "SenseCAP S2120 8-in-1 LoRaWAN Wetterstation",
+			   "profileId", "d03f1299-95a3-4ab2-a924-e0e5fe3b277d"
+		   });
+		addAnnotation
+		  (senseCapS2105EClass,
+		   source,
+		   new String[] {
+			   "name", "SenseCAP_S2105-LoRaWAN_Soil_Moisture_Temperature_and_EC_Sensor",
+			   "profileName", "SenseCAP S2105-LoRaWAN\u00ae Soil Moisture, Temperature and EC Sensor",
+			   "profileId", "f74bb315-56ca-48c0-82f8-f7b837f4d917"
 		   });
 		addAnnotation
 		  (senseCapEClass,
 		   source,
 		   new String[] {
-			   "name", "SenseCAP S2120 8-in-1 LoRaWAN Wetterstation"
-		   });
-		addAnnotation
-		  (senseCap2EClass,
-		   source,
-		   new String[] {
-			   "name", "SenseCAP Wetterstation 2.0"
-		   });
-		addAnnotation
-		  (senseCap3EClass,
-		   source,
-		   new String[] {
-			   "name", "SenseCAP_Wetterstation_2_0"
+			   "name", "SenseCAP_Wetterstation_2_0",
+			   "profileName", "SenseCAP Wetterstation 2.0",
+			   "profileId", "6a1cea0-c82d-4261-b32c-cf4d2e1f97fb"
 		   });
 		addAnnotation
 		  (tektelicEClass,
 		   source,
 		   new String[] {
-			   "name", "TEKTELIC KIWI Agriculture Sensor"
+			   "name", "TEKTELIC_KIWI_Agriculture_Sensor",
+			   "profileName", "TEKTELIC KIWI Agriculture Sensor",
+			   "profileId", "93f37439-1425-4a5f-a7e7-7eb4b75f1936"
 		   });
 		addAnnotation
 		  (em310EClass,
 		   source,
 		   new String[] {
-			   "name", "EM310-UDL"
+			   "name", "EM310-UDL",
+			   "profileId", "1e6d47f7-1432-4c83-b48d-dd34a7e5e9c6"
 		   });
 		addAnnotation
 		  (sn50EClass,
 		   source,
 		   new String[] {
-			   "name", "SN50v3-LB/LS"
+			   "name", "SN50v3-LB_LS",
+			   "profileName", "SN50v3-LB/LS",
+			   "profileId", "a610241d-86c3-4d4a-af88-bfa1754f1610"
+		   });
+		addAnnotation
+		  (solidosTeros21EClass,
+		   source,
+		   new String[] {
+			   "name", "Solidos_Teros21",
+			   "profileName", "Solidos Teros21",
+			   "profileId", "7022e9ce-7673-4d0c-b3d1-ed51afc3fe27"
 		   });
 	}
 
@@ -1670,6 +1808,36 @@ public class ChirpstackMoisturePackageImpl extends EPackageImpl implements Chirp
 		   source,
 		   new String[] {
 			   "path", "object/ADC3"
+		   });
+		addAnnotation
+		  (getTeros21_PotentialWater1(),
+		   source,
+		   new String[] {
+			   "path", "object/potentialwater_1"
+		   });
+		addAnnotation
+		  (getTeros21_PotentialWater2(),
+		   source,
+		   new String[] {
+			   "path", "object/potentialwater_2"
+		   });
+		addAnnotation
+		  (getTeros21_Temperatur1(),
+		   source,
+		   new String[] {
+			   "path", "object/temp_1"
+		   });
+		addAnnotation
+		  (getTeros21_Temperatur2(),
+		   source,
+		   new String[] {
+			   "path", "object/temp_2"
+		   });
+		addAnnotation
+		  (getTeros21_Battery(),
+		   source,
+		   new String[] {
+			   "path", "object/battery_voltage"
 		   });
 	}
 

@@ -742,6 +742,206 @@ public interface ChirpstackMoisturePackage extends org.eclipse.emf.ecore.EPackag
 	int MOISTURE_ADMIN_OPERATION_COUNT = ProviderPackage.ADMIN_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link de.jena.chirpstack.moisture.model.moisture.impl.SenseCapS2120Impl <em>Sense Cap S2120</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.chirpstack.moisture.model.moisture.impl.SenseCapS2120Impl
+	 * @see de.jena.chirpstack.moisture.model.moisture.impl.ChirpstackMoisturePackageImpl#getSenseCapS2120()
+	 * @generated
+	 */
+	int SENSE_CAP_S2120 = 7;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSE_CAP_S2120__ID = ProviderPackage.PROVIDER__ID;
+
+	/**
+	 * The feature id for the '<em><b>Admin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSE_CAP_S2120__ADMIN = ProviderPackage.PROVIDER__ADMIN;
+
+	/**
+	 * The feature id for the '<em><b>Linked Providers</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSE_CAP_S2120__LINKED_PROVIDERS = ProviderPackage.PROVIDER__LINKED_PROVIDERS;
+
+	/**
+	 * The feature id for the '<em><b>Air</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSE_CAP_S2120__AIR = ProviderPackage.PROVIDER_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Rain</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSE_CAP_S2120__RAIN = ProviderPackage.PROVIDER_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Light</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSE_CAP_S2120__LIGHT = ProviderPackage.PROVIDER_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Sense Cap S2120</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSE_CAP_S2120_FEATURE_COUNT = ProviderPackage.PROVIDER_FEATURE_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Get Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSE_CAP_S2120___GET_SERVICE__STRING = ProviderPackage.PROVIDER___GET_SERVICE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Service EClass</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSE_CAP_S2120___GET_SERVICE_ECLASS__STRING = ProviderPackage.PROVIDER___GET_SERVICE_ECLASS__STRING;
+
+	/**
+	 * The number of operations of the '<em>Sense Cap S2120</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSE_CAP_S2120_OPERATION_COUNT = ProviderPackage.PROVIDER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.chirpstack.moisture.model.moisture.impl.SenseCapS2105Impl <em>Sense Cap S2105</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.chirpstack.moisture.model.moisture.impl.SenseCapS2105Impl
+	 * @see de.jena.chirpstack.moisture.model.moisture.impl.ChirpstackMoisturePackageImpl#getSenseCapS2105()
+	 * @generated
+	 */
+	int SENSE_CAP_S2105 = 8;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSE_CAP_S2105__ID = ProviderPackage.PROVIDER__ID;
+
+	/**
+	 * The feature id for the '<em><b>Admin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSE_CAP_S2105__ADMIN = ProviderPackage.PROVIDER__ADMIN;
+
+	/**
+	 * The feature id for the '<em><b>Linked Providers</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSE_CAP_S2105__LINKED_PROVIDERS = ProviderPackage.PROVIDER__LINKED_PROVIDERS;
+
+	/**
+	 * The feature id for the '<em><b>Air</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSE_CAP_S2105__AIR = ProviderPackage.PROVIDER_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Rain</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSE_CAP_S2105__RAIN = ProviderPackage.PROVIDER_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Light</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSE_CAP_S2105__LIGHT = ProviderPackage.PROVIDER_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Sense Cap S2105</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSE_CAP_S2105_FEATURE_COUNT = ProviderPackage.PROVIDER_FEATURE_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Get Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSE_CAP_S2105___GET_SERVICE__STRING = ProviderPackage.PROVIDER___GET_SERVICE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Service EClass</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSE_CAP_S2105___GET_SERVICE_ECLASS__STRING = ProviderPackage.PROVIDER___GET_SERVICE_ECLASS__STRING;
+
+	/**
+	 * The number of operations of the '<em>Sense Cap S2105</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSE_CAP_S2105_OPERATION_COUNT = ProviderPackage.PROVIDER_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link de.jena.chirpstack.moisture.model.moisture.impl.SenseCapImpl <em>Sense Cap</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -749,7 +949,7 @@ public interface ChirpstackMoisturePackage extends org.eclipse.emf.ecore.EPackag
 	 * @see de.jena.chirpstack.moisture.model.moisture.impl.ChirpstackMoisturePackageImpl#getSenseCap()
 	 * @generated
 	 */
-	int SENSE_CAP = 7;
+	int SENSE_CAP = 9;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -840,206 +1040,6 @@ public interface ChirpstackMoisturePackage extends org.eclipse.emf.ecore.EPackag
 	 * @ordered
 	 */
 	int SENSE_CAP_OPERATION_COUNT = ProviderPackage.PROVIDER_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link de.jena.chirpstack.moisture.model.moisture.impl.SenseCap2Impl <em>Sense Cap2</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.jena.chirpstack.moisture.model.moisture.impl.SenseCap2Impl
-	 * @see de.jena.chirpstack.moisture.model.moisture.impl.ChirpstackMoisturePackageImpl#getSenseCap2()
-	 * @generated
-	 */
-	int SENSE_CAP2 = 8;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SENSE_CAP2__ID = ProviderPackage.PROVIDER__ID;
-
-	/**
-	 * The feature id for the '<em><b>Admin</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SENSE_CAP2__ADMIN = ProviderPackage.PROVIDER__ADMIN;
-
-	/**
-	 * The feature id for the '<em><b>Linked Providers</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SENSE_CAP2__LINKED_PROVIDERS = ProviderPackage.PROVIDER__LINKED_PROVIDERS;
-
-	/**
-	 * The feature id for the '<em><b>Air</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SENSE_CAP2__AIR = ProviderPackage.PROVIDER_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Rain</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SENSE_CAP2__RAIN = ProviderPackage.PROVIDER_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Light</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SENSE_CAP2__LIGHT = ProviderPackage.PROVIDER_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>Sense Cap2</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SENSE_CAP2_FEATURE_COUNT = ProviderPackage.PROVIDER_FEATURE_COUNT + 3;
-
-	/**
-	 * The operation id for the '<em>Get Service</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SENSE_CAP2___GET_SERVICE__STRING = ProviderPackage.PROVIDER___GET_SERVICE__STRING;
-
-	/**
-	 * The operation id for the '<em>Get Service EClass</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SENSE_CAP2___GET_SERVICE_ECLASS__STRING = ProviderPackage.PROVIDER___GET_SERVICE_ECLASS__STRING;
-
-	/**
-	 * The number of operations of the '<em>Sense Cap2</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SENSE_CAP2_OPERATION_COUNT = ProviderPackage.PROVIDER_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link de.jena.chirpstack.moisture.model.moisture.impl.SenseCap3Impl <em>Sense Cap3</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.jena.chirpstack.moisture.model.moisture.impl.SenseCap3Impl
-	 * @see de.jena.chirpstack.moisture.model.moisture.impl.ChirpstackMoisturePackageImpl#getSenseCap3()
-	 * @generated
-	 */
-	int SENSE_CAP3 = 9;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SENSE_CAP3__ID = ProviderPackage.PROVIDER__ID;
-
-	/**
-	 * The feature id for the '<em><b>Admin</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SENSE_CAP3__ADMIN = ProviderPackage.PROVIDER__ADMIN;
-
-	/**
-	 * The feature id for the '<em><b>Linked Providers</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SENSE_CAP3__LINKED_PROVIDERS = ProviderPackage.PROVIDER__LINKED_PROVIDERS;
-
-	/**
-	 * The feature id for the '<em><b>Air</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SENSE_CAP3__AIR = ProviderPackage.PROVIDER_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Rain</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SENSE_CAP3__RAIN = ProviderPackage.PROVIDER_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Light</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SENSE_CAP3__LIGHT = ProviderPackage.PROVIDER_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>Sense Cap3</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SENSE_CAP3_FEATURE_COUNT = ProviderPackage.PROVIDER_FEATURE_COUNT + 3;
-
-	/**
-	 * The operation id for the '<em>Get Service</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SENSE_CAP3___GET_SERVICE__STRING = ProviderPackage.PROVIDER___GET_SERVICE__STRING;
-
-	/**
-	 * The operation id for the '<em>Get Service EClass</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SENSE_CAP3___GET_SERVICE_ECLASS__STRING = ProviderPackage.PROVIDER___GET_SERVICE_ECLASS__STRING;
-
-	/**
-	 * The number of operations of the '<em>Sense Cap3</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SENSE_CAP3_OPERATION_COUNT = ProviderPackage.PROVIDER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.jena.chirpstack.moisture.model.moisture.impl.AirImpl <em>Air</em>}' class.
@@ -1762,6 +1762,179 @@ public interface ChirpstackMoisturePackage extends org.eclipse.emf.ecore.EPackag
 	int SN_OPERATION_COUNT = ProviderPackage.SERVICE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link de.jena.chirpstack.moisture.model.moisture.impl.SolidosTeros21Impl <em>Solidos Teros21</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.chirpstack.moisture.model.moisture.impl.SolidosTeros21Impl
+	 * @see de.jena.chirpstack.moisture.model.moisture.impl.ChirpstackMoisturePackageImpl#getSolidosTeros21()
+	 * @generated
+	 */
+	int SOLIDOS_TEROS21 = 19;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLIDOS_TEROS21__ID = ProviderPackage.PROVIDER__ID;
+
+	/**
+	 * The feature id for the '<em><b>Admin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLIDOS_TEROS21__ADMIN = ProviderPackage.PROVIDER__ADMIN;
+
+	/**
+	 * The feature id for the '<em><b>Linked Providers</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLIDOS_TEROS21__LINKED_PROVIDERS = ProviderPackage.PROVIDER__LINKED_PROVIDERS;
+
+	/**
+	 * The feature id for the '<em><b>Sensor</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLIDOS_TEROS21__SENSOR = ProviderPackage.PROVIDER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Solidos Teros21</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLIDOS_TEROS21_FEATURE_COUNT = ProviderPackage.PROVIDER_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLIDOS_TEROS21___GET_SERVICE__STRING = ProviderPackage.PROVIDER___GET_SERVICE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Service EClass</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLIDOS_TEROS21___GET_SERVICE_ECLASS__STRING = ProviderPackage.PROVIDER___GET_SERVICE_ECLASS__STRING;
+
+	/**
+	 * The number of operations of the '<em>Solidos Teros21</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLIDOS_TEROS21_OPERATION_COUNT = ProviderPackage.PROVIDER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.chirpstack.moisture.model.moisture.impl.Teros21Impl <em>Teros21</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.chirpstack.moisture.model.moisture.impl.Teros21Impl
+	 * @see de.jena.chirpstack.moisture.model.moisture.impl.ChirpstackMoisturePackageImpl#getTeros21()
+	 * @generated
+	 */
+	int TEROS21 = 20;
+
+	/**
+	 * The feature id for the '<em><b>Metadata</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEROS21__METADATA = ProviderPackage.SERVICE__METADATA;
+
+	/**
+	 * The feature id for the '<em><b>Potential Water1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEROS21__POTENTIAL_WATER1 = ProviderPackage.SERVICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Potential Water2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEROS21__POTENTIAL_WATER2 = ProviderPackage.SERVICE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Temperatur1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEROS21__TEMPERATUR1 = ProviderPackage.SERVICE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Temperatur2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEROS21__TEMPERATUR2 = ProviderPackage.SERVICE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Battery</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEROS21__BATTERY = ProviderPackage.SERVICE_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of structural features of the '<em>Teros21</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEROS21_FEATURE_COUNT = ProviderPackage.SERVICE_FEATURE_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>EIs Set</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEROS21___EIS_SET__ESTRUCTURALFEATURE = ProviderPackage.SERVICE___EIS_SET__ESTRUCTURALFEATURE;
+
+	/**
+	 * The number of operations of the '<em>Teros21</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEROS21_OPERATION_COUNT = ProviderPackage.SERVICE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link de.jena.chirpstack.moisture.model.moisture.SoilType <em>Soil Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1769,7 +1942,7 @@ public interface ChirpstackMoisturePackage extends org.eclipse.emf.ecore.EPackag
 	 * @see de.jena.chirpstack.moisture.model.moisture.impl.ChirpstackMoisturePackageImpl#getSoilType()
 	 * @generated
 	 */
-	int SOIL_TYPE = 19;
+	int SOIL_TYPE = 21;
 
 
 	/**
@@ -2140,6 +2313,92 @@ public interface ChirpstackMoisturePackage extends org.eclipse.emf.ecore.EPackag
 	EAttribute getMoistureAdmin_SoilType();
 
 	/**
+	 * Returns the meta object for class '{@link de.jena.chirpstack.moisture.model.moisture.SenseCapS2120 <em>Sense Cap S2120</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Sense Cap S2120</em>'.
+	 * @see de.jena.chirpstack.moisture.model.moisture.SenseCapS2120
+	 * @generated
+	 */
+	EClass getSenseCapS2120();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link de.jena.chirpstack.moisture.model.moisture.SenseCapS2120#getAir <em>Air</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Air</em>'.
+	 * @see de.jena.chirpstack.moisture.model.moisture.SenseCapS2120#getAir()
+	 * @see #getSenseCapS2120()
+	 * @generated
+	 */
+	EReference getSenseCapS2120_Air();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link de.jena.chirpstack.moisture.model.moisture.SenseCapS2120#getRain <em>Rain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Rain</em>'.
+	 * @see de.jena.chirpstack.moisture.model.moisture.SenseCapS2120#getRain()
+	 * @see #getSenseCapS2120()
+	 * @generated
+	 */
+	EReference getSenseCapS2120_Rain();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link de.jena.chirpstack.moisture.model.moisture.SenseCapS2120#getLight <em>Light</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Light</em>'.
+	 * @see de.jena.chirpstack.moisture.model.moisture.SenseCapS2120#getLight()
+	 * @see #getSenseCapS2120()
+	 * @generated
+	 */
+	EReference getSenseCapS2120_Light();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.chirpstack.moisture.model.moisture.SenseCapS2105 <em>Sense Cap S2105</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Sense Cap S2105</em>'.
+	 * @see de.jena.chirpstack.moisture.model.moisture.SenseCapS2105
+	 * @generated
+	 */
+	EClass getSenseCapS2105();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link de.jena.chirpstack.moisture.model.moisture.SenseCapS2105#getAir <em>Air</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Air</em>'.
+	 * @see de.jena.chirpstack.moisture.model.moisture.SenseCapS2105#getAir()
+	 * @see #getSenseCapS2105()
+	 * @generated
+	 */
+	EReference getSenseCapS2105_Air();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link de.jena.chirpstack.moisture.model.moisture.SenseCapS2105#getRain <em>Rain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Rain</em>'.
+	 * @see de.jena.chirpstack.moisture.model.moisture.SenseCapS2105#getRain()
+	 * @see #getSenseCapS2105()
+	 * @generated
+	 */
+	EReference getSenseCapS2105_Rain();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link de.jena.chirpstack.moisture.model.moisture.SenseCapS2105#getLight <em>Light</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Light</em>'.
+	 * @see de.jena.chirpstack.moisture.model.moisture.SenseCapS2105#getLight()
+	 * @see #getSenseCapS2105()
+	 * @generated
+	 */
+	EReference getSenseCapS2105_Light();
+
+	/**
 	 * Returns the meta object for class '{@link de.jena.chirpstack.moisture.model.moisture.SenseCap <em>Sense Cap</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2181,92 +2440,6 @@ public interface ChirpstackMoisturePackage extends org.eclipse.emf.ecore.EPackag
 	 * @generated
 	 */
 	EReference getSenseCap_Light();
-
-	/**
-	 * Returns the meta object for class '{@link de.jena.chirpstack.moisture.model.moisture.SenseCap2 <em>Sense Cap2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Sense Cap2</em>'.
-	 * @see de.jena.chirpstack.moisture.model.moisture.SenseCap2
-	 * @generated
-	 */
-	EClass getSenseCap2();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link de.jena.chirpstack.moisture.model.moisture.SenseCap2#getAir <em>Air</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Air</em>'.
-	 * @see de.jena.chirpstack.moisture.model.moisture.SenseCap2#getAir()
-	 * @see #getSenseCap2()
-	 * @generated
-	 */
-	EReference getSenseCap2_Air();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link de.jena.chirpstack.moisture.model.moisture.SenseCap2#getRain <em>Rain</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Rain</em>'.
-	 * @see de.jena.chirpstack.moisture.model.moisture.SenseCap2#getRain()
-	 * @see #getSenseCap2()
-	 * @generated
-	 */
-	EReference getSenseCap2_Rain();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link de.jena.chirpstack.moisture.model.moisture.SenseCap2#getLight <em>Light</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Light</em>'.
-	 * @see de.jena.chirpstack.moisture.model.moisture.SenseCap2#getLight()
-	 * @see #getSenseCap2()
-	 * @generated
-	 */
-	EReference getSenseCap2_Light();
-
-	/**
-	 * Returns the meta object for class '{@link de.jena.chirpstack.moisture.model.moisture.SenseCap3 <em>Sense Cap3</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Sense Cap3</em>'.
-	 * @see de.jena.chirpstack.moisture.model.moisture.SenseCap3
-	 * @generated
-	 */
-	EClass getSenseCap3();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link de.jena.chirpstack.moisture.model.moisture.SenseCap3#getAir <em>Air</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Air</em>'.
-	 * @see de.jena.chirpstack.moisture.model.moisture.SenseCap3#getAir()
-	 * @see #getSenseCap3()
-	 * @generated
-	 */
-	EReference getSenseCap3_Air();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link de.jena.chirpstack.moisture.model.moisture.SenseCap3#getRain <em>Rain</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Rain</em>'.
-	 * @see de.jena.chirpstack.moisture.model.moisture.SenseCap3#getRain()
-	 * @see #getSenseCap3()
-	 * @generated
-	 */
-	EReference getSenseCap3_Rain();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link de.jena.chirpstack.moisture.model.moisture.SenseCap3#getLight <em>Light</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Light</em>'.
-	 * @see de.jena.chirpstack.moisture.model.moisture.SenseCap3#getLight()
-	 * @see #getSenseCap3()
-	 * @generated
-	 */
-	EReference getSenseCap3_Light();
 
 	/**
 	 * Returns the meta object for class '{@link de.jena.chirpstack.moisture.model.moisture.Air <em>Air</em>}'.
@@ -2634,6 +2807,92 @@ public interface ChirpstackMoisturePackage extends org.eclipse.emf.ecore.EPackag
 	EAttribute getSN_Adc3();
 
 	/**
+	 * Returns the meta object for class '{@link de.jena.chirpstack.moisture.model.moisture.SolidosTeros21 <em>Solidos Teros21</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Solidos Teros21</em>'.
+	 * @see de.jena.chirpstack.moisture.model.moisture.SolidosTeros21
+	 * @generated
+	 */
+	EClass getSolidosTeros21();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link de.jena.chirpstack.moisture.model.moisture.SolidosTeros21#getSensor <em>Sensor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Sensor</em>'.
+	 * @see de.jena.chirpstack.moisture.model.moisture.SolidosTeros21#getSensor()
+	 * @see #getSolidosTeros21()
+	 * @generated
+	 */
+	EReference getSolidosTeros21_Sensor();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.chirpstack.moisture.model.moisture.Teros21 <em>Teros21</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Teros21</em>'.
+	 * @see de.jena.chirpstack.moisture.model.moisture.Teros21
+	 * @generated
+	 */
+	EClass getTeros21();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.moisture.model.moisture.Teros21#getPotentialWater1 <em>Potential Water1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Potential Water1</em>'.
+	 * @see de.jena.chirpstack.moisture.model.moisture.Teros21#getPotentialWater1()
+	 * @see #getTeros21()
+	 * @generated
+	 */
+	EAttribute getTeros21_PotentialWater1();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.moisture.model.moisture.Teros21#getPotentialWater2 <em>Potential Water2</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Potential Water2</em>'.
+	 * @see de.jena.chirpstack.moisture.model.moisture.Teros21#getPotentialWater2()
+	 * @see #getTeros21()
+	 * @generated
+	 */
+	EAttribute getTeros21_PotentialWater2();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.moisture.model.moisture.Teros21#getTemperatur1 <em>Temperatur1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Temperatur1</em>'.
+	 * @see de.jena.chirpstack.moisture.model.moisture.Teros21#getTemperatur1()
+	 * @see #getTeros21()
+	 * @generated
+	 */
+	EAttribute getTeros21_Temperatur1();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.moisture.model.moisture.Teros21#getTemperatur2 <em>Temperatur2</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Temperatur2</em>'.
+	 * @see de.jena.chirpstack.moisture.model.moisture.Teros21#getTemperatur2()
+	 * @see #getTeros21()
+	 * @generated
+	 */
+	EAttribute getTeros21_Temperatur2();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.moisture.model.moisture.Teros21#getBattery <em>Battery</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Battery</em>'.
+	 * @see de.jena.chirpstack.moisture.model.moisture.Teros21#getBattery()
+	 * @see #getTeros21()
+	 * @generated
+	 */
+	EAttribute getTeros21_Battery();
+
+	/**
 	 * Returns the meta object for enum '{@link de.jena.chirpstack.moisture.model.moisture.SoilType <em>Soil Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2953,6 +3212,74 @@ public interface ChirpstackMoisturePackage extends org.eclipse.emf.ecore.EPackag
 		EAttribute MOISTURE_ADMIN__SOIL_TYPE = eINSTANCE.getMoistureAdmin_SoilType();
 
 		/**
+		 * The meta object literal for the '{@link de.jena.chirpstack.moisture.model.moisture.impl.SenseCapS2120Impl <em>Sense Cap S2120</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.chirpstack.moisture.model.moisture.impl.SenseCapS2120Impl
+		 * @see de.jena.chirpstack.moisture.model.moisture.impl.ChirpstackMoisturePackageImpl#getSenseCapS2120()
+		 * @generated
+		 */
+		EClass SENSE_CAP_S2120 = eINSTANCE.getSenseCapS2120();
+
+		/**
+		 * The meta object literal for the '<em><b>Air</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SENSE_CAP_S2120__AIR = eINSTANCE.getSenseCapS2120_Air();
+
+		/**
+		 * The meta object literal for the '<em><b>Rain</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SENSE_CAP_S2120__RAIN = eINSTANCE.getSenseCapS2120_Rain();
+
+		/**
+		 * The meta object literal for the '<em><b>Light</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SENSE_CAP_S2120__LIGHT = eINSTANCE.getSenseCapS2120_Light();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.chirpstack.moisture.model.moisture.impl.SenseCapS2105Impl <em>Sense Cap S2105</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.chirpstack.moisture.model.moisture.impl.SenseCapS2105Impl
+		 * @see de.jena.chirpstack.moisture.model.moisture.impl.ChirpstackMoisturePackageImpl#getSenseCapS2105()
+		 * @generated
+		 */
+		EClass SENSE_CAP_S2105 = eINSTANCE.getSenseCapS2105();
+
+		/**
+		 * The meta object literal for the '<em><b>Air</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SENSE_CAP_S2105__AIR = eINSTANCE.getSenseCapS2105_Air();
+
+		/**
+		 * The meta object literal for the '<em><b>Rain</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SENSE_CAP_S2105__RAIN = eINSTANCE.getSenseCapS2105_Rain();
+
+		/**
+		 * The meta object literal for the '<em><b>Light</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SENSE_CAP_S2105__LIGHT = eINSTANCE.getSenseCapS2105_Light();
+
+		/**
 		 * The meta object literal for the '{@link de.jena.chirpstack.moisture.model.moisture.impl.SenseCapImpl <em>Sense Cap</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2985,74 +3312,6 @@ public interface ChirpstackMoisturePackage extends org.eclipse.emf.ecore.EPackag
 		 * @generated
 		 */
 		EReference SENSE_CAP__LIGHT = eINSTANCE.getSenseCap_Light();
-
-		/**
-		 * The meta object literal for the '{@link de.jena.chirpstack.moisture.model.moisture.impl.SenseCap2Impl <em>Sense Cap2</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.jena.chirpstack.moisture.model.moisture.impl.SenseCap2Impl
-		 * @see de.jena.chirpstack.moisture.model.moisture.impl.ChirpstackMoisturePackageImpl#getSenseCap2()
-		 * @generated
-		 */
-		EClass SENSE_CAP2 = eINSTANCE.getSenseCap2();
-
-		/**
-		 * The meta object literal for the '<em><b>Air</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SENSE_CAP2__AIR = eINSTANCE.getSenseCap2_Air();
-
-		/**
-		 * The meta object literal for the '<em><b>Rain</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SENSE_CAP2__RAIN = eINSTANCE.getSenseCap2_Rain();
-
-		/**
-		 * The meta object literal for the '<em><b>Light</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SENSE_CAP2__LIGHT = eINSTANCE.getSenseCap2_Light();
-
-		/**
-		 * The meta object literal for the '{@link de.jena.chirpstack.moisture.model.moisture.impl.SenseCap3Impl <em>Sense Cap3</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.jena.chirpstack.moisture.model.moisture.impl.SenseCap3Impl
-		 * @see de.jena.chirpstack.moisture.model.moisture.impl.ChirpstackMoisturePackageImpl#getSenseCap3()
-		 * @generated
-		 */
-		EClass SENSE_CAP3 = eINSTANCE.getSenseCap3();
-
-		/**
-		 * The meta object literal for the '<em><b>Air</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SENSE_CAP3__AIR = eINSTANCE.getSenseCap3_Air();
-
-		/**
-		 * The meta object literal for the '<em><b>Rain</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SENSE_CAP3__RAIN = eINSTANCE.getSenseCap3_Rain();
-
-		/**
-		 * The meta object literal for the '<em><b>Light</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SENSE_CAP3__LIGHT = eINSTANCE.getSenseCap3_Light();
 
 		/**
 		 * The meta object literal for the '{@link de.jena.chirpstack.moisture.model.moisture.impl.AirImpl <em>Air</em>}' class.
@@ -3343,6 +3602,74 @@ public interface ChirpstackMoisturePackage extends org.eclipse.emf.ecore.EPackag
 		 * @generated
 		 */
 		EAttribute SN__ADC3 = eINSTANCE.getSN_Adc3();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.chirpstack.moisture.model.moisture.impl.SolidosTeros21Impl <em>Solidos Teros21</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.chirpstack.moisture.model.moisture.impl.SolidosTeros21Impl
+		 * @see de.jena.chirpstack.moisture.model.moisture.impl.ChirpstackMoisturePackageImpl#getSolidosTeros21()
+		 * @generated
+		 */
+		EClass SOLIDOS_TEROS21 = eINSTANCE.getSolidosTeros21();
+
+		/**
+		 * The meta object literal for the '<em><b>Sensor</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SOLIDOS_TEROS21__SENSOR = eINSTANCE.getSolidosTeros21_Sensor();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.chirpstack.moisture.model.moisture.impl.Teros21Impl <em>Teros21</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.chirpstack.moisture.model.moisture.impl.Teros21Impl
+		 * @see de.jena.chirpstack.moisture.model.moisture.impl.ChirpstackMoisturePackageImpl#getTeros21()
+		 * @generated
+		 */
+		EClass TEROS21 = eINSTANCE.getTeros21();
+
+		/**
+		 * The meta object literal for the '<em><b>Potential Water1</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEROS21__POTENTIAL_WATER1 = eINSTANCE.getTeros21_PotentialWater1();
+
+		/**
+		 * The meta object literal for the '<em><b>Potential Water2</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEROS21__POTENTIAL_WATER2 = eINSTANCE.getTeros21_PotentialWater2();
+
+		/**
+		 * The meta object literal for the '<em><b>Temperatur1</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEROS21__TEMPERATUR1 = eINSTANCE.getTeros21_Temperatur1();
+
+		/**
+		 * The meta object literal for the '<em><b>Temperatur2</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEROS21__TEMPERATUR2 = eINSTANCE.getTeros21_Temperatur2();
+
+		/**
+		 * The meta object literal for the '<em><b>Battery</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEROS21__BATTERY = eINSTANCE.getTeros21_Battery();
 
 		/**
 		 * The meta object literal for the '{@link de.jena.chirpstack.moisture.model.moisture.SoilType <em>Soil Type</em>}' enum.

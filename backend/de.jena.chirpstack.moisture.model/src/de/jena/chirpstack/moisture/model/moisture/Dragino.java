@@ -32,7 +32,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * </ul>
  *
  * @see de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage#getDragino()
- * @model annotation="model name='Dragino_LSE01'"
+ * @model annotation="model name='Dragino_LSE01' profileId='37cf9cbd-e7e1-4269-8c22-b46bb5261a2a'"
  * @generated
  */
 @ProviderType

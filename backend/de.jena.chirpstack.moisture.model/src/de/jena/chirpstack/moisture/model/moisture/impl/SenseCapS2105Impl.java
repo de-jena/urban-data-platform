@@ -17,7 +17,7 @@ import de.jena.chirpstack.moisture.model.moisture.Air;
 import de.jena.chirpstack.moisture.model.moisture.ChirpstackMoisturePackage;
 import de.jena.chirpstack.moisture.model.moisture.Light;
 import de.jena.chirpstack.moisture.model.moisture.Rain;
-import de.jena.chirpstack.moisture.model.moisture.SenseCap2;
+import de.jena.chirpstack.moisture.model.moisture.SenseCapS2105;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -31,20 +31,20 @@ import org.eclipse.sensinact.model.core.provider.impl.ProviderImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Sense Cap2</b></em>'.
+ * An implementation of the model object '<em><b>Sense Cap S2105</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.jena.chirpstack.moisture.model.moisture.impl.SenseCap2Impl#getAir <em>Air</em>}</li>
- *   <li>{@link de.jena.chirpstack.moisture.model.moisture.impl.SenseCap2Impl#getRain <em>Rain</em>}</li>
- *   <li>{@link de.jena.chirpstack.moisture.model.moisture.impl.SenseCap2Impl#getLight <em>Light</em>}</li>
+ *   <li>{@link de.jena.chirpstack.moisture.model.moisture.impl.SenseCapS2105Impl#getAir <em>Air</em>}</li>
+ *   <li>{@link de.jena.chirpstack.moisture.model.moisture.impl.SenseCapS2105Impl#getRain <em>Rain</em>}</li>
+ *   <li>{@link de.jena.chirpstack.moisture.model.moisture.impl.SenseCapS2105Impl#getLight <em>Light</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class SenseCap2Impl extends ProviderImpl implements SenseCap2 {
+public class SenseCapS2105Impl extends ProviderImpl implements SenseCapS2105 {
 	/**
 	 * The cached value of the '{@link #getAir() <em>Air</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -80,7 +80,7 @@ public class SenseCap2Impl extends ProviderImpl implements SenseCap2 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SenseCap2Impl() {
+	protected SenseCapS2105Impl() {
 		super();
 	}
 
@@ -91,7 +91,7 @@ public class SenseCap2Impl extends ProviderImpl implements SenseCap2 {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ChirpstackMoisturePackage.Literals.SENSE_CAP2;
+		return ChirpstackMoisturePackage.Literals.SENSE_CAP_S2105;
 	}
 
 	/**
@@ -113,7 +113,7 @@ public class SenseCap2Impl extends ProviderImpl implements SenseCap2 {
 		Air oldAir = air;
 		air = newAir;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ChirpstackMoisturePackage.SENSE_CAP2__AIR, oldAir, newAir);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ChirpstackMoisturePackage.SENSE_CAP_S2105__AIR, oldAir, newAir);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -129,14 +129,14 @@ public class SenseCap2Impl extends ProviderImpl implements SenseCap2 {
 		if (newAir != air) {
 			NotificationChain msgs = null;
 			if (air != null)
-				msgs = ((InternalEObject)air).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ChirpstackMoisturePackage.SENSE_CAP2__AIR, null, msgs);
+				msgs = ((InternalEObject)air).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ChirpstackMoisturePackage.SENSE_CAP_S2105__AIR, null, msgs);
 			if (newAir != null)
-				msgs = ((InternalEObject)newAir).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ChirpstackMoisturePackage.SENSE_CAP2__AIR, null, msgs);
+				msgs = ((InternalEObject)newAir).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ChirpstackMoisturePackage.SENSE_CAP_S2105__AIR, null, msgs);
 			msgs = basicSetAir(newAir, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackMoisturePackage.SENSE_CAP2__AIR, newAir, newAir));
+			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackMoisturePackage.SENSE_CAP_S2105__AIR, newAir, newAir));
 	}
 
 	/**
@@ -158,7 +158,7 @@ public class SenseCap2Impl extends ProviderImpl implements SenseCap2 {
 		Rain oldRain = rain;
 		rain = newRain;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ChirpstackMoisturePackage.SENSE_CAP2__RAIN, oldRain, newRain);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ChirpstackMoisturePackage.SENSE_CAP_S2105__RAIN, oldRain, newRain);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -174,14 +174,14 @@ public class SenseCap2Impl extends ProviderImpl implements SenseCap2 {
 		if (newRain != rain) {
 			NotificationChain msgs = null;
 			if (rain != null)
-				msgs = ((InternalEObject)rain).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ChirpstackMoisturePackage.SENSE_CAP2__RAIN, null, msgs);
+				msgs = ((InternalEObject)rain).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ChirpstackMoisturePackage.SENSE_CAP_S2105__RAIN, null, msgs);
 			if (newRain != null)
-				msgs = ((InternalEObject)newRain).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ChirpstackMoisturePackage.SENSE_CAP2__RAIN, null, msgs);
+				msgs = ((InternalEObject)newRain).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ChirpstackMoisturePackage.SENSE_CAP_S2105__RAIN, null, msgs);
 			msgs = basicSetRain(newRain, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackMoisturePackage.SENSE_CAP2__RAIN, newRain, newRain));
+			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackMoisturePackage.SENSE_CAP_S2105__RAIN, newRain, newRain));
 	}
 
 	/**
@@ -203,7 +203,7 @@ public class SenseCap2Impl extends ProviderImpl implements SenseCap2 {
 		Light oldLight = light;
 		light = newLight;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ChirpstackMoisturePackage.SENSE_CAP2__LIGHT, oldLight, newLight);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ChirpstackMoisturePackage.SENSE_CAP_S2105__LIGHT, oldLight, newLight);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -219,14 +219,14 @@ public class SenseCap2Impl extends ProviderImpl implements SenseCap2 {
 		if (newLight != light) {
 			NotificationChain msgs = null;
 			if (light != null)
-				msgs = ((InternalEObject)light).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ChirpstackMoisturePackage.SENSE_CAP2__LIGHT, null, msgs);
+				msgs = ((InternalEObject)light).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ChirpstackMoisturePackage.SENSE_CAP_S2105__LIGHT, null, msgs);
 			if (newLight != null)
-				msgs = ((InternalEObject)newLight).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ChirpstackMoisturePackage.SENSE_CAP2__LIGHT, null, msgs);
+				msgs = ((InternalEObject)newLight).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ChirpstackMoisturePackage.SENSE_CAP_S2105__LIGHT, null, msgs);
 			msgs = basicSetLight(newLight, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackMoisturePackage.SENSE_CAP2__LIGHT, newLight, newLight));
+			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackMoisturePackage.SENSE_CAP_S2105__LIGHT, newLight, newLight));
 	}
 
 	/**
@@ -237,11 +237,11 @@ public class SenseCap2Impl extends ProviderImpl implements SenseCap2 {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ChirpstackMoisturePackage.SENSE_CAP2__AIR:
+			case ChirpstackMoisturePackage.SENSE_CAP_S2105__AIR:
 				return basicSetAir(null, msgs);
-			case ChirpstackMoisturePackage.SENSE_CAP2__RAIN:
+			case ChirpstackMoisturePackage.SENSE_CAP_S2105__RAIN:
 				return basicSetRain(null, msgs);
-			case ChirpstackMoisturePackage.SENSE_CAP2__LIGHT:
+			case ChirpstackMoisturePackage.SENSE_CAP_S2105__LIGHT:
 				return basicSetLight(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -255,11 +255,11 @@ public class SenseCap2Impl extends ProviderImpl implements SenseCap2 {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ChirpstackMoisturePackage.SENSE_CAP2__AIR:
+			case ChirpstackMoisturePackage.SENSE_CAP_S2105__AIR:
 				return getAir();
-			case ChirpstackMoisturePackage.SENSE_CAP2__RAIN:
+			case ChirpstackMoisturePackage.SENSE_CAP_S2105__RAIN:
 				return getRain();
-			case ChirpstackMoisturePackage.SENSE_CAP2__LIGHT:
+			case ChirpstackMoisturePackage.SENSE_CAP_S2105__LIGHT:
 				return getLight();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -273,13 +273,13 @@ public class SenseCap2Impl extends ProviderImpl implements SenseCap2 {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ChirpstackMoisturePackage.SENSE_CAP2__AIR:
+			case ChirpstackMoisturePackage.SENSE_CAP_S2105__AIR:
 				setAir((Air)newValue);
 				return;
-			case ChirpstackMoisturePackage.SENSE_CAP2__RAIN:
+			case ChirpstackMoisturePackage.SENSE_CAP_S2105__RAIN:
 				setRain((Rain)newValue);
 				return;
-			case ChirpstackMoisturePackage.SENSE_CAP2__LIGHT:
+			case ChirpstackMoisturePackage.SENSE_CAP_S2105__LIGHT:
 				setLight((Light)newValue);
 				return;
 		}
@@ -294,13 +294,13 @@ public class SenseCap2Impl extends ProviderImpl implements SenseCap2 {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ChirpstackMoisturePackage.SENSE_CAP2__AIR:
+			case ChirpstackMoisturePackage.SENSE_CAP_S2105__AIR:
 				setAir((Air)null);
 				return;
-			case ChirpstackMoisturePackage.SENSE_CAP2__RAIN:
+			case ChirpstackMoisturePackage.SENSE_CAP_S2105__RAIN:
 				setRain((Rain)null);
 				return;
-			case ChirpstackMoisturePackage.SENSE_CAP2__LIGHT:
+			case ChirpstackMoisturePackage.SENSE_CAP_S2105__LIGHT:
 				setLight((Light)null);
 				return;
 		}
@@ -315,14 +315,14 @@ public class SenseCap2Impl extends ProviderImpl implements SenseCap2 {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ChirpstackMoisturePackage.SENSE_CAP2__AIR:
+			case ChirpstackMoisturePackage.SENSE_CAP_S2105__AIR:
 				return air != null;
-			case ChirpstackMoisturePackage.SENSE_CAP2__RAIN:
+			case ChirpstackMoisturePackage.SENSE_CAP_S2105__RAIN:
 				return rain != null;
-			case ChirpstackMoisturePackage.SENSE_CAP2__LIGHT:
+			case ChirpstackMoisturePackage.SENSE_CAP_S2105__LIGHT:
 				return light != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //SenseCap2Impl
+} //SenseCapS2105Impl
