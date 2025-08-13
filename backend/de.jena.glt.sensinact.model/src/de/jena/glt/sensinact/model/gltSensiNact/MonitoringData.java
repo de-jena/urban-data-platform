@@ -11,7 +11,7 @@
  * Contributors:
  *     Data In Motion - initial API and implementation
  */
-package de.jena.glt.sensinact.model.glt;
+package de.jena.glt.sensinact.model.gltSensiNact;
 
 import org.eclipse.sensinact.model.core.provider.Service;
 
@@ -26,10 +26,10 @@ import org.osgi.annotation.versioning.ProviderType;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link de.jena.glt.sensinact.model.glt.MonitoringData#getValue <em>Value</em>}</li>
+ *   <li>{@link de.jena.glt.sensinact.model.gltSensiNact.MonitoringData#getValue <em>Value</em>}</li>
  * </ul>
  *
- * @see de.jena.glt.sensinact.model.glt.GltPackage#getMonitoringData()
+ * @see de.jena.glt.sensinact.model.gltSensiNact.GltPackage#getMonitoringData()
  * @model
  * @generated
  */
@@ -41,14 +41,14 @@ public interface MonitoringData extends Service {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(float)
-	 * @see de.jena.glt.sensinact.model.glt.GltPackage#getMonitoringData_Value()
+	 * @see de.jena.glt.sensinact.model.gltSensiNact.GltPackage#getMonitoringData_Value()
 	 * @model
 	 * @generated
 	 */
 	float getValue();
 
 	/**
-	 * Sets the value of the '{@link de.jena.glt.sensinact.model.glt.MonitoringData#getValue <em>Value</em>}' attribute.
+	 * Sets the value of the '{@link de.jena.glt.sensinact.model.gltSensiNact.MonitoringData#getValue <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Value</em>' attribute.

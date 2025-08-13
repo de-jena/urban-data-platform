@@ -11,10 +11,10 @@
  * Contributors:
  *     Data In Motion - initial API and implementation
  */
-package de.jena.glt.sensinact.model.glt.impl;
+package de.jena.glt.sensinact.model.gltSensiNact.impl;
 
-import de.jena.glt.sensinact.model.glt.GltPackage;
-import de.jena.glt.sensinact.model.glt.MonitoringData;
+import de.jena.glt.sensinact.model.gltSensiNact.GltPackage;
+import de.jena.glt.sensinact.model.gltSensiNact.MonitoringData;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -32,7 +32,7 @@ import org.eclipse.sensinact.model.core.provider.impl.ServiceImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.jena.glt.sensinact.model.glt.impl.MonitoringDataImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link de.jena.glt.sensinact.model.gltSensiNact.impl.MonitoringDataImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated

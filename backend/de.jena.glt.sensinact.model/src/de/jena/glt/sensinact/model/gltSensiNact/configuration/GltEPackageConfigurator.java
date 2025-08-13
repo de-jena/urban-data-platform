@@ -11,9 +11,9 @@
  * Contributors:
  *     Data In Motion - initial API and implementation
  */
-package de.jena.glt.sensinact.model.glt.configuration;
+package de.jena.glt.sensinact.model.gltSensiNact.configuration;
 
-import de.jena.glt.sensinact.model.glt.GltPackage;
+import de.jena.glt.sensinact.model.gltSensiNact.GltPackage;
 
 import java.util.HashMap;
 import java.util.Map;

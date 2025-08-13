@@ -11,9 +11,9 @@
  * Contributors:
  *     Data In Motion - initial API and implementation
  */
-package de.jena.glt.sensinact.model.glt.util;
+package de.jena.glt.sensinact.model.gltSensiNact.util;
 
-import de.jena.glt.sensinact.model.glt.*;
+import de.jena.glt.sensinact.model.gltSensiNact.*;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -34,7 +34,7 @@ import org.eclipse.sensinact.model.core.provider.Service;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see de.jena.glt.sensinact.model.glt.GltPackage
+ * @see de.jena.glt.sensinact.model.gltSensiNact.GltPackage
  * @generated
  */
 public class GltSwitch<T> extends Switch<T> {

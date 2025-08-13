@@ -11,7 +11,7 @@
  * Contributors:
  *     Data In Motion - initial API and implementation
  */
-package de.jena.glt.sensinact.model.glt;
+package de.jena.glt.sensinact.model.gltSensiNact;
 
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -35,7 +35,7 @@ import org.osgi.annotation.versioning.ProviderType;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see de.jena.glt.sensinact.model.glt.GltFactory
+ * @see de.jena.glt.sensinact.model.gltSensiNact.GltFactory
  * @model kind="package"
  *        annotation="Version value='1.0'"
  * @generated
@@ -49,7 +49,7 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNAME = "glt";
+	String eNAME = "gltSensiNact";
 
 	/**
 	 * The package namespace URI.
@@ -73,14 +73,14 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	GltPackage eINSTANCE = de.jena.glt.sensinact.model.glt.impl.GltPackageImpl.init();
+	GltPackage eINSTANCE = de.jena.glt.sensinact.model.gltSensiNact.impl.GltPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link de.jena.glt.sensinact.model.glt.impl.GltSideImpl <em>Side</em>}' class.
+	 * The meta object id for the '{@link de.jena.glt.sensinact.model.gltSensiNact.impl.GltSideImpl <em>Side</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.jena.glt.sensinact.model.glt.impl.GltSideImpl
-	 * @see de.jena.glt.sensinact.model.glt.impl.GltPackageImpl#getGltSide()
+	 * @see de.jena.glt.sensinact.model.gltSensiNact.impl.GltSideImpl
+	 * @see de.jena.glt.sensinact.model.gltSensiNact.impl.GltPackageImpl#getGltSide()
 	 * @generated
 	 */
 	int GLT_SIDE = 0;
@@ -158,11 +158,11 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	int GLT_SIDE_OPERATION_COUNT = ProviderPackage.DYNAMIC_PROVIDER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.jena.glt.sensinact.model.glt.impl.MonitoringDataImpl <em>Monitoring Data</em>}' class.
+	 * The meta object id for the '{@link de.jena.glt.sensinact.model.gltSensiNact.impl.MonitoringDataImpl <em>Monitoring Data</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.jena.glt.sensinact.model.glt.impl.MonitoringDataImpl
-	 * @see de.jena.glt.sensinact.model.glt.impl.GltPackageImpl#getMonitoringData()
+	 * @see de.jena.glt.sensinact.model.gltSensiNact.impl.MonitoringDataImpl
+	 * @see de.jena.glt.sensinact.model.gltSensiNact.impl.GltPackageImpl#getMonitoringData()
 	 * @generated
 	 */
 	int MONITORING_DATA = 1;
@@ -214,31 +214,31 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 
 
 	/**
-	 * Returns the meta object for class '{@link de.jena.glt.sensinact.model.glt.GltSide <em>Side</em>}'.
+	 * Returns the meta object for class '{@link de.jena.glt.sensinact.model.gltSensiNact.GltSide <em>Side</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Side</em>'.
-	 * @see de.jena.glt.sensinact.model.glt.GltSide
+	 * @see de.jena.glt.sensinact.model.gltSensiNact.GltSide
 	 * @generated
 	 */
 	EClass getGltSide();
 
 	/**
-	 * Returns the meta object for class '{@link de.jena.glt.sensinact.model.glt.MonitoringData <em>Monitoring Data</em>}'.
+	 * Returns the meta object for class '{@link de.jena.glt.sensinact.model.gltSensiNact.MonitoringData <em>Monitoring Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Monitoring Data</em>'.
-	 * @see de.jena.glt.sensinact.model.glt.MonitoringData
+	 * @see de.jena.glt.sensinact.model.gltSensiNact.MonitoringData
 	 * @generated
 	 */
 	EClass getMonitoringData();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.glt.sensinact.model.glt.MonitoringData#getValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.glt.sensinact.model.gltSensiNact.MonitoringData#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see de.jena.glt.sensinact.model.glt.MonitoringData#getValue()
+	 * @see de.jena.glt.sensinact.model.gltSensiNact.MonitoringData#getValue()
 	 * @see #getMonitoringData()
 	 * @generated
 	 */
@@ -268,21 +268,21 @@ public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link de.jena.glt.sensinact.model.glt.impl.GltSideImpl <em>Side</em>}' class.
+		 * The meta object literal for the '{@link de.jena.glt.sensinact.model.gltSensiNact.impl.GltSideImpl <em>Side</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.jena.glt.sensinact.model.glt.impl.GltSideImpl
-		 * @see de.jena.glt.sensinact.model.glt.impl.GltPackageImpl#getGltSide()
+		 * @see de.jena.glt.sensinact.model.gltSensiNact.impl.GltSideImpl
+		 * @see de.jena.glt.sensinact.model.gltSensiNact.impl.GltPackageImpl#getGltSide()
 		 * @generated
 		 */
 		EClass GLT_SIDE = eINSTANCE.getGltSide();
 
 		/**
-		 * The meta object literal for the '{@link de.jena.glt.sensinact.model.glt.impl.MonitoringDataImpl <em>Monitoring Data</em>}' class.
+		 * The meta object literal for the '{@link de.jena.glt.sensinact.model.gltSensiNact.impl.MonitoringDataImpl <em>Monitoring Data</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.jena.glt.sensinact.model.glt.impl.MonitoringDataImpl
-		 * @see de.jena.glt.sensinact.model.glt.impl.GltPackageImpl#getMonitoringData()
+		 * @see de.jena.glt.sensinact.model.gltSensiNact.impl.MonitoringDataImpl
+		 * @see de.jena.glt.sensinact.model.gltSensiNact.impl.GltPackageImpl#getMonitoringData()
 		 * @generated
 		 */
 		EClass MONITORING_DATA = eINSTANCE.getMonitoringData();

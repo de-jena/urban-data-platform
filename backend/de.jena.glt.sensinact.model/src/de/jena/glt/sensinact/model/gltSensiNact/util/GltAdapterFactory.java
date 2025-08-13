@@ -11,9 +11,9 @@
  * Contributors:
  *     Data In Motion - initial API and implementation
  */
-package de.jena.glt.sensinact.model.glt.util;
+package de.jena.glt.sensinact.model.gltSensiNact.util;
 
-import de.jena.glt.sensinact.model.glt.*;
+import de.jena.glt.sensinact.model.gltSensiNact.*;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -31,7 +31,7 @@ import org.eclipse.sensinact.model.core.provider.Service;
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see de.jena.glt.sensinact.model.glt.GltPackage
+ * @see de.jena.glt.sensinact.model.gltSensiNact.GltPackage
  * @generated
  */
 public class GltAdapterFactory extends AdapterFactoryImpl {
@@ -123,13 +123,13 @@ public class GltAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.jena.glt.sensinact.model.glt.GltSide <em>Side</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.jena.glt.sensinact.model.gltSensiNact.GltSide <em>Side</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.jena.glt.sensinact.model.glt.GltSide
+	 * @see de.jena.glt.sensinact.model.gltSensiNact.GltSide
 	 * @generated
 	 */
 	public Adapter createGltSideAdapter() {
@@ -137,13 +137,13 @@ public class GltAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.jena.glt.sensinact.model.glt.MonitoringData <em>Monitoring Data</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.jena.glt.sensinact.model.gltSensiNact.MonitoringData <em>Monitoring Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.jena.glt.sensinact.model.glt.MonitoringData
+	 * @see de.jena.glt.sensinact.model.gltSensiNact.MonitoringData
 	 * @generated
 	 */
 	public Adapter createMonitoringDataAdapter() {

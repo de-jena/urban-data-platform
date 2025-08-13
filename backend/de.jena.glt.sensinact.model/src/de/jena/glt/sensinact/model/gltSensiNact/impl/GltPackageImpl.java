@@ -11,12 +11,12 @@
  * Contributors:
  *     Data In Motion - initial API and implementation
  */
-package de.jena.glt.sensinact.model.glt.impl;
+package de.jena.glt.sensinact.model.gltSensiNact.impl;
 
-import de.jena.glt.sensinact.model.glt.GltFactory;
-import de.jena.glt.sensinact.model.glt.GltPackage;
-import de.jena.glt.sensinact.model.glt.GltSide;
-import de.jena.glt.sensinact.model.glt.MonitoringData;
+import de.jena.glt.sensinact.model.gltSensiNact.GltFactory;
+import de.jena.glt.sensinact.model.gltSensiNact.GltPackage;
+import de.jena.glt.sensinact.model.gltSensiNact.GltSide;
+import de.jena.glt.sensinact.model.gltSensiNact.MonitoringData;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -58,7 +58,7 @@ public class GltPackageImpl extends EPackageImpl implements GltPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see de.jena.glt.sensinact.model.glt.GltPackage#eNS_URI
+	 * @see de.jena.glt.sensinact.model.gltSensiNact.GltPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */

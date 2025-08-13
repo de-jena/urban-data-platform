@@ -11,12 +11,12 @@
  * Contributors:
  *     Data In Motion - initial API and implementation
  */
-package de.jena.glt.sensinact.model.glt.configuration;
+package de.jena.glt.sensinact.model.gltSensiNact.configuration;
 
-import de.jena.glt.sensinact.model.glt.GltFactory;
-import de.jena.glt.sensinact.model.glt.GltPackage;
+import de.jena.glt.sensinact.model.gltSensiNact.GltFactory;
+import de.jena.glt.sensinact.model.gltSensiNact.GltPackage;
 
-import de.jena.glt.sensinact.model.glt.impl.GltPackageImpl;
+import de.jena.glt.sensinact.model.gltSensiNact.impl.GltPackageImpl;
 
 import java.util.Hashtable;
 
@@ -42,10 +42,10 @@ import org.osgi.service.condition.Condition;
  * @generated
  */
 @Component(name = "GltConfigurator")
-@Capability( namespace = "osgi.service", attribute = { "objectClass:List<String>=\"de.jena.glt.sensinact.model.glt.util.GltResourceFactoryImpl, org.eclipse.emf.ecore.resource.Resource$Factory\"" , "uses:=\"org.eclipse.emf.ecore.resource,de.jena.glt.sensinact.model.glt.util\"" })
-@Capability( namespace = "osgi.service", attribute = { "objectClass:List<String>=\"de.jena.glt.sensinact.model.glt.GltFactory, org.eclipse.emf.ecore.EFactory\"" , "uses:=\"org.eclipse.emf.ecore,de.jena.glt.sensinact.model.glt\"" })
-@Capability( namespace = "osgi.service", attribute = { "objectClass:List<String>=\"de.jena.glt.sensinact.model.glt.GltPackage, org.eclipse.emf.ecore.EPackage\"" , "uses:=\"org.eclipse.emf.ecore,de.jena.glt.sensinact.model.glt\"" })
-@Capability( namespace = "osgi.service", attribute = { "objectClass:List<String>=\"org.gecko.emf.osgi.configurator.EPackageConfigurator\"" , "uses:=\"org.eclipse.emf.ecore,de.jena.glt.sensinact.model.glt\"" })
+@Capability( namespace = "osgi.service", attribute = { "objectClass:List<String>=\"de.jena.glt.sensinact.model.gltSensiNact.util.GltResourceFactoryImpl, org.eclipse.emf.ecore.resource.Resource$Factory\"" , "uses:=\"org.eclipse.emf.ecore.resource,de.jena.glt.sensinact.model.gltSensiNact.util\"" })
+@Capability( namespace = "osgi.service", attribute = { "objectClass:List<String>=\"de.jena.glt.sensinact.model.gltSensiNact.GltFactory, org.eclipse.emf.ecore.EFactory\"" , "uses:=\"org.eclipse.emf.ecore,de.jena.glt.sensinact.model.gltSensiNact\"" })
+@Capability( namespace = "osgi.service", attribute = { "objectClass:List<String>=\"de.jena.glt.sensinact.model.gltSensiNact.GltPackage, org.eclipse.emf.ecore.EPackage\"" , "uses:=\"org.eclipse.emf.ecore,de.jena.glt.sensinact.model.gltSensiNact\"" })
+@Capability( namespace = "osgi.service", attribute = { "objectClass:List<String>=\"org.gecko.emf.osgi.configurator.EPackageConfigurator\"" , "uses:=\"org.eclipse.emf.ecore,de.jena.glt.sensinact.model.gltSensiNact\"" })
 @Capability( namespace = "osgi.service", attribute = { "objectClass:List<String>=\"org.osgi.service.condition.Condition\"" , "uses:=org.osgi.service.condition" })
 public class GltConfigurationComponent {
 	

@@ -11,7 +11,7 @@
  * Contributors:
  *     Data In Motion - initial API and implementation
  */
-package de.jena.glt.sensinact.model.glt;
+package de.jena.glt.sensinact.model.gltSensiNact;
 
 import org.eclipse.sensinact.model.core.provider.DynamicProvider;
 
@@ -23,7 +23,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * <!-- end-user-doc -->
  *
  *
- * @see de.jena.glt.sensinact.model.glt.GltPackage#getGltSide()
+ * @see de.jena.glt.sensinact.model.gltSensiNact.GltPackage#getGltSide()
  * @model
  * @generated
  */

@@ -11,10 +11,10 @@
  * Contributors:
  *     Data In Motion - initial API and implementation
  */
-package de.jena.glt.sensinact.model.glt.impl;
+package de.jena.glt.sensinact.model.gltSensiNact.impl;
 
-import de.jena.glt.sensinact.model.glt.GltPackage;
-import de.jena.glt.sensinact.model.glt.GltSide;
+import de.jena.glt.sensinact.model.gltSensiNact.GltPackage;
+import de.jena.glt.sensinact.model.gltSensiNact.GltSide;
 
 import org.eclipse.emf.ecore.EClass;
 
