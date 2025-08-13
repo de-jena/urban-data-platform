@@ -1,0 +1,17 @@
+-library: enableOSGi-Test
+
+-runproperties: \
+	jakarta.ws.rs.client.ClientBuilder=org.glassfish.jersey.client.JerseyClientBuilder,\
+	jakarta.ws.rs.ext.RuntimeDelegate=org.glassfish.jersey.internal.RuntimeDelegateImpl
+
+	
+-runbundles.test: \
+	de.jena.chirpstack.sensinact.test;version=snapshot
+
+-runfw: org.apache.felix.framework
+
+-runee: JavaSE-21
+
+-runblacklist: \
+	bnd.identity;id='org.gecko.emf.json',\
+	bnd.identity;id='org.eclipse.emfcloud.emfjson-jackson'

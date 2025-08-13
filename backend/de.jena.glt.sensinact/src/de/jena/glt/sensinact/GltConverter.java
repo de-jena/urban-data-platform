@@ -32,10 +32,10 @@ import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.metatype.annotations.Designate;
 
 import de.jena.glt.rest.GltOpenApi;
-import de.jena.glt.sensinact.model.glt.GltFactory;
-import de.jena.glt.sensinact.model.glt.GltPackage;
-import de.jena.glt.sensinact.model.glt.GltSide;
-import de.jena.glt.sensinact.model.glt.MonitoringData;
+import de.jena.glt.sensinact.model.gltSensiNact.GltFactory;
+import de.jena.glt.sensinact.model.gltSensiNact.GltPackage;
+import de.jena.glt.sensinact.model.gltSensiNact.GltSide;
+import de.jena.glt.sensinact.model.gltSensiNact.MonitoringData;
 import de.jena.model.glt.DatalogContentPojo;
 import de.jena.model.glt.EntityPojo;
 import de.jena.model.glt.Response;

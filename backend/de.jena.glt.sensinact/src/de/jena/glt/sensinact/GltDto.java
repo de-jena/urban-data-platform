@@ -21,7 +21,7 @@ import org.eclipse.sensinact.core.annotation.dto.Resource;
 import org.eclipse.sensinact.core.annotation.dto.Service;
 import org.eclipse.sensinact.core.annotation.dto.Timestamp;
 
-import de.jena.glt.sensinact.model.glt.GltPackage;
+import de.jena.glt.sensinact.model.gltSensiNact.GltPackage;
 
 @ModelPackageUri(GltPackage.eNS_URI)
 @Model("GltSide")
