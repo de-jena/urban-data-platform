@@ -786,6 +786,16 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getWeatherService_WindAlert() {
+		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(41);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public WeatherFactory getWeatherFactory() {
 		return (WeatherFactory)getEFactoryInstance();
 	}
@@ -878,6 +888,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 		createEAttribute(weatherServiceEClass, WEATHER_SERVICE__WW);
 		createEAttribute(weatherServiceEClass, WEATHER_SERVICE__W1W2_W1);
 		createEAttribute(weatherServiceEClass, WEATHER_SERVICE__W1W2_W2);
+		createEAttribute(weatherServiceEClass, WEATHER_SERVICE__WIND_ALERT);
 	}
 
 	/**
@@ -984,6 +995,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 		initEAttribute(getWeatherService_Ww(), ecorePackage.getEString(), "ww", null, 0, 1, WeatherService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWeatherService_W1w2_w1(), ecorePackage.getEString(), "w1w2_w1", null, 0, 1, WeatherService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWeatherService_W1w2_w2(), ecorePackage.getEString(), "w1w2_w2", null, 0, 1, WeatherService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWeatherService_WindAlert(), ecorePackage.getEBoolean(), "windAlert", null, 0, 1, WeatherService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

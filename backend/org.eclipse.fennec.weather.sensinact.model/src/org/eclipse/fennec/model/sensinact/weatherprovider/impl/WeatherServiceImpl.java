@@ -64,6 +64,7 @@ import org.eclipse.sensinact.model.core.provider.impl.ServiceImpl;
  *   <li>{@link org.eclipse.fennec.model.sensinact.weatherprovider.impl.WeatherServiceImpl#getWw <em>Ww</em>}</li>
  *   <li>{@link org.eclipse.fennec.model.sensinact.weatherprovider.impl.WeatherServiceImpl#getW1w2_w1 <em>W1w2 w1</em>}</li>
  *   <li>{@link org.eclipse.fennec.model.sensinact.weatherprovider.impl.WeatherServiceImpl#getW1w2_w2 <em>W1w2 w2</em>}</li>
+ *   <li>{@link org.eclipse.fennec.model.sensinact.weatherprovider.impl.WeatherServiceImpl#isWindAlert <em>Wind Alert</em>}</li>
  * </ul>
  *
  * @generated
@@ -888,6 +889,26 @@ public class WeatherServiceImpl extends ServiceImpl implements WeatherService {
 	 * @ordered
 	 */
 	protected String w1w2_w2 = W1W2_W2_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isWindAlert() <em>Wind Alert</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isWindAlert()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean WIND_ALERT_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isWindAlert() <em>Wind Alert</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isWindAlert()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean windAlert = WIND_ALERT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1857,6 +1878,29 @@ public class WeatherServiceImpl extends ServiceImpl implements WeatherService {
 	 * @generated
 	 */
 	@Override
+	public boolean isWindAlert() {
+		return windAlert;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setWindAlert(boolean newWindAlert) {
+		boolean oldWindAlert = windAlert;
+		windAlert = newWindAlert;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_SERVICE__WIND_ALERT, oldWindAlert, windAlert));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case WeatherPackage.WEATHER_SERVICE__FORECASTED_WEATHER_TIME:
@@ -1941,6 +1985,8 @@ public class WeatherServiceImpl extends ServiceImpl implements WeatherService {
 				return getW1w2_w1();
 			case WeatherPackage.WEATHER_SERVICE__W1W2_W2:
 				return getW1w2_w2();
+			case WeatherPackage.WEATHER_SERVICE__WIND_ALERT:
+				return isWindAlert();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -2075,6 +2121,9 @@ public class WeatherServiceImpl extends ServiceImpl implements WeatherService {
 				return;
 			case WeatherPackage.WEATHER_SERVICE__W1W2_W2:
 				setW1w2_w2((String)newValue);
+				return;
+			case WeatherPackage.WEATHER_SERVICE__WIND_ALERT:
+				setWindAlert((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -2211,6 +2260,9 @@ public class WeatherServiceImpl extends ServiceImpl implements WeatherService {
 			case WeatherPackage.WEATHER_SERVICE__W1W2_W2:
 				setW1w2_w2(W1W2_W2_EDEFAULT);
 				return;
+			case WeatherPackage.WEATHER_SERVICE__WIND_ALERT:
+				setWindAlert(WIND_ALERT_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -2305,6 +2357,8 @@ public class WeatherServiceImpl extends ServiceImpl implements WeatherService {
 				return W1W2_W1_EDEFAULT == null ? w1w2_w1 != null : !W1W2_W1_EDEFAULT.equals(w1w2_w1);
 			case WeatherPackage.WEATHER_SERVICE__W1W2_W2:
 				return W1W2_W2_EDEFAULT == null ? w1w2_w2 != null : !W1W2_W2_EDEFAULT.equals(w1w2_w2);
+			case WeatherPackage.WEATHER_SERVICE__WIND_ALERT:
+				return windAlert != WIND_ALERT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -2401,6 +2455,8 @@ public class WeatherServiceImpl extends ServiceImpl implements WeatherService {
 		result.append(w1w2_w1);
 		result.append(", w1w2_w2: ");
 		result.append(w1w2_w2);
+		result.append(", windAlert: ");
+		result.append(windAlert);
 		result.append(')');
 		return result.toString();
 	}
