@@ -12,7 +12,7 @@ import org.eclipse.sensinact.southbound.rules.api.RuleDefinition;
 import org.osgi.service.component.annotations.*;
 import org.osgi.service.metatype.annotations.Designate;
 
-@Component(immediate = true, name = "CustomThresholdRule", service = RuleDefinition.class, configurationPid = "CustomThresholdRule", configurationPolicy = ConfigurationPolicy.REQUIRE)
+//@Component(immediate = true, name = "CustomThresholdRule", service = RuleDefinition.class, configurationPid = "CustomThresholdRule", configurationPolicy = ConfigurationPolicy.REQUIRE)
 @Designate(ocd = CustomRuleConfig.class)
 public class CustomThresholdRule implements RuleDefinition {
 
@@ -52,6 +52,7 @@ public class CustomThresholdRule implements RuleDefinition {
                         System.out.println("Alert! Value of resource '" + resourceName + "' is above " + threshold + ". Current value: " + value);
                         // Implement other actions here, such as updating a resource via the 'updater'.
                        resourceUpdater.updateResource(providerName, serviceName, "windAlert", true);
+                       
                     }
                 }
             }

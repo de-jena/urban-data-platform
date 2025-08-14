@@ -145,3 +145,6 @@ biz.aQute:biz.aQute.gogo.commands.provider:1.11.0-SNAPSHOT
 #time4j
 net.time4j:time4j-calendar:4.38
 net.time4j:time4j-base:5.9.4
+
+#needed for rules.config
+org.apache.commons:commons-jexl3:3.5.0

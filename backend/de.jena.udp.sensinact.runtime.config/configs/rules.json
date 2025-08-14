@@ -1,10 +1,24 @@
 {
-":configurator:resource-version": 1,
-
-"CustomThresholdRule~test": {
-	"providerName": "10567",
-	"serviceName": "currentWeather",
-	"resourceName": "windSpeed",
-	"threshold": 1
-}
+	":configurator:resource-version": 1,
+	"sensinact.rules.easyrules~test": {
+		"sensinact.rule.name": "Test",
+		"resource.selectors": [
+			{
+				"provider": "10567",
+				"service": "currentWeather",
+				"resource": "windSpeed"
+			}
+		],
+		"rule.definitions": [
+			{
+				"name": "wind-speed-notification",
+				"description": "Sends a notification when the wind speed is above 1.",
+				"condition": "$data['10567'].currentWeather.windSpeed.$value != null and $data['10567'].currentWeather.windSpeed.$value > 1.",
+				"action": [
+					"$updater.updateResource('10567', 'currentWeather', 'windAlert', true)"
+				],
+				"priority": 1
+			}
+		]
+	}
 }

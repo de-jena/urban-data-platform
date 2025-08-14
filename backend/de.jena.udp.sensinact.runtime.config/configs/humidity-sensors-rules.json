@@ -1,0 +1,88 @@
+{
+	":configurator:resource-version": 1,
+	"sensinact.rules.easyrules~hPa": {
+		"sensinact.rule.name": "FromkPaTohPa",
+		"resource.selectors": [
+			{
+				"provider": "provider",
+				"service": "service",
+				"resource": "resource"
+			}
+		],
+		"rule.definitions": [
+			{
+				"name": "to-hPa-conversion",
+				"description": "Converts the value from kPa to hPa",
+				"condition": "$data.provider.service.resource.$value != null",
+				"action": [
+					"$updater.updateResource('provider', 'service', 'hPa', $data.provider.service.resource.$value*10)"
+				],
+				"priority": 1
+			}
+		]
+	},
+	"sensinact.rules.easyrules~loghPa": {
+		"sensinact.rule.name": "LoghPa",
+		"resource.selectors": [
+			{
+				"provider": "provider",
+				"service": "service",
+				"resource": "hPa"
+			}
+		],
+		"rule.definitions": [
+			{
+				"name": "from-hPa-to-log",
+				"description": "Converts the value from hPa to the logaritmic in base 10 of the absolute value of hPa",
+				"condition": "$data.provider.service.hPa.$value != null",
+				"action": [
+					"$updater.updateResource('provider', 'service', 'loghPa', Math.log10(Math.abs($data.provider.service.hPa.$value))"
+				],
+				"priority": 1
+			}
+		]
+	},
+	"sensinact.rules.easyrules~avg": {
+		"sensinact.rule.name": "Average",
+		"resource.selectors": [
+			{
+				"provider": "provider",
+				"resource": "loghPa"
+			}			//this should trigger, no matter the number of sensors in a device, as long as they have a resource called loghPa that is updated
+
+		],
+		"rule.definitions": [
+			{
+				"name": "average",
+				"description": "Computes the average of the loghPa among sensors belonging to the same device",
+				"condition": "true",
+				"action": [
+					"sum=0; count=0; for (s : $data?['provider']){ if (s.containsKey('loghPa') && not empty(s.loghPa?.$value)) { sum = sum + s.loghPa.$value; count = count + 1; } }; if (count > 0) { $updater.updateResource('provider', 'service', 'average', sum / count) }"
+				],
+				"priority": 1
+			}
+		]
+	},
+	"sensinact.rules.easyrules~color": {
+		"sensinact.rule.name": "Color",
+		"resource.selectors": [
+			{
+				"provider": "provider",
+				"service": "service",
+				"resource": "average"
+			}			
+
+		],
+		"rule.definitions": [
+			{
+				"name": "color",
+				"description": "Computes a color code based on the value of the average",
+				"condition": "$data.provider.service.average.$value != null",
+				"action": [
+					"if ($data.provider.service.average.$value < 1.8) {$updater.updateResource('my-device', 'service', 'color', 'Blau'); } else if ($data.provider.service.average.$value < 3.) { $updater.updateResource('my-device', 'service', 'color', 'Grün');} else if ($data.provider.service.average.$value < 3.6) { $updater.updateResource('my-device', 'service', 'color', 'Gelb');} else {$updater.updateResource('my-device', 'service', 'color', 'Rot');}"
+				],
+				"priority": 1
+			}
+		]
+	}
+}
