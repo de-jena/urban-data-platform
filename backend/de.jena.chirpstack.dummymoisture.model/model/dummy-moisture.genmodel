@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/de.jena.chirpstack.dummymoisture.model/src" modelPluginID="de.jena.chirpstack.dummymoisture.model"
+    modelName="Dummy-moisture" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="17.0" copyrightFields="false"
+    usedGenPackages="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.genmodel#//provider"
+    operationReflection="true" importOrganizing="true" oSGiCompatible="true">
+  <foreignModel>dummy-moisture.ecore</foreignModel>
+  <genPackages prefix="DummyMoisture" basePackage="de.jena.chirpstack.model" disposableProviderFactory="true"
+      ecorePackage="dummy-moisture.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="dummy-moisture.ecore#//SoilType">
+      <genEnumLiterals ecoreEnumLiteral="dummy-moisture.ecore#//SoilType/sand"/>
+      <genEnumLiterals ecoreEnumLiteral="dummy-moisture.ecore#//SoilType/silt"/>
+      <genEnumLiterals ecoreEnumLiteral="dummy-moisture.ecore#//SoilType/loam"/>
+      <genEnumLiterals ecoreEnumLiteral="dummy-moisture.ecore#//SoilType/clay"/>
+    </genEnums>
+    <genClasses ecoreClass="dummy-moisture.ecore#//MoistureSensor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dummy-moisture.ecore#//MoistureSensor/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dummy-moisture.ecore#//MoistureSensor/status"/>
+    </genClasses>
+    <genClasses ecoreClass="dummy-moisture.ecore#//MoistureStatus">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dummy-moisture.ecore#//MoistureStatus/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dummy-moisture.ecore#//MoistureStatus/observedArea"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dummy-moisture.ecore#//MoistureStatus/temperature"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dummy-moisture.ecore#//MoistureStatus/water"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dummy-moisture.ecore#//MoistureStatus/conduct"/>
+    </genClasses>
+    <genClasses ecoreClass="dummy-moisture.ecore#//MoistureAdmin">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dummy-moisture.ecore#//MoistureAdmin/soilType"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

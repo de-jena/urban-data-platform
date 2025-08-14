@@ -34,7 +34,7 @@ import de.jena.model.ibis.enumerations.GNSSQualityEnumeration;
 import de.jena.model.ibis.enumerations.GNSSTypeEnumeration;
 import de.jena.model.ibis.gnsslocationservice.GNSSLocationData;
 import de.jena.model.ibis.gnsslocationservice.IbisGNSSLocationServiceFactory;
-import de.jena.model.sensinact.ibis.IbisDevice;
+import de.jena.model.sensinact.ibis.GNSSLocation;
 
 
 /**
@@ -70,11 +70,8 @@ public class IbisGnssLocationToSensinactMMTTest {
 		data.setTrackDegreeMagnetic(IbisToSensinactTestHelper.createIbisDouble(3.2));
 		data.setTrackDegreeTrue(IbisToSensinactTestHelper.createIbisDouble(4.5));
 		
-		
-		IbisDevice sensinactDevice = (IbisDevice) transformator.doTransformation(data);
-		assertThat(sensinactDevice).isNotNull();
-		
-		de.jena.model.sensinact.ibis.GNSSLocationData sensinactData = sensinactDevice.getGnssLocationData();
+		GNSSLocation service = transformator.doTransformation(data);
+		de.jena.model.sensinact.ibis.GNSSLocationData sensinactData = service.getResource();
 		assertThat(sensinactData).isNotNull();
 		assertThat(sensinactData.getTimestamp()).isNotNull();
 		assertThat(sensinactData.getLatitudeDegree()).isEqualTo(78);
@@ -94,8 +91,8 @@ public class IbisGnssLocationToSensinactMMTTest {
 		assertThat(sensinactData.getTrackDegreeTrue()).isEqualTo(4.5);	
 		assertThat(sensinactData.getSpeedOverGround()).isEqualTo(50.3);
 
-		assertThat(sensinactData.getMetadata()).isNotEmpty();
-		assertThat(sensinactData.getMetadata()).hasSize(16);		
+		assertThat(service.getMetadata()).isNotEmpty();
+		assertThat(service.getMetadata()).hasSize(16);		
 	}
 	
 	

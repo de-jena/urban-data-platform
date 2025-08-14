@@ -16,15 +16,11 @@ package de.jena.model.sensinact.ibis.impl;
 import de.jena.model.sensinact.ibis.IbisSensinactPackage;
 import de.jena.model.sensinact.ibis.TicketValidationRazziaData;
 
-import java.time.Instant;
-
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.sensinact.model.core.provider.impl.ServiceImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,13 +32,12 @@ import org.eclipse.sensinact.model.core.provider.impl.ServiceImpl;
  * <ul>
  *   <li>{@link de.jena.model.sensinact.ibis.impl.TicketValidationRazziaDataImpl#getServiceName <em>Service Name</em>}</li>
  *   <li>{@link de.jena.model.sensinact.ibis.impl.TicketValidationRazziaDataImpl#getServiceOperation <em>Service Operation</em>}</li>
- *   <li>{@link de.jena.model.sensinact.ibis.impl.TicketValidationRazziaDataImpl#getTimestamp <em>Timestamp</em>}</li>
  *   <li>{@link de.jena.model.sensinact.ibis.impl.TicketValidationRazziaDataImpl#getRazziaState <em>Razzia State</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class TicketValidationRazziaDataImpl extends ServiceImpl implements TicketValidationRazziaData {
+public class TicketValidationRazziaDataImpl extends IbisResourceImpl implements TicketValidationRazziaData {
 	/**
 	 * The default value of the '{@link #getServiceName() <em>Service Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -82,26 +77,6 @@ public class TicketValidationRazziaDataImpl extends ServiceImpl implements Ticke
 	 * @ordered
 	 */
 	protected String serviceOperation = SERVICE_OPERATION_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getTimestamp() <em>Timestamp</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTimestamp()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Instant TIMESTAMP_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getTimestamp() <em>Timestamp</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTimestamp()
-	 * @generated
-	 * @ordered
-	 */
-	protected Instant timestamp = TIMESTAMP_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getRazziaState() <em>Razzia State</em>}' attribute.
@@ -194,29 +169,6 @@ public class TicketValidationRazziaDataImpl extends ServiceImpl implements Ticke
 	 * @generated
 	 */
 	@Override
-	public Instant getTimestamp() {
-		return timestamp;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setTimestamp(Instant newTimestamp) {
-		Instant oldTimestamp = timestamp;
-		timestamp = newTimestamp;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IbisSensinactPackage.TICKET_VALIDATION_RAZZIA_DATA__TIMESTAMP, oldTimestamp, timestamp));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String getRazziaState() {
 		return razziaState;
 	}
@@ -246,8 +198,6 @@ public class TicketValidationRazziaDataImpl extends ServiceImpl implements Ticke
 				return getServiceName();
 			case IbisSensinactPackage.TICKET_VALIDATION_RAZZIA_DATA__SERVICE_OPERATION:
 				return getServiceOperation();
-			case IbisSensinactPackage.TICKET_VALIDATION_RAZZIA_DATA__TIMESTAMP:
-				return getTimestamp();
 			case IbisSensinactPackage.TICKET_VALIDATION_RAZZIA_DATA__RAZZIA_STATE:
 				return getRazziaState();
 		}
@@ -267,9 +217,6 @@ public class TicketValidationRazziaDataImpl extends ServiceImpl implements Ticke
 				return;
 			case IbisSensinactPackage.TICKET_VALIDATION_RAZZIA_DATA__SERVICE_OPERATION:
 				setServiceOperation((String)newValue);
-				return;
-			case IbisSensinactPackage.TICKET_VALIDATION_RAZZIA_DATA__TIMESTAMP:
-				setTimestamp((Instant)newValue);
 				return;
 			case IbisSensinactPackage.TICKET_VALIDATION_RAZZIA_DATA__RAZZIA_STATE:
 				setRazziaState((String)newValue);
@@ -292,9 +239,6 @@ public class TicketValidationRazziaDataImpl extends ServiceImpl implements Ticke
 			case IbisSensinactPackage.TICKET_VALIDATION_RAZZIA_DATA__SERVICE_OPERATION:
 				setServiceOperation(SERVICE_OPERATION_EDEFAULT);
 				return;
-			case IbisSensinactPackage.TICKET_VALIDATION_RAZZIA_DATA__TIMESTAMP:
-				setTimestamp(TIMESTAMP_EDEFAULT);
-				return;
 			case IbisSensinactPackage.TICKET_VALIDATION_RAZZIA_DATA__RAZZIA_STATE:
 				setRazziaState(RAZZIA_STATE_EDEFAULT);
 				return;
@@ -314,8 +258,6 @@ public class TicketValidationRazziaDataImpl extends ServiceImpl implements Ticke
 				return SERVICE_NAME_EDEFAULT == null ? serviceName != null : !SERVICE_NAME_EDEFAULT.equals(serviceName);
 			case IbisSensinactPackage.TICKET_VALIDATION_RAZZIA_DATA__SERVICE_OPERATION:
 				return SERVICE_OPERATION_EDEFAULT == null ? serviceOperation != null : !SERVICE_OPERATION_EDEFAULT.equals(serviceOperation);
-			case IbisSensinactPackage.TICKET_VALIDATION_RAZZIA_DATA__TIMESTAMP:
-				return TIMESTAMP_EDEFAULT == null ? timestamp != null : !TIMESTAMP_EDEFAULT.equals(timestamp);
 			case IbisSensinactPackage.TICKET_VALIDATION_RAZZIA_DATA__RAZZIA_STATE:
 				return RAZZIA_STATE_EDEFAULT == null ? razziaState != null : !RAZZIA_STATE_EDEFAULT.equals(razziaState);
 		}
@@ -336,8 +278,6 @@ public class TicketValidationRazziaDataImpl extends ServiceImpl implements Ticke
 		result.append(serviceName);
 		result.append(", serviceOperation: ");
 		result.append(serviceOperation);
-		result.append(", timestamp: ");
-		result.append(timestamp);
 		result.append(", razziaState: ");
 		result.append(razziaState);
 		result.append(')');

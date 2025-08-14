@@ -68,24 +68,41 @@ public class IbisSensinactFactoryImpl extends EFactoryImpl implements IbisSensin
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case IbisSensinactPackage.IBIS_DEVICE: return createIbisDevice();
+			case IbisSensinactPackage.IBIS_RESOURCE: return createIbisResource();
+			case IbisSensinactPackage.CUSTOMER_INFO_ALL: return createCustomerInfoAll();
 			case IbisSensinactPackage.CUSTOMER_INFO_ALL_DATA: return createCustomerInfoAllData();
+			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_STOP_INDEX: return createCustomerInfoCurrentStopIndex();
 			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_STOP_INDEX_DATA: return createCustomerInfoCurrentStopIndexData();
+			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_STOP_POINT: return createCustomerInfoCurrentStopPoint();
 			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_STOP_POINT_DATA: return createCustomerInfoCurrentStopPointData();
+			case IbisSensinactPackage.CUSTOMER_INFO_TRIP: return createCustomerInfoTrip();
 			case IbisSensinactPackage.CUSTOMER_INFO_TRIP_DATA: return createCustomerInfoTripData();
+			case IbisSensinactPackage.CUSTOMER_INFO_VEHICLE: return createCustomerInfoVehicle();
 			case IbisSensinactPackage.CUSTOMER_INFO_VEHICLE_DATA: return createCustomerInfoVehicleData();
+			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_ANNOUNCEMENT: return createCustomerInfoCurrentAnnouncement();
 			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_ANNOUNCEMENT_DATA: return createCustomerInfoCurrentAnnouncementData();
+			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_CONNECTION: return createCustomerInfoCurrentConnection();
 			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_CONNECTION_DATA: return createCustomerInfoCurrentConnectionData();
+			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_DISPLAY_CONTENT: return createCustomerInfoCurrentDisplayContent();
 			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_DISPLAY_CONTENT_DATA: return createCustomerInfoCurrentDisplayContentData();
 			case IbisSensinactPackage.IBIS_ADMIN: return createIbisAdmin();
+			case IbisSensinactPackage.PASSENGER_COUNTING_DOOR_COUNTING: return createPassengerCountingDoorCounting();
 			case IbisSensinactPackage.PASSENGER_COUNTING_DOOR_COUNTING_STATE: return createPassengerCountingDoorCountingState();
+			case IbisSensinactPackage.DOOR: return createDoor();
 			case IbisSensinactPackage.DOOR_STATE: return createDoorState();
 			case IbisSensinactPackage.STOP_REQUESTED: return createStopRequested();
+			case IbisSensinactPackage.GNSS_LOCATION: return createGNSSLocation();
 			case IbisSensinactPackage.GNSS_LOCATION_DATA: return createGNSSLocationData();
+			case IbisSensinactPackage.TICKET_VALIDATION_CURRENT_TARIFF_STOP: return createTicketValidationCurrentTariffStop();
 			case IbisSensinactPackage.TICKET_VALIDATION_CURRENT_TARIFF_STOP_DATA: return createTicketValidationCurrentTariffStopData();
+			case IbisSensinactPackage.TICKET_VALIDATION_RAZZIA: return createTicketValidationRazzia();
 			case IbisSensinactPackage.TICKET_VALIDATION_RAZZIA_DATA: return createTicketValidationRazziaData();
+			case IbisSensinactPackage.TICKET_VALIDATION_CURRENT_LINE: return createTicketValidationCurrentLine();
 			case IbisSensinactPackage.TICKET_VALIDATION_CURRENT_LINE_DATA: return createTicketValidationCurrentLineData();
+			case IbisSensinactPackage.TICKET_VALIDATION_VEHICLE: return createTicketValidationVehicle();
 			case IbisSensinactPackage.TICKET_VALIDATION_VEHICLE_DATA: return createTicketValidationVehicleData();
 			case IbisSensinactPackage.TRIP_INFO: return createTripInfo();
+			case IbisSensinactPackage.TRIP_INFO_DATA: return createTripInfoData();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -108,9 +125,42 @@ public class IbisSensinactFactoryImpl extends EFactoryImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
+	public IbisResource createIbisResource() {
+		IbisResourceImpl ibisResource = new IbisResourceImpl();
+		return ibisResource;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public CustomerInfoAll createCustomerInfoAll() {
+		CustomerInfoAllImpl customerInfoAll = new CustomerInfoAllImpl();
+		return customerInfoAll;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public CustomerInfoAllData createCustomerInfoAllData() {
 		CustomerInfoAllDataImpl customerInfoAllData = new CustomerInfoAllDataImpl();
 		return customerInfoAllData;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public CustomerInfoCurrentStopIndex createCustomerInfoCurrentStopIndex() {
+		CustomerInfoCurrentStopIndexImpl customerInfoCurrentStopIndex = new CustomerInfoCurrentStopIndexImpl();
+		return customerInfoCurrentStopIndex;
 	}
 
 	/**
@@ -130,9 +180,31 @@ public class IbisSensinactFactoryImpl extends EFactoryImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
+	public CustomerInfoCurrentStopPoint createCustomerInfoCurrentStopPoint() {
+		CustomerInfoCurrentStopPointImpl customerInfoCurrentStopPoint = new CustomerInfoCurrentStopPointImpl();
+		return customerInfoCurrentStopPoint;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public CustomerInfoCurrentStopPointData createCustomerInfoCurrentStopPointData() {
 		CustomerInfoCurrentStopPointDataImpl customerInfoCurrentStopPointData = new CustomerInfoCurrentStopPointDataImpl();
 		return customerInfoCurrentStopPointData;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public CustomerInfoTrip createCustomerInfoTrip() {
+		CustomerInfoTripImpl customerInfoTrip = new CustomerInfoTripImpl();
+		return customerInfoTrip;
 	}
 
 	/**
@@ -152,9 +224,31 @@ public class IbisSensinactFactoryImpl extends EFactoryImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
+	public CustomerInfoVehicle createCustomerInfoVehicle() {
+		CustomerInfoVehicleImpl customerInfoVehicle = new CustomerInfoVehicleImpl();
+		return customerInfoVehicle;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public CustomerInfoVehicleData createCustomerInfoVehicleData() {
 		CustomerInfoVehicleDataImpl customerInfoVehicleData = new CustomerInfoVehicleDataImpl();
 		return customerInfoVehicleData;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public CustomerInfoCurrentAnnouncement createCustomerInfoCurrentAnnouncement() {
+		CustomerInfoCurrentAnnouncementImpl customerInfoCurrentAnnouncement = new CustomerInfoCurrentAnnouncementImpl();
+		return customerInfoCurrentAnnouncement;
 	}
 
 	/**
@@ -174,9 +268,31 @@ public class IbisSensinactFactoryImpl extends EFactoryImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
+	public CustomerInfoCurrentConnection createCustomerInfoCurrentConnection() {
+		CustomerInfoCurrentConnectionImpl customerInfoCurrentConnection = new CustomerInfoCurrentConnectionImpl();
+		return customerInfoCurrentConnection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public CustomerInfoCurrentConnectionData createCustomerInfoCurrentConnectionData() {
 		CustomerInfoCurrentConnectionDataImpl customerInfoCurrentConnectionData = new CustomerInfoCurrentConnectionDataImpl();
 		return customerInfoCurrentConnectionData;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public CustomerInfoCurrentDisplayContent createCustomerInfoCurrentDisplayContent() {
+		CustomerInfoCurrentDisplayContentImpl customerInfoCurrentDisplayContent = new CustomerInfoCurrentDisplayContentImpl();
+		return customerInfoCurrentDisplayContent;
 	}
 
 	/**
@@ -207,9 +323,31 @@ public class IbisSensinactFactoryImpl extends EFactoryImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
+	public PassengerCountingDoorCounting createPassengerCountingDoorCounting() {
+		PassengerCountingDoorCountingImpl passengerCountingDoorCounting = new PassengerCountingDoorCountingImpl();
+		return passengerCountingDoorCounting;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public PassengerCountingDoorCountingState createPassengerCountingDoorCountingState() {
 		PassengerCountingDoorCountingStateImpl passengerCountingDoorCountingState = new PassengerCountingDoorCountingStateImpl();
 		return passengerCountingDoorCountingState;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Door createDoor() {
+		DoorImpl door = new DoorImpl();
+		return door;
 	}
 
 	/**
@@ -240,9 +378,31 @@ public class IbisSensinactFactoryImpl extends EFactoryImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
+	public GNSSLocation createGNSSLocation() {
+		GNSSLocationImpl gnssLocation = new GNSSLocationImpl();
+		return gnssLocation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public GNSSLocationData createGNSSLocationData() {
 		GNSSLocationDataImpl gnssLocationData = new GNSSLocationDataImpl();
 		return gnssLocationData;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public TicketValidationCurrentTariffStop createTicketValidationCurrentTariffStop() {
+		TicketValidationCurrentTariffStopImpl ticketValidationCurrentTariffStop = new TicketValidationCurrentTariffStopImpl();
+		return ticketValidationCurrentTariffStop;
 	}
 
 	/**
@@ -262,6 +422,17 @@ public class IbisSensinactFactoryImpl extends EFactoryImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
+	public TicketValidationRazzia createTicketValidationRazzia() {
+		TicketValidationRazziaImpl ticketValidationRazzia = new TicketValidationRazziaImpl();
+		return ticketValidationRazzia;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public TicketValidationRazziaData createTicketValidationRazziaData() {
 		TicketValidationRazziaDataImpl ticketValidationRazziaData = new TicketValidationRazziaDataImpl();
 		return ticketValidationRazziaData;
@@ -273,9 +444,31 @@ public class IbisSensinactFactoryImpl extends EFactoryImpl implements IbisSensin
 	 * @generated
 	 */
 	@Override
+	public TicketValidationCurrentLine createTicketValidationCurrentLine() {
+		TicketValidationCurrentLineImpl ticketValidationCurrentLine = new TicketValidationCurrentLineImpl();
+		return ticketValidationCurrentLine;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public TicketValidationCurrentLineData createTicketValidationCurrentLineData() {
 		TicketValidationCurrentLineDataImpl ticketValidationCurrentLineData = new TicketValidationCurrentLineDataImpl();
 		return ticketValidationCurrentLineData;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public TicketValidationVehicle createTicketValidationVehicle() {
+		TicketValidationVehicleImpl ticketValidationVehicle = new TicketValidationVehicleImpl();
+		return ticketValidationVehicle;
 	}
 
 	/**
@@ -298,6 +491,17 @@ public class IbisSensinactFactoryImpl extends EFactoryImpl implements IbisSensin
 	public TripInfo createTripInfo() {
 		TripInfoImpl tripInfo = new TripInfoImpl();
 		return tripInfo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public TripInfoData createTripInfoData() {
+		TripInfoDataImpl tripInfoData = new TripInfoDataImpl();
+		return tripInfoData;
 	}
 
 	/**

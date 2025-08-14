@@ -12,7 +12,6 @@
 	de.jena.glt.rest,\
 	de.jena.glt.rest.model,\
 	org.gecko.codec,\
-	org.gecko.codec.emfjson,\
 	org.gecko.codec.info,\
 	org.gecko.codec.info.model,\
 	org.gecko.codec.json,\

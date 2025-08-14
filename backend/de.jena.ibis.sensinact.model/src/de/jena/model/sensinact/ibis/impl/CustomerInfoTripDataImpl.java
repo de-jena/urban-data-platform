@@ -16,15 +16,11 @@ package de.jena.model.sensinact.ibis.impl;
 import de.jena.model.sensinact.ibis.CustomerInfoTripData;
 import de.jena.model.sensinact.ibis.IbisSensinactPackage;
 
-import java.time.Instant;
-
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.sensinact.model.core.provider.impl.ServiceImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,7 +32,6 @@ import org.eclipse.sensinact.model.core.provider.impl.ServiceImpl;
  * <ul>
  *   <li>{@link de.jena.model.sensinact.ibis.impl.CustomerInfoTripDataImpl#getServiceName <em>Service Name</em>}</li>
  *   <li>{@link de.jena.model.sensinact.ibis.impl.CustomerInfoTripDataImpl#getServiceOperation <em>Service Operation</em>}</li>
- *   <li>{@link de.jena.model.sensinact.ibis.impl.CustomerInfoTripDataImpl#getTimestamp <em>Timestamp</em>}</li>
  *   <li>{@link de.jena.model.sensinact.ibis.impl.CustomerInfoTripDataImpl#getVehicleRef <em>Vehicle Ref</em>}</li>
  *   <li>{@link de.jena.model.sensinact.ibis.impl.CustomerInfoTripDataImpl#getDefaultLanguage <em>Default Language</em>}</li>
  *   <li>{@link de.jena.model.sensinact.ibis.impl.CustomerInfoTripDataImpl#getCurrentStopIndex <em>Current Stop Index</em>}</li>
@@ -61,7 +56,7 @@ import org.eclipse.sensinact.model.core.provider.impl.ServiceImpl;
  *
  * @generated
  */
-public class CustomerInfoTripDataImpl extends ServiceImpl implements CustomerInfoTripData {
+public class CustomerInfoTripDataImpl extends IbisResourceImpl implements CustomerInfoTripData {
 	/**
 	 * The default value of the '{@link #getServiceName() <em>Service Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -101,26 +96,6 @@ public class CustomerInfoTripDataImpl extends ServiceImpl implements CustomerInf
 	 * @ordered
 	 */
 	protected String serviceOperation = SERVICE_OPERATION_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getTimestamp() <em>Timestamp</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTimestamp()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Instant TIMESTAMP_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getTimestamp() <em>Timestamp</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTimestamp()
-	 * @generated
-	 * @ordered
-	 */
-	protected Instant timestamp = TIMESTAMP_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getVehicleRef() <em>Vehicle Ref</em>}' attribute.
@@ -585,29 +560,6 @@ public class CustomerInfoTripDataImpl extends ServiceImpl implements CustomerInf
 		serviceOperation = newServiceOperation;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, IbisSensinactPackage.CUSTOMER_INFO_TRIP_DATA__SERVICE_OPERATION, oldServiceOperation, serviceOperation));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Instant getTimestamp() {
-		return timestamp;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setTimestamp(Instant newTimestamp) {
-		Instant oldTimestamp = timestamp;
-		timestamp = newTimestamp;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IbisSensinactPackage.CUSTOMER_INFO_TRIP_DATA__TIMESTAMP, oldTimestamp, timestamp));
 	}
 
 	/**
@@ -1082,8 +1034,6 @@ public class CustomerInfoTripDataImpl extends ServiceImpl implements CustomerInf
 				return getServiceName();
 			case IbisSensinactPackage.CUSTOMER_INFO_TRIP_DATA__SERVICE_OPERATION:
 				return getServiceOperation();
-			case IbisSensinactPackage.CUSTOMER_INFO_TRIP_DATA__TIMESTAMP:
-				return getTimestamp();
 			case IbisSensinactPackage.CUSTOMER_INFO_TRIP_DATA__VEHICLE_REF:
 				return getVehicleRef();
 			case IbisSensinactPackage.CUSTOMER_INFO_TRIP_DATA__DEFAULT_LANGUAGE:
@@ -1141,9 +1091,6 @@ public class CustomerInfoTripDataImpl extends ServiceImpl implements CustomerInf
 				return;
 			case IbisSensinactPackage.CUSTOMER_INFO_TRIP_DATA__SERVICE_OPERATION:
 				setServiceOperation((String)newValue);
-				return;
-			case IbisSensinactPackage.CUSTOMER_INFO_TRIP_DATA__TIMESTAMP:
-				setTimestamp((Instant)newValue);
 				return;
 			case IbisSensinactPackage.CUSTOMER_INFO_TRIP_DATA__VEHICLE_REF:
 				setVehicleRef((String)newValue);
@@ -1223,9 +1170,6 @@ public class CustomerInfoTripDataImpl extends ServiceImpl implements CustomerInf
 			case IbisSensinactPackage.CUSTOMER_INFO_TRIP_DATA__SERVICE_OPERATION:
 				setServiceOperation(SERVICE_OPERATION_EDEFAULT);
 				return;
-			case IbisSensinactPackage.CUSTOMER_INFO_TRIP_DATA__TIMESTAMP:
-				setTimestamp(TIMESTAMP_EDEFAULT);
-				return;
 			case IbisSensinactPackage.CUSTOMER_INFO_TRIP_DATA__VEHICLE_REF:
 				setVehicleRef(VEHICLE_REF_EDEFAULT);
 				return;
@@ -1302,8 +1246,6 @@ public class CustomerInfoTripDataImpl extends ServiceImpl implements CustomerInf
 				return SERVICE_NAME_EDEFAULT == null ? serviceName != null : !SERVICE_NAME_EDEFAULT.equals(serviceName);
 			case IbisSensinactPackage.CUSTOMER_INFO_TRIP_DATA__SERVICE_OPERATION:
 				return SERVICE_OPERATION_EDEFAULT == null ? serviceOperation != null : !SERVICE_OPERATION_EDEFAULT.equals(serviceOperation);
-			case IbisSensinactPackage.CUSTOMER_INFO_TRIP_DATA__TIMESTAMP:
-				return TIMESTAMP_EDEFAULT == null ? timestamp != null : !TIMESTAMP_EDEFAULT.equals(timestamp);
 			case IbisSensinactPackage.CUSTOMER_INFO_TRIP_DATA__VEHICLE_REF:
 				return VEHICLE_REF_EDEFAULT == null ? vehicleRef != null : !VEHICLE_REF_EDEFAULT.equals(vehicleRef);
 			case IbisSensinactPackage.CUSTOMER_INFO_TRIP_DATA__DEFAULT_LANGUAGE:
@@ -1362,8 +1304,6 @@ public class CustomerInfoTripDataImpl extends ServiceImpl implements CustomerInf
 		result.append(serviceName);
 		result.append(", serviceOperation: ");
 		result.append(serviceOperation);
-		result.append(", timestamp: ");
-		result.append(timestamp);
 		result.append(", vehicleRef: ");
 		result.append(vehicleRef);
 		result.append(", defaultLanguage: ");

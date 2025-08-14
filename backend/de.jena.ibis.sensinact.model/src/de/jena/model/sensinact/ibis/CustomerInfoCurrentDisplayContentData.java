@@ -13,10 +13,6 @@
  */
 package de.jena.model.sensinact.ibis;
 
-import java.time.Instant;
-
-import org.eclipse.sensinact.model.core.provider.Service;
-
 import org.osgi.annotation.versioning.ProviderType;
 
 /**
@@ -30,7 +26,8 @@ import org.osgi.annotation.versioning.ProviderType;
  * <ul>
  *   <li>{@link de.jena.model.sensinact.ibis.CustomerInfoCurrentDisplayContentData#getServiceName <em>Service Name</em>}</li>
  *   <li>{@link de.jena.model.sensinact.ibis.CustomerInfoCurrentDisplayContentData#getServiceOperation <em>Service Operation</em>}</li>
- *   <li>{@link de.jena.model.sensinact.ibis.CustomerInfoCurrentDisplayContentData#getTimestamp <em>Timestamp</em>}</li>
+ *   <li>{@link de.jena.model.sensinact.ibis.CustomerInfoCurrentDisplayContentData#getDestinationName <em>Destination Name</em>}</li>
+ *   <li>{@link de.jena.model.sensinact.ibis.CustomerInfoCurrentDisplayContentData#getLineName <em>Line Name</em>}</li>
  * </ul>
  *
  * @see de.jena.model.sensinact.ibis.IbisSensinactPackage#getCustomerInfoCurrentDisplayContentData()
@@ -38,7 +35,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-public interface CustomerInfoCurrentDisplayContentData extends Service {
+public interface CustomerInfoCurrentDisplayContentData extends IbisResource {
 	/**
 	 * Returns the value of the '<em><b>Service Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -84,25 +81,47 @@ public interface CustomerInfoCurrentDisplayContentData extends Service {
 	void setServiceOperation(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Timestamp</b></em>' attribute.
+	 * Returns the value of the '<em><b>Destination Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Timestamp</em>' attribute.
-	 * @see #setTimestamp(Instant)
-	 * @see de.jena.model.sensinact.ibis.IbisSensinactPackage#getCustomerInfoCurrentDisplayContentData_Timestamp()
-	 * @model dataType="org.eclipse.sensinact.model.core.provider.EInstant" required="true"
+	 * @return the value of the '<em>Destination Name</em>' attribute.
+	 * @see #setDestinationName(String)
+	 * @see de.jena.model.sensinact.ibis.IbisSensinactPackage#getCustomerInfoCurrentDisplayContentData_DestinationName()
+	 * @model
 	 * @generated
 	 */
-	Instant getTimestamp();
+	String getDestinationName();
 
 	/**
-	 * Sets the value of the '{@link de.jena.model.sensinact.ibis.CustomerInfoCurrentDisplayContentData#getTimestamp <em>Timestamp</em>}' attribute.
+	 * Sets the value of the '{@link de.jena.model.sensinact.ibis.CustomerInfoCurrentDisplayContentData#getDestinationName <em>Destination Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Timestamp</em>' attribute.
-	 * @see #getTimestamp()
+	 * @param value the new value of the '<em>Destination Name</em>' attribute.
+	 * @see #getDestinationName()
 	 * @generated
 	 */
-	void setTimestamp(Instant value);
+	void setDestinationName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Line Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Line Name</em>' attribute.
+	 * @see #setLineName(String)
+	 * @see de.jena.model.sensinact.ibis.IbisSensinactPackage#getCustomerInfoCurrentDisplayContentData_LineName()
+	 * @model
+	 * @generated
+	 */
+	String getLineName();
+
+	/**
+	 * Sets the value of the '{@link de.jena.model.sensinact.ibis.CustomerInfoCurrentDisplayContentData#getLineName <em>Line Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Line Name</em>' attribute.
+	 * @see #getLineName()
+	 * @generated
+	 */
+	void setLineName(String value);
 
 } // CustomerInfoCurrentDisplayContentData

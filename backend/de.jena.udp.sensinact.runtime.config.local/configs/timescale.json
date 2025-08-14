@@ -11,9 +11,6 @@
 			"{\"resource\": {\"value\": \"observedArea\",\"type\":\"EXACT\"}} ",
 			"{\"resource\": {\"value\": \"objects\",\"type\":\"EXACT\"}} ",
 			"{\"resource\": {\"value\": \"viewport\",\"type\":\"EXACT\"}} "
-		],
-		"include.resources": [
-			"{\"provider\": {\"value\": \"foo\",\"type\":\"EXACT\"}} "
 		]
 		
 	}

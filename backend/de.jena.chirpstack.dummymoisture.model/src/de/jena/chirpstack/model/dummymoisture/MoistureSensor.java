@@ -1,0 +1,72 @@
+/*
+ */
+package de.jena.chirpstack.model.dummymoisture;
+
+import org.eclipse.sensinact.model.core.provider.Provider;
+
+import org.osgi.annotation.versioning.ProviderType;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Moisture Sensor</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link de.jena.chirpstack.model.dummymoisture.MoistureSensor#getName <em>Name</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.dummymoisture.MoistureSensor#getStatus <em>Status</em>}</li>
+ * </ul>
+ *
+ * @see de.jena.chirpstack.model.dummymoisture.DummyMoisturePackage#getMoistureSensor()
+ * @model
+ * @generated
+ */
+@ProviderType
+public interface MoistureSensor extends Provider {
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see de.jena.chirpstack.model.dummymoisture.DummyMoisturePackage#getMoistureSensor_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link de.jena.chirpstack.model.dummymoisture.MoistureSensor#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Status</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Status</em>' containment reference.
+	 * @see #setStatus(MoistureStatus)
+	 * @see de.jena.chirpstack.model.dummymoisture.DummyMoisturePackage#getMoistureSensor_Status()
+	 * @model containment="true"
+	 * @generated
+	 */
+	MoistureStatus getStatus();
+
+	/**
+	 * Sets the value of the '{@link de.jena.chirpstack.model.dummymoisture.MoistureSensor#getStatus <em>Status</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Status</em>' containment reference.
+	 * @see #getStatus()
+	 * @generated
+	 */
+	void setStatus(MoistureStatus value);
+
+} // MoistureSensor

@@ -13,11 +13,7 @@
  */
 package de.jena.model.sensinact.ibis;
 
-import java.time.Instant;
-
 import org.eclipse.emf.common.util.EList;
-
-import org.eclipse.sensinact.model.core.provider.Service;
 
 import org.osgi.annotation.versioning.ProviderType;
 
@@ -32,7 +28,6 @@ import org.osgi.annotation.versioning.ProviderType;
  * <ul>
  *   <li>{@link de.jena.model.sensinact.ibis.CustomerInfoCurrentAnnouncementData#getServiceName <em>Service Name</em>}</li>
  *   <li>{@link de.jena.model.sensinact.ibis.CustomerInfoCurrentAnnouncementData#getServiceOperation <em>Service Operation</em>}</li>
- *   <li>{@link de.jena.model.sensinact.ibis.CustomerInfoCurrentAnnouncementData#getTimestamp <em>Timestamp</em>}</li>
  *   <li>{@link de.jena.model.sensinact.ibis.CustomerInfoCurrentAnnouncementData#getAnnouncementRef <em>Announcement Ref</em>}</li>
  *   <li>{@link de.jena.model.sensinact.ibis.CustomerInfoCurrentAnnouncementData#getAnnouncementText <em>Announcement Text</em>}</li>
  *   <li>{@link de.jena.model.sensinact.ibis.CustomerInfoCurrentAnnouncementData#getAnnouncementTTSText <em>Announcement TTS Text</em>}</li>
@@ -43,7 +38,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-public interface CustomerInfoCurrentAnnouncementData extends Service {
+public interface CustomerInfoCurrentAnnouncementData extends IbisResource {
 	/**
 	 * Returns the value of the '<em><b>Service Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -87,28 +82,6 @@ public interface CustomerInfoCurrentAnnouncementData extends Service {
 	 * @generated
 	 */
 	void setServiceOperation(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Timestamp</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Timestamp</em>' attribute.
-	 * @see #setTimestamp(Instant)
-	 * @see de.jena.model.sensinact.ibis.IbisSensinactPackage#getCustomerInfoCurrentAnnouncementData_Timestamp()
-	 * @model dataType="org.eclipse.sensinact.model.core.provider.EInstant" required="true"
-	 * @generated
-	 */
-	Instant getTimestamp();
-
-	/**
-	 * Sets the value of the '{@link de.jena.model.sensinact.ibis.CustomerInfoCurrentAnnouncementData#getTimestamp <em>Timestamp</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Timestamp</em>' attribute.
-	 * @see #getTimestamp()
-	 * @generated
-	 */
-	void setTimestamp(Instant value);
 
 	/**
 	 * Returns the value of the '<em><b>Announcement Ref</b></em>' attribute.

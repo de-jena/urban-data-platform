@@ -16,15 +16,11 @@ package de.jena.model.sensinact.ibis.impl;
 import de.jena.model.sensinact.ibis.CustomerInfoCurrentStopIndexData;
 import de.jena.model.sensinact.ibis.IbisSensinactPackage;
 
-import java.time.Instant;
-
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.sensinact.model.core.provider.impl.ServiceImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,13 +32,12 @@ import org.eclipse.sensinact.model.core.provider.impl.ServiceImpl;
  * <ul>
  *   <li>{@link de.jena.model.sensinact.ibis.impl.CustomerInfoCurrentStopIndexDataImpl#getServiceName <em>Service Name</em>}</li>
  *   <li>{@link de.jena.model.sensinact.ibis.impl.CustomerInfoCurrentStopIndexDataImpl#getServiceOperation <em>Service Operation</em>}</li>
- *   <li>{@link de.jena.model.sensinact.ibis.impl.CustomerInfoCurrentStopIndexDataImpl#getTimestamp <em>Timestamp</em>}</li>
  *   <li>{@link de.jena.model.sensinact.ibis.impl.CustomerInfoCurrentStopIndexDataImpl#getCurrentStopIndex <em>Current Stop Index</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class CustomerInfoCurrentStopIndexDataImpl extends ServiceImpl implements CustomerInfoCurrentStopIndexData {
+public class CustomerInfoCurrentStopIndexDataImpl extends IbisResourceImpl implements CustomerInfoCurrentStopIndexData {
 	/**
 	 * The default value of the '{@link #getServiceName() <em>Service Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -82,26 +77,6 @@ public class CustomerInfoCurrentStopIndexDataImpl extends ServiceImpl implements
 	 * @ordered
 	 */
 	protected String serviceOperation = SERVICE_OPERATION_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getTimestamp() <em>Timestamp</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTimestamp()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Instant TIMESTAMP_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getTimestamp() <em>Timestamp</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTimestamp()
-	 * @generated
-	 * @ordered
-	 */
-	protected Instant timestamp = TIMESTAMP_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getCurrentStopIndex() <em>Current Stop Index</em>}' attribute.
@@ -194,29 +169,6 @@ public class CustomerInfoCurrentStopIndexDataImpl extends ServiceImpl implements
 	 * @generated
 	 */
 	@Override
-	public Instant getTimestamp() {
-		return timestamp;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setTimestamp(Instant newTimestamp) {
-		Instant oldTimestamp = timestamp;
-		timestamp = newTimestamp;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IbisSensinactPackage.CUSTOMER_INFO_CURRENT_STOP_INDEX_DATA__TIMESTAMP, oldTimestamp, timestamp));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public int getCurrentStopIndex() {
 		return currentStopIndex;
 	}
@@ -246,8 +198,6 @@ public class CustomerInfoCurrentStopIndexDataImpl extends ServiceImpl implements
 				return getServiceName();
 			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_STOP_INDEX_DATA__SERVICE_OPERATION:
 				return getServiceOperation();
-			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_STOP_INDEX_DATA__TIMESTAMP:
-				return getTimestamp();
 			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_STOP_INDEX_DATA__CURRENT_STOP_INDEX:
 				return getCurrentStopIndex();
 		}
@@ -267,9 +217,6 @@ public class CustomerInfoCurrentStopIndexDataImpl extends ServiceImpl implements
 				return;
 			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_STOP_INDEX_DATA__SERVICE_OPERATION:
 				setServiceOperation((String)newValue);
-				return;
-			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_STOP_INDEX_DATA__TIMESTAMP:
-				setTimestamp((Instant)newValue);
 				return;
 			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_STOP_INDEX_DATA__CURRENT_STOP_INDEX:
 				setCurrentStopIndex((Integer)newValue);
@@ -292,9 +239,6 @@ public class CustomerInfoCurrentStopIndexDataImpl extends ServiceImpl implements
 			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_STOP_INDEX_DATA__SERVICE_OPERATION:
 				setServiceOperation(SERVICE_OPERATION_EDEFAULT);
 				return;
-			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_STOP_INDEX_DATA__TIMESTAMP:
-				setTimestamp(TIMESTAMP_EDEFAULT);
-				return;
 			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_STOP_INDEX_DATA__CURRENT_STOP_INDEX:
 				setCurrentStopIndex(CURRENT_STOP_INDEX_EDEFAULT);
 				return;
@@ -314,8 +258,6 @@ public class CustomerInfoCurrentStopIndexDataImpl extends ServiceImpl implements
 				return SERVICE_NAME_EDEFAULT == null ? serviceName != null : !SERVICE_NAME_EDEFAULT.equals(serviceName);
 			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_STOP_INDEX_DATA__SERVICE_OPERATION:
 				return SERVICE_OPERATION_EDEFAULT == null ? serviceOperation != null : !SERVICE_OPERATION_EDEFAULT.equals(serviceOperation);
-			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_STOP_INDEX_DATA__TIMESTAMP:
-				return TIMESTAMP_EDEFAULT == null ? timestamp != null : !TIMESTAMP_EDEFAULT.equals(timestamp);
 			case IbisSensinactPackage.CUSTOMER_INFO_CURRENT_STOP_INDEX_DATA__CURRENT_STOP_INDEX:
 				return currentStopIndex != CURRENT_STOP_INDEX_EDEFAULT;
 		}
@@ -336,8 +278,6 @@ public class CustomerInfoCurrentStopIndexDataImpl extends ServiceImpl implements
 		result.append(serviceName);
 		result.append(", serviceOperation: ");
 		result.append(serviceOperation);
-		result.append(", timestamp: ");
-		result.append(timestamp);
 		result.append(", currentStopIndex: ");
 		result.append(currentStopIndex);
 		result.append(')');

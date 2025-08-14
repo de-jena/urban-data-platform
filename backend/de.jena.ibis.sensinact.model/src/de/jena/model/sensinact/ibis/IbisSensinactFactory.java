@@ -45,6 +45,24 @@ public interface IbisSensinactFactory extends EFactory {
 	IbisDevice createIbisDevice();
 
 	/**
+	 * Returns a new object of class '<em>Ibis Resource</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Ibis Resource</em>'.
+	 * @generated
+	 */
+	IbisResource createIbisResource();
+
+	/**
+	 * Returns a new object of class '<em>Customer Info All</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Customer Info All</em>'.
+	 * @generated
+	 */
+	CustomerInfoAll createCustomerInfoAll();
+
+	/**
 	 * Returns a new object of class '<em>Customer Info All Data</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -52,6 +70,15 @@ public interface IbisSensinactFactory extends EFactory {
 	 * @generated
 	 */
 	CustomerInfoAllData createCustomerInfoAllData();
+
+	/**
+	 * Returns a new object of class '<em>Customer Info Current Stop Index</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Customer Info Current Stop Index</em>'.
+	 * @generated
+	 */
+	CustomerInfoCurrentStopIndex createCustomerInfoCurrentStopIndex();
 
 	/**
 	 * Returns a new object of class '<em>Customer Info Current Stop Index Data</em>'.
@@ -63,6 +90,15 @@ public interface IbisSensinactFactory extends EFactory {
 	CustomerInfoCurrentStopIndexData createCustomerInfoCurrentStopIndexData();
 
 	/**
+	 * Returns a new object of class '<em>Customer Info Current Stop Point</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Customer Info Current Stop Point</em>'.
+	 * @generated
+	 */
+	CustomerInfoCurrentStopPoint createCustomerInfoCurrentStopPoint();
+
+	/**
 	 * Returns a new object of class '<em>Customer Info Current Stop Point Data</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -70,6 +106,15 @@ public interface IbisSensinactFactory extends EFactory {
 	 * @generated
 	 */
 	CustomerInfoCurrentStopPointData createCustomerInfoCurrentStopPointData();
+
+	/**
+	 * Returns a new object of class '<em>Customer Info Trip</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Customer Info Trip</em>'.
+	 * @generated
+	 */
+	CustomerInfoTrip createCustomerInfoTrip();
 
 	/**
 	 * Returns a new object of class '<em>Customer Info Trip Data</em>'.
@@ -81,6 +126,15 @@ public interface IbisSensinactFactory extends EFactory {
 	CustomerInfoTripData createCustomerInfoTripData();
 
 	/**
+	 * Returns a new object of class '<em>Customer Info Vehicle</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Customer Info Vehicle</em>'.
+	 * @generated
+	 */
+	CustomerInfoVehicle createCustomerInfoVehicle();
+
+	/**
 	 * Returns a new object of class '<em>Customer Info Vehicle Data</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -88,6 +142,15 @@ public interface IbisSensinactFactory extends EFactory {
 	 * @generated
 	 */
 	CustomerInfoVehicleData createCustomerInfoVehicleData();
+
+	/**
+	 * Returns a new object of class '<em>Customer Info Current Announcement</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Customer Info Current Announcement</em>'.
+	 * @generated
+	 */
+	CustomerInfoCurrentAnnouncement createCustomerInfoCurrentAnnouncement();
 
 	/**
 	 * Returns a new object of class '<em>Customer Info Current Announcement Data</em>'.
@@ -99,6 +162,15 @@ public interface IbisSensinactFactory extends EFactory {
 	CustomerInfoCurrentAnnouncementData createCustomerInfoCurrentAnnouncementData();
 
 	/**
+	 * Returns a new object of class '<em>Customer Info Current Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Customer Info Current Connection</em>'.
+	 * @generated
+	 */
+	CustomerInfoCurrentConnection createCustomerInfoCurrentConnection();
+
+	/**
 	 * Returns a new object of class '<em>Customer Info Current Connection Data</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -106,6 +178,15 @@ public interface IbisSensinactFactory extends EFactory {
 	 * @generated
 	 */
 	CustomerInfoCurrentConnectionData createCustomerInfoCurrentConnectionData();
+
+	/**
+	 * Returns a new object of class '<em>Customer Info Current Display Content</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Customer Info Current Display Content</em>'.
+	 * @generated
+	 */
+	CustomerInfoCurrentDisplayContent createCustomerInfoCurrentDisplayContent();
 
 	/**
 	 * Returns a new object of class '<em>Customer Info Current Display Content Data</em>'.
@@ -126,6 +207,15 @@ public interface IbisSensinactFactory extends EFactory {
 	IbisAdmin createIbisAdmin();
 
 	/**
+	 * Returns a new object of class '<em>Passenger Counting Door Counting</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Passenger Counting Door Counting</em>'.
+	 * @generated
+	 */
+	PassengerCountingDoorCounting createPassengerCountingDoorCounting();
+
+	/**
 	 * Returns a new object of class '<em>Passenger Counting Door Counting State</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -133,6 +223,15 @@ public interface IbisSensinactFactory extends EFactory {
 	 * @generated
 	 */
 	PassengerCountingDoorCountingState createPassengerCountingDoorCountingState();
+
+	/**
+	 * Returns a new object of class '<em>Door</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Door</em>'.
+	 * @generated
+	 */
+	Door createDoor();
 
 	/**
 	 * Returns a new object of class '<em>Door State</em>'.
@@ -153,6 +252,15 @@ public interface IbisSensinactFactory extends EFactory {
 	StopRequested createStopRequested();
 
 	/**
+	 * Returns a new object of class '<em>GNSS Location</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>GNSS Location</em>'.
+	 * @generated
+	 */
+	GNSSLocation createGNSSLocation();
+
+	/**
 	 * Returns a new object of class '<em>GNSS Location Data</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -160,6 +268,15 @@ public interface IbisSensinactFactory extends EFactory {
 	 * @generated
 	 */
 	GNSSLocationData createGNSSLocationData();
+
+	/**
+	 * Returns a new object of class '<em>Ticket Validation Current Tariff Stop</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Ticket Validation Current Tariff Stop</em>'.
+	 * @generated
+	 */
+	TicketValidationCurrentTariffStop createTicketValidationCurrentTariffStop();
 
 	/**
 	 * Returns a new object of class '<em>Ticket Validation Current Tariff Stop Data</em>'.
@@ -171,6 +288,15 @@ public interface IbisSensinactFactory extends EFactory {
 	TicketValidationCurrentTariffStopData createTicketValidationCurrentTariffStopData();
 
 	/**
+	 * Returns a new object of class '<em>Ticket Validation Razzia</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Ticket Validation Razzia</em>'.
+	 * @generated
+	 */
+	TicketValidationRazzia createTicketValidationRazzia();
+
+	/**
 	 * Returns a new object of class '<em>Ticket Validation Razzia Data</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -180,6 +306,15 @@ public interface IbisSensinactFactory extends EFactory {
 	TicketValidationRazziaData createTicketValidationRazziaData();
 
 	/**
+	 * Returns a new object of class '<em>Ticket Validation Current Line</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Ticket Validation Current Line</em>'.
+	 * @generated
+	 */
+	TicketValidationCurrentLine createTicketValidationCurrentLine();
+
+	/**
 	 * Returns a new object of class '<em>Ticket Validation Current Line Data</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -187,6 +322,15 @@ public interface IbisSensinactFactory extends EFactory {
 	 * @generated
 	 */
 	TicketValidationCurrentLineData createTicketValidationCurrentLineData();
+
+	/**
+	 * Returns a new object of class '<em>Ticket Validation Vehicle</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Ticket Validation Vehicle</em>'.
+	 * @generated
+	 */
+	TicketValidationVehicle createTicketValidationVehicle();
 
 	/**
 	 * Returns a new object of class '<em>Ticket Validation Vehicle Data</em>'.
@@ -205,6 +349,15 @@ public interface IbisSensinactFactory extends EFactory {
 	 * @generated
 	 */
 	TripInfo createTripInfo();
+
+	/**
+	 * Returns a new object of class '<em>Trip Info Data</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Trip Info Data</em>'.
+	 * @generated
+	 */
+	TripInfoData createTripInfoData();
 
 	/**
 	 * Returns the package supported by this factory.

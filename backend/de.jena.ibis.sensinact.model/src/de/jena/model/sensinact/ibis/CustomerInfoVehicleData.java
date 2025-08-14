@@ -13,10 +13,6 @@
  */
 package de.jena.model.sensinact.ibis;
 
-import java.time.Instant;
-
-import org.eclipse.sensinact.model.core.provider.Service;
-
 import org.osgi.annotation.versioning.ProviderType;
 
 /**
@@ -30,7 +26,6 @@ import org.osgi.annotation.versioning.ProviderType;
  * <ul>
  *   <li>{@link de.jena.model.sensinact.ibis.CustomerInfoVehicleData#getServiceName <em>Service Name</em>}</li>
  *   <li>{@link de.jena.model.sensinact.ibis.CustomerInfoVehicleData#getServiceOperation <em>Service Operation</em>}</li>
- *   <li>{@link de.jena.model.sensinact.ibis.CustomerInfoVehicleData#getTimestamp <em>Timestamp</em>}</li>
  *   <li>{@link de.jena.model.sensinact.ibis.CustomerInfoVehicleData#getVehicleRef <em>Vehicle Ref</em>}</li>
  *   <li>{@link de.jena.model.sensinact.ibis.CustomerInfoVehicleData#getRouteDeviation <em>Route Deviation</em>}</li>
  *   <li>{@link de.jena.model.sensinact.ibis.CustomerInfoVehicleData#getDoorState <em>Door State</em>}</li>
@@ -49,7 +44,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-public interface CustomerInfoVehicleData extends Service {
+public interface CustomerInfoVehicleData extends IbisResource {
 	/**
 	 * Returns the value of the '<em><b>Service Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -93,28 +88,6 @@ public interface CustomerInfoVehicleData extends Service {
 	 * @generated
 	 */
 	void setServiceOperation(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Timestamp</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Timestamp</em>' attribute.
-	 * @see #setTimestamp(Instant)
-	 * @see de.jena.model.sensinact.ibis.IbisSensinactPackage#getCustomerInfoVehicleData_Timestamp()
-	 * @model dataType="org.eclipse.sensinact.model.core.provider.EInstant" required="true"
-	 * @generated
-	 */
-	Instant getTimestamp();
-
-	/**
-	 * Sets the value of the '{@link de.jena.model.sensinact.ibis.CustomerInfoVehicleData#getTimestamp <em>Timestamp</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Timestamp</em>' attribute.
-	 * @see #getTimestamp()
-	 * @generated
-	 */
-	void setTimestamp(Instant value);
 
 	/**
 	 * Returns the value of the '<em><b>Vehicle Ref</b></em>' attribute.
