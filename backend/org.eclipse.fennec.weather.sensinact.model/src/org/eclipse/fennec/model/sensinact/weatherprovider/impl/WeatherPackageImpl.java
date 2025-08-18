@@ -386,7 +386,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_WindDirection() {
+	public EAttribute getWeatherService_IssueTime() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -396,7 +396,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_WindSpeed() {
+	public EAttribute getWeatherService_WindDirection() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -406,7 +406,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_WindGustLastHour() {
+	public EAttribute getWeatherService_WindSpeed() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -416,7 +416,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_WindGustLastThreeHours() {
+	public EAttribute getWeatherService_WindGustLastHour() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -426,7 +426,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_WindGustMaxLast12Hours() {
+	public EAttribute getWeatherService_WindGustLastThreeHours() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -436,7 +436,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_WindGustProb25() {
+	public EAttribute getWeatherService_WindGustMaxLast12Hours() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -446,7 +446,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_WindGustProb40() {
+	public EAttribute getWeatherService_WindGustProb25() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -456,7 +456,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_WindGustProb55() {
+	public EAttribute getWeatherService_WindGustProb40() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -466,7 +466,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_CloudCoverTotal() {
+	public EAttribute getWeatherService_WindGustProb55() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -476,7 +476,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_CloudCoverBelow500() {
+	public EAttribute getWeatherService_CloudCoverTotal() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(10);
 	}
 
@@ -486,7 +486,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_CloudCoverEffective() {
+	public EAttribute getWeatherService_CloudCoverBelow500() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(11);
 	}
 
@@ -496,7 +496,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_CloudCoverHigh() {
+	public EAttribute getWeatherService_CloudCoverEffective() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(12);
 	}
 
@@ -506,7 +506,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_CloudCoverMid() {
+	public EAttribute getWeatherService_CloudCoverHigh() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(13);
 	}
 
@@ -516,7 +516,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_CloudCoverLow() {
+	public EAttribute getWeatherService_CloudCoverMid() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(14);
 	}
 
@@ -526,7 +526,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_PrecipitationLarger02Last6() {
+	public EAttribute getWeatherService_CloudCoverLow() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(15);
 	}
 
@@ -536,7 +536,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_PrecipitationLarger50Last6() {
+	public EAttribute getWeatherService_PrecipitationLarger02Last6() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(16);
 	}
 
@@ -546,7 +546,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_PrecipitationLarger02LastDay() {
+	public EAttribute getWeatherService_PrecipitationLarger50Last6() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(17);
 	}
 
@@ -556,7 +556,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_PrecipitationLarger50LastDay() {
+	public EAttribute getWeatherService_PrecipitationLarger02LastDay() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(18);
 	}
 
@@ -566,7 +566,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_PrecipitationLarger00Last12() {
+	public EAttribute getWeatherService_PrecipitationLarger50LastDay() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(19);
 	}
 
@@ -576,7 +576,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_PrecipitationLarger02Last12() {
+	public EAttribute getWeatherService_PrecipitationLarger00Last12() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(20);
 	}
 
@@ -586,7 +586,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_PrecipitationLarger10Last12() {
+	public EAttribute getWeatherService_PrecipitationLarger02Last12() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(21);
 	}
 
@@ -596,7 +596,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_PrecipitationLarger50Last12() {
+	public EAttribute getWeatherService_PrecipitationLarger10Last12() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(22);
 	}
 
@@ -606,7 +606,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_PrecipitationSignificantWeatherTotal() {
+	public EAttribute getWeatherService_PrecipitationLarger50Last12() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(23);
 	}
 
@@ -616,7 +616,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_PrecipitationSignificantWeatherLast3() {
+	public EAttribute getWeatherService_PrecipitationSignificantWeatherTotal() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(24);
 	}
 
@@ -626,7 +626,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_TempAboveSurface5() {
+	public EAttribute getWeatherService_PrecipitationSignificantWeatherLast3() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(25);
 	}
 
@@ -636,7 +636,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_TempAboveSurface200() {
+	public EAttribute getWeatherService_TempAboveSurface5() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(26);
 	}
 
@@ -646,7 +646,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_TempDewpointAboveSurface200() {
+	public EAttribute getWeatherService_TempAboveSurface200() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(27);
 	}
 
@@ -656,7 +656,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_TempMinLast12() {
+	public EAttribute getWeatherService_TempDewpointAboveSurface200() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(28);
 	}
 
@@ -666,7 +666,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_TempMaxLast12() {
+	public EAttribute getWeatherService_TempMinLast12() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(29);
 	}
 
@@ -676,7 +676,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_FogPropLast1() {
+	public EAttribute getWeatherService_TempMaxLast12() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(30);
 	}
 
@@ -686,7 +686,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_FogPropLast6() {
+	public EAttribute getWeatherService_FogPropLast1() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(31);
 	}
 
@@ -696,7 +696,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_FogPropLast12() {
+	public EAttribute getWeatherService_FogPropLast6() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(32);
 	}
 
@@ -706,7 +706,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_SnowRainEqLast1() {
+	public EAttribute getWeatherService_FogPropLast12() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(33);
 	}
 
@@ -716,7 +716,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_SnowRainEqLast3() {
+	public EAttribute getWeatherService_SnowRainEqLast1() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(34);
 	}
 
@@ -726,7 +726,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_Visibility() {
+	public EAttribute getWeatherService_SnowRainEqLast3() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(35);
 	}
 
@@ -736,7 +736,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_SurfacePressure() {
+	public EAttribute getWeatherService_Visibility() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(36);
 	}
 
@@ -746,7 +746,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_IrRadianceGlobal() {
+	public EAttribute getWeatherService_SurfacePressure() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(37);
 	}
 
@@ -756,7 +756,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_Ww() {
+	public EAttribute getWeatherService_IrRadianceGlobal() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(38);
 	}
 
@@ -766,7 +766,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_W1w2_w1() {
+	public EAttribute getWeatherService_Ww() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(39);
 	}
 
@@ -776,8 +776,18 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWeatherService_W1w2_w2() {
+	public EAttribute getWeatherService_W1w2_w1() {
 		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(40);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getWeatherService_W1w2_w2() {
+		return (EAttribute)weatherServiceEClass.getEStructuralFeatures().get(41);
 	}
 
 	/**
@@ -838,6 +848,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 
 		weatherServiceEClass = createEClass(WEATHER_SERVICE);
 		createEAttribute(weatherServiceEClass, WEATHER_SERVICE__FORECASTED_WEATHER_TIME);
+		createEAttribute(weatherServiceEClass, WEATHER_SERVICE__ISSUE_TIME);
 		createEAttribute(weatherServiceEClass, WEATHER_SERVICE__WIND_DIRECTION);
 		createEAttribute(weatherServiceEClass, WEATHER_SERVICE__WIND_SPEED);
 		createEAttribute(weatherServiceEClass, WEATHER_SERVICE__WIND_GUST_LAST_HOUR);
@@ -944,6 +955,7 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 
 		initEClass(weatherServiceEClass, WeatherService.class, "WeatherService", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getWeatherService_ForecastedWeatherTime(), theProviderPackage.getEInstant(), "forecastedWeatherTime", null, 0, 1, WeatherService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWeatherService_IssueTime(), theProviderPackage.getEInstant(), "issueTime", null, 0, 1, WeatherService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWeatherService_WindDirection(), ecorePackage.getEFloatObject(), "windDirection", null, 0, 1, WeatherService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWeatherService_WindSpeed(), ecorePackage.getEFloatObject(), "windSpeed", null, 0, 1, WeatherService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWeatherService_WindGustLastHour(), ecorePackage.getEFloatObject(), "windGustLastHour", null, 0, 1, WeatherService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1024,6 +1036,12 @@ public class WeatherPackageImpl extends EPackageImpl implements WeatherPackage {
 		   source,
 		   new String[] {
 			   "documentation", "The time of the forecasted weather"
+		   });
+		addAnnotation
+		  (getWeatherService_IssueTime(),
+		   source,
+		   new String[] {
+			   "documentation", "The time this report was issued"
 		   });
 		addAnnotation
 		  (getWeatherService_WindDirection(),

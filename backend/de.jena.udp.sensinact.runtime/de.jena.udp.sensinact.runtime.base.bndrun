@@ -209,27 +209,26 @@
 	org.locationtech.spatial4j;version='[0.8.0,0.8.1)';startlevel=2060,\
 	org.mongodb.mongo-java-driver;version='[3.12.14,3.12.15)';startlevel=2070,\
 	org.objectweb.asm;version='[9.6.0,9.6.1)';startlevel=2080,\
-	org.osgi.service.component;version='[1.5.1,1.5.2)';startlevel=2090,\
-	org.osgi.service.event;version='[1.4.1,1.4.2)';startlevel=2100,\
+	org.osgi.service.cm;version='[1.6.1,1.6.2)';startlevel=2090,\
+	org.osgi.service.component;version='[1.5.1,1.5.2)';startlevel=2100,\
 	org.osgi.service.http.whiteboard;version='[1.1.0,1.1.1)';startlevel=2110,\
 	org.osgi.service.jakartars;version='[2.0.0,2.0.1)';startlevel=2120,\
 	org.osgi.service.log;version='[1.5.0,1.5.1)';startlevel=2130,\
 	org.osgi.service.metatype;version='[1.4.1,1.4.2)';startlevel=2140,\
-	org.osgi.service.servlet;version='[2.0.0,2.0.1)';startlevel=2150,\
-	org.osgi.service.typedevent;version='[1.0.0,1.0.1)';startlevel=2160,\
-	org.osgi.util.converter;version='[1.0.9,1.0.10)';startlevel=2170,\
-	org.osgi.util.function;version='[1.2.0,1.2.1)';startlevel=2180,\
-	org.osgi.util.promise;version='[1.3.0,1.3.1)';startlevel=2190,\
-	org.osgi.util.pushstream;version='[1.1.0,1.1.1)';startlevel=2200,\
-	org.owasp.encoder;version='[1.2.3,1.2.4)';startlevel=2210,\
-	org.postgresql.jdbc;version='[42.7.3,42.7.4)';startlevel=2220,\
-	org.w3.atom.model;version='[1.0.0,1.0.1)';startlevel=2230,\
-	org.w3.smil.model;version='[1.0.0,1.0.1)';startlevel=2240,\
-	org.w3.xlink.model;version='[1.0.0,1.0.1)';startlevel=2250,\
-	org.yaml.snakeyaml;version='[2.3.0,2.3.1)';startlevel=2260,\
-	time4j-base;version='[5.9.4,5.9.5)';startlevel=2270,\
-	tx-control-provider-jdbc-local;version='[1.0.1,1.0.2)';startlevel=2280,\
-	tx-control-service-local;version='[1.0.1,1.0.2)';startlevel=2290
+	org.osgi.service.typedevent;version='[1.0.0,1.0.1)';startlevel=2150,\
+	org.osgi.util.converter;version='[1.0.9,1.0.10)';startlevel=2160,\
+	org.osgi.util.function;version='[1.2.0,1.2.1)';startlevel=2170,\
+	org.osgi.util.promise;version='[1.3.0,1.3.1)';startlevel=2180,\
+	org.osgi.util.pushstream;version='[1.1.0,1.1.1)';startlevel=2190,\
+	org.owasp.encoder;version='[1.2.3,1.2.4)';startlevel=2200,\
+	org.postgresql.jdbc;version='[42.7.3,42.7.4)';startlevel=2210,\
+	org.w3.atom.model;version='[1.0.0,1.0.1)';startlevel=2220,\
+	org.w3.smil.model;version='[1.0.0,1.0.1)';startlevel=2230,\
+	org.w3.xlink.model;version='[1.0.0,1.0.1)';startlevel=2240,\
+	org.yaml.snakeyaml;version='[2.3.0,2.3.1)';startlevel=2250,\
+	time4j-base;version='[5.9.4,5.9.5)';startlevel=2260,\
+	tx-control-provider-jdbc-local;version='[1.0.1,1.0.2)';startlevel=2270,\
+	tx-control-service-local;version='[1.0.1,1.0.2)';startlevel=2280
 
 -runstartlevel: \
     order=sortbynameversion 

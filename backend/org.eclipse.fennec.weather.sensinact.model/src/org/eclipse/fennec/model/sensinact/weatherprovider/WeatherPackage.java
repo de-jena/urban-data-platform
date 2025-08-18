@@ -392,13 +392,22 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	int WEATHER_SERVICE__FORECASTED_WEATHER_TIME = ProviderPackage.SERVICE_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Issue Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEATHER_SERVICE__ISSUE_TIME = ProviderPackage.SERVICE_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Wind Direction</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__WIND_DIRECTION = ProviderPackage.SERVICE_FEATURE_COUNT + 1;
+	int WEATHER_SERVICE__WIND_DIRECTION = ProviderPackage.SERVICE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Wind Speed</b></em>' attribute.
@@ -407,7 +416,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__WIND_SPEED = ProviderPackage.SERVICE_FEATURE_COUNT + 2;
+	int WEATHER_SERVICE__WIND_SPEED = ProviderPackage.SERVICE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Wind Gust Last Hour</b></em>' attribute.
@@ -416,7 +425,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__WIND_GUST_LAST_HOUR = ProviderPackage.SERVICE_FEATURE_COUNT + 3;
+	int WEATHER_SERVICE__WIND_GUST_LAST_HOUR = ProviderPackage.SERVICE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Wind Gust Last Three Hours</b></em>' attribute.
@@ -425,7 +434,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__WIND_GUST_LAST_THREE_HOURS = ProviderPackage.SERVICE_FEATURE_COUNT + 4;
+	int WEATHER_SERVICE__WIND_GUST_LAST_THREE_HOURS = ProviderPackage.SERVICE_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Wind Gust Max Last12 Hours</b></em>' attribute.
@@ -434,7 +443,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__WIND_GUST_MAX_LAST12_HOURS = ProviderPackage.SERVICE_FEATURE_COUNT + 5;
+	int WEATHER_SERVICE__WIND_GUST_MAX_LAST12_HOURS = ProviderPackage.SERVICE_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Wind Gust Prob25</b></em>' attribute.
@@ -443,7 +452,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__WIND_GUST_PROB25 = ProviderPackage.SERVICE_FEATURE_COUNT + 6;
+	int WEATHER_SERVICE__WIND_GUST_PROB25 = ProviderPackage.SERVICE_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Wind Gust Prob40</b></em>' attribute.
@@ -452,7 +461,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__WIND_GUST_PROB40 = ProviderPackage.SERVICE_FEATURE_COUNT + 7;
+	int WEATHER_SERVICE__WIND_GUST_PROB40 = ProviderPackage.SERVICE_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Wind Gust Prob55</b></em>' attribute.
@@ -461,7 +470,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__WIND_GUST_PROB55 = ProviderPackage.SERVICE_FEATURE_COUNT + 8;
+	int WEATHER_SERVICE__WIND_GUST_PROB55 = ProviderPackage.SERVICE_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Cloud Cover Total</b></em>' attribute.
@@ -470,7 +479,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__CLOUD_COVER_TOTAL = ProviderPackage.SERVICE_FEATURE_COUNT + 9;
+	int WEATHER_SERVICE__CLOUD_COVER_TOTAL = ProviderPackage.SERVICE_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Cloud Cover Below500</b></em>' attribute.
@@ -479,7 +488,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__CLOUD_COVER_BELOW500 = ProviderPackage.SERVICE_FEATURE_COUNT + 10;
+	int WEATHER_SERVICE__CLOUD_COVER_BELOW500 = ProviderPackage.SERVICE_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Cloud Cover Effective</b></em>' attribute.
@@ -488,7 +497,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__CLOUD_COVER_EFFECTIVE = ProviderPackage.SERVICE_FEATURE_COUNT + 11;
+	int WEATHER_SERVICE__CLOUD_COVER_EFFECTIVE = ProviderPackage.SERVICE_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Cloud Cover High</b></em>' attribute.
@@ -497,7 +506,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__CLOUD_COVER_HIGH = ProviderPackage.SERVICE_FEATURE_COUNT + 12;
+	int WEATHER_SERVICE__CLOUD_COVER_HIGH = ProviderPackage.SERVICE_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Cloud Cover Mid</b></em>' attribute.
@@ -506,7 +515,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__CLOUD_COVER_MID = ProviderPackage.SERVICE_FEATURE_COUNT + 13;
+	int WEATHER_SERVICE__CLOUD_COVER_MID = ProviderPackage.SERVICE_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Cloud Cover Low</b></em>' attribute.
@@ -515,7 +524,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__CLOUD_COVER_LOW = ProviderPackage.SERVICE_FEATURE_COUNT + 14;
+	int WEATHER_SERVICE__CLOUD_COVER_LOW = ProviderPackage.SERVICE_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Precipitation Larger02 Last6</b></em>' attribute.
@@ -524,7 +533,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__PRECIPITATION_LARGER02_LAST6 = ProviderPackage.SERVICE_FEATURE_COUNT + 15;
+	int WEATHER_SERVICE__PRECIPITATION_LARGER02_LAST6 = ProviderPackage.SERVICE_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Precipitation Larger50 Last6</b></em>' attribute.
@@ -533,7 +542,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__PRECIPITATION_LARGER50_LAST6 = ProviderPackage.SERVICE_FEATURE_COUNT + 16;
+	int WEATHER_SERVICE__PRECIPITATION_LARGER50_LAST6 = ProviderPackage.SERVICE_FEATURE_COUNT + 17;
 
 	/**
 	 * The feature id for the '<em><b>Precipitation Larger02 Last Day</b></em>' attribute.
@@ -542,7 +551,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__PRECIPITATION_LARGER02_LAST_DAY = ProviderPackage.SERVICE_FEATURE_COUNT + 17;
+	int WEATHER_SERVICE__PRECIPITATION_LARGER02_LAST_DAY = ProviderPackage.SERVICE_FEATURE_COUNT + 18;
 
 	/**
 	 * The feature id for the '<em><b>Precipitation Larger50 Last Day</b></em>' attribute.
@@ -551,7 +560,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__PRECIPITATION_LARGER50_LAST_DAY = ProviderPackage.SERVICE_FEATURE_COUNT + 18;
+	int WEATHER_SERVICE__PRECIPITATION_LARGER50_LAST_DAY = ProviderPackage.SERVICE_FEATURE_COUNT + 19;
 
 	/**
 	 * The feature id for the '<em><b>Precipitation Larger00 Last12</b></em>' attribute.
@@ -560,7 +569,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__PRECIPITATION_LARGER00_LAST12 = ProviderPackage.SERVICE_FEATURE_COUNT + 19;
+	int WEATHER_SERVICE__PRECIPITATION_LARGER00_LAST12 = ProviderPackage.SERVICE_FEATURE_COUNT + 20;
 
 	/**
 	 * The feature id for the '<em><b>Precipitation Larger02 Last12</b></em>' attribute.
@@ -569,7 +578,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__PRECIPITATION_LARGER02_LAST12 = ProviderPackage.SERVICE_FEATURE_COUNT + 20;
+	int WEATHER_SERVICE__PRECIPITATION_LARGER02_LAST12 = ProviderPackage.SERVICE_FEATURE_COUNT + 21;
 
 	/**
 	 * The feature id for the '<em><b>Precipitation Larger10 Last12</b></em>' attribute.
@@ -578,7 +587,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__PRECIPITATION_LARGER10_LAST12 = ProviderPackage.SERVICE_FEATURE_COUNT + 21;
+	int WEATHER_SERVICE__PRECIPITATION_LARGER10_LAST12 = ProviderPackage.SERVICE_FEATURE_COUNT + 22;
 
 	/**
 	 * The feature id for the '<em><b>Precipitation Larger50 Last12</b></em>' attribute.
@@ -587,7 +596,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__PRECIPITATION_LARGER50_LAST12 = ProviderPackage.SERVICE_FEATURE_COUNT + 22;
+	int WEATHER_SERVICE__PRECIPITATION_LARGER50_LAST12 = ProviderPackage.SERVICE_FEATURE_COUNT + 23;
 
 	/**
 	 * The feature id for the '<em><b>Precipitation Significant Weather Total</b></em>' attribute.
@@ -596,7 +605,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__PRECIPITATION_SIGNIFICANT_WEATHER_TOTAL = ProviderPackage.SERVICE_FEATURE_COUNT + 23;
+	int WEATHER_SERVICE__PRECIPITATION_SIGNIFICANT_WEATHER_TOTAL = ProviderPackage.SERVICE_FEATURE_COUNT + 24;
 
 	/**
 	 * The feature id for the '<em><b>Precipitation Significant Weather Last3</b></em>' attribute.
@@ -605,7 +614,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__PRECIPITATION_SIGNIFICANT_WEATHER_LAST3 = ProviderPackage.SERVICE_FEATURE_COUNT + 24;
+	int WEATHER_SERVICE__PRECIPITATION_SIGNIFICANT_WEATHER_LAST3 = ProviderPackage.SERVICE_FEATURE_COUNT + 25;
 
 	/**
 	 * The feature id for the '<em><b>Temp Above Surface5</b></em>' attribute.
@@ -614,7 +623,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__TEMP_ABOVE_SURFACE5 = ProviderPackage.SERVICE_FEATURE_COUNT + 25;
+	int WEATHER_SERVICE__TEMP_ABOVE_SURFACE5 = ProviderPackage.SERVICE_FEATURE_COUNT + 26;
 
 	/**
 	 * The feature id for the '<em><b>Temp Above Surface200</b></em>' attribute.
@@ -623,7 +632,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__TEMP_ABOVE_SURFACE200 = ProviderPackage.SERVICE_FEATURE_COUNT + 26;
+	int WEATHER_SERVICE__TEMP_ABOVE_SURFACE200 = ProviderPackage.SERVICE_FEATURE_COUNT + 27;
 
 	/**
 	 * The feature id for the '<em><b>Temp Dewpoint Above Surface200</b></em>' attribute.
@@ -632,7 +641,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__TEMP_DEWPOINT_ABOVE_SURFACE200 = ProviderPackage.SERVICE_FEATURE_COUNT + 27;
+	int WEATHER_SERVICE__TEMP_DEWPOINT_ABOVE_SURFACE200 = ProviderPackage.SERVICE_FEATURE_COUNT + 28;
 
 	/**
 	 * The feature id for the '<em><b>Temp Min Last12</b></em>' attribute.
@@ -641,7 +650,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__TEMP_MIN_LAST12 = ProviderPackage.SERVICE_FEATURE_COUNT + 28;
+	int WEATHER_SERVICE__TEMP_MIN_LAST12 = ProviderPackage.SERVICE_FEATURE_COUNT + 29;
 
 	/**
 	 * The feature id for the '<em><b>Temp Max Last12</b></em>' attribute.
@@ -650,7 +659,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__TEMP_MAX_LAST12 = ProviderPackage.SERVICE_FEATURE_COUNT + 29;
+	int WEATHER_SERVICE__TEMP_MAX_LAST12 = ProviderPackage.SERVICE_FEATURE_COUNT + 30;
 
 	/**
 	 * The feature id for the '<em><b>Fog Prop Last1</b></em>' attribute.
@@ -659,7 +668,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__FOG_PROP_LAST1 = ProviderPackage.SERVICE_FEATURE_COUNT + 30;
+	int WEATHER_SERVICE__FOG_PROP_LAST1 = ProviderPackage.SERVICE_FEATURE_COUNT + 31;
 
 	/**
 	 * The feature id for the '<em><b>Fog Prop Last6</b></em>' attribute.
@@ -668,7 +677,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__FOG_PROP_LAST6 = ProviderPackage.SERVICE_FEATURE_COUNT + 31;
+	int WEATHER_SERVICE__FOG_PROP_LAST6 = ProviderPackage.SERVICE_FEATURE_COUNT + 32;
 
 	/**
 	 * The feature id for the '<em><b>Fog Prop Last12</b></em>' attribute.
@@ -677,7 +686,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__FOG_PROP_LAST12 = ProviderPackage.SERVICE_FEATURE_COUNT + 32;
+	int WEATHER_SERVICE__FOG_PROP_LAST12 = ProviderPackage.SERVICE_FEATURE_COUNT + 33;
 
 	/**
 	 * The feature id for the '<em><b>Snow Rain Eq Last1</b></em>' attribute.
@@ -686,7 +695,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__SNOW_RAIN_EQ_LAST1 = ProviderPackage.SERVICE_FEATURE_COUNT + 33;
+	int WEATHER_SERVICE__SNOW_RAIN_EQ_LAST1 = ProviderPackage.SERVICE_FEATURE_COUNT + 34;
 
 	/**
 	 * The feature id for the '<em><b>Snow Rain Eq Last3</b></em>' attribute.
@@ -695,7 +704,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__SNOW_RAIN_EQ_LAST3 = ProviderPackage.SERVICE_FEATURE_COUNT + 34;
+	int WEATHER_SERVICE__SNOW_RAIN_EQ_LAST3 = ProviderPackage.SERVICE_FEATURE_COUNT + 35;
 
 	/**
 	 * The feature id for the '<em><b>Visibility</b></em>' attribute.
@@ -704,7 +713,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__VISIBILITY = ProviderPackage.SERVICE_FEATURE_COUNT + 35;
+	int WEATHER_SERVICE__VISIBILITY = ProviderPackage.SERVICE_FEATURE_COUNT + 36;
 
 	/**
 	 * The feature id for the '<em><b>Surface Pressure</b></em>' attribute.
@@ -713,7 +722,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__SURFACE_PRESSURE = ProviderPackage.SERVICE_FEATURE_COUNT + 36;
+	int WEATHER_SERVICE__SURFACE_PRESSURE = ProviderPackage.SERVICE_FEATURE_COUNT + 37;
 
 	/**
 	 * The feature id for the '<em><b>Ir Radiance Global</b></em>' attribute.
@@ -722,7 +731,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__IR_RADIANCE_GLOBAL = ProviderPackage.SERVICE_FEATURE_COUNT + 37;
+	int WEATHER_SERVICE__IR_RADIANCE_GLOBAL = ProviderPackage.SERVICE_FEATURE_COUNT + 38;
 
 	/**
 	 * The feature id for the '<em><b>Ww</b></em>' attribute.
@@ -731,7 +740,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__WW = ProviderPackage.SERVICE_FEATURE_COUNT + 38;
+	int WEATHER_SERVICE__WW = ProviderPackage.SERVICE_FEATURE_COUNT + 39;
 
 	/**
 	 * The feature id for the '<em><b>W1w2 w1</b></em>' attribute.
@@ -740,7 +749,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__W1W2_W1 = ProviderPackage.SERVICE_FEATURE_COUNT + 39;
+	int WEATHER_SERVICE__W1W2_W1 = ProviderPackage.SERVICE_FEATURE_COUNT + 40;
 
 	/**
 	 * The feature id for the '<em><b>W1w2 w2</b></em>' attribute.
@@ -749,7 +758,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE__W1W2_W2 = ProviderPackage.SERVICE_FEATURE_COUNT + 40;
+	int WEATHER_SERVICE__W1W2_W2 = ProviderPackage.SERVICE_FEATURE_COUNT + 41;
 
 	/**
 	 * The number of structural features of the '<em>Service</em>' class.
@@ -758,7 +767,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE_FEATURE_COUNT = ProviderPackage.SERVICE_FEATURE_COUNT + 41;
+	int WEATHER_SERVICE_FEATURE_COUNT = ProviderPackage.SERVICE_FEATURE_COUNT + 42;
 
 	/**
 	 * The operation id for the '<em>EIs Set</em>' operation.
@@ -1084,6 +1093,17 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EAttribute getWeatherService_ForecastedWeatherTime();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherService#getIssueTime <em>Issue Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Issue Time</em>'.
+	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.WeatherService#getIssueTime()
+	 * @see #getWeatherService()
+	 * @generated
+	 */
+	EAttribute getWeatherService_IssueTime();
 
 	/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherService#getWindDirection <em>Wind Direction</em>}'.
@@ -1775,6 +1795,14 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 		 * @generated
 		 */
 		EAttribute WEATHER_SERVICE__FORECASTED_WEATHER_TIME = eINSTANCE.getWeatherService_ForecastedWeatherTime();
+
+		/**
+		 * The meta object literal for the '<em><b>Issue Time</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEATHER_SERVICE__ISSUE_TIME = eINSTANCE.getWeatherService_IssueTime();
 
 		/**
 		 * The meta object literal for the '<em><b>Wind Direction</b></em>' attribute feature.
