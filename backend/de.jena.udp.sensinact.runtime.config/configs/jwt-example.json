@@ -1,0 +1,11 @@
+{
+    ":configurator:resource-version": 1,
+    ":configurator:symbolic-name": "org.eclipse.sensinact.gateway.jwt.config",
+    ":configurator:version": "0.0.1",
+    "sensinact.jwt.authentication": {
+        "secret": "your-jwt-secret-key-here-min-256-bits",
+        "issuer": "sensinact-test",
+        "expiration": 3600,
+        "algorithm": "HS256"
+    }
+}

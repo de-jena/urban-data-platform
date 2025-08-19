@@ -1,0 +1,102 @@
+{
+    ":configurator:resource-version": 1,
+    ":configurator:symbolic-name": "org.eclipse.sensinact.gateway.authorization",
+    ":configurator:version": "0.0.1",
+    "sensinact.authorization.casbin": {
+        "allowByDefault": false,
+        "policies": [
+            "# Anonymous users - deny all access by default",
+            "anonymous, *, *, *, *, *, *, allow, -10000",
+            
+            "# ROLE: weather_provider_reader - Limited to weather provider, read-only access",
+            "role:weather:provider_reader, *, *, 10567.*, *, *, DESCRIBE|READ, allow, 1000",
+            "role:weather:provider_reader, *, *, *.10567, *, *, DESCRIBE|READ, allow, 1000",
+            
+            "# ROLE: chirpstack_service_reader - Limited to specific chirpstack services",
+            "role:chirpstack_service_reader, *, *, chirpstack.*, device, *, DESCRIBE|READ, allow, 1000",
+            "role:chirpstack_service_reader, *, *, chirpstack.*, gateway, *, DESCRIBE|READ, allow, 1000",
+            "role:chirpstack_service_reader, *, *, chirpstack.*, application, *, DESCRIBE|READ, allow, 1000",
+            
+            "# ROLE: glt_traffic_operator - Limited to GLT traffic light operations",
+            "role:glt_traffic_operator, *, *, glt.*, traffic-control, *, DESCRIBE|READ|ACT, allow, 2000",
+            "role:glt_traffic_operator, *, *, glt.*, status, *, DESCRIBE|READ, allow, 2000",
+            "role:glt_traffic_operator, *, *, glt.*, configuration, *, DESCRIBE|READ|UPDATE, allow, 2000",
+            
+            "# ROLE: sensor_data_reader - Read-only access to sensor data across all providers",
+            "role:sensor_data_reader, *, *, *, sensor, *, DESCRIBE|READ, allow, 1500",
+            "role:sensor_data_reader, *, *, *, data, *, DESCRIBE|READ, allow, 1500",
+            "role:sensor_data_reader, *, *, *, measurement, *, DESCRIBE|READ, allow, 1500",
+            
+            "# ROLE: device_configurator - Can read and update device configurations",
+            "role:device_configurator, *, *, *, configuration, *, DESCRIBE|READ|UPDATE, allow, 2500",
+            "role:device_configurator, *, *, *, settings, *, DESCRIBE|READ|UPDATE, allow, 2500",
+            "role:device_configurator, *, *, *, admin, restart, ACT, allow, 2500",
+            
+            "# ROLE: transport_monitor - Public transport and traffic monitoring",
+            "role:transport_monitor, *, *, publictransport.*, *, *, DESCRIBE|READ, allow, 1800",
+            "role:transport_monitor, *, *, traffic.*, *, *, DESCRIBE|READ, allow, 1800",
+            "role:transport_monitor, *, *, tram.*, *, *, DESCRIBE|READ, allow, 1800",
+            "role:transport_monitor, *, *, ibis.*, *, *, DESCRIBE|READ, allow, 1800",
+            
+            "# ROLE: operations_manager - Broader operational access with some control capabilities",
+            "role:operations_manager, *, *, *, *, *, DESCRIBE|READ, allow, 3000",
+            "role:operations_manager, *, *, *, admin, *, DESCRIBE|READ|ACT, allow, 3000",
+            "role:operations_manager, *, *, *, control, *, DESCRIBE|READ|ACT, allow, 3000",
+            "role:operations_manager, *, *, .*-management, *, *, DESCRIBE|READ|UPDATE|ACT, allow, 3000",
+            
+            "# ROLE: system_admin - Full access to everything (admin role)",
+            "role:system_admin, *, *, *, *, *, *, allow, 10000",
+            
+            "# ROLE: read_only_guest - Basic read access to non-sensitive services",
+            "role:read_only_guest, *, *, *, status, *, DESCRIBE|READ, allow, 500",
+            "role:read_only_guest, *, *, *, info, *, DESCRIBE|READ, allow, 500",
+            "role:read_only_guest, *, *, weather.*, *, *, DESCRIBE|READ, allow, 500",
+            "role:read_only_guest, *, *, *, admin, *, deny, 500",
+            "role:read_only_guest, *, *, *, control, *, deny, 500",
+            
+            "# ROLE: maintenance_technician - Diagnostic and maintenance access",
+            "role:maintenance_technician, *, *, *, diagnostic, *, DESCRIBE|READ, allow, 2200",
+            "role:maintenance_technician, *, *, *, health, *, DESCRIBE|READ, allow, 2200",
+            "role:maintenance_technician, *, *, *, maintenance, *, DESCRIBE|READ|UPDATE|ACT, allow, 2200",
+            "role:maintenance_technician, *, *, *, admin, reset, ACT, allow, 2200",
+            "role:maintenance_technician, *, *, *, admin, calibrate, ACT, allow, 2200",
+            
+            "# ROLE: emergency_operator - Emergency access to critical systems",
+            "role:emergency_operator, *, *, emergency.*, *, *, DESCRIBE|READ|UPDATE|ACT, allow, 5000",
+            "role:emergency_operator, *, *, *.emergency, *, *, DESCRIBE|READ|UPDATE|ACT, allow, 5000",
+            "role:emergency_operator, *, *, glt.*, emergency, *, DESCRIBE|READ|UPDATE|ACT, allow, 5000",
+            "role:emergency_operator, *, *, traffic.*, emergency, *, DESCRIBE|READ|UPDATE|ACT, allow, 5000",
+            
+            "# User assignments - map specific users to roles",
+            "alice, *, *, *, *, *, *, deny, 0",
+            "alice, role:weather_provider_reader, *, *, *, *, *, allow, 0",
+            
+            "bob, *, *, *, *, *, *, deny, 0", 
+            "bob, role:chirpstack_service_reader, *, *, *, *, *, allow, 0",
+            
+            "charlie, *, *, *, *, *, *, deny, 0",
+            "charlie, role:glt_traffic_operator, *, *, *, *, *, allow, 0",
+            
+            "diana, *, *, *, *, *, *, deny, 0",
+            "diana, role:operations_manager, *, *, *, *, *, allow, 0",
+            
+            "eve, *, *, *, *, *, *, deny, 0",
+            "eve, role:sensor_data_reader, *, *, *, *, *, allow, 0",
+            
+            "frank, *, *, *, *, *, *, deny, 0",
+            "frank, role:device_configurator, *, *, *, *, *, allow, 0",
+            
+            "admin, *, *, *, *, *, *, deny, 0",
+            "admin, role:system_admin, *, *, *, *, *, allow, 0",
+            
+            "guest, *, *, *, *, *, *, deny, 0",
+            "guest, role:read_only_guest, *, *, *, *, *, allow, 0",
+            
+            "technician, *, *, *, *, *, *, deny, 0",
+            "technician, role:maintenance_technician, *, *, *, *, *, allow, 0",
+            
+            "emergency_user, *, *, *, *, *, *, deny, 0",
+            "emergency_user, role:emergency_operator, *, *, *, *, *, allow, 0"
+        ]
+    }
+}

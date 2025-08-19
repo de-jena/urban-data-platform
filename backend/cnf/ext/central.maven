@@ -75,7 +75,6 @@ io.swagger.core.v3:swagger-core-jakarta:2.2.22
 io.github.classgraph:classgraph:4.8.165
 jakarta.validation:jakarta.validation-api:3.1.0
 jakarta.xml.bind:jakarta.xml.bind-api:3.0.1
-commons-io:commons-io:2.6
 org.apache.felix:org.apache.felix.framework:7.0.5
 org.yaml:snakeyaml:2.3
 
@@ -145,3 +144,4 @@ biz.aQute:biz.aQute.gogo.commands.provider:1.11.0-SNAPSHOT
 #time4j
 net.time4j:time4j-calendar:4.38
 net.time4j:time4j-base:5.9.4
+commons-io:commons-io:2.17.0

@@ -6,8 +6,12 @@
         "allow.anonymous": true,
         "osgi.jakartars.whiteboard.target": "(jersey.jakartars.whiteboard.name=udprest)"
     },
+    "sensinact.northbound.auth.oidc~example": {
+        "realm": "sensinact",
+        "discoveryURL": "http://127.0.0.1:24680/discovery"
+    },
     "sensinact.session.manager": {
-    	"auth.policy": "ALLOW_ALL"
+    	"auth.policy": "AUTHENTICATED_ONLY"
     },
     "sensinact.sensorthings.northbound.rest" : {
         "history.provider": "brokerHistory"

@@ -1,0 +1,49 @@
+{
+    ":configurator:resource-version": 1,
+    ":configurator:symbolic-name": "org.eclipse.sensinact.gateway.test.users",
+    ":configurator:version": "0.0.1",
+    "sensinact.test.authentication": {
+        "users": {
+            "alice": {
+                "password": "weather123",
+                "roles": ["role:weather_provider_reader"]
+            },
+            "bob": {
+                "password": "chirp123", 
+                "roles": ["role:chirpstack_service_reader"]
+            },
+            "charlie": {
+                "password": "traffic123",
+                "roles": ["role:glt_traffic_operator"]
+            },
+            "diana": {
+                "password": "ops123",
+                "roles": ["role:operations_manager"]
+            },
+            "eve": {
+                "password": "sensor123",
+                "roles": ["role:sensor_data_reader"]
+            },
+            "frank": {
+                "password": "config123",
+                "roles": ["role:device_configurator"]
+            },
+            "admin": {
+                "password": "admin123",
+                "roles": ["role:system_admin"]
+            },
+            "guest": {
+                "password": "guest123",
+                "roles": ["role:read_only_guest"]
+            },
+            "technician": {
+                "password": "tech123",
+                "roles": ["role:maintenance_technician"]
+            },
+            "emergency_user": {
+                "password": "emergency123",
+                "roles": ["role:emergency_operator"]
+            }
+        }
+    }
+}
