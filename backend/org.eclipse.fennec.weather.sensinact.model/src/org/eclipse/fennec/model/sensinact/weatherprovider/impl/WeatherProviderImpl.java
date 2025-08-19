@@ -3,6 +3,7 @@
 package org.eclipse.fennec.model.sensinact.weatherprovider.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -54,7 +55,7 @@ import org.eclipse.sensinact.model.core.provider.impl.ProviderImpl;
  */
 public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider {
 	/**
-	 * The cached value of the '{@link #getCurrentWeather() <em>Current Weather</em>}' reference.
+	 * The cached value of the '{@link #getCurrentWeather() <em>Current Weather</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCurrentWeather()
@@ -64,7 +65,7 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	protected WeatherService currentWeather;
 
 	/**
-	 * The cached value of the '{@link #getForecast3H() <em>Forecast3 H</em>}' reference.
+	 * The cached value of the '{@link #getForecast3H() <em>Forecast3 H</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getForecast3H()
@@ -74,7 +75,7 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	protected WeatherService forecast3H;
 
 	/**
-	 * The cached value of the '{@link #getForecast6H() <em>Forecast6 H</em>}' reference.
+	 * The cached value of the '{@link #getForecast6H() <em>Forecast6 H</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getForecast6H()
@@ -84,7 +85,7 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	protected WeatherService forecast6H;
 
 	/**
-	 * The cached value of the '{@link #getForecast9H() <em>Forecast9 H</em>}' reference.
+	 * The cached value of the '{@link #getForecast9H() <em>Forecast9 H</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getForecast9H()
@@ -94,7 +95,7 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	protected WeatherService forecast9H;
 
 	/**
-	 * The cached value of the '{@link #getForecast12H() <em>Forecast12 H</em>}' reference.
+	 * The cached value of the '{@link #getForecast12H() <em>Forecast12 H</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getForecast12H()
@@ -104,7 +105,7 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	protected WeatherService forecast12H;
 
 	/**
-	 * The cached value of the '{@link #getForecast15H() <em>Forecast15 H</em>}' reference.
+	 * The cached value of the '{@link #getForecast15H() <em>Forecast15 H</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getForecast15H()
@@ -114,7 +115,7 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	protected WeatherService forecast15H;
 
 	/**
-	 * The cached value of the '{@link #getForecast18H() <em>Forecast18 H</em>}' reference.
+	 * The cached value of the '{@link #getForecast18H() <em>Forecast18 H</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getForecast18H()
@@ -124,7 +125,7 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	protected WeatherService forecast18H;
 
 	/**
-	 * The cached value of the '{@link #getForecast21H() <em>Forecast21 H</em>}' reference.
+	 * The cached value of the '{@link #getForecast21H() <em>Forecast21 H</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getForecast21H()
@@ -134,7 +135,7 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	protected WeatherService forecast21H;
 
 	/**
-	 * The cached value of the '{@link #getForecast24H() <em>Forecast24 H</em>}' reference.
+	 * The cached value of the '{@link #getForecast24H() <em>Forecast24 H</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getForecast24H()
@@ -144,7 +145,7 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	protected WeatherService forecast24H;
 
 	/**
-	 * The cached value of the '{@link #getForecast27H() <em>Forecast27 H</em>}' reference.
+	 * The cached value of the '{@link #getForecast27H() <em>Forecast27 H</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getForecast27H()
@@ -154,7 +155,7 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	protected WeatherService forecast27H;
 
 	/**
-	 * The cached value of the '{@link #getForecast30H() <em>Forecast30 H</em>}' reference.
+	 * The cached value of the '{@link #getForecast30H() <em>Forecast30 H</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getForecast30H()
@@ -164,7 +165,7 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	protected WeatherService forecast30H;
 
 	/**
-	 * The cached value of the '{@link #getForecast33H() <em>Forecast33 H</em>}' reference.
+	 * The cached value of the '{@link #getForecast33H() <em>Forecast33 H</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getForecast33H()
@@ -174,7 +175,7 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	protected WeatherService forecast33H;
 
 	/**
-	 * The cached value of the '{@link #getForecast36H() <em>Forecast36 H</em>}' reference.
+	 * The cached value of the '{@link #getForecast36H() <em>Forecast36 H</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getForecast36H()
@@ -184,7 +185,7 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	protected WeatherService forecast36H;
 
 	/**
-	 * The cached value of the '{@link #getForecast39H() <em>Forecast39 H</em>}' reference.
+	 * The cached value of the '{@link #getForecast39H() <em>Forecast39 H</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getForecast39H()
@@ -194,7 +195,7 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	protected WeatherService forecast39H;
 
 	/**
-	 * The cached value of the '{@link #getForecast42H() <em>Forecast42 H</em>}' reference.
+	 * The cached value of the '{@link #getForecast42H() <em>Forecast42 H</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getForecast42H()
@@ -204,7 +205,7 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	protected WeatherService forecast42H;
 
 	/**
-	 * The cached value of the '{@link #getForecast45H() <em>Forecast45 H</em>}' reference.
+	 * The cached value of the '{@link #getForecast45H() <em>Forecast45 H</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getForecast45H()
@@ -214,7 +215,7 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	protected WeatherService forecast45H;
 
 	/**
-	 * The cached value of the '{@link #getForecast48H() <em>Forecast48 H</em>}' reference.
+	 * The cached value of the '{@link #getForecast48H() <em>Forecast48 H</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getForecast48H()
@@ -224,7 +225,7 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	protected WeatherService forecast48H;
 
 	/**
-	 * The cached value of the '{@link #getForecast51H() <em>Forecast51 H</em>}' reference.
+	 * The cached value of the '{@link #getForecast51H() <em>Forecast51 H</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getForecast51H()
@@ -234,7 +235,7 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	protected WeatherService forecast51H;
 
 	/**
-	 * The cached value of the '{@link #getForecast54H() <em>Forecast54 H</em>}' reference.
+	 * The cached value of the '{@link #getForecast54H() <em>Forecast54 H</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getForecast54H()
@@ -244,7 +245,7 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	protected WeatherService forecast54H;
 
 	/**
-	 * The cached value of the '{@link #getForecast57H() <em>Forecast57 H</em>}' reference.
+	 * The cached value of the '{@link #getForecast57H() <em>Forecast57 H</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getForecast57H()
@@ -254,7 +255,7 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	protected WeatherService forecast57H;
 
 	/**
-	 * The cached value of the '{@link #getForecast60H() <em>Forecast60 H</em>}' reference.
+	 * The cached value of the '{@link #getForecast60H() <em>Forecast60 H</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getForecast60H()
@@ -264,7 +265,7 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	protected WeatherService forecast60H;
 
 	/**
-	 * The cached value of the '{@link #getForecast63H() <em>Forecast63 H</em>}' reference.
+	 * The cached value of the '{@link #getForecast63H() <em>Forecast63 H</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getForecast63H()
@@ -274,7 +275,7 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	protected WeatherService forecast63H;
 
 	/**
-	 * The cached value of the '{@link #getForecast66H() <em>Forecast66 H</em>}' reference.
+	 * The cached value of the '{@link #getForecast66H() <em>Forecast66 H</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getForecast66H()
@@ -284,7 +285,7 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	protected WeatherService forecast66H;
 
 	/**
-	 * The cached value of the '{@link #getForecast69H() <em>Forecast69 H</em>}' reference.
+	 * The cached value of the '{@link #getForecast69H() <em>Forecast69 H</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getForecast69H()
@@ -294,7 +295,7 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	protected WeatherService forecast69H;
 
 	/**
-	 * The cached value of the '{@link #getForecast72H() <em>Forecast72 H</em>}' reference.
+	 * The cached value of the '{@link #getForecast72H() <em>Forecast72 H</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getForecast72H()
@@ -329,14 +330,6 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public WeatherService getCurrentWeather() {
-		if (currentWeather != null && currentWeather.eIsProxy()) {
-			InternalEObject oldCurrentWeather = (InternalEObject)currentWeather;
-			currentWeather = (WeatherService)eResolveProxy(oldCurrentWeather);
-			if (currentWeather != oldCurrentWeather) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WeatherPackage.WEATHER_PROVIDER__CURRENT_WEATHER, oldCurrentWeather, currentWeather));
-			}
-		}
 		return currentWeather;
 	}
 
@@ -345,8 +338,14 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WeatherService basicGetCurrentWeather() {
-		return currentWeather;
+	public NotificationChain basicSetCurrentWeather(WeatherService newCurrentWeather, NotificationChain msgs) {
+		WeatherService oldCurrentWeather = currentWeather;
+		currentWeather = newCurrentWeather;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__CURRENT_WEATHER, oldCurrentWeather, newCurrentWeather);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -356,10 +355,17 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public void setCurrentWeather(WeatherService newCurrentWeather) {
-		WeatherService oldCurrentWeather = currentWeather;
-		currentWeather = newCurrentWeather;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__CURRENT_WEATHER, oldCurrentWeather, currentWeather));
+		if (newCurrentWeather != currentWeather) {
+			NotificationChain msgs = null;
+			if (currentWeather != null)
+				msgs = ((InternalEObject)currentWeather).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__CURRENT_WEATHER, null, msgs);
+			if (newCurrentWeather != null)
+				msgs = ((InternalEObject)newCurrentWeather).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__CURRENT_WEATHER, null, msgs);
+			msgs = basicSetCurrentWeather(newCurrentWeather, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__CURRENT_WEATHER, newCurrentWeather, newCurrentWeather));
 	}
 
 	/**
@@ -369,14 +375,6 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public WeatherService getForecast3H() {
-		if (forecast3H != null && forecast3H.eIsProxy()) {
-			InternalEObject oldForecast3H = (InternalEObject)forecast3H;
-			forecast3H = (WeatherService)eResolveProxy(oldForecast3H);
-			if (forecast3H != oldForecast3H) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WeatherPackage.WEATHER_PROVIDER__FORECAST3_H, oldForecast3H, forecast3H));
-			}
-		}
 		return forecast3H;
 	}
 
@@ -385,8 +383,14 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WeatherService basicGetForecast3H() {
-		return forecast3H;
+	public NotificationChain basicSetForecast3H(WeatherService newForecast3H, NotificationChain msgs) {
+		WeatherService oldForecast3H = forecast3H;
+		forecast3H = newForecast3H;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST3_H, oldForecast3H, newForecast3H);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -396,10 +400,17 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public void setForecast3H(WeatherService newForecast3H) {
-		WeatherService oldForecast3H = forecast3H;
-		forecast3H = newForecast3H;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST3_H, oldForecast3H, forecast3H));
+		if (newForecast3H != forecast3H) {
+			NotificationChain msgs = null;
+			if (forecast3H != null)
+				msgs = ((InternalEObject)forecast3H).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST3_H, null, msgs);
+			if (newForecast3H != null)
+				msgs = ((InternalEObject)newForecast3H).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST3_H, null, msgs);
+			msgs = basicSetForecast3H(newForecast3H, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST3_H, newForecast3H, newForecast3H));
 	}
 
 	/**
@@ -409,14 +420,6 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public WeatherService getForecast6H() {
-		if (forecast6H != null && forecast6H.eIsProxy()) {
-			InternalEObject oldForecast6H = (InternalEObject)forecast6H;
-			forecast6H = (WeatherService)eResolveProxy(oldForecast6H);
-			if (forecast6H != oldForecast6H) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WeatherPackage.WEATHER_PROVIDER__FORECAST6_H, oldForecast6H, forecast6H));
-			}
-		}
 		return forecast6H;
 	}
 
@@ -425,8 +428,14 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WeatherService basicGetForecast6H() {
-		return forecast6H;
+	public NotificationChain basicSetForecast6H(WeatherService newForecast6H, NotificationChain msgs) {
+		WeatherService oldForecast6H = forecast6H;
+		forecast6H = newForecast6H;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST6_H, oldForecast6H, newForecast6H);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -436,10 +445,17 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public void setForecast6H(WeatherService newForecast6H) {
-		WeatherService oldForecast6H = forecast6H;
-		forecast6H = newForecast6H;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST6_H, oldForecast6H, forecast6H));
+		if (newForecast6H != forecast6H) {
+			NotificationChain msgs = null;
+			if (forecast6H != null)
+				msgs = ((InternalEObject)forecast6H).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST6_H, null, msgs);
+			if (newForecast6H != null)
+				msgs = ((InternalEObject)newForecast6H).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST6_H, null, msgs);
+			msgs = basicSetForecast6H(newForecast6H, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST6_H, newForecast6H, newForecast6H));
 	}
 
 	/**
@@ -449,14 +465,6 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public WeatherService getForecast9H() {
-		if (forecast9H != null && forecast9H.eIsProxy()) {
-			InternalEObject oldForecast9H = (InternalEObject)forecast9H;
-			forecast9H = (WeatherService)eResolveProxy(oldForecast9H);
-			if (forecast9H != oldForecast9H) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WeatherPackage.WEATHER_PROVIDER__FORECAST9_H, oldForecast9H, forecast9H));
-			}
-		}
 		return forecast9H;
 	}
 
@@ -465,8 +473,14 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WeatherService basicGetForecast9H() {
-		return forecast9H;
+	public NotificationChain basicSetForecast9H(WeatherService newForecast9H, NotificationChain msgs) {
+		WeatherService oldForecast9H = forecast9H;
+		forecast9H = newForecast9H;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST9_H, oldForecast9H, newForecast9H);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -476,10 +490,17 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public void setForecast9H(WeatherService newForecast9H) {
-		WeatherService oldForecast9H = forecast9H;
-		forecast9H = newForecast9H;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST9_H, oldForecast9H, forecast9H));
+		if (newForecast9H != forecast9H) {
+			NotificationChain msgs = null;
+			if (forecast9H != null)
+				msgs = ((InternalEObject)forecast9H).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST9_H, null, msgs);
+			if (newForecast9H != null)
+				msgs = ((InternalEObject)newForecast9H).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST9_H, null, msgs);
+			msgs = basicSetForecast9H(newForecast9H, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST9_H, newForecast9H, newForecast9H));
 	}
 
 	/**
@@ -489,14 +510,6 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public WeatherService getForecast12H() {
-		if (forecast12H != null && forecast12H.eIsProxy()) {
-			InternalEObject oldForecast12H = (InternalEObject)forecast12H;
-			forecast12H = (WeatherService)eResolveProxy(oldForecast12H);
-			if (forecast12H != oldForecast12H) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WeatherPackage.WEATHER_PROVIDER__FORECAST12_H, oldForecast12H, forecast12H));
-			}
-		}
 		return forecast12H;
 	}
 
@@ -505,8 +518,14 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WeatherService basicGetForecast12H() {
-		return forecast12H;
+	public NotificationChain basicSetForecast12H(WeatherService newForecast12H, NotificationChain msgs) {
+		WeatherService oldForecast12H = forecast12H;
+		forecast12H = newForecast12H;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST12_H, oldForecast12H, newForecast12H);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -516,10 +535,17 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public void setForecast12H(WeatherService newForecast12H) {
-		WeatherService oldForecast12H = forecast12H;
-		forecast12H = newForecast12H;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST12_H, oldForecast12H, forecast12H));
+		if (newForecast12H != forecast12H) {
+			NotificationChain msgs = null;
+			if (forecast12H != null)
+				msgs = ((InternalEObject)forecast12H).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST12_H, null, msgs);
+			if (newForecast12H != null)
+				msgs = ((InternalEObject)newForecast12H).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST12_H, null, msgs);
+			msgs = basicSetForecast12H(newForecast12H, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST12_H, newForecast12H, newForecast12H));
 	}
 
 	/**
@@ -529,14 +555,6 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public WeatherService getForecast15H() {
-		if (forecast15H != null && forecast15H.eIsProxy()) {
-			InternalEObject oldForecast15H = (InternalEObject)forecast15H;
-			forecast15H = (WeatherService)eResolveProxy(oldForecast15H);
-			if (forecast15H != oldForecast15H) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WeatherPackage.WEATHER_PROVIDER__FORECAST15_H, oldForecast15H, forecast15H));
-			}
-		}
 		return forecast15H;
 	}
 
@@ -545,8 +563,14 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WeatherService basicGetForecast15H() {
-		return forecast15H;
+	public NotificationChain basicSetForecast15H(WeatherService newForecast15H, NotificationChain msgs) {
+		WeatherService oldForecast15H = forecast15H;
+		forecast15H = newForecast15H;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST15_H, oldForecast15H, newForecast15H);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -556,10 +580,17 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public void setForecast15H(WeatherService newForecast15H) {
-		WeatherService oldForecast15H = forecast15H;
-		forecast15H = newForecast15H;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST15_H, oldForecast15H, forecast15H));
+		if (newForecast15H != forecast15H) {
+			NotificationChain msgs = null;
+			if (forecast15H != null)
+				msgs = ((InternalEObject)forecast15H).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST15_H, null, msgs);
+			if (newForecast15H != null)
+				msgs = ((InternalEObject)newForecast15H).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST15_H, null, msgs);
+			msgs = basicSetForecast15H(newForecast15H, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST15_H, newForecast15H, newForecast15H));
 	}
 
 	/**
@@ -569,14 +600,6 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public WeatherService getForecast18H() {
-		if (forecast18H != null && forecast18H.eIsProxy()) {
-			InternalEObject oldForecast18H = (InternalEObject)forecast18H;
-			forecast18H = (WeatherService)eResolveProxy(oldForecast18H);
-			if (forecast18H != oldForecast18H) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WeatherPackage.WEATHER_PROVIDER__FORECAST18_H, oldForecast18H, forecast18H));
-			}
-		}
 		return forecast18H;
 	}
 
@@ -585,8 +608,14 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WeatherService basicGetForecast18H() {
-		return forecast18H;
+	public NotificationChain basicSetForecast18H(WeatherService newForecast18H, NotificationChain msgs) {
+		WeatherService oldForecast18H = forecast18H;
+		forecast18H = newForecast18H;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST18_H, oldForecast18H, newForecast18H);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -596,10 +625,17 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public void setForecast18H(WeatherService newForecast18H) {
-		WeatherService oldForecast18H = forecast18H;
-		forecast18H = newForecast18H;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST18_H, oldForecast18H, forecast18H));
+		if (newForecast18H != forecast18H) {
+			NotificationChain msgs = null;
+			if (forecast18H != null)
+				msgs = ((InternalEObject)forecast18H).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST18_H, null, msgs);
+			if (newForecast18H != null)
+				msgs = ((InternalEObject)newForecast18H).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST18_H, null, msgs);
+			msgs = basicSetForecast18H(newForecast18H, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST18_H, newForecast18H, newForecast18H));
 	}
 
 	/**
@@ -609,14 +645,6 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public WeatherService getForecast21H() {
-		if (forecast21H != null && forecast21H.eIsProxy()) {
-			InternalEObject oldForecast21H = (InternalEObject)forecast21H;
-			forecast21H = (WeatherService)eResolveProxy(oldForecast21H);
-			if (forecast21H != oldForecast21H) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WeatherPackage.WEATHER_PROVIDER__FORECAST21_H, oldForecast21H, forecast21H));
-			}
-		}
 		return forecast21H;
 	}
 
@@ -625,8 +653,14 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WeatherService basicGetForecast21H() {
-		return forecast21H;
+	public NotificationChain basicSetForecast21H(WeatherService newForecast21H, NotificationChain msgs) {
+		WeatherService oldForecast21H = forecast21H;
+		forecast21H = newForecast21H;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST21_H, oldForecast21H, newForecast21H);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -636,10 +670,17 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public void setForecast21H(WeatherService newForecast21H) {
-		WeatherService oldForecast21H = forecast21H;
-		forecast21H = newForecast21H;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST21_H, oldForecast21H, forecast21H));
+		if (newForecast21H != forecast21H) {
+			NotificationChain msgs = null;
+			if (forecast21H != null)
+				msgs = ((InternalEObject)forecast21H).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST21_H, null, msgs);
+			if (newForecast21H != null)
+				msgs = ((InternalEObject)newForecast21H).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST21_H, null, msgs);
+			msgs = basicSetForecast21H(newForecast21H, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST21_H, newForecast21H, newForecast21H));
 	}
 
 	/**
@@ -649,14 +690,6 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public WeatherService getForecast24H() {
-		if (forecast24H != null && forecast24H.eIsProxy()) {
-			InternalEObject oldForecast24H = (InternalEObject)forecast24H;
-			forecast24H = (WeatherService)eResolveProxy(oldForecast24H);
-			if (forecast24H != oldForecast24H) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WeatherPackage.WEATHER_PROVIDER__FORECAST24_H, oldForecast24H, forecast24H));
-			}
-		}
 		return forecast24H;
 	}
 
@@ -665,8 +698,14 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WeatherService basicGetForecast24H() {
-		return forecast24H;
+	public NotificationChain basicSetForecast24H(WeatherService newForecast24H, NotificationChain msgs) {
+		WeatherService oldForecast24H = forecast24H;
+		forecast24H = newForecast24H;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST24_H, oldForecast24H, newForecast24H);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -676,10 +715,17 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public void setForecast24H(WeatherService newForecast24H) {
-		WeatherService oldForecast24H = forecast24H;
-		forecast24H = newForecast24H;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST24_H, oldForecast24H, forecast24H));
+		if (newForecast24H != forecast24H) {
+			NotificationChain msgs = null;
+			if (forecast24H != null)
+				msgs = ((InternalEObject)forecast24H).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST24_H, null, msgs);
+			if (newForecast24H != null)
+				msgs = ((InternalEObject)newForecast24H).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST24_H, null, msgs);
+			msgs = basicSetForecast24H(newForecast24H, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST24_H, newForecast24H, newForecast24H));
 	}
 
 	/**
@@ -689,14 +735,6 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public WeatherService getForecast27H() {
-		if (forecast27H != null && forecast27H.eIsProxy()) {
-			InternalEObject oldForecast27H = (InternalEObject)forecast27H;
-			forecast27H = (WeatherService)eResolveProxy(oldForecast27H);
-			if (forecast27H != oldForecast27H) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WeatherPackage.WEATHER_PROVIDER__FORECAST27_H, oldForecast27H, forecast27H));
-			}
-		}
 		return forecast27H;
 	}
 
@@ -705,8 +743,14 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WeatherService basicGetForecast27H() {
-		return forecast27H;
+	public NotificationChain basicSetForecast27H(WeatherService newForecast27H, NotificationChain msgs) {
+		WeatherService oldForecast27H = forecast27H;
+		forecast27H = newForecast27H;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST27_H, oldForecast27H, newForecast27H);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -716,10 +760,17 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public void setForecast27H(WeatherService newForecast27H) {
-		WeatherService oldForecast27H = forecast27H;
-		forecast27H = newForecast27H;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST27_H, oldForecast27H, forecast27H));
+		if (newForecast27H != forecast27H) {
+			NotificationChain msgs = null;
+			if (forecast27H != null)
+				msgs = ((InternalEObject)forecast27H).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST27_H, null, msgs);
+			if (newForecast27H != null)
+				msgs = ((InternalEObject)newForecast27H).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST27_H, null, msgs);
+			msgs = basicSetForecast27H(newForecast27H, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST27_H, newForecast27H, newForecast27H));
 	}
 
 	/**
@@ -729,14 +780,6 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public WeatherService getForecast30H() {
-		if (forecast30H != null && forecast30H.eIsProxy()) {
-			InternalEObject oldForecast30H = (InternalEObject)forecast30H;
-			forecast30H = (WeatherService)eResolveProxy(oldForecast30H);
-			if (forecast30H != oldForecast30H) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WeatherPackage.WEATHER_PROVIDER__FORECAST30_H, oldForecast30H, forecast30H));
-			}
-		}
 		return forecast30H;
 	}
 
@@ -745,8 +788,14 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WeatherService basicGetForecast30H() {
-		return forecast30H;
+	public NotificationChain basicSetForecast30H(WeatherService newForecast30H, NotificationChain msgs) {
+		WeatherService oldForecast30H = forecast30H;
+		forecast30H = newForecast30H;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST30_H, oldForecast30H, newForecast30H);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -756,10 +805,17 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public void setForecast30H(WeatherService newForecast30H) {
-		WeatherService oldForecast30H = forecast30H;
-		forecast30H = newForecast30H;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST30_H, oldForecast30H, forecast30H));
+		if (newForecast30H != forecast30H) {
+			NotificationChain msgs = null;
+			if (forecast30H != null)
+				msgs = ((InternalEObject)forecast30H).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST30_H, null, msgs);
+			if (newForecast30H != null)
+				msgs = ((InternalEObject)newForecast30H).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST30_H, null, msgs);
+			msgs = basicSetForecast30H(newForecast30H, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST30_H, newForecast30H, newForecast30H));
 	}
 
 	/**
@@ -769,14 +825,6 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public WeatherService getForecast33H() {
-		if (forecast33H != null && forecast33H.eIsProxy()) {
-			InternalEObject oldForecast33H = (InternalEObject)forecast33H;
-			forecast33H = (WeatherService)eResolveProxy(oldForecast33H);
-			if (forecast33H != oldForecast33H) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WeatherPackage.WEATHER_PROVIDER__FORECAST33_H, oldForecast33H, forecast33H));
-			}
-		}
 		return forecast33H;
 	}
 
@@ -785,8 +833,14 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WeatherService basicGetForecast33H() {
-		return forecast33H;
+	public NotificationChain basicSetForecast33H(WeatherService newForecast33H, NotificationChain msgs) {
+		WeatherService oldForecast33H = forecast33H;
+		forecast33H = newForecast33H;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST33_H, oldForecast33H, newForecast33H);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -796,10 +850,17 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public void setForecast33H(WeatherService newForecast33H) {
-		WeatherService oldForecast33H = forecast33H;
-		forecast33H = newForecast33H;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST33_H, oldForecast33H, forecast33H));
+		if (newForecast33H != forecast33H) {
+			NotificationChain msgs = null;
+			if (forecast33H != null)
+				msgs = ((InternalEObject)forecast33H).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST33_H, null, msgs);
+			if (newForecast33H != null)
+				msgs = ((InternalEObject)newForecast33H).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST33_H, null, msgs);
+			msgs = basicSetForecast33H(newForecast33H, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST33_H, newForecast33H, newForecast33H));
 	}
 
 	/**
@@ -809,14 +870,6 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public WeatherService getForecast36H() {
-		if (forecast36H != null && forecast36H.eIsProxy()) {
-			InternalEObject oldForecast36H = (InternalEObject)forecast36H;
-			forecast36H = (WeatherService)eResolveProxy(oldForecast36H);
-			if (forecast36H != oldForecast36H) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WeatherPackage.WEATHER_PROVIDER__FORECAST36_H, oldForecast36H, forecast36H));
-			}
-		}
 		return forecast36H;
 	}
 
@@ -825,8 +878,14 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WeatherService basicGetForecast36H() {
-		return forecast36H;
+	public NotificationChain basicSetForecast36H(WeatherService newForecast36H, NotificationChain msgs) {
+		WeatherService oldForecast36H = forecast36H;
+		forecast36H = newForecast36H;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST36_H, oldForecast36H, newForecast36H);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -836,10 +895,17 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public void setForecast36H(WeatherService newForecast36H) {
-		WeatherService oldForecast36H = forecast36H;
-		forecast36H = newForecast36H;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST36_H, oldForecast36H, forecast36H));
+		if (newForecast36H != forecast36H) {
+			NotificationChain msgs = null;
+			if (forecast36H != null)
+				msgs = ((InternalEObject)forecast36H).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST36_H, null, msgs);
+			if (newForecast36H != null)
+				msgs = ((InternalEObject)newForecast36H).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST36_H, null, msgs);
+			msgs = basicSetForecast36H(newForecast36H, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST36_H, newForecast36H, newForecast36H));
 	}
 
 	/**
@@ -849,14 +915,6 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public WeatherService getForecast39H() {
-		if (forecast39H != null && forecast39H.eIsProxy()) {
-			InternalEObject oldForecast39H = (InternalEObject)forecast39H;
-			forecast39H = (WeatherService)eResolveProxy(oldForecast39H);
-			if (forecast39H != oldForecast39H) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WeatherPackage.WEATHER_PROVIDER__FORECAST39_H, oldForecast39H, forecast39H));
-			}
-		}
 		return forecast39H;
 	}
 
@@ -865,8 +923,14 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WeatherService basicGetForecast39H() {
-		return forecast39H;
+	public NotificationChain basicSetForecast39H(WeatherService newForecast39H, NotificationChain msgs) {
+		WeatherService oldForecast39H = forecast39H;
+		forecast39H = newForecast39H;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST39_H, oldForecast39H, newForecast39H);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -876,10 +940,17 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public void setForecast39H(WeatherService newForecast39H) {
-		WeatherService oldForecast39H = forecast39H;
-		forecast39H = newForecast39H;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST39_H, oldForecast39H, forecast39H));
+		if (newForecast39H != forecast39H) {
+			NotificationChain msgs = null;
+			if (forecast39H != null)
+				msgs = ((InternalEObject)forecast39H).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST39_H, null, msgs);
+			if (newForecast39H != null)
+				msgs = ((InternalEObject)newForecast39H).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST39_H, null, msgs);
+			msgs = basicSetForecast39H(newForecast39H, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST39_H, newForecast39H, newForecast39H));
 	}
 
 	/**
@@ -889,14 +960,6 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public WeatherService getForecast42H() {
-		if (forecast42H != null && forecast42H.eIsProxy()) {
-			InternalEObject oldForecast42H = (InternalEObject)forecast42H;
-			forecast42H = (WeatherService)eResolveProxy(oldForecast42H);
-			if (forecast42H != oldForecast42H) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WeatherPackage.WEATHER_PROVIDER__FORECAST42_H, oldForecast42H, forecast42H));
-			}
-		}
 		return forecast42H;
 	}
 
@@ -905,8 +968,14 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WeatherService basicGetForecast42H() {
-		return forecast42H;
+	public NotificationChain basicSetForecast42H(WeatherService newForecast42H, NotificationChain msgs) {
+		WeatherService oldForecast42H = forecast42H;
+		forecast42H = newForecast42H;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST42_H, oldForecast42H, newForecast42H);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -916,10 +985,17 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public void setForecast42H(WeatherService newForecast42H) {
-		WeatherService oldForecast42H = forecast42H;
-		forecast42H = newForecast42H;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST42_H, oldForecast42H, forecast42H));
+		if (newForecast42H != forecast42H) {
+			NotificationChain msgs = null;
+			if (forecast42H != null)
+				msgs = ((InternalEObject)forecast42H).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST42_H, null, msgs);
+			if (newForecast42H != null)
+				msgs = ((InternalEObject)newForecast42H).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST42_H, null, msgs);
+			msgs = basicSetForecast42H(newForecast42H, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST42_H, newForecast42H, newForecast42H));
 	}
 
 	/**
@@ -929,14 +1005,6 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public WeatherService getForecast45H() {
-		if (forecast45H != null && forecast45H.eIsProxy()) {
-			InternalEObject oldForecast45H = (InternalEObject)forecast45H;
-			forecast45H = (WeatherService)eResolveProxy(oldForecast45H);
-			if (forecast45H != oldForecast45H) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WeatherPackage.WEATHER_PROVIDER__FORECAST45_H, oldForecast45H, forecast45H));
-			}
-		}
 		return forecast45H;
 	}
 
@@ -945,8 +1013,14 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WeatherService basicGetForecast45H() {
-		return forecast45H;
+	public NotificationChain basicSetForecast45H(WeatherService newForecast45H, NotificationChain msgs) {
+		WeatherService oldForecast45H = forecast45H;
+		forecast45H = newForecast45H;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST45_H, oldForecast45H, newForecast45H);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -956,10 +1030,17 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public void setForecast45H(WeatherService newForecast45H) {
-		WeatherService oldForecast45H = forecast45H;
-		forecast45H = newForecast45H;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST45_H, oldForecast45H, forecast45H));
+		if (newForecast45H != forecast45H) {
+			NotificationChain msgs = null;
+			if (forecast45H != null)
+				msgs = ((InternalEObject)forecast45H).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST45_H, null, msgs);
+			if (newForecast45H != null)
+				msgs = ((InternalEObject)newForecast45H).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST45_H, null, msgs);
+			msgs = basicSetForecast45H(newForecast45H, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST45_H, newForecast45H, newForecast45H));
 	}
 
 	/**
@@ -969,14 +1050,6 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public WeatherService getForecast48H() {
-		if (forecast48H != null && forecast48H.eIsProxy()) {
-			InternalEObject oldForecast48H = (InternalEObject)forecast48H;
-			forecast48H = (WeatherService)eResolveProxy(oldForecast48H);
-			if (forecast48H != oldForecast48H) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WeatherPackage.WEATHER_PROVIDER__FORECAST48_H, oldForecast48H, forecast48H));
-			}
-		}
 		return forecast48H;
 	}
 
@@ -985,8 +1058,14 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WeatherService basicGetForecast48H() {
-		return forecast48H;
+	public NotificationChain basicSetForecast48H(WeatherService newForecast48H, NotificationChain msgs) {
+		WeatherService oldForecast48H = forecast48H;
+		forecast48H = newForecast48H;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST48_H, oldForecast48H, newForecast48H);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -996,10 +1075,17 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public void setForecast48H(WeatherService newForecast48H) {
-		WeatherService oldForecast48H = forecast48H;
-		forecast48H = newForecast48H;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST48_H, oldForecast48H, forecast48H));
+		if (newForecast48H != forecast48H) {
+			NotificationChain msgs = null;
+			if (forecast48H != null)
+				msgs = ((InternalEObject)forecast48H).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST48_H, null, msgs);
+			if (newForecast48H != null)
+				msgs = ((InternalEObject)newForecast48H).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST48_H, null, msgs);
+			msgs = basicSetForecast48H(newForecast48H, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST48_H, newForecast48H, newForecast48H));
 	}
 
 	/**
@@ -1009,14 +1095,6 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public WeatherService getForecast51H() {
-		if (forecast51H != null && forecast51H.eIsProxy()) {
-			InternalEObject oldForecast51H = (InternalEObject)forecast51H;
-			forecast51H = (WeatherService)eResolveProxy(oldForecast51H);
-			if (forecast51H != oldForecast51H) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WeatherPackage.WEATHER_PROVIDER__FORECAST51_H, oldForecast51H, forecast51H));
-			}
-		}
 		return forecast51H;
 	}
 
@@ -1025,8 +1103,14 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WeatherService basicGetForecast51H() {
-		return forecast51H;
+	public NotificationChain basicSetForecast51H(WeatherService newForecast51H, NotificationChain msgs) {
+		WeatherService oldForecast51H = forecast51H;
+		forecast51H = newForecast51H;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST51_H, oldForecast51H, newForecast51H);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -1036,10 +1120,17 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public void setForecast51H(WeatherService newForecast51H) {
-		WeatherService oldForecast51H = forecast51H;
-		forecast51H = newForecast51H;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST51_H, oldForecast51H, forecast51H));
+		if (newForecast51H != forecast51H) {
+			NotificationChain msgs = null;
+			if (forecast51H != null)
+				msgs = ((InternalEObject)forecast51H).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST51_H, null, msgs);
+			if (newForecast51H != null)
+				msgs = ((InternalEObject)newForecast51H).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST51_H, null, msgs);
+			msgs = basicSetForecast51H(newForecast51H, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST51_H, newForecast51H, newForecast51H));
 	}
 
 	/**
@@ -1049,14 +1140,6 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public WeatherService getForecast54H() {
-		if (forecast54H != null && forecast54H.eIsProxy()) {
-			InternalEObject oldForecast54H = (InternalEObject)forecast54H;
-			forecast54H = (WeatherService)eResolveProxy(oldForecast54H);
-			if (forecast54H != oldForecast54H) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WeatherPackage.WEATHER_PROVIDER__FORECAST54_H, oldForecast54H, forecast54H));
-			}
-		}
 		return forecast54H;
 	}
 
@@ -1065,8 +1148,14 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WeatherService basicGetForecast54H() {
-		return forecast54H;
+	public NotificationChain basicSetForecast54H(WeatherService newForecast54H, NotificationChain msgs) {
+		WeatherService oldForecast54H = forecast54H;
+		forecast54H = newForecast54H;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST54_H, oldForecast54H, newForecast54H);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -1076,10 +1165,17 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public void setForecast54H(WeatherService newForecast54H) {
-		WeatherService oldForecast54H = forecast54H;
-		forecast54H = newForecast54H;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST54_H, oldForecast54H, forecast54H));
+		if (newForecast54H != forecast54H) {
+			NotificationChain msgs = null;
+			if (forecast54H != null)
+				msgs = ((InternalEObject)forecast54H).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST54_H, null, msgs);
+			if (newForecast54H != null)
+				msgs = ((InternalEObject)newForecast54H).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST54_H, null, msgs);
+			msgs = basicSetForecast54H(newForecast54H, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST54_H, newForecast54H, newForecast54H));
 	}
 
 	/**
@@ -1089,14 +1185,6 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public WeatherService getForecast57H() {
-		if (forecast57H != null && forecast57H.eIsProxy()) {
-			InternalEObject oldForecast57H = (InternalEObject)forecast57H;
-			forecast57H = (WeatherService)eResolveProxy(oldForecast57H);
-			if (forecast57H != oldForecast57H) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WeatherPackage.WEATHER_PROVIDER__FORECAST57_H, oldForecast57H, forecast57H));
-			}
-		}
 		return forecast57H;
 	}
 
@@ -1105,8 +1193,14 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WeatherService basicGetForecast57H() {
-		return forecast57H;
+	public NotificationChain basicSetForecast57H(WeatherService newForecast57H, NotificationChain msgs) {
+		WeatherService oldForecast57H = forecast57H;
+		forecast57H = newForecast57H;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST57_H, oldForecast57H, newForecast57H);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -1116,10 +1210,17 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public void setForecast57H(WeatherService newForecast57H) {
-		WeatherService oldForecast57H = forecast57H;
-		forecast57H = newForecast57H;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST57_H, oldForecast57H, forecast57H));
+		if (newForecast57H != forecast57H) {
+			NotificationChain msgs = null;
+			if (forecast57H != null)
+				msgs = ((InternalEObject)forecast57H).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST57_H, null, msgs);
+			if (newForecast57H != null)
+				msgs = ((InternalEObject)newForecast57H).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST57_H, null, msgs);
+			msgs = basicSetForecast57H(newForecast57H, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST57_H, newForecast57H, newForecast57H));
 	}
 
 	/**
@@ -1129,14 +1230,6 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public WeatherService getForecast60H() {
-		if (forecast60H != null && forecast60H.eIsProxy()) {
-			InternalEObject oldForecast60H = (InternalEObject)forecast60H;
-			forecast60H = (WeatherService)eResolveProxy(oldForecast60H);
-			if (forecast60H != oldForecast60H) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WeatherPackage.WEATHER_PROVIDER__FORECAST60_H, oldForecast60H, forecast60H));
-			}
-		}
 		return forecast60H;
 	}
 
@@ -1145,8 +1238,14 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WeatherService basicGetForecast60H() {
-		return forecast60H;
+	public NotificationChain basicSetForecast60H(WeatherService newForecast60H, NotificationChain msgs) {
+		WeatherService oldForecast60H = forecast60H;
+		forecast60H = newForecast60H;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST60_H, oldForecast60H, newForecast60H);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -1156,10 +1255,17 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public void setForecast60H(WeatherService newForecast60H) {
-		WeatherService oldForecast60H = forecast60H;
-		forecast60H = newForecast60H;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST60_H, oldForecast60H, forecast60H));
+		if (newForecast60H != forecast60H) {
+			NotificationChain msgs = null;
+			if (forecast60H != null)
+				msgs = ((InternalEObject)forecast60H).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST60_H, null, msgs);
+			if (newForecast60H != null)
+				msgs = ((InternalEObject)newForecast60H).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST60_H, null, msgs);
+			msgs = basicSetForecast60H(newForecast60H, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST60_H, newForecast60H, newForecast60H));
 	}
 
 	/**
@@ -1169,14 +1275,6 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public WeatherService getForecast63H() {
-		if (forecast63H != null && forecast63H.eIsProxy()) {
-			InternalEObject oldForecast63H = (InternalEObject)forecast63H;
-			forecast63H = (WeatherService)eResolveProxy(oldForecast63H);
-			if (forecast63H != oldForecast63H) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WeatherPackage.WEATHER_PROVIDER__FORECAST63_H, oldForecast63H, forecast63H));
-			}
-		}
 		return forecast63H;
 	}
 
@@ -1185,8 +1283,14 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WeatherService basicGetForecast63H() {
-		return forecast63H;
+	public NotificationChain basicSetForecast63H(WeatherService newForecast63H, NotificationChain msgs) {
+		WeatherService oldForecast63H = forecast63H;
+		forecast63H = newForecast63H;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST63_H, oldForecast63H, newForecast63H);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -1196,10 +1300,17 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public void setForecast63H(WeatherService newForecast63H) {
-		WeatherService oldForecast63H = forecast63H;
-		forecast63H = newForecast63H;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST63_H, oldForecast63H, forecast63H));
+		if (newForecast63H != forecast63H) {
+			NotificationChain msgs = null;
+			if (forecast63H != null)
+				msgs = ((InternalEObject)forecast63H).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST63_H, null, msgs);
+			if (newForecast63H != null)
+				msgs = ((InternalEObject)newForecast63H).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST63_H, null, msgs);
+			msgs = basicSetForecast63H(newForecast63H, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST63_H, newForecast63H, newForecast63H));
 	}
 
 	/**
@@ -1209,14 +1320,6 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public WeatherService getForecast66H() {
-		if (forecast66H != null && forecast66H.eIsProxy()) {
-			InternalEObject oldForecast66H = (InternalEObject)forecast66H;
-			forecast66H = (WeatherService)eResolveProxy(oldForecast66H);
-			if (forecast66H != oldForecast66H) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WeatherPackage.WEATHER_PROVIDER__FORECAST66_H, oldForecast66H, forecast66H));
-			}
-		}
 		return forecast66H;
 	}
 
@@ -1225,8 +1328,14 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WeatherService basicGetForecast66H() {
-		return forecast66H;
+	public NotificationChain basicSetForecast66H(WeatherService newForecast66H, NotificationChain msgs) {
+		WeatherService oldForecast66H = forecast66H;
+		forecast66H = newForecast66H;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST66_H, oldForecast66H, newForecast66H);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -1236,10 +1345,17 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public void setForecast66H(WeatherService newForecast66H) {
-		WeatherService oldForecast66H = forecast66H;
-		forecast66H = newForecast66H;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST66_H, oldForecast66H, forecast66H));
+		if (newForecast66H != forecast66H) {
+			NotificationChain msgs = null;
+			if (forecast66H != null)
+				msgs = ((InternalEObject)forecast66H).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST66_H, null, msgs);
+			if (newForecast66H != null)
+				msgs = ((InternalEObject)newForecast66H).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST66_H, null, msgs);
+			msgs = basicSetForecast66H(newForecast66H, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST66_H, newForecast66H, newForecast66H));
 	}
 
 	/**
@@ -1249,14 +1365,6 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public WeatherService getForecast69H() {
-		if (forecast69H != null && forecast69H.eIsProxy()) {
-			InternalEObject oldForecast69H = (InternalEObject)forecast69H;
-			forecast69H = (WeatherService)eResolveProxy(oldForecast69H);
-			if (forecast69H != oldForecast69H) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WeatherPackage.WEATHER_PROVIDER__FORECAST69_H, oldForecast69H, forecast69H));
-			}
-		}
 		return forecast69H;
 	}
 
@@ -1265,8 +1373,14 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WeatherService basicGetForecast69H() {
-		return forecast69H;
+	public NotificationChain basicSetForecast69H(WeatherService newForecast69H, NotificationChain msgs) {
+		WeatherService oldForecast69H = forecast69H;
+		forecast69H = newForecast69H;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST69_H, oldForecast69H, newForecast69H);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -1276,10 +1390,17 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public void setForecast69H(WeatherService newForecast69H) {
-		WeatherService oldForecast69H = forecast69H;
-		forecast69H = newForecast69H;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST69_H, oldForecast69H, forecast69H));
+		if (newForecast69H != forecast69H) {
+			NotificationChain msgs = null;
+			if (forecast69H != null)
+				msgs = ((InternalEObject)forecast69H).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST69_H, null, msgs);
+			if (newForecast69H != null)
+				msgs = ((InternalEObject)newForecast69H).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST69_H, null, msgs);
+			msgs = basicSetForecast69H(newForecast69H, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST69_H, newForecast69H, newForecast69H));
 	}
 
 	/**
@@ -1289,14 +1410,6 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public WeatherService getForecast72H() {
-		if (forecast72H != null && forecast72H.eIsProxy()) {
-			InternalEObject oldForecast72H = (InternalEObject)forecast72H;
-			forecast72H = (WeatherService)eResolveProxy(oldForecast72H);
-			if (forecast72H != oldForecast72H) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WeatherPackage.WEATHER_PROVIDER__FORECAST72_H, oldForecast72H, forecast72H));
-			}
-		}
 		return forecast72H;
 	}
 
@@ -1305,8 +1418,14 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WeatherService basicGetForecast72H() {
-		return forecast72H;
+	public NotificationChain basicSetForecast72H(WeatherService newForecast72H, NotificationChain msgs) {
+		WeatherService oldForecast72H = forecast72H;
+		forecast72H = newForecast72H;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST72_H, oldForecast72H, newForecast72H);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -1316,10 +1435,79 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	 */
 	@Override
 	public void setForecast72H(WeatherService newForecast72H) {
-		WeatherService oldForecast72H = forecast72H;
-		forecast72H = newForecast72H;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST72_H, oldForecast72H, forecast72H));
+		if (newForecast72H != forecast72H) {
+			NotificationChain msgs = null;
+			if (forecast72H != null)
+				msgs = ((InternalEObject)forecast72H).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST72_H, null, msgs);
+			if (newForecast72H != null)
+				msgs = ((InternalEObject)newForecast72H).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WeatherPackage.WEATHER_PROVIDER__FORECAST72_H, null, msgs);
+			msgs = basicSetForecast72H(newForecast72H, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_PROVIDER__FORECAST72_H, newForecast72H, newForecast72H));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case WeatherPackage.WEATHER_PROVIDER__CURRENT_WEATHER:
+				return basicSetCurrentWeather(null, msgs);
+			case WeatherPackage.WEATHER_PROVIDER__FORECAST3_H:
+				return basicSetForecast3H(null, msgs);
+			case WeatherPackage.WEATHER_PROVIDER__FORECAST6_H:
+				return basicSetForecast6H(null, msgs);
+			case WeatherPackage.WEATHER_PROVIDER__FORECAST9_H:
+				return basicSetForecast9H(null, msgs);
+			case WeatherPackage.WEATHER_PROVIDER__FORECAST12_H:
+				return basicSetForecast12H(null, msgs);
+			case WeatherPackage.WEATHER_PROVIDER__FORECAST15_H:
+				return basicSetForecast15H(null, msgs);
+			case WeatherPackage.WEATHER_PROVIDER__FORECAST18_H:
+				return basicSetForecast18H(null, msgs);
+			case WeatherPackage.WEATHER_PROVIDER__FORECAST21_H:
+				return basicSetForecast21H(null, msgs);
+			case WeatherPackage.WEATHER_PROVIDER__FORECAST24_H:
+				return basicSetForecast24H(null, msgs);
+			case WeatherPackage.WEATHER_PROVIDER__FORECAST27_H:
+				return basicSetForecast27H(null, msgs);
+			case WeatherPackage.WEATHER_PROVIDER__FORECAST30_H:
+				return basicSetForecast30H(null, msgs);
+			case WeatherPackage.WEATHER_PROVIDER__FORECAST33_H:
+				return basicSetForecast33H(null, msgs);
+			case WeatherPackage.WEATHER_PROVIDER__FORECAST36_H:
+				return basicSetForecast36H(null, msgs);
+			case WeatherPackage.WEATHER_PROVIDER__FORECAST39_H:
+				return basicSetForecast39H(null, msgs);
+			case WeatherPackage.WEATHER_PROVIDER__FORECAST42_H:
+				return basicSetForecast42H(null, msgs);
+			case WeatherPackage.WEATHER_PROVIDER__FORECAST45_H:
+				return basicSetForecast45H(null, msgs);
+			case WeatherPackage.WEATHER_PROVIDER__FORECAST48_H:
+				return basicSetForecast48H(null, msgs);
+			case WeatherPackage.WEATHER_PROVIDER__FORECAST51_H:
+				return basicSetForecast51H(null, msgs);
+			case WeatherPackage.WEATHER_PROVIDER__FORECAST54_H:
+				return basicSetForecast54H(null, msgs);
+			case WeatherPackage.WEATHER_PROVIDER__FORECAST57_H:
+				return basicSetForecast57H(null, msgs);
+			case WeatherPackage.WEATHER_PROVIDER__FORECAST60_H:
+				return basicSetForecast60H(null, msgs);
+			case WeatherPackage.WEATHER_PROVIDER__FORECAST63_H:
+				return basicSetForecast63H(null, msgs);
+			case WeatherPackage.WEATHER_PROVIDER__FORECAST66_H:
+				return basicSetForecast66H(null, msgs);
+			case WeatherPackage.WEATHER_PROVIDER__FORECAST69_H:
+				return basicSetForecast69H(null, msgs);
+			case WeatherPackage.WEATHER_PROVIDER__FORECAST72_H:
+				return basicSetForecast72H(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -1331,80 +1519,55 @@ public class WeatherProviderImpl extends ProviderImpl implements WeatherProvider
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case WeatherPackage.WEATHER_PROVIDER__CURRENT_WEATHER:
-				if (resolve) return getCurrentWeather();
-				return basicGetCurrentWeather();
+				return getCurrentWeather();
 			case WeatherPackage.WEATHER_PROVIDER__FORECAST3_H:
-				if (resolve) return getForecast3H();
-				return basicGetForecast3H();
+				return getForecast3H();
 			case WeatherPackage.WEATHER_PROVIDER__FORECAST6_H:
-				if (resolve) return getForecast6H();
-				return basicGetForecast6H();
+				return getForecast6H();
 			case WeatherPackage.WEATHER_PROVIDER__FORECAST9_H:
-				if (resolve) return getForecast9H();
-				return basicGetForecast9H();
+				return getForecast9H();
 			case WeatherPackage.WEATHER_PROVIDER__FORECAST12_H:
-				if (resolve) return getForecast12H();
-				return basicGetForecast12H();
+				return getForecast12H();
 			case WeatherPackage.WEATHER_PROVIDER__FORECAST15_H:
-				if (resolve) return getForecast15H();
-				return basicGetForecast15H();
+				return getForecast15H();
 			case WeatherPackage.WEATHER_PROVIDER__FORECAST18_H:
-				if (resolve) return getForecast18H();
-				return basicGetForecast18H();
+				return getForecast18H();
 			case WeatherPackage.WEATHER_PROVIDER__FORECAST21_H:
-				if (resolve) return getForecast21H();
-				return basicGetForecast21H();
+				return getForecast21H();
 			case WeatherPackage.WEATHER_PROVIDER__FORECAST24_H:
-				if (resolve) return getForecast24H();
-				return basicGetForecast24H();
+				return getForecast24H();
 			case WeatherPackage.WEATHER_PROVIDER__FORECAST27_H:
-				if (resolve) return getForecast27H();
-				return basicGetForecast27H();
+				return getForecast27H();
 			case WeatherPackage.WEATHER_PROVIDER__FORECAST30_H:
-				if (resolve) return getForecast30H();
-				return basicGetForecast30H();
+				return getForecast30H();
 			case WeatherPackage.WEATHER_PROVIDER__FORECAST33_H:
-				if (resolve) return getForecast33H();
-				return basicGetForecast33H();
+				return getForecast33H();
 			case WeatherPackage.WEATHER_PROVIDER__FORECAST36_H:
-				if (resolve) return getForecast36H();
-				return basicGetForecast36H();
+				return getForecast36H();
 			case WeatherPackage.WEATHER_PROVIDER__FORECAST39_H:
-				if (resolve) return getForecast39H();
-				return basicGetForecast39H();
+				return getForecast39H();
 			case WeatherPackage.WEATHER_PROVIDER__FORECAST42_H:
-				if (resolve) return getForecast42H();
-				return basicGetForecast42H();
+				return getForecast42H();
 			case WeatherPackage.WEATHER_PROVIDER__FORECAST45_H:
-				if (resolve) return getForecast45H();
-				return basicGetForecast45H();
+				return getForecast45H();
 			case WeatherPackage.WEATHER_PROVIDER__FORECAST48_H:
-				if (resolve) return getForecast48H();
-				return basicGetForecast48H();
+				return getForecast48H();
 			case WeatherPackage.WEATHER_PROVIDER__FORECAST51_H:
-				if (resolve) return getForecast51H();
-				return basicGetForecast51H();
+				return getForecast51H();
 			case WeatherPackage.WEATHER_PROVIDER__FORECAST54_H:
-				if (resolve) return getForecast54H();
-				return basicGetForecast54H();
+				return getForecast54H();
 			case WeatherPackage.WEATHER_PROVIDER__FORECAST57_H:
-				if (resolve) return getForecast57H();
-				return basicGetForecast57H();
+				return getForecast57H();
 			case WeatherPackage.WEATHER_PROVIDER__FORECAST60_H:
-				if (resolve) return getForecast60H();
-				return basicGetForecast60H();
+				return getForecast60H();
 			case WeatherPackage.WEATHER_PROVIDER__FORECAST63_H:
-				if (resolve) return getForecast63H();
-				return basicGetForecast63H();
+				return getForecast63H();
 			case WeatherPackage.WEATHER_PROVIDER__FORECAST66_H:
-				if (resolve) return getForecast66H();
-				return basicGetForecast66H();
+				return getForecast66H();
 			case WeatherPackage.WEATHER_PROVIDER__FORECAST69_H:
-				if (resolve) return getForecast69H();
-				return basicGetForecast69H();
+				return getForecast69H();
 			case WeatherPackage.WEATHER_PROVIDER__FORECAST72_H:
-				if (resolve) return getForecast72H();
-				return basicGetForecast72H();
+				return getForecast72H();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}

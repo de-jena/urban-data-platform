@@ -40,7 +40,6 @@ public class SensinactWeatherReportStorage implements WeatherReportStorageHandle
 	 */
 	@Override
 	public <R extends WeatherReports> R saveReport(R report) {
-		((MOSMIXSWeatherReport) report.getReports().get(0)).setWindSpeed(10.f);
 		WeatherProvider provider = transformator.doTransformation(report);
 		sensinact.pushUpdate(provider)
 		.onSuccess(o -> LOGGER.info("Weather report successfully updated"))

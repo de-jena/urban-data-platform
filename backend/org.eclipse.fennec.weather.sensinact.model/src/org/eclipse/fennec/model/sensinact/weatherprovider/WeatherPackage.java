@@ -103,7 +103,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	int WEATHER_PROVIDER__LINKED_PROVIDERS = ProviderPackage.PROVIDER__LINKED_PROVIDERS;
 
 	/**
-	 * The feature id for the '<em><b>Current Weather</b></em>' reference.
+	 * The feature id for the '<em><b>Current Weather</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -112,7 +112,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	int WEATHER_PROVIDER__CURRENT_WEATHER = ProviderPackage.PROVIDER_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Forecast3 H</b></em>' reference.
+	 * The feature id for the '<em><b>Forecast3 H</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -121,7 +121,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	int WEATHER_PROVIDER__FORECAST3_H = ProviderPackage.PROVIDER_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Forecast6 H</b></em>' reference.
+	 * The feature id for the '<em><b>Forecast6 H</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -130,7 +130,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	int WEATHER_PROVIDER__FORECAST6_H = ProviderPackage.PROVIDER_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Forecast9 H</b></em>' reference.
+	 * The feature id for the '<em><b>Forecast9 H</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -139,7 +139,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	int WEATHER_PROVIDER__FORECAST9_H = ProviderPackage.PROVIDER_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Forecast12 H</b></em>' reference.
+	 * The feature id for the '<em><b>Forecast12 H</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -148,7 +148,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	int WEATHER_PROVIDER__FORECAST12_H = ProviderPackage.PROVIDER_FEATURE_COUNT + 4;
 
 	/**
-	 * The feature id for the '<em><b>Forecast15 H</b></em>' reference.
+	 * The feature id for the '<em><b>Forecast15 H</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -157,7 +157,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	int WEATHER_PROVIDER__FORECAST15_H = ProviderPackage.PROVIDER_FEATURE_COUNT + 5;
 
 	/**
-	 * The feature id for the '<em><b>Forecast18 H</b></em>' reference.
+	 * The feature id for the '<em><b>Forecast18 H</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -166,7 +166,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	int WEATHER_PROVIDER__FORECAST18_H = ProviderPackage.PROVIDER_FEATURE_COUNT + 6;
 
 	/**
-	 * The feature id for the '<em><b>Forecast21 H</b></em>' reference.
+	 * The feature id for the '<em><b>Forecast21 H</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -175,7 +175,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	int WEATHER_PROVIDER__FORECAST21_H = ProviderPackage.PROVIDER_FEATURE_COUNT + 7;
 
 	/**
-	 * The feature id for the '<em><b>Forecast24 H</b></em>' reference.
+	 * The feature id for the '<em><b>Forecast24 H</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -184,7 +184,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	int WEATHER_PROVIDER__FORECAST24_H = ProviderPackage.PROVIDER_FEATURE_COUNT + 8;
 
 	/**
-	 * The feature id for the '<em><b>Forecast27 H</b></em>' reference.
+	 * The feature id for the '<em><b>Forecast27 H</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -193,7 +193,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	int WEATHER_PROVIDER__FORECAST27_H = ProviderPackage.PROVIDER_FEATURE_COUNT + 9;
 
 	/**
-	 * The feature id for the '<em><b>Forecast30 H</b></em>' reference.
+	 * The feature id for the '<em><b>Forecast30 H</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -202,7 +202,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	int WEATHER_PROVIDER__FORECAST30_H = ProviderPackage.PROVIDER_FEATURE_COUNT + 10;
 
 	/**
-	 * The feature id for the '<em><b>Forecast33 H</b></em>' reference.
+	 * The feature id for the '<em><b>Forecast33 H</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -211,7 +211,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	int WEATHER_PROVIDER__FORECAST33_H = ProviderPackage.PROVIDER_FEATURE_COUNT + 11;
 
 	/**
-	 * The feature id for the '<em><b>Forecast36 H</b></em>' reference.
+	 * The feature id for the '<em><b>Forecast36 H</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -220,7 +220,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	int WEATHER_PROVIDER__FORECAST36_H = ProviderPackage.PROVIDER_FEATURE_COUNT + 12;
 
 	/**
-	 * The feature id for the '<em><b>Forecast39 H</b></em>' reference.
+	 * The feature id for the '<em><b>Forecast39 H</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -229,7 +229,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	int WEATHER_PROVIDER__FORECAST39_H = ProviderPackage.PROVIDER_FEATURE_COUNT + 13;
 
 	/**
-	 * The feature id for the '<em><b>Forecast42 H</b></em>' reference.
+	 * The feature id for the '<em><b>Forecast42 H</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -238,7 +238,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	int WEATHER_PROVIDER__FORECAST42_H = ProviderPackage.PROVIDER_FEATURE_COUNT + 14;
 
 	/**
-	 * The feature id for the '<em><b>Forecast45 H</b></em>' reference.
+	 * The feature id for the '<em><b>Forecast45 H</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -247,7 +247,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	int WEATHER_PROVIDER__FORECAST45_H = ProviderPackage.PROVIDER_FEATURE_COUNT + 15;
 
 	/**
-	 * The feature id for the '<em><b>Forecast48 H</b></em>' reference.
+	 * The feature id for the '<em><b>Forecast48 H</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -256,7 +256,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	int WEATHER_PROVIDER__FORECAST48_H = ProviderPackage.PROVIDER_FEATURE_COUNT + 16;
 
 	/**
-	 * The feature id for the '<em><b>Forecast51 H</b></em>' reference.
+	 * The feature id for the '<em><b>Forecast51 H</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -265,7 +265,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	int WEATHER_PROVIDER__FORECAST51_H = ProviderPackage.PROVIDER_FEATURE_COUNT + 17;
 
 	/**
-	 * The feature id for the '<em><b>Forecast54 H</b></em>' reference.
+	 * The feature id for the '<em><b>Forecast54 H</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -274,7 +274,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	int WEATHER_PROVIDER__FORECAST54_H = ProviderPackage.PROVIDER_FEATURE_COUNT + 18;
 
 	/**
-	 * The feature id for the '<em><b>Forecast57 H</b></em>' reference.
+	 * The feature id for the '<em><b>Forecast57 H</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -283,7 +283,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	int WEATHER_PROVIDER__FORECAST57_H = ProviderPackage.PROVIDER_FEATURE_COUNT + 19;
 
 	/**
-	 * The feature id for the '<em><b>Forecast60 H</b></em>' reference.
+	 * The feature id for the '<em><b>Forecast60 H</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -292,7 +292,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	int WEATHER_PROVIDER__FORECAST60_H = ProviderPackage.PROVIDER_FEATURE_COUNT + 20;
 
 	/**
-	 * The feature id for the '<em><b>Forecast63 H</b></em>' reference.
+	 * The feature id for the '<em><b>Forecast63 H</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -301,7 +301,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	int WEATHER_PROVIDER__FORECAST63_H = ProviderPackage.PROVIDER_FEATURE_COUNT + 21;
 
 	/**
-	 * The feature id for the '<em><b>Forecast66 H</b></em>' reference.
+	 * The feature id for the '<em><b>Forecast66 H</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -310,7 +310,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	int WEATHER_PROVIDER__FORECAST66_H = ProviderPackage.PROVIDER_FEATURE_COUNT + 22;
 
 	/**
-	 * The feature id for the '<em><b>Forecast69 H</b></em>' reference.
+	 * The feature id for the '<em><b>Forecast69 H</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -319,7 +319,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	int WEATHER_PROVIDER__FORECAST69_H = ProviderPackage.PROVIDER_FEATURE_COUNT + 23;
 
 	/**
-	 * The feature id for the '<em><b>Forecast72 H</b></em>' reference.
+	 * The feature id for the '<em><b>Forecast72 H</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -799,10 +799,10 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getWeatherProvider();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getCurrentWeather <em>Current Weather</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getCurrentWeather <em>Current Weather</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Current Weather</em>'.
+	 * @return the meta object for the containment reference '<em>Current Weather</em>'.
 	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getCurrentWeather()
 	 * @see #getWeatherProvider()
 	 * @generated
@@ -810,10 +810,10 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getWeatherProvider_CurrentWeather();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast3H <em>Forecast3 H</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast3H <em>Forecast3 H</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Forecast3 H</em>'.
+	 * @return the meta object for the containment reference '<em>Forecast3 H</em>'.
 	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast3H()
 	 * @see #getWeatherProvider()
 	 * @generated
@@ -821,10 +821,10 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getWeatherProvider_Forecast3H();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast6H <em>Forecast6 H</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast6H <em>Forecast6 H</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Forecast6 H</em>'.
+	 * @return the meta object for the containment reference '<em>Forecast6 H</em>'.
 	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast6H()
 	 * @see #getWeatherProvider()
 	 * @generated
@@ -832,10 +832,10 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getWeatherProvider_Forecast6H();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast9H <em>Forecast9 H</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast9H <em>Forecast9 H</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Forecast9 H</em>'.
+	 * @return the meta object for the containment reference '<em>Forecast9 H</em>'.
 	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast9H()
 	 * @see #getWeatherProvider()
 	 * @generated
@@ -843,10 +843,10 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getWeatherProvider_Forecast9H();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast12H <em>Forecast12 H</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast12H <em>Forecast12 H</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Forecast12 H</em>'.
+	 * @return the meta object for the containment reference '<em>Forecast12 H</em>'.
 	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast12H()
 	 * @see #getWeatherProvider()
 	 * @generated
@@ -854,10 +854,10 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getWeatherProvider_Forecast12H();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast15H <em>Forecast15 H</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast15H <em>Forecast15 H</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Forecast15 H</em>'.
+	 * @return the meta object for the containment reference '<em>Forecast15 H</em>'.
 	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast15H()
 	 * @see #getWeatherProvider()
 	 * @generated
@@ -865,10 +865,10 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getWeatherProvider_Forecast15H();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast18H <em>Forecast18 H</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast18H <em>Forecast18 H</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Forecast18 H</em>'.
+	 * @return the meta object for the containment reference '<em>Forecast18 H</em>'.
 	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast18H()
 	 * @see #getWeatherProvider()
 	 * @generated
@@ -876,10 +876,10 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getWeatherProvider_Forecast18H();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast21H <em>Forecast21 H</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast21H <em>Forecast21 H</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Forecast21 H</em>'.
+	 * @return the meta object for the containment reference '<em>Forecast21 H</em>'.
 	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast21H()
 	 * @see #getWeatherProvider()
 	 * @generated
@@ -887,10 +887,10 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getWeatherProvider_Forecast21H();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast24H <em>Forecast24 H</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast24H <em>Forecast24 H</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Forecast24 H</em>'.
+	 * @return the meta object for the containment reference '<em>Forecast24 H</em>'.
 	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast24H()
 	 * @see #getWeatherProvider()
 	 * @generated
@@ -898,10 +898,10 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getWeatherProvider_Forecast24H();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast27H <em>Forecast27 H</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast27H <em>Forecast27 H</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Forecast27 H</em>'.
+	 * @return the meta object for the containment reference '<em>Forecast27 H</em>'.
 	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast27H()
 	 * @see #getWeatherProvider()
 	 * @generated
@@ -909,10 +909,10 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getWeatherProvider_Forecast27H();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast30H <em>Forecast30 H</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast30H <em>Forecast30 H</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Forecast30 H</em>'.
+	 * @return the meta object for the containment reference '<em>Forecast30 H</em>'.
 	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast30H()
 	 * @see #getWeatherProvider()
 	 * @generated
@@ -920,10 +920,10 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getWeatherProvider_Forecast30H();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast33H <em>Forecast33 H</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast33H <em>Forecast33 H</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Forecast33 H</em>'.
+	 * @return the meta object for the containment reference '<em>Forecast33 H</em>'.
 	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast33H()
 	 * @see #getWeatherProvider()
 	 * @generated
@@ -931,10 +931,10 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getWeatherProvider_Forecast33H();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast36H <em>Forecast36 H</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast36H <em>Forecast36 H</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Forecast36 H</em>'.
+	 * @return the meta object for the containment reference '<em>Forecast36 H</em>'.
 	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast36H()
 	 * @see #getWeatherProvider()
 	 * @generated
@@ -942,10 +942,10 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getWeatherProvider_Forecast36H();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast39H <em>Forecast39 H</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast39H <em>Forecast39 H</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Forecast39 H</em>'.
+	 * @return the meta object for the containment reference '<em>Forecast39 H</em>'.
 	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast39H()
 	 * @see #getWeatherProvider()
 	 * @generated
@@ -953,10 +953,10 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getWeatherProvider_Forecast39H();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast42H <em>Forecast42 H</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast42H <em>Forecast42 H</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Forecast42 H</em>'.
+	 * @return the meta object for the containment reference '<em>Forecast42 H</em>'.
 	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast42H()
 	 * @see #getWeatherProvider()
 	 * @generated
@@ -964,10 +964,10 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getWeatherProvider_Forecast42H();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast45H <em>Forecast45 H</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast45H <em>Forecast45 H</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Forecast45 H</em>'.
+	 * @return the meta object for the containment reference '<em>Forecast45 H</em>'.
 	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast45H()
 	 * @see #getWeatherProvider()
 	 * @generated
@@ -975,10 +975,10 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getWeatherProvider_Forecast45H();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast48H <em>Forecast48 H</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast48H <em>Forecast48 H</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Forecast48 H</em>'.
+	 * @return the meta object for the containment reference '<em>Forecast48 H</em>'.
 	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast48H()
 	 * @see #getWeatherProvider()
 	 * @generated
@@ -986,10 +986,10 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getWeatherProvider_Forecast48H();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast51H <em>Forecast51 H</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast51H <em>Forecast51 H</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Forecast51 H</em>'.
+	 * @return the meta object for the containment reference '<em>Forecast51 H</em>'.
 	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast51H()
 	 * @see #getWeatherProvider()
 	 * @generated
@@ -997,10 +997,10 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getWeatherProvider_Forecast51H();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast54H <em>Forecast54 H</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast54H <em>Forecast54 H</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Forecast54 H</em>'.
+	 * @return the meta object for the containment reference '<em>Forecast54 H</em>'.
 	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast54H()
 	 * @see #getWeatherProvider()
 	 * @generated
@@ -1008,10 +1008,10 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getWeatherProvider_Forecast54H();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast57H <em>Forecast57 H</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast57H <em>Forecast57 H</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Forecast57 H</em>'.
+	 * @return the meta object for the containment reference '<em>Forecast57 H</em>'.
 	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast57H()
 	 * @see #getWeatherProvider()
 	 * @generated
@@ -1019,10 +1019,10 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getWeatherProvider_Forecast57H();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast60H <em>Forecast60 H</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast60H <em>Forecast60 H</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Forecast60 H</em>'.
+	 * @return the meta object for the containment reference '<em>Forecast60 H</em>'.
 	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast60H()
 	 * @see #getWeatherProvider()
 	 * @generated
@@ -1030,10 +1030,10 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getWeatherProvider_Forecast60H();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast63H <em>Forecast63 H</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast63H <em>Forecast63 H</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Forecast63 H</em>'.
+	 * @return the meta object for the containment reference '<em>Forecast63 H</em>'.
 	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast63H()
 	 * @see #getWeatherProvider()
 	 * @generated
@@ -1041,10 +1041,10 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getWeatherProvider_Forecast63H();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast66H <em>Forecast66 H</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast66H <em>Forecast66 H</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Forecast66 H</em>'.
+	 * @return the meta object for the containment reference '<em>Forecast66 H</em>'.
 	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast66H()
 	 * @see #getWeatherProvider()
 	 * @generated
@@ -1052,10 +1052,10 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getWeatherProvider_Forecast66H();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast69H <em>Forecast69 H</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast69H <em>Forecast69 H</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Forecast69 H</em>'.
+	 * @return the meta object for the containment reference '<em>Forecast69 H</em>'.
 	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast69H()
 	 * @see #getWeatherProvider()
 	 * @generated
@@ -1063,10 +1063,10 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getWeatherProvider_Forecast69H();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast72H <em>Forecast72 H</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast72H <em>Forecast72 H</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Forecast72 H</em>'.
+	 * @return the meta object for the containment reference '<em>Forecast72 H</em>'.
 	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider#getForecast72H()
 	 * @see #getWeatherProvider()
 	 * @generated
@@ -1579,7 +1579,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 		EClass WEATHER_PROVIDER = eINSTANCE.getWeatherProvider();
 
 		/**
-		 * The meta object literal for the '<em><b>Current Weather</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Current Weather</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1587,7 +1587,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 		EReference WEATHER_PROVIDER__CURRENT_WEATHER = eINSTANCE.getWeatherProvider_CurrentWeather();
 
 		/**
-		 * The meta object literal for the '<em><b>Forecast3 H</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Forecast3 H</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1595,7 +1595,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 		EReference WEATHER_PROVIDER__FORECAST3_H = eINSTANCE.getWeatherProvider_Forecast3H();
 
 		/**
-		 * The meta object literal for the '<em><b>Forecast6 H</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Forecast6 H</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1603,7 +1603,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 		EReference WEATHER_PROVIDER__FORECAST6_H = eINSTANCE.getWeatherProvider_Forecast6H();
 
 		/**
-		 * The meta object literal for the '<em><b>Forecast9 H</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Forecast9 H</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1611,7 +1611,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 		EReference WEATHER_PROVIDER__FORECAST9_H = eINSTANCE.getWeatherProvider_Forecast9H();
 
 		/**
-		 * The meta object literal for the '<em><b>Forecast12 H</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Forecast12 H</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1619,7 +1619,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 		EReference WEATHER_PROVIDER__FORECAST12_H = eINSTANCE.getWeatherProvider_Forecast12H();
 
 		/**
-		 * The meta object literal for the '<em><b>Forecast15 H</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Forecast15 H</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1627,7 +1627,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 		EReference WEATHER_PROVIDER__FORECAST15_H = eINSTANCE.getWeatherProvider_Forecast15H();
 
 		/**
-		 * The meta object literal for the '<em><b>Forecast18 H</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Forecast18 H</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1635,7 +1635,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 		EReference WEATHER_PROVIDER__FORECAST18_H = eINSTANCE.getWeatherProvider_Forecast18H();
 
 		/**
-		 * The meta object literal for the '<em><b>Forecast21 H</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Forecast21 H</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1643,7 +1643,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 		EReference WEATHER_PROVIDER__FORECAST21_H = eINSTANCE.getWeatherProvider_Forecast21H();
 
 		/**
-		 * The meta object literal for the '<em><b>Forecast24 H</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Forecast24 H</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1651,7 +1651,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 		EReference WEATHER_PROVIDER__FORECAST24_H = eINSTANCE.getWeatherProvider_Forecast24H();
 
 		/**
-		 * The meta object literal for the '<em><b>Forecast27 H</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Forecast27 H</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1659,7 +1659,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 		EReference WEATHER_PROVIDER__FORECAST27_H = eINSTANCE.getWeatherProvider_Forecast27H();
 
 		/**
-		 * The meta object literal for the '<em><b>Forecast30 H</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Forecast30 H</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1667,7 +1667,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 		EReference WEATHER_PROVIDER__FORECAST30_H = eINSTANCE.getWeatherProvider_Forecast30H();
 
 		/**
-		 * The meta object literal for the '<em><b>Forecast33 H</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Forecast33 H</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1675,7 +1675,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 		EReference WEATHER_PROVIDER__FORECAST33_H = eINSTANCE.getWeatherProvider_Forecast33H();
 
 		/**
-		 * The meta object literal for the '<em><b>Forecast36 H</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Forecast36 H</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1683,7 +1683,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 		EReference WEATHER_PROVIDER__FORECAST36_H = eINSTANCE.getWeatherProvider_Forecast36H();
 
 		/**
-		 * The meta object literal for the '<em><b>Forecast39 H</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Forecast39 H</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1691,7 +1691,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 		EReference WEATHER_PROVIDER__FORECAST39_H = eINSTANCE.getWeatherProvider_Forecast39H();
 
 		/**
-		 * The meta object literal for the '<em><b>Forecast42 H</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Forecast42 H</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1699,7 +1699,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 		EReference WEATHER_PROVIDER__FORECAST42_H = eINSTANCE.getWeatherProvider_Forecast42H();
 
 		/**
-		 * The meta object literal for the '<em><b>Forecast45 H</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Forecast45 H</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1707,7 +1707,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 		EReference WEATHER_PROVIDER__FORECAST45_H = eINSTANCE.getWeatherProvider_Forecast45H();
 
 		/**
-		 * The meta object literal for the '<em><b>Forecast48 H</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Forecast48 H</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1715,7 +1715,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 		EReference WEATHER_PROVIDER__FORECAST48_H = eINSTANCE.getWeatherProvider_Forecast48H();
 
 		/**
-		 * The meta object literal for the '<em><b>Forecast51 H</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Forecast51 H</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1723,7 +1723,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 		EReference WEATHER_PROVIDER__FORECAST51_H = eINSTANCE.getWeatherProvider_Forecast51H();
 
 		/**
-		 * The meta object literal for the '<em><b>Forecast54 H</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Forecast54 H</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1731,7 +1731,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 		EReference WEATHER_PROVIDER__FORECAST54_H = eINSTANCE.getWeatherProvider_Forecast54H();
 
 		/**
-		 * The meta object literal for the '<em><b>Forecast57 H</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Forecast57 H</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1739,7 +1739,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 		EReference WEATHER_PROVIDER__FORECAST57_H = eINSTANCE.getWeatherProvider_Forecast57H();
 
 		/**
-		 * The meta object literal for the '<em><b>Forecast60 H</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Forecast60 H</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1747,7 +1747,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 		EReference WEATHER_PROVIDER__FORECAST60_H = eINSTANCE.getWeatherProvider_Forecast60H();
 
 		/**
-		 * The meta object literal for the '<em><b>Forecast63 H</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Forecast63 H</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1755,7 +1755,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 		EReference WEATHER_PROVIDER__FORECAST63_H = eINSTANCE.getWeatherProvider_Forecast63H();
 
 		/**
-		 * The meta object literal for the '<em><b>Forecast66 H</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Forecast66 H</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1763,7 +1763,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 		EReference WEATHER_PROVIDER__FORECAST66_H = eINSTANCE.getWeatherProvider_Forecast66H();
 
 		/**
-		 * The meta object literal for the '<em><b>Forecast69 H</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Forecast69 H</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1771,7 +1771,7 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 		EReference WEATHER_PROVIDER__FORECAST69_H = eINSTANCE.getWeatherProvider_Forecast69H();
 
 		/**
-		 * The meta object literal for the '<em><b>Forecast72 H</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Forecast72 H</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
