@@ -1,0 +1,110 @@
+{
+	":configurator:resource-version": 1,
+	"sensinact.rules.easyrules~potentialWaterHPa": {
+		"sensinact.rule.name": "FromkPaTohPa",
+		"resource.selectors": [
+			{
+				"provider": {
+      				"value": "^chirpstack-.*",
+      				"type": "REGEX"
+    			},
+				"service": "sensor",
+				"resource": {
+      				"value": "^potentialWater\\d+$",
+      				"type": "REGEX"
+    			}
+			}
+		],
+		"rule.definitions": [
+			{
+				"name": "potential-water-to-hPa-conversion",
+				"description": "Converts the value from kPa to hPa of the potentialWater resource",
+				"condition": "true",
+				"action": [
+					"for(providerName : $providers) { for (resourceName : $data[providerName].sensor.$resources) { if ($data[providerName].sensor[resourceName].containsKey('$set') && $data[providerName].sensor[resourceName].$set == true) { newName = 'potentialWaterHPa' + resourceName.substring(resourceName.lastIndexOf('Water') + 5); $updater.updateResource(providerName+'-derived', 'derivedQuantites', newName, $data[providerName].sensor[resourceName].$value*10); } } }"		
+				],
+				"priority": 1
+			}
+		]
+	},
+	"sensinact.rules.easyrules~pfWert": {
+		"sensinact.rule.name": "pfWert",
+		"resource.selectors": [
+			{
+				"provider": {
+      				"value": "^chirpstack-.*-derived$",
+      				"type": "REGEX"
+    			},
+				"service": "derivedQuantites",
+				"resource": {
+      				"value": "^potentialWaterHPa\\d+$",
+      				"type": "REGEX"
+    			}
+			}
+		],
+		"rule.definitions": [
+			{
+				"name": "pfWert",
+				"description": "Computes the value of pf-Wert from the potentialWaterHPa for each sensors",
+				"condition": "true",
+				"action": [
+					"#pragma jexl.namespace.Math java.lang.Math; for(providerName : $providers) { for (resourceName : $data[providerName].derivedQuantites.$resources) { if ($data[providerName].derivedQuantites[resourceName].containsKey('$set') && $data[providerName].derivedQuantites[resourceName].$set == true && $data[providerName].derivedQuantites[resourceName].$value != null && $data[providerName].derivedQuantites[resourceName].$value != 0) { newName = 'pfWert' + resourceName.substring(resourceName.lastIndexOf('HPa') + 3); $updater.updateResource(providerName, 'derivedQuantites', newName, Math:log10(Math:abs($data[providerName].derivedQuantites[resourceName].$value))); } } }"		
+				],
+				"priority": 1
+			}
+		]
+	},
+	"sensinact.rules.easyrules~avgPfWert": {
+		"sensinact.rule.name": "AveragePfWert",
+		"resource.selectors": [
+			{
+				"provider": {
+      				"value": "^chirpstack-.*-derived$",
+      				"type": "REGEX"
+    			},
+				"service": "derivedQuantites",
+				"resource": {
+      				"value": "^pfWert\\d+$",
+      				"type": "REGEX"
+    			}
+			}			
+
+		],
+		"rule.definitions": [
+			{
+				"name": "average",
+				"description": "Computes the average of the pfWert among sensors belonging to the same device",
+				"condition": "true",
+				"action": [
+					"for(providerName : $providers) { sum = 0; count = 0; for (resourceName : $data[providerName].derivedQuantites.$resources) {if (resourceName.matches('^pfWert\\d+$') && not empty($data[providerName].derivedQuantites[resourceName]?.$value)) { sum = sum + $data[providerName].derivedQuantites[resourceName].$value; count = count + 1; } }; if (count > 0) { $updater.updateResource(providerName, 'derivedQuantites', 'pfWertAvg', sum / count) } }"				
+					],
+				"priority": 1
+			}
+		]
+	},
+	"sensinact.rules.easyrules~color": {
+		"sensinact.rule.name": "Color",
+		"resource.selectors": [
+			{
+				"provider": {
+      				"value": "^chirpstack-.*-derived$",
+      				"type": "REGEX"
+    			},
+				"service": "derivedQuantites",
+				"resource": "pfWertAvg"
+			}			
+
+		],
+		"rule.definitions": [
+			{
+				"name": "color",
+				"description": "Computes a color code based on the value of the average",
+				"condition": "true",
+				"action": [
+					"for(providerName : $providers) { for (resourceName : $data[providerName].derivedQuantites.$resources) { if ($data[providerName].derivedQuantites[resourceName].containsKey('$set') && $data[providerName].derivedQuantites[resourceName].$set == true && resourceName == 'pfWertAvg') {if ($data[providerName].derivedQuantites.pfWertAvg.$value < 1.8) {$updater.updateResource(providerName, 'derivedQuantites', 'color', 'Blau'); } else if ($data[providerName].derivedQuantites.pfWertAvg.$value < 3.0) { $updater.updateResource(providerName, 'derivedQuantites', 'color', 'Grün');} else if ($data[providerName].derivedQuantites.pfWertAvg.$value < 3.6) { $updater.updateResource(providerName, 'derivedQuantites', 'color', 'Gelb');} else {$updater.updateResource(providerName, 'derivedQuantites', 'color', 'Rot');} } } }"
+				],
+				"priority": 1
+			}
+		]
+	}
+}

@@ -13,7 +13,7 @@
 			{
 				"name": "wind-speed-notification",
 				"description": "Sends a notification when the wind speed is above 1.",
-				"condition": "$data['10567'].currentWeather.windSpeed.$value != null and $data['10567'].currentWeather.windSpeed.$value > 1.",
+				"condition": "$data['10567'].currentWeather.windSpeed.$value != null and $data['10567'].currentWeather.windSpeed.$value > 1.0",
 				"action": [
 					"$updater.updateResource('10567', 'currentWeather', 'windAlert', true)"
 				],
