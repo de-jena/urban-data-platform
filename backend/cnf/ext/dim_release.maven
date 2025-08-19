@@ -70,5 +70,5 @@ org.geckoprojects.codec:org.gecko.codec.constants:1.0.1-SNAPSHOT
 org.geckoprojects.weather:org.gecko.weather.dwd.stations:1.1.0-SNAPSHOT
 org.geckoprojects.weather:org.gecko.time4j:1.1.0-SNAPSHOT
 org.geckoprojects.weather:org.gecko.weather.api:1.1.0-SNAPSHOT
-org.geckoprojects.weather:org.gecko.weather.dwd.forecast:1.1.0-SNAPSHOT
+#org.geckoprojects.weather:org.gecko.weather.dwd.forecast:1.1.0-SNAPSHOT
 org.geckoprojects.weather:org.gecko.weather.model:1.1.0-SNAPSHOT

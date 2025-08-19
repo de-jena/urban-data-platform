@@ -9,6 +9,7 @@ import org.eclipse.fennec.qvt.osgi.api.ModelTransformationConstants;
 import org.eclipse.fennec.qvt.osgi.api.ModelTransformator;
 import org.eclipse.sensinact.core.push.DataUpdate;
 import org.gecko.weather.dwd.fc.WeatherReportStorageHandler;
+import org.gecko.weather.model.weather.MOSMIXSWeatherReport;
 import org.gecko.weather.model.weather.WeatherReports;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
@@ -39,6 +40,7 @@ public class SensinactWeatherReportStorage implements WeatherReportStorageHandle
 	 */
 	@Override
 	public <R extends WeatherReports> R saveReport(R report) {
+		((MOSMIXSWeatherReport) report.getReports().get(0)).setWindSpeed(10.f);
 		WeatherProvider provider = transformator.doTransformation(report);
 		sensinact.pushUpdate(provider)
 		.onSuccess(o -> LOGGER.info("Weather report successfully updated"))

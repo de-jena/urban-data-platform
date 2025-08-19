@@ -59,6 +59,7 @@ mapping WEATHER::MOSMIXSWeatherReport:: toWeatherService() : SENSINACT::WeatherS
 	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	windSpeed := self.windSpeed;
+	log("wind Speed " + self.windSpeed.toString());
 	featureName := "windSpeed";
 	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
@@ -322,7 +323,16 @@ mapping WEATHER::MOSMIXSWeatherReport::toGeneralMetadata(keys : Sequence(String)
        	extra += toMetadataValueMap(key, value);
         i := i + 1;
     };
-    timestamp := time;
+    var v := object PROVIDER::MetadataValue {
+		timestamp := getENow();
+		value := time;
+	};
+	var entry := object PROVIDER::MetadataValueMap{
+       key := "issue.time";
+       value := v; 
+    };
+    extra += entry;
+    timestamp := getENow();
     
 }
 
