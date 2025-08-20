@@ -91,6 +91,11 @@ com.fasterxml.jackson.jakarta.rs:jackson-jakarta-rs-base:${jackson.version}
 com.fasterxml.jackson.jakarta.rs:jackson-jakarta-rs-json-provider:${jackson.version}
 com.fasterxml.jackson.module:jackson-module-jakarta-xmlbind-annotations:${jackson.version}
 
+tools.jackson.core:jackson-core:3.0.0-rc6
+tools.jackson.core:jackson-databind:3.0.0-rc6
+tools.jackson.dataformat:jackson-dataformat-properties:3.0.0-rc6
+tools.jackson.dataformat:jackson-dataformat-yaml:3.0.0-rc6
+
 org.apache.felix:org.apache.felix.http.jetty:5.0.0
 jakarta.servlet:jakarta.servlet-api:5.0.0
 org.eclipse.jetty.websocket:websocket-jetty-server:11.0.13

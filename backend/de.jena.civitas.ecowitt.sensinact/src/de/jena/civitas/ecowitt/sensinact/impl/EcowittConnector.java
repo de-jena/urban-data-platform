@@ -11,7 +11,7 @@
  *     Data In Motion - initial API and implementation
  */
 
-package de.jena.civitas.ecowitt.sensinact;
+package de.jena.civitas.ecowitt.sensinact.impl;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -21,46 +21,32 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.sensinact.core.push.DataUpdate;
-import org.eclipse.sensinact.gateway.geojson.Point;
-import org.eclipse.sensinact.gateway.geojson.utils.GeoJsonUtils;
-import org.gecko.emf.json.annotation.RequireEMFJson;
-import org.gecko.emf.osgi.constants.EMFNamespaces;
 import org.gecko.osgi.messaging.Message;
 import org.gecko.osgi.messaging.MessagingService;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
 import org.osgi.service.component.ComponentContext;
-import org.osgi.service.component.ComponentServiceObjects;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.ConfigurationPolicy;
 import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Reference;
-import org.osgi.service.component.annotations.ReferenceScope;
 import org.osgi.service.metatype.annotations.Designate;
 import org.osgi.util.pushstream.PushEvent;
 import org.osgi.util.pushstream.PushEvent.EventType;
 import org.osgi.util.pushstream.PushStream;
 
-@RequireEMFJson
+import de.jena.civitas.ecowitt.sensinact.EcowittConfig;
+import de.jena.civitas.ecowitt.sensinact.SouthboundMappingService;
+
 @Designate(factory = true, ocd = EcowittConfig.class)
 @Component(configurationPid = "EcowittConnector", configurationPolicy = ConfigurationPolicy.REQUIRE)
 public class EcowittConnector {
 
 	private static final Logger logger = System.getLogger(EcowittConnector.class.getName());
 
-//	private static final URI TEMP_URI = URI.createFileURI("temp.json");
-//	private static final Map<String, Object> EMF_CONFIG = Collections.singletonMap(EMFJs.OPTION_DATE_FORMAT,
-//			"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'zzz");
-
-	@Reference(target = "(" + EMFNamespaces.EMF_CONFIGURATOR_NAME
-			+ "=EMFJson)", scope = ReferenceScope.PROTOTYPE_REQUIRED)
-	private ComponentServiceObjects<ResourceSet> serviceObjects;
-
 	@Reference
-	private DataUpdate sensiNact;
+	private SouthboundMappingService mappingService;
 
 	private PushStream<Message> subscription;
 	private EcowittConfig config;
@@ -171,24 +157,13 @@ public class EcowittConnector {
 	}
 
 	private void onMessage(Message message) {
-		ResourceSet resourceSet = serviceObjects.getService();
-//		Resource resource = resourceSet.createResource(TEMP_URI);
 		try (ByteArrayInputStream bas = new ByteArrayInputStream(message.payload().array())) {
-
-			logger.log(Level.INFO, "Getting data from topic: " + new String(message.payload().array()));
-			// resource.load(bas, EMF_CONFIG);
-			// EObject xxx = resource.getContents().get(0);
-			// Promise<?> promise = sensiNact.pushUpdate(xxx);
-			// promise.onFailure(e -> logger.log(Level.ERROR, "Error while pushing to
-			// sensinact.", e));
+			mappingService.mapFrom(bas);
+			logger.log(Level.INFO, "Receiving data from topic: " + new String(message.payload().array()));
 		} catch (IOException e) {
-			logger.log(Level.ERROR, "Error while parsing json.", e);
+			logger.log(Level.ERROR, "Error reading data.", e);
 		} finally {
-			serviceObjects.ungetService(resourceSet);
 		}
 	}
 
-	private Point getLocation() {
-		return GeoJsonUtils.point(config.longitude(), config.latitude());
-	}
 }

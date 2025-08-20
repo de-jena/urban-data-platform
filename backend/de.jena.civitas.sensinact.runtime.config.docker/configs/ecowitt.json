@@ -14,5 +14,21 @@
 		"messagingServiceId" : "ecowitt",
 		"longitude" : 8.531689,
 		"latitude" :  51.952503
+	},
+	"SouthBoundMappingService~ecowitt": 
+	{
+		"modelFilter.target": "(&(emf.name=ecowitt)(emf.name=mapping)(emf.configuratorName=CodecEcoWitt))",
+		"mappingFile": "/mapping/EcoWittMapping.xmi",
+		"contentType": "ecowitt#1.0",
+		"fileType": "ecowitt"
+	},
+	"MyDefaultObjectMapperConfigurator~test56":
+	{
+		"type": "ecowitt",
+		"codecFactoryConfigurator.target": "(type=ecowitt)"
+	},
+	"MyDefaultCodecModuleConfigurator~ecowitt":
+	{
+		"type": "json"
 	}
 }
