@@ -53,6 +53,12 @@ org.eclipse.sensinact.gateway.northbound:websocket:${sensinact.version}
 
 
 # southbound
+##rule-engine
+org.eclipse.sensinact.gateway.southbound.rules:rules.api:${sensinact.version}
+org.eclipse.sensinact.gateway.southbound.rules:rules.impl:${sensinact.version}
+org.eclipse.sensinact.gateway.southbound.rules.easy-rules:osgi:${sensinact.version}
+org.eclipse.sensinact.gateway.southbound.rules.easy-rules:config:${sensinact.version}
+
 ## devicefactory
 org.eclipse.sensinact.gateway.southbound.device-factory:device-factory-core:${sensinact.version}
 org.eclipse.sensinact.gateway.southbound.device-factory:parser-csv:${sensinact.version}
