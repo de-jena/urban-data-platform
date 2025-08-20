@@ -24,6 +24,7 @@ import org.eclipse.sensinact.model.core.provider.impl.ServiceImpl;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.fennec.model.sensinact.weatherprovider.impl.WeatherServiceImpl#getForecastedWeatherTime <em>Forecasted Weather Time</em>}</li>
+ *   <li>{@link org.eclipse.fennec.model.sensinact.weatherprovider.impl.WeatherServiceImpl#getIssueTime <em>Issue Time</em>}</li>
  *   <li>{@link org.eclipse.fennec.model.sensinact.weatherprovider.impl.WeatherServiceImpl#getWindDirection <em>Wind Direction</em>}</li>
  *   <li>{@link org.eclipse.fennec.model.sensinact.weatherprovider.impl.WeatherServiceImpl#getWindSpeed <em>Wind Speed</em>}</li>
  *   <li>{@link org.eclipse.fennec.model.sensinact.weatherprovider.impl.WeatherServiceImpl#getWindGustLastHour <em>Wind Gust Last Hour</em>}</li>
@@ -88,6 +89,26 @@ public class WeatherServiceImpl extends ServiceImpl implements WeatherService {
 	 * @ordered
 	 */
 	protected Instant forecastedWeatherTime = FORECASTED_WEATHER_TIME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getIssueTime() <em>Issue Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIssueTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Instant ISSUE_TIME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getIssueTime() <em>Issue Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIssueTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected Instant issueTime = ISSUE_TIME_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getWindDirection() <em>Wind Direction</em>}' attribute.
@@ -929,6 +950,29 @@ public class WeatherServiceImpl extends ServiceImpl implements WeatherService {
 		forecastedWeatherTime = newForecastedWeatherTime;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_SERVICE__FORECASTED_WEATHER_TIME, oldForecastedWeatherTime, forecastedWeatherTime));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Instant getIssueTime() {
+		return issueTime;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setIssueTime(Instant newIssueTime) {
+		Instant oldIssueTime = issueTime;
+		issueTime = newIssueTime;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WeatherPackage.WEATHER_SERVICE__ISSUE_TIME, oldIssueTime, issueTime));
 	}
 
 	/**
@@ -1861,6 +1905,8 @@ public class WeatherServiceImpl extends ServiceImpl implements WeatherService {
 		switch (featureID) {
 			case WeatherPackage.WEATHER_SERVICE__FORECASTED_WEATHER_TIME:
 				return getForecastedWeatherTime();
+			case WeatherPackage.WEATHER_SERVICE__ISSUE_TIME:
+				return getIssueTime();
 			case WeatherPackage.WEATHER_SERVICE__WIND_DIRECTION:
 				return getWindDirection();
 			case WeatherPackage.WEATHER_SERVICE__WIND_SPEED:
@@ -1955,6 +2001,9 @@ public class WeatherServiceImpl extends ServiceImpl implements WeatherService {
 		switch (featureID) {
 			case WeatherPackage.WEATHER_SERVICE__FORECASTED_WEATHER_TIME:
 				setForecastedWeatherTime((Instant)newValue);
+				return;
+			case WeatherPackage.WEATHER_SERVICE__ISSUE_TIME:
+				setIssueTime((Instant)newValue);
 				return;
 			case WeatherPackage.WEATHER_SERVICE__WIND_DIRECTION:
 				setWindDirection((Float)newValue);
@@ -2091,6 +2140,9 @@ public class WeatherServiceImpl extends ServiceImpl implements WeatherService {
 			case WeatherPackage.WEATHER_SERVICE__FORECASTED_WEATHER_TIME:
 				setForecastedWeatherTime(FORECASTED_WEATHER_TIME_EDEFAULT);
 				return;
+			case WeatherPackage.WEATHER_SERVICE__ISSUE_TIME:
+				setIssueTime(ISSUE_TIME_EDEFAULT);
+				return;
 			case WeatherPackage.WEATHER_SERVICE__WIND_DIRECTION:
 				setWindDirection(WIND_DIRECTION_EDEFAULT);
 				return;
@@ -2225,6 +2277,8 @@ public class WeatherServiceImpl extends ServiceImpl implements WeatherService {
 		switch (featureID) {
 			case WeatherPackage.WEATHER_SERVICE__FORECASTED_WEATHER_TIME:
 				return FORECASTED_WEATHER_TIME_EDEFAULT == null ? forecastedWeatherTime != null : !FORECASTED_WEATHER_TIME_EDEFAULT.equals(forecastedWeatherTime);
+			case WeatherPackage.WEATHER_SERVICE__ISSUE_TIME:
+				return ISSUE_TIME_EDEFAULT == null ? issueTime != null : !ISSUE_TIME_EDEFAULT.equals(issueTime);
 			case WeatherPackage.WEATHER_SERVICE__WIND_DIRECTION:
 				return WIND_DIRECTION_EDEFAULT == null ? windDirection != null : !WIND_DIRECTION_EDEFAULT.equals(windDirection);
 			case WeatherPackage.WEATHER_SERVICE__WIND_SPEED:
@@ -2321,6 +2375,8 @@ public class WeatherServiceImpl extends ServiceImpl implements WeatherService {
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (forecastedWeatherTime: ");
 		result.append(forecastedWeatherTime);
+		result.append(", issueTime: ");
+		result.append(issueTime);
 		result.append(", windDirection: ");
 		result.append(windDirection);
 		result.append(", windSpeed: ");

@@ -2,12 +2,14 @@ package org.eclipse.fennec.weather.sensinact;
 
 
 import java.util.Optional;
+import java.util.logging.Logger;
 
 import org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider;
 import org.eclipse.fennec.qvt.osgi.api.ModelTransformationConstants;
 import org.eclipse.fennec.qvt.osgi.api.ModelTransformator;
 import org.eclipse.sensinact.core.push.DataUpdate;
 import org.gecko.weather.dwd.fc.WeatherReportStorageHandler;
+import org.gecko.weather.model.weather.MOSMIXSWeatherReport;
 import org.gecko.weather.model.weather.WeatherReports;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
@@ -16,6 +18,8 @@ import org.osgi.service.component.annotations.ReferenceCardinality;
 
 @Component(immediate = true, name = "SensinactWeatherReportStorage")
 public class SensinactWeatherReportStorage implements WeatherReportStorageHandler<WeatherReports> {
+	
+	private static final Logger LOGGER = Logger.getLogger(SensinactWeatherReportStorage.class.getName());
 	
 	
 	@Reference
@@ -37,7 +41,9 @@ public class SensinactWeatherReportStorage implements WeatherReportStorageHandle
 	@Override
 	public <R extends WeatherReports> R saveReport(R report) {
 		WeatherProvider provider = transformator.doTransformation(report);
-		sensinact.pushUpdate(provider);
+		sensinact.pushUpdate(provider)
+		.onSuccess(o -> LOGGER.info("Weather report successfully updated"))
+		.onFailure(t -> LOGGER.severe(String.format("Error while updating WeatherReport %s", t.getMessage())));
 		return report;
 	}
 

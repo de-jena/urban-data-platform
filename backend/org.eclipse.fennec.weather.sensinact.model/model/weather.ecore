@@ -6,37 +6,67 @@
     <details key="value" value="1.0"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="WeatherProvider" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Provider">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="currentWeather" eType="#//WeatherService"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast3H" eType="#//WeatherService"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast6H" eType="#//WeatherService"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast9H" eType="#//WeatherService"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast12H" eType="#//WeatherService"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast15H" eType="#//WeatherService"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast18H" eType="#//WeatherService"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast21H" eType="#//WeatherService"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast24H" eType="#//WeatherService"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast27H" eType="#//WeatherService"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast30H" eType="#//WeatherService"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast33H" eType="#//WeatherService"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast36H" eType="#//WeatherService"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast39H" eType="#//WeatherService"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast42H" eType="#//WeatherService"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast45H" eType="#//WeatherService"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast48H" eType="#//WeatherService"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast51H" eType="#//WeatherService"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast54H" eType="#//WeatherService"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast57H" eType="#//WeatherService"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast60H" eType="#//WeatherService"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast63H" eType="#//WeatherService"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast66H" eType="#//WeatherService"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast69H" eType="#//WeatherService"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast72H" eType="#//WeatherService"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="currentWeather" eType="#//WeatherService"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast3H" eType="#//WeatherService"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast6H" eType="#//WeatherService"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast9H" eType="#//WeatherService"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast12H" eType="#//WeatherService"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast15H" eType="#//WeatherService"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast18H" eType="#//WeatherService"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast21H" eType="#//WeatherService"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast24H" eType="#//WeatherService"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast27H" eType="#//WeatherService"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast30H" eType="#//WeatherService"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast33H" eType="#//WeatherService"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast36H" eType="#//WeatherService"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast39H" eType="#//WeatherService"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast42H" eType="#//WeatherService"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast45H" eType="#//WeatherService"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast48H" eType="#//WeatherService"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast51H" eType="#//WeatherService"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast54H" eType="#//WeatherService"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast57H" eType="#//WeatherService"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast60H" eType="#//WeatherService"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast63H" eType="#//WeatherService"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast66H" eType="#//WeatherService"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast69H" eType="#//WeatherService"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="forecast72H" eType="#//WeatherService"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="WeatherService" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="forecastedWeatherTime"
         eType="ecore:EDataType ../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//EInstant">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The time of the forecasted weather"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="issueTime" eType="ecore:EDataType ../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//EInstant">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The time this report was issued"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="windDirection" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject">

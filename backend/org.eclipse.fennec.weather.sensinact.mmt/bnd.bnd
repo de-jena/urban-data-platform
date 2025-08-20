@@ -11,6 +11,6 @@ Require-Capability: osgi.extender;filter:='(osgi.extender=osgi.configurator)'
 	org.eclipse.sensinact.gateway.core.geo-json,\
 	org.eclipse.sensinact.gateway.core.models.provider,\
 	org.eclipse.fennec.weather.sensinact.model;version=snapshot,\
-	org.gecko.weather.model
+	org.gecko.weather.model;version=latest
 	
 -library: enable-emf

@@ -18,6 +18,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherService#getForecastedWeatherTime <em>Forecasted Weather Time</em>}</li>
+ *   <li>{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherService#getIssueTime <em>Issue Time</em>}</li>
  *   <li>{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherService#getWindDirection <em>Wind Direction</em>}</li>
  *   <li>{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherService#getWindSpeed <em>Wind Speed</em>}</li>
  *   <li>{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherService#getWindGustLastHour <em>Wind Gust Last Hour</em>}</li>
@@ -90,6 +91,31 @@ public interface WeatherService extends Service {
 	 * @generated
 	 */
 	void setForecastedWeatherTime(Instant value);
+
+	/**
+	 * Returns the value of the '<em><b>Issue Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The time this report was issued
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Issue Time</em>' attribute.
+	 * @see #setIssueTime(Instant)
+	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.WeatherPackage#getWeatherService_IssueTime()
+	 * @model dataType="org.eclipse.sensinact.model.core.provider.EInstant"
+	 * @generated
+	 */
+	Instant getIssueTime();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherService#getIssueTime <em>Issue Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Issue Time</em>' attribute.
+	 * @see #getIssueTime()
+	 * @generated
+	 */
+	void setIssueTime(Instant value);
 
 	/**
 	 * Returns the value of the '<em><b>Wind Direction</b></em>' attribute.

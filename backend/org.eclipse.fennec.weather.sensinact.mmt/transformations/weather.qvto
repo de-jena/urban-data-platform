@@ -46,157 +46,162 @@ mapping WEATHER::WeatherReports::toSensinactWeatherReport(): SENSINACT::WeatherP
 
 mapping WEATHER::MOSMIXSWeatherReport:: toWeatherService() : SENSINACT::WeatherService {
 
-	var featureName : String := "forecastedWeatherTime";
+	var featureName : String := "issueTime";
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
+	issueTime := getInstant(self.issueTime).oclAsType(EInstant);
+
+	featureName := "forecastedWeatherTime";
 	forecastedWeatherTime := getInstant(self.timestamp).oclAsType(EInstant);
-	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode());
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	featureName := "windDirection";
 	windDirection := self.windDirection;
-	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode());
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	windSpeed := self.windSpeed;
+	log("wind Speed " + self.windSpeed.toString());
 	featureName := "windSpeed";
-	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode());
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	windGustLastHour := self.windGustLastHour;
 	featureName := "windGustLastHour";
-	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode());
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	windGustLastThreeHours := self.windGustLastThreeHours;
 	featureName := "windGustLastThreeHours";
-	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode());
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	windGustMaxLast12Hours := self.windGustMaxLast12Hours;
 	featureName := "windGustMaxLast12Hours";
-	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode());
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	windGustProb25 := self.windGustProb25;
 	featureName := "windGustProb25";
-	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode());
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	windGustProb40 := self.windGustProb40;
 	featureName := "windGustProb40";
-	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode());
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	windGustProb55 := self.windGustProb55;
 	featureName := "windGustProb55";
-	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode());
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	cloudCoverTotal := self.cloudCoverTotal;
 	featureName := "cloudCoverTotal";
-	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode());
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	cloudCoverBelow500 := self.cloudCoverBelow500;
 	featureName := "cloudCoverBelow500";
-	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode());
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	cloudCoverEffective := self.cloudCoverEffective;
 	featureName := "cloudCoverEffective";
-	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode());
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	cloudCoverHigh := self.cloudCoverHigh;
 	featureName := "cloudCoverHigh";
-	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode());
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	cloudCoverMid := self.cloudCoverMid;
 	featureName := "cloudCoverMid";
-	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode());
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	cloudCoverLow := self.cloudCoverLow;
 	featureName := "cloudCoverLow";
-	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode());
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	precipitationLarger02Last6 := self.precipitationLarger02Last6;
 	featureName := "precipitationLarger02Last6";
-	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode());
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	precipitationLarger50Last6 := self.precipitationLarger50Last6;
 	featureName := "precipitationLarger50Last6";
-	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode());
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	precipitationLarger02LastDay := self.precipitationLarger02LastDay;
 	featureName := "precipitationLarger02LastDay";
-	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode());
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	precipitationLarger50LastDay := self.precipitationLarger50LastDay;
 	featureName := "precipitationLarger50LastDay";
-	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode());
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	precipitationLarger00Last12 := self.precipitationLarger00Last12;
 	featureName := "precipitationLarger00Last12";
-	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode());
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	precipitationLarger02Last12 := self.precipitationLarger02Last12;
 	featureName := "precipitationLarger02Last12";
-	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode());
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	precipitationLarger10Last12 := self.precipitationLarger10Last12;
 	featureName := "precipitationLarger10Last12";
-	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode());
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	precipitationLarger50Last12 := self.precipitationLarger50Last12;
 	featureName := "precipitationLarger50Last12";
-	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode());
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	precipitationSignificantWeatherTotal := self.precipitationSignificantWeatherTotal;
 	featureName := "precipitationSignificantWeatherTotal";
-	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode());
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	precipitationSignificantWeatherLast3 := self.precipitationSignificantWeatherLast3;
 	featureName := "precipitationSignificantWeatherLast3";
-	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode());
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	tempAboveSurface5 := self.tempAboveSurface5;
 	featureName := "tempAboveSurface5";
-	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode());
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	tempAboveSurface200 := self.tempAboveSurface200;
 	featureName := "tempAboveSurface200";
-	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode());
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	tempDewpointAboveSurface200 := self.tempDewpointAboveSurface200;
 	featureName := "tempDewpointAboveSurface200";
-	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode());
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	tempMinLast12 := self.tempMinLast12;
 	featureName := "tempMinLast12";
-	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode());
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	tempMaxLast12 := self.tempMaxLast12;
 	featureName := "tempMaxLast12";
-	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode());
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	fogPropLast1 := self.fogPropLast1;
 	featureName := "fogPropLast1";
-	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode());
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	fogPropLast6 := self.fogPropLast6;
 	featureName := "fogPropLast6";
-	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode());
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	fogPropLast12 := self.fogPropLast12;
 	featureName := "fogPropLast12";
-	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode());
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	snowRainEqLast1 := self.snowRainEqLast1;
 	featureName := "snowRainEqLast1";
-	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode());
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	snowRainEqLast3 := self.snowRainEqLast3;
 	featureName := "snowRainEqLast3";
-	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode());
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	visibility := self.visibility;
 	featureName := "visibility";
-	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode());
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	surfacePressure := self.surfacePressure;
 	featureName := "surfacePressure";
-	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode());
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	irRadianceGlobal := self.irRadianceGlobal;
 	featureName := "irRadianceGlobal";
-	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode());
+	metadata += self.map toMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDocumentation(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toUnit(), SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature(featureName).toDWDCode(), getInstant(self.issueTime));
 	
 	ww := self.significantWeather3Hours.toString();
 	w1w2_w1 := self.significantWeather6Hours.w1.toString();
@@ -219,9 +224,9 @@ mapping WEATHER::MOSMIXSWeatherReport:: toWeatherService() : SENSINACT::WeatherS
 	var w1_metadataValues := Sequence{w1_def, w1_def, w1_def, w1_meaning, w1_dwd};
 	var w2_metadataValues := Sequence{w2_def, w2_def, w2_def, w2_meaning, w2_dwd};
 	
-	metadata += self.map toGeneralMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature("ww"), metadataKeys, ww_metadataValues);
-	metadata += self.map toGeneralMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature("w1w2_w1"), metadataKeys, w1_metadataValues);
-	metadata += self.map toGeneralMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature("w1w2_w2"), metadataKeys, w2_metadataValues);
+	metadata += self.map toGeneralMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature("ww"), metadataKeys, ww_metadataValues, getInstant(self.issueTime));
+	metadata += self.map toGeneralMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature("w1w2_w1"), metadataKeys, w1_metadataValues, getInstant(self.issueTime));
+	metadata += self.map toGeneralMetadataEntry(SENSINACT::WeatherService.oclAsType(ECORE::EClass).getEStructuralFeature("w1w2_w2"), metadataKeys, w2_metadataValues, getInstant(self.issueTime));
 }
 
 
@@ -253,17 +258,18 @@ query createInstance(classType : ECORE::EClass) : PROVIDER::Service {
 }
 
 mapping WEATHER::WeatherReports::toAdmin(): PROVIDER::Admin {
-	friendlyName := self.reports->first().weatherStation.name;
+	friendlyName := "DWD Weather Report for " + self.reports->first().station.name;
 	modelPackageUri := "https://fennec.eclipse.org/sensinact/weather/1.0";
+	description := "DWD Weather Report for Station "+ self.reports->first().station.name + " from Weather Station " + self.reports->first().weatherStation.id;
 	model := "weatherprovider";
 	location := self.reports->first().weatherStation.location.toGeoJson();
 	metadata += self.reports->first().oclAsType(WEATHER::MOSMIXSWeatherReport).map toGeneralMetadataEntry(PROVIDER::Admin.oclAsType(ECORE::EClass).getEStructuralFeature("location"), "description", "The location of the weather station");
 }
 
-mapping WEATHER::MOSMIXSWeatherReport::toGeneralMetadataEntry(feature : ECORE::EStructuralFeature, keys : Sequence(String), values : Sequence(String)) : PROVIDER::FeatureMetadata {
+mapping WEATHER::MOSMIXSWeatherReport::toGeneralMetadataEntry(feature : ECORE::EStructuralFeature, keys : Sequence(String), values : Sequence(String), timestamp : EInstant) : PROVIDER::FeatureMetadata {
 	
 	key := feature;
-	value := self.map toGeneralMetadata(keys, values);	
+	value := self.map toGeneralMetadata(keys, values, timestamp);	
 }
 
 mapping WEATHER::MOSMIXSWeatherReport::toGeneralMetadataEntry(feature : ECORE::EStructuralFeature, propKey : String, propValue : String) : PROVIDER::FeatureMetadata {
@@ -272,13 +278,13 @@ mapping WEATHER::MOSMIXSWeatherReport::toGeneralMetadataEntry(feature : ECORE::E
 	value := self.map toGeneralMetadata(propKey, propValue);	
 }
 
-mapping WEATHER::MOSMIXSWeatherReport::toMetadataEntry(feature : ECORE::EStructuralFeature, documentation : String, unit: String, dwdId : String) : PROVIDER::FeatureMetadata {
+mapping WEATHER::MOSMIXSWeatherReport::toMetadataEntry(feature : ECORE::EStructuralFeature, documentation : String, unit: String, dwdId : String, time : EInstant) : PROVIDER::FeatureMetadata {
 	
 	key := feature;
-	value := self.map toMetadata(documentation, unit, dwdId);	
+	value := self.map toMetadata(documentation, unit, dwdId, time);	
 }
 
-mapping WEATHER::MOSMIXSWeatherReport::toMetadata(description : String, unit : String, dwdId : String): PROVIDER::ResourceValueMetadata {
+mapping WEATHER::MOSMIXSWeatherReport::toMetadata(description : String, unit : String, dwdId : String, issueTime : EInstant): PROVIDER::ResourceValueMetadata {
 //	extra += toMetadataValueMap("timestamp", time); 
 	if(unit.oclIsUndefined().not()){
 		extra += toMetadataValueMap("unit", unit); //this ends up in unitOfMeasurement.symbol
@@ -291,6 +297,15 @@ mapping WEATHER::MOSMIXSWeatherReport::toMetadata(description : String, unit : S
 		extra += toMetadataValueMap("description", description);
 		extra += toMetadataValueMap("sensorthings.unit.definition", description); //this ends up in unitOfMeasurement.definition
 	};
+	var v := object PROVIDER::MetadataValue {
+		timestamp := getENow();
+		value := issueTime;
+	};
+	var entry := object PROVIDER::MetadataValueMap{
+       key := "issue.time";
+       value := v; 
+    };
+    extra += entry;
 	timestamp := getENow();
 }
 
@@ -299,7 +314,7 @@ mapping WEATHER::MOSMIXSWeatherReport::toGeneralMetadata(propKey : String, propV
 	extra += toMetadataValueMap(propKey, propValue);
 }
 
-mapping WEATHER::MOSMIXSWeatherReport::toGeneralMetadata(keys : Sequence(String), values : Sequence(String)): PROVIDER::ResourceValueMetadata {
+mapping WEATHER::MOSMIXSWeatherReport::toGeneralMetadata(keys : Sequence(String), values : Sequence(String), time: EInstant): PROVIDER::ResourceValueMetadata {
 
 	var i : Integer := 1;
     while (i <= keys->size()) {
@@ -307,7 +322,17 @@ mapping WEATHER::MOSMIXSWeatherReport::toGeneralMetadata(keys : Sequence(String)
         var value : String := values->at(i);
        	extra += toMetadataValueMap(key, value);
         i := i + 1;
-    }
+    };
+    var v := object PROVIDER::MetadataValue {
+		timestamp := getENow();
+		value := time;
+	};
+	var entry := object PROVIDER::MetadataValueMap{
+       key := "issue.time";
+       value := v; 
+    };
+    extra += entry;
+    timestamp := getENow();
     
 }
 
