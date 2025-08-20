@@ -34,7 +34,7 @@ import de.jena.chirpstack.model.chirpstack.Teros21;
  */
 @CronExpression(name = "Chirpstack-Rule-Test", cron = { Constants.CRON_EXPRESSION_MINUTELY,
 		Constants.CRON_EXPRESSION_REBOOT })
-@Component(immediate = true, name = "ChirpstackTestComponent")
+//@Component(immediate = true, name = "ChirpstackTestComponent")
 public class ChirpstackTestComponent implements CronJob{
 	
 	private static final Logger LOGGER = Logger.getLogger(ChirpstackTestComponent.class.getName());
