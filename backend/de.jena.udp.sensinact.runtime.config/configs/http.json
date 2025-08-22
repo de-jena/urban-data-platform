@@ -1,19 +1,19 @@
 {
-	":configurator:resource-version": 1,
-	":configurator:version": "1.0.0",
-	":configurator:symbolic-name": "UDP Http",
-		"org.apache.felix.http~mdoHttp": {
-		"org.osgi.service.http.port": "8080",
-		"org.osgi.service.http.host": "0.0.0.0",
-		"org.apache.felix.http.context_path": "udp/",
-		"org.apache.felix.http.name": "UDP Http Whiteboard",
-		"org.apache.felix.http.runtime.init.id": "udp",
-		"org.apache.felix.http.runtime.init.rest": "true",
-		"org.apache.felix.http.debug" : true
-	},
-	"JakartarsServletWhiteboardRuntimeComponent~udprest": {
-		"jersey.jakartars.whiteboard.name": "udprest",
-		"jersey.context.path": "rest",
-		"osgi.http.whiteboard.target": "(rest=true)"
-	}
+    ":configurator:resource-version": 1,
+    ":configurator:version": "1.0.0",
+    ":configurator:symbolic-name": "UDP Http",
+    "org.apache.felix.http~mdoHttp": {
+        "org.osgi.service.http.port": "8080",
+        "org.osgi.service.http.host": "0.0.0.0",
+        "org.apache.felix.http.context_path": "udp/",
+        "org.apache.felix.http.name": "UDP Http Whiteboard",
+        "org.apache.felix.http.runtime.init.id": "udp",
+        "org.apache.felix.http.runtime.init.rest": "true",
+        "org.apache.felix.http.debug": true
+    },
+    "JakartarsServletWhiteboardRuntimeComponent~udprest": {
+        "jersey.jakartars.whiteboard.name": "udprest",
+        "jersey.context.path": "rest",
+        "osgi.http.whiteboard.target": "(rest=true)"
+    }
 }
