@@ -3,10 +3,10 @@
 # Jena - WISSENsAllmende - Urban Data Platform 
 
 ## Documentation
-[SensiNact / History](docs/sensinact-configuration.md)
-[Weather adapter](docs/weather-adapter/UDPSensinactWeatherAdapter.md)
-[Humidity sensor rules](docs/humidity-sensors-rules/HumiditySensorRulesImplementation.md)
-[ChirpStack Connector](docs/chirpstack/chirpstack-connector.md)
+* [SensiNact / History](docs/sensinact-configuration.md)
+* [Weather adapter](docs/weather-adapter/UDPSensinactWeatherAdapter.md)
+* [Humidity sensor rules](docs/humidity-sensors-rules/HumiditySensorRulesImplementation.md)
+* [ChirpStack Connector](docs/chirpstack/chirpstack-connector.md)
 
 ## Resources 
 
