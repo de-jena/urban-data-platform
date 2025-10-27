@@ -27,8 +27,8 @@ import org.eclipse.sensinact.core.push.DataUpdate;
 import org.eclipse.sensinact.gateway.geojson.Coordinates;
 import org.eclipse.sensinact.gateway.geojson.Feature;
 import org.eclipse.sensinact.gateway.geojson.FeatureCollection;
+import org.eclipse.sensinact.gateway.geojson.Point;
 import org.eclipse.sensinact.gateway.geojson.Polygon;
-import org.eclipse.sensinact.gateway.geojson.utils.GeoJsonUtils;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.ConfigurationPolicy;
@@ -112,7 +112,7 @@ public class TrafficConflictNotification implements TypedEventHandler<ResourceDa
 		provider.setId("Conflict01");
 		provider.setAdmin(admin);
 		admin.setViewport(createViewport());
-		admin.setLocation(GeoJsonUtils.point(11.581274, 50.921142));
+		admin.setLocation(new Point(11.581274, 50.921142));
 		conflict = ConflictFactory.eINSTANCE.createConflict();
 		conflict.setConflict(true);
 		provider.setConflict(conflict);
@@ -163,43 +163,33 @@ public class TrafficConflictNotification implements TypedEventHandler<ResourceDa
 	}
 
 	private Polygon createViewport() {
-		Feature feature = new Feature();
-		Polygon view = new Polygon();
-		feature.geometry = view;
-		view.coordinates = new ArrayList<>();
+		List<List<Coordinates>> coordinates = new ArrayList<>();
 		List<Coordinates> coordRF2 = new ArrayList<>();
-		view.coordinates.add(coordRF2);
-		coordRF2.add(createCoordinate(50.92114749250047, 11.581174804340378));
-		coordRF2.add(createCoordinate(50.92103629166223, 11.581092406951655));
-		coordRF2.add(createCoordinate(50.921015807268105, 11.581132445119607));
-		coordRF2.add(createCoordinate(50.92114163983149, 11.58123631225098));
-		coordRF2.add(createCoordinate(50.92114749250047, 11.581174804340378));
+		coordinates.add(coordRF2);
+		coordRF2.add(new Coordinates(11.581174804340378,50.92114749250047));
+		coordRF2.add(new Coordinates(11.581092406951655,50.92103629166223));
+		coordRF2.add(new Coordinates(11.581132445119607,50.921015807268105));
+		coordRF2.add(new Coordinates(11.58123631225098,50.92114163983149));
+		coordRF2.add(new Coordinates(11.581174804340378,50.92114749250047));
 		List<Coordinates> coordRF3 = new ArrayList<>();
-		view.coordinates.add(coordRF3);
-		coordRF3.add(createCoordinate(50.921183244297964, 11.581350041018055));
-		coordRF3.add(createCoordinate(50.921157831897375, 11.58131050400172));
-		coordRF3.add(createCoordinate(50.921121668072885, 11.581420587456762));
-		coordRF3.add(createCoordinate(50.92115245619581, 11.581443069289548));
-		coordRF3.add(createCoordinate(50.921183244297964, 11.581350041018055));
-		return view;
-	}
-
-	private Coordinates createCoordinate(double latitude, double longitude) {
-		Coordinates c = new Coordinates();
-		c.latitude = latitude;
-		c.longitude = longitude;
-		return c;
+		coordinates.add(coordRF3);
+		coordRF3.add(new Coordinates(11.581350041018055,50.921183244297964));
+		coordRF3.add(new Coordinates(11.58131050400172,50.921157831897375));
+		coordRF3.add(new Coordinates(11.581420587456762,50.921121668072885));
+		coordRF3.add(new Coordinates(11.581443069289548,50.92115245619581));
+		coordRF3.add(new Coordinates(11.581350041018055,50.921183244297964));
+		return new Polygon(coordinates, null, null);
 	}
 
 	private boolean isBikeToSouth(ResourceDataNotification event) {
 		if (event.newValue() == null) {
 			return false;
 		}
-		List<Feature> features = ((FeatureCollection) event.newValue()).features;
+		List<Feature> features = ((FeatureCollection) event.newValue()).features();
 		for (Feature feature : features) {
-			Double heading = (Double) feature.properties.get("heading");
-			Double speed = (Double) feature.properties.get("speed");
-			Long id = (Long) feature.properties.get("id");
+			Double heading = (Double) feature.properties().get("heading");
+			Double speed = (Double) feature.properties().get("speed");
+			Long id = (Long) feature.properties().get("id");
 			if (heading > config.minHeading() && heading < config.maxHeading()
 					&& speed > config.minBikeSpeed()) {
 				state.bikeId = id;

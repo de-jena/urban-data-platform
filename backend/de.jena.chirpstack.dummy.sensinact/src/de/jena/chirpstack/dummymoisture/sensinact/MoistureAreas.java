@@ -15,7 +15,6 @@ package de.jena.chirpstack.dummymoisture.sensinact;
 
 import java.lang.System.Logger;
 import java.lang.System.Logger.Level;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.Executors;
@@ -105,7 +104,7 @@ public class MoistureAreas {
 			ms.setName(name);
 			ms.setId(id);
 			MoistureAdmin admin = DummyMoistureFactory.eINSTANCE.createMoistureAdmin();
-			admin.setLocation(createPoint(lon,lat));
+			admin.setLocation(new Point(lon, lat));
 			admin.setSoilType(SoilType.CLAY);
 			ms.setAdmin(admin);
 			
@@ -125,36 +124,13 @@ public class MoistureAreas {
 		}
 
 		private FeatureCollection createFeature(double[][] v) {
-			FeatureCollection fc = new FeatureCollection();
-			Feature f1 = new Feature();
-			f1.geometry = createPolygon(v);
-			fc.features = Arrays.asList(f1);
-			return fc;
+			Feature f1 = new Feature(id, createPolygon(v), null, null, null);
+			return new FeatureCollection(Arrays.asList(f1), null, null);
 		}
 
 		static Polygon createPolygon(double[][] v) {
-			Polygon l = new Polygon();
-			ArrayList<Coordinates> coordinates = new ArrayList<>();
-			for (double[] a : v) {
-				coordinates.add(createCoordinate(a[0], a[1]));
-			}
-
-			l.coordinates = new ArrayList<>();
-			l.coordinates.add(coordinates);
-			return l;
-		}
-
-		static Point createPoint(double lon, double lat) {
-			Point l = new Point();
-			l.coordinates = createCoordinate(lon, lat);
-			return l;
-		}
-
-		static Coordinates createCoordinate(double lon, double lat) {
-			Coordinates c = new Coordinates();
-			c.longitude = lon;
-			c.latitude = lat;
-			return c;
+			List<Coordinates> coordinates = Arrays.stream(v).map(a -> new Coordinates(a[0], a[1])).toList();
+			return new Polygon(Arrays.asList(coordinates), null, null);
 		}
 	}
 	

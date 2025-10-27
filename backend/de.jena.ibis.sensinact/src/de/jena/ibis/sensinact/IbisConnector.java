@@ -29,7 +29,7 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.fennec.qvt.osgi.api.ModelTransformator;
 import org.eclipse.sensinact.core.push.DataUpdate;
-import org.eclipse.sensinact.gateway.geojson.utils.GeoJsonUtils;
+import org.eclipse.sensinact.gateway.geojson.Point;
 import org.eclipse.sensinact.model.core.provider.Service;
 import org.gecko.emf.json.annotation.RequireEMFJson;
 import org.gecko.emf.json.constants.EMFJs;
@@ -158,7 +158,7 @@ public class IbisConnector {
 		GNSSLocationData gnss = (GNSSLocationData) dto.data;
 		long timestamp = gnss.getDate().getEpochSecond() + gnss.getTime().getEpochSecond();
 		IbisAdminDto adminDto = new IbisAdminDto(deviceId,
-				GeoJsonUtils.point(gnss.getLongitudeDegree(), gnss.getLatitudeDegree()), timestamp);
+				new Point(gnss.getLongitudeDegree(), gnss.getLatitudeDegree()), timestamp);
 		sensiNact.pushUpdate(adminDto)
 				.onFailure(e -> LOGGER.log(Level.ERROR, "Error while pushing signal to sensinact.", e));
 	}

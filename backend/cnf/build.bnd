@@ -55,7 +55,7 @@ javac.debug:  on
 -releaserepo: UDP_Nexus_Release
 
 sensinact.version: 0.0.2-SNAPSHOT
-jackson.version: 2.16.0
+jackson.version: 2.20.0
 jersey.version: 3.0.8
 jakarta.ws.rs-api.version: 3.1.0
 upd.models.version: 1.2.0-SNAPSHOT

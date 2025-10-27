@@ -18,6 +18,7 @@ import java.lang.System.Logger.Level;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Executors;
 
@@ -102,7 +103,7 @@ public class DraginoMoistureAreaNotifier implements TypedEventHandler<ResourceDa
 		MoistureStatus s = DummyMoistureFactory.eINSTANCE.createMoistureStatus();
 		logger.log(Level.INFO, "Send moisture data ({1}%) for {0}.", name, 10);
 		s.setValue(10);
-		s.setObservedArea(createFeature((Point) event.newValue()));
+		s.setObservedArea(createFeature(name, (Point) event.newValue()));
 
 		if (soilValues.containsKey(event.provider())) {
 			Soil soil = soilValues.get(event.provider());
@@ -130,38 +131,24 @@ public class DraginoMoistureAreaNotifier implements TypedEventHandler<ResourceDa
 		return true;
 	}
 
-	private GeoJsonObject createFeature(Point center) {
-		FeatureCollection fc = new FeatureCollection();
-		Feature f1 = new Feature();
-		f1.geometry = createPolygon(center);
-		fc.features = Arrays.asList(f1);
-		return fc;
+	private GeoJsonObject createFeature(String id, Point center) {
+		Feature f1 = new Feature(id, createPolygon(center), null, null, null);
+		return new FeatureCollection(Arrays.asList(f1), null, null);
 	}
 
 	private Polygon createPolygon(Point center) {
-		Polygon l = new Polygon();
 		ArrayList<Coordinates> coordinates = new ArrayList<>();
-		coordinates
-				.add(createCoordinate(center.coordinates.latitude - DISTANCE, center.coordinates.longitude - DISTANCE));
-		coordinates
-				.add(createCoordinate(center.coordinates.latitude - DISTANCE, center.coordinates.longitude + DISTANCE));
-		coordinates
-				.add(createCoordinate(center.coordinates.latitude + DISTANCE, center.coordinates.longitude + DISTANCE));
-		coordinates
-				.add(createCoordinate(center.coordinates.latitude + DISTANCE, center.coordinates.longitude - DISTANCE));
-		coordinates
-				.add(createCoordinate(center.coordinates.latitude - DISTANCE, center.coordinates.longitude - DISTANCE));
+		double latitude = center.coordinates().latitude();
+		double longitude = center.coordinates().longitude();
+		coordinates.add(new Coordinates(longitude - DISTANCE, latitude - DISTANCE));
+		coordinates.add(new Coordinates(longitude + DISTANCE, latitude - DISTANCE));
+		coordinates.add(new Coordinates(longitude + DISTANCE, latitude + DISTANCE));
+		coordinates.add(new Coordinates(longitude - DISTANCE, latitude + DISTANCE));
+		coordinates.add(new Coordinates(longitude - DISTANCE, latitude - DISTANCE));
 
-		l.coordinates = new ArrayList<>();
-		l.coordinates.add(coordinates);
-		return l;
-	}
-
-	private Coordinates createCoordinate(double latitude, double longitude) {
-		Coordinates c = new Coordinates();
-		c.latitude = latitude;
-		c.longitude = longitude;
-		return c;
+		List<List<Coordinates>> c = new ArrayList<>();
+		c.add(coordinates);
+		return new Polygon(c, null, null);
 	}
 
 }

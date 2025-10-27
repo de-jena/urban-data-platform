@@ -187,13 +187,9 @@ public class TTNConnectionComponent {
 
 	private BulkGenericDto createDTO(TtnUplinkPayload payload) {
 		List<GenericDto> model = new ArrayList<>();
-		Point location = new Point();
 		RxMetadata rxMetadata = payload.getUplinkMessage().getRxMetadata().get(0);
 		Location ttnLocation = rxMetadata.getLocation();
-		location.coordinates = new Coordinates();
-		location.coordinates.latitude = ttnLocation.getLatitude();
-		location.coordinates.longitude = ttnLocation.getLongitude();
-		location.coordinates.elevation = ttnLocation.getAltitude();
+		Point location = new Point(new Coordinates(ttnLocation.getLongitude(), ttnLocation.getLatitude(),ttnLocation.getAltitude()), null, null);
 
 		Instant timestamp = Instant.parse(rxMetadata.getReceivedAt());
 		UplinkMessage uplinkMessage = payload.getUplinkMessage();
@@ -276,18 +272,4 @@ public class TTNConnectionComponent {
 			return Map.of("sensorthings.hide", "true");
 		}
 	}
-	
-	private void fixLocation(TtnUplinkPayload payload, Provider push) {
-		Point location = new Point();
-		RxMetadata rxMetadata = payload.getUplinkMessage().getRxMetadata().get(0);
-		Location ttnLocation = rxMetadata.getLocation();
-		location.coordinates = new Coordinates();
-		location.coordinates.latitude = ttnLocation.getLatitude();
-		location.coordinates.longitude = ttnLocation.getLongitude();
-		location.coordinates.elevation = ttnLocation.getAltitude();
-		Admin admin = push.getAdmin();
-		admin.setLocation(location);
-//		admin.setModelUri(EcoreUtil.getURI(push).toString());
-	}
-
 }

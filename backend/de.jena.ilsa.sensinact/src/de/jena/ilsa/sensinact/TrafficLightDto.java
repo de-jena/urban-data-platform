@@ -22,6 +22,7 @@ import org.eclipse.sensinact.core.annotation.dto.ModelPackageUri;
 import org.eclipse.sensinact.core.annotation.dto.Provider;
 import org.eclipse.sensinact.core.annotation.dto.Resource;
 import org.eclipse.sensinact.core.annotation.dto.Service;
+import org.eclipse.sensinact.core.annotation.dto.ServiceModel;
 import org.eclipse.sensinact.core.annotation.dto.Timestamp;
 
 import de.jena.ilsa.sensinact.model.ilsa.IlsaPackage;
@@ -51,7 +52,7 @@ public class TrafficLightDto {
 	@Service
 	public String signal;
 
-	@Service
+	@ServiceModel
 	public EClass serviceEClass = IlsaPackage.Literals.SIGNAL;
 
 	@Resource("color")

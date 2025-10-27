@@ -19,7 +19,6 @@ import java.lang.System.Logger.Level;
 import org.eclipse.fennec.qvt.osgi.api.ModelTransformationConstants;
 import org.eclipse.fennec.qvt.osgi.api.ModelTransformator;
 import org.eclipse.sensinact.core.push.DataUpdate;
-import org.eclipse.sensinact.gateway.geojson.Coordinates;
 import org.eclipse.sensinact.gateway.geojson.Point;
 import org.eclipse.sensinact.model.core.provider.Admin;
 import org.osgi.annotation.bundle.Requirement;
@@ -91,10 +90,6 @@ public class IceSensorConnector {
 	}
 	
 	private Point createPoint(IceSENSOR sensor) {
-		Point point = new Point();
-		point.coordinates = new Coordinates();
-		point.coordinates.latitude = sensor.getCoords().getLatitude();
-		point.coordinates.longitude = sensor.getCoords().getLongitude();
-		return point;
+		return new Point(sensor.getCoords().getLongitude(),sensor.getCoords().getLatitude());
 	}
 }

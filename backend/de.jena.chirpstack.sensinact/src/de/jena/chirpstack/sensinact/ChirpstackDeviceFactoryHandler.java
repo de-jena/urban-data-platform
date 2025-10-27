@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.sensinact.core.push.DataUpdate;
-import org.eclipse.sensinact.gateway.geojson.utils.GeoJsonUtils;
+import org.eclipse.sensinact.gateway.geojson.Point;
 import org.eclipse.sensinact.gateway.southbound.mqtt.api.IMqttMessage;
 import org.eclipse.sensinact.gateway.southbound.mqtt.api.IMqttMessageListener;
 import org.eclipse.sensinact.model.core.provider.Admin;
@@ -333,7 +333,7 @@ public class ChirpstackDeviceFactoryHandler implements IMqttMessageListener {
             double longitude = location.path("longitude").asDouble();
             double altitude = location.path("altitude").asDouble();
             if (latitude != 0.0 || longitude != 0.0) {
-            	admin.setLocation(GeoJsonUtils.point(longitude, latitude));
+            	admin.setLocation(new Point(longitude, latitude));
                 logger.log(Level.DEBUG, "Device {0} location: lat={1}, lon={2}, alt={3}", 
                     providerId, latitude, longitude, altitude);
                 // Location setting would depend on your specific model structure
