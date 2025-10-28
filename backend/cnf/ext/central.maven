@@ -138,8 +138,9 @@ org.apache.felix:org.apache.felix.configadmin.plugin.interpolation:1.2.8
 org.apache.felix:org.apache.felix.scr:2.2.12
 
 #Scheduler
-biz.aQute:biz.aQute.api.scheduler:1.11.0
-biz.aQute:biz.aQute.scheduler.basic.provider:1.11.0
+#org.eclipse.osgi-technology.scheduler:api:0.0.1-SNAPSHOT                                                                                                         
+#org.eclipse.osgi-technology.scheduler:basic:0.0.1-SNAPSHOT
+
 biz.aQute:biz.aQute.gogo.commands.provider:1.11.0-SNAPSHOT
 
 #time4j

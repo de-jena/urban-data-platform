@@ -8,10 +8,10 @@
 
 -plugin.0.maven_central:\
 	aQute.bnd.repository.maven.provider.MavenBndRepository;\
-		releaseUrl=https://repo.maven.apache.org/maven2/;\
-		snapshotUrl			= "https://oss.sonatype.org/content/repositories/snapshots/, https://central.sonatype.com/repository/maven-snapshots/";\
-		index=${.}/central.maven;\
-		poll_time 			= -1;\
+		releaseUrl			=https://repo.maven.apache.org/maven2/;\
+		snapshotUrl			="https://oss.sonatype.org/content/repositories/snapshots/,https://central.sonatype.com/repository/maven-snapshots/";\
+		index				=${.}/central.maven;\
+		poll.time			=-1;\
 		name='Maven Central'
 
 -plugin.sensinact: \
@@ -20,7 +20,7 @@
 		snapshotUrl			= "https://repo.eclipse.org/content/groups/sensinact/";\
 		index				= "${.}/sensinact.maven";\
 		readOnly			= true;\
-		poll_time 			= -1;\
+		poll.time 			= -1;\
 		name='SensiNact SDK'
 
 -plugin.osgi: \
@@ -28,27 +28,27 @@
 		releaseUrl			= "https://repo.maven.apache.org/maven2/";\
 		index				= "${.}/osgi.maven";\
 		readOnly			= true;\
-		poll_time 			= -1;\
+		poll.time 			= -1;\
 		name='OSGi Deps'
 
 -plugin.Local: \
 	aQute.bnd.deployer.repository.LocalIndexedRepo; \
-		name = Local; \
-		pretty = true; \
-		local = ${build}/local
+		name 				= Local; \
+		pretty				= true;\
+		local				= ${build}/local
 
 -plugin.gecko: \
 	aQute.bnd.repository.maven.provider.MavenBndRepository;\
-		releaseUrl="https://devel.data-in-motion.biz/nexus/repository/dim-release/,https://devel.data-in-motion.biz/nexus/repository/maven-public/";\
-		snapshotUrl=https://devel.data-in-motion.biz/nexus/repository/dim-snapshot/;\
-		index=${.}/dim_release.maven;\
-		poll_time 			= -1;\
-		name='DIM_Nexus_Release'
-		
+		releaseUrl			="https://devel.data-in-motion.biz/nexus/repository/dim-release/,https://devel.data-in-motion.biz/nexus/repository/maven-public/";\
+		snapshotUrl			=https://devel.data-in-motion.biz/nexus/repository/dim-snapshot/;\
+		index				=${.}/dim_release.maven;\
+		poll.time 			= -1;\
+		name				='DIM_Nexus_Release'
+
 -plugin.release: \
-    aQute.bnd.repository.maven.provider.MavenBndRepository;\
-        releaseUrl=https://devel.data-in-motion.biz/nexus/repository/dim-release/;\
-        snapshotUrl=https://devel.data-in-motion.biz/nexus/repository/dim-snapshot/;\
-        index=${.}/udp_release.maven;\
-        poll_time           = -1;\
-        name='UDP_Nexus_Release'
+	aQute.bnd.repository.maven.provider.MavenBndRepository;\
+		releaseUrl			=https://devel.data-in-motion.biz/nexus/repository/dim-release/;\
+		snapshotUrl			=https://devel.data-in-motion.biz/nexus/repository/dim-snapshot/;\
+		index				=${.}/udp_release.maven;\
+		poll.time			= -1;\
+		name				='UDP_Nexus_Release'
