@@ -35,7 +35,6 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.fennec.qvt.osgi.api.ModelTransformator;
 import org.eclipse.sensinact.core.push.DataUpdate;
 import org.eclipse.sensinact.core.push.dto.GenericDto;
-import org.eclipse.sensinact.gateway.geojson.Coordinates;
 import org.eclipse.sensinact.gateway.geojson.Point;
 import org.eclipse.sensinact.model.core.provider.Admin;
 import org.eclipse.sensinact.model.core.provider.MetadataValue;
@@ -230,11 +229,7 @@ public class TrafficLight {
 		if (geoJson == null || geoJson.getBbox() == null) {
 			return null;
 		}
-		Point location = new Point();
-		location.coordinates = new Coordinates();
-		location.coordinates.longitude = geoJson.getBbox()[0];
-		location.coordinates.latitude = geoJson.getBbox()[1];
-		return location;
+		return new Point(geoJson.getBbox()[0], geoJson.getBbox()[1]);
 	}
 
 }

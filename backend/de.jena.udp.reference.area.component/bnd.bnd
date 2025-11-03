@@ -1,0 +1,13 @@
+-library: enable-emf
+-buildpath: \
+	de.jena.reference.area.model;version=snapshot,\
+	net.opengis.kml.model,\
+	org.gecko.emf.json,\
+	de.jena.udp.reference.area.sensinact.model;version=snapshot,\
+	org.eclipse.sensinact.gateway.core.models.provider,\
+	org.eclipse.sensinact.gateway.core.geo-json
+
+Bundle-Version: 1.0.0.SNAPSHOT
+
+-includeresource: \
+	data=data

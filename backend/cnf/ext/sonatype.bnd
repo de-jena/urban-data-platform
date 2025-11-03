@@ -1,0 +1,8 @@
+-plugin.4.Sonatype: \
+    aQute.bnd.repository.maven.provider.MavenBndRepository; \
+        snapshotUrl="https://central.sonatype.com/repository/maven-snapshots/"; \
+        releaseUrl=https://repo.maven.apache.org/maven2/; \
+        index=${.}/sonatype.mvn; \
+        readOnly=true; \
+        poll.time=-1; \
+        name="Sonatype"

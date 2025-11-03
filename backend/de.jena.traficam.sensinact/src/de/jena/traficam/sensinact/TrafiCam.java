@@ -189,33 +189,34 @@ public class TrafiCam {
 				.withQueuePolicy(QueuePolicyOption.BLOCK).build();
 		final AtomicBoolean sendEmpty = new AtomicBoolean(false);
 		PushStream<FeatureCollection> stream = psp.buildStream(source).unbuffered().build()
-				.window(Duration.ofSeconds(2), (messages) -> {
-					FeatureCollection geo = new FeatureCollection();
+				.window(Duration.ofSeconds(2), messages -> {
+					List<Feature> features = new ArrayList<>();
 					for (Message message : messages) {
 						Optional<TrafiCamObject> optionalTC = loadTrafiCamObject(message);
 						if (optionalTC.isPresent()) {
 							TrafiCamObject tc = optionalTC.get();
 							GpsCoordinates gps = tc.getGpsCoordinates().get(0);
 							if (gps != null) {
-								long id = tc.getId();
-								if (geo.features.stream().noneMatch(f -> f.properties.get("id").equals(id))) {
-									Feature feature = createFeature(gps);
-									feature.properties.put("id", id);
-									feature.properties.put("class", classId);
-									feature.properties.put("className", className);
-									feature.properties.put("speed", tc.getSpeed());
-									feature.properties.put("heading", gps.getHeading());
-									feature.properties.put("time", tc.getTime().getTime());
-									geo.features.add(feature);
+								String id = "" + tc.getId();
+								if (features.stream().noneMatch(f -> f.properties().get("id").equals(id))) {
+									Map<String, Object> properties = new HashMap<>();
+									properties.put("id", id);
+									properties.put("class", classId);
+									properties.put("className", className);
+									properties.put("speed", tc.getSpeed());
+									properties.put("heading", gps.getHeading());
+									properties.put("time", tc.getTime().getTime());
+									Feature feature = createFeature(id, gps, properties);
+									features.add(feature);
 								}
 								sendEmpty.set(false);
 							}
 						}
 					}
-					return geo;
+					return new FeatureCollection(features, null, null);
 				});
 		stream.forEach(geo -> {
-			if (!geo.features.isEmpty() || !sendEmpty.getAndSet(true)) {
+			if (!geo.features().isEmpty() || !sendEmpty.getAndSet(true)) {
 				TrafiCamDto dto = new TrafiCamDto(camId, classId, className, geo);
 				dto.timestamp = new Date().getTime();
 				Promise<?> promise = sensiNact.pushUpdate(dto);
@@ -251,64 +252,50 @@ public class TrafiCam {
 	}
 
 	private FeatureCollection createFeatureCollection(String camId) {
-		FeatureCollection geo = new FeatureCollection();
 		CamConfig camConfig = configs.get(camId);
 		if (camConfig == null) {
 			logger.log(Level.WARNING, "Warn: configuration for {0} not loaded.", camId);
-			return geo;
+			return null;
 		}
 		Scene scene = camConfig.getScene();
 		GpsCoordinates gps = scene.getLeftBottom();
 		if (gps == null) {
-			return geo;
+			return null;
 		}
-		Feature f = new Feature();
-		f.geometry = createPolygon(scene.getLeftBottom(), scene.getRightBottom(), scene.getRightTop(),
-				scene.getLeftTop());
-		geo.features.add(f);
+		Feature f = new Feature("",
+				createPolygon(scene.getLeftBottom(), scene.getRightBottom(), scene.getRightTop(), scene.getLeftTop()),
+				null, null, null);
+		FeatureCollection geo = new FeatureCollection(Arrays.asList(f), null, null);
 		return geo;
 	}
 
 	private Polygon createPolygon(GpsCoordinates... gps) {
-		Polygon p = new Polygon();
 		List<Coordinates> coordinates = new ArrayList<>();
-		p.coordinates = Arrays.asList(coordinates);
 		for (GpsCoordinates g : gps) {
-			Coordinates c = new Coordinates();
-			c.latitude = g.getLatitude();
-			c.longitude = g.getLongitude();
+			Coordinates c = new Coordinates(g.getLongitude(), g.getLatitude());
 			coordinates.add(c);
 		}
-		return p;
+		return new Polygon(Arrays.asList(coordinates), null, null);
 	}
 
 	private Point createLocation(String camId) {
-		Point point = new Point();
 
 		CamConfig camConfig = configs.get(camId);
 		if (camConfig == null) {
 			logger.log(Level.WARNING, "Warn: configuration for {0} not loaded.", camId);
-			return point;
+			return null;
 		}
 
 		GpsCoordinates gps = camConfig.getLocation();
 		if (gps == null) {
-			return point;
+			return null;
 		}
-		point.coordinates = new Coordinates();
-		point.coordinates.latitude = gps.getLatitude();
-		point.coordinates.longitude = gps.getLongitude();
-		return point;
+		return new Point(gps.getLongitude(), gps.getLatitude());
 	}
 
-	private Feature createFeature(GpsCoordinates gps) {
-		Feature f = new Feature();
-		Point point = new Point();
-		point.coordinates = new Coordinates();
-		point.coordinates.latitude = gps.getLatitude();
-		point.coordinates.longitude = gps.getLongitude();
-		f.geometry = point;
-		return f;
+	private Feature createFeature(String id, GpsCoordinates gps, Map<String, Object> properties) {
+		Point point = new Point(gps.getLongitude(), gps.getLatitude());
+		return new Feature(id, point, properties, null, null);
 	}
 
 	private void updateConfig(Message message, String camId) {

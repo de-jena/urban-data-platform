@@ -1,3 +1,16 @@
+/*
+ * Copyright (c) 2012 - 2025 Data In Motion and others.
+ * All rights reserved. 
+ * 
+ * This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License 2.0
+ * which is available at https://www.eclipse.org/legal/epl-2.0/
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+ * 
+ * Contributors:
+ *     Data In Motion - initial API and implementation
+ */
 package de.jena.glt.sensinact;
 
 import java.lang.System.Logger;
@@ -19,7 +32,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.ETypedElement;
 import org.eclipse.sensinact.core.push.DataUpdate;
 import org.eclipse.sensinact.gateway.geojson.GeoJsonObject;
-import org.eclipse.sensinact.gateway.geojson.utils.GeoJsonUtils;
+import org.eclipse.sensinact.gateway.geojson.Point;
 import org.eclipse.sensinact.model.core.provider.Admin;
 import org.eclipse.sensinact.model.core.provider.MetadataValue;
 import org.eclipse.sensinact.model.core.provider.ProviderFactory;
@@ -170,7 +183,7 @@ public class GltConverter {
 			lat = 50.928685;
 			lon = 11.583359;
 		}
-		geoJson = GeoJsonUtils.point(lon, lat);
+		geoJson = new Point(lon, lat);
 	}
 
 	private void initServices() {

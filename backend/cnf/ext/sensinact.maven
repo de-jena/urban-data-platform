@@ -77,3 +77,6 @@ org.eclipse.sensinact.gateway.southbound.history:timescale-provider:${sensinact.
 org.postgresql:postgresql:42.7.3
 org.apache.aries.tx-control:tx-control-service-local:1.0.1
 org.apache.aries.tx-control:tx-control-provider-jdbc-local:1.0.1
+
+io.dropwizard.metrics:metrics-core:4.2.37
+org.eclipse.sensinact.gateway.filters:esri.geometry:${sensinact.version}

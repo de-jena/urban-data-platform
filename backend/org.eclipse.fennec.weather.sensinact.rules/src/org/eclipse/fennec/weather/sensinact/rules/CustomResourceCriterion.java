@@ -14,6 +14,9 @@
 package org.eclipse.fennec.weather.sensinact.rules;
 
 import java.util.List;
+
+
+import java.util.function.BiPredicate;
 import java.util.function.Predicate;
 
 import org.eclipse.sensinact.core.snapshot.ICriterion;
@@ -77,10 +80,9 @@ public class CustomResourceCriterion implements ICriterion {
         // An alternative would be to implement the check here if the API allows it,
         // but for simplicity and to match the 'evaluate' method logic, we'll keep it there.
         return new ResourceValueFilter() {
-			
+
 			@Override
-			public boolean test(ProviderSnapshot snapshot, List<ResourceSnapshot> resSnapshots) {
-				
+			public boolean test(ProviderSnapshot provider, List<? extends ResourceSnapshot> resources) {
 				return true;
 			}
 		};
@@ -99,14 +101,14 @@ public class CustomResourceCriterion implements ICriterion {
         };
 	}
 
-	/* 
+	/*
 	 * (non-Javadoc)
+	 * 
 	 * @see org.eclipse.sensinact.core.snapshot.ICriterion#getLocationFilter()
 	 */
 	@Override
-	public Predicate<GeoJsonObject> getLocationFilter() {
+	public BiPredicate<ProviderSnapshot, GeoJsonObject> getLocationFilter() {
 		// We don't care about location, so return a predicate that always returns true.
-        return snapshot -> true;
+		return (snapshot, geo) -> true;
 	}
-
 }

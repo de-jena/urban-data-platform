@@ -65,96 +65,71 @@ public final class GeoJsonBlackBox {
 	@Operation(contextual = true, description = "Converts from GeoJson into Sensorthing Feature Collections")
 	public static FeatureCollection convertToFeatureCollection(de.jena.udp.model.geojson.GeoJSON sarea) {
 
-		FeatureCollection fc = new FeatureCollection();
-		if (sarea instanceof de.jena.udp.model.geojson.FeatureCollection) {
-			de.jena.udp.model.geojson.FeatureCollection area = (de.jena.udp.model.geojson.FeatureCollection) sarea;
-
+		List<Feature> features = new ArrayList<>();
+		if (sarea instanceof de.jena.udp.model.geojson.FeatureCollection area) {
 			area.getFeatures().forEach(f -> {
-				Feature castFeature = new Feature();
-				castFeature.properties = new HashMap<String, Object>();
-				castFeature.properties.putAll(f.getProperties().map());
+				HashMap<String, Object> properties = new HashMap<>();
+				properties.putAll(f.getProperties().map());
 
 				if (f.getGeometry() instanceof de.jena.udp.model.geojson.LineString) {
-					LineString ls = new LineString();
 					de.jena.udp.model.geojson.LineString fls = (de.jena.udp.model.geojson.LineString) f;
-					fls.getCoordinates().forEach(c -> {
-						Coordinates coordinates = new Coordinates();
-						coordinates.longitude = c[0];
-						coordinates.latitude = c[1];
-
-						ls.coordinates.add(coordinates);
-					});
-					castFeature.geometry = ls;
-					fc.features.add(castFeature);
+					List<Coordinates> coordinates = new ArrayList<>();
+					fls.getCoordinates().forEach(c -> coordinates.add(new Coordinates(c[0], c[1])));
+					LineString ls = new LineString(coordinates, null, null);
+					Feature castFeature = new Feature("", ls, properties, null, null);
+					features.add(castFeature);
 				}
 
-				if (f.getGeometry() instanceof de.jena.udp.model.geojson.Polygon) {
-					Polygon pg = new Polygon();
-					de.jena.udp.model.geojson.Polygon fpg = (de.jena.udp.model.geojson.Polygon) f.getGeometry();
-					pg.coordinates = new ArrayList<List<Coordinates>>();
+				if (f.getGeometry() instanceof de.jena.udp.model.geojson.Polygon fpg) {
+					List<List<Coordinates>> coordinates = new ArrayList<>();
 					fpg.getCoordinates().forEach(c -> {
-						ArrayList<Coordinates> list = new ArrayList<Coordinates>();
+						List<Coordinates> list = new ArrayList<>();
 
 						for (Double[] p : c) {
-							Coordinates coordinates = new Coordinates();
-							coordinates.longitude = p[0];
-							coordinates.latitude = p[1];
-							list.add(coordinates);
+							list.add(new Coordinates(p[0], p[1]));
 						}
 
-						pg.coordinates.add(list);
+						coordinates.add(list);
 
 					});
-					castFeature.geometry = pg;
-					fc.features.add(castFeature);
+					Polygon pg = new Polygon(coordinates, null, null);
+					Feature castFeature = new Feature("", pg, properties, null, null);
+					features.add(castFeature);
 				}
-				if (f.getGeometry() instanceof de.jena.udp.model.geojson.Point) {
-					Point pg = new Point();
-					de.jena.udp.model.geojson.Point fp = (de.jena.udp.model.geojson.Point) f.getGeometry();
+				if (f.getGeometry() instanceof de.jena.udp.model.geojson.Point fp) {
 					EList<Double> co = fp.getCoordinates();
-					Coordinates coordinates = new Coordinates();
-					coordinates.longitude = co.get(0);
-					coordinates.latitude = co.get(1);
-					pg.coordinates = coordinates;
-					castFeature.geometry = pg;
-					fc.features.add(castFeature);
+					Coordinates coordinates = new Coordinates(co.get(0), co.get(1));
+					Point pg = new Point(coordinates, null, null);
+					Feature castFeature = new Feature("", pg, properties, null, null);
+					features.add(castFeature);
 				}
-				if (f.getGeometry() instanceof de.jena.udp.model.geojson.MultiPoint) {
-					MultiPoint pg = new MultiPoint();
-					de.jena.udp.model.geojson.MultiPoint fmp = (de.jena.udp.model.geojson.MultiPoint) f.getGeometry();
-					pg.coordinates = new ArrayList<Coordinates>();
+				if (f.getGeometry() instanceof de.jena.udp.model.geojson.MultiPoint fmp) {
+					List<Coordinates> coordinates = new ArrayList<>();
 
 					for (Double[] p : fmp.getCoordinates()) {
-						Coordinates coordinates = new Coordinates();
-						coordinates.longitude = p[0];
-						coordinates.latitude = p[1];
-						pg.coordinates.add(coordinates);
+						coordinates.add(new Coordinates(p[0], p[1]));
 					}
 
-					castFeature.geometry = pg;
-					fc.features.add(castFeature);
+					MultiPoint pg = new MultiPoint(coordinates, null, null);
+					Feature castFeature = new Feature("", pg, properties, null, null);
+					features.add(castFeature);
 				}
-				if (f.getGeometry() instanceof de.jena.udp.model.geojson.MultiLineString) {
-					MultiLineString mls = new MultiLineString();
-					de.jena.udp.model.geojson.MultiLineString fmls = (de.jena.udp.model.geojson.MultiLineString) f
-							.getGeometry();
-					mls.coordinates = new ArrayList<List<Coordinates>>();
+				if (f.getGeometry() instanceof de.jena.udp.model.geojson.MultiLineString fmls) {
+					List<List<Coordinates>> coordinates = new ArrayList<>();
 					fmls.getCoordinates().forEach(c -> {
-						ArrayList<Coordinates> list = new ArrayList<Coordinates>();
+						List<Coordinates> list = new ArrayList<>();
 						for (Double[] p : c) {
-							Coordinates coordinates = new Coordinates();
-							coordinates.longitude = p[0];
-							coordinates.latitude = p[1];
-							list.add(coordinates);
+							list.add(new Coordinates(p[0], p[1]));
 						}
-						mls.coordinates.add(list);
+						coordinates.add(list);
 					});
-					castFeature.geometry = mls;
-					fc.features.add(castFeature);
+					MultiLineString mls = new MultiLineString(coordinates, null, null);
+					Feature castFeature = new Feature("", mls, properties, null, null);
+					features.add(castFeature);
 				}
 
 			});
 		}
-		return fc;
+		return new FeatureCollection(features, null, null);
 	}
 }

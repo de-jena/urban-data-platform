@@ -1,3 +1,16 @@
+/*
+ * Copyright (c) 2012 - 2025 Data In Motion and others.
+ * All rights reserved. 
+ * 
+ * This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License 2.0
+ * which is available at https://www.eclipse.org/legal/epl-2.0/
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+ * 
+ * Contributors:
+ *     Data In Motion - initial API and implementation
+ */
 package de.jena.chirpstack.sensinact;
 
 import java.lang.System.Logger;
@@ -17,7 +30,7 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.sensinact.core.push.DataUpdate;
-import org.eclipse.sensinact.gateway.geojson.utils.GeoJsonUtils;
+import org.eclipse.sensinact.gateway.geojson.Point;
 import org.eclipse.sensinact.gateway.southbound.mqtt.api.IMqttMessage;
 import org.eclipse.sensinact.gateway.southbound.mqtt.api.IMqttMessageListener;
 import org.eclipse.sensinact.model.core.provider.Admin;
@@ -320,7 +333,7 @@ public class ChirpstackDeviceFactoryHandler implements IMqttMessageListener {
             double longitude = location.path("longitude").asDouble();
             double altitude = location.path("altitude").asDouble();
             if (latitude != 0.0 || longitude != 0.0) {
-            	admin.setLocation(GeoJsonUtils.point(longitude, latitude));
+            	admin.setLocation(new Point(longitude, latitude));
                 logger.log(Level.DEBUG, "Device {0} location: lat={1}, lon={2}, alt={3}", 
                     providerId, latitude, longitude, altitude);
                 // Location setting would depend on your specific model structure

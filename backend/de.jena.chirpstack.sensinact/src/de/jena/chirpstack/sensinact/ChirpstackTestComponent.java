@@ -17,7 +17,7 @@ import java.util.Random;
 import java.util.logging.Logger;
 
 import org.eclipse.sensinact.core.push.DataUpdate;
-import org.osgi.service.component.annotations.Component;
+
 import org.osgi.service.component.annotations.Reference;
 
 import biz.aQute.scheduler.api.Constants;

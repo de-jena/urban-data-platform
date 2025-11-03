@@ -21,7 +21,7 @@ import org.eclipse.fennec.qvt.osgi.annotations.UnitQualifiedName;
 import org.eclipse.m2m.qvt.oml.blackbox.java.Module;
 import org.eclipse.m2m.qvt.oml.blackbox.java.Operation;
 import org.eclipse.sensinact.gateway.geojson.GeoJsonObject;
-import org.eclipse.sensinact.gateway.geojson.utils.GeoJsonUtils;
+import org.eclipse.sensinact.gateway.geojson.Point;
 import org.eclipse.sensinact.model.core.provider.ProviderPackage;
 import org.gecko.weather.model.weather.GeoPosition;
 import org.gecko.weather.model.weather.WeatherPackage;
@@ -46,7 +46,7 @@ public class LocationToGeoJsonBlackbox{
 	
 	@Operation(contextual = true, description = "Converts from UTM into degree latitude")
 	public static GeoJsonObject toGeoJson(GeoPosition l) {
-		return GeoJsonUtils.point(l.getLongitude(), l.getLatitude());
+		return new Point(l.getLongitude(), l.getLatitude());
 	}
 
 }

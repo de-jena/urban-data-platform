@@ -19,6 +19,7 @@ import org.eclipse.sensinact.core.annotation.dto.Model;
 import org.eclipse.sensinact.core.annotation.dto.ModelPackageUri;
 import org.eclipse.sensinact.core.annotation.dto.Provider;
 import org.eclipse.sensinact.core.annotation.dto.Service;
+import org.eclipse.sensinact.core.annotation.dto.ServiceModel;
 import org.eclipse.sensinact.core.annotation.dto.Timestamp;
 import org.eclipse.sensinact.gateway.geojson.GeoJsonObject;
 
@@ -41,7 +42,7 @@ public class TrafiCamDto {
 	@Provider
 	public String camId;
 
-	@Service
+	@ServiceModel
 	public EClass serviceEClass = TraficamproviderPackage.Literals.OBSERVED_OBJECTS;
 
 	@Service

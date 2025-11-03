@@ -1,15 +1,27 @@
+/*
+ * Copyright (c) 2012 - 2025 Data In Motion and others.
+ * All rights reserved. 
+ * 
+ * This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License 2.0
+ * which is available at https://www.eclipse.org/legal/epl-2.0/
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+ * 
+ * Contributors:
+ *     Data In Motion - initial API and implementation
+ */
 package org.eclipse.fennec.weather.sensinact.rules;
 
 import java.util.List;
 
-import org.eclipse.sensinact.core.push.dto.GenericDto;
 import org.eclipse.sensinact.core.snapshot.ICriterion;
 import org.eclipse.sensinact.core.snapshot.ProviderSnapshot;
 import org.eclipse.sensinact.core.snapshot.ResourceSnapshot;
 import org.eclipse.sensinact.core.snapshot.ServiceSnapshot;
 import org.eclipse.sensinact.southbound.rules.api.ResourceUpdater;
 import org.eclipse.sensinact.southbound.rules.api.RuleDefinition;
-import org.osgi.service.component.annotations.*;
+import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.metatype.annotations.Designate;
 
 //@Component(immediate = true, name = "CustomThresholdRule", service = RuleDefinition.class, configurationPid = "CustomThresholdRule", configurationPolicy = ConfigurationPolicy.REQUIRE)
