@@ -58,6 +58,7 @@ import org.osgi.annotation.versioning.ProviderType;
  *   <li>{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherService#getWw <em>Ww</em>}</li>
  *   <li>{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherService#getW1w2_w1 <em>W1w2 w1</em>}</li>
  *   <li>{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherService#getW1w2_w2 <em>W1w2 w2</em>}</li>
+ *   <li>{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherService#isWindAlert <em>Wind Alert</em>}</li>
  * </ul>
  *
  * @see org.eclipse.fennec.model.sensinact.weatherprovider.WeatherPackage#getWeatherService()
@@ -1090,5 +1091,27 @@ public interface WeatherService extends Service {
 	 * @generated
 	 */
 	void setW1w2_w2(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Wind Alert</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Wind Alert</em>' attribute.
+	 * @see #setWindAlert(boolean)
+	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.WeatherPackage#getWeatherService_WindAlert()
+	 * @model
+	 * @generated
+	 */
+	boolean isWindAlert();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherService#isWindAlert <em>Wind Alert</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Wind Alert</em>' attribute.
+	 * @see #isWindAlert()
+	 * @generated
+	 */
+	void setWindAlert(boolean value);
 
 } // WeatherService

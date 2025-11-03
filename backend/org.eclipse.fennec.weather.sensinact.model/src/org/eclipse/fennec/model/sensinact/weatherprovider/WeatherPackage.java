@@ -752,13 +752,22 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	int WEATHER_SERVICE__W1W2_W2 = ProviderPackage.SERVICE_FEATURE_COUNT + 40;
 
 	/**
+	 * The feature id for the '<em><b>Wind Alert</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEATHER_SERVICE__WIND_ALERT = ProviderPackage.SERVICE_FEATURE_COUNT + 41;
+
+	/**
 	 * The number of structural features of the '<em>Service</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEATHER_SERVICE_FEATURE_COUNT = ProviderPackage.SERVICE_FEATURE_COUNT + 41;
+	int WEATHER_SERVICE_FEATURE_COUNT = ProviderPackage.SERVICE_FEATURE_COUNT + 42;
 
 	/**
 	 * The operation id for the '<em>EIs Set</em>' operation.
@@ -1526,6 +1535,17 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getWeatherService_W1w2_w2();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.fennec.model.sensinact.weatherprovider.WeatherService#isWindAlert <em>Wind Alert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wind Alert</em>'.
+	 * @see org.eclipse.fennec.model.sensinact.weatherprovider.WeatherService#isWindAlert()
+	 * @see #getWeatherService()
+	 * @generated
+	 */
+	EAttribute getWeatherService_WindAlert();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2095,6 +2115,14 @@ public interface WeatherPackage extends org.eclipse.emf.ecore.EPackage {
 		 * @generated
 		 */
 		EAttribute WEATHER_SERVICE__W1W2_W2 = eINSTANCE.getWeatherService_W1w2_w2();
+
+		/**
+		 * The meta object literal for the '<em><b>Wind Alert</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEATHER_SERVICE__WIND_ALERT = eINSTANCE.getWeatherService_WindAlert();
 
 	}
 

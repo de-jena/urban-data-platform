@@ -275,6 +275,7 @@
           <details key="dwd.id" value="W2 part of W1W2"/>
         </genAnnotations>
       </genFeatures>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute weather.ecore#//WeatherService/windAlert"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
