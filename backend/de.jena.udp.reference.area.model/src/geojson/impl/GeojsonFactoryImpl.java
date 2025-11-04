@@ -89,12 +89,6 @@ public class GeojsonFactoryImpl extends EFactoryImpl implements GeojsonFactory {
 				return createGeometryTypeFromString(eDataType, initialValue);
 			case GeojsonPackage.FEATURE_TYPE:
 				return createFeatureTypeFromString(eDataType, initialValue);
-			case GeojsonPackage.ARRAY1_D:
-				return createArray1DFromString(eDataType, initialValue);
-			case GeojsonPackage.ARRAY2_D:
-				return createArray2DFromString(eDataType, initialValue);
-			case GeojsonPackage.ARRAY3_D:
-				return createArray3DFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -112,12 +106,6 @@ public class GeojsonFactoryImpl extends EFactoryImpl implements GeojsonFactory {
 				return convertGeometryTypeToString(eDataType, instanceValue);
 			case GeojsonPackage.FEATURE_TYPE:
 				return convertFeatureTypeToString(eDataType, instanceValue);
-			case GeojsonPackage.ARRAY1_D:
-				return convertArray1DToString(eDataType, instanceValue);
-			case GeojsonPackage.ARRAY2_D:
-				return convertArray2DToString(eDataType, instanceValue);
-			case GeojsonPackage.ARRAY3_D:
-				return convertArray3DToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -303,60 +291,6 @@ public class GeojsonFactoryImpl extends EFactoryImpl implements GeojsonFactory {
 	 */
 	public String convertFeatureTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Double[] createArray1DFromString(EDataType eDataType, String initialValue) {
-		return (Double[])super.createFromString(initialValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertArray1DToString(EDataType eDataType, Object instanceValue) {
-		return super.convertToString(instanceValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Double[][] createArray2DFromString(EDataType eDataType, String initialValue) {
-		return (Double[][])super.createFromString(initialValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertArray2DToString(EDataType eDataType, Object instanceValue) {
-		return super.convertToString(instanceValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Double[][][] createArray3DFromString(EDataType eDataType, String initialValue) {
-		return (Double[][][])super.createFromString(initialValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertArray3DToString(EDataType eDataType, Object instanceValue) {
-		return super.convertToString(instanceValue);
 	}
 
 	/**

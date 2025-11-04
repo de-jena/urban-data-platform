@@ -2,14 +2,20 @@ package de.jena.udp.reference.area.component;
 
 import java.io.File;
 import java.io.IOException;
-import java.security.Provider;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.sensinact.core.push.DataUpdate;
+import org.eclipse.sensinact.gateway.geojson.GeoJsonObject;
+import org.eclipse.sensinact.model.core.provider.Admin;
+import org.eclipse.sensinact.model.core.provider.ProviderFactory;
 import org.gecko.emf.json.constants.EMFJs;
 import org.gecko.emf.osgi.annotation.require.RequireEMF;
 import org.gecko.emf.osgi.constants.EMFNamespaces;
@@ -34,9 +40,6 @@ import net.opengis.kml.MultiGeometryType;
 import net.opengis.kml.PlacemarkType;
 import net.opengis.kml.PolygonType;
 import net.opengis.kml.SchemaDataType;
-import org.eclipse.sensinact.model.core.provider.Admin;
-import org.eclipse.sensinact.model.core.provider.ProviderFactory;
-import org.eclipse.sensinact.gateway.geojson.GeoJsonObject;
 
 /**
  * Component that reads KML files and converts them to ReferenceArea model instances.
@@ -47,24 +50,40 @@ public class ReferenceAreaReader {
 
 	@Reference(target = "(" + EMFNamespaces.EMF_MODEL_FILE_EXT + "=json)")
 	private ResourceSet resourceSet;
+	
+	@Reference
+	private DataUpdate sensinact;
 
+	private final static Logger LOGGER = Logger.getLogger(ReferenceAreaReader.class.getName());
 	private ReferenceAreaCollection referenceAreas;
 
 	@Activate
 	public void activate() {
-		System.out.println("ReferenceAreaReader component activated");
+		LOGGER.info("ReferenceAreaReader component activated");
 		loadReferenceAreas();
-		serializeFeature();
+//		serializeFeature();
 		pushToSensinact();
 	}
 	
 	private void pushToSensinact() {
+		for(ReferenceArea refArea : referenceAreas.getAreas()) {
+			ReferenceAreaProvider provider = convertToSensinactRefArea(refArea);
+			sensinact.pushUpdate(provider)
+			.onSuccess(s -> {
+				LOGGER.info("Succesfully pushed ReferenceAreaProvider to SensiNact");
+			})
+			.onFailure(t -> {
+				LOGGER.log(Level.SEVERE, "Error while pushing ReferenceAreaProvider to SensiNact", t);
+			});
+		}
 		
 	}
 	
 	private ReferenceAreaProvider convertToSensinactRefArea(ReferenceArea refArea) {
 		ReferenceAreaProvider provider = SensinactRefAreaFactory.eINSTANCE.createReferenceAreaProvider();
 		de.jena.udp.reference.area.sensinact.model.sensinactrefarea.ReferenceArea service = SensinactRefAreaFactory.eINSTANCE.createReferenceArea();
+				
+		provider.setId(refArea.getName());
 		
 		service.setName(refArea.getName());
 		service.setGid(refArea.getGid());
@@ -76,15 +95,221 @@ public class ReferenceAreaReader {
 		admin.setFriendlyName("Reference Area " + refArea.getName());
 		admin.setDescription("Sensor reference area");
 		admin.setLocation(convertToSensinactGeoJson(refArea.getGeometry()));
+		provider.setAdmin(admin);
 		return provider;
 		
 		
 	}
 	
 	private GeoJsonObject convertToSensinactGeoJson(Feature feature) {
-		
-		
+		if (feature == null || feature.getGeometry() == null) {
+			return null;
+		}
+
+		// Convert the geometry
+		org.eclipse.sensinact.gateway.geojson.Geometry sensinactGeometry = convertGeometry(feature.getGeometry());
+		if (sensinactGeometry == null) {
+			return null;
+		}
+
+		// Convert properties from EMap<String, String> to Map<String, Object>
+		Map<String, Object> properties = new HashMap<>();
+		if (feature.getProperties() != null) {
+			for (Map.Entry<String, String> entry : feature.getProperties().entrySet()) {
+				properties.put(entry.getKey(), entry.getValue());
+			}
+		}
+
+		// Create the SensiNact Feature (it's a Record, so we use the constructor)
+		// Feature(String id, Geometry geometry, Map<String, Object> properties, List<Double> bbox, Map<String, Object> foreignMembers)
+		return new org.eclipse.sensinact.gateway.geojson.Feature(
+			properties.containsKey("name") ? (String) properties.get("name") : null, // id - can be extracted from properties if needed
+			sensinactGeometry,
+			properties,
+			null, // bbox - could be calculated if needed
+			null  // foreignMembers
+		);
+	}
+
+	private org.eclipse.sensinact.gateway.geojson.Geometry convertGeometry(geojson.AbstractGeometry geometry) {
+		if (geometry instanceof geojson.Polygon) {
+			return convertPolygon((geojson.Polygon) geometry);
+		} else if (geometry instanceof geojson.Point) {
+			return convertPoint((geojson.Point) geometry);
+		} else if (geometry instanceof geojson.LineString) {
+			return convertLineString((geojson.LineString) geometry);
+		} else if (geometry instanceof geojson.MultiPolygon) {
+			return convertMultiPolygon((geojson.MultiPolygon) geometry);
+		} else if (geometry instanceof geojson.MultiPoint) {
+			return convertMultiPoint((geojson.MultiPoint) geometry);
+		} else if (geometry instanceof geojson.MultiLineString) {
+			return convertMultiLineString((geojson.MultiLineString) geometry);
+		}
+		// Add more geometry types as needed
 		return null;
+	}
+
+	private org.eclipse.sensinact.gateway.geojson.Polygon convertPolygon(geojson.Polygon polygon) {
+		if (polygon == null || polygon.getCoordinates().isEmpty()) {
+			return null;
+		}
+
+		// Convert coordinates from Double[][] to List<List<Coordinates>>
+		List<List<org.eclipse.sensinact.gateway.geojson.Coordinates>> rings = new java.util.ArrayList<>();
+
+		for (Double[][] ring : polygon.getCoordinates()) {
+			List<org.eclipse.sensinact.gateway.geojson.Coordinates> coordsList = new java.util.ArrayList<>();
+			for (Double[] point : ring) {
+				if (point.length >= 2) {
+					if (point.length >= 3) {
+						// With elevation
+						coordsList.add(new org.eclipse.sensinact.gateway.geojson.Coordinates(
+							point[0], point[1], point[2]
+						));
+					} else {
+						// Without elevation
+						coordsList.add(new org.eclipse.sensinact.gateway.geojson.Coordinates(
+							point[0], point[1]
+						));
+					}
+				}
+			}
+			rings.add(coordsList);
+		}
+
+		// Polygon(List<List<Coordinates>> coordinates, List<Double> bbox, Map<String, Object> foreignMembers)
+		return new org.eclipse.sensinact.gateway.geojson.Polygon(rings, null, null);
+	}
+
+	private org.eclipse.sensinact.gateway.geojson.Point convertPoint(geojson.Point point) {
+		if (point == null || point.getCoordinates() == null || point.getCoordinates().size() < 2) {
+			return null;
+		}
+
+		EList<Double> coords = point.getCoordinates();
+		org.eclipse.sensinact.gateway.geojson.Coordinates sensinactCoords;
+		if (coords.size() >= 3) {
+			sensinactCoords = new org.eclipse.sensinact.gateway.geojson.Coordinates(
+				coords.get(0), coords.get(1), coords.get(2)
+			);
+		} else {
+			sensinactCoords = new org.eclipse.sensinact.gateway.geojson.Coordinates(
+					coords.get(0), coords.get(1)
+			);
+		}
+
+		// Point(Coordinates coordinates, List<Double> bbox, Map<String, Object> foreignMembers)
+		return new org.eclipse.sensinact.gateway.geojson.Point(sensinactCoords, null, null);
+	}
+
+	private org.eclipse.sensinact.gateway.geojson.LineString convertLineString(geojson.LineString lineString) {
+		if (lineString == null || lineString.getCoordinates().isEmpty()) {
+			return null;
+		}
+
+		List<org.eclipse.sensinact.gateway.geojson.Coordinates> coordsList = new java.util.ArrayList<>();
+		for (Double[] point : lineString.getCoordinates()) {
+			if (point.length >= 2) {
+				if (point.length >= 3) {
+					coordsList.add(new org.eclipse.sensinact.gateway.geojson.Coordinates(
+						point[0], point[1], point[2]
+					));
+				} else {
+					coordsList.add(new org.eclipse.sensinact.gateway.geojson.Coordinates(
+						point[0], point[1]
+					));
+				}
+			}
+		}
+
+		// LineString(List<Coordinates> coordinates, List<Double> bbox, Map<String, Object> foreignMembers)
+		return new org.eclipse.sensinact.gateway.geojson.LineString(coordsList, null, null);
+	}
+
+	private org.eclipse.sensinact.gateway.geojson.MultiPolygon convertMultiPolygon(geojson.MultiPolygon multiPolygon) {
+		if (multiPolygon == null || multiPolygon.getCoordinates().isEmpty()) {
+			return null;
+		}
+
+		List<List<List<org.eclipse.sensinact.gateway.geojson.Coordinates>>> polygons = new java.util.ArrayList<>();
+
+		for (Double[][][] polygonCoords : multiPolygon.getCoordinates()) {
+			List<List<org.eclipse.sensinact.gateway.geojson.Coordinates>> rings = new java.util.ArrayList<>();
+			for (Double[][] ring : polygonCoords) {
+				List<org.eclipse.sensinact.gateway.geojson.Coordinates> coordsList = new java.util.ArrayList<>();
+				for (Double[] point : ring) {
+					if (point.length >= 2) {
+						if (point.length >= 3) {
+							coordsList.add(new org.eclipse.sensinact.gateway.geojson.Coordinates(
+								point[0], point[1], point[2]
+							));
+						} else {
+							coordsList.add(new org.eclipse.sensinact.gateway.geojson.Coordinates(
+								point[0], point[1]
+							));
+						}
+					}
+				}
+				rings.add(coordsList);
+			}
+			polygons.add(rings);
+		}
+
+		// MultiPolygon(List<List<List<Coordinates>>> coordinates, List<Double> bbox, Map<String, Object> foreignMembers)
+		return new org.eclipse.sensinact.gateway.geojson.MultiPolygon(polygons, null, null);
+	}
+
+	private org.eclipse.sensinact.gateway.geojson.MultiPoint convertMultiPoint(geojson.MultiPoint multiPoint) {
+		if (multiPoint == null || multiPoint.getCoordinates().isEmpty()) {
+			return null;
+		}
+
+		List<org.eclipse.sensinact.gateway.geojson.Coordinates> coordsList = new java.util.ArrayList<>();
+		for (Double[] point : multiPoint.getCoordinates()) {
+			if (point.length >= 2) {
+				if (point.length >= 3) {
+					coordsList.add(new org.eclipse.sensinact.gateway.geojson.Coordinates(
+						point[0], point[1], point[2]
+					));
+				} else {
+					coordsList.add(new org.eclipse.sensinact.gateway.geojson.Coordinates(
+						point[0], point[1]
+					));
+				}
+			}
+		}
+
+		// MultiPoint(List<Coordinates> coordinates, List<Double> bbox, Map<String, Object> foreignMembers)
+		return new org.eclipse.sensinact.gateway.geojson.MultiPoint(coordsList, null, null);
+	}
+
+	private org.eclipse.sensinact.gateway.geojson.MultiLineString convertMultiLineString(geojson.MultiLineString multiLineString) {
+		if (multiLineString == null || multiLineString.getCoordinates().isEmpty()) {
+			return null;
+		}
+
+		List<List<org.eclipse.sensinact.gateway.geojson.Coordinates>> lines = new java.util.ArrayList<>();
+
+		for (Double[][] line : multiLineString.getCoordinates()) {
+			List<org.eclipse.sensinact.gateway.geojson.Coordinates> coordsList = new java.util.ArrayList<>();
+			for (Double[] point : line) {
+				if (point.length >= 2) {
+					if (point.length >= 3) {
+						coordsList.add(new org.eclipse.sensinact.gateway.geojson.Coordinates(
+							point[0], point[1], point[2]
+						));
+					} else {
+						coordsList.add(new org.eclipse.sensinact.gateway.geojson.Coordinates(
+							point[0], point[1]
+						));
+					}
+				}
+			}
+			lines.add(coordsList);
+		}
+
+		// MultiLineString(List<List<Coordinates>> coordinates, List<Double> bbox, Map<String, Object> foreignMembers)
+		return new org.eclipse.sensinact.gateway.geojson.MultiLineString(lines, null, null);
 	}
 
 	private void serializeFeature() {
@@ -98,7 +323,7 @@ public class ReferenceAreaReader {
 
 		System.out.println("Created FeatureCollection with " + featureColl.getFeatures().size() + " features");
 
-		File outputFile = new File("data/reference_areas.json");
+		File outputFile = new File(System.getProperty("data") + "reference_areas.json");
 		URI outputUri = URI.createFileURI(outputFile.getAbsolutePath());
 
 		Resource outputResource = resourceSet.createResource(outputUri, "application/json");
@@ -122,7 +347,7 @@ public class ReferenceAreaReader {
 	private void loadReferenceAreas() {
 		try {
 			// Load the KML file
-			URI kmlUri = URI.createURI("data/sensor_reference_areas.kml");
+			URI kmlUri = URI.createURI(System.getProperty("data") + "sensor_reference_areas.kml");
 			Resource kmlResource = resourceSet.createResource(kmlUri);
 			kmlResource.load(null);
 
@@ -154,10 +379,10 @@ public class ReferenceAreaReader {
 				}
 			}
 
-			System.out.println("Loaded " + referenceAreas.getAreas().size() + " reference areas from KML");
+			LOGGER.info("Loaded " + referenceAreas.getAreas().size() + " reference areas from KML");
 
 		} catch (IOException e) {
-			System.err.println("Error loading KML file: " + e.getMessage());
+			LOGGER.log(Level.SEVERE, "Error loading KML file: " + e.getMessage(), e);
 			e.printStackTrace();
 		}
 	}
@@ -384,7 +609,7 @@ public class ReferenceAreaReader {
 						points.add(new Double[]{longitude, latitude});
 					}
 				} catch (NumberFormatException e) {
-					System.err.println("Error parsing coordinate tuple: " + tuple + " - " + e.getMessage());
+					LOGGER.log(Level.SEVERE, "Error parsing coordinate tuple: " + tuple + " - " + e.getMessage());
 				}
 			}
 		}

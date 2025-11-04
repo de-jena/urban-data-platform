@@ -19,6 +19,7 @@ import org.osgi.annotation.versioning.ProviderType;
  *   <li>{@link de.jena.udp.reference.area.sensinact.model.sensinactrefarea.ReferenceArea#getGid <em>Gid</em>}</li>
  *   <li>{@link de.jena.udp.reference.area.sensinact.model.sensinactrefarea.ReferenceArea#getSensorCount <em>Sensor Count</em>}</li>
  *   <li>{@link de.jena.udp.reference.area.sensinact.model.sensinactrefarea.ReferenceArea#getTourName <em>Tour Name</em>}</li>
+ *   <li>{@link de.jena.udp.reference.area.sensinact.model.sensinactrefarea.ReferenceArea#getColor <em>Color</em>}</li>
  * </ul>
  *
  * @see de.jena.udp.reference.area.sensinact.model.sensinactrefarea.SensinactRefAreaPackage#getReferenceArea()
@@ -126,5 +127,30 @@ public interface ReferenceArea extends Service {
 	 * @generated
 	 */
 	void setTourName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Color</b></em>' attribute.
+	 * The literals are from the enumeration {@link de.jena.udp.reference.area.sensinact.model.sensinactrefarea.ColorType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Color</em>' attribute.
+	 * @see de.jena.udp.reference.area.sensinact.model.sensinactrefarea.ColorType
+	 * @see #setColor(ColorType)
+	 * @see de.jena.udp.reference.area.sensinact.model.sensinactrefarea.SensinactRefAreaPackage#getReferenceArea_Color()
+	 * @model
+	 * @generated
+	 */
+	ColorType getColor();
+
+	/**
+	 * Sets the value of the '{@link de.jena.udp.reference.area.sensinact.model.sensinactrefarea.ReferenceArea#getColor <em>Color</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Color</em>' attribute.
+	 * @see de.jena.udp.reference.area.sensinact.model.sensinactrefarea.ColorType
+	 * @see #getColor()
+	 * @generated
+	 */
+	void setColor(ColorType value);
 
 } // ReferenceArea

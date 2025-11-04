@@ -30,5 +30,13 @@
         <details key="documentation" value="Long tour name describing the location (tour_name_lang)"/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="#//ColorType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ColorType">
+    <eLiterals name="UNKNOWN"/>
+    <eLiterals name="BLUE" value="1"/>
+    <eLiterals name="GREEN" value="2"/>
+    <eLiterals name="YELLOW" value="3"/>
+    <eLiterals name="RED" value="4"/>
   </eClassifiers>
 </ecore:EPackage>

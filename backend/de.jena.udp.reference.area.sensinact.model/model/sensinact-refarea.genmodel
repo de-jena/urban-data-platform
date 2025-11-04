@@ -9,6 +9,13 @@
   <foreignModel>sensinact-refarea.ecore</foreignModel>
   <genPackages prefix="SensinactRefArea" basePackage="de.jena.udp.reference.area.sensinact.model"
       resource="XMI" disposableProviderFactory="true" ecorePackage="sensinact-refarea.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="sensinact-refarea.ecore#//ColorType">
+      <genEnumLiterals ecoreEnumLiteral="sensinact-refarea.ecore#//ColorType/UNKNOWN"/>
+      <genEnumLiterals ecoreEnumLiteral="sensinact-refarea.ecore#//ColorType/BLUE"/>
+      <genEnumLiterals ecoreEnumLiteral="sensinact-refarea.ecore#//ColorType/GREEN"/>
+      <genEnumLiterals ecoreEnumLiteral="sensinact-refarea.ecore#//ColorType/YELLOW"/>
+      <genEnumLiterals ecoreEnumLiteral="sensinact-refarea.ecore#//ColorType/RED"/>
+    </genEnums>
     <genClasses ecoreClass="sensinact-refarea.ecore#//ReferenceAreaProvider">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sensinact-refarea.ecore#//ReferenceAreaProvider/referenceArea"/>
     </genClasses>
@@ -17,6 +24,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sensinact-refarea.ecore#//ReferenceArea/gid"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sensinact-refarea.ecore#//ReferenceArea/sensorCount"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sensinact-refarea.ecore#//ReferenceArea/tourName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sensinact-refarea.ecore#//ReferenceArea/color"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -739,9 +739,9 @@ public class GeojsonPackageImpl extends EPackageImpl implements GeojsonPackage {
 		addEEnumLiteral(featureTypeEEnum, FeatureType.FEATURE);
 
 		// Initialize data types
-		initEDataType(array1DEDataType, Double[].class, "Array1D", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-		initEDataType(array2DEDataType, Double[][].class, "Array2D", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-		initEDataType(array3DEDataType, Double[][][].class, "Array3D", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(array1DEDataType, Double[].class, "Array1D", !IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(array2DEDataType, Double[][].class, "Array2D", !IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(array3DEDataType, Double[][][].class, "Array3D", !IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -29,7 +29,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = ReferenceAreaPackage.eNS_URI, genModel = "/model/reference-area.genmodel", genModelSourceLocations = {"model/reference-area.genmodel","de.jena.reference.area.model/model/reference-area.genmodel"}, ecore="/model/reference-area.ecore", ecoreSourceLocations="/model/reference-area.ecore")
+@EPackage(uri = ReferenceAreaPackage.eNS_URI, genModel = "/model/reference-area.genmodel", genModelSourceLocations = {"model/reference-area.genmodel","de.jena.udp.reference.area.model/model/reference-area.genmodel"}, ecore="/model/reference-area.ecore", ecoreSourceLocations="/model/reference-area.ecore")
 public interface ReferenceAreaPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

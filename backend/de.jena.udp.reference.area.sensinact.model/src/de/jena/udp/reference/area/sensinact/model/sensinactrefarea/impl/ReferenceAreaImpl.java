@@ -2,6 +2,7 @@
  */
 package de.jena.udp.reference.area.sensinact.model.sensinactrefarea.impl;
 
+import de.jena.udp.reference.area.sensinact.model.sensinactrefarea.ColorType;
 import de.jena.udp.reference.area.sensinact.model.sensinactrefarea.ReferenceArea;
 import de.jena.udp.reference.area.sensinact.model.sensinactrefarea.SensinactRefAreaPackage;
 
@@ -25,6 +26,7 @@ import org.eclipse.sensinact.model.core.provider.impl.ServiceImpl;
  *   <li>{@link de.jena.udp.reference.area.sensinact.model.sensinactrefarea.impl.ReferenceAreaImpl#getGid <em>Gid</em>}</li>
  *   <li>{@link de.jena.udp.reference.area.sensinact.model.sensinactrefarea.impl.ReferenceAreaImpl#getSensorCount <em>Sensor Count</em>}</li>
  *   <li>{@link de.jena.udp.reference.area.sensinact.model.sensinactrefarea.impl.ReferenceAreaImpl#getTourName <em>Tour Name</em>}</li>
+ *   <li>{@link de.jena.udp.reference.area.sensinact.model.sensinactrefarea.impl.ReferenceAreaImpl#getColor <em>Color</em>}</li>
  * </ul>
  *
  * @generated
@@ -109,6 +111,26 @@ public class ReferenceAreaImpl extends ServiceImpl implements ReferenceArea {
 	 * @ordered
 	 */
 	protected String tourName = TOUR_NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getColor() <em>Color</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getColor()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final ColorType COLOR_EDEFAULT = ColorType.UNKNOWN;
+
+	/**
+	 * The cached value of the '{@link #getColor() <em>Color</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getColor()
+	 * @generated
+	 * @ordered
+	 */
+	protected ColorType color = COLOR_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -227,6 +249,29 @@ public class ReferenceAreaImpl extends ServiceImpl implements ReferenceArea {
 	 * @generated
 	 */
 	@Override
+	public ColorType getColor() {
+		return color;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setColor(ColorType newColor) {
+		ColorType oldColor = color;
+		color = newColor == null ? COLOR_EDEFAULT : newColor;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SensinactRefAreaPackage.REFERENCE_AREA__COLOR, oldColor, color));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case SensinactRefAreaPackage.REFERENCE_AREA__NAME:
@@ -237,6 +282,8 @@ public class ReferenceAreaImpl extends ServiceImpl implements ReferenceArea {
 				return getSensorCount();
 			case SensinactRefAreaPackage.REFERENCE_AREA__TOUR_NAME:
 				return getTourName();
+			case SensinactRefAreaPackage.REFERENCE_AREA__COLOR:
+				return getColor();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -260,6 +307,9 @@ public class ReferenceAreaImpl extends ServiceImpl implements ReferenceArea {
 				return;
 			case SensinactRefAreaPackage.REFERENCE_AREA__TOUR_NAME:
 				setTourName((String)newValue);
+				return;
+			case SensinactRefAreaPackage.REFERENCE_AREA__COLOR:
+				setColor((ColorType)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -285,6 +335,9 @@ public class ReferenceAreaImpl extends ServiceImpl implements ReferenceArea {
 			case SensinactRefAreaPackage.REFERENCE_AREA__TOUR_NAME:
 				setTourName(TOUR_NAME_EDEFAULT);
 				return;
+			case SensinactRefAreaPackage.REFERENCE_AREA__COLOR:
+				setColor(COLOR_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -305,6 +358,8 @@ public class ReferenceAreaImpl extends ServiceImpl implements ReferenceArea {
 				return sensorCount != SENSOR_COUNT_EDEFAULT;
 			case SensinactRefAreaPackage.REFERENCE_AREA__TOUR_NAME:
 				return TOUR_NAME_EDEFAULT == null ? tourName != null : !TOUR_NAME_EDEFAULT.equals(tourName);
+			case SensinactRefAreaPackage.REFERENCE_AREA__COLOR:
+				return color != COLOR_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -327,6 +382,8 @@ public class ReferenceAreaImpl extends ServiceImpl implements ReferenceArea {
 		result.append(sensorCount);
 		result.append(", tourName: ");
 		result.append(tourName);
+		result.append(", color: ");
+		result.append(color);
 		result.append(')');
 		return result.toString();
 	}

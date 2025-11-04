@@ -30,7 +30,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = GeojsonPackage.eNS_URI, genModel = "/model/reference-area.genmodel", genModelSourceLocations = {"model/reference-area.genmodel","de.jena.reference.area.model/model/reference-area.genmodel"}, ecore="/model/geojson.ecore", ecoreSourceLocations="/model/geojson.ecore")
+@EPackage(uri = GeojsonPackage.eNS_URI, genModel = "/model/reference-area.genmodel", genModelSourceLocations = {"model/reference-area.genmodel","de.jena.udp.reference.area.model/model/reference-area.genmodel"}, ecore="/model/geojson.ecore", ecoreSourceLocations="/model/geojson.ecore")
 public interface GeojsonPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.
@@ -1104,7 +1104,7 @@ public interface GeojsonPackage extends org.eclipse.emf.ecore.EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for data type '<em>Array1 D</em>'.
-	 * @model instanceClass="java.lang.Double[]"
+	 * @model instanceClass="java.lang.Double[]" serializeable="false"
 	 * @generated
 	 */
 	EDataType getArray1D();
@@ -1114,7 +1114,7 @@ public interface GeojsonPackage extends org.eclipse.emf.ecore.EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for data type '<em>Array2 D</em>'.
-	 * @model instanceClass="java.lang.Double[][]"
+	 * @model instanceClass="java.lang.Double[][]" serializeable="false"
 	 * @generated
 	 */
 	EDataType getArray2D();
@@ -1124,7 +1124,7 @@ public interface GeojsonPackage extends org.eclipse.emf.ecore.EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for data type '<em>Array3 D</em>'.
-	 * @model instanceClass="java.lang.Double[][][]"
+	 * @model instanceClass="java.lang.Double[][][]" serializeable="false"
 	 * @generated
 	 */
 	EDataType getArray3D();

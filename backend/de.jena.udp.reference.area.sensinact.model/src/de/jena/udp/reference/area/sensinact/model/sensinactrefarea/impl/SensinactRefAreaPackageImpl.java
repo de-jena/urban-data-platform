@@ -2,6 +2,7 @@
  */
 package de.jena.udp.reference.area.sensinact.model.sensinactrefarea.impl;
 
+import de.jena.udp.reference.area.sensinact.model.sensinactrefarea.ColorType;
 import de.jena.udp.reference.area.sensinact.model.sensinactrefarea.ReferenceArea;
 import de.jena.udp.reference.area.sensinact.model.sensinactrefarea.ReferenceAreaProvider;
 import de.jena.udp.reference.area.sensinact.model.sensinactrefarea.SensinactRefAreaFactory;
@@ -9,6 +10,7 @@ import de.jena.udp.reference.area.sensinact.model.sensinactrefarea.SensinactRefA
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -36,6 +38,13 @@ public class SensinactRefAreaPackageImpl extends EPackageImpl implements Sensina
 	 * @generated
 	 */
 	private EClass referenceAreaEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum colorTypeEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -176,6 +185,26 @@ public class SensinactRefAreaPackageImpl extends EPackageImpl implements Sensina
 	 * @generated
 	 */
 	@Override
+	public EAttribute getReferenceArea_Color() {
+		return (EAttribute)referenceAreaEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getColorType() {
+		return colorTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public SensinactRefAreaFactory getSensinactRefAreaFactory() {
 		return (SensinactRefAreaFactory)getEFactoryInstance();
 	}
@@ -207,6 +236,10 @@ public class SensinactRefAreaPackageImpl extends EPackageImpl implements Sensina
 		createEAttribute(referenceAreaEClass, REFERENCE_AREA__GID);
 		createEAttribute(referenceAreaEClass, REFERENCE_AREA__SENSOR_COUNT);
 		createEAttribute(referenceAreaEClass, REFERENCE_AREA__TOUR_NAME);
+		createEAttribute(referenceAreaEClass, REFERENCE_AREA__COLOR);
+
+		// Create enums
+		colorTypeEEnum = createEEnum(COLOR_TYPE);
 	}
 
 	/**
@@ -252,6 +285,15 @@ public class SensinactRefAreaPackageImpl extends EPackageImpl implements Sensina
 		initEAttribute(getReferenceArea_Gid(), ecorePackage.getEFloat(), "gid", null, 0, 1, ReferenceArea.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getReferenceArea_SensorCount(), ecorePackage.getEInt(), "sensorCount", null, 0, 1, ReferenceArea.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getReferenceArea_TourName(), ecorePackage.getEString(), "tourName", null, 0, 1, ReferenceArea.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getReferenceArea_Color(), this.getColorType(), "color", null, 0, 1, ReferenceArea.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Initialize enums and add enum literals
+		initEEnum(colorTypeEEnum, ColorType.class, "ColorType");
+		addEEnumLiteral(colorTypeEEnum, ColorType.UNKNOWN);
+		addEEnumLiteral(colorTypeEEnum, ColorType.BLUE);
+		addEEnumLiteral(colorTypeEEnum, ColorType.GREEN);
+		addEEnumLiteral(colorTypeEEnum, ColorType.YELLOW);
+		addEEnumLiteral(colorTypeEEnum, ColorType.RED);
 
 		// Create resource
 		createResource(eNS_URI);

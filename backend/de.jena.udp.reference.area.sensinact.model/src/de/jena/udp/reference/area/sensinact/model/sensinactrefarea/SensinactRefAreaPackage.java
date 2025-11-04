@@ -5,6 +5,7 @@ package de.jena.udp.reference.area.sensinact.model.sensinactrefarea;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.sensinact.model.core.provider.ProviderPackage;
@@ -203,13 +204,22 @@ public interface SensinactRefAreaPackage extends org.eclipse.emf.ecore.EPackage 
 	int REFERENCE_AREA__TOUR_NAME = ProviderPackage.SERVICE_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERENCE_AREA__COLOR = ProviderPackage.SERVICE_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Reference Area</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REFERENCE_AREA_FEATURE_COUNT = ProviderPackage.SERVICE_FEATURE_COUNT + 4;
+	int REFERENCE_AREA_FEATURE_COUNT = ProviderPackage.SERVICE_FEATURE_COUNT + 5;
 
 	/**
 	 * The operation id for the '<em>EIs Set</em>' operation.
@@ -228,6 +238,16 @@ public interface SensinactRefAreaPackage extends org.eclipse.emf.ecore.EPackage 
 	 * @ordered
 	 */
 	int REFERENCE_AREA_OPERATION_COUNT = ProviderPackage.SERVICE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.udp.reference.area.sensinact.model.sensinactrefarea.ColorType <em>Color Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.udp.reference.area.sensinact.model.sensinactrefarea.ColorType
+	 * @see de.jena.udp.reference.area.sensinact.model.sensinactrefarea.impl.SensinactRefAreaPackageImpl#getColorType()
+	 * @generated
+	 */
+	int COLOR_TYPE = 2;
 
 
 	/**
@@ -304,6 +324,27 @@ public interface SensinactRefAreaPackage extends org.eclipse.emf.ecore.EPackage 
 	 * @generated
 	 */
 	EAttribute getReferenceArea_TourName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.udp.reference.area.sensinact.model.sensinactrefarea.ReferenceArea#getColor <em>Color</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Color</em>'.
+	 * @see de.jena.udp.reference.area.sensinact.model.sensinactrefarea.ReferenceArea#getColor()
+	 * @see #getReferenceArea()
+	 * @generated
+	 */
+	EAttribute getReferenceArea_Color();
+
+	/**
+	 * Returns the meta object for enum '{@link de.jena.udp.reference.area.sensinact.model.sensinactrefarea.ColorType <em>Color Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Color Type</em>'.
+	 * @see de.jena.udp.reference.area.sensinact.model.sensinactrefarea.ColorType
+	 * @generated
+	 */
+	EEnum getColorType();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -387,6 +428,24 @@ public interface SensinactRefAreaPackage extends org.eclipse.emf.ecore.EPackage 
 		 * @generated
 		 */
 		EAttribute REFERENCE_AREA__TOUR_NAME = eINSTANCE.getReferenceArea_TourName();
+
+		/**
+		 * The meta object literal for the '<em><b>Color</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REFERENCE_AREA__COLOR = eINSTANCE.getReferenceArea_Color();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.udp.reference.area.sensinact.model.sensinactrefarea.ColorType <em>Color Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.udp.reference.area.sensinact.model.sensinactrefarea.ColorType
+		 * @see de.jena.udp.reference.area.sensinact.model.sensinactrefarea.impl.SensinactRefAreaPackageImpl#getColorType()
+		 * @generated
+		 */
+		EEnum COLOR_TYPE = eINSTANCE.getColorType();
 
 	}
 
