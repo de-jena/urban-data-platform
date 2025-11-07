@@ -7,5 +7,6 @@
 	org.eclipse.sensinact.gateway.core.models.provider,\
 	org.osgi.util.promise,\
 	org.gecko.weather.model,\
-	org.osgi.util.function
+	org.osgi.util.function,\
+	org.gecko.emf.sensinact.model
 	

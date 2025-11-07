@@ -14,19 +14,31 @@
 package org.eclipse.fennec.weather.sensinact;
 
 
+import java.lang.reflect.InvocationTargetException;
+import java.util.List;
 import java.util.Optional;
 import java.util.logging.Logger;
 
 import org.eclipse.fennec.model.sensinact.weatherprovider.WeatherProvider;
 import org.eclipse.fennec.qvt.osgi.api.ModelTransformationConstants;
 import org.eclipse.fennec.qvt.osgi.api.ModelTransformator;
+import org.eclipse.sensinact.core.command.AbstractSensinactCommand;
+import org.eclipse.sensinact.core.command.GatewayThread;
+import org.eclipse.sensinact.core.model.SensinactModelManager;
 import org.eclipse.sensinact.core.push.DataUpdate;
+import org.eclipse.sensinact.core.twin.SensinactDigitalTwin;
+import org.eclipse.sensinact.mapping.ProviderMapping;
 import org.gecko.weather.dwd.fc.WeatherReportStorageHandler;
 import org.gecko.weather.model.weather.WeatherReports;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.component.annotations.ReferenceCardinality;
+import org.osgi.util.promise.Promise;
+import org.osgi.util.promise.PromiseFactory;
+import org.gecko.emf.sensinact.model.ProviderMappingRegistry;
+import org.gecko.emf.sensinact.model.ValueMapper;
+import org.gecko.emf.sensinact.model.ValueMapperFactory;
 
 @Component(immediate = true, name = "SensinactWeatherReportStorage")
 public class SensinactWeatherReportStorage implements WeatherReportStorageHandler<WeatherReports> {
@@ -36,6 +48,12 @@ public class SensinactWeatherReportStorage implements WeatherReportStorageHandle
 	
 	@Reference
 	private DataUpdate sensinact;
+	
+	@Reference
+	private ProviderMappingRegistry registry;
+	
+	@Reference
+	private GatewayThread gatewayThread;
 	
 	private ModelTransformator transformator;
 	
@@ -52,10 +70,36 @@ public class SensinactWeatherReportStorage implements WeatherReportStorageHandle
 	 */
 	@Override
 	public <R extends WeatherReports> R saveReport(R report) {
-		WeatherProvider provider = transformator.doTransformation(report);
-		sensinact.pushUpdate(provider)
-		.onSuccess(o -> LOGGER.info("Weather report successfully updated"))
-		.onFailure(t -> LOGGER.severe(String.format("Error while updating WeatherReport %s", t.getMessage())));
+//		WeatherProvider provider = transformator.doTransformation(report);
+		
+		List<ProviderMapping> mappings = registry.getProviderMapping(report.eClass());
+		if (mappings.size() != 1) {
+			throw new IllegalStateException("No mapping found for EClass '" + report.eClass().getName() + "'.");
+		}
+		ProviderMapping mapping = mappings.stream().findFirst().get();
+		
+			gatewayThread.execute(new AbstractSensinactCommand<Boolean>() {
+				@Override
+				protected Promise<Boolean> call(SensinactDigitalTwin twin, SensinactModelManager modelManager,
+						PromiseFactory pf) {
+					
+					try {						
+						ValueMapper mapper = ValueMapperFactory.createValueMapper(twin, mapping);
+						mapper.mapInstance(report);
+						
+						return pf.resolved(Boolean.TRUE);
+					} catch (Exception e) {
+						
+						return pf.failed(e);
+					}
+				}
+			}).onSuccess(o -> LOGGER.info("Weather report successfully updated"))
+			.onFailure(t -> LOGGER.severe(String.format("Error while updating WeatherReport %s", t.getMessage())));
+		
+		
+//		sensinact.pushUpdate(provider)
+//		.onSuccess(o -> LOGGER.info("Weather report successfully updated"))
+//		.onFailure(t -> LOGGER.severe(String.format("Error while updating WeatherReport %s", t.getMessage())));
 		return report;
 	}
 

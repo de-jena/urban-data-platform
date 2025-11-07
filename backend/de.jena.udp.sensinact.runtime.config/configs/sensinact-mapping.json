@@ -1,0 +1,11 @@
+{
+    ":configurator:resource-version": 1,
+    ":configurator:symbolic-name": "org.gecko.mac.sensor.mapping",
+    ":configurator:version": "0.0.1",
+    "SensiNactMappingConfigurator~weather": {
+        "mappingFiles": ["mapping/WeatherReportsMapping.xmi"],
+        "modelFilter.target": "(&(emf.name=weather)(emf.name=mapping))",
+		"contentType": "weather#1.0",
+		"fileType": "weather"
+    }
+}

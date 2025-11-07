@@ -1,0 +1,17 @@
+Bundle-Name: Model Atlas Cloud - Sensor Mapping
+Bundle-Description: Service component for mapping and translating sensor data to SensiNact platform. Handles data transformation, sensor registration, and IoT device integration.
+
+-workingset: SensiNact
+
+-library: enable-emf
+
+-includeresource: \
+	mapping=mapping
+	
+-buildpath: \
+	org.osgi.service.cm;version=latest,\
+	org.osgi.service.component;version=latest,\
+	org.eclipse.sensinact.gateway.core.api;version=latest,\
+	org.gecko.emf.sensinact.model;version=latest,\
+	org.gecko.weather.model,\
+	org.gecko.emf.osgi.api
