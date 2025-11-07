@@ -10,8 +10,7 @@
 	org.osgi.util.promise,\
 	org.osgi.util.function,\
 	org.osgi.service.typedevent,\
-	de.jena.chirpstack.model;version=snapshot,\
-	de.jena.udp.reference.area.model;version=snapshot
+	de.jena.chirpstack.model;version=snapshot
 
 Bundle-Version: 1.0.0.SNAPSHOT
 

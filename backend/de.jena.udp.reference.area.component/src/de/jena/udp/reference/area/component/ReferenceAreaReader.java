@@ -13,38 +13,36 @@
  */
 package de.jena.udp.reference.area.component;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.sensinact.core.push.DataUpdate;
-import org.eclipse.sensinact.gateway.geojson.GeoJsonObject;
+import org.eclipse.sensinact.gateway.geojson.Polygon;
 import org.eclipse.sensinact.model.core.provider.Admin;
 import org.eclipse.sensinact.model.core.provider.ProviderFactory;
-import org.gecko.emf.json.constants.EMFJs;
 import org.gecko.emf.osgi.annotation.require.RequireEMF;
 import org.gecko.emf.osgi.constants.EMFNamespaces;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
-import de.jena.reference.area.model.referencearea.ReferenceArea;
-import de.jena.reference.area.model.referencearea.ReferenceAreaCollection;
-import de.jena.reference.area.model.referencearea.ReferenceAreaFactory;
+import org.eclipse.sensinact.gateway.geojson.Coordinates;
+import org.eclipse.sensinact.gateway.geojson.Feature;
+
+import de.jena.udp.reference.area.sensinact.model.sensinactrefarea.ColorType;
+import de.jena.udp.reference.area.sensinact.model.sensinactrefarea.ReferenceArea;
 import de.jena.udp.reference.area.sensinact.model.sensinactrefarea.ReferenceAreaProvider;
 import de.jena.udp.reference.area.sensinact.model.sensinactrefarea.SensinactRefAreaFactory;
-import geojson.Feature;
-import geojson.FeatureCollection;
-import geojson.GeojsonFactory;
 import net.opengis.kml.AbstractFeatureType;
+import net.opengis.kml.BoundaryType;
 import net.opengis.kml.DocumentRoot;
 import net.opengis.kml.DocumentType;
 import net.opengis.kml.ExtendedDataType;
@@ -68,19 +66,17 @@ public class ReferenceAreaReader {
 	private DataUpdate sensinact;
 
 	private final static Logger LOGGER = Logger.getLogger(ReferenceAreaReader.class.getName());
-	private ReferenceAreaCollection referenceAreas;
+	private List<ReferenceAreaProvider> referenceAreaProviders;
 
 	@Activate
 	public void activate() {
 		LOGGER.info("ReferenceAreaReader component activated");
 		loadReferenceAreas();
-//		serializeFeature();
 		pushToSensinact();
 	}
 	
 	private void pushToSensinact() {
-		for(ReferenceArea refArea : referenceAreas.getAreas()) {
-			ReferenceAreaProvider provider = convertToSensinactRefArea(refArea);
+		for(ReferenceAreaProvider provider : referenceAreaProviders) {
 			sensinact.pushUpdate(provider)
 			.onSuccess(s -> {
 				LOGGER.info("Succesfully pushed ReferenceAreaProvider to SensiNact");
@@ -88,272 +84,11 @@ public class ReferenceAreaReader {
 			.onFailure(t -> {
 				LOGGER.log(Level.SEVERE, "Error while pushing ReferenceAreaProvider to SensiNact", t);
 			});
-		}
-		
+		}		
 	}
 	
-	private ReferenceAreaProvider convertToSensinactRefArea(ReferenceArea refArea) {
-		ReferenceAreaProvider provider = SensinactRefAreaFactory.eINSTANCE.createReferenceAreaProvider();
-		de.jena.udp.reference.area.sensinact.model.sensinactrefarea.ReferenceArea service = SensinactRefAreaFactory.eINSTANCE.createReferenceArea();
-				
-		provider.setId(refArea.getName());
-		
-		service.setName(refArea.getName());
-		service.setGid(refArea.getGid());
-		service.setSensorCount(refArea.getSensorCount());
-		service.setTourName(refArea.getTourName());
-		provider.setReferenceArea(service);
-		
-		Admin admin = ProviderFactory.eINSTANCE.createAdmin();
-		admin.setFriendlyName("Reference Area " + refArea.getName());
-		admin.setDescription("Sensor reference area");
-		admin.setLocation(convertToSensinactGeoJson(refArea.getGeometry()));
-		provider.setAdmin(admin);
-		return provider;
-		
-		
-	}
+
 	
-	private GeoJsonObject convertToSensinactGeoJson(Feature feature) {
-		if (feature == null || feature.getGeometry() == null) {
-			return null;
-		}
-
-		// Convert the geometry
-		org.eclipse.sensinact.gateway.geojson.Geometry sensinactGeometry = convertGeometry(feature.getGeometry());
-		if (sensinactGeometry == null) {
-			return null;
-		}
-
-		// Convert properties from EMap<String, String> to Map<String, Object>
-		Map<String, Object> properties = new HashMap<>();
-		if (feature.getProperties() != null) {
-			for (Map.Entry<String, String> entry : feature.getProperties().entrySet()) {
-				properties.put(entry.getKey(), entry.getValue());
-			}
-		}
-
-		// Create the SensiNact Feature (it's a Record, so we use the constructor)
-		// Feature(String id, Geometry geometry, Map<String, Object> properties, List<Double> bbox, Map<String, Object> foreignMembers)
-		return new org.eclipse.sensinact.gateway.geojson.Feature(
-			properties.containsKey("name") ? (String) properties.get("name") : null, // id - can be extracted from properties if needed
-			sensinactGeometry,
-			properties,
-			null, // bbox - could be calculated if needed
-			null  // foreignMembers
-		);
-	}
-
-	private org.eclipse.sensinact.gateway.geojson.Geometry convertGeometry(geojson.AbstractGeometry geometry) {
-		if (geometry instanceof geojson.Polygon) {
-			return convertPolygon((geojson.Polygon) geometry);
-		} else if (geometry instanceof geojson.Point) {
-			return convertPoint((geojson.Point) geometry);
-		} else if (geometry instanceof geojson.LineString) {
-			return convertLineString((geojson.LineString) geometry);
-		} else if (geometry instanceof geojson.MultiPolygon) {
-			return convertMultiPolygon((geojson.MultiPolygon) geometry);
-		} else if (geometry instanceof geojson.MultiPoint) {
-			return convertMultiPoint((geojson.MultiPoint) geometry);
-		} else if (geometry instanceof geojson.MultiLineString) {
-			return convertMultiLineString((geojson.MultiLineString) geometry);
-		}
-		// Add more geometry types as needed
-		return null;
-	}
-
-	private org.eclipse.sensinact.gateway.geojson.Polygon convertPolygon(geojson.Polygon polygon) {
-		if (polygon == null || polygon.getCoordinates().isEmpty()) {
-			return null;
-		}
-
-		// Convert coordinates from Double[][] to List<List<Coordinates>>
-		List<List<org.eclipse.sensinact.gateway.geojson.Coordinates>> rings = new java.util.ArrayList<>();
-
-		for (Double[][] ring : polygon.getCoordinates()) {
-			List<org.eclipse.sensinact.gateway.geojson.Coordinates> coordsList = new java.util.ArrayList<>();
-			for (Double[] point : ring) {
-				if (point.length >= 2) {
-					if (point.length >= 3) {
-						// With elevation
-						coordsList.add(new org.eclipse.sensinact.gateway.geojson.Coordinates(
-							point[0], point[1], point[2]
-						));
-					} else {
-						// Without elevation
-						coordsList.add(new org.eclipse.sensinact.gateway.geojson.Coordinates(
-							point[0], point[1]
-						));
-					}
-				}
-			}
-			rings.add(coordsList);
-		}
-
-		// Polygon(List<List<Coordinates>> coordinates, List<Double> bbox, Map<String, Object> foreignMembers)
-		return new org.eclipse.sensinact.gateway.geojson.Polygon(rings, null, null);
-	}
-
-	private org.eclipse.sensinact.gateway.geojson.Point convertPoint(geojson.Point point) {
-		if (point == null || point.getCoordinates() == null || point.getCoordinates().size() < 2) {
-			return null;
-		}
-
-		EList<Double> coords = point.getCoordinates();
-		org.eclipse.sensinact.gateway.geojson.Coordinates sensinactCoords;
-		if (coords.size() >= 3) {
-			sensinactCoords = new org.eclipse.sensinact.gateway.geojson.Coordinates(
-				coords.get(0), coords.get(1), coords.get(2)
-			);
-		} else {
-			sensinactCoords = new org.eclipse.sensinact.gateway.geojson.Coordinates(
-					coords.get(0), coords.get(1)
-			);
-		}
-
-		// Point(Coordinates coordinates, List<Double> bbox, Map<String, Object> foreignMembers)
-		return new org.eclipse.sensinact.gateway.geojson.Point(sensinactCoords, null, null);
-	}
-
-	private org.eclipse.sensinact.gateway.geojson.LineString convertLineString(geojson.LineString lineString) {
-		if (lineString == null || lineString.getCoordinates().isEmpty()) {
-			return null;
-		}
-
-		List<org.eclipse.sensinact.gateway.geojson.Coordinates> coordsList = new java.util.ArrayList<>();
-		for (Double[] point : lineString.getCoordinates()) {
-			if (point.length >= 2) {
-				if (point.length >= 3) {
-					coordsList.add(new org.eclipse.sensinact.gateway.geojson.Coordinates(
-						point[0], point[1], point[2]
-					));
-				} else {
-					coordsList.add(new org.eclipse.sensinact.gateway.geojson.Coordinates(
-						point[0], point[1]
-					));
-				}
-			}
-		}
-
-		// LineString(List<Coordinates> coordinates, List<Double> bbox, Map<String, Object> foreignMembers)
-		return new org.eclipse.sensinact.gateway.geojson.LineString(coordsList, null, null);
-	}
-
-	private org.eclipse.sensinact.gateway.geojson.MultiPolygon convertMultiPolygon(geojson.MultiPolygon multiPolygon) {
-		if (multiPolygon == null || multiPolygon.getCoordinates().isEmpty()) {
-			return null;
-		}
-
-		List<List<List<org.eclipse.sensinact.gateway.geojson.Coordinates>>> polygons = new java.util.ArrayList<>();
-
-		for (Double[][][] polygonCoords : multiPolygon.getCoordinates()) {
-			List<List<org.eclipse.sensinact.gateway.geojson.Coordinates>> rings = new java.util.ArrayList<>();
-			for (Double[][] ring : polygonCoords) {
-				List<org.eclipse.sensinact.gateway.geojson.Coordinates> coordsList = new java.util.ArrayList<>();
-				for (Double[] point : ring) {
-					if (point.length >= 2) {
-						if (point.length >= 3) {
-							coordsList.add(new org.eclipse.sensinact.gateway.geojson.Coordinates(
-								point[0], point[1], point[2]
-							));
-						} else {
-							coordsList.add(new org.eclipse.sensinact.gateway.geojson.Coordinates(
-								point[0], point[1]
-							));
-						}
-					}
-				}
-				rings.add(coordsList);
-			}
-			polygons.add(rings);
-		}
-
-		// MultiPolygon(List<List<List<Coordinates>>> coordinates, List<Double> bbox, Map<String, Object> foreignMembers)
-		return new org.eclipse.sensinact.gateway.geojson.MultiPolygon(polygons, null, null);
-	}
-
-	private org.eclipse.sensinact.gateway.geojson.MultiPoint convertMultiPoint(geojson.MultiPoint multiPoint) {
-		if (multiPoint == null || multiPoint.getCoordinates().isEmpty()) {
-			return null;
-		}
-
-		List<org.eclipse.sensinact.gateway.geojson.Coordinates> coordsList = new java.util.ArrayList<>();
-		for (Double[] point : multiPoint.getCoordinates()) {
-			if (point.length >= 2) {
-				if (point.length >= 3) {
-					coordsList.add(new org.eclipse.sensinact.gateway.geojson.Coordinates(
-						point[0], point[1], point[2]
-					));
-				} else {
-					coordsList.add(new org.eclipse.sensinact.gateway.geojson.Coordinates(
-						point[0], point[1]
-					));
-				}
-			}
-		}
-
-		// MultiPoint(List<Coordinates> coordinates, List<Double> bbox, Map<String, Object> foreignMembers)
-		return new org.eclipse.sensinact.gateway.geojson.MultiPoint(coordsList, null, null);
-	}
-
-	private org.eclipse.sensinact.gateway.geojson.MultiLineString convertMultiLineString(geojson.MultiLineString multiLineString) {
-		if (multiLineString == null || multiLineString.getCoordinates().isEmpty()) {
-			return null;
-		}
-
-		List<List<org.eclipse.sensinact.gateway.geojson.Coordinates>> lines = new java.util.ArrayList<>();
-
-		for (Double[][] line : multiLineString.getCoordinates()) {
-			List<org.eclipse.sensinact.gateway.geojson.Coordinates> coordsList = new java.util.ArrayList<>();
-			for (Double[] point : line) {
-				if (point.length >= 2) {
-					if (point.length >= 3) {
-						coordsList.add(new org.eclipse.sensinact.gateway.geojson.Coordinates(
-							point[0], point[1], point[2]
-						));
-					} else {
-						coordsList.add(new org.eclipse.sensinact.gateway.geojson.Coordinates(
-							point[0], point[1]
-						));
-					}
-				}
-			}
-			lines.add(coordsList);
-		}
-
-		// MultiLineString(List<List<Coordinates>> coordinates, List<Double> bbox, Map<String, Object> foreignMembers)
-		return new org.eclipse.sensinact.gateway.geojson.MultiLineString(lines, null, null);
-	}
-
-	private void serializeFeature() {
-		// Create a FeatureCollection from all reference areas
-		FeatureCollection featureColl = GeojsonFactory.eINSTANCE.createFeatureCollection();
-		for(ReferenceArea area : referenceAreas.getAreas()) {
-			if (area.getGeometry() != null) {
-				featureColl.getFeatures().add(area.getGeometry());
-			}
-		}
-
-		System.out.println("Created FeatureCollection with " + featureColl.getFeatures().size() + " features");
-
-		File outputFile = new File(System.getProperty("data") + "reference_areas.json");
-		URI outputUri = URI.createFileURI(outputFile.getAbsolutePath());
-
-		Resource outputResource = resourceSet.createResource(outputUri, "application/json");
-		outputResource.getContents().add(featureColl);
-
-		Map<String, Object> saveOptions = new HashMap<>();
-		saveOptions.put(EMFJs.OPTION_SERIALIZE_TYPE, false);
-
-		try {
-			outputResource.save(saveOptions);
-			System.out.println("Successfully saved FeatureCollection to: " + outputFile.getAbsolutePath());
-		} catch(IOException e) {
-			System.err.println("Error saving FeatureCollection: " + e.getMessage());
-			e.printStackTrace();
-		}
-	}
-
 	/**
 	 * Loads the KML file and converts it to ReferenceArea instances
 	 */
@@ -367,32 +102,32 @@ public class ReferenceAreaReader {
 			// Get the document root
 			DocumentRoot documentRoot = (DocumentRoot) kmlResource.getContents().get(0);
 			DocumentType document = (DocumentType) documentRoot.getKml().getAbstractFeatureGroup();
-
-			// Create the reference area collection
-			referenceAreas = ReferenceAreaFactory.eINSTANCE.createReferenceAreaCollection();
-
+			
+			referenceAreaProviders = new LinkedList<>();
+			
 			// Process each placemark
 			List<AbstractFeatureType> features = document.getAbstractFeatureGroup();
 			for (AbstractFeatureType feature : features) {
 				if (feature instanceof PlacemarkType) {
 					PlacemarkType placemark = (PlacemarkType) feature;
-					ReferenceArea refArea = convertPlacemarkToReferenceArea(placemark);
-					if (refArea != null) {
-						referenceAreas.getAreas().add(refArea);
+					ReferenceAreaProvider refAreaProvider = convertPlacemarkToReferenceAreaProvider(placemark);
+					if (refAreaProvider != null) {
+						referenceAreaProviders.add(refAreaProvider);
 					}
 				} else if(feature instanceof FolderType folderType) {
 					for(AbstractFeatureType f : folderType.getAbstractFeatureGroup()) {
 						if(f instanceof PlacemarkType placemark) {
-							ReferenceArea refArea = convertPlacemarkToReferenceArea(placemark);
-							if (refArea != null) {
-								referenceAreas.getAreas().add(refArea);
+							ReferenceAreaProvider refAreaProvider = convertPlacemarkToReferenceAreaProvider(placemark);
+							if (refAreaProvider != null) {
+								referenceAreaProviders.add(refAreaProvider);
+
 							}
 						}
 					}
 				}
 			}
 
-			LOGGER.info("Loaded " + referenceAreas.getAreas().size() + " reference areas from KML");
+			LOGGER.info("Loaded " + referenceAreaProviders.size() + " reference areas from KML");
 
 		} catch (IOException e) {
 			LOGGER.log(Level.SEVERE, "Error loading KML file: " + e.getMessage(), e);
@@ -401,38 +136,55 @@ public class ReferenceAreaReader {
 	}
 
 	/**
-	 * Converts a KML Placemark to a ReferenceArea instance
+	 * @param placemark
+	 * @return
 	 */
-	private ReferenceArea convertPlacemarkToReferenceArea(PlacemarkType placemark) {
-		ReferenceArea area = ReferenceAreaFactory.eINSTANCE.createReferenceArea();
+	private ReferenceAreaProvider convertPlacemarkToReferenceAreaProvider(PlacemarkType placemark) {
+		ReferenceAreaProvider provider = SensinactRefAreaFactory.eINSTANCE.createReferenceAreaProvider();
+		ReferenceArea service = SensinactRefAreaFactory.eINSTANCE.createReferenceArea();
 
-		// Set the name
-		area.setName(placemark.getName());
-
+		provider.setId(placemark.getName());
+		
+		service.setName(placemark.getName());
+		service.setColor(ColorType.UNKNOWN);
+		
+		Map<String, Object> properties = new HashMap<>();
+		
 		// Extract extended data (gid, anzahl_sens, tour_name_lang)
-		ExtendedDataType extendedData = placemark.getExtendedData();
-		if (extendedData != null && !extendedData.getSchemaData().isEmpty()) {
-			SchemaDataType schemaData = extendedData.getSchemaData().get(0);
-			Map<String, String> dataMap = extractSchemaData(schemaData);
+				ExtendedDataType extendedData = placemark.getExtendedData();
+				if (extendedData != null && !extendedData.getSchemaData().isEmpty()) {
+					SchemaDataType schemaData = extendedData.getSchemaData().get(0);
+					Map<String, String> dataMap = extractSchemaData(schemaData);
 
-			// Set gid
-			String gidStr = dataMap.get("gid");
-			if (gidStr != null) {
-				area.setGid(Float.parseFloat(gidStr));
-			}
+					// Set gid
+					String gidStr = dataMap.get("gid");
+					if (gidStr != null) {
+						service.setGid(Float.parseFloat(gidStr));
+						properties.put("gid", service.getGid());
+					}
 
-			// Set sensor count
-			String sensorCountStr = dataMap.get("anzahl_sens");
-			if (sensorCountStr != null) {
-				area.setSensorCount(Integer.parseInt(sensorCountStr));
-			}
+					// Set sensor count
+					String sensorCountStr = dataMap.get("anzahl_sens");
+					if (sensorCountStr != null) {
+						service.setSensorCount(Integer.parseInt(sensorCountStr));
+						properties.put("sensorCount", service.getSensorCount());
+					}
 
-			// Set tour name
-			String tourName = dataMap.get("tour_name_lang");
-			if (tourName != null) {
-				area.setTourName(tourName);
-			}
-		}
+					// Set tour name
+					String tourName = dataMap.get("tour_name_lang");
+					if (tourName != null) {
+						service.setTourName(tourName);
+						properties.put("tourName", service.getTourName());
+					}
+				}
+		
+		
+		provider.setReferenceArea(service);
+		
+		Admin admin = ProviderFactory.eINSTANCE.createAdmin();
+		admin.setFriendlyName("Reference Area " + placemark.getName());
+		admin.setDescription("Sensor reference area");
+		
 
 		// Convert geometry (MultiGeometry with Polygon)
 		if (placemark.getAbstractGeometryGroup() instanceof MultiGeometryType) {
@@ -441,38 +193,22 @@ public class ReferenceAreaReader {
 				// Get the first polygon and convert it to GeoJSON
 				if (multiGeometry.getAbstractGeometryGroup().get(0) instanceof PolygonType) {
 					PolygonType polygon = (PolygonType) multiGeometry.getAbstractGeometryGroup().get(0);
-					geojson.Polygon geoJsonPolygon = convertKmlPolygonToGeoJson(polygon);
-
+					Polygon sensinactPolygon = convertKmlPolygonToSensinactPolygon(polygon);					
 					// Create a Feature wrapping the polygon
-					geojson.Feature feature = GeojsonFactory.eINSTANCE.createFeature();
-					feature.setType("Feature");
-					feature.setGeometry(geoJsonPolygon);
-
-					// Add metadata to properties map
-					addPropertyToFeature(feature, "name", placemark.getName());
-					if (area.getGid() != 0.0f) {
-						addPropertyToFeature(feature, "gid", String.valueOf(area.getGid()));
-					}
-					if (area.getSensorCount() != 0) {
-						addPropertyToFeature(feature, "sensorCount", String.valueOf(area.getSensorCount()));
-					}
-					if (area.getTourName() != null) {
-						addPropertyToFeature(feature, "tourName", area.getTourName());
-					}
-
-					area.setGeometry(feature);
+					Feature sensinactFeature = new Feature(
+							properties.containsKey("name") ? (String) properties.get("name") : null, // id - can be extracted from properties if needed
+									sensinactPolygon,
+									properties,
+									null, // bbox - could be calculated if needed
+									null  // foreignMembers
+								);
+					
+					admin.setLocation(sensinactFeature);
 				}
 			}
 		}
-
-		return area;
-	}
-
-	/**
-	 * Adds a property to a Feature's properties map
-	 */
-	private void addPropertyToFeature(geojson.Feature feature, String key, String value) {
-		feature.getProperties().put(key, value);
+		provider.setAdmin(admin);
+		return provider;
 	}
 
 	/**
@@ -493,59 +229,87 @@ public class ReferenceAreaReader {
 		}
 		return dataMap;
 	}
+	
+	private Polygon convertKmlPolygonToSensinactPolygon(PolygonType kmlPolygon) {
+		if (kmlPolygon == null) {
+			return null;
+		}
 
-	/**
-	 * Converts a KML Polygon to a GeoJSON Polygon
-	 */
-	private geojson.Polygon convertKmlPolygonToGeoJson(PolygonType kmlPolygon) {
-		geojson.Polygon polygon = GeojsonFactory.eINSTANCE.createPolygon();
-		polygon.setType("Polygon");
-
-		List<Double[][]> rings = new java.util.ArrayList<>();
+		List<List<Coordinates>> rings = new java.util.ArrayList<>();
 
 		// Process outer boundary (exterior ring)
 		if (kmlPolygon.getOuterBoundaryIs() != null) {
-			net.opengis.kml.BoundaryType outerBoundary = kmlPolygon.getOuterBoundaryIs();
+			BoundaryType outerBoundary = kmlPolygon.getOuterBoundaryIs();
 			if (outerBoundary.getLinearRing() != null) {
 				List<String> coordinates = outerBoundary.getLinearRing().getCoordinates();
 				Double[][] exteriorRing = parseKmlCoordinates(coordinates);
-				rings.add(exteriorRing);
+
+				// Ensure exterior ring is counter-clockwise
+				if (isClockwise(exteriorRing)) {
+					exteriorRing = reverseRing(exteriorRing);
+				}
+
+				// Convert to SensiNact Coordinates
+				List<Coordinates> coordsList = new java.util.ArrayList<>();
+				for (Double[] point : exteriorRing) {
+					if (point.length >= 2) {
+						if (point.length >= 3) {
+							// With elevation
+							coordsList.add(new Coordinates(
+								point[0], point[1], point[2]
+							));
+						} else {
+							// Without elevation
+							coordsList.add(new Coordinates(
+								point[0], point[1]
+							));
+						}
+					}
+				}
+				rings.add(coordsList);
 			}
 		}
 
 		// Process inner boundaries (holes) if any
 		if (kmlPolygon.getInnerBoundaryIs() != null && !kmlPolygon.getInnerBoundaryIs().isEmpty()) {
-			for (net.opengis.kml.BoundaryType innerBoundary : kmlPolygon.getInnerBoundaryIs()) {
+			for (BoundaryType innerBoundary : kmlPolygon.getInnerBoundaryIs()) {
 				if (innerBoundary.getLinearRing() != null) {
 					List<String> coordinates = innerBoundary.getLinearRing().getCoordinates();
 					Double[][] hole = parseKmlCoordinates(coordinates);
-					rings.add(hole);
+
+					// Ensure holes are clockwise
+					if (!isClockwise(hole)) {
+						hole = reverseRing(hole);
+					}
+
+					// Convert to SensiNact Coordinates
+					List<Coordinates> coordsList = new java.util.ArrayList<>();
+					for (Double[] point : hole) {
+						if (point.length >= 2) {
+							if (point.length >= 3) {
+								coordsList.add(new Coordinates(
+									point[0], point[1], point[2]
+								));
+							} else {
+								coordsList.add(new Coordinates(
+									point[0], point[1]
+								));
+							}
+						}
+					}
+					rings.add(coordsList);
 				}
 			}
 		}
 
-		// Set all rings to the polygon with proper winding order
-		// GeoJSON requires: exterior ring = counter-clockwise, holes = clockwise
-		for (int i = 0; i < rings.size(); i++) {
-			Double[][] ring = rings.get(i);
-
-			if (i == 0) {
-				// First ring is exterior - must be counter-clockwise
-				if (isClockwise(ring)) {
-					ring = reverseRing(ring);
-				}
-			} else {
-				// Subsequent rings are holes - must be clockwise
-				if (!isClockwise(ring)) {
-					ring = reverseRing(ring);
-				}
-			}
-
-			polygon.getCoordinates().add(ring);
+		// Return null if no rings were processed
+		if (rings.isEmpty()) {
+			return null;
 		}
 
-		return polygon;
+		return new Polygon(rings, null, null);
 	}
+
 
 	/**
 	 * Checks if a ring is in clockwise order using the shoelace formula
@@ -637,10 +401,4 @@ public class ReferenceAreaReader {
 		return result;
 	}
 
-	/**
-	 * Returns the loaded reference areas
-	 */
-	public ReferenceAreaCollection getReferenceAreas() {
-		return referenceAreas;
-	}
 }
