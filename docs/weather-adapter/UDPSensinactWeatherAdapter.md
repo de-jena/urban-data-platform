@@ -4,9 +4,9 @@ This is the sensinact adapter for the weather info obtained from [DWD](https://w
 
 ## The Models
 
-We have modeled the `MOSMIXWeatherReport` from [here](https://github.com/geckoprojects-org/org.gecko.weather/blob/snapshot/org.gecko.weather.model/model/dwd-weather.ecore) into the corresponding sensinact model, located under `org.eclipse.fennec.weather.sensinact.model`.
+We have modeled the `MOSMIXWeatherReport` from [here](https://github.com/geckoprojects-org/org.gecko.weather/blob/snapshot/org.gecko.weather.model/model/dwd-weather.ecore) into the SensiNact using the `sensinact-mapping` model and the the `WeatherReportsMapping.xmi` which is located in the `de.jena.udp.sensinact.sensor.mapping` bundle.
 
-We have a `WeatherProvider` which is, in sensinact terms, a `Provider`. This has several `WeatherService`, each one representing a `MOSMIXWeatherReport`. The first one is the `currentWeather`, meaning the weather forecast for the hour immediately after the one when the forecast has been asked (e.g. if the forecast is asked at 2:30 pm, then the `currentWeather` contains the forecast for 3 pm). The other reports are the forecast in subsequent 3 hours intervals, up to 72 hours (e.g. if the forecast is asked at 2:30 pm, the `currentWeather` is for 3 pm, then the other ones are for 6 pm, 9 pm, and so on, up to 72 hours).
+As a result of such mapping we get a `WeatherProvider` which is, in sensinact terms, a `Provider`. This has several `WeatherService`, each one representing a `MOSMIXWeatherReport`. The first one is the `currentWeather`, meaning the weather forecast for the hour immediately after the one when the forecast has been asked (e.g. if the forecast is asked at 2:30 pm, then the `currentWeather` contains the forecast for 3 pm). The other reports are the forecast in subsequent 3 hours intervals, up to 72 hours (e.g. if the forecast is asked at 2:30 pm, the `currentWeather` is for 3 pm, then the other ones are for 6 pm, 9 pm, and so on, up to 72 hours).
 
 A `WeatherService` contains the following resources:
 
@@ -20,6 +20,7 @@ A `WeatherService` contains the following resources:
 + all pressure data
 + all irradiance data
 + the significant weather
++ the issued time of the report
 
 ## Runtime Config
 

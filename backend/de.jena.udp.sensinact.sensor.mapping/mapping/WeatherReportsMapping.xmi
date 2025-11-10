@@ -11,85 +11,245 @@
       <featurePath xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
     </timestamp>
     <name name="Current Weather"/>
-    <resources name="windSpeed" changeable="false" unit="m/s" mid="windSpeed">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="windSpeed" changeable="false" unit="m/s" mid="windSpeed" description="Wind speed: m/s (FF)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windSpeed"/>
+      <extraMetadata key="sensorthings.unit.name" value="meter per seconds"/>
+      <extraMetadata key="dwd.id" value="FF"/>
     </resources>
-    <resources name="windDirection" unit="degrees" mid="windDirection">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windDirection"/>
-    </resources>
-    <resources name="windGustLastHour" unit="m/s" mid="windGustLastHour">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="windGustLastHour" changeable="false" unit="m/s" mid="windGustLastHour" description="Maximum wind gust within the last hour: m/s (FX1)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustLastHour"/>
+      <extraMetadata key="sensorthings.unit.name" value="meter per seconds"/>
+      <extraMetadata key="dwd.id" value="FX1"/>
     </resources>
-    <resources name="cloudCoverTotal" unit="%" mid="cloudCoverTotal">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="windGustLastThreeHours" changeable="false" unit="m/s" mid="windGustLastThreeHours" description="Maximum wind gust within the last 3 hours: m/s (FX3)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustLastThreeHours"/>
+      <extraMetadata key="sensorthings.unit.name" value="meter per seconds"/>
+      <extraMetadata key="dwd.id" value="FX3"/>
+    </resources>
+    <resources name="windGustMaxLast12Hours" changeable="false" unit="m/s" mid="windGustMaxLast12Hours" description="Maximum wind gust within the last 12 hours: m/s (FXh)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustMaxLast12Hours"/>
+      <extraMetadata key="sensorthings.unit.name" value="meter per seconds"/>
+      <extraMetadata key="dwd.id" value="FXh"/>
+    </resources>
+    <resources name="windDirection" changeable="false" unit="&#xb0;" mid="windDirection" description="Wind direction: 0..360 Degrees (DD)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windDirection"/>
+      <extraMetadata key="sensorthings.unit.name" value="degrees"/>
+      <extraMetadata key="dwd.id" value="DD"/>
+    </resources>
+    <resources name="windGustProb25" changeable="false" unit="%" mid="windGustProb25" description="Probability of wind gusts >= 25kn within the last 12 hours: 0..100% (FXh25)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustProb25"/>
+      <extraMetadata key="sensorthings.unit.name" value="percent probability"/>
+      <extraMetadata key="dwd.id" value="FXh25"/>
+    </resources>
+    <resources name="windGustProb40" changeable="false" unit="%" mid="windGustProb40" description="Probability of wind gusts >= 40kn within the last 12 hours: 0..100% (FXh40)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustProb40"/>
+      <extraMetadata key="sensorthings.unit.name" value="percent probability"/>
+      <extraMetadata key="dwd.id" value="FXh40"/>
+    </resources>
+    <resources name="windGustProb55" changeable="false" unit="%" mid="windGustProb55" description="Probability of wind gusts >= 55kn within the last 12 hours: 0..100% (FXh55)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustProb55"/>
+      <extraMetadata key="sensorthings.unit.name" value="percent probability"/>
+      <extraMetadata key="dwd.id" value="FXh55"/>
+    </resources>
+    <resources name="cloudCoverTotal" changeable="false" unit="%" mid="cloudCoverTotal" description="Total cloud cover: 0..100% (N)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverTotal"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="N"/>
     </resources>
-    <resources name="cloudCoverBelow500" unit="%" mid="cloudCoverBelow500">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="cloudCoverBelow500" changeable="false" unit="%" mid="cloudCoverBelow500" description="Cloud cover below 500 ft.: 0..100% (N05)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverBelow500"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="N05"/>
     </resources>
-    <resources name="cloudCoverEffective" unit="%" mid="cloudCoverEffective">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="cloudCoverEffective" changeable="false" unit="%" mid="cloudCoverEffective" description="Effective cloud cover: 0..100% (Neff)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverEffective"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Neff"/>
     </resources>
-    <resources name="cloudCoverHigh" unit="%" mid="cloudCoverHigh">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="cloudCoverHigh" changeable="false" unit="%" mid="cloudCoverHigh" description="High cloud cover (>7 km): 0..100% (Nh)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverHigh"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Nh"/>
     </resources>
-    <resources name="cloudCoverLow" unit="%" mid="cloudCoverTotal">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="cloudCoverLow" changeable="false" unit="%" mid="cloudCoverLow" description="Low cloud cover (lower than 2 km): 0..100% (Nl)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverLow"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Nl"/>
     </resources>
-    <resources name="cloudCoverMid" unit="%" mid="cloudCoverMid">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="cloudCoverMid" changeable="false" unit="%" mid="cloudCoverMid" description="Midlevel cloud cover (2-7 km): 0..100% (Nm)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverMid"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Nm"/>
     </resources>
-    <resources name="surfacePressure" unit="Pa" mid="surfacePressure">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/surfacePressure"/>
-    </resources>
-    <resources name="tempAboveSurface5" unit="K" mid="tempAboveSurface5">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempAboveSurface5"/>
-    </resources>
-    <resources name="tempAboveSurface200" unit="K" mid="tempAboveSurface200">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempAboveSurface200"/>
-    </resources>
-    <resources name="tempMinLast12" unit="K" mid="tempMinLast12">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempMinLast12"/>
-    </resources>
-    <resources name="tempMaxLast12" unit="K" mid="tempMaxLast12">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempMaxLast12"/>
-    </resources>
-    <resources name="precipitationLarger00Last12" unit="%" mid="precipitationLarger00Last12">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="precipitationLarger00Last12" changeable="false" unit="%" mid="precipitationLarger00Last12" description="Probability of precipitation > 0.0mm during the last 12 hours: 0..100% (Rh00)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger00Last12"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rh00"/>
     </resources>
-    <resources name="precipitationLarger02Last12" unit="%" mid="precipitationLarger02Last12">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="precipitationLarger02Last12" changeable="false" unit="%" mid="precipitationLarger02Last12" description="Probability of precipitation > 0.2mm during the last 12 hours: 0..100% (Rh02)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger02Last12"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rh02"/>
     </resources>
-    <resources name="precipitationLarger02Last6" unit="%" mid="precipitationLarger02Last6">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="precipitationLarger02Last6" changeable="false" unit="%" mid="precipitationLarger02Last6" description="Probability of precipitation > 0.2mm during the last 6 hours: 0..100% (R602)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger02Last6"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="R602"/>
     </resources>
-    <resources name="precipitationLarger02Last12" unit="%" mid="precipitationLarger02Last12">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger02Last12"/>
+    <resources name="precipitationLarger02LastDay" changeable="false" unit="%" mid="precipitationLarger02LastDay" description="Probability of precipitation > 0.2mm during the last 24 hours: 0..100% (Rd02)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger02LastDay"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rd02"/>
     </resources>
-    <resources name="precipitationProbability10mm" unit="%" mid="precipitation10mm">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="precipitationLarger10Last12" changeable="false" unit="%" mid="precipitationLarger10Last12" description="Probability of precipitation > 1 mm during the last 12 hours: 0..100% (Rh10)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger10Last12"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rh10"/>
     </resources>
-    <resources name="significantWeather" mid="significantWeather">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <resources name="precipitationLarger50Last12" changeable="false" unit="%" mid="precipitationLarger50Last12" description="Probability of precipitation > 5mm during the last 12 hours: 0..100% (Rh50)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger50Last12"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rh50"/>
+    </resources>
+    <resources name="precipitationLarger50Last6" changeable="false" unit="%" mid="precipitationLarger50Last6" description="Probability of precipitation > 5mm during the last 6 hours: 0..100% (R650)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger50Last6"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="R650"/>
+    </resources>
+    <resources name="precipitationLarger50LastDay" changeable="false" unit="%" mid="precipitationLarger50LastDay" description="Probability of precipitation > 5mm during the last 24 hours: 0..100% (Rd50)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger50LastDay"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rd50"/>
+    </resources>
+    <resources name="fogPropLast1" changeable="false" unit="%" mid="fogPropLast1" description="Probability for fog within the last hour: 0..100% (wwM)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/fogPropLast1"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="wwM"/>
+    </resources>
+    <resources name="fogPropLast12" changeable="false" unit="%" mid="fogPropLast12" description="Probability for fog within the last 12 hours: 0..100% (wwMh)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/fogPropLast12"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="wwMh"/>
+    </resources>
+    <resources name="fogPropLast6" changeable="false" unit="%" mid="fogPropLast6" description="Probability for fog within the last 6 hours: 0..100% (wwM6)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/fogPropLast6"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="wwM6"/>
+    </resources>
+    <resources name="surfacePressure" changeable="false" unit="Pa" mid="surfacePressure" description="Surface pressure, reduced: Pa (PPPP)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/surfacePressure"/>
+      <extraMetadata key="sensorthings.unit.name" value="Pascal"/>
+      <extraMetadata key="dwd.id" value="PPPP"/>
+    </resources>
+    <resources name="tempAboveSurface5" changeable="false" unit="K" mid="tempAboveSurface5" description="Temperature 5cm above surface: Kelvin (T5cm)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempAboveSurface5"/>
+      <extraMetadata key="sensorthings.unit.name" value="Degree Kalvin"/>
+      <extraMetadata key="dwd.id" value="T5cm"/>
+    </resources>
+    <resources name="tempAboveSurface200" changeable="false" unit="K" mid="tempAboveSurface200" description="Temperature 2m above surface: Kelvin (TTT)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempAboveSurface200"/>
+      <extraMetadata key="sensorthings.unit.name" value="Degree Kalvin"/>
+      <extraMetadata key="dwd.id" value="TTT"/>
+    </resources>
+    <resources name="tempMinLast12" changeable="false" unit="K" mid="tempMinLast12" description="Minimum temperature - within the last 12 hours: Kelvin (TN)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempMinLast12"/>
+      <extraMetadata key="sensorthings.unit.name" value="Degree Kalvin"/>
+      <extraMetadata key="dwd.id" value="TN"/>
+    </resources>
+    <resources name="tempMaxLast12" changeable="false" unit="K" mid="tempMaxLast12" description="Maximum temperature - within the last 12 hours: Kelvin (TX)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempMaxLast12"/>
+      <extraMetadata key="sensorthings.unit.name" value="Degree Kalvin"/>
+      <extraMetadata key="dwd.id" value="TX"/>
+    </resources>
+    <resources name="tempDewpointAboveSurface200" changeable="false" unit="K" mid="tempDewpointAboveSurface200" description="Dewpoint 2m above surface: Kelvin (Td)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempDewpointAboveSurface200"/>
+      <extraMetadata key="sensorthings.unit.name" value="Degree Kalvin"/>
+      <extraMetadata key="dwd.id" value="Td"/>
+    </resources>
+    <resources name="significantWeather3Hours" changeable="false" unit="" mid="significantWeather3Hours" description="Significant weather during the past 3 hours: - (ww)">
+      <eType xsi:type="ecore:EEnum" href="http://cdc.dwd.de/common/weather#//WMOWeatherCodeType"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather3Hours"/>
+      <extraMetadata key="sensorthings.unit.name" value=""/>
+      <extraMetadata key="dwd.id" value="ww"/>
+    </resources>
+    <resources name="w1" changeable="false" unit="" mid="w1" description="Significant weather in the past 6 to 3 hours: - (W1 part of W1W2)">
+      <eType xsi:type="ecore:EEnum" href="http://cdc.dwd.de/common/weather#//WMOWeatherCodeType"/>
+      <valueFeature xsi:type="ecore:EReference" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather6Hours"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//W1W2/w1"/>
+      <extraMetadata key="sensorthings.unit.name" value=""/>
+      <extraMetadata key="dwd.id" value="W1 part of W1W2"/>
+    </resources>
+    <resources name="w2" changeable="false" unit="" mid="w2" description="Significant weather in the past 3 hours: - (W2 part of W1W2)">
+      <eType xsi:type="ecore:EEnum" href="http://cdc.dwd.de/common/weather#//WMOWeatherCodeType"/>
+      <valueFeature xsi:type="ecore:EReference" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather6Hours"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//W1W2/w2"/>
+      <extraMetadata key="sensorthings.unit.name" value=""/>
+      <extraMetadata key="dwd.id" value="W2 part of W1W2"/>
+    </resources>
+    <resources name="snowRainEqLast1" changeable="false" unit="Kg/m2" mid="snowRainEqLast1" description="Snow-Rain-Equivalent during the last hour: kg/m2 (RRS1c)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/snowRainEqLast1"/>
+      <extraMetadata key="sensorthings.unit.name" value="Kilograms per sqaure meter"/>
+      <extraMetadata key="dwd.id" value="RRS1c"/>
+    </resources>
+    <resources name="snowRainEqLast3" changeable="false" unit="Kg/m2" mid="snowRainEqLast3" description="Snow-Rain-Equivalent during the 3 hours: kg/m2 (RRS3c)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/snowRainEqLast3"/>
+      <extraMetadata key="sensorthings.unit.name" value="Kilograms per sqaure meter"/>
+      <extraMetadata key="dwd.id" value="RRS3c"/>
+    </resources>
+    <resources name="irRadianceGlobal" changeable="false" unit="KJ/m2" mid="irRadianceGlobal" description="Global Irradiance: kJ/m2 (Rad1h)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/irRadianceGlobal"/>
+      <extraMetadata key="sensorthings.unit.name" value="Kilo Joul per sqaure meter"/>
+      <extraMetadata key="dwd.id" value="Rad1h"/>
+    </resources>
+    <resources name="sunshineDurationLast1" changeable="false" unit="s" mid="sunshineDurationLast1" description="Sunshine duration during the last Hour: s (SunD1)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/sunshineDurationLast1"/>
+      <extraMetadata key="sensorthings.unit.name" value="seconds"/>
+      <extraMetadata key="dwd.id" value="SunD1"/>
+    </resources>
+    <resources name="visibility" changeable="false" unit="m" mid="visibility" description="Visibility: m (VV)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/visibility"/>
+      <extraMetadata key="sensorthings.unit.name" value="meters"/>
+      <extraMetadata key="dwd.id" value="VV"/>
+    </resources>
+    <resources name="issueTime" changeable="false" unit="" mid="issueTime" description="This is the time the report was issued.">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//WeatherReport/issueTime"/>
     </resources>
     <collectionFeature xsi:type="ecore:EReference" href="http://cdc.dwd.de/common/weather#//WeatherReports/reports"/>
   </services>
@@ -98,85 +258,245 @@
       <featurePath xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
     </timestamp>
     <name name="3H Forecast"/>
-    <resources name="windSpeed" changeable="false" unit="m/s" mid="windSpeed">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="windSpeed" changeable="false" unit="m/s" mid="windSpeed" description="Wind speed: m/s (FF)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windSpeed"/>
+      <extraMetadata key="sensorthings.unit.name" value="meter per seconds"/>
+      <extraMetadata key="dwd.id" value="FF"/>
     </resources>
-    <resources name="windDirection" unit="degrees" mid="windDirection">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windDirection"/>
-    </resources>
-    <resources name="windGustLastHour" unit="m/s" mid="windGustLastHour">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="windGustLastHour" changeable="false" unit="m/s" mid="windGustLastHour" description="Maximum wind gust within the last hour: m/s (FX1)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustLastHour"/>
+      <extraMetadata key="sensorthings.unit.name" value="meter per seconds"/>
+      <extraMetadata key="dwd.id" value="FX1"/>
     </resources>
-    <resources name="cloudCoverTotal" unit="%" mid="cloudCoverTotal">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="windGustLastThreeHours" changeable="false" unit="m/s" mid="windGustLastThreeHours" description="Maximum wind gust within the last 3 hours: m/s (FX3)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustLastThreeHours"/>
+      <extraMetadata key="sensorthings.unit.name" value="meter per seconds"/>
+      <extraMetadata key="dwd.id" value="FX3"/>
+    </resources>
+    <resources name="windGustMaxLast12Hours" changeable="false" unit="m/s" mid="windGustMaxLast12Hours" description="Maximum wind gust within the last 12 hours: m/s (FXh)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustMaxLast12Hours"/>
+      <extraMetadata key="sensorthings.unit.name" value="meter per seconds"/>
+      <extraMetadata key="dwd.id" value="FXh"/>
+    </resources>
+    <resources name="windDirection" changeable="false" unit="&#xb0;" mid="windDirection" description="Wind direction: 0..360 Degrees (DD)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windDirection"/>
+      <extraMetadata key="sensorthings.unit.name" value="degrees"/>
+      <extraMetadata key="dwd.id" value="DD"/>
+    </resources>
+    <resources name="windGustProb25" changeable="false" unit="%" mid="windGustProb25" description="Probability of wind gusts >= 25kn within the last 12 hours: 0..100% (FXh25)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustProb25"/>
+      <extraMetadata key="sensorthings.unit.name" value="percent probability"/>
+      <extraMetadata key="dwd.id" value="FXh25"/>
+    </resources>
+    <resources name="windGustProb40" changeable="false" unit="%" mid="windGustProb40" description="Probability of wind gusts >= 40kn within the last 12 hours: 0..100% (FXh40)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustProb40"/>
+      <extraMetadata key="sensorthings.unit.name" value="percent probability"/>
+      <extraMetadata key="dwd.id" value="FXh40"/>
+    </resources>
+    <resources name="windGustProb55" changeable="false" unit="%" mid="windGustProb55" description="Probability of wind gusts >= 55kn within the last 12 hours: 0..100% (FXh55)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustProb55"/>
+      <extraMetadata key="sensorthings.unit.name" value="percent probability"/>
+      <extraMetadata key="dwd.id" value="FXh55"/>
+    </resources>
+    <resources name="cloudCoverTotal" changeable="false" unit="%" mid="cloudCoverTotal" description="Total cloud cover: 0..100% (N)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverTotal"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="N"/>
     </resources>
-    <resources name="cloudCoverBelow500" unit="%" mid="cloudCoverBelow500">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="cloudCoverBelow500" changeable="false" unit="%" mid="cloudCoverBelow500" description="Cloud cover below 500 ft.: 0..100% (N05)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverBelow500"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="N05"/>
     </resources>
-    <resources name="cloudCoverEffective" unit="%" mid="cloudCoverEffective">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="cloudCoverEffective" changeable="false" unit="%" mid="cloudCoverEffective" description="Effective cloud cover: 0..100% (Neff)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverEffective"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Neff"/>
     </resources>
-    <resources name="cloudCoverHigh" unit="%" mid="cloudCoverHigh">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="cloudCoverHigh" changeable="false" unit="%" mid="cloudCoverHigh" description="High cloud cover (>7 km): 0..100% (Nh)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverHigh"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Nh"/>
     </resources>
-    <resources name="cloudCoverLow" unit="%" mid="cloudCoverTotal">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="cloudCoverLow" changeable="false" unit="%" mid="cloudCoverLow" description="Low cloud cover (lower than 2 km): 0..100% (Nl)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverLow"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Nl"/>
     </resources>
-    <resources name="cloudCoverMid" unit="%" mid="cloudCoverMid">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="cloudCoverMid" changeable="false" unit="%" mid="cloudCoverMid" description="Midlevel cloud cover (2-7 km): 0..100% (Nm)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverMid"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Nm"/>
     </resources>
-    <resources name="surfacePressure" unit="Pa" mid="surfacePressure">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/surfacePressure"/>
-    </resources>
-    <resources name="tempAboveSurface5" unit="K" mid="tempAboveSurface5">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempAboveSurface5"/>
-    </resources>
-    <resources name="tempAboveSurface200" unit="K" mid="tempAboveSurface200">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempAboveSurface200"/>
-    </resources>
-    <resources name="tempMinLast12" unit="K" mid="tempMinLast12">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempMinLast12"/>
-    </resources>
-    <resources name="tempMaxLast12" unit="K" mid="tempMaxLast12">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempMaxLast12"/>
-    </resources>
-    <resources name="precipitationLarger00Last12" unit="%" mid="precipitationLarger00Last12">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="precipitationLarger00Last12" changeable="false" unit="%" mid="precipitationLarger00Last12" description="Probability of precipitation > 0.0mm during the last 12 hours: 0..100% (Rh00)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger00Last12"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rh00"/>
     </resources>
-    <resources name="precipitationLarger02Last12" unit="%" mid="precipitationLarger02Last12">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="precipitationLarger02Last12" changeable="false" unit="%" mid="precipitationLarger02Last12" description="Probability of precipitation > 0.2mm during the last 12 hours: 0..100% (Rh02)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger02Last12"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rh02"/>
     </resources>
-    <resources name="precipitationLarger02Last6" unit="%" mid="precipitationLarger02Last6">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="precipitationLarger02Last6" changeable="false" unit="%" mid="precipitationLarger02Last6" description="Probability of precipitation > 0.2mm during the last 6 hours: 0..100% (R602)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger02Last6"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="R602"/>
     </resources>
-    <resources name="precipitationLarger02Last12" unit="%" mid="precipitationLarger02Last12">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger02Last12"/>
+    <resources name="precipitationLarger02LastDay" changeable="false" unit="%" mid="precipitationLarger02LastDay" description="Probability of precipitation > 0.2mm during the last 24 hours: 0..100% (Rd02)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger02LastDay"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rd02"/>
     </resources>
-    <resources name="precipitationProbability10mm" unit="%" mid="precipitation10mm">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="precipitationLarger10Last12" changeable="false" unit="%" mid="precipitationLarger10Last12" description="Probability of precipitation > 1 mm during the last 12 hours: 0..100% (Rh10)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger10Last12"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rh10"/>
     </resources>
-    <resources name="significantWeather" mid="significantWeather">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <resources name="precipitationLarger50Last12" changeable="false" unit="%" mid="precipitationLarger50Last12" description="Probability of precipitation > 5mm during the last 12 hours: 0..100% (Rh50)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger50Last12"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rh50"/>
+    </resources>
+    <resources name="precipitationLarger50Last6" changeable="false" unit="%" mid="precipitationLarger50Last6" description="Probability of precipitation > 5mm during the last 6 hours: 0..100% (R650)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger50Last6"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="R650"/>
+    </resources>
+    <resources name="precipitationLarger50LastDay" changeable="false" unit="%" mid="precipitationLarger50LastDay" description="Probability of precipitation > 5mm during the last 24 hours: 0..100% (Rd50)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger50LastDay"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rd50"/>
+    </resources>
+    <resources name="fogPropLast1" changeable="false" unit="%" mid="fogPropLast1" description="Probability for fog within the last hour: 0..100% (wwM)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/fogPropLast1"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="wwM"/>
+    </resources>
+    <resources name="fogPropLast12" changeable="false" unit="%" mid="fogPropLast12" description="Probability for fog within the last 12 hours: 0..100% (wwMh)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/fogPropLast12"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="wwMh"/>
+    </resources>
+    <resources name="fogPropLast6" changeable="false" unit="%" mid="fogPropLast6" description="Probability for fog within the last 6 hours: 0..100% (wwM6)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/fogPropLast6"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="wwM6"/>
+    </resources>
+    <resources name="surfacePressure" changeable="false" unit="Pa" mid="surfacePressure" description="Surface pressure, reduced: Pa (PPPP)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/surfacePressure"/>
+      <extraMetadata key="sensorthings.unit.name" value="Pascal"/>
+      <extraMetadata key="dwd.id" value="PPPP"/>
+    </resources>
+    <resources name="tempAboveSurface5" changeable="false" unit="K" mid="tempAboveSurface5" description="Temperature 5cm above surface: Kelvin (T5cm)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempAboveSurface5"/>
+      <extraMetadata key="sensorthings.unit.name" value="Degree Kalvin"/>
+      <extraMetadata key="dwd.id" value="T5cm"/>
+    </resources>
+    <resources name="tempAboveSurface200" changeable="false" unit="K" mid="tempAboveSurface200" description="Temperature 2m above surface: Kelvin (TTT)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempAboveSurface200"/>
+      <extraMetadata key="sensorthings.unit.name" value="Degree Kalvin"/>
+      <extraMetadata key="dwd.id" value="TTT"/>
+    </resources>
+    <resources name="tempMinLast12" changeable="false" unit="K" mid="tempMinLast12" description="Minimum temperature - within the last 12 hours: Kelvin (TN)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempMinLast12"/>
+      <extraMetadata key="sensorthings.unit.name" value="Degree Kalvin"/>
+      <extraMetadata key="dwd.id" value="TN"/>
+    </resources>
+    <resources name="tempMaxLast12" changeable="false" unit="K" mid="tempMaxLast12" description="Maximum temperature - within the last 12 hours: Kelvin (TX)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempMaxLast12"/>
+      <extraMetadata key="sensorthings.unit.name" value="Degree Kalvin"/>
+      <extraMetadata key="dwd.id" value="TX"/>
+    </resources>
+    <resources name="tempDewpointAboveSurface200" changeable="false" unit="K" mid="tempDewpointAboveSurface200" description="Dewpoint 2m above surface: Kelvin (Td)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempDewpointAboveSurface200"/>
+      <extraMetadata key="sensorthings.unit.name" value="Degree Kalvin"/>
+      <extraMetadata key="dwd.id" value="Td"/>
+    </resources>
+    <resources name="significantWeather3Hours" changeable="false" unit="" mid="significantWeather3Hours" description="Significant weather during the past 3 hours: - (ww)">
+      <eType xsi:type="ecore:EEnum" href="http://cdc.dwd.de/common/weather#//WMOWeatherCodeType"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather3Hours"/>
+      <extraMetadata key="sensorthings.unit.name" value=""/>
+      <extraMetadata key="dwd.id" value="ww"/>
+    </resources>
+    <resources name="w1" changeable="false" unit="" mid="w1" description="Significant weather in the past 6 to 3 hours: - (W1 part of W1W2)">
+      <eType xsi:type="ecore:EEnum" href="http://cdc.dwd.de/common/weather#//WMOWeatherCodeType"/>
+      <valueFeature xsi:type="ecore:EReference" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather6Hours"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//W1W2/w1"/>
+      <extraMetadata key="sensorthings.unit.name" value=""/>
+      <extraMetadata key="dwd.id" value="W1 part of W1W2"/>
+    </resources>
+    <resources name="w2" changeable="false" unit="" mid="w2" description="Significant weather in the past 3 hours: - (W2 part of W1W2)">
+      <eType xsi:type="ecore:EEnum" href="http://cdc.dwd.de/common/weather#//WMOWeatherCodeType"/>
+      <valueFeature xsi:type="ecore:EReference" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather6Hours"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//W1W2/w2"/>
+      <extraMetadata key="sensorthings.unit.name" value=""/>
+      <extraMetadata key="dwd.id" value="W2 part of W1W2"/>
+    </resources>
+    <resources name="snowRainEqLast1" changeable="false" unit="Kg/m2" mid="snowRainEqLast1" description="Snow-Rain-Equivalent during the last hour: kg/m2 (RRS1c)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/snowRainEqLast1"/>
+      <extraMetadata key="sensorthings.unit.name" value="Kilograms per sqaure meter"/>
+      <extraMetadata key="dwd.id" value="RRS1c"/>
+    </resources>
+    <resources name="snowRainEqLast3" changeable="false" unit="Kg/m2" mid="snowRainEqLast3" description="Snow-Rain-Equivalent during the 3 hours: kg/m2 (RRS3c)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/snowRainEqLast3"/>
+      <extraMetadata key="sensorthings.unit.name" value="Kilograms per sqaure meter"/>
+      <extraMetadata key="dwd.id" value="RRS3c"/>
+    </resources>
+    <resources name="irRadianceGlobal" changeable="false" unit="KJ/m2" mid="irRadianceGlobal" description="Global Irradiance: kJ/m2 (Rad1h)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/irRadianceGlobal"/>
+      <extraMetadata key="sensorthings.unit.name" value="Kilo Joul per sqaure meter"/>
+      <extraMetadata key="dwd.id" value="Rad1h"/>
+    </resources>
+    <resources name="sunshineDurationLast1" changeable="false" unit="s" mid="sunshineDurationLast1" description="Sunshine duration during the last Hour: s (SunD1)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/sunshineDurationLast1"/>
+      <extraMetadata key="sensorthings.unit.name" value="seconds"/>
+      <extraMetadata key="dwd.id" value="SunD1"/>
+    </resources>
+    <resources name="visibility" changeable="false" unit="m" mid="visibility" description="Visibility: m (VV)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/visibility"/>
+      <extraMetadata key="sensorthings.unit.name" value="meters"/>
+      <extraMetadata key="dwd.id" value="VV"/>
+    </resources>
+    <resources name="issueTime" changeable="false" unit="" mid="issueTime" description="This is the time the report was issued.">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//WeatherReport/issueTime"/>
     </resources>
     <collectionFeature xsi:type="ecore:EReference" href="http://cdc.dwd.de/common/weather#//WeatherReports/reports"/>
   </services>
@@ -185,85 +505,245 @@
       <featurePath xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
     </timestamp>
     <name name="6H Forecast"/>
-    <resources name="windSpeed" changeable="false" unit="m/s" mid="windSpeed">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="windSpeed" changeable="false" unit="m/s" mid="windSpeed" description="Wind speed: m/s (FF)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windSpeed"/>
+      <extraMetadata key="sensorthings.unit.name" value="meter per seconds"/>
+      <extraMetadata key="dwd.id" value="FF"/>
     </resources>
-    <resources name="windDirection" unit="degrees" mid="windDirection">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windDirection"/>
-    </resources>
-    <resources name="windGustLastHour" unit="m/s" mid="windGustLastHour">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="windGustLastHour" changeable="false" unit="m/s" mid="windGustLastHour" description="Maximum wind gust within the last hour: m/s (FX1)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustLastHour"/>
+      <extraMetadata key="sensorthings.unit.name" value="meter per seconds"/>
+      <extraMetadata key="dwd.id" value="FX1"/>
     </resources>
-    <resources name="cloudCoverTotal" unit="%" mid="cloudCoverTotal">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="windGustLastThreeHours" changeable="false" unit="m/s" mid="windGustLastThreeHours" description="Maximum wind gust within the last 3 hours: m/s (FX3)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustLastThreeHours"/>
+      <extraMetadata key="sensorthings.unit.name" value="meter per seconds"/>
+      <extraMetadata key="dwd.id" value="FX3"/>
+    </resources>
+    <resources name="windGustMaxLast12Hours" changeable="false" unit="m/s" mid="windGustMaxLast12Hours" description="Maximum wind gust within the last 12 hours: m/s (FXh)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustMaxLast12Hours"/>
+      <extraMetadata key="sensorthings.unit.name" value="meter per seconds"/>
+      <extraMetadata key="dwd.id" value="FXh"/>
+    </resources>
+    <resources name="windDirection" changeable="false" unit="&#xb0;" mid="windDirection" description="Wind direction: 0..360 Degrees (DD)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windDirection"/>
+      <extraMetadata key="sensorthings.unit.name" value="degrees"/>
+      <extraMetadata key="dwd.id" value="DD"/>
+    </resources>
+    <resources name="windGustProb25" changeable="false" unit="%" mid="windGustProb25" description="Probability of wind gusts >= 25kn within the last 12 hours: 0..100% (FXh25)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustProb25"/>
+      <extraMetadata key="sensorthings.unit.name" value="percent probability"/>
+      <extraMetadata key="dwd.id" value="FXh25"/>
+    </resources>
+    <resources name="windGustProb40" changeable="false" unit="%" mid="windGustProb40" description="Probability of wind gusts >= 40kn within the last 12 hours: 0..100% (FXh40)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustProb40"/>
+      <extraMetadata key="sensorthings.unit.name" value="percent probability"/>
+      <extraMetadata key="dwd.id" value="FXh40"/>
+    </resources>
+    <resources name="windGustProb55" changeable="false" unit="%" mid="windGustProb55" description="Probability of wind gusts >= 55kn within the last 12 hours: 0..100% (FXh55)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustProb55"/>
+      <extraMetadata key="sensorthings.unit.name" value="percent probability"/>
+      <extraMetadata key="dwd.id" value="FXh55"/>
+    </resources>
+    <resources name="cloudCoverTotal" changeable="false" unit="%" mid="cloudCoverTotal" description="Total cloud cover: 0..100% (N)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverTotal"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="N"/>
     </resources>
-    <resources name="cloudCoverBelow500" unit="%" mid="cloudCoverBelow500">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="cloudCoverBelow500" changeable="false" unit="%" mid="cloudCoverBelow500" description="Cloud cover below 500 ft.: 0..100% (N05)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverBelow500"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="N05"/>
     </resources>
-    <resources name="cloudCoverEffective" unit="%" mid="cloudCoverEffective">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="cloudCoverEffective" changeable="false" unit="%" mid="cloudCoverEffective" description="Effective cloud cover: 0..100% (Neff)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverEffective"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Neff"/>
     </resources>
-    <resources name="cloudCoverHigh" unit="%" mid="cloudCoverHigh">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="cloudCoverHigh" changeable="false" unit="%" mid="cloudCoverHigh" description="High cloud cover (>7 km): 0..100% (Nh)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverHigh"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Nh"/>
     </resources>
-    <resources name="cloudCoverLow" unit="%" mid="cloudCoverTotal">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="cloudCoverLow" changeable="false" unit="%" mid="cloudCoverLow" description="Low cloud cover (lower than 2 km): 0..100% (Nl)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverLow"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Nl"/>
     </resources>
-    <resources name="cloudCoverMid" unit="%" mid="cloudCoverMid">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="cloudCoverMid" changeable="false" unit="%" mid="cloudCoverMid" description="Midlevel cloud cover (2-7 km): 0..100% (Nm)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverMid"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Nm"/>
     </resources>
-    <resources name="surfacePressure" unit="Pa" mid="surfacePressure">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/surfacePressure"/>
-    </resources>
-    <resources name="tempAboveSurface5" unit="K" mid="tempAboveSurface5">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempAboveSurface5"/>
-    </resources>
-    <resources name="tempAboveSurface200" unit="K" mid="tempAboveSurface200">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempAboveSurface200"/>
-    </resources>
-    <resources name="tempMinLast12" unit="K" mid="tempMinLast12">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempMinLast12"/>
-    </resources>
-    <resources name="tempMaxLast12" unit="K" mid="tempMaxLast12">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempMaxLast12"/>
-    </resources>
-    <resources name="precipitationLarger00Last12" unit="%" mid="precipitationLarger00Last12">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="precipitationLarger00Last12" changeable="false" unit="%" mid="precipitationLarger00Last12" description="Probability of precipitation > 0.0mm during the last 12 hours: 0..100% (Rh00)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger00Last12"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rh00"/>
     </resources>
-    <resources name="precipitationLarger02Last12" unit="%" mid="precipitationLarger02Last12">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="precipitationLarger02Last12" changeable="false" unit="%" mid="precipitationLarger02Last12" description="Probability of precipitation > 0.2mm during the last 12 hours: 0..100% (Rh02)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger02Last12"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rh02"/>
     </resources>
-    <resources name="precipitationLarger02Last6" unit="%" mid="precipitationLarger02Last6">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="precipitationLarger02Last6" changeable="false" unit="%" mid="precipitationLarger02Last6" description="Probability of precipitation > 0.2mm during the last 6 hours: 0..100% (R602)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger02Last6"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="R602"/>
     </resources>
-    <resources name="precipitationLarger02Last12" unit="%" mid="precipitationLarger02Last12">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger02Last12"/>
+    <resources name="precipitationLarger02LastDay" changeable="false" unit="%" mid="precipitationLarger02LastDay" description="Probability of precipitation > 0.2mm during the last 24 hours: 0..100% (Rd02)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger02LastDay"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rd02"/>
     </resources>
-    <resources name="precipitationProbability10mm" unit="%" mid="precipitation10mm">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="precipitationLarger10Last12" changeable="false" unit="%" mid="precipitationLarger10Last12" description="Probability of precipitation > 1 mm during the last 12 hours: 0..100% (Rh10)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger10Last12"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rh10"/>
     </resources>
-    <resources name="significantWeather" mid="significantWeather">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <resources name="precipitationLarger50Last12" changeable="false" unit="%" mid="precipitationLarger50Last12" description="Probability of precipitation > 5mm during the last 12 hours: 0..100% (Rh50)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger50Last12"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rh50"/>
+    </resources>
+    <resources name="precipitationLarger50Last6" changeable="false" unit="%" mid="precipitationLarger50Last6" description="Probability of precipitation > 5mm during the last 6 hours: 0..100% (R650)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger50Last6"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="R650"/>
+    </resources>
+    <resources name="precipitationLarger50LastDay" changeable="false" unit="%" mid="precipitationLarger50LastDay" description="Probability of precipitation > 5mm during the last 24 hours: 0..100% (Rd50)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger50LastDay"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rd50"/>
+    </resources>
+    <resources name="fogPropLast1" changeable="false" unit="%" mid="fogPropLast1" description="Probability for fog within the last hour: 0..100% (wwM)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/fogPropLast1"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="wwM"/>
+    </resources>
+    <resources name="fogPropLast12" changeable="false" unit="%" mid="fogPropLast12" description="Probability for fog within the last 12 hours: 0..100% (wwMh)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/fogPropLast12"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="wwMh"/>
+    </resources>
+    <resources name="fogPropLast6" changeable="false" unit="%" mid="fogPropLast6" description="Probability for fog within the last 6 hours: 0..100% (wwM6)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/fogPropLast6"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="wwM6"/>
+    </resources>
+    <resources name="surfacePressure" changeable="false" unit="Pa" mid="surfacePressure" description="Surface pressure, reduced: Pa (PPPP)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/surfacePressure"/>
+      <extraMetadata key="sensorthings.unit.name" value="Pascal"/>
+      <extraMetadata key="dwd.id" value="PPPP"/>
+    </resources>
+    <resources name="tempAboveSurface5" changeable="false" unit="K" mid="tempAboveSurface5" description="Temperature 5cm above surface: Kelvin (T5cm)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempAboveSurface5"/>
+      <extraMetadata key="sensorthings.unit.name" value="Degree Kalvin"/>
+      <extraMetadata key="dwd.id" value="T5cm"/>
+    </resources>
+    <resources name="tempAboveSurface200" changeable="false" unit="K" mid="tempAboveSurface200" description="Temperature 2m above surface: Kelvin (TTT)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempAboveSurface200"/>
+      <extraMetadata key="sensorthings.unit.name" value="Degree Kalvin"/>
+      <extraMetadata key="dwd.id" value="TTT"/>
+    </resources>
+    <resources name="tempMinLast12" changeable="false" unit="K" mid="tempMinLast12" description="Minimum temperature - within the last 12 hours: Kelvin (TN)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempMinLast12"/>
+      <extraMetadata key="sensorthings.unit.name" value="Degree Kalvin"/>
+      <extraMetadata key="dwd.id" value="TN"/>
+    </resources>
+    <resources name="tempMaxLast12" changeable="false" unit="K" mid="tempMaxLast12" description="Maximum temperature - within the last 12 hours: Kelvin (TX)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempMaxLast12"/>
+      <extraMetadata key="sensorthings.unit.name" value="Degree Kalvin"/>
+      <extraMetadata key="dwd.id" value="TX"/>
+    </resources>
+    <resources name="tempDewpointAboveSurface200" changeable="false" unit="K" mid="tempDewpointAboveSurface200" description="Dewpoint 2m above surface: Kelvin (Td)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempDewpointAboveSurface200"/>
+      <extraMetadata key="sensorthings.unit.name" value="Degree Kalvin"/>
+      <extraMetadata key="dwd.id" value="Td"/>
+    </resources>
+    <resources name="significantWeather3Hours" changeable="false" unit="" mid="significantWeather3Hours" description="Significant weather during the past 3 hours: - (ww)">
+      <eType xsi:type="ecore:EEnum" href="http://cdc.dwd.de/common/weather#//WMOWeatherCodeType"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather3Hours"/>
+      <extraMetadata key="sensorthings.unit.name" value=""/>
+      <extraMetadata key="dwd.id" value="ww"/>
+    </resources>
+    <resources name="w1" changeable="false" unit="" mid="w1" description="Significant weather in the past 6 to 3 hours: - (W1 part of W1W2)">
+      <eType xsi:type="ecore:EEnum" href="http://cdc.dwd.de/common/weather#//WMOWeatherCodeType"/>
+      <valueFeature xsi:type="ecore:EReference" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather6Hours"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//W1W2/w1"/>
+      <extraMetadata key="sensorthings.unit.name" value=""/>
+      <extraMetadata key="dwd.id" value="W1 part of W1W2"/>
+    </resources>
+    <resources name="w2" changeable="false" unit="" mid="w2" description="Significant weather in the past 3 hours: - (W2 part of W1W2)">
+      <eType xsi:type="ecore:EEnum" href="http://cdc.dwd.de/common/weather#//WMOWeatherCodeType"/>
+      <valueFeature xsi:type="ecore:EReference" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather6Hours"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//W1W2/w2"/>
+      <extraMetadata key="sensorthings.unit.name" value=""/>
+      <extraMetadata key="dwd.id" value="W2 part of W1W2"/>
+    </resources>
+    <resources name="snowRainEqLast1" changeable="false" unit="Kg/m2" mid="snowRainEqLast1" description="Snow-Rain-Equivalent during the last hour: kg/m2 (RRS1c)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/snowRainEqLast1"/>
+      <extraMetadata key="sensorthings.unit.name" value="Kilograms per sqaure meter"/>
+      <extraMetadata key="dwd.id" value="RRS1c"/>
+    </resources>
+    <resources name="snowRainEqLast3" changeable="false" unit="Kg/m2" mid="snowRainEqLast3" description="Snow-Rain-Equivalent during the 3 hours: kg/m2 (RRS3c)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/snowRainEqLast3"/>
+      <extraMetadata key="sensorthings.unit.name" value="Kilograms per sqaure meter"/>
+      <extraMetadata key="dwd.id" value="RRS3c"/>
+    </resources>
+    <resources name="irRadianceGlobal" changeable="false" unit="KJ/m2" mid="irRadianceGlobal" description="Global Irradiance: kJ/m2 (Rad1h)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/irRadianceGlobal"/>
+      <extraMetadata key="sensorthings.unit.name" value="Kilo Joul per sqaure meter"/>
+      <extraMetadata key="dwd.id" value="Rad1h"/>
+    </resources>
+    <resources name="sunshineDurationLast1" changeable="false" unit="s" mid="sunshineDurationLast1" description="Sunshine duration during the last Hour: s (SunD1)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/sunshineDurationLast1"/>
+      <extraMetadata key="sensorthings.unit.name" value="seconds"/>
+      <extraMetadata key="dwd.id" value="SunD1"/>
+    </resources>
+    <resources name="visibility" changeable="false" unit="m" mid="visibility" description="Visibility: m (VV)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/visibility"/>
+      <extraMetadata key="sensorthings.unit.name" value="meters"/>
+      <extraMetadata key="dwd.id" value="VV"/>
+    </resources>
+    <resources name="issueTime" changeable="false" unit="" mid="issueTime" description="This is the time the report was issued.">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//WeatherReport/issueTime"/>
     </resources>
     <collectionFeature xsi:type="ecore:EReference" href="http://cdc.dwd.de/common/weather#//WeatherReports/reports"/>
   </services>
@@ -272,85 +752,245 @@
       <featurePath xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
     </timestamp>
     <name name="12H Forecast"/>
-    <resources name="windSpeed" changeable="false" unit="m/s" mid="windSpeed">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="windSpeed" changeable="false" unit="m/s" mid="windSpeed" description="Wind speed: m/s (FF)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windSpeed"/>
+      <extraMetadata key="sensorthings.unit.name" value="meter per seconds"/>
+      <extraMetadata key="dwd.id" value="FF"/>
     </resources>
-    <resources name="windDirection" unit="degrees" mid="windDirection">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windDirection"/>
-    </resources>
-    <resources name="windGustLastHour" unit="m/s" mid="windGustLastHour">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="windGustLastHour" changeable="false" unit="m/s" mid="windGustLastHour" description="Maximum wind gust within the last hour: m/s (FX1)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustLastHour"/>
+      <extraMetadata key="sensorthings.unit.name" value="meter per seconds"/>
+      <extraMetadata key="dwd.id" value="FX1"/>
     </resources>
-    <resources name="cloudCoverTotal" unit="%" mid="cloudCoverTotal">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="windGustLastThreeHours" changeable="false" unit="m/s" mid="windGustLastThreeHours" description="Maximum wind gust within the last 3 hours: m/s (FX3)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustLastThreeHours"/>
+      <extraMetadata key="sensorthings.unit.name" value="meter per seconds"/>
+      <extraMetadata key="dwd.id" value="FX3"/>
+    </resources>
+    <resources name="windGustMaxLast12Hours" changeable="false" unit="m/s" mid="windGustMaxLast12Hours" description="Maximum wind gust within the last 12 hours: m/s (FXh)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustMaxLast12Hours"/>
+      <extraMetadata key="sensorthings.unit.name" value="meter per seconds"/>
+      <extraMetadata key="dwd.id" value="FXh"/>
+    </resources>
+    <resources name="windDirection" changeable="false" unit="&#xb0;" mid="windDirection" description="Wind direction: 0..360 Degrees (DD)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windDirection"/>
+      <extraMetadata key="sensorthings.unit.name" value="degrees"/>
+      <extraMetadata key="dwd.id" value="DD"/>
+    </resources>
+    <resources name="windGustProb25" changeable="false" unit="%" mid="windGustProb25" description="Probability of wind gusts >= 25kn within the last 12 hours: 0..100% (FXh25)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustProb25"/>
+      <extraMetadata key="sensorthings.unit.name" value="percent probability"/>
+      <extraMetadata key="dwd.id" value="FXh25"/>
+    </resources>
+    <resources name="windGustProb40" changeable="false" unit="%" mid="windGustProb40" description="Probability of wind gusts >= 40kn within the last 12 hours: 0..100% (FXh40)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustProb40"/>
+      <extraMetadata key="sensorthings.unit.name" value="percent probability"/>
+      <extraMetadata key="dwd.id" value="FXh40"/>
+    </resources>
+    <resources name="windGustProb55" changeable="false" unit="%" mid="windGustProb55" description="Probability of wind gusts >= 55kn within the last 12 hours: 0..100% (FXh55)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustProb55"/>
+      <extraMetadata key="sensorthings.unit.name" value="percent probability"/>
+      <extraMetadata key="dwd.id" value="FXh55"/>
+    </resources>
+    <resources name="cloudCoverTotal" changeable="false" unit="%" mid="cloudCoverTotal" description="Total cloud cover: 0..100% (N)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverTotal"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="N"/>
     </resources>
-    <resources name="cloudCoverBelow500" unit="%" mid="cloudCoverBelow500">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="cloudCoverBelow500" changeable="false" unit="%" mid="cloudCoverBelow500" description="Cloud cover below 500 ft.: 0..100% (N05)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverBelow500"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="N05"/>
     </resources>
-    <resources name="cloudCoverEffective" unit="%" mid="cloudCoverEffective">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="cloudCoverEffective" changeable="false" unit="%" mid="cloudCoverEffective" description="Effective cloud cover: 0..100% (Neff)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverEffective"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Neff"/>
     </resources>
-    <resources name="cloudCoverHigh" unit="%" mid="cloudCoverHigh">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="cloudCoverHigh" changeable="false" unit="%" mid="cloudCoverHigh" description="High cloud cover (>7 km): 0..100% (Nh)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverHigh"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Nh"/>
     </resources>
-    <resources name="cloudCoverLow" unit="%" mid="cloudCoverTotal">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="cloudCoverLow" changeable="false" unit="%" mid="cloudCoverLow" description="Low cloud cover (lower than 2 km): 0..100% (Nl)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverLow"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Nl"/>
     </resources>
-    <resources name="cloudCoverMid" unit="%" mid="cloudCoverMid">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="cloudCoverMid" changeable="false" unit="%" mid="cloudCoverMid" description="Midlevel cloud cover (2-7 km): 0..100% (Nm)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverMid"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Nm"/>
     </resources>
-    <resources name="surfacePressure" unit="Pa" mid="surfacePressure">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/surfacePressure"/>
-    </resources>
-    <resources name="tempAboveSurface5" unit="K" mid="tempAboveSurface5">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempAboveSurface5"/>
-    </resources>
-    <resources name="tempAboveSurface200" unit="K" mid="tempAboveSurface200">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempAboveSurface200"/>
-    </resources>
-    <resources name="tempMinLast12" unit="K" mid="tempMinLast12">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempMinLast12"/>
-    </resources>
-    <resources name="tempMaxLast12" unit="K" mid="tempMaxLast12">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempMaxLast12"/>
-    </resources>
-    <resources name="precipitationLarger00Last12" unit="%" mid="precipitationLarger00Last12">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="precipitationLarger00Last12" changeable="false" unit="%" mid="precipitationLarger00Last12" description="Probability of precipitation > 0.0mm during the last 12 hours: 0..100% (Rh00)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger00Last12"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rh00"/>
     </resources>
-    <resources name="precipitationLarger02Last12" unit="%" mid="precipitationLarger02Last12">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="precipitationLarger02Last12" changeable="false" unit="%" mid="precipitationLarger02Last12" description="Probability of precipitation > 0.2mm during the last 12 hours: 0..100% (Rh02)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger02Last12"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rh02"/>
     </resources>
-    <resources name="precipitationLarger02Last6" unit="%" mid="precipitationLarger02Last6">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="precipitationLarger02Last6" changeable="false" unit="%" mid="precipitationLarger02Last6" description="Probability of precipitation > 0.2mm during the last 6 hours: 0..100% (R602)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger02Last6"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="R602"/>
     </resources>
-    <resources name="precipitationLarger02Last12" unit="%" mid="precipitationLarger02Last12">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger02Last12"/>
+    <resources name="precipitationLarger02LastDay" changeable="false" unit="%" mid="precipitationLarger02LastDay" description="Probability of precipitation > 0.2mm during the last 24 hours: 0..100% (Rd02)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger02LastDay"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rd02"/>
     </resources>
-    <resources name="precipitationProbability10mm" unit="%" mid="precipitation10mm">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="precipitationLarger10Last12" changeable="false" unit="%" mid="precipitationLarger10Last12" description="Probability of precipitation > 1 mm during the last 12 hours: 0..100% (Rh10)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger10Last12"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rh10"/>
     </resources>
-    <resources name="significantWeather" mid="significantWeather">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <resources name="precipitationLarger50Last12" changeable="false" unit="%" mid="precipitationLarger50Last12" description="Probability of precipitation > 5mm during the last 12 hours: 0..100% (Rh50)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger50Last12"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rh50"/>
+    </resources>
+    <resources name="precipitationLarger50Last6" changeable="false" unit="%" mid="precipitationLarger50Last6" description="Probability of precipitation > 5mm during the last 6 hours: 0..100% (R650)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger50Last6"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="R650"/>
+    </resources>
+    <resources name="precipitationLarger50LastDay" changeable="false" unit="%" mid="precipitationLarger50LastDay" description="Probability of precipitation > 5mm during the last 24 hours: 0..100% (Rd50)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger50LastDay"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rd50"/>
+    </resources>
+    <resources name="fogPropLast1" changeable="false" unit="%" mid="fogPropLast1" description="Probability for fog within the last hour: 0..100% (wwM)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/fogPropLast1"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="wwM"/>
+    </resources>
+    <resources name="fogPropLast12" changeable="false" unit="%" mid="fogPropLast12" description="Probability for fog within the last 12 hours: 0..100% (wwMh)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/fogPropLast12"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="wwMh"/>
+    </resources>
+    <resources name="fogPropLast6" changeable="false" unit="%" mid="fogPropLast6" description="Probability for fog within the last 6 hours: 0..100% (wwM6)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/fogPropLast6"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="wwM6"/>
+    </resources>
+    <resources name="surfacePressure" changeable="false" unit="Pa" mid="surfacePressure" description="Surface pressure, reduced: Pa (PPPP)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/surfacePressure"/>
+      <extraMetadata key="sensorthings.unit.name" value="Pascal"/>
+      <extraMetadata key="dwd.id" value="PPPP"/>
+    </resources>
+    <resources name="tempAboveSurface5" changeable="false" unit="K" mid="tempAboveSurface5" description="Temperature 5cm above surface: Kelvin (T5cm)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempAboveSurface5"/>
+      <extraMetadata key="sensorthings.unit.name" value="Degree Kalvin"/>
+      <extraMetadata key="dwd.id" value="T5cm"/>
+    </resources>
+    <resources name="tempAboveSurface200" changeable="false" unit="K" mid="tempAboveSurface200" description="Temperature 2m above surface: Kelvin (TTT)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempAboveSurface200"/>
+      <extraMetadata key="sensorthings.unit.name" value="Degree Kalvin"/>
+      <extraMetadata key="dwd.id" value="TTT"/>
+    </resources>
+    <resources name="tempMinLast12" changeable="false" unit="K" mid="tempMinLast12" description="Minimum temperature - within the last 12 hours: Kelvin (TN)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempMinLast12"/>
+      <extraMetadata key="sensorthings.unit.name" value="Degree Kalvin"/>
+      <extraMetadata key="dwd.id" value="TN"/>
+    </resources>
+    <resources name="tempMaxLast12" changeable="false" unit="K" mid="tempMaxLast12" description="Maximum temperature - within the last 12 hours: Kelvin (TX)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempMaxLast12"/>
+      <extraMetadata key="sensorthings.unit.name" value="Degree Kalvin"/>
+      <extraMetadata key="dwd.id" value="TX"/>
+    </resources>
+    <resources name="tempDewpointAboveSurface200" changeable="false" unit="K" mid="tempDewpointAboveSurface200" description="Dewpoint 2m above surface: Kelvin (Td)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempDewpointAboveSurface200"/>
+      <extraMetadata key="sensorthings.unit.name" value="Degree Kalvin"/>
+      <extraMetadata key="dwd.id" value="Td"/>
+    </resources>
+    <resources name="significantWeather3Hours" changeable="false" unit="" mid="significantWeather3Hours" description="Significant weather during the past 3 hours: - (ww)">
+      <eType xsi:type="ecore:EEnum" href="http://cdc.dwd.de/common/weather#//WMOWeatherCodeType"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather3Hours"/>
+      <extraMetadata key="sensorthings.unit.name" value=""/>
+      <extraMetadata key="dwd.id" value="ww"/>
+    </resources>
+    <resources name="w1" changeable="false" unit="" mid="w1" description="Significant weather in the past 6 to 3 hours: - (W1 part of W1W2)">
+      <eType xsi:type="ecore:EEnum" href="http://cdc.dwd.de/common/weather#//WMOWeatherCodeType"/>
+      <valueFeature xsi:type="ecore:EReference" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather6Hours"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//W1W2/w1"/>
+      <extraMetadata key="sensorthings.unit.name" value=""/>
+      <extraMetadata key="dwd.id" value="W1 part of W1W2"/>
+    </resources>
+    <resources name="w2" changeable="false" unit="" mid="w2" description="Significant weather in the past 3 hours: - (W2 part of W1W2)">
+      <eType xsi:type="ecore:EEnum" href="http://cdc.dwd.de/common/weather#//WMOWeatherCodeType"/>
+      <valueFeature xsi:type="ecore:EReference" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather6Hours"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//W1W2/w2"/>
+      <extraMetadata key="sensorthings.unit.name" value=""/>
+      <extraMetadata key="dwd.id" value="W2 part of W1W2"/>
+    </resources>
+    <resources name="snowRainEqLast1" changeable="false" unit="Kg/m2" mid="snowRainEqLast1" description="Snow-Rain-Equivalent during the last hour: kg/m2 (RRS1c)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/snowRainEqLast1"/>
+      <extraMetadata key="sensorthings.unit.name" value="Kilograms per sqaure meter"/>
+      <extraMetadata key="dwd.id" value="RRS1c"/>
+    </resources>
+    <resources name="snowRainEqLast3" changeable="false" unit="Kg/m2" mid="snowRainEqLast3" description="Snow-Rain-Equivalent during the 3 hours: kg/m2 (RRS3c)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/snowRainEqLast3"/>
+      <extraMetadata key="sensorthings.unit.name" value="Kilograms per sqaure meter"/>
+      <extraMetadata key="dwd.id" value="RRS3c"/>
+    </resources>
+    <resources name="irRadianceGlobal" changeable="false" unit="KJ/m2" mid="irRadianceGlobal" description="Global Irradiance: kJ/m2 (Rad1h)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/irRadianceGlobal"/>
+      <extraMetadata key="sensorthings.unit.name" value="Kilo Joul per sqaure meter"/>
+      <extraMetadata key="dwd.id" value="Rad1h"/>
+    </resources>
+    <resources name="sunshineDurationLast1" changeable="false" unit="s" mid="sunshineDurationLast1" description="Sunshine duration during the last Hour: s (SunD1)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/sunshineDurationLast1"/>
+      <extraMetadata key="sensorthings.unit.name" value="seconds"/>
+      <extraMetadata key="dwd.id" value="SunD1"/>
+    </resources>
+    <resources name="visibility" changeable="false" unit="m" mid="visibility" description="Visibility: m (VV)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/visibility"/>
+      <extraMetadata key="sensorthings.unit.name" value="meters"/>
+      <extraMetadata key="dwd.id" value="VV"/>
+    </resources>
+    <resources name="issueTime" changeable="false" unit="" mid="issueTime" description="This is the time the report was issued.">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//WeatherReport/issueTime"/>
     </resources>
     <collectionFeature xsi:type="ecore:EReference" href="http://cdc.dwd.de/common/weather#//WeatherReports/reports"/>
   </services>
@@ -359,85 +999,245 @@
       <featurePath xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
     </timestamp>
     <name name="24H Forecast"/>
-    <resources name="windSpeed" changeable="false" unit="m/s" mid="windSpeed">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="windSpeed" changeable="false" unit="m/s" mid="windSpeed" description="Wind speed: m/s (FF)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windSpeed"/>
+      <extraMetadata key="sensorthings.unit.name" value="meter per seconds"/>
+      <extraMetadata key="dwd.id" value="FF"/>
     </resources>
-    <resources name="windDirection" unit="degrees" mid="windDirection">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windDirection"/>
-    </resources>
-    <resources name="windGustLastHour" unit="m/s" mid="windGustLastHour">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="windGustLastHour" changeable="false" unit="m/s" mid="windGustLastHour" description="Maximum wind gust within the last hour: m/s (FX1)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustLastHour"/>
+      <extraMetadata key="sensorthings.unit.name" value="meter per seconds"/>
+      <extraMetadata key="dwd.id" value="FX1"/>
     </resources>
-    <resources name="cloudCoverTotal" unit="%" mid="cloudCoverTotal">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="windGustLastThreeHours" changeable="false" unit="m/s" mid="windGustLastThreeHours" description="Maximum wind gust within the last 3 hours: m/s (FX3)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustLastThreeHours"/>
+      <extraMetadata key="sensorthings.unit.name" value="meter per seconds"/>
+      <extraMetadata key="dwd.id" value="FX3"/>
+    </resources>
+    <resources name="windGustMaxLast12Hours" changeable="false" unit="m/s" mid="windGustMaxLast12Hours" description="Maximum wind gust within the last 12 hours: m/s (FXh)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustMaxLast12Hours"/>
+      <extraMetadata key="sensorthings.unit.name" value="meter per seconds"/>
+      <extraMetadata key="dwd.id" value="FXh"/>
+    </resources>
+    <resources name="windDirection" changeable="false" unit="&#xb0;" mid="windDirection" description="Wind direction: 0..360 Degrees (DD)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windDirection"/>
+      <extraMetadata key="sensorthings.unit.name" value="degrees"/>
+      <extraMetadata key="dwd.id" value="DD"/>
+    </resources>
+    <resources name="windGustProb25" changeable="false" unit="%" mid="windGustProb25" description="Probability of wind gusts >= 25kn within the last 12 hours: 0..100% (FXh25)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustProb25"/>
+      <extraMetadata key="sensorthings.unit.name" value="percent probability"/>
+      <extraMetadata key="dwd.id" value="FXh25"/>
+    </resources>
+    <resources name="windGustProb40" changeable="false" unit="%" mid="windGustProb40" description="Probability of wind gusts >= 40kn within the last 12 hours: 0..100% (FXh40)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustProb40"/>
+      <extraMetadata key="sensorthings.unit.name" value="percent probability"/>
+      <extraMetadata key="dwd.id" value="FXh40"/>
+    </resources>
+    <resources name="windGustProb55" changeable="false" unit="%" mid="windGustProb55" description="Probability of wind gusts >= 55kn within the last 12 hours: 0..100% (FXh55)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustProb55"/>
+      <extraMetadata key="sensorthings.unit.name" value="percent probability"/>
+      <extraMetadata key="dwd.id" value="FXh55"/>
+    </resources>
+    <resources name="cloudCoverTotal" changeable="false" unit="%" mid="cloudCoverTotal" description="Total cloud cover: 0..100% (N)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverTotal"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="N"/>
     </resources>
-    <resources name="cloudCoverBelow500" unit="%" mid="cloudCoverBelow500">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="cloudCoverBelow500" changeable="false" unit="%" mid="cloudCoverBelow500" description="Cloud cover below 500 ft.: 0..100% (N05)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverBelow500"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="N05"/>
     </resources>
-    <resources name="cloudCoverEffective" unit="%" mid="cloudCoverEffective">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="cloudCoverEffective" changeable="false" unit="%" mid="cloudCoverEffective" description="Effective cloud cover: 0..100% (Neff)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverEffective"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Neff"/>
     </resources>
-    <resources name="cloudCoverHigh" unit="%" mid="cloudCoverHigh">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="cloudCoverHigh" changeable="false" unit="%" mid="cloudCoverHigh" description="High cloud cover (>7 km): 0..100% (Nh)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverHigh"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Nh"/>
     </resources>
-    <resources name="cloudCoverLow" unit="%" mid="cloudCoverTotal">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="cloudCoverLow" changeable="false" unit="%" mid="cloudCoverLow" description="Low cloud cover (lower than 2 km): 0..100% (Nl)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverLow"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Nl"/>
     </resources>
-    <resources name="cloudCoverMid" unit="%" mid="cloudCoverMid">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="cloudCoverMid" changeable="false" unit="%" mid="cloudCoverMid" description="Midlevel cloud cover (2-7 km): 0..100% (Nm)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverMid"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Nm"/>
     </resources>
-    <resources name="surfacePressure" unit="Pa" mid="surfacePressure">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/surfacePressure"/>
-    </resources>
-    <resources name="tempAboveSurface5" unit="K" mid="tempAboveSurface5">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempAboveSurface5"/>
-    </resources>
-    <resources name="tempAboveSurface200" unit="K" mid="tempAboveSurface200">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempAboveSurface200"/>
-    </resources>
-    <resources name="tempMinLast12" unit="K" mid="tempMinLast12">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempMinLast12"/>
-    </resources>
-    <resources name="tempMaxLast12" unit="K" mid="tempMaxLast12">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempMaxLast12"/>
-    </resources>
-    <resources name="precipitationLarger00Last12" unit="%" mid="precipitationLarger00Last12">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="precipitationLarger00Last12" changeable="false" unit="%" mid="precipitationLarger00Last12" description="Probability of precipitation > 0.0mm during the last 12 hours: 0..100% (Rh00)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger00Last12"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rh00"/>
     </resources>
-    <resources name="precipitationLarger02Last12" unit="%" mid="precipitationLarger02Last12">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="precipitationLarger02Last12" changeable="false" unit="%" mid="precipitationLarger02Last12" description="Probability of precipitation > 0.2mm during the last 12 hours: 0..100% (Rh02)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger02Last12"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rh02"/>
     </resources>
-    <resources name="precipitationLarger02Last6" unit="%" mid="precipitationLarger02Last6">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="precipitationLarger02Last6" changeable="false" unit="%" mid="precipitationLarger02Last6" description="Probability of precipitation > 0.2mm during the last 6 hours: 0..100% (R602)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger02Last6"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="R602"/>
     </resources>
-    <resources name="precipitationLarger02Last12" unit="%" mid="precipitationLarger02Last12">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger02Last12"/>
+    <resources name="precipitationLarger02LastDay" changeable="false" unit="%" mid="precipitationLarger02LastDay" description="Probability of precipitation > 0.2mm during the last 24 hours: 0..100% (Rd02)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger02LastDay"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rd02"/>
     </resources>
-    <resources name="precipitationProbability10mm" unit="%" mid="precipitation10mm">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="precipitationLarger10Last12" changeable="false" unit="%" mid="precipitationLarger10Last12" description="Probability of precipitation > 1 mm during the last 12 hours: 0..100% (Rh10)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger10Last12"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rh10"/>
     </resources>
-    <resources name="significantWeather" mid="significantWeather">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <resources name="precipitationLarger50Last12" changeable="false" unit="%" mid="precipitationLarger50Last12" description="Probability of precipitation > 5mm during the last 12 hours: 0..100% (Rh50)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger50Last12"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rh50"/>
+    </resources>
+    <resources name="precipitationLarger50Last6" changeable="false" unit="%" mid="precipitationLarger50Last6" description="Probability of precipitation > 5mm during the last 6 hours: 0..100% (R650)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger50Last6"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="R650"/>
+    </resources>
+    <resources name="precipitationLarger50LastDay" changeable="false" unit="%" mid="precipitationLarger50LastDay" description="Probability of precipitation > 5mm during the last 24 hours: 0..100% (Rd50)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger50LastDay"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rd50"/>
+    </resources>
+    <resources name="fogPropLast1" changeable="false" unit="%" mid="fogPropLast1" description="Probability for fog within the last hour: 0..100% (wwM)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/fogPropLast1"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="wwM"/>
+    </resources>
+    <resources name="fogPropLast12" changeable="false" unit="%" mid="fogPropLast12" description="Probability for fog within the last 12 hours: 0..100% (wwMh)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/fogPropLast12"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="wwMh"/>
+    </resources>
+    <resources name="fogPropLast6" changeable="false" unit="%" mid="fogPropLast6" description="Probability for fog within the last 6 hours: 0..100% (wwM6)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/fogPropLast6"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="wwM6"/>
+    </resources>
+    <resources name="surfacePressure" changeable="false" unit="Pa" mid="surfacePressure" description="Surface pressure, reduced: Pa (PPPP)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/surfacePressure"/>
+      <extraMetadata key="sensorthings.unit.name" value="Pascal"/>
+      <extraMetadata key="dwd.id" value="PPPP"/>
+    </resources>
+    <resources name="tempAboveSurface5" changeable="false" unit="K" mid="tempAboveSurface5" description="Temperature 5cm above surface: Kelvin (T5cm)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempAboveSurface5"/>
+      <extraMetadata key="sensorthings.unit.name" value="Degree Kalvin"/>
+      <extraMetadata key="dwd.id" value="T5cm"/>
+    </resources>
+    <resources name="tempAboveSurface200" changeable="false" unit="K" mid="tempAboveSurface200" description="Temperature 2m above surface: Kelvin (TTT)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempAboveSurface200"/>
+      <extraMetadata key="sensorthings.unit.name" value="Degree Kalvin"/>
+      <extraMetadata key="dwd.id" value="TTT"/>
+    </resources>
+    <resources name="tempMinLast12" changeable="false" unit="K" mid="tempMinLast12" description="Minimum temperature - within the last 12 hours: Kelvin (TN)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempMinLast12"/>
+      <extraMetadata key="sensorthings.unit.name" value="Degree Kalvin"/>
+      <extraMetadata key="dwd.id" value="TN"/>
+    </resources>
+    <resources name="tempMaxLast12" changeable="false" unit="K" mid="tempMaxLast12" description="Maximum temperature - within the last 12 hours: Kelvin (TX)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempMaxLast12"/>
+      <extraMetadata key="sensorthings.unit.name" value="Degree Kalvin"/>
+      <extraMetadata key="dwd.id" value="TX"/>
+    </resources>
+    <resources name="tempDewpointAboveSurface200" changeable="false" unit="K" mid="tempDewpointAboveSurface200" description="Dewpoint 2m above surface: Kelvin (Td)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempDewpointAboveSurface200"/>
+      <extraMetadata key="sensorthings.unit.name" value="Degree Kalvin"/>
+      <extraMetadata key="dwd.id" value="Td"/>
+    </resources>
+    <resources name="significantWeather3Hours" changeable="false" unit="" mid="significantWeather3Hours" description="Significant weather during the past 3 hours: - (ww)">
+      <eType xsi:type="ecore:EEnum" href="http://cdc.dwd.de/common/weather#//WMOWeatherCodeType"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather3Hours"/>
+      <extraMetadata key="sensorthings.unit.name" value=""/>
+      <extraMetadata key="dwd.id" value="ww"/>
+    </resources>
+    <resources name="w1" changeable="false" unit="" mid="w1" description="Significant weather in the past 6 to 3 hours: - (W1 part of W1W2)">
+      <eType xsi:type="ecore:EEnum" href="http://cdc.dwd.de/common/weather#//WMOWeatherCodeType"/>
+      <valueFeature xsi:type="ecore:EReference" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather6Hours"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//W1W2/w1"/>
+      <extraMetadata key="sensorthings.unit.name" value=""/>
+      <extraMetadata key="dwd.id" value="W1 part of W1W2"/>
+    </resources>
+    <resources name="w2" changeable="false" unit="" mid="w2" description="Significant weather in the past 3 hours: - (W2 part of W1W2)">
+      <eType xsi:type="ecore:EEnum" href="http://cdc.dwd.de/common/weather#//WMOWeatherCodeType"/>
+      <valueFeature xsi:type="ecore:EReference" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather6Hours"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//W1W2/w2"/>
+      <extraMetadata key="sensorthings.unit.name" value=""/>
+      <extraMetadata key="dwd.id" value="W2 part of W1W2"/>
+    </resources>
+    <resources name="snowRainEqLast1" changeable="false" unit="Kg/m2" mid="snowRainEqLast1" description="Snow-Rain-Equivalent during the last hour: kg/m2 (RRS1c)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/snowRainEqLast1"/>
+      <extraMetadata key="sensorthings.unit.name" value="Kilograms per sqaure meter"/>
+      <extraMetadata key="dwd.id" value="RRS1c"/>
+    </resources>
+    <resources name="snowRainEqLast3" changeable="false" unit="Kg/m2" mid="snowRainEqLast3" description="Snow-Rain-Equivalent during the 3 hours: kg/m2 (RRS3c)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/snowRainEqLast3"/>
+      <extraMetadata key="sensorthings.unit.name" value="Kilograms per sqaure meter"/>
+      <extraMetadata key="dwd.id" value="RRS3c"/>
+    </resources>
+    <resources name="irRadianceGlobal" changeable="false" unit="KJ/m2" mid="irRadianceGlobal" description="Global Irradiance: kJ/m2 (Rad1h)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/irRadianceGlobal"/>
+      <extraMetadata key="sensorthings.unit.name" value="Kilo Joul per sqaure meter"/>
+      <extraMetadata key="dwd.id" value="Rad1h"/>
+    </resources>
+    <resources name="sunshineDurationLast1" changeable="false" unit="s" mid="sunshineDurationLast1" description="Sunshine duration during the last Hour: s (SunD1)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/sunshineDurationLast1"/>
+      <extraMetadata key="sensorthings.unit.name" value="seconds"/>
+      <extraMetadata key="dwd.id" value="SunD1"/>
+    </resources>
+    <resources name="visibility" changeable="false" unit="m" mid="visibility" description="Visibility: m (VV)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/visibility"/>
+      <extraMetadata key="sensorthings.unit.name" value="meters"/>
+      <extraMetadata key="dwd.id" value="VV"/>
+    </resources>
+    <resources name="issueTime" changeable="false" unit="" mid="issueTime" description="This is the time the report was issued.">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//WeatherReport/issueTime"/>
     </resources>
     <collectionFeature xsi:type="ecore:EReference" href="http://cdc.dwd.de/common/weather#//WeatherReports/reports"/>
   </services>
@@ -446,85 +1246,245 @@
       <featurePath xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
     </timestamp>
     <name name="48H Forecast"/>
-    <resources name="windSpeed" changeable="false" unit="m/s" mid="windSpeed">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="windSpeed" changeable="false" unit="m/s" mid="windSpeed" description="Wind speed: m/s (FF)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windSpeed"/>
+      <extraMetadata key="sensorthings.unit.name" value="meter per seconds"/>
+      <extraMetadata key="dwd.id" value="FF"/>
     </resources>
-    <resources name="windDirection" unit="degrees" mid="windDirection">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windDirection"/>
-    </resources>
-    <resources name="windGustLastHour" unit="m/s" mid="windGustLastHour">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="windGustLastHour" changeable="false" unit="m/s" mid="windGustLastHour" description="Maximum wind gust within the last hour: m/s (FX1)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustLastHour"/>
+      <extraMetadata key="sensorthings.unit.name" value="meter per seconds"/>
+      <extraMetadata key="dwd.id" value="FX1"/>
     </resources>
-    <resources name="cloudCoverTotal" unit="%" mid="cloudCoverTotal">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="windGustLastThreeHours" changeable="false" unit="m/s" mid="windGustLastThreeHours" description="Maximum wind gust within the last 3 hours: m/s (FX3)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustLastThreeHours"/>
+      <extraMetadata key="sensorthings.unit.name" value="meter per seconds"/>
+      <extraMetadata key="dwd.id" value="FX3"/>
+    </resources>
+    <resources name="windGustMaxLast12Hours" changeable="false" unit="m/s" mid="windGustMaxLast12Hours" description="Maximum wind gust within the last 12 hours: m/s (FXh)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustMaxLast12Hours"/>
+      <extraMetadata key="sensorthings.unit.name" value="meter per seconds"/>
+      <extraMetadata key="dwd.id" value="FXh"/>
+    </resources>
+    <resources name="windDirection" changeable="false" unit="&#xb0;" mid="windDirection" description="Wind direction: 0..360 Degrees (DD)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windDirection"/>
+      <extraMetadata key="sensorthings.unit.name" value="degrees"/>
+      <extraMetadata key="dwd.id" value="DD"/>
+    </resources>
+    <resources name="windGustProb25" changeable="false" unit="%" mid="windGustProb25" description="Probability of wind gusts >= 25kn within the last 12 hours: 0..100% (FXh25)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustProb25"/>
+      <extraMetadata key="sensorthings.unit.name" value="percent probability"/>
+      <extraMetadata key="dwd.id" value="FXh25"/>
+    </resources>
+    <resources name="windGustProb40" changeable="false" unit="%" mid="windGustProb40" description="Probability of wind gusts >= 40kn within the last 12 hours: 0..100% (FXh40)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustProb40"/>
+      <extraMetadata key="sensorthings.unit.name" value="percent probability"/>
+      <extraMetadata key="dwd.id" value="FXh40"/>
+    </resources>
+    <resources name="windGustProb55" changeable="false" unit="%" mid="windGustProb55" description="Probability of wind gusts >= 55kn within the last 12 hours: 0..100% (FXh55)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustProb55"/>
+      <extraMetadata key="sensorthings.unit.name" value="percent probability"/>
+      <extraMetadata key="dwd.id" value="FXh55"/>
+    </resources>
+    <resources name="cloudCoverTotal" changeable="false" unit="%" mid="cloudCoverTotal" description="Total cloud cover: 0..100% (N)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverTotal"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="N"/>
     </resources>
-    <resources name="cloudCoverBelow500" unit="%" mid="cloudCoverBelow500">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="cloudCoverBelow500" changeable="false" unit="%" mid="cloudCoverBelow500" description="Cloud cover below 500 ft.: 0..100% (N05)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverBelow500"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="N05"/>
     </resources>
-    <resources name="cloudCoverEffective" unit="%" mid="cloudCoverEffective">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="cloudCoverEffective" changeable="false" unit="%" mid="cloudCoverEffective" description="Effective cloud cover: 0..100% (Neff)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverEffective"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Neff"/>
     </resources>
-    <resources name="cloudCoverHigh" unit="%" mid="cloudCoverHigh">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="cloudCoverHigh" changeable="false" unit="%" mid="cloudCoverHigh" description="High cloud cover (>7 km): 0..100% (Nh)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverHigh"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Nh"/>
     </resources>
-    <resources name="cloudCoverLow" unit="%" mid="cloudCoverTotal">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="cloudCoverLow" changeable="false" unit="%" mid="cloudCoverLow" description="Low cloud cover (lower than 2 km): 0..100% (Nl)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverLow"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Nl"/>
     </resources>
-    <resources name="cloudCoverMid" unit="%" mid="cloudCoverMid">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="cloudCoverMid" changeable="false" unit="%" mid="cloudCoverMid" description="Midlevel cloud cover (2-7 km): 0..100% (Nm)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverMid"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Nm"/>
     </resources>
-    <resources name="surfacePressure" unit="Pa" mid="surfacePressure">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/surfacePressure"/>
-    </resources>
-    <resources name="tempAboveSurface5" unit="K" mid="tempAboveSurface5">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempAboveSurface5"/>
-    </resources>
-    <resources name="tempAboveSurface200" unit="K" mid="tempAboveSurface200">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempAboveSurface200"/>
-    </resources>
-    <resources name="tempMinLast12" unit="K" mid="tempMinLast12">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempMinLast12"/>
-    </resources>
-    <resources name="tempMaxLast12" unit="K" mid="tempMaxLast12">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempMaxLast12"/>
-    </resources>
-    <resources name="precipitationLarger00Last12" unit="%" mid="precipitationLarger00Last12">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="precipitationLarger00Last12" changeable="false" unit="%" mid="precipitationLarger00Last12" description="Probability of precipitation > 0.0mm during the last 12 hours: 0..100% (Rh00)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger00Last12"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rh00"/>
     </resources>
-    <resources name="precipitationLarger02Last12" unit="%" mid="precipitationLarger02Last12">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="precipitationLarger02Last12" changeable="false" unit="%" mid="precipitationLarger02Last12" description="Probability of precipitation > 0.2mm during the last 12 hours: 0..100% (Rh02)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger02Last12"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rh02"/>
     </resources>
-    <resources name="precipitationLarger02Last6" unit="%" mid="precipitationLarger02Last6">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="precipitationLarger02Last6" changeable="false" unit="%" mid="precipitationLarger02Last6" description="Probability of precipitation > 0.2mm during the last 6 hours: 0..100% (R602)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger02Last6"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="R602"/>
     </resources>
-    <resources name="precipitationLarger02Last12" unit="%" mid="precipitationLarger02Last12">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger02Last12"/>
+    <resources name="precipitationLarger02LastDay" changeable="false" unit="%" mid="precipitationLarger02LastDay" description="Probability of precipitation > 0.2mm during the last 24 hours: 0..100% (Rd02)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger02LastDay"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rd02"/>
     </resources>
-    <resources name="precipitationProbability10mm" unit="%" mid="precipitation10mm">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="precipitationLarger10Last12" changeable="false" unit="%" mid="precipitationLarger10Last12" description="Probability of precipitation > 1 mm during the last 12 hours: 0..100% (Rh10)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger10Last12"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rh10"/>
     </resources>
-    <resources name="significantWeather" mid="significantWeather">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <resources name="precipitationLarger50Last12" changeable="false" unit="%" mid="precipitationLarger50Last12" description="Probability of precipitation > 5mm during the last 12 hours: 0..100% (Rh50)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger50Last12"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rh50"/>
+    </resources>
+    <resources name="precipitationLarger50Last6" changeable="false" unit="%" mid="precipitationLarger50Last6" description="Probability of precipitation > 5mm during the last 6 hours: 0..100% (R650)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger50Last6"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="R650"/>
+    </resources>
+    <resources name="precipitationLarger50LastDay" changeable="false" unit="%" mid="precipitationLarger50LastDay" description="Probability of precipitation > 5mm during the last 24 hours: 0..100% (Rd50)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger50LastDay"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rd50"/>
+    </resources>
+    <resources name="fogPropLast1" changeable="false" unit="%" mid="fogPropLast1" description="Probability for fog within the last hour: 0..100% (wwM)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/fogPropLast1"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="wwM"/>
+    </resources>
+    <resources name="fogPropLast12" changeable="false" unit="%" mid="fogPropLast12" description="Probability for fog within the last 12 hours: 0..100% (wwMh)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/fogPropLast12"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="wwMh"/>
+    </resources>
+    <resources name="fogPropLast6" changeable="false" unit="%" mid="fogPropLast6" description="Probability for fog within the last 6 hours: 0..100% (wwM6)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/fogPropLast6"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="wwM6"/>
+    </resources>
+    <resources name="surfacePressure" changeable="false" unit="Pa" mid="surfacePressure" description="Surface pressure, reduced: Pa (PPPP)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/surfacePressure"/>
+      <extraMetadata key="sensorthings.unit.name" value="Pascal"/>
+      <extraMetadata key="dwd.id" value="PPPP"/>
+    </resources>
+    <resources name="tempAboveSurface5" changeable="false" unit="K" mid="tempAboveSurface5" description="Temperature 5cm above surface: Kelvin (T5cm)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempAboveSurface5"/>
+      <extraMetadata key="sensorthings.unit.name" value="Degree Kalvin"/>
+      <extraMetadata key="dwd.id" value="T5cm"/>
+    </resources>
+    <resources name="tempAboveSurface200" changeable="false" unit="K" mid="tempAboveSurface200" description="Temperature 2m above surface: Kelvin (TTT)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempAboveSurface200"/>
+      <extraMetadata key="sensorthings.unit.name" value="Degree Kalvin"/>
+      <extraMetadata key="dwd.id" value="TTT"/>
+    </resources>
+    <resources name="tempMinLast12" changeable="false" unit="K" mid="tempMinLast12" description="Minimum temperature - within the last 12 hours: Kelvin (TN)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempMinLast12"/>
+      <extraMetadata key="sensorthings.unit.name" value="Degree Kalvin"/>
+      <extraMetadata key="dwd.id" value="TN"/>
+    </resources>
+    <resources name="tempMaxLast12" changeable="false" unit="K" mid="tempMaxLast12" description="Maximum temperature - within the last 12 hours: Kelvin (TX)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempMaxLast12"/>
+      <extraMetadata key="sensorthings.unit.name" value="Degree Kalvin"/>
+      <extraMetadata key="dwd.id" value="TX"/>
+    </resources>
+    <resources name="tempDewpointAboveSurface200" changeable="false" unit="K" mid="tempDewpointAboveSurface200" description="Dewpoint 2m above surface: Kelvin (Td)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempDewpointAboveSurface200"/>
+      <extraMetadata key="sensorthings.unit.name" value="Degree Kalvin"/>
+      <extraMetadata key="dwd.id" value="Td"/>
+    </resources>
+    <resources name="significantWeather3Hours" changeable="false" unit="" mid="significantWeather3Hours" description="Significant weather during the past 3 hours: - (ww)">
+      <eType xsi:type="ecore:EEnum" href="http://cdc.dwd.de/common/weather#//WMOWeatherCodeType"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather3Hours"/>
+      <extraMetadata key="sensorthings.unit.name" value=""/>
+      <extraMetadata key="dwd.id" value="ww"/>
+    </resources>
+    <resources name="w1" changeable="false" unit="" mid="w1" description="Significant weather in the past 6 to 3 hours: - (W1 part of W1W2)">
+      <eType xsi:type="ecore:EEnum" href="http://cdc.dwd.de/common/weather#//WMOWeatherCodeType"/>
+      <valueFeature xsi:type="ecore:EReference" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather6Hours"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//W1W2/w1"/>
+      <extraMetadata key="sensorthings.unit.name" value=""/>
+      <extraMetadata key="dwd.id" value="W1 part of W1W2"/>
+    </resources>
+    <resources name="w2" changeable="false" unit="" mid="w2" description="Significant weather in the past 3 hours: - (W2 part of W1W2)">
+      <eType xsi:type="ecore:EEnum" href="http://cdc.dwd.de/common/weather#//WMOWeatherCodeType"/>
+      <valueFeature xsi:type="ecore:EReference" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather6Hours"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//W1W2/w2"/>
+      <extraMetadata key="sensorthings.unit.name" value=""/>
+      <extraMetadata key="dwd.id" value="W2 part of W1W2"/>
+    </resources>
+    <resources name="snowRainEqLast1" changeable="false" unit="Kg/m2" mid="snowRainEqLast1" description="Snow-Rain-Equivalent during the last hour: kg/m2 (RRS1c)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/snowRainEqLast1"/>
+      <extraMetadata key="sensorthings.unit.name" value="Kilograms per sqaure meter"/>
+      <extraMetadata key="dwd.id" value="RRS1c"/>
+    </resources>
+    <resources name="snowRainEqLast3" changeable="false" unit="Kg/m2" mid="snowRainEqLast3" description="Snow-Rain-Equivalent during the 3 hours: kg/m2 (RRS3c)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/snowRainEqLast3"/>
+      <extraMetadata key="sensorthings.unit.name" value="Kilograms per sqaure meter"/>
+      <extraMetadata key="dwd.id" value="RRS3c"/>
+    </resources>
+    <resources name="irRadianceGlobal" changeable="false" unit="KJ/m2" mid="irRadianceGlobal" description="Global Irradiance: kJ/m2 (Rad1h)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/irRadianceGlobal"/>
+      <extraMetadata key="sensorthings.unit.name" value="Kilo Joul per sqaure meter"/>
+      <extraMetadata key="dwd.id" value="Rad1h"/>
+    </resources>
+    <resources name="sunshineDurationLast1" changeable="false" unit="s" mid="sunshineDurationLast1" description="Sunshine duration during the last Hour: s (SunD1)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/sunshineDurationLast1"/>
+      <extraMetadata key="sensorthings.unit.name" value="seconds"/>
+      <extraMetadata key="dwd.id" value="SunD1"/>
+    </resources>
+    <resources name="visibility" changeable="false" unit="m" mid="visibility" description="Visibility: m (VV)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/visibility"/>
+      <extraMetadata key="sensorthings.unit.name" value="meters"/>
+      <extraMetadata key="dwd.id" value="VV"/>
+    </resources>
+    <resources name="issueTime" changeable="false" unit="" mid="issueTime" description="This is the time the report was issued.">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//WeatherReport/issueTime"/>
     </resources>
     <collectionFeature xsi:type="ecore:EReference" href="http://cdc.dwd.de/common/weather#//WeatherReports/reports"/>
   </services>
@@ -533,85 +1493,245 @@
       <featurePath xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
     </timestamp>
     <name name="72H Forecast"/>
-    <resources name="windSpeed" changeable="false" unit="m/s" mid="windSpeed">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="windSpeed" changeable="false" unit="m/s" mid="windSpeed" description="Wind speed: m/s (FF)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windSpeed"/>
+      <extraMetadata key="sensorthings.unit.name" value="meter per seconds"/>
+      <extraMetadata key="dwd.id" value="FF"/>
     </resources>
-    <resources name="windDirection" unit="degrees" mid="windDirection">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windDirection"/>
-    </resources>
-    <resources name="windGustLastHour" unit="m/s" mid="windGustLastHour">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="windGustLastHour" changeable="false" unit="m/s" mid="windGustLastHour" description="Maximum wind gust within the last hour: m/s (FX1)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustLastHour"/>
+      <extraMetadata key="sensorthings.unit.name" value="meter per seconds"/>
+      <extraMetadata key="dwd.id" value="FX1"/>
     </resources>
-    <resources name="cloudCoverTotal" unit="%" mid="cloudCoverTotal">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="windGustLastThreeHours" changeable="false" unit="m/s" mid="windGustLastThreeHours" description="Maximum wind gust within the last 3 hours: m/s (FX3)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustLastThreeHours"/>
+      <extraMetadata key="sensorthings.unit.name" value="meter per seconds"/>
+      <extraMetadata key="dwd.id" value="FX3"/>
+    </resources>
+    <resources name="windGustMaxLast12Hours" changeable="false" unit="m/s" mid="windGustMaxLast12Hours" description="Maximum wind gust within the last 12 hours: m/s (FXh)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustMaxLast12Hours"/>
+      <extraMetadata key="sensorthings.unit.name" value="meter per seconds"/>
+      <extraMetadata key="dwd.id" value="FXh"/>
+    </resources>
+    <resources name="windDirection" changeable="false" unit="&#xb0;" mid="windDirection" description="Wind direction: 0..360 Degrees (DD)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windDirection"/>
+      <extraMetadata key="sensorthings.unit.name" value="degrees"/>
+      <extraMetadata key="dwd.id" value="DD"/>
+    </resources>
+    <resources name="windGustProb25" changeable="false" unit="%" mid="windGustProb25" description="Probability of wind gusts >= 25kn within the last 12 hours: 0..100% (FXh25)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustProb25"/>
+      <extraMetadata key="sensorthings.unit.name" value="percent probability"/>
+      <extraMetadata key="dwd.id" value="FXh25"/>
+    </resources>
+    <resources name="windGustProb40" changeable="false" unit="%" mid="windGustProb40" description="Probability of wind gusts >= 40kn within the last 12 hours: 0..100% (FXh40)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustProb40"/>
+      <extraMetadata key="sensorthings.unit.name" value="percent probability"/>
+      <extraMetadata key="dwd.id" value="FXh40"/>
+    </resources>
+    <resources name="windGustProb55" changeable="false" unit="%" mid="windGustProb55" description="Probability of wind gusts >= 55kn within the last 12 hours: 0..100% (FXh55)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/windGustProb55"/>
+      <extraMetadata key="sensorthings.unit.name" value="percent probability"/>
+      <extraMetadata key="dwd.id" value="FXh55"/>
+    </resources>
+    <resources name="cloudCoverTotal" changeable="false" unit="%" mid="cloudCoverTotal" description="Total cloud cover: 0..100% (N)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverTotal"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="N"/>
     </resources>
-    <resources name="cloudCoverBelow500" unit="%" mid="cloudCoverBelow500">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="cloudCoverBelow500" changeable="false" unit="%" mid="cloudCoverBelow500" description="Cloud cover below 500 ft.: 0..100% (N05)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverBelow500"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="N05"/>
     </resources>
-    <resources name="cloudCoverEffective" unit="%" mid="cloudCoverEffective">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="cloudCoverEffective" changeable="false" unit="%" mid="cloudCoverEffective" description="Effective cloud cover: 0..100% (Neff)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverEffective"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Neff"/>
     </resources>
-    <resources name="cloudCoverHigh" unit="%" mid="cloudCoverHigh">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="cloudCoverHigh" changeable="false" unit="%" mid="cloudCoverHigh" description="High cloud cover (>7 km): 0..100% (Nh)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverHigh"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Nh"/>
     </resources>
-    <resources name="cloudCoverLow" unit="%" mid="cloudCoverTotal">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="cloudCoverLow" changeable="false" unit="%" mid="cloudCoverLow" description="Low cloud cover (lower than 2 km): 0..100% (Nl)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverLow"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Nl"/>
     </resources>
-    <resources name="cloudCoverMid" unit="%" mid="cloudCoverMid">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="cloudCoverMid" changeable="false" unit="%" mid="cloudCoverMid" description="Midlevel cloud cover (2-7 km): 0..100% (Nm)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/cloudCoverMid"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Nm"/>
     </resources>
-    <resources name="surfacePressure" unit="Pa" mid="surfacePressure">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/surfacePressure"/>
-    </resources>
-    <resources name="tempAboveSurface5" unit="K" mid="tempAboveSurface5">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempAboveSurface5"/>
-    </resources>
-    <resources name="tempAboveSurface200" unit="K" mid="tempAboveSurface200">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempAboveSurface200"/>
-    </resources>
-    <resources name="tempMinLast12" unit="K" mid="tempMinLast12">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempMinLast12"/>
-    </resources>
-    <resources name="tempMaxLast12" unit="K" mid="tempMaxLast12">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempMaxLast12"/>
-    </resources>
-    <resources name="precipitationLarger00Last12" unit="%" mid="precipitationLarger00Last12">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="precipitationLarger00Last12" changeable="false" unit="%" mid="precipitationLarger00Last12" description="Probability of precipitation > 0.0mm during the last 12 hours: 0..100% (Rh00)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger00Last12"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rh00"/>
     </resources>
-    <resources name="precipitationLarger02Last12" unit="%" mid="precipitationLarger02Last12">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="precipitationLarger02Last12" changeable="false" unit="%" mid="precipitationLarger02Last12" description="Probability of precipitation > 0.2mm during the last 12 hours: 0..100% (Rh02)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger02Last12"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rh02"/>
     </resources>
-    <resources name="precipitationLarger02Last6" unit="%" mid="precipitationLarger02Last6">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="precipitationLarger02Last6" changeable="false" unit="%" mid="precipitationLarger02Last6" description="Probability of precipitation > 0.2mm during the last 6 hours: 0..100% (R602)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger02Last6"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="R602"/>
     </resources>
-    <resources name="precipitationLarger02Last12" unit="%" mid="precipitationLarger02Last12">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger02Last12"/>
+    <resources name="precipitationLarger02LastDay" changeable="false" unit="%" mid="precipitationLarger02LastDay" description="Probability of precipitation > 0.2mm during the last 24 hours: 0..100% (Rd02)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger02LastDay"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rd02"/>
     </resources>
-    <resources name="precipitationProbability10mm" unit="%" mid="precipitation10mm">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <resources name="precipitationLarger10Last12" changeable="false" unit="%" mid="precipitationLarger10Last12" description="Probability of precipitation > 1 mm during the last 12 hours: 0..100% (Rh10)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger10Last12"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rh10"/>
     </resources>
-    <resources name="significantWeather" mid="significantWeather">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <resources name="precipitationLarger50Last12" changeable="false" unit="%" mid="precipitationLarger50Last12" description="Probability of precipitation > 5mm during the last 12 hours: 0..100% (Rh50)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger50Last12"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rh50"/>
+    </resources>
+    <resources name="precipitationLarger50Last6" changeable="false" unit="%" mid="precipitationLarger50Last6" description="Probability of precipitation > 5mm during the last 6 hours: 0..100% (R650)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger50Last6"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="R650"/>
+    </resources>
+    <resources name="precipitationLarger50LastDay" changeable="false" unit="%" mid="precipitationLarger50LastDay" description="Probability of precipitation > 5mm during the last 24 hours: 0..100% (Rd50)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/precipitationLarger50LastDay"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="Rd50"/>
+    </resources>
+    <resources name="fogPropLast1" changeable="false" unit="%" mid="fogPropLast1" description="Probability for fog within the last hour: 0..100% (wwM)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/fogPropLast1"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="wwM"/>
+    </resources>
+    <resources name="fogPropLast12" changeable="false" unit="%" mid="fogPropLast12" description="Probability for fog within the last 12 hours: 0..100% (wwMh)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/fogPropLast12"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="wwMh"/>
+    </resources>
+    <resources name="fogPropLast6" changeable="false" unit="%" mid="fogPropLast6" description="Probability for fog within the last 6 hours: 0..100% (wwM6)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/fogPropLast6"/>
+      <extraMetadata key="sensorthings.unit.name" value="percentage"/>
+      <extraMetadata key="dwd.id" value="wwM6"/>
+    </resources>
+    <resources name="surfacePressure" changeable="false" unit="Pa" mid="surfacePressure" description="Surface pressure, reduced: Pa (PPPP)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/surfacePressure"/>
+      <extraMetadata key="sensorthings.unit.name" value="Pascal"/>
+      <extraMetadata key="dwd.id" value="PPPP"/>
+    </resources>
+    <resources name="tempAboveSurface5" changeable="false" unit="K" mid="tempAboveSurface5" description="Temperature 5cm above surface: Kelvin (T5cm)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempAboveSurface5"/>
+      <extraMetadata key="sensorthings.unit.name" value="Degree Kalvin"/>
+      <extraMetadata key="dwd.id" value="T5cm"/>
+    </resources>
+    <resources name="tempAboveSurface200" changeable="false" unit="K" mid="tempAboveSurface200" description="Temperature 2m above surface: Kelvin (TTT)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempAboveSurface200"/>
+      <extraMetadata key="sensorthings.unit.name" value="Degree Kalvin"/>
+      <extraMetadata key="dwd.id" value="TTT"/>
+    </resources>
+    <resources name="tempMinLast12" changeable="false" unit="K" mid="tempMinLast12" description="Minimum temperature - within the last 12 hours: Kelvin (TN)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempMinLast12"/>
+      <extraMetadata key="sensorthings.unit.name" value="Degree Kalvin"/>
+      <extraMetadata key="dwd.id" value="TN"/>
+    </resources>
+    <resources name="tempMaxLast12" changeable="false" unit="K" mid="tempMaxLast12" description="Maximum temperature - within the last 12 hours: Kelvin (TX)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempMaxLast12"/>
+      <extraMetadata key="sensorthings.unit.name" value="Degree Kalvin"/>
+      <extraMetadata key="dwd.id" value="TX"/>
+    </resources>
+    <resources name="tempDewpointAboveSurface200" changeable="false" unit="K" mid="tempDewpointAboveSurface200" description="Dewpoint 2m above surface: Kelvin (Td)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/tempDewpointAboveSurface200"/>
+      <extraMetadata key="sensorthings.unit.name" value="Degree Kalvin"/>
+      <extraMetadata key="dwd.id" value="Td"/>
+    </resources>
+    <resources name="significantWeather3Hours" changeable="false" unit="" mid="significantWeather3Hours" description="Significant weather during the past 3 hours: - (ww)">
+      <eType xsi:type="ecore:EEnum" href="http://cdc.dwd.de/common/weather#//WMOWeatherCodeType"/>
       <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather3Hours"/>
+      <extraMetadata key="sensorthings.unit.name" value=""/>
+      <extraMetadata key="dwd.id" value="ww"/>
+    </resources>
+    <resources name="w1" changeable="false" unit="" mid="w1" description="Significant weather in the past 6 to 3 hours: - (W1 part of W1W2)">
+      <eType xsi:type="ecore:EEnum" href="http://cdc.dwd.de/common/weather#//WMOWeatherCodeType"/>
+      <valueFeature xsi:type="ecore:EReference" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather6Hours"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//W1W2/w1"/>
+      <extraMetadata key="sensorthings.unit.name" value=""/>
+      <extraMetadata key="dwd.id" value="W1 part of W1W2"/>
+    </resources>
+    <resources name="w2" changeable="false" unit="" mid="w2" description="Significant weather in the past 3 hours: - (W2 part of W1W2)">
+      <eType xsi:type="ecore:EEnum" href="http://cdc.dwd.de/common/weather#//WMOWeatherCodeType"/>
+      <valueFeature xsi:type="ecore:EReference" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather6Hours"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//W1W2/w2"/>
+      <extraMetadata key="sensorthings.unit.name" value=""/>
+      <extraMetadata key="dwd.id" value="W2 part of W1W2"/>
+    </resources>
+    <resources name="snowRainEqLast1" changeable="false" unit="Kg/m2" mid="snowRainEqLast1" description="Snow-Rain-Equivalent during the last hour: kg/m2 (RRS1c)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/snowRainEqLast1"/>
+      <extraMetadata key="sensorthings.unit.name" value="Kilograms per sqaure meter"/>
+      <extraMetadata key="dwd.id" value="RRS1c"/>
+    </resources>
+    <resources name="snowRainEqLast3" changeable="false" unit="Kg/m2" mid="snowRainEqLast3" description="Snow-Rain-Equivalent during the 3 hours: kg/m2 (RRS3c)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/snowRainEqLast3"/>
+      <extraMetadata key="sensorthings.unit.name" value="Kilograms per sqaure meter"/>
+      <extraMetadata key="dwd.id" value="RRS3c"/>
+    </resources>
+    <resources name="irRadianceGlobal" changeable="false" unit="KJ/m2" mid="irRadianceGlobal" description="Global Irradiance: kJ/m2 (Rad1h)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/irRadianceGlobal"/>
+      <extraMetadata key="sensorthings.unit.name" value="Kilo Joul per sqaure meter"/>
+      <extraMetadata key="dwd.id" value="Rad1h"/>
+    </resources>
+    <resources name="sunshineDurationLast1" changeable="false" unit="s" mid="sunshineDurationLast1" description="Sunshine duration during the last Hour: s (SunD1)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/sunshineDurationLast1"/>
+      <extraMetadata key="sensorthings.unit.name" value="seconds"/>
+      <extraMetadata key="dwd.id" value="SunD1"/>
+    </resources>
+    <resources name="visibility" changeable="false" unit="m" mid="visibility" description="Visibility: m (VV)">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/visibility"/>
+      <extraMetadata key="sensorthings.unit.name" value="meters"/>
+      <extraMetadata key="dwd.id" value="VV"/>
+    </resources>
+    <resources name="issueTime" changeable="false" unit="" mid="issueTime" description="This is the time the report was issued.">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="http://cdc.dwd.de/common/weather#//WeatherReport/issueTime"/>
     </resources>
     <collectionFeature xsi:type="ecore:EReference" href="http://cdc.dwd.de/common/weather#//WeatherReports/reports"/>
   </services>
