@@ -15,6 +15,9 @@
 		<location type="BndRepositoryLocation">
 			<repository name="Local"/>
 		</location>
+		<location type="BndRepositoryLocation">
+			<repository name="Sonatype"/>
+		</location>
 	</locations>
 	<environment>
 		<arch>x86_64</arch>

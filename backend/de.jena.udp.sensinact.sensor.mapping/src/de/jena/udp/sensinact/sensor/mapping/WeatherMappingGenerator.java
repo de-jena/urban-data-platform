@@ -15,7 +15,6 @@ package de.jena.udp.sensinact.sensor.mapping;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.Collections;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EAttribute;
@@ -25,7 +24,6 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.emf.ecore.xmi.impl.XMLContentHandlerImpl.XMI;
 import org.eclipse.sensinact.mapping.AdminMapping;
 import org.eclipse.sensinact.mapping.MappingFactory;
 import org.eclipse.sensinact.mapping.NameMapping;
@@ -38,7 +36,6 @@ import org.gecko.emf.osgi.constants.EMFNamespaces;
 import org.gecko.weather.model.weather.WeatherPackage;
 import org.osgi.framework.BundleContext;
 import org.osgi.service.component.annotations.Activate;
-import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.component.annotations.ReferenceCardinality;
 
