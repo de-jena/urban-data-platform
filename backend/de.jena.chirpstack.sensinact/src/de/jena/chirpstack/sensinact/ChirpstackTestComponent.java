@@ -19,9 +19,9 @@ import java.util.logging.Logger;
 import org.eclipse.sensinact.core.push.DataUpdate;
 import org.osgi.service.component.annotations.Reference;
 
-import biz.aQute.scheduler.api.Constants;
-import biz.aQute.scheduler.api.CronExpression;
-import biz.aQute.scheduler.api.CronJob;
+import org.eclipse.osgi.technology.scheduler.api.Constants;
+import org.eclipse.osgi.technology.scheduler.api.CronJob;
+import org.eclipse.osgi.technology.scheduler.api.whiteboard.prototypes.CronExpression;
 import de.jena.chirpstack.model.chirpstack.ChirpstackFactory;
 import de.jena.chirpstack.model.chirpstack.SolidosTeros21;
 import de.jena.chirpstack.model.chirpstack.Teros21;

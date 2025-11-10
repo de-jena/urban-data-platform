@@ -24,4 +24,4 @@ Require-Capability: \
 	com.fasterxml.jackson.core.jackson-annotations,\
 	org.osgi.framework,\
 	org.osgi.service.component,\
-	biz.aQute.api.scheduler
+	org.eclipse.osgi-technology.scheduler.api
