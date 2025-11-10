@@ -15,7 +15,7 @@
     order=sortbynameversion 
     
 
--runee: JavaSE-21
+-runee: JavaSE-17
 -runblacklist: \
 	bnd.identity;id='de.jena.icesensor.websocket',\
 	bnd.identity;id='jakarta.servlet-api';version:Version='5.0.0',\
@@ -82,6 +82,8 @@ slf4j.runpath:  \
 	bnd.identity;id='org.eclipse.sensinact.gateway.southbound.rules.easy-rules.osgi',\
 	bnd.identity;id='org.eclipse.sensinact.gateway.southbound.rules.rules.impl',\
 	bnd.identity;id='org.eclipse.sensinact.gateway.southbound.rules.easy-rules.config',\
+	bnd.identity;id='de.jena.udp.reference.area.component',\
+	bnd.identity;id='de.jena.udp.reference.area.sensinact.rules',\
 	bnd.identity;id='de.jena.udp.sensinact.sensor.mapping'
 #   osgi.implementation;filter:='(&(osgi.implementation=org.eclipse.osgitech.rest.adapter)(provider=osgi.http)),\
     

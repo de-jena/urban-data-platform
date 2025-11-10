@@ -1,0 +1,12 @@
+{
+	":configurator:resource-version": 1,
+	
+	"LocationNotification~chirpstack": {
+		"identifier": "chirpstack",
+		"event.topics": ["DATA/Solidos_Teros21/*"]
+	},
+	"LocationNotification~refArea": {
+		"identifier": "refArea",
+		"event.topics": ["DATA/ReferenceAreaProvider/*"]
+	}
+}
