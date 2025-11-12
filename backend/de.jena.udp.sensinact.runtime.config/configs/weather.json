@@ -7,7 +7,7 @@
 	},
 	"DWD-MOSMIX-Station~Jena": {
 		"stationId": "10567",
-		"name": "Jena",
+		"name": "Weather Forecast for Jena",
 		"latitude": "50.9271",
 		"longitude": "11.5892",
 		"reportIndex.target": "(component.name=WeatherReportIndexWithFilter)"

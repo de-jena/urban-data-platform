@@ -30,16 +30,6 @@
   <admin
       xsi:type="sensinactMapping:AdminMapping"
       mid="admin">
-    <timestamp
-        strategy="FEATURE">
-        <featurePath
-          xsi:type="ecore:EReference"
-          href="http://cdc.dwd.de/common/weather#//WeatherReports/reports"/>
-      <featurePath
-          xsi:type="ecore:EAttribute"
-          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
-    </timestamp>
-    <name name="Admin"/>
     <friendlyNameFeature
         xsi:type="ecore:EReference"
         href="http://cdc.dwd.de/common/weather#//WeatherReports/reports"/>
