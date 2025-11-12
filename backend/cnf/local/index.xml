@@ -1,35 +1,35 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="Local" increment="1762954048661">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="license" value="Eclipse Public License 2.0"/>
       <attribute name="copyright" value="Data In Motion Consulting GmbH - All rights reserved"/>
       <attribute name="osgi.identity" value="org.gecko.emf.sensinact.model"/>
-      <attribute name="documentation" value="https://github.com/geckoprojects-org/org.gecko.emf.semantic"/>
+      <attribute name="documentation" value="https://github.com/geckoprojects-org/org.gecko.emf.sensinact"/>
       <attribute name="description" value="EMF models for SensiNact provider mappings, sensor data structures, and IoT device integration. Provides data models for sensor registration, data mapping, and IoT gateway communication."/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="1.0.0.202511071128-SNAPSHOT" type="Version"/>
+      <attribute name="version" value="1.0.0.202511121257-SNAPSHOT" type="Version"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="org.eclipse.emf.common.util,org.eclipse.emf.ecore"/>
       <attribute name="bundle-symbolic-name" value="org.gecko.emf.sensinact.model"/>
-      <attribute name="bundle-version" value="1.0.0.202511071128-SNAPSHOT" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.202511121257-SNAPSHOT" type="Version"/>
       <attribute name="osgi.wiring.package" value="org.eclipse.sensinact.mapping"/>
       <attribute name="version" value="1.0.0" type="Version"/>
-      <attribute name="bnd.hashes" value="682457759,2068635928,-1792757586,-1503291268,1425955268,-1218470984,-720834277,-86979969,-1616839773,1360035654,-1917586790,-1271156553,153034988,1961820541,-2014719836,475502784,2092019833,-922122504,-1222641015,1670586941,-1923478059" type="List&lt;Long&gt;"/>
+      <attribute name="bnd.hashes" value="682457759,2068635928,-1792757586,-1503291268,1425955268,-1218470984,-720834277,-86979969,-1616839773,1360035654,-1917586790,-1271156553,153034988,1961820541,-2014719836,-693044445,475502784,2092019833,-922122504,-1222641015,1670586941,-1923478059" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="org.eclipse.emf.common.notify,org.eclipse.emf.common.util,org.eclipse.emf.ecore,org.eclipse.emf.ecore.impl,org.eclipse.sensinact.mapping"/>
       <attribute name="bundle-symbolic-name" value="org.gecko.emf.sensinact.model"/>
-      <attribute name="bundle-version" value="1.0.0.202511071128-SNAPSHOT" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.202511121257-SNAPSHOT" type="Version"/>
       <attribute name="osgi.wiring.package" value="org.eclipse.sensinact.mapping.impl"/>
       <attribute name="version" value="1.0.0" type="Version"/>
-      <attribute name="bnd.hashes" value="-901519009,1500080984,1355796668,486768622,-2107779592,1455931867,947669311,-1446557597,1253458566,-687346726,-652651657,833593644,2055917885,-2122313984,1931846201,-1969217224,1152422397,-1923478059" type="List&lt;Long&gt;"/>
+      <attribute name="bnd.hashes" value="-901519009,1500080984,1355796668,486768622,-2107779592,1455931867,947669311,-1446557597,1253458566,-687346726,-652651657,833593644,2055917885,-775190557,-2122313984,1931846201,2105394463,-1969217224,1152422397,-1923478059" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="org.eclipse.emf.common.notify,org.eclipse.emf.common.notify.impl,org.eclipse.emf.common.util,org.eclipse.emf.ecore,org.eclipse.emf.ecore.resource,org.eclipse.emf.ecore.resource.impl,org.eclipse.emf.ecore.util,org.eclipse.emf.ecore.xmi.impl,org.eclipse.sensinact.mapping"/>
       <attribute name="bundle-symbolic-name" value="org.gecko.emf.sensinact.model"/>
-      <attribute name="bundle-version" value="1.0.0.202511071128-SNAPSHOT" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.202511121257-SNAPSHOT" type="Version"/>
       <attribute name="osgi.wiring.package" value="org.eclipse.sensinact.mapping.util"/>
       <attribute name="version" value="1.0.0" type="Version"/>
       <attribute name="bnd.hashes" value="-639610103,-264393266,596136732,-71460478,-1923478059" type="List&lt;Long&gt;"/>
@@ -37,17 +37,17 @@
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="org.eclipse.emf.ecore,org.eclipse.sensinact.core.twin,org.eclipse.sensinact.mapping"/>
       <attribute name="bundle-symbolic-name" value="org.gecko.emf.sensinact.model"/>
-      <attribute name="bundle-version" value="1.0.0.202511071128-SNAPSHOT" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.202511121257-SNAPSHOT" type="Version"/>
       <attribute name="osgi.wiring.package" value="org.gecko.emf.sensinact.model"/>
       <attribute name="version" value="1.0.0" type="Version"/>
-      <attribute name="bnd.hashes" value="882612245,890913302,930495096,-1702967078,53889778,-2147309128,-1206582638,-1923478059" type="List&lt;Long&gt;"/>
+      <attribute name="bnd.hashes" value="882612245,890913302,930495096,-1702967078,-332438216,53889778,-2147309128,-1206582638,-1923478059" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="1.0.0.202511071128-SNAPSHOT" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.202511121257-SNAPSHOT" type="Version"/>
       <attribute name="osgi.wiring.bundle" value="org.gecko.emf.sensinact.model"/>
     </capability>
     <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="1.0.0.202511071128-SNAPSHOT" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.202511121257-SNAPSHOT" type="Version"/>
       <attribute name="osgi.wiring.host" value="org.gecko.emf.sensinact.model"/>
     </capability>
     <capability namespace="org.eclipse.emf.ecore.generated_package">
@@ -59,10 +59,10 @@
       <attribute name="genModelSourceLocations" value="model/sensinact-mapping.genmodel,org.gecko.emf.sensinact.model/model/sensinact-mapping.genmodel" type="List&lt;String&gt;"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="size" value="271340" type="Long"/>
+      <attribute name="size" value="298432" type="Long"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
       <attribute name="url" value="org.gecko.emf.sensinact.model/org.gecko.emf.sensinact.model-1.0.0.jar"/>
-      <attribute name="osgi.content" value="78E7FDF482BC8C5AB7B1251093E283D433FF85F778575B33020442BAA11D176E"/>
+      <attribute name="osgi.content" value="7B53A08D8A7D726108DE88097895E0D7B6AD7A61C84DBCBA7421CAEAA4A70A99"/>
     </capability>
     <capability namespace="osgi.service">
       <directive name="uses" value="org.gecko.emf.sensinact.model"/>
@@ -236,7 +236,7 @@
       <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=17))"/>
     </requirement>
     <requirement namespace="osgi.extender">
-      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))"/>
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.4.0)(!(version&gt;=2.0.0)))"/>
     </requirement>
     <requirement namespace="osgi.service">
       <directive name="filter" value="(objectClass=org.eclipse.sensinact.core.command.GatewayThread)"/>

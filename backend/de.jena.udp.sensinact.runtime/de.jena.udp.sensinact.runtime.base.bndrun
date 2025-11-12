@@ -77,8 +77,6 @@ slf4j.runpath:  \
 	bnd.identity;id='org.apache.felix.gogo.command',\
 	bnd.identity;id='org.gecko.codec.json',\
 	bnd.identity;id='org.eclipse.fennec.weather.sensinact',\
-	bnd.identity;id='org.eclipse.fennec.weather.sensinact.mmt',\
-	bnd.identity;id='org.eclipse.fennec.weather.sensinact.rules',\
 	bnd.identity;id='org.eclipse.sensinact.gateway.southbound.rules.easy-rules.osgi',\
 	bnd.identity;id='org.eclipse.sensinact.gateway.southbound.rules.rules.impl',\
 	bnd.identity;id='org.eclipse.sensinact.gateway.southbound.rules.easy-rules.config',\
