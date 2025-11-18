@@ -23,12 +23,13 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.TimeZone;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.ETypedElement;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -75,7 +76,7 @@ public class TrafficLight {
 	private static final Logger logger = System.getLogger(TrafficLight.class.getName());
 
 	private static final String TOPIC = "5g/ilsa/";
-	private static final Pattern TOPIC_PATTERN = Pattern.compile(TOPIC + "(\\w+)/(\\w+)/([A-Za-z0-9-]+)/([0-9])");
+	private static final Pattern TOPIC_PATTERN = Pattern.compile(TOPIC + "(\\w+)/(\\w+)/([A-Za-z0-9-]+)(/([0-9]))*");
 	private static final URI TEMP_URI = URI.createFileURI("temp.json");
 	private static final Map<String, Object> EMF_CONFIG = Collections.singletonMap(EMFJs.OPTION_DATE_FORMAT,
 			"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'zzz");
@@ -104,9 +105,6 @@ public class TrafficLight {
 			logger.log(Level.ERROR, "Error subscribing mqtt {0}.\n{1}", TOPIC, e);
 		}
 		logger.log(Level.INFO, "Sensinact Traffic Light started.");
-
-		logger.log(Level.INFO, "+++ default TimeZone " + TimeZone.getDefault());
-
 	}
 
 	@Deactivate
@@ -134,13 +132,17 @@ public class TrafficLight {
 
 	private void onMessage(Message message) {
 		String topic = message.topic();
-		Matcher matcher = TOPIC_PATTERN.matcher(topic);
-		if (matcher.find()) {
-			updateSignal(message, matcher.group(1));
-		} else if (topic.endsWith("config/retained")) {
+		if (topic.endsWith("config/retained")) {
 			updateConfig(message);
 		} else if (topic.endsWith("thermal")) {
 			updateThermal(message, topic.split("/")[3]);
+		} else {
+			Matcher matcher = TOPIC_PATTERN.matcher(topic);
+			if (matcher.find()) {
+				updateSignal(message, matcher.group(1));
+			} else {
+				logger.log(Level.WARNING, "unrecognized topic " + topic);
+			}
 		}
 	}
 
@@ -164,7 +166,12 @@ public class TrafficLight {
 		Resource resource = resourceSet.createResource(TEMP_URI);
 		try (ByteArrayInputStream bas = new ByteArrayInputStream(message.payload().array())) {
 			resource.load(bas, EMF_CONFIG);
-			TLSignalState signalState = (TLSignalState) resource.getContents().get(0);
+			EList<EObject> content = resource.getContents();
+			if (content.isEmpty()) {
+				logger.log(Level.DEBUG, "no deserialization for message on topic {0}", message.topic());
+				return;
+			}
+			TLSignalState signalState = (TLSignalState) content.get(0);
 			String serviceId = signalState.getId().replace("/", "_");
 			TrafficLightDto dto = new TrafficLightDto(intersectionId, serviceId, signalState);
 			logger.log(Level.DEBUG, "push {0} {1} {2}", intersectionId, serviceId, signalState.getState());
