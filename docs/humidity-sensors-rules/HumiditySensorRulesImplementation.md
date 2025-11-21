@@ -73,3 +73,37 @@ The corresponding action loops over the selected provider and, based on the `$ti
 
 
 
+### Rule 5 - Definition
+
+Based on the averaged value computed in Rule 3 and depending on which reference area a sensor belongs to, we have to update a "color" quantity on the reference area itself.
+
+We got from the city a document containing a list of reference areas (the document is located in `de.jena.udp.sensinact.runtime/runtime/data/refflaechen_smartcity.kml`). We built an immediate component which reads this data and pushes it to SensiNact, according to the model in `de.jena.udp.reference.area.sensinact.model`.
+
+We also built a `ResourceDataNotification` `TypedEventHandler` which listens to the location information of both the reference areas and the Solidos_Teros21 providers. The implementation is in `de.jena.udp.reference.area.sensinact.rules.LocationNotification`. The component is configurable, so we added two configurations, one for the reference areas and one for the sensor locations (`de.jena.udp.sensinact.runtime.config/location-notification.json`):
+
+```json
+{
+	":configurator:resource-version": 1,
+	
+	"LocationNotification~chirpstack": {
+		"identifier": "chirpstack",
+		"event.topics": ["DATA/Solidos_Teros21/*"]
+	},
+	"LocationNotification~refArea": {
+		"identifier": "refArea",
+		"event.topics": ["DATA/ReferenceAreaProvider/*"]
+	}
+}
+```
+
+With these components we can keep track of the location of the sensors and the reference areas. 
+
+The actual rule implementation is in `de.jena.udp.reference.area.sensinact.rules`. There we trigger the rule every time we have an update of a `chirpstack-<something>-derived/derivedQuantities/pfWertAvg` resource. 
+
+We then look for the corresponding sensor location and we check to which area it belongs. We also collect the other sensor belonging to that area and their corresponding `pfWertAvg` (assuming we have data for them as well). This means that if a sensor in a certain area has not yet provided any data to sensinact, we have no way to know that this sensor belongs to that area and then the rule calculation is done considering one sensor less in that area.)
+
+Based on the values of `pfWertAvg` of all sensors belonging to the same area we compute the `color` property for the area and then we update the corresponding area. 
+
+The rule is defined in the document provided by the city, which is located [here](./Rules Sensordaten.xlsx). 
+
+A fake SolidosTeros21 data generator component has also been added, for testing purposes in `de.jena.udp.reference.area.component.DummyDataComponent`. It is, by default, disabled.
