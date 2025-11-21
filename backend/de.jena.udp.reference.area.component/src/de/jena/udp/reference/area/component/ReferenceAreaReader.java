@@ -25,23 +25,25 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.sensinact.core.push.DataUpdate;
+import org.eclipse.sensinact.gateway.geojson.Coordinates;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Reference;
+
+import org.eclipse.sensinact.gateway.geojson.Feature;
+import org.eclipse.sensinact.gateway.geojson.FeatureCollection;
 import org.eclipse.sensinact.gateway.geojson.Polygon;
 import org.eclipse.sensinact.model.core.provider.Admin;
 import org.eclipse.sensinact.model.core.provider.ProviderFactory;
 import org.gecko.emf.osgi.annotation.require.RequireEMF;
 import org.gecko.emf.osgi.constants.EMFNamespaces;
 import org.osgi.service.component.annotations.Activate;
-import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.Reference;
-
-import org.eclipse.sensinact.gateway.geojson.Coordinates;
-import org.eclipse.sensinact.gateway.geojson.Feature;
 
 import de.jena.udp.reference.area.sensinact.model.sensinactrefarea.ColorType;
 import de.jena.udp.reference.area.sensinact.model.sensinactrefarea.ReferenceArea;
 import de.jena.udp.reference.area.sensinact.model.sensinactrefarea.ReferenceAreaProvider;
 import de.jena.udp.reference.area.sensinact.model.sensinactrefarea.SensinactRefAreaFactory;
 import net.opengis.kml.AbstractFeatureType;
+import net.opengis.kml.AbstractGeometryType;
 import net.opengis.kml.BoundaryType;
 import net.opengis.kml.DocumentRoot;
 import net.opengis.kml.DocumentType;
@@ -61,7 +63,7 @@ public class ReferenceAreaReader {
 
 	@Reference(target = "(" + EMFNamespaces.EMF_MODEL_FILE_EXT + "=json)")
 	private ResourceSet resourceSet;
-	
+
 	@Reference
 	private DataUpdate sensinact;
 
@@ -74,37 +76,37 @@ public class ReferenceAreaReader {
 		loadReferenceAreas();
 		pushToSensinact();
 	}
-	
+
 	private void pushToSensinact() {
 		for(ReferenceAreaProvider provider : referenceAreaProviders) {
 			sensinact.pushUpdate(provider)
 			.onSuccess(s -> {
-				LOGGER.info("Succesfully pushed ReferenceAreaProvider to SensiNact");
+				LOGGER.info(String.format("Succesfully pushed ReferenceAreaProvider %s to SensiNact", provider.getId()));
 			})
 			.onFailure(t -> {
 				LOGGER.log(Level.SEVERE, "Error while pushing ReferenceAreaProvider to SensiNact", t);
 			});
 		}		
 	}
-	
 
-	
+
+
 	/**
 	 * Loads the KML file and converts it to ReferenceArea instances
 	 */
 	private void loadReferenceAreas() {
 		try {
 			// Load the KML file
-			URI kmlUri = URI.createURI(System.getProperty("data") + "sensor_reference_areas.kml");
+			URI kmlUri = URI.createURI(System.getProperty("data") + "refflaechen_smartcity.kml");
 			Resource kmlResource = resourceSet.createResource(kmlUri);
 			kmlResource.load(null);
 
 			// Get the document root
 			DocumentRoot documentRoot = (DocumentRoot) kmlResource.getContents().get(0);
 			DocumentType document = (DocumentType) documentRoot.getKml().getAbstractFeatureGroup();
-			
+
 			referenceAreaProviders = new LinkedList<>();
-			
+
 			// Process each placemark
 			List<AbstractFeatureType> features = document.getAbstractFeatureGroup();
 			for (AbstractFeatureType feature : features) {
@@ -144,67 +146,88 @@ public class ReferenceAreaReader {
 		ReferenceArea service = SensinactRefAreaFactory.eINSTANCE.createReferenceArea();
 
 		provider.setId(placemark.getName());
-		
+
 		service.setName(placemark.getName());
 		service.setColor(ColorType.UNKNOWN);
-		
+
 		Map<String, Object> properties = new HashMap<>();
-		
+
 		// Extract extended data (gid, anzahl_sens, tour_name_lang)
-				ExtendedDataType extendedData = placemark.getExtendedData();
-				if (extendedData != null && !extendedData.getSchemaData().isEmpty()) {
-					SchemaDataType schemaData = extendedData.getSchemaData().get(0);
-					Map<String, String> dataMap = extractSchemaData(schemaData);
+		ExtendedDataType extendedData = placemark.getExtendedData();
+		if (extendedData != null && !extendedData.getSchemaData().isEmpty()) {
+			SchemaDataType schemaData = extendedData.getSchemaData().get(0);
+			Map<String, String> dataMap = extractSchemaData(schemaData);
 
-					// Set gid
-					String gidStr = dataMap.get("gid");
-					if (gidStr != null) {
-						service.setGid(Float.parseFloat(gidStr));
-						properties.put("gid", service.getGid());
-					}
+			// Set gid
+			String gidStr = dataMap.get("gid");
+			if (gidStr != null) {
+				service.setGid(Float.parseFloat(gidStr));
+				properties.put("gid", service.getGid());
+			}
 
-					// Set sensor count
-					String sensorCountStr = dataMap.get("anzahl_sens");
-					if (sensorCountStr != null) {
-						service.setSensorCount(Integer.parseInt(sensorCountStr));
-						properties.put("sensorCount", service.getSensorCount());
-					}
+			// Set sensor count
+			String sensorCountStr = dataMap.get("anzahl_sens");
+			if (sensorCountStr != null) {
+				service.setSensorCount(Integer.parseInt(sensorCountStr));
+				properties.put("sensorCount", service.getSensorCount());
+			}
 
-					// Set tour name
-					String tourName = dataMap.get("tour_name_lang");
-					if (tourName != null) {
-						service.setTourName(tourName);
-						properties.put("tourName", service.getTourName());
-					}
-				}
-		
-		
+			// Set tour name
+			String tourName = dataMap.get("tour_name_lang");
+			if (tourName != null) {
+				service.setTourName(tourName);
+				properties.put("tourName", service.getTourName());
+			}
+		}
+
+
 		provider.setReferenceArea(service);
-		
+
 		Admin admin = ProviderFactory.eINSTANCE.createAdmin();
 		admin.setFriendlyName("Reference Area " + placemark.getName());
 		admin.setDescription("Sensor reference area");
-		
+
 
 		// Convert geometry (MultiGeometry with Polygon)
-		if (placemark.getAbstractGeometryGroup() instanceof MultiGeometryType) {
+		//		FeatureMap abstractGeometryGroupGroup = placemark.getAbstractGeometryGroupGroup();
+		AbstractGeometryType abstractGeometryGroup = placemark.getAbstractGeometryGroup();
+
+		if(abstractGeometryGroup instanceof PolygonType polygonType) {
+			Polygon sensinactPolygon = convertKmlPolygonToSensinactPolygon(polygonType);					
+			// Create a Feature wrapping the polygon
+			Feature sensinactFeature = new Feature(
+					properties.containsKey("name") ? (String) properties.get("name") : null, // id - can be extracted from properties if needed
+							sensinactPolygon,
+							properties,
+							null, // bbox - could be calculated if needed
+							null  // foreignMembers
+					);
+
+			admin.setLocation(sensinactFeature);
+		}
+
+		else if (placemark.getAbstractGeometryGroup() instanceof MultiGeometryType) {
 			MultiGeometryType multiGeometry = (MultiGeometryType) placemark.getAbstractGeometryGroup();
 			if (!multiGeometry.getAbstractGeometryGroup().isEmpty()) {
-				// Get the first polygon and convert it to GeoJSON
-				if (multiGeometry.getAbstractGeometryGroup().get(0) instanceof PolygonType) {
-					PolygonType polygon = (PolygonType) multiGeometry.getAbstractGeometryGroup().get(0);
-					Polygon sensinactPolygon = convertKmlPolygonToSensinactPolygon(polygon);					
-					// Create a Feature wrapping the polygon
-					Feature sensinactFeature = new Feature(
-							properties.containsKey("name") ? (String) properties.get("name") : null, // id - can be extracted from properties if needed
-									sensinactPolygon,
-									properties,
-									null, // bbox - could be calculated if needed
-									null  // foreignMembers
+				int index = 0;
+				List<Feature> features = new LinkedList<>();
+				for(AbstractGeometryType abGeometry : multiGeometry.getAbstractGeometryGroup()) {
+					if(abGeometry instanceof PolygonType polygon) {
+						Polygon sensinactPolygon = convertKmlPolygonToSensinactPolygon(polygon);					
+						// Create a Feature wrapping the polygon
+						Feature sensinactFeature = new Feature(
+								properties.containsKey("name") ? ((String) properties.get("name")).concat(String.valueOf(index)) : null, // id - can be extracted from properties if needed
+										sensinactPolygon,
+										properties,
+										null, // bbox - could be calculated if needed
+										null  // foreignMembers
 								);
-					
-					admin.setLocation(sensinactFeature);
+						index++;
+						features.add(sensinactFeature);	
+					}
 				}
+				FeatureCollection featureCollection = new FeatureCollection(features, null, properties);
+				admin.setLocation(featureCollection);				
 			}
 		}
 		provider.setAdmin(admin);
@@ -229,7 +252,7 @@ public class ReferenceAreaReader {
 		}
 		return dataMap;
 	}
-	
+
 	private Polygon convertKmlPolygonToSensinactPolygon(PolygonType kmlPolygon) {
 		if (kmlPolygon == null) {
 			return null;
@@ -256,13 +279,13 @@ public class ReferenceAreaReader {
 						if (point.length >= 3) {
 							// With elevation
 							coordsList.add(new Coordinates(
-								point[0], point[1], point[2]
-							));
+									point[0], point[1], point[2]
+									));
 						} else {
 							// Without elevation
 							coordsList.add(new Coordinates(
-								point[0], point[1]
-							));
+									point[0], point[1]
+									));
 						}
 					}
 				}
@@ -288,12 +311,12 @@ public class ReferenceAreaReader {
 						if (point.length >= 2) {
 							if (point.length >= 3) {
 								coordsList.add(new Coordinates(
-									point[0], point[1], point[2]
-								));
+										point[0], point[1], point[2]
+										));
 							} else {
 								coordsList.add(new Coordinates(
-									point[0], point[1]
-								));
+										point[0], point[1]
+										));
 							}
 						}
 					}
@@ -329,7 +352,7 @@ public class ReferenceAreaReader {
 
 		// Close the ring if not already closed
 		if (!ring[0][0].equals(ring[ring.length - 1][0]) ||
-		    !ring[0][1].equals(ring[ring.length - 1][1])) {
+				!ring[0][1].equals(ring[ring.length - 1][1])) {
 			Double[] first = ring[0];
 			Double[] last = ring[ring.length - 1];
 			sum += (first[0] - last[0]) * (first[1] + last[1]);
