@@ -1,0 +1,103 @@
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+WARNING: Missing ID for Sensor Location [11.608237,50.944350]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+WARNING: Missing ID for Sensor Location [11.608303,50.944385]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+WARNING: Missing ID for Sensor Location [11.608318,50.944410]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+WARNING: Missing ID for Sensor Location [11.608343,50.944398]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+WARNING: Missing ID for Sensor Location [11.607604,50.944001]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+WARNING: Missing ID for Sensor Location [11.607589,50.943994]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+WARNING: Missing ID for Sensor Location [11.607708,50.944056]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+WARNING: Missing ID for Sensor Location [11.607696,50.944050]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: 2CF7F1C04230037D - [11.607297,50.884829]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: 2CF7F1C042300393 - [11.607303,50.884822]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: 2CF7F1C0423003A2 - [11.606862,50.884547]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: 2CF7F1C0423003A3 - [11.606855,50.884553]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: A840414041884F93 - [11.585563,50.915543]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: A840414041884F93 - [11.585564,50.915543]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: A84041C4C1884F8A - [11.623859,50.963585]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: A8404120D18827DE - [11.623859,50.963585]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: A840418F818827DF - [11.624765,50.963130]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: A8404180918827E4 - [11.624765,50.963130]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: A8404147318827E3 - [11.588051,50.938432]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: A84041A041884F92 - [11.588051,50.938432]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: 8CF95720000D4ADC - [11.628433,50.966477]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: 8CF95720000D50A2 - [11.623821,50.964634]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: 8CF95720000D4A69 - [11.619449,50.959325]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: 8CF95720000D4ADA - [11.627237,50.965885]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: 8CF95720000D4AC2 - [11.626177,50.961906]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: 8CF95720000D4AD0 - [11.625275,50.962280]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: 8CF95720000D4B67 - [11.619859,50.959671]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: 8CF95720000D4B43 - [11.619634,50.959440]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: 8CF95720000D4AF8 - [11.614374,50.954933]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: 8CF95720000D518F - [11.626370,50.962837]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: 8CF95720000D4ACE - [11.619191,50.959605]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: 8CF95720000D4AC4 - [11.619699,50.959901]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: 8CF95720000D4AD2 - [11.622849,50.965318]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: 8CF95720000D2F0D - [11.627643,50.966753]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: 8CF95720000D4AFC - [11.619031,50.959479]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: 8CF957200013207C - [11.608141,50.956466]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: 8CF9572000130B15 - [11.607998,50.956088]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: 8CF9572000130B01 - [11.601641,50.962494]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: 8CF9572000130B41 - [11.596572,50.962315]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: 8CF9572000130B64 - [11.614922,50.954086]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: 8CF9572000130B5E - [11.614669,50.954791]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: 8CF957200013209B - [11.615196,50.954737]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: 8CF9572000130B0D - [11.608230,50.956436]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: 8CF9572000130CB0 - [11.608791,50.960721]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: 8CF9572000130B14 - [11.608879,50.960093]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: 8CF9572000130B13 - [11.599012,50.949279]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: 8CF9572000130B05 - [11.610708,50.950207]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: 8CF9572000130B1F - [11.604245,50.947780]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: 8CF9572000130B55 - [11.610950,50.949972]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: 8CF9572000130B6E - [11.614370,50.952777]
+Nov 21, 2025 8:08:15 AM de.jena.chirpstack.location.component.ChirpstackLocationComponent loadSensorLocation
+INFO: FOUND ID - LOCATION PAIR: 8CF95720001320AF - [11.604018,50.946750]
+

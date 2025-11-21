@@ -24,4 +24,5 @@ Require-Capability: \
 	com.fasterxml.jackson.core.jackson-annotations,\
 	org.osgi.framework,\
 	org.osgi.service.component,\
-	org.eclipse.osgi-technology.scheduler.api
+	org.eclipse.osgi-technology.scheduler.api,\
+	net.opengis.kml.model
