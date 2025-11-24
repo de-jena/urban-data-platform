@@ -57,6 +57,7 @@ public class ChirpstackLocationRule implements RuleDefinition{
 
 	private ProviderSnapshot findRuleTriggerProvider(List<ProviderSnapshot> providerSnapshots) {
 		return providerSnapshots.stream().max(Comparator.comparing(p -> p.getService("admin").getResource("location").getValue().getTimestamp())).orElseGet(null);
+
 	}
 
 	/* 
