@@ -1,0 +1,6 @@
+-library: enable-emf
+-buildpath: \
+	org.eclipse.sensinact.gateway.core.geo-json,\
+	org.osgi.service.metatype.annotations,\
+	org.osgi.service.typedevent,\
+	org.eclipse.sensinact.gateway.core.api

@@ -7,4 +7,5 @@
 	org.osgi.util.function,\
 	de.jena.udp.reference.area.sensinact.model,\
 	org.eclipse.sensinact.gateway.core.models.provider,\
-	org.osgi.service.typedevent
+	org.osgi.service.typedevent,\
+	de.jena.udp.sensinact.location.notification;version=snapshot

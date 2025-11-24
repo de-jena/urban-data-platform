@@ -32,6 +32,7 @@ import org.osgi.service.component.annotations.Reference;
 
 import de.jena.udp.reference.area.sensinact.model.sensinactrefarea.ColorType;
 import de.jena.udp.reference.area.sensinact.rules.helper.ReferenceAreaHelper;
+import de.jena.udp.sensinact.location.notification.LocationNotification;
 
 
 @Component(immediate = true, name = "ReferenceAreaRule")
