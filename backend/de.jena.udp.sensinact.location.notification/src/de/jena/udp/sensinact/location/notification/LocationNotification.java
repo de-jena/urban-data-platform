@@ -11,7 +11,7 @@
  * Contributors:
  *     Data In Motion - initial API and implementation
  */
-package de.jena.udp.reference.area.sensinact.rules;
+package de.jena.udp.sensinact.location.notification;
 
 import java.lang.System.Logger;
 import java.util.Map;
@@ -33,7 +33,7 @@ import org.osgi.service.typedevent.TypedEventHandler;
  */
 @Component(name = "LocationNotification", service = {TypedEventHandler.class, LocationNotification.class}, 
 configurationPid = "LocationNotification", configurationPolicy = ConfigurationPolicy.REQUIRE)
-@Designate(ocd = de.jena.udp.reference.area.sensinact.rules.LocationNotification.LocationNotificationConfig.class)
+@Designate(ocd = de.jena.udp.sensinact.location.notification.LocationNotification.LocationNotificationConfig.class)
 public class LocationNotification implements TypedEventHandler<ResourceDataNotification> {
 
 	@ObjectClassDefinition(name = "Location Notification Configuration")
@@ -62,6 +62,10 @@ public class LocationNotification implements TypedEventHandler<ResourceDataNotif
 	
 	public Map<String, GeoJsonObject> getProviderLocationMap() {
 		return Map.copyOf(providerLocationMap);
+	}
+	
+	public GeoJsonObject getProviderLocation(String providerId) {
+		return providerLocationMap.getOrDefault(providerId, null);
 	}
 
 }

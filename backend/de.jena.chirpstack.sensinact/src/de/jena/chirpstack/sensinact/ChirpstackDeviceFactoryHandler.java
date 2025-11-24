@@ -162,8 +162,8 @@ public class ChirpstackDeviceFactoryHandler implements IMqttMessageListener {
 
                 Promise<?> promise = sensiNact.pushUpdate(providerInstance);
                 promise.onSuccess(result -> 
-                    logger.log(Level.INFO, "Successfully updated ChirpStack device: {0} ({1}) using provider: {2}", 
-                        deviceName, deviceProfileName, providerClass.get().getName())
+                    logger.log(Level.INFO, "Successfully updated ChirpStack device: {0} ({1}) using provider: {2} and setting provider id to {3}", 
+                        deviceName, deviceProfileName, providerClass.get().getName(), providerInstance.getId())
                 ).onFailure(error -> 
                     logger.log(Level.ERROR, "Error updating ChirpStack device {0}: {1}", deviceName, error.getMessage())
                 );
