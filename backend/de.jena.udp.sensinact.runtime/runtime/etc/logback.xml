@@ -27,4 +27,9 @@
 		<appender-ref ref="CONSOLE" />
 		<appender-ref ref="FILE" />
 	</root>
+    <logger name="io.moquette.broker" level="WARN">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="FILE" />
+    </logger>	
+	
 </configuration>
