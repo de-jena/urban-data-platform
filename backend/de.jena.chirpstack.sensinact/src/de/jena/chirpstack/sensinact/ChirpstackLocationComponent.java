@@ -19,6 +19,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -44,11 +45,10 @@ public class ChirpstackLocationComponent {
 
 
 	private static final Logger LOGGER = Logger.getLogger(ChirpstackLocationComponent.class.getName());
-	private Map<String, Point> locationMap;
+	private Map<String, Point> locationMap = new HashMap<>();
 
 	@Activate
 	public void activate() {
-		locationMap = new HashMap<>();
 		loadSensorLocation();
 	}
 	
@@ -79,7 +79,6 @@ public class ChirpstackLocationComponent {
 			}
 		} catch (IOException e) {
 			LOGGER.log(Level.SEVERE, "Error loading KML file: " + e.getMessage(), e);
-			e.printStackTrace();
 		}
 
 	}
@@ -95,8 +94,8 @@ public class ChirpstackLocationComponent {
 				String coordinatesStr = point.getCoordinates().get(0);
 				String[] coordinates = coordinatesStr.split(",");
 				if(coordinates.length >= 2) {
-					double lng = Double.valueOf(coordinates[0]);
-					double lat = Double.valueOf(coordinates[1]);
+					double lng = Double.parseDouble(coordinates[0]);
+					double lat = Double.parseDouble(coordinates[1]);
 					return new Point(lng, lat);
 				}
 				
@@ -123,19 +122,12 @@ public class ChirpstackLocationComponent {
 		 * Extracts schema data from KML into a map
 		 */
 		private Map<String, String> extractData(List<DataType> dataTypes) {
-			Map<String, String> dataMap = new HashMap<>();
 			// Note: SchemaData contains SimpleData elements
 			// We need to access them via feature map
-			for (int i = 0; i < dataTypes.size(); i++) {
-				// Get the name and value from the feature map entry
-				// This is a simplified approach - actual implementation depends on KML model structure
-				String name = (String) dataTypes.get(i).getName();
-				String value = (String) dataTypes.get(i).getValue();
-				if (name != null && value != null && !value.isEmpty()) {
-					dataMap.put(name, value);
-				}
-			}
-			return dataMap;
+			return dataTypes.stream() //
+					.filter(dt -> dt.getName() != null && dt.getValue() != null && !dt.getValue().isEmpty())
+					.collect(Collectors.toMap(DataType::getName, DataType::getValue));
+			
 		}
 
 

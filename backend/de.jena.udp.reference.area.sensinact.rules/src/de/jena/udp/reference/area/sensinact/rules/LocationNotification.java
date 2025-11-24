@@ -16,11 +16,9 @@ package de.jena.udp.reference.area.sensinact.rules;
 import java.lang.System.Logger;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.lang.System.Logger.Level;
 
 import org.eclipse.sensinact.core.notification.ResourceDataNotification;
 import org.eclipse.sensinact.gateway.geojson.GeoJsonObject;
-import org.eclipse.sensinact.gateway.geojson.Point;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.ConfigurationPolicy;
 import org.osgi.service.metatype.annotations.AttributeDefinition;
@@ -59,13 +57,7 @@ public class LocationNotification implements TypedEventHandler<ResourceDataNotif
 	@Override
 	public void notify(String topic, ResourceDataNotification event) {
 		if(!topic.endsWith("admin/location")) return; 
-		providerLocationMap.put(event.provider(), (GeoJsonObject) event.newValue());	
-		if(event.newValue() instanceof Point point) {
-			LOGGER.log(Level.INFO, "Set location to [{0},{1}] for {2}", 
-					point.coordinates().latitude(), point.coordinates().longitude(), topic);
-			
-		}
-		
+		providerLocationMap.put(event.provider(), (GeoJsonObject) event.newValue());			
 	}
 	
 	public Map<String, GeoJsonObject> getProviderLocationMap() {
