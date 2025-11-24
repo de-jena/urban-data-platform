@@ -1,0 +1,3408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>sensoren</name>
+    <Style id="icon-1899-0288D1-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-0288D1-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-0288D1">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-0288D1-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-0288D1-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 126<br>in_tiefe: 30 cm<br>eingesetzt: 2022/03/28<br>x: 683224.801<br>y: 5646875.914<br>standort: Wiesenstraße<br>was: Bodenfeuchte<br>bnr: 80<br>sensor_nr: 4<br>hersteller: SENSOTERRA<br>model: Single Depth sensor 30<br>html: https://ttntst.jena.de/grafana/dashboards/f/TntY1Hynz/bodenfeuchte<br>p_gid: <br>sku: <br>eui: <br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>126</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>30 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2022/03/28</value>
+        </Data>
+        <Data name="x">
+          <value>683224.801</value>
+        </Data>
+        <Data name="y">
+          <value>5646875.914</value>
+        </Data>
+        <Data name="standort">
+          <value>Wiesenstraße</value>
+        </Data>
+        <Data name="was">
+          <value>Bodenfeuchte</value>
+        </Data>
+        <Data name="bnr">
+          <value>80</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value>4</value>
+        </Data>
+        <Data name="hersteller">
+          <value>SENSOTERRA</value>
+        </Data>
+        <Data name="model">
+          <value>Single Depth sensor 30</value>
+        </Data>
+        <Data name="html">
+          <value>https://ttntst.jena.de/grafana/dashboards/f/TntY1Hynz/bodenfeuchte</value>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value/>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.608237,50.94435,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 127<br>in_tiefe: 90 cm<br>eingesetzt: 2022/03/28<br>x: 683229.264<br>y: 5646879.954<br>standort: Wiesenstraße<br>was: Bodenfeuchte<br>bnr: 81<br>sensor_nr: 2<br>hersteller: SENSOTERRA<br>model: Single Depth sensor 90<br>html: https://ttntst.jena.de/grafana/dashboards/f/TntY1Hynz/bodenfeuchte<br>p_gid: <br>sku: <br>eui: <br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>127</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>90 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2022/03/28</value>
+        </Data>
+        <Data name="x">
+          <value>683229.264</value>
+        </Data>
+        <Data name="y">
+          <value>5646879.954</value>
+        </Data>
+        <Data name="standort">
+          <value>Wiesenstraße</value>
+        </Data>
+        <Data name="was">
+          <value>Bodenfeuchte</value>
+        </Data>
+        <Data name="bnr">
+          <value>81</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value>2</value>
+        </Data>
+        <Data name="hersteller">
+          <value>SENSOTERRA</value>
+        </Data>
+        <Data name="model">
+          <value>Single Depth sensor 90</value>
+        </Data>
+        <Data name="html">
+          <value>https://ttntst.jena.de/grafana/dashboards/f/TntY1Hynz/bodenfeuchte</value>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value/>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.608303,50.944385,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 127<br>in_tiefe: 60 cm<br>eingesetzt: 2022/03/28<br>x: 683230.231<br>y: 5646882.775<br>standort: Wiesenstraße<br>was: Bodenfeuchte<br>bnr: 81<br>sensor_nr: 3<br>hersteller: SENSOTERRA<br>model: Single Depth sensor 60<br>html: https://ttntst.jena.de/grafana/dashboards/f/TntY1Hynz/bodenfeuchte<br>p_gid: <br>sku: <br>eui: <br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>127</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2022/03/28</value>
+        </Data>
+        <Data name="x">
+          <value>683230.231</value>
+        </Data>
+        <Data name="y">
+          <value>5646882.775</value>
+        </Data>
+        <Data name="standort">
+          <value>Wiesenstraße</value>
+        </Data>
+        <Data name="was">
+          <value>Bodenfeuchte</value>
+        </Data>
+        <Data name="bnr">
+          <value>81</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value>3</value>
+        </Data>
+        <Data name="hersteller">
+          <value>SENSOTERRA</value>
+        </Data>
+        <Data name="model">
+          <value>Single Depth sensor 60</value>
+        </Data>
+        <Data name="html">
+          <value>https://ttntst.jena.de/grafana/dashboards/f/TntY1Hynz/bodenfeuchte</value>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value/>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.608318,50.94441,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 127<br>in_tiefe: 30/60/90 cm<br>eingesetzt: 2022/03/28<br>x: 683232.085<br>y: 5646881.485<br>standort: Wiesenstraße<br>was: Bodenfeuchte<br>bnr: 81<br>sensor_nr: 1<br>hersteller: Eigenbau<br>model: 3 Sensoren<br>html: https://ttntst.jena.de/grafana/dashboards/f/TntY1Hynz/bodenfeuchte<br>p_gid: <br>sku: <br>eui: <br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>127</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>30/60/90 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2022/03/28</value>
+        </Data>
+        <Data name="x">
+          <value>683232.085</value>
+        </Data>
+        <Data name="y">
+          <value>5646881.485</value>
+        </Data>
+        <Data name="standort">
+          <value>Wiesenstraße</value>
+        </Data>
+        <Data name="was">
+          <value>Bodenfeuchte</value>
+        </Data>
+        <Data name="bnr">
+          <value>81</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value>1</value>
+        </Data>
+        <Data name="hersteller">
+          <value>Eigenbau</value>
+        </Data>
+        <Data name="model">
+          <value>3 Sensoren</value>
+        </Data>
+        <Data name="html">
+          <value>https://ttntst.jena.de/grafana/dashboards/f/TntY1Hynz/bodenfeuchte</value>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value/>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.608343,50.944398,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 124<br>in_tiefe: 60 cm<br>eingesetzt: 2022/08/23<br>x: 683181.705<br>y: 5646835.528<br>standort: Wiesenstraße<br>was: Bodenfeuchte<br>bnr: 409<br>sensor_nr: 7<br>hersteller: DRAGINO<br>model: LSE01-8<br>html: https://ttntst.jena.de/grafana/dashboards/f/TntY1Hynz/bodenfeuchte<br>p_gid: <br>sku: <br>eui: <br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>124</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2022/08/23</value>
+        </Data>
+        <Data name="x">
+          <value>683181.705</value>
+        </Data>
+        <Data name="y">
+          <value>5646835.528</value>
+        </Data>
+        <Data name="standort">
+          <value>Wiesenstraße</value>
+        </Data>
+        <Data name="was">
+          <value>Bodenfeuchte</value>
+        </Data>
+        <Data name="bnr">
+          <value>409</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value>7</value>
+        </Data>
+        <Data name="hersteller">
+          <value>DRAGINO</value>
+        </Data>
+        <Data name="model">
+          <value>LSE01-8</value>
+        </Data>
+        <Data name="html">
+          <value>https://ttntst.jena.de/grafana/dashboards/f/TntY1Hynz/bodenfeuchte</value>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value/>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.607604,50.944001,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 124<br>in_tiefe: 60 cm<br>eingesetzt: 2022/08/23<br>x: 683180.692<br>y: 5646834.756<br>standort: Wiesenstraße<br>was: Ph-Wert, Temperatur<br>bnr: 409<br>sensor_nr: 8<br>hersteller: DRAGINO<br>model: LSPH01<br>html: https://ttntst.jena.de/grafana/dashboards/f/TntY1Hynz/bodenfeuchte<br>p_gid: <br>sku: <br>eui: <br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>124</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2022/08/23</value>
+        </Data>
+        <Data name="x">
+          <value>683180.692</value>
+        </Data>
+        <Data name="y">
+          <value>5646834.756</value>
+        </Data>
+        <Data name="standort">
+          <value>Wiesenstraße</value>
+        </Data>
+        <Data name="was">
+          <value>Ph-Wert, Temperatur</value>
+        </Data>
+        <Data name="bnr">
+          <value>409</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value>8</value>
+        </Data>
+        <Data name="hersteller">
+          <value>DRAGINO</value>
+        </Data>
+        <Data name="model">
+          <value>LSPH01</value>
+        </Data>
+        <Data name="html">
+          <value>https://ttntst.jena.de/grafana/dashboards/f/TntY1Hynz/bodenfeuchte</value>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value/>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.607589,50.943994,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 125<br>in_tiefe: 60 cm<br>eingesetzt: 2022/08/23<br>x: 683188.811<br>y: 5646841.871<br>standort: Wiesenstraße<br>was: Bodenfeuchte<br>bnr: 410<br>sensor_nr: 5<br>hersteller: DRAGINO<br>model: LSE01-8<br>html: https://ttntst.jena.de/grafana/dashboards/f/TntY1Hynz/bodenfeuchte<br>p_gid: <br>sku: <br>eui: <br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>125</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2022/08/23</value>
+        </Data>
+        <Data name="x">
+          <value>683188.811</value>
+        </Data>
+        <Data name="y">
+          <value>5646841.871</value>
+        </Data>
+        <Data name="standort">
+          <value>Wiesenstraße</value>
+        </Data>
+        <Data name="was">
+          <value>Bodenfeuchte</value>
+        </Data>
+        <Data name="bnr">
+          <value>410</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value>5</value>
+        </Data>
+        <Data name="hersteller">
+          <value>DRAGINO</value>
+        </Data>
+        <Data name="model">
+          <value>LSE01-8</value>
+        </Data>
+        <Data name="html">
+          <value>https://ttntst.jena.de/grafana/dashboards/f/TntY1Hynz/bodenfeuchte</value>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value/>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.607708,50.944056,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 125<br>in_tiefe: 60 cm<br>eingesetzt: 2022/08/23<br>x: 683187.958<br>y: 5646841.16<br>standort: Wiesenstraße<br>was: Ph-Wert, Temperatur<br>bnr: 410<br>sensor_nr: 6<br>hersteller: DRAGINO<br>model: LSPH01<br>html: https://ttntst.jena.de/grafana/dashboards/f/TntY1Hynz/bodenfeuchte<br>p_gid: <br>sku: <br>eui: <br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>125</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2022/08/23</value>
+        </Data>
+        <Data name="x">
+          <value>683187.958</value>
+        </Data>
+        <Data name="y">
+          <value>5646841.16</value>
+        </Data>
+        <Data name="standort">
+          <value>Wiesenstraße</value>
+        </Data>
+        <Data name="was">
+          <value>Ph-Wert, Temperatur</value>
+        </Data>
+        <Data name="bnr">
+          <value>410</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value>6</value>
+        </Data>
+        <Data name="hersteller">
+          <value>DRAGINO</value>
+        </Data>
+        <Data name="model">
+          <value>LSPH01</value>
+        </Data>
+        <Data name="html">
+          <value>https://ttntst.jena.de/grafana/dashboards/f/TntY1Hynz/bodenfeuchte</value>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value/>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.607696,50.94405,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 123<br>in_tiefe: 30 cm<br>eingesetzt: 2023/03/29<br>x: 683392.709<br>y: 5640256.057<br>standort: Karl-Marx-Allee<br>was: Bodenfeuchte, Temperatur, elektrische Leitfähigkeit<br>bnr: <br>sensor_nr: 12<br>hersteller: SenseCAP<br>model: S210X<br>html: https://ttntst.jena.de/grafana/d/HKKE7_fVz/baum-p2882?orgId=1<br>p_gid: 2882<br>sku: 114992871<br>eui: 2CF7F1C04230037D<br>key: 6F31BF652294083A<br>s_n: 114992871222400050]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>123</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>30 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2023/03/29</value>
+        </Data>
+        <Data name="x">
+          <value>683392.709</value>
+        </Data>
+        <Data name="y">
+          <value>5640256.057</value>
+        </Data>
+        <Data name="standort">
+          <value>Karl-Marx-Allee</value>
+        </Data>
+        <Data name="was">
+          <value>Bodenfeuchte, Temperatur, elektrische Leitfähigkeit</value>
+        </Data>
+        <Data name="bnr">
+          <value/>
+        </Data>
+        <Data name="sensor_nr">
+          <value>12</value>
+        </Data>
+        <Data name="hersteller">
+          <value>SenseCAP</value>
+        </Data>
+        <Data name="model">
+          <value>S210X</value>
+        </Data>
+        <Data name="html">
+          <value>https://ttntst.jena.de/grafana/d/HKKE7_fVz/baum-p2882?orgId=1</value>
+        </Data>
+        <Data name="p_gid">
+          <value>2882</value>
+        </Data>
+        <Data name="sku">
+          <value>114992871</value>
+        </Data>
+        <Data name="eui">
+          <value>2CF7F1C04230037D</value>
+        </Data>
+        <Data name="key">
+          <value>6F31BF652294083A</value>
+        </Data>
+        <Data name="s_n">
+          <value>114992871222400050</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.607297,50.884829,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 123<br>in_tiefe: 60 cm<br>eingesetzt: 2023/03/29<br>x: 683393.134<br>y: 5640255.384<br>standort: Karl-Marx-Allee<br>was: Bodenfeuchte, Temperatur, elektrische Leitfähigkeit<br>bnr: <br>sensor_nr: 11<br>hersteller: SenseCAP<br>model: S210X<br>html: https://ttntst.jena.de/grafana/d/HKKE7_fVz/baum-p2882?orgId=1<br>p_gid: 2882<br>sku: 114992871<br>eui: 2CF7F1C042300393<br>key: 37FB01216B7CC224<br>s_n: 114992871222400028]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>123</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2023/03/29</value>
+        </Data>
+        <Data name="x">
+          <value>683393.134</value>
+        </Data>
+        <Data name="y">
+          <value>5640255.384</value>
+        </Data>
+        <Data name="standort">
+          <value>Karl-Marx-Allee</value>
+        </Data>
+        <Data name="was">
+          <value>Bodenfeuchte, Temperatur, elektrische Leitfähigkeit</value>
+        </Data>
+        <Data name="bnr">
+          <value/>
+        </Data>
+        <Data name="sensor_nr">
+          <value>11</value>
+        </Data>
+        <Data name="hersteller">
+          <value>SenseCAP</value>
+        </Data>
+        <Data name="model">
+          <value>S210X</value>
+        </Data>
+        <Data name="html">
+          <value>https://ttntst.jena.de/grafana/d/HKKE7_fVz/baum-p2882?orgId=1</value>
+        </Data>
+        <Data name="p_gid">
+          <value>2882</value>
+        </Data>
+        <Data name="sku">
+          <value>114992871</value>
+        </Data>
+        <Data name="eui">
+          <value>2CF7F1C042300393</value>
+        </Data>
+        <Data name="key">
+          <value>37FB01216B7CC224</value>
+        </Data>
+        <Data name="s_n">
+          <value>114992871222400028</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.607303,50.884822,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 122<br>in_tiefe: 60 cm<br>eingesetzt: 2023/03/29<br>x: 683363.158<br>y: 5640223.654<br>standort: Karl-Marx-Allee<br>was: Bodenfeuchte, Temperatur, elektrische Leitfähigkeit<br>bnr: <br>sensor_nr: 10<br>hersteller: SenseCAP<br>model: S210X<br>html: https://ttntst.jena.de/grafana/d/rlW8G_fVk/baum-p2881?orgId=1<br>p_gid: 2881<br>sku: 114992871<br>eui: 2CF7F1C0423003A2<br>key: 7E22E0F0F1C537AA<br>s_n: 114992871222400013]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>122</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2023/03/29</value>
+        </Data>
+        <Data name="x">
+          <value>683363.158</value>
+        </Data>
+        <Data name="y">
+          <value>5640223.654</value>
+        </Data>
+        <Data name="standort">
+          <value>Karl-Marx-Allee</value>
+        </Data>
+        <Data name="was">
+          <value>Bodenfeuchte, Temperatur, elektrische Leitfähigkeit</value>
+        </Data>
+        <Data name="bnr">
+          <value/>
+        </Data>
+        <Data name="sensor_nr">
+          <value>10</value>
+        </Data>
+        <Data name="hersteller">
+          <value>SenseCAP</value>
+        </Data>
+        <Data name="model">
+          <value>S210X</value>
+        </Data>
+        <Data name="html">
+          <value>https://ttntst.jena.de/grafana/d/rlW8G_fVk/baum-p2881?orgId=1</value>
+        </Data>
+        <Data name="p_gid">
+          <value>2881</value>
+        </Data>
+        <Data name="sku">
+          <value>114992871</value>
+        </Data>
+        <Data name="eui">
+          <value>2CF7F1C0423003A2</value>
+        </Data>
+        <Data name="key">
+          <value>7E22E0F0F1C537AA</value>
+        </Data>
+        <Data name="s_n">
+          <value>114992871222400013</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.606862,50.884547,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 122<br>in_tiefe: 30 cm<br>eingesetzt: 2023/03/29<br>x: 683362.648<br>y: 5640224.36<br>standort: Karl-Marx-Allee<br>was: Bodenfeuchte, Temperatur, elektrische Leitfähigkeit<br>bnr: <br>sensor_nr: 9<br>hersteller: SenseCAP<br>model: S210X<br>html: https://ttntst.jena.de/grafana/d/rlW8G_fVk/baum-p2881?orgId=1<br>p_gid: 2881<br>sku: 114992871<br>eui: 2CF7F1C0423003A3<br>key: 60B5E693E3B5BCBF<br>s_n: 114992871222400012]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>122</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>30 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2023/03/29</value>
+        </Data>
+        <Data name="x">
+          <value>683362.648</value>
+        </Data>
+        <Data name="y">
+          <value>5640224.36</value>
+        </Data>
+        <Data name="standort">
+          <value>Karl-Marx-Allee</value>
+        </Data>
+        <Data name="was">
+          <value>Bodenfeuchte, Temperatur, elektrische Leitfähigkeit</value>
+        </Data>
+        <Data name="bnr">
+          <value/>
+        </Data>
+        <Data name="sensor_nr">
+          <value>9</value>
+        </Data>
+        <Data name="hersteller">
+          <value>SenseCAP</value>
+        </Data>
+        <Data name="model">
+          <value>S210X</value>
+        </Data>
+        <Data name="html">
+          <value>https://ttntst.jena.de/grafana/d/rlW8G_fVk/baum-p2881?orgId=1</value>
+        </Data>
+        <Data name="p_gid">
+          <value>2881</value>
+        </Data>
+        <Data name="sku">
+          <value>114992871</value>
+        </Data>
+        <Data name="eui">
+          <value>2CF7F1C0423003A3</value>
+        </Data>
+        <Data name="key">
+          <value>60B5E693E3B5BCBF</value>
+        </Data>
+        <Data name="s_n">
+          <value>114992871222400012</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.606855,50.884553,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 243<br>in_tiefe: 30 cm<br>eingesetzt: 2024/04/09<br>x: 681744.504<br>y: 5643617.113<br>standort: 061.003 - Ernst-Abbe-Sportfeld/Oberaue<br>was: Bodenfeuchte, Bodentemperatur, Bodenleitfähigkeit<br>bnr: 1503<br>sensor_nr: 13<br>hersteller: DRAGINO<br>model: SE01-LB<br>html: <br>p_gid: <br>sku: LA66N710483<br>eui: <br>key: A840414041884F93<br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>243</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>30 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2024/04/09</value>
+        </Data>
+        <Data name="x">
+          <value>681744.504</value>
+        </Data>
+        <Data name="y">
+          <value>5643617.113</value>
+        </Data>
+        <Data name="standort">
+          <value>061.003 - Ernst-Abbe-Sportfeld/Oberaue</value>
+        </Data>
+        <Data name="was">
+          <value>Bodenfeuchte, Bodentemperatur, Bodenleitfähigkeit</value>
+        </Data>
+        <Data name="bnr">
+          <value>1503</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value>13</value>
+        </Data>
+        <Data name="hersteller">
+          <value>DRAGINO</value>
+        </Data>
+        <Data name="model">
+          <value>SE01-LB</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value>LA66N710483</value>
+        </Data>
+        <Data name="eui">
+          <value/>
+        </Data>
+        <Data name="key">
+          <value>A840414041884F93</value>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.585563,50.915543,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 243<br>in_tiefe: 60 cm<br>eingesetzt: 2024/04/09<br>x: 681744.549<br>y: 5643617.105<br>standort: 061.003 - Ernst-Abbe-Sportfeld/Oberaue<br>was: Bodenfeuchte, Bodentemperatur, Bodenleitfähigkeit<br>bnr: 1503<br>sensor_nr: 14<br>hersteller: DRAGINO<br>model: SE01-LB<br>html: <br>p_gid: <br>sku: LA66N710483<br>eui: <br>key: A840414041884F93<br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>243</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2024/04/09</value>
+        </Data>
+        <Data name="x">
+          <value>681744.549</value>
+        </Data>
+        <Data name="y">
+          <value>5643617.105</value>
+        </Data>
+        <Data name="standort">
+          <value>061.003 - Ernst-Abbe-Sportfeld/Oberaue</value>
+        </Data>
+        <Data name="was">
+          <value>Bodenfeuchte, Bodentemperatur, Bodenleitfähigkeit</value>
+        </Data>
+        <Data name="bnr">
+          <value>1503</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value>14</value>
+        </Data>
+        <Data name="hersteller">
+          <value>DRAGINO</value>
+        </Data>
+        <Data name="model">
+          <value>SE01-LB</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value>LA66N710483</value>
+        </Data>
+        <Data name="eui">
+          <value/>
+        </Data>
+        <Data name="key">
+          <value>A840414041884F93</value>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.585564,50.915543,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 244<br>in_tiefe: 60 cm<br>eingesetzt: 2024/04/09<br>x: 684245.945<br>y: 5649053.368<br>standort: Hanna-Jursch-Str.<br>was: Bodenfeuchte, Bodentemperatur, Bodenleitfähigkeit<br>bnr: 3<br>sensor_nr: 15<br>hersteller: DRAGINO<br>model: SE01-LB<br>html: <br>p_gid: <br>sku: LA66N710474<br>eui: <br>key: A84041C4C1884F8A<br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>244</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2024/04/09</value>
+        </Data>
+        <Data name="x">
+          <value>684245.945</value>
+        </Data>
+        <Data name="y">
+          <value>5649053.368</value>
+        </Data>
+        <Data name="standort">
+          <value>Hanna-Jursch-Str.</value>
+        </Data>
+        <Data name="was">
+          <value>Bodenfeuchte, Bodentemperatur, Bodenleitfähigkeit</value>
+        </Data>
+        <Data name="bnr">
+          <value>3</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value>15</value>
+        </Data>
+        <Data name="hersteller">
+          <value>DRAGINO</value>
+        </Data>
+        <Data name="model">
+          <value>SE01-LB</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value>LA66N710474</value>
+        </Data>
+        <Data name="eui">
+          <value/>
+        </Data>
+        <Data name="key">
+          <value>A84041C4C1884F8A</value>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.623859,50.963585,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 244<br>in_tiefe: 30 cm<br>eingesetzt: 2024/04/09<br>x: 684245.941<br>y: 5649053.371<br>standort: Hanna-Jursch-Str.<br>was: Bodenfeuchte, Bodentemperatur, Bodenleitfähigkeit<br>bnr: 3<br>sensor_nr: 16<br>hersteller: DRAGINO<br>model: SE01-LB<br>html: <br>p_gid: <br>sku: LST25700318<br>eui: <br>key: A8404120D18827DE<br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>244</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>30 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2024/04/09</value>
+        </Data>
+        <Data name="x">
+          <value>684245.941</value>
+        </Data>
+        <Data name="y">
+          <value>5649053.371</value>
+        </Data>
+        <Data name="standort">
+          <value>Hanna-Jursch-Str.</value>
+        </Data>
+        <Data name="was">
+          <value>Bodenfeuchte, Bodentemperatur, Bodenleitfähigkeit</value>
+        </Data>
+        <Data name="bnr">
+          <value>3</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value>16</value>
+        </Data>
+        <Data name="hersteller">
+          <value>DRAGINO</value>
+        </Data>
+        <Data name="model">
+          <value>SE01-LB</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value>LST25700318</value>
+        </Data>
+        <Data name="eui">
+          <value/>
+        </Data>
+        <Data name="key">
+          <value>A8404120D18827DE</value>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.623859,50.963585,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 245<br>in_tiefe: 30 cm<br>eingesetzt: 2024/04/09<br>x: 684311.344<br>y: 5649005.014<br>standort: Christiane-Vulpius-Str.<br>was: Bodenfeuchte, Bodentemperatur, Bodenleitfähigkeit<br>bnr: 30<br>sensor_nr: 17<br>hersteller: DRAGINO<br>model: LSE01-8<br>html: <br>p_gid: <br>sku: LST25700319<br>eui: <br>key: A840418F818827DF<br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>245</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>30 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2024/04/09</value>
+        </Data>
+        <Data name="x">
+          <value>684311.344</value>
+        </Data>
+        <Data name="y">
+          <value>5649005.014</value>
+        </Data>
+        <Data name="standort">
+          <value>Christiane-Vulpius-Str.</value>
+        </Data>
+        <Data name="was">
+          <value>Bodenfeuchte, Bodentemperatur, Bodenleitfähigkeit</value>
+        </Data>
+        <Data name="bnr">
+          <value>30</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value>17</value>
+        </Data>
+        <Data name="hersteller">
+          <value>DRAGINO</value>
+        </Data>
+        <Data name="model">
+          <value>LSE01-8</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value>LST25700319</value>
+        </Data>
+        <Data name="eui">
+          <value/>
+        </Data>
+        <Data name="key">
+          <value>A840418F818827DF</value>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.624765,50.96313,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 245<br>in_tiefe: 60 cm<br>eingesetzt: 2024/04/09<br>x: 684311.357<br>y: 5649005.014<br>standort: Christiane-Vulpius-Str.<br>was: Bodenfeuchte, Bodentemperatur, Bodenleitfähigkeit<br>bnr: 30<br>sensor_nr: 18<br>hersteller: DRAGINO<br>model: LSE01-8<br>html: <br>p_gid: <br>sku: LST25700324<br>eui: <br>key: A8404180918827E4<br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>245</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2024/04/09</value>
+        </Data>
+        <Data name="x">
+          <value>684311.357</value>
+        </Data>
+        <Data name="y">
+          <value>5649005.014</value>
+        </Data>
+        <Data name="standort">
+          <value>Christiane-Vulpius-Str.</value>
+        </Data>
+        <Data name="was">
+          <value>Bodenfeuchte, Bodentemperatur, Bodenleitfähigkeit</value>
+        </Data>
+        <Data name="bnr">
+          <value>30</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value>18</value>
+        </Data>
+        <Data name="hersteller">
+          <value>DRAGINO</value>
+        </Data>
+        <Data name="model">
+          <value>LSE01-8</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value>LST25700324</value>
+        </Data>
+        <Data name="eui">
+          <value/>
+        </Data>
+        <Data name="key">
+          <value>A8404180918827E4</value>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.624765,50.96313,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 246<br>in_tiefe: 60 cm<br>eingesetzt: 2024/04/09<br>x: 681830.02<br>y: 5646167.994<br>standort: Hufelandweg<br>was: Bodenfeuchte, Bodentemperatur, Bodenleitfähigkeit<br>bnr: 4<br>sensor_nr: 19<br>hersteller: DRAGINO<br>model: LSE01-8<br>html: <br>p_gid: <br>sku: LST25700323<br>eui: <br>key: A8404147318827E3<br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>246</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2024/04/09</value>
+        </Data>
+        <Data name="x">
+          <value>681830.02</value>
+        </Data>
+        <Data name="y">
+          <value>5646167.994</value>
+        </Data>
+        <Data name="standort">
+          <value>Hufelandweg</value>
+        </Data>
+        <Data name="was">
+          <value>Bodenfeuchte, Bodentemperatur, Bodenleitfähigkeit</value>
+        </Data>
+        <Data name="bnr">
+          <value>4</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value>19</value>
+        </Data>
+        <Data name="hersteller">
+          <value>DRAGINO</value>
+        </Data>
+        <Data name="model">
+          <value>LSE01-8</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value>LST25700323</value>
+        </Data>
+        <Data name="eui">
+          <value/>
+        </Data>
+        <Data name="key">
+          <value>A8404147318827E3</value>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.588051,50.938432,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 246<br>in_tiefe: 30 cm<br>eingesetzt: 2024/04/09<br>x: 681830.02<br>y: 5646167.994<br>standort: Hufelandweg<br>was: Bodenfeuchte, Bodentemperatur, Bodenleitfähigkeit<br>bnr: 4<br>sensor_nr: 20<br>hersteller: DRAGINO<br>model: LSE01-8<br>html: <br>p_gid: <br>sku: LST25700482<br>eui: <br>key: A84041A041884F92<br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>246</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>30 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2024/04/09</value>
+        </Data>
+        <Data name="x">
+          <value>681830.02</value>
+        </Data>
+        <Data name="y">
+          <value>5646167.994</value>
+        </Data>
+        <Data name="standort">
+          <value>Hufelandweg</value>
+        </Data>
+        <Data name="was">
+          <value>Bodenfeuchte, Bodentemperatur, Bodenleitfähigkeit</value>
+        </Data>
+        <Data name="bnr">
+          <value>4</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value>20</value>
+        </Data>
+        <Data name="hersteller">
+          <value>DRAGINO</value>
+        </Data>
+        <Data name="model">
+          <value>LSE01-8</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value>LST25700482</value>
+        </Data>
+        <Data name="eui">
+          <value/>
+        </Data>
+        <Data name="key">
+          <value>A84041A041884F92</value>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.588051,50.938432,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 282<br>in_tiefe: 60 cm<br>eingesetzt: 2025/04/08<br>x: 684555.627<br>y: 5649386.274<br>standort: Am Oelste, Ausgleichsfläche<br>was: Wasserpotenzial<br>bnr: 19<br>sensor_nr: <br>hersteller: Meter Group<br>model: TEROS21<br>html: <br>p_gid: <br>sku: <br>eui: 8CF95720000D4ADC<br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>282</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2025/04/08</value>
+        </Data>
+        <Data name="x">
+          <value>684555.627</value>
+        </Data>
+        <Data name="y">
+          <value>5649386.274</value>
+        </Data>
+        <Data name="standort">
+          <value>Am Oelste, Ausgleichsfläche</value>
+        </Data>
+        <Data name="was">
+          <value>Wasserpotenzial</value>
+        </Data>
+        <Data name="bnr">
+          <value>19</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value/>
+        </Data>
+        <Data name="hersteller">
+          <value>Meter Group</value>
+        </Data>
+        <Data name="model">
+          <value>TEROS21</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value>8CF95720000D4ADC</value>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.628433,50.966477,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 283<br>in_tiefe: 60 cm<br>eingesetzt: 2025/04/08<br>x: 684239.162<br>y: 5649169.881<br>standort: Carl-Orff-Str.<br>was: Wasserpotenzial<br>bnr: 43<br>sensor_nr: <br>hersteller: Meter Group<br>model: TEROS21<br>html: <br>p_gid: <br>sku: <br>eui: 8CF95720000D50A2<br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>283</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2025/04/08</value>
+        </Data>
+        <Data name="x">
+          <value>684239.162</value>
+        </Data>
+        <Data name="y">
+          <value>5649169.881</value>
+        </Data>
+        <Data name="standort">
+          <value>Carl-Orff-Str.</value>
+        </Data>
+        <Data name="was">
+          <value>Wasserpotenzial</value>
+        </Data>
+        <Data name="bnr">
+          <value>43</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value/>
+        </Data>
+        <Data name="hersteller">
+          <value>Meter Group</value>
+        </Data>
+        <Data name="model">
+          <value>TEROS21</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value>8CF95720000D50A2</value>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.623821,50.964634,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 284<br>in_tiefe: 60 cm<br>eingesetzt: 2025/04/08<br>x: 683953.162<br>y: 5648568.762<br>standort: Hegelstr., Fußweg<br>was: Wasserpotenzial<br>bnr: 117<br>sensor_nr: <br>hersteller: Meter Group<br>model: TEROS21<br>html: <br>p_gid: <br>sku: <br>eui: 8CF95720000D4A69<br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>284</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2025/04/08</value>
+        </Data>
+        <Data name="x">
+          <value>683953.162</value>
+        </Data>
+        <Data name="y">
+          <value>5648568.762</value>
+        </Data>
+        <Data name="standort">
+          <value>Hegelstr., Fußweg</value>
+        </Data>
+        <Data name="was">
+          <value>Wasserpotenzial</value>
+        </Data>
+        <Data name="bnr">
+          <value>117</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value/>
+        </Data>
+        <Data name="hersteller">
+          <value>Meter Group</value>
+        </Data>
+        <Data name="model">
+          <value>TEROS21</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value>8CF95720000D4A69</value>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.619449,50.959325,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 285<br>in_tiefe: 60 cm<br>eingesetzt: 2025/04/08<br>x: 684473.97<br>y: 5649317.501<br>standort: Am Oelste, Ausgleichsfläche<br>was: Wasserpotenzial<br>bnr: 10<br>sensor_nr: <br>hersteller: Meter Group<br>model: TEROS21<br>html: <br>p_gid: <br>sku: <br>eui: 8CF95720000D4ADA<br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>285</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2025/04/08</value>
+        </Data>
+        <Data name="x">
+          <value>684473.97</value>
+        </Data>
+        <Data name="y">
+          <value>5649317.501</value>
+        </Data>
+        <Data name="standort">
+          <value>Am Oelste, Ausgleichsfläche</value>
+        </Data>
+        <Data name="was">
+          <value>Wasserpotenzial</value>
+        </Data>
+        <Data name="bnr">
+          <value>10</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value/>
+        </Data>
+        <Data name="hersteller">
+          <value>Meter Group</value>
+        </Data>
+        <Data name="model">
+          <value>TEROS21</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value>8CF95720000D4ADA</value>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.627237,50.965885,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 286<br>in_tiefe: 60 cm<br>eingesetzt: 2025/04/08<br>x: 684415.344<br>y: 5648872.515<br>standort: Elisabeth-von-Thüringen-Str.<br>was: Wasserpotenzial<br>bnr: 8<br>sensor_nr: <br>hersteller: Meter Group<br>model: TEROS21<br>html: <br>p_gid: <br>sku: <br>eui: 8CF95720000D4AC2<br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>286</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2025/04/08</value>
+        </Data>
+        <Data name="x">
+          <value>684415.344</value>
+        </Data>
+        <Data name="y">
+          <value>5648872.515</value>
+        </Data>
+        <Data name="standort">
+          <value>Elisabeth-von-Thüringen-Str.</value>
+        </Data>
+        <Data name="was">
+          <value>Wasserpotenzial</value>
+        </Data>
+        <Data name="bnr">
+          <value>8</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value/>
+        </Data>
+        <Data name="hersteller">
+          <value>Meter Group</value>
+        </Data>
+        <Data name="model">
+          <value>TEROS21</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value>8CF95720000D4AC2</value>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.626177,50.961906,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 287<br>in_tiefe: 60 cm<br>eingesetzt: 2025/04/08<br>x: 684350.57<br>y: 5648911.777<br>standort: Moritz-von-Berlepsch-Str.<br>was: Wasserpotenzial<br>bnr: 14<br>sensor_nr: <br>hersteller: Meter Group<br>model: TEROS21<br>html: <br>p_gid: <br>sku: <br>eui: 8CF95720000D4AD0<br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>287</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2025/04/08</value>
+        </Data>
+        <Data name="x">
+          <value>684350.57</value>
+        </Data>
+        <Data name="y">
+          <value>5648911.777</value>
+        </Data>
+        <Data name="standort">
+          <value>Moritz-von-Berlepsch-Str.</value>
+        </Data>
+        <Data name="was">
+          <value>Wasserpotenzial</value>
+        </Data>
+        <Data name="bnr">
+          <value>14</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value/>
+        </Data>
+        <Data name="hersteller">
+          <value>Meter Group</value>
+        </Data>
+        <Data name="model">
+          <value>TEROS21</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value>8CF95720000D4AD0</value>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.625275,50.96228,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 288<br>in_tiefe: 60 cm<br>eingesetzt: 2025/04/08<br>x: 683980.577<br>y: 5648608.159<br>standort: Hegelstr., Fußweg<br>was: Wasserpotenzial<br>bnr: 101<br>sensor_nr: <br>hersteller: Meter Group<br>model: TEROS21<br>html: <br>p_gid: <br>sku: <br>eui: 8CF95720000D4B67<br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>288</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2025/04/08</value>
+        </Data>
+        <Data name="x">
+          <value>683980.577</value>
+        </Data>
+        <Data name="y">
+          <value>5648608.159</value>
+        </Data>
+        <Data name="standort">
+          <value>Hegelstr., Fußweg</value>
+        </Data>
+        <Data name="was">
+          <value>Wasserpotenzial</value>
+        </Data>
+        <Data name="bnr">
+          <value>101</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value/>
+        </Data>
+        <Data name="hersteller">
+          <value>Meter Group</value>
+        </Data>
+        <Data name="model">
+          <value>TEROS21</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value>8CF95720000D4B67</value>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.619859,50.959671,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 289<br>in_tiefe: 60 cm<br>eingesetzt: 2025/04/08<br>x: 683965.719<br>y: 5648581.966<br>standort: Hegelstr., Fußweg<br>was: Wasserpotenzial<br>bnr: 110<br>sensor_nr: <br>hersteller: Meter Group<br>model: TEROS21<br>html: <br>p_gid: <br>sku: <br>eui: 8CF95720000D4B43<br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>289</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2025/04/08</value>
+        </Data>
+        <Data name="x">
+          <value>683965.719</value>
+        </Data>
+        <Data name="y">
+          <value>5648581.966</value>
+        </Data>
+        <Data name="standort">
+          <value>Hegelstr., Fußweg</value>
+        </Data>
+        <Data name="was">
+          <value>Wasserpotenzial</value>
+        </Data>
+        <Data name="bnr">
+          <value>110</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value/>
+        </Data>
+        <Data name="hersteller">
+          <value>Meter Group</value>
+        </Data>
+        <Data name="model">
+          <value>TEROS21</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value>8CF95720000D4B43</value>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.619634,50.95944,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 279<br>in_tiefe: 60 cm<br>eingesetzt: 2025/04/08<br>x: 683614.103<br>y: 5648067.8<br>standort: Maria-Pawlowna-Str.<br>was: Wasserpotenzial<br>bnr: 8<br>sensor_nr: <br>hersteller: Meter Group<br>model: TEROS21<br>html: <br>p_gid: <br>sku: <br>eui: 8CF95720000D4AF8<br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>279</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2025/04/08</value>
+        </Data>
+        <Data name="x">
+          <value>683614.103</value>
+        </Data>
+        <Data name="y">
+          <value>5648067.8</value>
+        </Data>
+        <Data name="standort">
+          <value>Maria-Pawlowna-Str.</value>
+        </Data>
+        <Data name="was">
+          <value>Wasserpotenzial</value>
+        </Data>
+        <Data name="bnr">
+          <value>8</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value/>
+        </Data>
+        <Data name="hersteller">
+          <value>Meter Group</value>
+        </Data>
+        <Data name="model">
+          <value>TEROS21</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value>8CF95720000D4AF8</value>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.614374,50.954933,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 290<br>in_tiefe: 60 cm<br>eingesetzt: 2025/04/08<br>x: 684425.237<br>y: 5648976.523<br>standort: Hanna-Jursch-Str.<br>was: Wasserpotenzial<br>bnr: 46<br>sensor_nr: <br>hersteller: Meter Group<br>model: TEROS21<br>html: <br>p_gid: <br>sku: <br>eui: 8CF95720000D518F<br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>290</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2025/04/08</value>
+        </Data>
+        <Data name="x">
+          <value>684425.237</value>
+        </Data>
+        <Data name="y">
+          <value>5648976.523</value>
+        </Data>
+        <Data name="standort">
+          <value>Hanna-Jursch-Str.</value>
+        </Data>
+        <Data name="was">
+          <value>Wasserpotenzial</value>
+        </Data>
+        <Data name="bnr">
+          <value>46</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value/>
+        </Data>
+        <Data name="hersteller">
+          <value>Meter Group</value>
+        </Data>
+        <Data name="model">
+          <value>TEROS21</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value>8CF95720000D518F</value>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.62637,50.962837,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 291<br>in_tiefe: 60 cm<br>eingesetzt: 2025/04/08<br>x: 683933.958<br>y: 5648599.164<br>standort: Hegelstr., Grünanlage<br>was: Wasserpotenzial<br>bnr: 29<br>sensor_nr: <br>hersteller: Meter Group<br>model: TEROS21<br>html: <br>p_gid: <br>sku: <br>eui: 8CF95720000D4ACE<br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>291</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2025/04/08</value>
+        </Data>
+        <Data name="x">
+          <value>683933.958</value>
+        </Data>
+        <Data name="y">
+          <value>5648599.164</value>
+        </Data>
+        <Data name="standort">
+          <value>Hegelstr., Grünanlage</value>
+        </Data>
+        <Data name="was">
+          <value>Wasserpotenzial</value>
+        </Data>
+        <Data name="bnr">
+          <value>29</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value/>
+        </Data>
+        <Data name="hersteller">
+          <value>Meter Group</value>
+        </Data>
+        <Data name="model">
+          <value>TEROS21</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value>8CF95720000D4ACE</value>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.619191,50.959605,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 292<br>in_tiefe: 60 cm<br>eingesetzt: 2025/04/08<br>x: 683968.456<br>y: 5648633.425<br>standort: 1.07 Naumburger Straße<br>was: Wasserpotenzial<br>bnr: 3<br>sensor_nr: <br>hersteller: Meter Group<br>model: TEROS21<br>html: <br>p_gid: <br>sku: <br>eui: 8CF95720000D4AC4<br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>292</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2025/04/08</value>
+        </Data>
+        <Data name="x">
+          <value>683968.456</value>
+        </Data>
+        <Data name="y">
+          <value>5648633.425</value>
+        </Data>
+        <Data name="standort">
+          <value>1.07 Naumburger Straße</value>
+        </Data>
+        <Data name="was">
+          <value>Wasserpotenzial</value>
+        </Data>
+        <Data name="bnr">
+          <value>3</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value/>
+        </Data>
+        <Data name="hersteller">
+          <value>Meter Group</value>
+        </Data>
+        <Data name="model">
+          <value>TEROS21</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value>8CF95720000D4AC4</value>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.619699,50.959901,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 293<br>in_tiefe: 60 cm<br>eingesetzt: 2025/04/08<br>x: 684168.176<br>y: 5649243.461<br>standort: Lortzingweg<br>was: Wasserpotenzial<br>bnr: 1<br>sensor_nr: <br>hersteller: Meter Group<br>model: TEROS21<br>html: <br>p_gid: <br>sku: <br>eui: 8CF95720000D4AD2<br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>293</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2025/04/08</value>
+        </Data>
+        <Data name="x">
+          <value>684168.176</value>
+        </Data>
+        <Data name="y">
+          <value>5649243.461</value>
+        </Data>
+        <Data name="standort">
+          <value>Lortzingweg</value>
+        </Data>
+        <Data name="was">
+          <value>Wasserpotenzial</value>
+        </Data>
+        <Data name="bnr">
+          <value>1</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value/>
+        </Data>
+        <Data name="hersteller">
+          <value>Meter Group</value>
+        </Data>
+        <Data name="model">
+          <value>TEROS21</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value>8CF95720000D4AD2</value>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.622849,50.965318,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 294<br>in_tiefe: 60 cm<br>eingesetzt: 2025/04/08<br>x: 684499.042<br>y: 5649414.997<br>standort: Am Oelste, Ausgleichsfläche<br>was: Wasserpotenzial<br>bnr: 3<br>sensor_nr: <br>hersteller: Meter Group<br>model: TEROS21<br>html: <br>p_gid: <br>sku: <br>eui: 8CF95720000D2F0D<br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>294</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2025/04/08</value>
+        </Data>
+        <Data name="x">
+          <value>684499.042</value>
+        </Data>
+        <Data name="y">
+          <value>5649414.997</value>
+        </Data>
+        <Data name="standort">
+          <value>Am Oelste, Ausgleichsfläche</value>
+        </Data>
+        <Data name="was">
+          <value>Wasserpotenzial</value>
+        </Data>
+        <Data name="bnr">
+          <value>3</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value/>
+        </Data>
+        <Data name="hersteller">
+          <value>Meter Group</value>
+        </Data>
+        <Data name="model">
+          <value>TEROS21</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value>8CF95720000D2F0D</value>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.627643,50.966753,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 295<br>in_tiefe: 60 cm<br>eingesetzt: 2025/04/08<br>x: 683923.188<br>y: 5648584.803<br>standort: Hegelstr., Grünanlage<br>was: Wasserpotenzial<br>bnr: 19<br>sensor_nr: <br>hersteller: Meter Group<br>model: TEROS21<br>html: <br>p_gid: <br>sku: <br>eui: 8CF95720000D4AFC<br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>295</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2025/04/08</value>
+        </Data>
+        <Data name="x">
+          <value>683923.188</value>
+        </Data>
+        <Data name="y">
+          <value>5648584.803</value>
+        </Data>
+        <Data name="standort">
+          <value>Hegelstr., Grünanlage</value>
+        </Data>
+        <Data name="was">
+          <value>Wasserpotenzial</value>
+        </Data>
+        <Data name="bnr">
+          <value>19</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value/>
+        </Data>
+        <Data name="hersteller">
+          <value>Meter Group</value>
+        </Data>
+        <Data name="model">
+          <value>TEROS21</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value>8CF95720000D4AFC</value>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.619031,50.959479,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 296<br>in_tiefe: 60 cm<br>eingesetzt: 2025/09/23<br>x: 683170.425<br>y: 5648222.685<br>standort: Am Heiligenberg - Grünanlage<br>was: <br>bnr: 26<br>sensor_nr: <br>hersteller: <br>model: TEROS21<br>html: <br>p_gid: <br>sku: <br>eui: 8CF957200013207C<br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>296</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2025/09/23</value>
+        </Data>
+        <Data name="x">
+          <value>683170.425</value>
+        </Data>
+        <Data name="y">
+          <value>5648222.685</value>
+        </Data>
+        <Data name="standort">
+          <value>Am Heiligenberg - Grünanlage</value>
+        </Data>
+        <Data name="was">
+          <value/>
+        </Data>
+        <Data name="bnr">
+          <value>26</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value/>
+        </Data>
+        <Data name="hersteller">
+          <value/>
+        </Data>
+        <Data name="model">
+          <value>TEROS21</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value>8CF957200013207C</value>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.608141,50.956466,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 297<br>in_tiefe: 60 cm<br>eingesetzt: 2025/09/23<br>x: 683161.816<br>y: 5648180.36<br>standort: Am Heiligenberg - Grünanlage<br>was: <br>bnr: 18<br>sensor_nr: <br>hersteller: <br>model: TEROS21<br>html: <br>p_gid: <br>sku: <br>eui: 8CF9572000130B15<br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>297</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2025/09/23</value>
+        </Data>
+        <Data name="x">
+          <value>683161.816</value>
+        </Data>
+        <Data name="y">
+          <value>5648180.36</value>
+        </Data>
+        <Data name="standort">
+          <value>Am Heiligenberg - Grünanlage</value>
+        </Data>
+        <Data name="was">
+          <value/>
+        </Data>
+        <Data name="bnr">
+          <value>18</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value/>
+        </Data>
+        <Data name="hersteller">
+          <value/>
+        </Data>
+        <Data name="model">
+          <value>TEROS21</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value>8CF9572000130B15</value>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.607998,50.956088,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 114<br>in_tiefe: 60 cm<br>eingesetzt: 2025/09/23<br>x: 682690.349<br>y: 5648876.75<br>standort: Jägerbergstr.<br>was: <br>bnr: 810<br>sensor_nr: <br>hersteller: <br>model: TEROS21<br>html: <br>p_gid: <br>sku: <br>eui: 8CF9572000130B01<br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>114</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2025/09/23</value>
+        </Data>
+        <Data name="x">
+          <value>682690.349</value>
+        </Data>
+        <Data name="y">
+          <value>5648876.75</value>
+        </Data>
+        <Data name="standort">
+          <value>Jägerbergstr.</value>
+        </Data>
+        <Data name="was">
+          <value/>
+        </Data>
+        <Data name="bnr">
+          <value>810</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value/>
+        </Data>
+        <Data name="hersteller">
+          <value/>
+        </Data>
+        <Data name="model">
+          <value>TEROS21</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value>8CF9572000130B01</value>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.601641,50.962494,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 298<br>in_tiefe: 60 cm<br>eingesetzt: 2025/09/23<br>x: 682335.115<br>y: 5648844.273<br>standort: Jägerbergstr.<br>was: <br>bnr: 682<br>sensor_nr: <br>hersteller: <br>model: TEROS21<br>html: <br>p_gid: <br>sku: <br>eui: 8CF9572000130B41<br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>298</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2025/09/23</value>
+        </Data>
+        <Data name="x">
+          <value>682335.115</value>
+        </Data>
+        <Data name="y">
+          <value>5648844.273</value>
+        </Data>
+        <Data name="standort">
+          <value>Jägerbergstr.</value>
+        </Data>
+        <Data name="was">
+          <value/>
+        </Data>
+        <Data name="bnr">
+          <value>682</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value/>
+        </Data>
+        <Data name="hersteller">
+          <value/>
+        </Data>
+        <Data name="model">
+          <value>TEROS21</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value>8CF9572000130B41</value>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.596572,50.962315,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 299<br>in_tiefe: 60 cm<br>eingesetzt: 2025/09/23<br>x: 683655.978<br>y: 5647974.96<br>standort: Naumburger Str.<br>was: <br>bnr: 261<br>sensor_nr: <br>hersteller: <br>model: TEROS21<br>html: <br>p_gid: <br>sku: <br>eui: 8CF9572000130B64<br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>299</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2025/09/23</value>
+        </Data>
+        <Data name="x">
+          <value>683655.978</value>
+        </Data>
+        <Data name="y">
+          <value>5647974.96</value>
+        </Data>
+        <Data name="standort">
+          <value>Naumburger Str.</value>
+        </Data>
+        <Data name="was">
+          <value/>
+        </Data>
+        <Data name="bnr">
+          <value>261</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value/>
+        </Data>
+        <Data name="hersteller">
+          <value/>
+        </Data>
+        <Data name="model">
+          <value>TEROS21</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value>8CF9572000130B64</value>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.614922,50.954086,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 280<br>in_tiefe: 60 cm<br>eingesetzt: 2025/09/23<br>x: 683635.388<br>y: 5648052.757<br>standort: Maria-Pawlowna-Str.<br>was: <br>bnr: 3<br>sensor_nr: <br>hersteller: <br>model: TEROS21<br>html: <br>p_gid: <br>sku: <br>eui: 8CF9572000130B5E<br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>280</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2025/09/23</value>
+        </Data>
+        <Data name="x">
+          <value>683635.388</value>
+        </Data>
+        <Data name="y">
+          <value>5648052.757</value>
+        </Data>
+        <Data name="standort">
+          <value>Maria-Pawlowna-Str.</value>
+        </Data>
+        <Data name="was">
+          <value/>
+        </Data>
+        <Data name="bnr">
+          <value>3</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value/>
+        </Data>
+        <Data name="hersteller">
+          <value/>
+        </Data>
+        <Data name="model">
+          <value>TEROS21</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value>8CF9572000130B5E</value>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.614669,50.954791,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 281<br>in_tiefe: 60 cm<br>eingesetzt: 2025/09/23<br>x: 683672.637<br>y: 5648047.993<br>standort: Maria-Pawlowna-Str.<br>was: <br>bnr: 3<br>sensor_nr: <br>hersteller: <br>model: TEROS21<br>html: <br>p_gid: <br>sku: <br>eui: 8CF957200013209B<br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>281</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2025/09/23</value>
+        </Data>
+        <Data name="x">
+          <value>683672.637</value>
+        </Data>
+        <Data name="y">
+          <value>5648047.993</value>
+        </Data>
+        <Data name="standort">
+          <value>Maria-Pawlowna-Str.</value>
+        </Data>
+        <Data name="was">
+          <value/>
+        </Data>
+        <Data name="bnr">
+          <value>3</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value/>
+        </Data>
+        <Data name="hersteller">
+          <value/>
+        </Data>
+        <Data name="model">
+          <value>TEROS21</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value>8CF957200013209B</value>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.615196,50.954737,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 300<br>in_tiefe: 60 cm<br>eingesetzt: 2025/09/23<br>x: 683176.802<br>y: 5648219.613<br>standort: Am Heiligenberg, Grünanlage<br>was: <br>bnr: 24<br>sensor_nr: <br>hersteller: <br>model: TEROS21<br>html: <br>p_gid: <br>sku: <br>eui: 8CF9572000130B0D<br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>300</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2025/09/23</value>
+        </Data>
+        <Data name="x">
+          <value>683176.802</value>
+        </Data>
+        <Data name="y">
+          <value>5648219.613</value>
+        </Data>
+        <Data name="standort">
+          <value>Am Heiligenberg, Grünanlage</value>
+        </Data>
+        <Data name="was">
+          <value/>
+        </Data>
+        <Data name="bnr">
+          <value>24</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value/>
+        </Data>
+        <Data name="hersteller">
+          <value/>
+        </Data>
+        <Data name="model">
+          <value>TEROS21</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value>8CF9572000130B0D</value>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.60823,50.956436,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 8<br>in_tiefe: 60 cm<br>eingesetzt: 2025/09/23<br>x: 683199.335<br>y: 5648697.386<br>standort: Am Heiligenberg<br>was: <br>bnr: 206<br>sensor_nr: <br>hersteller: <br>model: TEROS21<br>html: <br>p_gid: <br>sku: <br>eui: 8CF9572000130CB0<br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>8</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2025/09/23</value>
+        </Data>
+        <Data name="x">
+          <value>683199.335</value>
+        </Data>
+        <Data name="y">
+          <value>5648697.386</value>
+        </Data>
+        <Data name="standort">
+          <value>Am Heiligenberg</value>
+        </Data>
+        <Data name="was">
+          <value/>
+        </Data>
+        <Data name="bnr">
+          <value>206</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value/>
+        </Data>
+        <Data name="hersteller">
+          <value/>
+        </Data>
+        <Data name="model">
+          <value>TEROS21</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value>8CF9572000130CB0</value>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.608791,50.960721,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 7<br>in_tiefe: 60 cm<br>eingesetzt: 2025/09/23<br>x: 683207.942<br>y: 5648627.831<br>standort: Am Heiligenberg<br>was: <br>bnr: 202<br>sensor_nr: <br>hersteller: <br>model: TEROS21<br>html: <br>p_gid: <br>sku: <br>eui: 8CF9572000130B14<br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>7</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2025/09/23</value>
+        </Data>
+        <Data name="x">
+          <value>683207.942</value>
+        </Data>
+        <Data name="y">
+          <value>5648627.831</value>
+        </Data>
+        <Data name="standort">
+          <value>Am Heiligenberg</value>
+        </Data>
+        <Data name="was">
+          <value/>
+        </Data>
+        <Data name="bnr">
+          <value>202</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value/>
+        </Data>
+        <Data name="hersteller">
+          <value/>
+        </Data>
+        <Data name="model">
+          <value>TEROS21</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value>8CF9572000130B14</value>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.608879,50.960093,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 301<br>in_tiefe: 60 cm<br>eingesetzt: 2025/09/23<br>x: 682557.528<br>y: 5647401.022<br>standort: 1.05 Friedensstraße<br>was: <br>bnr: 21<br>sensor_nr: <br>hersteller: <br>model: TEROS21<br>html: <br>p_gid: <br>sku: <br>eui: 8CF9572000130B13<br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>301</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2025/09/23</value>
+        </Data>
+        <Data name="x">
+          <value>682557.528</value>
+        </Data>
+        <Data name="y">
+          <value>5647401.022</value>
+        </Data>
+        <Data name="standort">
+          <value>1.05 Friedensstraße</value>
+        </Data>
+        <Data name="was">
+          <value/>
+        </Data>
+        <Data name="bnr">
+          <value>21</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value/>
+        </Data>
+        <Data name="hersteller">
+          <value/>
+        </Data>
+        <Data name="model">
+          <value>TEROS21</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value>8CF9572000130B13</value>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.599012,50.949279,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 302<br>in_tiefe: 60 cm<br>eingesetzt: 2025/09/23<br>x: 683375.283<br>y: 5647533.241<br>standort: Naumburger Str.<br>was: <br>bnr: 252<br>sensor_nr: <br>hersteller: <br>model: TEROS21<br>html: <br>p_gid: <br>sku: <br>eui: 8CF9572000130B05<br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>302</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2025/09/23</value>
+        </Data>
+        <Data name="x">
+          <value>683375.283</value>
+        </Data>
+        <Data name="y">
+          <value>5647533.241</value>
+        </Data>
+        <Data name="standort">
+          <value>Naumburger Str.</value>
+        </Data>
+        <Data name="was">
+          <value/>
+        </Data>
+        <Data name="bnr">
+          <value>252</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value/>
+        </Data>
+        <Data name="hersteller">
+          <value/>
+        </Data>
+        <Data name="model">
+          <value>TEROS21</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value>8CF9572000130B05</value>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.610708,50.950207,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 303<br>in_tiefe: 60 cm<br>eingesetzt: 2025/09/23<br>x: 682930.962<br>y: 5647247.327<br>standort: Altenburger Str.<br>was: <br>bnr: 5<br>sensor_nr: <br>hersteller: <br>model: TEROS21<br>html: <br>p_gid: <br>sku: <br>eui: 8CF9572000130B1F<br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>303</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2025/09/23</value>
+        </Data>
+        <Data name="x">
+          <value>682930.962</value>
+        </Data>
+        <Data name="y">
+          <value>5647247.327</value>
+        </Data>
+        <Data name="standort">
+          <value>Altenburger Str.</value>
+        </Data>
+        <Data name="was">
+          <value/>
+        </Data>
+        <Data name="bnr">
+          <value>5</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value/>
+        </Data>
+        <Data name="hersteller">
+          <value/>
+        </Data>
+        <Data name="model">
+          <value>TEROS21</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value>8CF9572000130B1F</value>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.604245,50.94778,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 304<br>in_tiefe: 60 cm<br>eingesetzt: 2025/09/23<br>x: 683393.209<br>y: 5647507.672<br>standort: Am Egelsee<br>was: <br>bnr: 1<br>sensor_nr: <br>hersteller: <br>model: TEROS21<br>html: <br>p_gid: <br>sku: <br>eui: 8CF9572000130B55<br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>304</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2025/09/23</value>
+        </Data>
+        <Data name="x">
+          <value>683393.209</value>
+        </Data>
+        <Data name="y">
+          <value>5647507.672</value>
+        </Data>
+        <Data name="standort">
+          <value>Am Egelsee</value>
+        </Data>
+        <Data name="was">
+          <value/>
+        </Data>
+        <Data name="bnr">
+          <value>1</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value/>
+        </Data>
+        <Data name="hersteller">
+          <value/>
+        </Data>
+        <Data name="model">
+          <value>TEROS21</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value>8CF9572000130B55</value>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.61095,50.949972,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 305<br>in_tiefe: 60 cm<br>eingesetzt: 2025/09/23<br>x: 683622.354<br>y: 5647828.045<br>standort: Naumburger Str.<br>was: <br>bnr: 257<br>sensor_nr: <br>hersteller: <br>model: TEROS21<br>html: <br>p_gid: <br>sku: <br>eui: 8CF9572000130B6E<br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>305</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2025/09/23</value>
+        </Data>
+        <Data name="x">
+          <value>683622.354</value>
+        </Data>
+        <Data name="y">
+          <value>5647828.045</value>
+        </Data>
+        <Data name="standort">
+          <value>Naumburger Str.</value>
+        </Data>
+        <Data name="was">
+          <value/>
+        </Data>
+        <Data name="bnr">
+          <value>257</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value/>
+        </Data>
+        <Data name="hersteller">
+          <value/>
+        </Data>
+        <Data name="model">
+          <value>TEROS21</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value>8CF9572000130B6E</value>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.61437,50.952777,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[description: <br>sensorstandort_gid: 306<br>in_tiefe: 60 cm<br>eingesetzt: 2025/09/23<br>x: 682919.025<br>y: 5647132.201<br>standort: 1.06 Zeitzer Straße<br>was: <br>bnr: 6<br>sensor_nr: <br>hersteller: <br>model: TEROS21<br>html: <br>p_gid: <br>sku: <br>eui: 8CF95720001320AF<br>key: <br>s_n: ]]></description>
+      <styleUrl>#icon-1899-0288D1</styleUrl>
+      <ExtendedData>
+        <Data name="description">
+          <value/>
+        </Data>
+        <Data name="sensorstandort_gid">
+          <value>306</value>
+        </Data>
+        <Data name="in_tiefe">
+          <value>60 cm</value>
+        </Data>
+        <Data name="eingesetzt">
+          <value>2025/09/23</value>
+        </Data>
+        <Data name="x">
+          <value>682919.025</value>
+        </Data>
+        <Data name="y">
+          <value>5647132.201</value>
+        </Data>
+        <Data name="standort">
+          <value>1.06 Zeitzer Straße</value>
+        </Data>
+        <Data name="was">
+          <value/>
+        </Data>
+        <Data name="bnr">
+          <value>6</value>
+        </Data>
+        <Data name="sensor_nr">
+          <value/>
+        </Data>
+        <Data name="hersteller">
+          <value/>
+        </Data>
+        <Data name="model">
+          <value>TEROS21</value>
+        </Data>
+        <Data name="html">
+          <value/>
+        </Data>
+        <Data name="p_gid">
+          <value/>
+        </Data>
+        <Data name="sku">
+          <value/>
+        </Data>
+        <Data name="eui">
+          <value>8CF95720001320AF</value>
+        </Data>
+        <Data name="key">
+          <value/>
+        </Data>
+        <Data name="s_n">
+          <value/>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          11.604018,50.94675,0
+        </coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>

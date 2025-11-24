@@ -22,6 +22,7 @@ import java.util.logging.Logger;
 import org.eclipse.sensinact.core.snapshot.ICriterion;
 import org.eclipse.sensinact.core.snapshot.ProviderSnapshot;
 import org.eclipse.sensinact.gateway.geojson.Feature;
+import org.eclipse.sensinact.gateway.geojson.FeatureCollection;
 import org.eclipse.sensinact.gateway.geojson.GeoJsonObject;
 import org.eclipse.sensinact.gateway.geojson.Point;
 import org.eclipse.sensinact.southbound.rules.api.ResourceUpdater;
@@ -82,7 +83,6 @@ public class ReferenceAreaRule implements RuleDefinition{
 		//		We should go over the map <refArea, List<providers>> and make the update of the ref area
 		providerToMatchingAreaMap.forEach((areaId, providers) -> {
 			List<Double> pfWerts = new LinkedList<>();
-			//			We should retrieve from SensiNact the corresponding chirpstack-xxxxx-derived in oder to get its pfWert
 			providers.forEach(provider -> {
 				provider.getService("derivedQuantities").getResources().forEach(resource -> {
 					if(resource.getName().equals("pfWertAvg")) {
@@ -117,6 +117,12 @@ public class ReferenceAreaRule implements RuleDefinition{
 			if(entry.getValue() instanceof Feature feature) {
 				if(ReferenceAreaHelper.isPointInside(point, feature.geometry())) {
 					return entry.getKey();
+				}
+			} else if(entry.getValue() instanceof FeatureCollection featureColl) {
+				for(Feature feature : featureColl.features()) {
+					if(ReferenceAreaHelper.isPointInside(point, feature.geometry())) {
+						return entry.getKey();
+					}
 				}
 			}
 		}

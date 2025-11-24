@@ -13,6 +13,7 @@
  */
 package de.jena.udp.reference.area.sensinact.rules;
 
+import java.lang.System.Logger;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -45,6 +46,7 @@ public class LocationNotification implements TypedEventHandler<ResourceDataNotif
 		String[] event_topics();
 	}
 	
+	private static final Logger LOGGER = System.getLogger(LocationNotification.class.getName());
 	private Map<String, GeoJsonObject> providerLocationMap = new ConcurrentHashMap<>();
 
 	
@@ -55,7 +57,7 @@ public class LocationNotification implements TypedEventHandler<ResourceDataNotif
 	@Override
 	public void notify(String topic, ResourceDataNotification event) {
 		if(!topic.endsWith("admin/location")) return; 
-		providerLocationMap.put(event.provider(), (GeoJsonObject) event.newValue());		
+		providerLocationMap.put(event.provider(), (GeoJsonObject) event.newValue());			
 	}
 	
 	public Map<String, GeoJsonObject> getProviderLocationMap() {

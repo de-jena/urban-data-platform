@@ -64,6 +64,8 @@ public class ChirpstackDeviceFactoryHandler implements IMqttMessageListener {
 
 	private static final Logger logger = System.getLogger(ChirpstackDeviceFactoryHandler.class.getName());
 	
+	@Reference
+	ChirpstackLocationComponent chirpstackLocationComponent;
 	
 	@Reference(target = "(" + EMFNamespaces.EMF_CONFIGURATOR_NAME + "=CodecJson)")
     private ComponentServiceObjects<ResourceSet> serviceObjects;
@@ -325,21 +327,30 @@ public class ChirpstackDeviceFactoryHandler implements IMqttMessageListener {
     	Admin admin = ProviderFactory.eINSTANCE.createAdmin();
     	provider.setAdmin(admin);
     	admin.setDescription(deviceName);
-        // Extract location from first gateway if available
-        JsonNode rxInfo = payload.path("rxInfo");
-        if (rxInfo.isArray() && rxInfo.size() > 0) {
-            JsonNode location = rxInfo.get(0).path("location");
-            double latitude = location.path("latitude").asDouble();
-            double longitude = location.path("longitude").asDouble();
-            double altitude = location.path("altitude").asDouble();
-            if (latitude != 0.0 || longitude != 0.0) {
-            	admin.setLocation(new Point(longitude, latitude));
-                logger.log(Level.DEBUG, "Device {0} location: lat={1}, lon={2}, alt={3}", 
-                    providerId, latitude, longitude, altitude);
-                // Location setting would depend on your specific model structure
-                // You might need to add location attributes to your ECore model
+        
+    	String eui = providerId.replace("chirpstack-", "").toUpperCase();
+    	Point sensorLocation = chirpstackLocationComponent.getSensorLocation(eui);
+    	if(sensorLocation != null) {
+    		admin.setLocation(sensorLocation);
+    		logger.log(Level.INFO, "Device {0} GEO location: lat={1}, lon={2}, alt={3}", providerId, sensorLocation.coordinates().latitude(), sensorLocation.coordinates().longitude());
+    	} else {
+    		// Extract location from first gateway if available
+            JsonNode rxInfo = payload.path("rxInfo");
+            if (rxInfo.isArray() && rxInfo.size() > 0) {
+                JsonNode location = rxInfo.get(0).path("location");
+                double latitude = location.path("latitude").asDouble();
+                double longitude = location.path("longitude").asDouble();
+                double altitude = location.path("altitude").asDouble();
+                if (latitude != 0.0 || longitude != 0.0) {
+                	admin.setLocation(new Point(longitude, latitude));
+                    logger.log(Level.DEBUG, "Device {0} gateway location: lat={1}, lon={2}, alt={3}", 
+                        providerId, latitude, longitude, altitude);
+                    // Location setting would depend on your specific model structure
+                    // You might need to add location attributes to your ECore model
+                }
             }
-        }
+    	}
+    	
         
         logger.log(Level.DEBUG, "Provider {0} created for device {1}", providerId, deviceName);
     }
