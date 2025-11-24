@@ -40,29 +40,23 @@ public class ChirpstackLocationRule implements RuleDefinition{
 	public void evaluate(List<ProviderSnapshot> providerSnapshots, ResourceUpdater resourceUpdater) {
 
 		ProviderSnapshot provider = findRuleTriggerProvider(providerSnapshots);
-//		for(ProviderSnapshot provider : providerSnapshots) {
-//			LOGGER.info(String.format("Provider that triggered the rule is %s", provider.getName()));
-//			//We filter out all the chirpstack-xxxx which are not of type Teros21
-//			if(provider.getService("sensor") == null) return;
-//			if(provider.getService("sensor").getResource("potentialWater1") == null) return;
-//
-//			String providerId = provider.getName();
-//			GeoJsonObject location = (GeoJsonObject) provider.getService("admin").getResource("location").getValue().getValue();
-//			if(location != null) {
-//				resourceUpdater.updateResource(provider.getName().concat("-derived"), "admin", "location", location, Instant.now());
-//				LOGGER.info(String.format("Updated location for provider %s", providerId));
-//			}			
-//		}
+		if(provider != null) {
+			LOGGER.info(String.format("Provider that triggered the rule is %s", provider.getName()));
+			//We filter out all the chirpstack-xxxx which are not of type Teros21
+			if(provider.getService("sensor") == null) return;
+			if(provider.getService("sensor").getResource("potentialWater1") == null) return;
 
-
-
+			String providerId = provider.getName();
+			GeoJsonObject location = (GeoJsonObject) provider.getService("admin").getResource("location").getValue().getValue();
+			if(location != null) {
+				resourceUpdater.updateResource(provider.getName().concat("-derived"), "admin", "location", location, Instant.now());
+				LOGGER.info(String.format("Updated location for provider %s", providerId));
+			}			
+		}
 	}
 
 	private ProviderSnapshot findRuleTriggerProvider(List<ProviderSnapshot> providerSnapshots) {
-		for(ProviderSnapshot provider : providerSnapshots) {
-			System.out.println(String.format("Name %s - Timestamp %s", provider.getName(), provider.getSnapshotTime()));
-		}
-		return providerSnapshots.stream().max(Comparator.comparing(ProviderSnapshot::getSnapshotTime)).orElseGet(null);
+		return providerSnapshots.stream().max(Comparator.comparing(p -> p.getService("admin").getResource("location").getValue().getTimestamp())).orElseGet(null);
 	}
 
 	/* 
