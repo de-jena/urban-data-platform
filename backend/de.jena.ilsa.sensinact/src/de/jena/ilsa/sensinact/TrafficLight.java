@@ -23,6 +23,9 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -95,9 +98,16 @@ public class TrafficLight {
 	private MessagingService messaging;
 
 	private PushStream<Message> subscription;
+	private ExecutorService executorService;
 
 	@Activate
 	public void activate() {
+		executorService = Executors.newFixedThreadPool(8, r -> {
+			Thread thread = new Thread(r, "TrafficLight-Worker");
+			thread.setDaemon(true);
+			return thread;
+		});
+
 		try {
 			subscription = messaging.subscribe(TOPIC + "#");
 			subscription.forEachEvent(this::handle);
@@ -110,6 +120,21 @@ public class TrafficLight {
 	@Deactivate
 	private void deactivate() {
 		subscription.close();
+
+		executorService.shutdown();
+		try {
+			if (!executorService.awaitTermination(30, TimeUnit.SECONDS)) {
+				logger.log(Level.WARNING, "ExecutorService did not terminate in time. Forcing shutdown.");
+				executorService.shutdownNow();
+				if (!executorService.awaitTermination(10, TimeUnit.SECONDS)) {
+					logger.log(Level.ERROR, "ExecutorService did not terminate after forced shutdown.");
+				}
+			}
+		} catch (InterruptedException e) {
+			logger.log(Level.ERROR, "Interrupted while waiting for ExecutorService to terminate.", e);
+			executorService.shutdownNow();
+			Thread.currentThread().interrupt();
+		}
 	}
 
 	private long handle(PushEvent<? extends Message> event) {
@@ -119,7 +144,14 @@ public class TrafficLight {
 			logger.log(Level.INFO, "PushStream closed.");
 			break;
 		case DATA:
-			onMessage(event.getData());
+			Message message = event.getData();
+			executorService.submit(() -> {
+				try {
+					onMessage(message);
+				} catch (Exception e) {
+					logger.log(Level.ERROR, "Error processing message from topic: " + message.topic(), e);
+				}
+			});
 			break;
 		case ERROR:
 			event.getFailure().printStackTrace();
