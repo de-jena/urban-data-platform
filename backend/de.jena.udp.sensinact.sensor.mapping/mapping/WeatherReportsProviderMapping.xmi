@@ -158,4 +158,809 @@
       
     </referencedResource>
   </services>
+
+  <!-- 6H Forecast service -->
+  <services
+      mid="forecast6H">
+    <timestamp
+        strategy="FEATURE">
+      <featurePath
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+    </timestamp>
+    <name name="6H Forecast"/>
+
+    <referencedResource
+        xsi:type="sensinactMapping:ReferenceMapping"
+        collectionIndex="2"
+        exclude="true">
+      <featurePath
+          xsi:type="ecore:EReference"
+          href="http://cdc.dwd.de/common/weather#//WeatherReports/reports"/>
+      <targetEClass
+          href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/id"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+      <referenceMappings
+          xsi:type="sensinactMapping:ReferenceMapping">
+        <featurePath
+            xsi:type="ecore:EReference"
+            href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather6Hours"/>
+      </referenceMappings>
+    </referencedResource>
+  </services>
+
+  <!-- 9H Forecast service -->
+  <services
+      mid="forecast9H">
+    <timestamp
+        strategy="FEATURE">
+      <featurePath
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+    </timestamp>
+    <name name="9H Forecast"/>
+
+    <referencedResource
+        xsi:type="sensinactMapping:ReferenceMapping"
+        collectionIndex="3"
+        exclude="true">
+      <featurePath
+          xsi:type="ecore:EReference"
+          href="http://cdc.dwd.de/common/weather#//WeatherReports/reports"/>
+      <targetEClass
+          href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/id"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+      <referenceMappings
+          xsi:type="sensinactMapping:ReferenceMapping">
+        <featurePath
+            xsi:type="ecore:EReference"
+            href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather6Hours"/>
+      </referenceMappings>
+    </referencedResource>
+  </services>
+
+  <!-- 12H Forecast service -->
+  <services
+      mid="forecast12H">
+    <timestamp
+        strategy="FEATURE">
+      <featurePath
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+    </timestamp>
+    <name name="12H Forecast"/>
+
+    <referencedResource
+        xsi:type="sensinactMapping:ReferenceMapping"
+        collectionIndex="4"
+        exclude="true">
+      <featurePath
+          xsi:type="ecore:EReference"
+          href="http://cdc.dwd.de/common/weather#//WeatherReports/reports"/>
+      <targetEClass
+          href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/id"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+      <referenceMappings
+          xsi:type="sensinactMapping:ReferenceMapping">
+        <featurePath
+            xsi:type="ecore:EReference"
+            href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather6Hours"/>
+      </referenceMappings>
+    </referencedResource>
+  </services>
+
+  <!-- 15H Forecast service -->
+  <services
+      mid="forecast15H">
+    <timestamp
+        strategy="FEATURE">
+      <featurePath
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+    </timestamp>
+    <name name="15H Forecast"/>
+
+    <referencedResource
+        xsi:type="sensinactMapping:ReferenceMapping"
+        collectionIndex="5"
+        exclude="true">
+      <featurePath
+          xsi:type="ecore:EReference"
+          href="http://cdc.dwd.de/common/weather#//WeatherReports/reports"/>
+      <targetEClass
+          href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/id"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+      <referenceMappings
+          xsi:type="sensinactMapping:ReferenceMapping">
+        <featurePath
+            xsi:type="ecore:EReference"
+            href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather6Hours"/>
+      </referenceMappings>
+    </referencedResource>
+  </services>
+
+  <!-- 18H Forecast service -->
+  <services
+      mid="forecast18H">
+    <timestamp
+        strategy="FEATURE">
+      <featurePath
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+    </timestamp>
+    <name name="18H Forecast"/>
+
+    <referencedResource
+        xsi:type="sensinactMapping:ReferenceMapping"
+        collectionIndex="6"
+        exclude="true">
+      <featurePath
+          xsi:type="ecore:EReference"
+          href="http://cdc.dwd.de/common/weather#//WeatherReports/reports"/>
+      <targetEClass
+          href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/id"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+      <referenceMappings
+          xsi:type="sensinactMapping:ReferenceMapping">
+        <featurePath
+            xsi:type="ecore:EReference"
+            href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather6Hours"/>
+      </referenceMappings>
+    </referencedResource>
+  </services>
+
+  <!-- 21H Forecast service -->
+  <services
+      mid="forecast21H">
+    <timestamp
+        strategy="FEATURE">
+      <featurePath
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+    </timestamp>
+    <name name="21H Forecast"/>
+
+    <referencedResource
+        xsi:type="sensinactMapping:ReferenceMapping"
+        collectionIndex="7"
+        exclude="true">
+      <featurePath
+          xsi:type="ecore:EReference"
+          href="http://cdc.dwd.de/common/weather#//WeatherReports/reports"/>
+      <targetEClass
+          href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/id"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+      <referenceMappings
+          xsi:type="sensinactMapping:ReferenceMapping">
+        <featurePath
+            xsi:type="ecore:EReference"
+            href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather6Hours"/>
+      </referenceMappings>
+    </referencedResource>
+  </services>
+
+  <!-- 24H Forecast service -->
+  <services
+      mid="forecast24H">
+    <timestamp
+        strategy="FEATURE">
+      <featurePath
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+    </timestamp>
+    <name name="24H Forecast"/>
+
+    <referencedResource
+        xsi:type="sensinactMapping:ReferenceMapping"
+        collectionIndex="8"
+        exclude="true">
+      <featurePath
+          xsi:type="ecore:EReference"
+          href="http://cdc.dwd.de/common/weather#//WeatherReports/reports"/>
+      <targetEClass
+          href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/id"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+      <referenceMappings
+          xsi:type="sensinactMapping:ReferenceMapping">
+        <featurePath
+            xsi:type="ecore:EReference"
+            href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather6Hours"/>
+      </referenceMappings>
+    </referencedResource>
+  </services>
+
+  <!-- 27H Forecast service -->
+  <services
+      mid="forecast27H">
+    <timestamp
+        strategy="FEATURE">
+      <featurePath
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+    </timestamp>
+    <name name="27H Forecast"/>
+
+    <referencedResource
+        xsi:type="sensinactMapping:ReferenceMapping"
+        collectionIndex="9"
+        exclude="true">
+      <featurePath
+          xsi:type="ecore:EReference"
+          href="http://cdc.dwd.de/common/weather#//WeatherReports/reports"/>
+      <targetEClass
+          href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/id"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+      <referenceMappings
+          xsi:type="sensinactMapping:ReferenceMapping">
+        <featurePath
+            xsi:type="ecore:EReference"
+            href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather6Hours"/>
+      </referenceMappings>
+    </referencedResource>
+  </services>
+
+  <!-- 30H Forecast service -->
+  <services
+      mid="forecast30H">
+    <timestamp
+        strategy="FEATURE">
+      <featurePath
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+    </timestamp>
+    <name name="30H Forecast"/>
+
+    <referencedResource
+        xsi:type="sensinactMapping:ReferenceMapping"
+        collectionIndex="10"
+        exclude="true">
+      <featurePath
+          xsi:type="ecore:EReference"
+          href="http://cdc.dwd.de/common/weather#//WeatherReports/reports"/>
+      <targetEClass
+          href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/id"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+      <referenceMappings
+          xsi:type="sensinactMapping:ReferenceMapping">
+        <featurePath
+            xsi:type="ecore:EReference"
+            href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather6Hours"/>
+      </referenceMappings>
+    </referencedResource>
+  </services>
+
+  <!-- 33H Forecast service -->
+  <services
+      mid="forecast33H">
+    <timestamp
+        strategy="FEATURE">
+      <featurePath
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+    </timestamp>
+    <name name="33H Forecast"/>
+
+    <referencedResource
+        xsi:type="sensinactMapping:ReferenceMapping"
+        collectionIndex="11"
+        exclude="true">
+      <featurePath
+          xsi:type="ecore:EReference"
+          href="http://cdc.dwd.de/common/weather#//WeatherReports/reports"/>
+      <targetEClass
+          href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/id"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+      <referenceMappings
+          xsi:type="sensinactMapping:ReferenceMapping">
+        <featurePath
+            xsi:type="ecore:EReference"
+            href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather6Hours"/>
+      </referenceMappings>
+    </referencedResource>
+  </services>
+
+  <!-- 36H Forecast service -->
+  <services
+      mid="forecast36H">
+    <timestamp
+        strategy="FEATURE">
+      <featurePath
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+    </timestamp>
+    <name name="36H Forecast"/>
+
+    <referencedResource
+        xsi:type="sensinactMapping:ReferenceMapping"
+        collectionIndex="12"
+        exclude="true">
+      <featurePath
+          xsi:type="ecore:EReference"
+          href="http://cdc.dwd.de/common/weather#//WeatherReports/reports"/>
+      <targetEClass
+          href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/id"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+      <referenceMappings
+          xsi:type="sensinactMapping:ReferenceMapping">
+        <featurePath
+            xsi:type="ecore:EReference"
+            href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather6Hours"/>
+      </referenceMappings>
+    </referencedResource>
+  </services>
+
+  <!-- 39H Forecast service -->
+  <services
+      mid="forecast39H">
+    <timestamp
+        strategy="FEATURE">
+      <featurePath
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+    </timestamp>
+    <name name="39H Forecast"/>
+
+    <referencedResource
+        xsi:type="sensinactMapping:ReferenceMapping"
+        collectionIndex="13"
+        exclude="true">
+      <featurePath
+          xsi:type="ecore:EReference"
+          href="http://cdc.dwd.de/common/weather#//WeatherReports/reports"/>
+      <targetEClass
+          href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/id"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+      <referenceMappings
+          xsi:type="sensinactMapping:ReferenceMapping">
+        <featurePath
+            xsi:type="ecore:EReference"
+            href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather6Hours"/>
+      </referenceMappings>
+    </referencedResource>
+  </services>
+
+  <!-- 42H Forecast service -->
+  <services
+      mid="forecast42H">
+    <timestamp
+        strategy="FEATURE">
+      <featurePath
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+    </timestamp>
+    <name name="42H Forecast"/>
+
+    <referencedResource
+        xsi:type="sensinactMapping:ReferenceMapping"
+        collectionIndex="14"
+        exclude="true">
+      <featurePath
+          xsi:type="ecore:EReference"
+          href="http://cdc.dwd.de/common/weather#//WeatherReports/reports"/>
+      <targetEClass
+          href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/id"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+      <referenceMappings
+          xsi:type="sensinactMapping:ReferenceMapping">
+        <featurePath
+            xsi:type="ecore:EReference"
+            href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather6Hours"/>
+      </referenceMappings>
+    </referencedResource>
+  </services>
+
+  <!-- 45H Forecast service -->
+  <services
+      mid="forecast45H">
+    <timestamp
+        strategy="FEATURE">
+      <featurePath
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+    </timestamp>
+    <name name="45H Forecast"/>
+
+    <referencedResource
+        xsi:type="sensinactMapping:ReferenceMapping"
+        collectionIndex="15"
+        exclude="true">
+      <featurePath
+          xsi:type="ecore:EReference"
+          href="http://cdc.dwd.de/common/weather#//WeatherReports/reports"/>
+      <targetEClass
+          href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/id"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+      <referenceMappings
+          xsi:type="sensinactMapping:ReferenceMapping">
+        <featurePath
+            xsi:type="ecore:EReference"
+            href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather6Hours"/>
+      </referenceMappings>
+    </referencedResource>
+  </services>
+
+  <!-- 48H Forecast service -->
+  <services
+      mid="forecast48H">
+    <timestamp
+        strategy="FEATURE">
+      <featurePath
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+    </timestamp>
+    <name name="48H Forecast"/>
+
+    <referencedResource
+        xsi:type="sensinactMapping:ReferenceMapping"
+        collectionIndex="16"
+        exclude="true">
+      <featurePath
+          xsi:type="ecore:EReference"
+          href="http://cdc.dwd.de/common/weather#//WeatherReports/reports"/>
+      <targetEClass
+          href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/id"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+      <referenceMappings
+          xsi:type="sensinactMapping:ReferenceMapping">
+        <featurePath
+            xsi:type="ecore:EReference"
+            href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather6Hours"/>
+      </referenceMappings>
+    </referencedResource>
+  </services>
+
+  <!-- 51H Forecast service -->
+  <services
+      mid="forecast51H">
+    <timestamp
+        strategy="FEATURE">
+      <featurePath
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+    </timestamp>
+    <name name="51H Forecast"/>
+
+    <referencedResource
+        xsi:type="sensinactMapping:ReferenceMapping"
+        collectionIndex="17"
+        exclude="true">
+      <featurePath
+          xsi:type="ecore:EReference"
+          href="http://cdc.dwd.de/common/weather#//WeatherReports/reports"/>
+      <targetEClass
+          href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/id"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+      <referenceMappings
+          xsi:type="sensinactMapping:ReferenceMapping">
+        <featurePath
+            xsi:type="ecore:EReference"
+            href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather6Hours"/>
+      </referenceMappings>
+    </referencedResource>
+  </services>
+
+  <!-- 54H Forecast service -->
+  <services
+      mid="forecast54H">
+    <timestamp
+        strategy="FEATURE">
+      <featurePath
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+    </timestamp>
+    <name name="54H Forecast"/>
+
+    <referencedResource
+        xsi:type="sensinactMapping:ReferenceMapping"
+        collectionIndex="18"
+        exclude="true">
+      <featurePath
+          xsi:type="ecore:EReference"
+          href="http://cdc.dwd.de/common/weather#//WeatherReports/reports"/>
+      <targetEClass
+          href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/id"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+      <referenceMappings
+          xsi:type="sensinactMapping:ReferenceMapping">
+        <featurePath
+            xsi:type="ecore:EReference"
+            href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather6Hours"/>
+      </referenceMappings>
+    </referencedResource>
+  </services>
+
+  <!-- 57H Forecast service -->
+  <services
+      mid="forecast57H">
+    <timestamp
+        strategy="FEATURE">
+      <featurePath
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+    </timestamp>
+    <name name="57H Forecast"/>
+
+    <referencedResource
+        xsi:type="sensinactMapping:ReferenceMapping"
+        collectionIndex="19"
+        exclude="true">
+      <featurePath
+          xsi:type="ecore:EReference"
+          href="http://cdc.dwd.de/common/weather#//WeatherReports/reports"/>
+      <targetEClass
+          href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/id"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+      <referenceMappings
+          xsi:type="sensinactMapping:ReferenceMapping">
+        <featurePath
+            xsi:type="ecore:EReference"
+            href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather6Hours"/>
+      </referenceMappings>
+    </referencedResource>
+  </services>
+
+  <!-- 60H Forecast service -->
+  <services
+      mid="forecast60H">
+    <timestamp
+        strategy="FEATURE">
+      <featurePath
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+    </timestamp>
+    <name name="60H Forecast"/>
+
+    <referencedResource
+        xsi:type="sensinactMapping:ReferenceMapping"
+        collectionIndex="20"
+        exclude="true">
+      <featurePath
+          xsi:type="ecore:EReference"
+          href="http://cdc.dwd.de/common/weather#//WeatherReports/reports"/>
+      <targetEClass
+          href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/id"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+      <referenceMappings
+          xsi:type="sensinactMapping:ReferenceMapping">
+        <featurePath
+            xsi:type="ecore:EReference"
+            href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather6Hours"/>
+      </referenceMappings>
+    </referencedResource>
+  </services>
+
+  <!-- 63H Forecast service -->
+  <services
+      mid="forecast63H">
+    <timestamp
+        strategy="FEATURE">
+      <featurePath
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+    </timestamp>
+    <name name="63H Forecast"/>
+
+    <referencedResource
+        xsi:type="sensinactMapping:ReferenceMapping"
+        collectionIndex="21"
+        exclude="true">
+      <featurePath
+          xsi:type="ecore:EReference"
+          href="http://cdc.dwd.de/common/weather#//WeatherReports/reports"/>
+      <targetEClass
+          href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/id"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+      <referenceMappings
+          xsi:type="sensinactMapping:ReferenceMapping">
+        <featurePath
+            xsi:type="ecore:EReference"
+            href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather6Hours"/>
+      </referenceMappings>
+    </referencedResource>
+  </services>
+
+  <!-- 66H Forecast service -->
+  <services
+      mid="forecast66H">
+    <timestamp
+        strategy="FEATURE">
+      <featurePath
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+    </timestamp>
+    <name name="66H Forecast"/>
+
+    <referencedResource
+        xsi:type="sensinactMapping:ReferenceMapping"
+        collectionIndex="22"
+        exclude="true">
+      <featurePath
+          xsi:type="ecore:EReference"
+          href="http://cdc.dwd.de/common/weather#//WeatherReports/reports"/>
+      <targetEClass
+          href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/id"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+      <referenceMappings
+          xsi:type="sensinactMapping:ReferenceMapping">
+        <featurePath
+            xsi:type="ecore:EReference"
+            href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather6Hours"/>
+      </referenceMappings>
+    </referencedResource>
+  </services>
+
+  <!-- 69H Forecast service -->
+  <services
+      mid="forecast69H">
+    <timestamp
+        strategy="FEATURE">
+      <featurePath
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+    </timestamp>
+    <name name="69H Forecast"/>
+
+    <referencedResource
+        xsi:type="sensinactMapping:ReferenceMapping"
+        collectionIndex="23"
+        exclude="true">
+      <featurePath
+          xsi:type="ecore:EReference"
+          href="http://cdc.dwd.de/common/weather#//WeatherReports/reports"/>
+      <targetEClass
+          href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/id"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+      <referenceMappings
+          xsi:type="sensinactMapping:ReferenceMapping">
+        <featurePath
+            xsi:type="ecore:EReference"
+            href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather6Hours"/>
+      </referenceMappings>
+    </referencedResource>
+  </services>
+
+  <!-- 72H Forecast service -->
+  <services
+      mid="forecast72H">
+    <timestamp
+        strategy="FEATURE">
+      <featurePath
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+    </timestamp>
+    <name name="72H Forecast"/>
+
+    <referencedResource
+        xsi:type="sensinactMapping:ReferenceMapping"
+        collectionIndex="24"
+        exclude="true">
+      <featurePath
+          xsi:type="ecore:EReference"
+          href="http://cdc.dwd.de/common/weather#//WeatherReports/reports"/>
+      <targetEClass
+          href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/id"/>
+      <filter
+          xsi:type="ecore:EAttribute"
+          href="http://cdc.dwd.de/common/weather#//WeatherReport/timestamp"/>
+      <referenceMappings
+          xsi:type="sensinactMapping:ReferenceMapping">
+        <featurePath
+            xsi:type="ecore:EReference"
+            href="http://cdc.dwd.de/common/weather#//MOSMIXSWeatherReport/significantWeather6Hours"/>
+      </referenceMappings>
+    </referencedResource>
+  </services>
 </sensinactMapping:ProviderMapping>
