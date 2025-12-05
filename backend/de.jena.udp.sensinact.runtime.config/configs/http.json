@@ -15,5 +15,14 @@
         "jersey.jakartars.whiteboard.name": "udprest",
         "jersey.context.path": "rest",
         "osgi.http.whiteboard.target": "(rest=true)"
+    },
+    "de.jena.udp.rest.cors.CorsConfig": {
+        "enabled": true,
+        "allowedOrigins": ["$[env:CORS_ALLOWED_ORIGINS;default=*]"],
+        "allowedMethods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS", "HEAD"],
+        "allowedHeaders": ["Origin", "Content-Type", "Accept", "Authorization", "X-Requested-With"],
+        "exposedHeaders": ["Content-Length", "Content-Type"],
+        "allowCredentials": false,
+        "maxAge": 3600
     }
 }

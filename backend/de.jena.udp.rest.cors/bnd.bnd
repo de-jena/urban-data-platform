@@ -1,0 +1,7 @@
+-buildpath: \
+	org.osgi.service.jakartars,\
+	org.osgi.service.component,\
+	org.osgi.service.component.annotations,\
+	jakarta.ws.rs-api;version=latest,\
+	jakarta.servlet-api,\
+	org.osgi.service.metatype.annotations
