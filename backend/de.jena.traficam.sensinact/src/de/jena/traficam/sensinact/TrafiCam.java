@@ -34,11 +34,9 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.BinaryResourceImpl;
 import org.eclipse.sensinact.core.push.DataUpdate;
-import org.eclipse.sensinact.gateway.geojson.Coordinates;
-import org.eclipse.sensinact.gateway.geojson.Feature;
-import org.eclipse.sensinact.gateway.geojson.FeatureCollection;
+import org.eclipse.sensinact.gateway.geojson.Geometry;
+import org.eclipse.sensinact.gateway.geojson.GeometryCollection;
 import org.eclipse.sensinact.gateway.geojson.Point;
-import org.eclipse.sensinact.gateway.geojson.Polygon;
 import org.gecko.emf.json.annotation.RequireEMFJson;
 import org.gecko.osgi.messaging.Message;
 import org.gecko.osgi.messaging.MessagingContext;
@@ -188,9 +186,10 @@ public class TrafiCam {
 		final SimplePushEventSource<Message> source = psp.buildSimpleEventSource(Message.class)
 				.withQueuePolicy(QueuePolicyOption.BLOCK).build();
 		final AtomicBoolean sendEmpty = new AtomicBoolean(false);
-		PushStream<FeatureCollection> stream = psp.buildStream(source).unbuffered().build()
+		PushStream<GeometryCollection> stream = psp.buildStream(source).unbuffered().build()
 				.window(Duration.ofSeconds(2), messages -> {
-					List<Feature> features = new ArrayList<>();
+					List<Geometry> geometries = new ArrayList<>();
+					List<String> seenIds = new ArrayList<>();
 					for (Message message : messages) {
 						Optional<TrafiCamObject> optionalTC = loadTrafiCamObject(message);
 						if (optionalTC.isPresent()) {
@@ -198,25 +197,27 @@ public class TrafiCam {
 							GpsCoordinates gps = tc.getGpsCoordinates().get(0);
 							if (gps != null) {
 								String id = "" + tc.getId();
-								if (features.stream().noneMatch(f -> f.properties().get("id").equals(id))) {
-									Map<String, Object> properties = new HashMap<>();
-									properties.put("id", id);
-									properties.put("class", classId);
-									properties.put("className", className);
-									properties.put("speed", tc.getSpeed());
-									properties.put("heading", gps.getHeading());
-									properties.put("time", tc.getTime().getTime());
-									Feature feature = createFeature(id, gps, properties);
-									features.add(feature);
+								if (!seenIds.contains(id)) {
+//									Map<String, Object> properties = new HashMap<>();
+//									properties.put("id", id);
+//									properties.put("class", classId);
+//									properties.put("className", className);
+//									properties.put("speed", tc.getSpeed());
+//									properties.put("heading", gps.getHeading());
+//									properties.put("time", tc.getTime().getTime());
+
+									Point point = createGeometry(gps);
+									geometries.add(point);
+									seenIds.add(id);
+									sendEmpty.set(false);
 								}
-								sendEmpty.set(false);
 							}
 						}
 					}
-					return new FeatureCollection(features, null, null);
+					return new GeometryCollection(geometries, null, null);
 				});
 		stream.forEach(geo -> {
-			if (!geo.features().isEmpty() || !sendEmpty.getAndSet(true)) {
+			if (!geo.isEmpty() || !sendEmpty.getAndSet(true)) {
 				TrafiCamDto dto = new TrafiCamDto(camId, classId, className, geo);
 				dto.timestamp = new Date().getTime();
 				Promise<?> promise = sensiNact.pushUpdate(dto);
@@ -251,7 +252,7 @@ public class TrafiCam {
 		return camConfig.getClassMap().get(classId);
 	}
 
-	private FeatureCollection createFeatureCollection(String camId) {
+	private GeometryCollection createGeometryCollection(String camId) {
 		CamConfig camConfig = configs.get(camId);
 		if (camConfig == null) {
 			logger.log(Level.WARNING, "Warn: configuration for {0} not loaded.", camId);
@@ -262,20 +263,16 @@ public class TrafiCam {
 		if (gps == null) {
 			return null;
 		}
-		Feature f = new Feature("",
-				createPolygon(scene.getLeftBottom(), scene.getRightBottom(), scene.getRightTop(), scene.getLeftTop()),
-				null, null, null);
-		FeatureCollection geo = new FeatureCollection(Arrays.asList(f), null, null);
-		return geo;
+		List<Geometry> geometries = Arrays.asList(createGeometry(scene.getLeftBottom()),
+				createGeometry(scene.getRightBottom()), //
+				createGeometry(scene.getRightTop()), //
+				createGeometry(scene.getLeftTop()));
+
+		return new GeometryCollection(geometries, null, null);
 	}
 
-	private Polygon createPolygon(GpsCoordinates... gps) {
-		List<Coordinates> coordinates = new ArrayList<>();
-		for (GpsCoordinates g : gps) {
-			Coordinates c = new Coordinates(g.getLongitude(), g.getLatitude());
-			coordinates.add(c);
-		}
-		return new Polygon(Arrays.asList(coordinates), null, null);
+	private Point createGeometry(GpsCoordinates x) {
+		return new Point(x.getLongitude(), x.getLatitude());
 	}
 
 	private Point createLocation(String camId) {
@@ -290,12 +287,7 @@ public class TrafiCam {
 		if (gps == null) {
 			return null;
 		}
-		return new Point(gps.getLongitude(), gps.getLatitude());
-	}
-
-	private Feature createFeature(String id, GpsCoordinates gps, Map<String, Object> properties) {
-		Point point = new Point(gps.getLongitude(), gps.getLatitude());
-		return new Feature(id, point, properties, null, null);
+		return createGeometry(gps);
 	}
 
 	private void updateConfig(Message message, String camId) {
@@ -310,7 +302,8 @@ public class TrafiCam {
 			traficamProvider.setAdmin(traficamAdmin);
 			traficamAdmin.setLocation(createLocation(camId));
 			traficamAdmin.setFriendlyName("Camera " + camId);
-			FeatureCollection viewport = createFeatureCollection(camId);
+
+			GeometryCollection viewport = createGeometryCollection(camId);
 			traficamAdmin.setViewport(viewport);
 			ObservedObjects area = TraficamproviderFactory.eINSTANCE.createObservedObjects();
 			area.setObjects(viewport);

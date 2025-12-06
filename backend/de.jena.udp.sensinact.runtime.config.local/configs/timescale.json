@@ -9,7 +9,6 @@
 		"provider": "brokerHistory",
 		"exclude.resources": [
 			"{\"resource\": {\"value\": \"observedArea\",\"type\":\"EXACT\"}} ",
-			"{\"resource\": {\"value\": \"objects\",\"type\":\"EXACT\"}} ",
 			"{\"resource\": {\"value\": \"viewport\",\"type\":\"EXACT\"}} "
 		]
 		
