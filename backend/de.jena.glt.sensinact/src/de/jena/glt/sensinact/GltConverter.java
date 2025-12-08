@@ -125,7 +125,7 @@ public class GltConverter {
 		}
 	}
 
-	private void updateValues(DatalogContentPojo dc) {
+	private void updateValues(DatalogContentPojo dc) throws InterruptedException {
 		EList<String> timeEntries = dc.getEntriesT();
 		EList<Float> valueEntries = dc.getEntriesV();
 		for (int i = 0; i < timeEntries.size(); i++) {
@@ -133,6 +133,9 @@ public class GltConverter {
 			Float value = valueEntries.get(i);
 			GltDto dto = new GltDto(conf.systemID(), ""+dc.getId(), value, time);
 			sensiNact.pushUpdate(dto);
+			if(i % 100 == 0) {
+				Thread.sleep(100);
+			}
 		}
 	}
 
