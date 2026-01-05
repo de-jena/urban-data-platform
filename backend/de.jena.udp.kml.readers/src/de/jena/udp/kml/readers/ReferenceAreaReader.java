@@ -11,13 +11,14 @@
  * Contributors:
  *     Data In Motion - initial API and implementation
  */
-package de.jena.udp.reference.area.component;
+package de.jena.udp.kml.readers;
 
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
@@ -39,14 +40,16 @@ import org.gecko.emf.osgi.annotation.require.RequireEMF;
 import org.gecko.emf.osgi.constants.EMFNamespaces;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.ConfigurationPolicy;
 import org.osgi.service.component.annotations.Reference;
+import org.osgi.service.metatype.annotations.Designate;
 
+import de.jena.udp.kml.readers.api.KMLReader;
 import de.jena.udp.reference.area.sensinact.model.sensinactrefarea.ColorType;
 import de.jena.udp.reference.area.sensinact.model.sensinactrefarea.ReferenceArea;
 import de.jena.udp.reference.area.sensinact.model.sensinactrefarea.ReferenceAreaProvider;
 import de.jena.udp.reference.area.sensinact.model.sensinactrefarea.SensinactRefAreaFactory;
 import de.jena.udp.reference.area.sensinact.model.sensinactrefarea.SensinactRefAreaPackage;
-import net.opengis.kml.AbstractFeatureType;
 import net.opengis.kml.AbstractGeometryType;
 import net.opengis.kml.BoundaryType;
 import net.opengis.kml.DataType;
@@ -63,9 +66,10 @@ import net.opengis.kml.SimpleDataType;
 /**
  * Component that reads KML files and converts them to ReferenceArea model instances.
  */
-@Component(immediate = true, name = "ReferenceAreaReader")
+@Component(immediate = true, name = "ReferenceAreaReader", configurationPid = "ReferenceAreaReader", configurationPolicy = ConfigurationPolicy.REQUIRE)
 @RequireEMF
-public class ReferenceAreaReader {
+@Designate(ocd = KMLReaderConfig.class)
+public class ReferenceAreaReader implements KMLReader {
 
 	@Reference(target = "(" + EMFNamespaces.EMF_MODEL_FILE_EXT + "=json)")
 	private ResourceSet resourceSet;
@@ -74,13 +78,65 @@ public class ReferenceAreaReader {
 	private DataUpdate sensinact;
 
 	private final static Logger LOGGER = Logger.getLogger(ReferenceAreaReader.class.getName());
-	private List<ReferenceAreaProvider> referenceAreaProviders;
+	private List<ReferenceAreaProvider> referenceAreaProviders = new LinkedList<>();
+
+	private KMLReaderConfig config;
 
 	@Activate
-	public void activate() {
-		LOGGER.info("ReferenceAreaReader component activated");
-		loadReferenceAreas();
+	public void activate(KMLReaderConfig config) {
+		Objects.requireNonNull(config.kml_file_path(), "A configuration property 'kml.file.path' must be provided!");
+		this.config = config;
+		loadKML();
 		pushToSensinact();
+	}
+	
+	/* 
+	 * (non-Javadoc)
+	 * @see de.jena.udp.kml.readers.api.KMLReader#loadKML()
+	 */
+	@Override
+	public void loadKML() {
+		try {
+			URI kmlUri = URI.createURI(config.kml_file_path());
+			Resource kmlResource = resourceSet.createResource(kmlUri);
+			kmlResource.load(null);	
+
+			// Get the document root
+			DocumentRoot documentRoot = (DocumentRoot) kmlResource.getContents().get(0);
+			DocumentType document = (DocumentType) documentRoot.getKml().getAbstractFeatureGroup();
+			
+			// Process each placemark
+			List<FolderType> folders;
+			if(config.kml_folder_name() != null) {
+				folders = document.getAbstractFeatureGroup().
+						stream().
+						filter(f -> f instanceof FolderType).
+						map(f -> (FolderType) f).
+						filter(f -> config.kml_folder_name().equals(f.getName())).
+						toList();
+			} else {
+				folders = document.getAbstractFeatureGroup().
+						stream().
+						filter(f -> f instanceof FolderType).
+						map(f -> (FolderType) f).
+						toList();
+			}
+			for (FolderType folder : folders) {
+				List<PlacemarkType> placemarks = folder.getAbstractFeatureGroup().
+						stream().
+						filter(f -> f instanceof PlacemarkType).
+						map(f -> (PlacemarkType) f).
+						toList();
+				for(PlacemarkType placemark : placemarks) {
+					ReferenceAreaProvider refAreaProvider = convertPlacemarkToReferenceAreaProvider(placemark);
+					if (refAreaProvider != null) {
+						referenceAreaProviders.add(refAreaProvider);
+					}
+				}					
+			}
+		} catch (IOException e) {
+			LOGGER.log(Level.SEVERE, "Error loading KML file: " + e.getMessage(), e);
+		}		
 	}
 
 	private void pushToSensinact() {
@@ -100,49 +156,51 @@ public class ReferenceAreaReader {
 	/**
 	 * Loads the KML file and converts it to ReferenceArea instances
 	 */
-	private void loadReferenceAreas() {
-		try {
-			// Load the KML file
-			URI kmlUri = URI.createURI(System.getProperty("data") + "refflaechen_smartcity.kml");
-			Resource kmlResource = resourceSet.createResource(kmlUri);
-			kmlResource.load(null);
-
-			// Get the document root
-			DocumentRoot documentRoot = (DocumentRoot) kmlResource.getContents().get(0);
-			DocumentType document = (DocumentType) documentRoot.getKml().getAbstractFeatureGroup();
-
-			referenceAreaProviders = new LinkedList<>();
-
-			// Process each placemark
-			List<AbstractFeatureType> features = document.getAbstractFeatureGroup();
-			for (AbstractFeatureType feature : features) {
-				if (feature instanceof PlacemarkType) {
-					PlacemarkType placemark = (PlacemarkType) feature;
-					ReferenceAreaProvider refAreaProvider = convertPlacemarkToReferenceAreaProvider(placemark);
-					if (refAreaProvider != null) {
-						referenceAreaProviders.add(refAreaProvider);
-					}
-				} else if(feature instanceof FolderType folderType) {
-					for(AbstractFeatureType f : folderType.getAbstractFeatureGroup()) {
-						if(f instanceof PlacemarkType placemark) {
-							ReferenceAreaProvider refAreaProvider = convertPlacemarkToReferenceAreaProvider(placemark);
-							if (refAreaProvider != null) {
-								referenceAreaProviders.add(refAreaProvider);
-
-							}
-						}
-					}
-				}
-			}
-
-			LOGGER.info("Loaded " + referenceAreaProviders.size() + " reference areas from KML");
-
-		} catch (IOException e) {
-			LOGGER.log(Level.SEVERE, "Error loading KML file: " + e.getMessage(), e);
-		}
-	}
+//	private void loadReferenceAreas() {
+//		try {
+//			// Load the KML file
+//			URI kmlUri = URI.createURI(System.getProperty("data") + "refflaechen_smartcity.kml");
+//			Resource kmlResource = resourceSet.createResource(kmlUri);
+//			kmlResource.load(null);
+//
+//			// Get the document root
+//			DocumentRoot documentRoot = (DocumentRoot) kmlResource.getContents().get(0);
+//			DocumentType document = (DocumentType) documentRoot.getKml().getAbstractFeatureGroup();
+//
+//			referenceAreaProviders = new LinkedList<>();
+//
+//			// Process each placemark
+//			List<AbstractFeatureType> features = document.getAbstractFeatureGroup();
+//			for (AbstractFeatureType feature : features) {
+//				if (feature instanceof PlacemarkType) {
+//					PlacemarkType placemark = (PlacemarkType) feature;
+//					ReferenceAreaProvider refAreaProvider = convertPlacemarkToReferenceAreaProvider(placemark);
+//					if (refAreaProvider != null) {
+//						referenceAreaProviders.add(refAreaProvider);
+//					}
+//				} else if(feature instanceof FolderType folderType) {
+//					
+//					for(AbstractFeatureType f : folderType.getAbstractFeatureGroup()) {
+//						if(f instanceof PlacemarkType placemark) {
+//							ReferenceAreaProvider refAreaProvider = convertPlacemarkToReferenceAreaProvider(placemark);
+//							if (refAreaProvider != null) {
+//								referenceAreaProviders.add(refAreaProvider);
+//
+//							}
+//						}
+//					}
+//				}
+//			}
+//
+//			LOGGER.info("Loaded " + referenceAreaProviders.size() + " reference areas from KML");
+//
+//		} catch (IOException e) {
+//			LOGGER.log(Level.SEVERE, "Error loading KML file: " + e.getMessage(), e);
+//		}
+//	}
 
 	private void setAndAddToProperty(String value, EAttribute feature, EObject eObj, Map<String, Object> properties) {
+		if(value == null) return;
 		eObj.eSet(feature, EcoreUtil.createFromString(feature.getEAttributeType(), value));
 		properties.put(feature.getName(), eObj.eGet(feature));
 	}
@@ -400,5 +458,7 @@ public class ReferenceAreaReader {
 
 		return result;
 	}
+
+	
 
 }

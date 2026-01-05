@@ -1,0 +1,10 @@
+-library: enable-emf
+-buildpath: \
+	org.osgi.service.metatype.annotations,\
+	net.opengis.kml.model,\
+	org.eclipse.sensinact.gateway.core.geo-json,\
+	org.eclipse.sensinact.gateway.core.api,\
+	de.jena.udp.reference.area.sensinact.model,\
+	org.eclipse.sensinact.gateway.core.models.provider,\
+	org.osgi.util.promise,\
+	org.osgi.util.function

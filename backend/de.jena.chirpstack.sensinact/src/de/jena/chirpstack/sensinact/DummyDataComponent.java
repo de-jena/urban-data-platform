@@ -25,7 +25,6 @@ import org.eclipse.sensinact.gateway.geojson.Point;
 import org.eclipse.sensinact.model.core.provider.Admin;
 import org.eclipse.sensinact.model.core.provider.ProviderFactory;
 import org.osgi.service.component.annotations.Activate;
-import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Reference;
 
@@ -43,9 +42,6 @@ public class DummyDataComponent {
 
 	@Reference
 	DataUpdate sensinact;
-	
-	@Reference
-	ChirpstackLocationComponent chirpstackLocationComponent;
 	
 
 	private static final Logger LOGGER = Logger.getLogger(DummyDataComponent.class.getName());

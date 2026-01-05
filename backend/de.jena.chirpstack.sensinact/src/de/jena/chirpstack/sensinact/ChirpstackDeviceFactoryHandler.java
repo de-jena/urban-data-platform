@@ -52,6 +52,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import de.jena.chirpstack.model.chirpstack.ChirpstackPackage;
+import de.jena.udp.kml.readers.api.LocationReader;
 
 /**
  * Generic reflective ChirpStack MQTT device factory handler that uses EMF model annotations
@@ -64,8 +65,8 @@ public class ChirpstackDeviceFactoryHandler implements IMqttMessageListener {
 
 	private static final Logger logger = System.getLogger(ChirpstackDeviceFactoryHandler.class.getName());
 	
-	@Reference
-	ChirpstackLocationComponent chirpstackLocationComponent;
+	@Reference(target = "(component.name=Teros21LocationReader)")
+	LocationReader teros21LocationReader;
 	
 	@Reference(target = "(" + EMFNamespaces.EMF_CONFIGURATOR_NAME + "=CodecJson)")
     private ComponentServiceObjects<ResourceSet> serviceObjects;
@@ -329,7 +330,7 @@ public class ChirpstackDeviceFactoryHandler implements IMqttMessageListener {
     	admin.setDescription(deviceName);
         
     	String eui = providerId.replace("chirpstack-", "").toUpperCase();
-    	Point sensorLocation = chirpstackLocationComponent.getSensorLocation(eui);
+    	Point sensorLocation = teros21LocationReader.getLocation(eui);
     	if(sensorLocation != null) {
     		admin.setLocation(sensorLocation);
     		logger.log(Level.INFO, "Device {0} GEO location: lat={1}, lon={2}, alt={3}", providerId, sensorLocation.coordinates().latitude(), sensorLocation.coordinates().longitude());

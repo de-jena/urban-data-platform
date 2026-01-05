@@ -25,4 +25,5 @@ Require-Capability: \
 	org.osgi.framework,\
 	org.osgi.service.component,\
 	org.eclipse.osgi-technology.scheduler.api,\
-	net.opengis.kml.model
+	net.opengis.kml.model,\
+	de.jena.udp.kml.readers;version=snapshot

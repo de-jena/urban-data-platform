@@ -1,0 +1,13 @@
+{
+    ":configurator:resource-version": 1,
+    ":configurator:version": "1.0.0",
+    ":configurator:symbolic-name": "KML Readers Config",
+    "Teros21LocationReader": {
+        "kml.file.path": "$[env:data;default=$[prop:data;default=runtime/data]]teros_sensors_and_ref_areas.kml",
+        "kml.folder.name": "sensoren"
+    },
+    "ReferenceAreaReader": {
+        "kml.file.path": "$[env:data;default=$[prop:data;default=runtime/data]]teros_sensors_and_ref_areas.kml",
+        "kml.folder.name": "refflaechen_smartcity"
+    }
+}
