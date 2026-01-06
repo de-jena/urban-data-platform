@@ -19,7 +19,9 @@ import java.time.Instant;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -128,15 +130,17 @@ public class GltConverter {
 	private void updateValues(DatalogContentPojo dc) throws InterruptedException {
 		EList<String> timeEntries = dc.getEntriesT();
 		EList<Float> valueEntries = dc.getEntriesV();
+		List<GltDto> dtos = new ArrayList<>(1001);
 		for (int i = 0; i < timeEntries.size(); i++) {
 			String time = timeEntries.get(i);
 			Float value = valueEntries.get(i);
-			GltDto dto = new GltDto(conf.systemID(), ""+dc.getId(), value, time);
-			sensiNact.pushUpdate(dto);
-			if(i % 100 == 0) {
-				Thread.sleep(100);
+			dtos.add(new GltDto(conf.systemID(), ""+dc.getId(), value, time));
+			if(i % 1000 == 0) {
+				sensiNact.pushUpdate(dtos);
+				dtos.clear();
 			}
 		}
+		sensiNact.pushUpdate(dtos);
 	}
 
 	private void initPoints() {
