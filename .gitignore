@@ -10,3 +10,13 @@ frontend/*/dist
 /frontend/5gDemo/dist/
 /frontend/model-ui/dist/
 *.swp
+
+# Build artifacts
+backend/build/
+backend/cnf/cache/
+
+# Runtime logs
+**/*.log
+
+# MQTT broker state
+**/.moquette_uuid
