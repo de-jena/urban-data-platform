@@ -9,6 +9,7 @@
 * [ChirpStack Connector](docs/chirpstack/chirpstack-connector.md)
 * [ILSA (Traffic Light) Adapter](docs/ilsa-adapter/ILSASensinactAdapter.md)
 * [TTN (The Things Network) Adapter](docs/ttn-adapter/TTNSensinactAdapter.md)
+* [TrafICam (Traffic Camera) Adapter](docs/traficam-adapter/TrafiCamAdapter.md)
 
 ## Resources 
 
