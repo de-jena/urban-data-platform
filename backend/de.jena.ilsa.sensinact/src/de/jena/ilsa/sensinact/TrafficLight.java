@@ -227,8 +227,8 @@ public class TrafficLight {
 		options.put(CodecResourceOptions.CODEC_ROOT_OBJECT, TOSTrafficLightPackage.eINSTANCE.getTLConfiguration());
 		ResourceSet resourceSet = serviceObjects.getService();
 		Resource resource = resourceSet.createResource(TEMP_URI);
-		try {
-			resource.load(new ByteArrayInputStream(message.payload().array()), options);
+		try (ByteArrayInputStream bais = new ByteArrayInputStream(message.payload().array())) {
+			resource.load(bais, options);
 			TLConfiguration configuration = (TLConfiguration) resource.getContents().get(0);
 
 			Ilsa ilsa = traf.doTransformation(configuration);

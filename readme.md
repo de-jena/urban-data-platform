@@ -7,6 +7,8 @@
 * [Weather adapter](docs/weather-adapter/UDPSensinactWeatherAdapter.md)
 * [Humidity sensor rules](docs/humidity-sensors-rules/HumiditySensorRulesImplementation.md)
 * [ChirpStack Connector](docs/chirpstack/chirpstack-connector.md)
+* [ILSA (Traffic Light) Adapter](docs/ilsa-adapter/ILSASensinactAdapter.md)
+* [TTN (The Things Network) Adapter](docs/ttn-adapter/TTNSensinactAdapter.md)
 
 ## Resources 
 
