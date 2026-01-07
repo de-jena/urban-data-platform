@@ -11,6 +11,9 @@
 * [TTN (The Things Network) Adapter](docs/ttn-adapter/TTNSensinactAdapter.md)
 * [TrafICam (Traffic Camera) Adapter](docs/traficam-adapter/TrafiCamAdapter.md)
 * [IBIS (Public Transport) Adapter](docs/ibis-adapter/IBISAdapter.md)
+* [GLT (Building Automation) Adapter](docs/glt-adapter/GLTAdapter.md)
+* [Traffic Conflict Adapter](docs/conflict-adapter/ConflictAdapter.md)
+* [IceSensor (Air Quality) Adapter](docs/icesensor-adapter/IceSensorAdapter.md)
 
 ## Resources 
 
