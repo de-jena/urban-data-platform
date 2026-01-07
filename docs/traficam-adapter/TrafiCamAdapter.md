@@ -376,27 +376,29 @@ When a camera configuration is received:
 
 ### REST Endpoints
 
+Access TrafICam data through SensiNact REST API (local environment):
+
 ```bash
 # List all TrafICam cameras
-GET /udp/rest/sensinact/providers
+curl "http://localhost:8080/udp/rest/sensinact/providers?filter=(MODEL=TraficamProvider)"
 
 # Get specific camera
-GET /udp/rest/sensinact/providers/TC001
+curl http://localhost:8080/udp/rest/sensinact/providers/TC001
 
 # Get admin info (location, viewport)
-GET /udp/rest/sensinact/providers/TC001/admin
+curl http://localhost:8080/udp/rest/sensinact/providers/TC001/services/admin
 
 # Get camera location
-GET /udp/rest/sensinact/providers/TC001/admin/location
+curl http://localhost:8080/udp/rest/sensinact/providers/TC001/services/admin/resources/location/GET
 
 # Get camera viewport (field of view)
-GET /udp/rest/sensinact/providers/TC001/admin/viewport
+curl http://localhost:8080/udp/rest/sensinact/providers/TC001/services/admin/resources/viewport/GET
 
 # Get observed area service
-GET /udp/rest/sensinact/providers/TC001/observedArea
+curl http://localhost:8080/udp/rest/sensinact/providers/TC001/services/observedArea
 
 # Get objects for specific classification (e.g., Cars = class "5")
-GET /udp/rest/sensinact/providers/TC001/5/objects
+curl http://localhost:8080/udp/rest/sensinact/providers/TC001/services/5/resources/objects/GET
 
 # Response example:
 {
@@ -421,37 +423,39 @@ GET /udp/rest/sensinact/providers/TC001/5/objects
 }
 
 # Get classification name
-GET /udp/rest/sensinact/providers/TC001/5/classificationName
+curl http://localhost:8080/udp/rest/sensinact/providers/TC001/services/5/resources/classificationName/GET
 # Returns: "Car"
 
 # Get persons (class "0")
-GET /udp/rest/sensinact/providers/TC001/0/objects
-GET /udp/rest/sensinact/providers/TC001/0/classificationName
+curl http://localhost:8080/udp/rest/sensinact/providers/TC001/services/0/resources/objects/GET
+curl http://localhost:8080/udp/rest/sensinact/providers/TC001/services/0/resources/classificationName/GET
 # Returns: "Person"
 
 # Get bicycles (class "1")
-GET /udp/rest/sensinact/providers/TC001/1/objects
-GET /udp/rest/sensinact/providers/TC001/1/classificationName
+curl http://localhost:8080/udp/rest/sensinact/providers/TC001/services/1/resources/objects/GET
+curl http://localhost:8080/udp/rest/sensinact/providers/TC001/services/1/resources/classificationName/GET
 # Returns: "Bicycle"
 ```
 
 ### SensorThings API
 
+Access via OGC SensorThings API (local environment):
+
 ```bash
 # Get TrafICam cameras as Things
-GET /udp/rest/v1.1/Things?$filter=contains(name,'TC')
+curl "http://localhost:8080/udp/rest/v1.1/Things?\$filter=contains(name,'Camera')"
 
-# Get datastreams for a camera
-GET /udp/rest/v1.1/Things('TC001')/Datastreams
+# Get a specific datastream
+curl "http://localhost:8080/udp/rest/v1.1/Datastreams(VolksbadS~5~objects)"
 
 # Get car observations (history) - class "5"
-GET /udp/rest/v1.1/Datastreams(TC001~5~objects)/Observations?$orderby=resultTime desc&$top=10
+curl "http://localhost:8080/udp/rest/v1.1/Datastreams(VolksbadS~5~objects)/Observations?\$orderby=resultTime desc&\$top=10"
 
 # Get latest car positions
-GET /udp/rest/v1.1/Datastreams(TC001~5~objects)/Observations?$orderby=resultTime desc&$top=1
+curl "http://localhost:8080/udp/rest/v1.1/Datastreams(VolksbadS~5~objects)/Observations?\$orderby=resultTime desc&\$top=1"
 
 # Get person observations - class "0"
-GET /udp/rest/v1.1/Datastreams(TC001~0~objects)/Observations?$orderby=resultTime desc&$top=10
+curl "http://localhost:8080/udp/rest/v1.1/Datastreams(VolksbadS~0~objects)/Observations?\$orderby=resultTime desc&\$top=10"
 
 # Response includes GeoJSON GeometryCollection with Point geometries
 ```

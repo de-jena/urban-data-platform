@@ -10,6 +10,7 @@
 * [ILSA (Traffic Light) Adapter](docs/ilsa-adapter/ILSASensinactAdapter.md)
 * [TTN (The Things Network) Adapter](docs/ttn-adapter/TTNSensinactAdapter.md)
 * [TrafICam (Traffic Camera) Adapter](docs/traficam-adapter/TrafiCamAdapter.md)
+* [IBIS (Public Transport) Adapter](docs/ibis-adapter/IBISAdapter.md)
 
 ## Resources 
 

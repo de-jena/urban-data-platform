@@ -299,61 +299,72 @@ Creates Signal service entries:
 
 ### REST Endpoints
 
-Access ILSA traffic light data through SensiNact REST API:
+Access ILSA traffic light data through SensiNact REST API (local environment):
 
 ```bash
-# List all providers (includes ILSA intersections)
-GET /udp/rest/sensinact/providers
+# List all ILSA providers
+curl "http://localhost:8080/udp/rest/sensinact/providers?filter=(MODEL=Ilsa)"
 
 # Get specific intersection provider
-GET /udp/rest/sensinact/providers/K440
+curl http://localhost:8080/udp/rest/sensinact/providers/K440
 
 # Get all services for an intersection
-GET /udp/rest/sensinact/providers/K440/services
+curl http://localhost:8080/udp/rest/sensinact/providers/K440/services
 
 # Get specific signal service (note: / becomes _)
-GET /udp/rest/sensinact/providers/K440/K1_1
+curl http://localhost:8080/udp/rest/sensinact/providers/K440/services/K1_1
 
 # Get signal color resource (returns current state)
-GET /udp/rest/sensinact/providers/K440/K1_1/color
+curl http://localhost:8080/udp/rest/sensinact/providers/K440/services/K1_1/resources/color/GET
 
 # Response example:
 {
-  "provider": "K440",
-  "service": "K1_1",
-  "resource": "color",
-  "value": "⚪⚪🔴",
-  "timestamp": 1704462615288,
-  "type": "java.lang.String"
+  "type": "GET_RESPONSE",
+  "uri": "/K440/K1_1/color",
+  "statusCode": 200,
+  "response": {
+    "name": "color",
+    "timestamp": 1767791882278,
+    "type": "java.lang.String",
+    "value": "⚪🟡⚪"
+  }
 }
 
 # Get thermal temperature
-GET /udp/rest/sensinact/providers/K440/thermal/temperature
+curl http://localhost:8080/udp/rest/sensinact/providers/K440/services/thermal/resources/temperature/GET
 ```
 
 ### SensorThings API
 
-Access via OGC SensorThings API for standardized IoT access:
+Access via OGC SensorThings API for standardized IoT access (local environment):
 
 ```bash
 # Get ILSA providers as Things
-GET /udp/rest/v1.1/Things?$filter=name eq 'K440'
+curl "http://localhost:8080/udp/rest/v1.1/Things?\$filter=contains(name,'ILSA')"
 
-# Get all datastreams for an intersection
-GET /udp/rest/v1.1/Things('K440')/Datastreams
+# Get a specific datastream
+curl "http://localhost:8080/udp/rest/v1.1/Datastreams(K440~K1_1~color)"
 
 # Get signal color observations (history)
-GET /udp/rest/v1.1/Datastreams(K440~K1_1~color)/Observations?$orderby=resultTime desc&$top=10
+curl "http://localhost:8080/udp/rest/v1.1/Datastreams(K440~K1_1~color)/Observations?\$orderby=resultTime desc&\$top=10"
 
 # Get latest signal state
-GET /udp/rest/v1.1/Datastreams(K440~K1_1~color)/Observations?$orderby=resultTime desc&$top=1
+curl "http://localhost:8080/udp/rest/v1.1/Datastreams(K440~K1_1~color)/Observations?\$orderby=resultTime desc&\$top=1"
 
 # Response example:
 {
-  "@iot.id": "K440~K1_1~color",
-  "result": "⚪⚪🔴",
-  "resultTime": "2026-01-06T14:48:15.288Z",
-  "phenomenonTime": "2026-01-06T14:48:15.288Z"
+  "@iot.nextLink": "http://localhost:8080/udp/rest/v1.1/Datastreams(K440~K1_1~color)/Observations?%24top=1&%5C%24orderby=resultTime%20desc&%24skip=1",
+  "value": [
+    {
+      "@iot.selfLink": "http://localhost:8080/udp/rest/v1.1/Observations(K440~K1_1~color~19a7d67ba4a)",
+      "@iot.id": "K440~K1_1~color~19a7d67ba4a",
+      "phenomenonTime": "2025-11-13T13:29:01.258Z",
+      "resultTime": "2025-11-13T13:29:01.258Z",
+      "result": "⚪🟡🔴",
+      "Datastream@iot.navigationLink": "http://localhost:8080/udp/rest/v1.1/Observations(K440~K1_1~color~19a7d67ba4a)/Datastream",
+      "FeatureOfInterest@iot.navigationLink": "http://localhost:8080/udp/rest/v1.1/Observations(K440~K1_1~color~19a7d67ba4a)/FeatureOfInterest"
+    }
+  ]
 }
 ```
 
@@ -430,7 +441,7 @@ org.gecko.osgi.messaging=INFO
 - **Ensure**: Provider already exists (config must be processed before thermal data)
 - **Check**: GenericDto creation logs
 
-**Issue**: Emoji characters not displaying correctly
+**Issue**: UTF8 characters not displaying correctly
 - **Check**: Database and API charset encoding supports UTF-8
 - **Verify**: Client application renders UTF8 characters
 - **Note**: The `state` field contains UTF8 strings like "⚪⚪🔴", not plain text

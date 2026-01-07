@@ -226,17 +226,17 @@ Enable debug logging for TTN components:
 
 ### REST API Access
 
-Access TTN sensor data through SensiNact REST API:
+Access TTN sensor data through SensiNact REST API (local environment):
 
 ```bash
 # List all TTN providers
-GET /udp/rest/sensinact/providers?filter=ttn-*
+curl "http://localhost:8080/udp/rest/sensinact/providers?filter=(MODEL=TtnSensor)"
 
 # Get specific sensor data
-GET /udp/rest/sensinact/providers/ttn-sensor-001/temperaturData
+curl http://localhost:8080/udp/rest/sensinact/providers/ttn-sensor-001/services/temperaturData
 
 # Get historical data through SensorThings API
-GET /udp/sensorthings/v1.1/Things('ttn-sensor-001')/Datastreams
+curl "http://localhost:8080/udp/rest/v1.1/Things('ttn-sensor-001')/Datastreams"
 ```
 
 ### MQTT Notifications
