@@ -61,6 +61,7 @@ slf4j.runpath:  \
 	bnd.identity;id='org.eclipse.sensinact.gateway.southbound.http.http-device-factory',\
 	bnd.identity;id='org.eclipse.sensinact.gateway.southbound.history.timescale-provider',\
 	bnd.identity;id='org.eclipse.sensinact.gateway.filters.filters.core',\
+	bnd.identity;id='org.eclipse.sensinact.gateway.filters.ldap',\
 	bnd.identity;id='de.jena.sensinact.rest.log',\
 	bnd.identity;id='de.jena.udp.rest.cors',\
 	bnd.identity;id='de.jena.sensinact.web.client',\
