@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2012 - 2025 Data In Motion and others.&#xA;All rights reserved. &#xA;&#xA;This program and the accompanying materials are made&#xA;available under the terms of the Eclipse Public License 2.0&#xA;which is available at https://www.eclipse.org/legal/epl-2.0/&#xA;&#xA;SPDX-License-Identifier: EPL-2.0&#xA;&#xA;Contributors:&#xA;    Data In Motion - initial API and implementation"
+    modelDirectory="/de.jena.bike.rest.model/src" modelPluginID="de.jena.bike.rest.model"
+    modelName="Bike" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" suppressGenModelAnnotations="false"
+    copyrightFields="false" operationReflection="true" importOrganizing="true" oSGiCompatible="true">
+  <foreignModel>bike.ecore</foreignModel>
+  <genPackages prefix="Bike" basePackage="de.jena" disposableProviderFactory="true"
+      ecorePackage="bike.ecore#/">
+    <genDataTypes ecoreDataType="bike.ecore#//JResponse"/>
+    <genClasses ecoreClass="bike.ecore#//Location">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//Location/lat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//Location/lon"/>
+    </genClasses>
+    <genClasses ecoreClass="bike.ecore#//Geometry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//Geometry/type"/>
+    </genClasses>
+    <genClasses ecoreClass="bike.ecore#//Position"/>
+    <genClasses ecoreClass="bike.ecore#//LineStringCoordinates"/>
+    <genClasses ecoreClass="bike.ecore#//LineString">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//LineString/coordinates"/>
+    </genClasses>
+    <genClasses ecoreClass="bike.ecore#//GeoJsonObject"/>
+    <genClasses ecoreClass="bike.ecore#//TravelModeLabel"/>
+    <genClasses ecoreClass="bike.ecore#//siteCounter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//siteCounter/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//siteCounter/serial"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//siteCounter/installationDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//siteCounter/detachmentDate"/>
+    </genClasses>
+    <genClasses ecoreClass="bike.ecore#//Domain">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//Domain/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//Domain/name"/>
+    </genClasses>
+    <genClasses ecoreClass="bike.ecore#//siteTag">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//siteTag/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//siteTag/name"/>
+    </genClasses>
+    <genClasses ecoreClass="bike.ecore#//Image">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//Image/url"/>
+    </genClasses>
+    <genClasses ecoreClass="bike.ecore#//site">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//site/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//site/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//site/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//site/customId"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//site/location"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//site/segments"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//site/firstData"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//site/lastData"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//site/granularity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//site/travelModes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//site/directional"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//site/counters"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//site/domain"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//site/tags"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//site/images"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//site/attributes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//site/hasTimestampedData"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//site/hasWeather"/>
+    </genClasses>
+    <genClasses ecoreClass="bike.ecore#//BadRequest">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//BadRequest/status"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//BadRequest/code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//BadRequest/message"/>
+    </genClasses>
+    <genClasses ecoreClass="bike.ecore#//Unauthorized">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//Unauthorized/status"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//Unauthorized/code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//Unauthorized/message"/>
+    </genClasses>
+    <genClasses ecoreClass="bike.ecore#//Forbidden">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//Forbidden/status"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//Forbidden/code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//Forbidden/message"/>
+    </genClasses>
+    <genClasses ecoreClass="bike.ecore#//TooManyRequests">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//TooManyRequests/status"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//TooManyRequests/code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//TooManyRequests/message"/>
+    </genClasses>
+    <genClasses ecoreClass="bike.ecore#//tag">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//tag/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//tag/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//tag/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//tag/color"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//tag/domain"/>
+    </genClasses>
+    <genClasses ecoreClass="bike.ecore#//ExportCreation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//ExportCreation/startDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//ExportCreation/endDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//ExportCreation/startTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//ExportCreation/endTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//ExportCreation/schema"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//ExportCreation/siteIds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//ExportCreation/granularity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//ExportCreation/validatedDataOnly"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//ExportCreation/gapFilling"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//ExportCreation/validateSchema"/>
+    </genClasses>
+    <genClasses ecoreClass="bike.ecore#//Export">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//Export/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//Export/status"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//Export/url"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//Export/errorMessage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//Export/endProcessingDateTime"/>
+    </genClasses>
+    <genClasses ecoreClass="bike.ecore#//NotFound">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//NotFound/status"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//NotFound/code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//NotFound/message"/>
+    </genClasses>
+    <genClasses ecoreClass="bike.ecore#//DateRange"/>
+    <genClasses ecoreClass="bike.ecore#//StatisticalAverageGroupBy"/>
+    <genClasses ecoreClass="bike.ecore#//Direction"/>
+    <genClasses ecoreClass="bike.ecore#//DirectionName"/>
+    <genClasses ecoreClass="bike.ecore#//Value"/>
+    <genClasses ecoreClass="bike.ecore#//StatisticalTraffic">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//StatisticalTraffic/siteId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//StatisticalTraffic/date"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//StatisticalTraffic/travelMode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//StatisticalTraffic/direction"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//StatisticalTraffic/directionName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//StatisticalTraffic/value"/>
+    </genClasses>
+    <genClasses ecoreClass="bike.ecore#//StatisticalTotalGroupBy"/>
+    <genClasses ecoreClass="bike.ecore#//HistoricalRawTrafficInclude"/>
+    <genClasses ecoreClass="bike.ecore#//BaseSerie">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//BaseSerie/travelMode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//BaseSerie/direction"/>
+    </genClasses>
+    <genClasses ecoreClass="bike.ecore#//DateTime"/>
+    <genClasses ecoreClass="bike.ecore#//Count"/>
+    <genClasses ecoreClass="bike.ecore#//DataStatus"/>
+    <genClasses ecoreClass="bike.ecore#//HistoricalRawTraffic">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//HistoricalRawTraffic/flowID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//HistoricalRawTraffic/flowName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//HistoricalRawTraffic/data"/>
+    </genClasses>
+    <genClasses ecoreClass="bike.ecore#//HistoricalAggregatedTrafficInclude"/>
+    <genClasses ecoreClass="bike.ecore#//Granularity"/>
+    <genClasses ecoreClass="bike.ecore#//HistoricalAggregatedTrafficGroupBy"/>
+    <genClasses ecoreClass="bike.ecore#//HistoricalAggregatedTraffic">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//HistoricalAggregatedTraffic/data"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//HistoricalAggregatedTraffic/directionName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//HistoricalAggregatedTraffic/flowID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//HistoricalAggregatedTraffic/flowName"/>
+    </genClasses>
+    <genClasses ecoreClass="bike.ecore#//Lane"/>
+    <genClasses ecoreClass="bike.ecore#//HistoricalTimestampTraffic">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//HistoricalTimestampTraffic/timestamp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//HistoricalTimestampTraffic/lane"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//HistoricalTimestampTraffic/speed"/>
+    </genClasses>
+    <genClasses ecoreClass="bike.ecore#//validationJobStatus"/>
+    <genClasses ecoreClass="bike.ecore#//validationJob">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//validationJob/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//validationJob/status"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//validationJob/siteIds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//validationJob/startDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//validationJob/endDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//validationJob/errorMessage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//validationJob/endProcessingDateTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//validationJob/createdAt"/>
+    </genClasses>
+    <genClasses ecoreClass="bike.ecore#//validationJobCreated">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//validationJobCreated/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//validationJobCreated/status"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//validationJobCreated/siteIds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//validationJobCreated/startDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//validationJobCreated/endDate"/>
+    </genClasses>
+    <genClasses ecoreClass="bike.ecore#//Conflict">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//Conflict/status"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//Conflict/code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//Conflict/message"/>
+    </genClasses>
+    <genClasses ecoreClass="bike.ecore#//HistoricalRawTraffic_data">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//HistoricalRawTraffic_data/timestamp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//HistoricalRawTraffic_data/granularity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//HistoricalRawTraffic_data/counts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//HistoricalRawTraffic_data/status"/>
+    </genClasses>
+    <genClasses ecoreClass="bike.ecore#//HistoricalAggregatedTraffic_data">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//HistoricalAggregatedTraffic_data/timestamp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//HistoricalAggregatedTraffic_data/traffic"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//HistoricalAggregatedTraffic_data/weather"/>
+    </genClasses>
+    <genClasses ecoreClass="bike.ecore#//HistoricalAggregatedTraffic_data_traffic">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//HistoricalAggregatedTraffic_data_traffic/counts"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//HistoricalAggregatedTraffic_data_traffic/status"/>
+    </genClasses>
+    <genClasses ecoreClass="bike.ecore#//HistoricalAggregatedTraffic_data_weather">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//HistoricalAggregatedTraffic_data_weather/temperature"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//HistoricalAggregatedTraffic_data_weather/rainAccumulation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//HistoricalAggregatedTraffic_data_weather/snowAccumulation"/>
+    </genClasses>
+    <genClasses ecoreClass="bike.ecore#//Response">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//Response/code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//Response/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//Response/response"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//Response/result"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="bike.ecore#//OpenApiClient">
+      <genOperations ecoreOperation="bike.ecore#//OpenApiClient/toQueryString" body="if(in instanceof java.util.Collection&lt;?> c) {&#xA;&#x9;return c.stream().map(String::valueOf).map(s -> java.net.URLEncoder.encode(s, java.nio.charset.StandardCharsets.UTF_8)).collect(java.util.stream.Collectors.joining(&quot;&amp;&quot;+name+&quot;=&quot;));&#xA;}&#xA;return java.net.URLEncoder.encode(String.valueOf(in), java.nio.charset.StandardCharsets.UTF_8);&#xA;">
+        <genParameters ecoreParameter="bike.ecore#//OpenApiClient/toQueryString/name"/>
+        <genParameters ecoreParameter="bike.ecore#//OpenApiClient/toQueryString/in"/>
+      </genOperations>
+      <genOperations ecoreOperation="bike.ecore#//OpenApiClient/_get">
+        <genParameters ecoreParameter="bike.ecore#//OpenApiClient/_get/endpoint"/>
+        <genParameters ecoreParameter="bike.ecore#//OpenApiClient/_get/result"/>
+        <genParameters ecoreParameter="bike.ecore#//OpenApiClient/_get/pathParameter"/>
+        <genParameters ecoreParameter="bike.ecore#//OpenApiClient/_get/queryParameter"/>
+      </genOperations>
+      <genOperations ecoreOperation="bike.ecore#//OpenApiClient/_delete">
+        <genParameters ecoreParameter="bike.ecore#//OpenApiClient/_delete/endpoint"/>
+        <genParameters ecoreParameter="bike.ecore#//OpenApiClient/_delete/result"/>
+        <genParameters ecoreParameter="bike.ecore#//OpenApiClient/_delete/pathParameter"/>
+        <genParameters ecoreParameter="bike.ecore#//OpenApiClient/_delete/queryParameter"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="bike.ecore#//BikeOpenApiClient">
+      <genOperations ecoreOperation="bike.ecore#//BikeOpenApiClient/GetSites" body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/sites&quot;;&#xA;EClass resultEClass = BikePackage.eINSTANCE.getsite();&#xA;if ( null != page ) queryParameter.put(&quot;page&quot;, toQueryString(&quot;page&quot;,page));&#xA;if ( null != pageSize ) queryParameter.put(&quot;pageSize&quot;, toQueryString(&quot;pageSize&quot;,pageSize));&#xA;if ( null != sortBy ) queryParameter.put(&quot;sortBy&quot;, toQueryString(&quot;sortBy&quot;,sortBy));&#xA;if ( null != orderBy ) queryParameter.put(&quot;orderBy&quot;, toQueryString(&quot;orderBy&quot;,orderBy));&#xA;if ( null != include ) queryParameter.put(&quot;include&quot;, toQueryString(&quot;include&quot;,include));&#xA;if ( null != ids ) queryParameter.put(&quot;ids&quot;, toQueryString(&quot;ids&quot;,ids));&#xA;if ( null != domainIds ) queryParameter.put(&quot;domainIds&quot;, toQueryString(&quot;domainIds&quot;,domainIds));&#xA;if ( null != tagIds ) queryParameter.put(&quot;tagIds&quot;, toQueryString(&quot;tagIds&quot;,tagIds));&#xA;if ( null != customIds ) queryParameter.put(&quot;customIds&quot;, toQueryString(&quot;customIds&quot;,customIds));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetSites/page"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetSites/pageSize"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetSites/sortBy"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetSites/orderBy"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetSites/include"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetSites/ids"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetSites/domainIds"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetSites/tagIds"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetSites/customIds"/>
+      </genOperations>
+      <genOperations ecoreOperation="bike.ecore#//BikeOpenApiClient/GetTags" body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/tags&quot;;&#xA;EClass resultEClass = BikePackage.eINSTANCE.gettag();&#xA;if ( null != page ) queryParameter.put(&quot;page&quot;, toQueryString(&quot;page&quot;,page));&#xA;if ( null != pageSize ) queryParameter.put(&quot;pageSize&quot;, toQueryString(&quot;pageSize&quot;,pageSize));&#xA;if ( null != sortBy ) queryParameter.put(&quot;sortBy&quot;, toQueryString(&quot;sortBy&quot;,sortBy));&#xA;if ( null != orderBy ) queryParameter.put(&quot;orderBy&quot;, toQueryString(&quot;orderBy&quot;,orderBy));&#xA;if ( null != include ) queryParameter.put(&quot;include&quot;, toQueryString(&quot;include&quot;,include));&#xA;if ( null != ids ) queryParameter.put(&quot;ids&quot;, toQueryString(&quot;ids&quot;,ids));&#xA;if ( null != domainIds ) queryParameter.put(&quot;domainIds&quot;, toQueryString(&quot;domainIds&quot;,domainIds));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetTags/page"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetTags/pageSize"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetTags/sortBy"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetTags/orderBy"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetTags/include"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetTags/ids"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetTags/domainIds"/>
+      </genOperations>
+      <genOperations ecoreOperation="bike.ecore#//BikeOpenApiClient/CreateExport">
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/CreateExport/request"/>
+      </genOperations>
+      <genOperations ecoreOperation="bike.ecore#//BikeOpenApiClient/GetExportStatus"
+          body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/exports/{jobId}&quot;;&#xA;EClass resultEClass = BikePackage.eINSTANCE.getExport();&#xA;pathParameter.put(&quot;jobId&quot;, toQueryString(&quot;jobId&quot;,jobId));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetExportStatus/jobId"/>
+      </genOperations>
+      <genOperations ecoreOperation="bike.ecore#//BikeOpenApiClient/DownloadExportData"
+          body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/exports/{jobId}/data&quot;;&#xA;EClass resultEClass = org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEObject();&#xA;pathParameter.put(&quot;jobId&quot;, toQueryString(&quot;jobId&quot;,jobId));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/DownloadExportData/jobId"/>
+      </genOperations>
+      <genOperations ecoreOperation="bike.ecore#//BikeOpenApiClient/GetADT" body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/statistical/adt&quot;;&#xA;EClass resultEClass = BikePackage.eINSTANCE.getStatisticalTraffic();&#xA;if ( null != domainId ) queryParameter.put(&quot;domainId&quot;, toQueryString(&quot;domainId&quot;,domainId));&#xA;if ( null != siteId ) queryParameter.put(&quot;siteId&quot;, toQueryString(&quot;siteId&quot;,siteId));&#xA;if ( null != dateRange ) queryParameter.put(&quot;dateRange&quot;, toQueryString(&quot;dateRange&quot;,dateRange));&#xA;if ( null != month ) queryParameter.put(&quot;month&quot;, toQueryString(&quot;month&quot;,month));&#xA;if ( null != year ) queryParameter.put(&quot;year&quot;, toQueryString(&quot;year&quot;,year));&#xA;if ( null != groupBy ) queryParameter.put(&quot;groupBy&quot;, toQueryString(&quot;groupBy&quot;,groupBy));&#xA;if ( null != travelModes ) queryParameter.put(&quot;travelModes&quot;, toQueryString(&quot;travelModes&quot;,travelModes));&#xA;if ( null != validatedDataOnly ) queryParameter.put(&quot;validatedDataOnly&quot;, toQueryString(&quot;validatedDataOnly&quot;,validatedDataOnly));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetADT/domainId"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetADT/siteId"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetADT/dateRange"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetADT/month"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetADT/year"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetADT/groupBy"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetADT/travelModes"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetADT/validatedDataOnly"/>
+      </genOperations>
+      <genOperations ecoreOperation="bike.ecore#//BikeOpenApiClient/GetADTBySite"
+          body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/statistical/adt/by/site&quot;;&#xA;EClass resultEClass = BikePackage.eINSTANCE.getStatisticalTraffic();&#xA;if ( null != domainId ) queryParameter.put(&quot;domainId&quot;, toQueryString(&quot;domainId&quot;,domainId));&#xA;if ( null != siteId ) queryParameter.put(&quot;siteId&quot;, toQueryString(&quot;siteId&quot;,siteId));&#xA;if ( null != dateRange ) queryParameter.put(&quot;dateRange&quot;, toQueryString(&quot;dateRange&quot;,dateRange));&#xA;if ( null != month ) queryParameter.put(&quot;month&quot;, toQueryString(&quot;month&quot;,month));&#xA;if ( null != year ) queryParameter.put(&quot;year&quot;, toQueryString(&quot;year&quot;,year));&#xA;if ( null != groupBy ) queryParameter.put(&quot;groupBy&quot;, toQueryString(&quot;groupBy&quot;,groupBy));&#xA;if ( null != travelModes ) queryParameter.put(&quot;travelModes&quot;, toQueryString(&quot;travelModes&quot;,travelModes));&#xA;if ( null != validatedDataOnly ) queryParameter.put(&quot;validatedDataOnly&quot;, toQueryString(&quot;validatedDataOnly&quot;,validatedDataOnly));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetADTBySite/domainId"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetADTBySite/siteId"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetADTBySite/dateRange"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetADTBySite/month"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetADTBySite/year"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetADTBySite/groupBy"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetADTBySite/travelModes"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetADTBySite/validatedDataOnly"/>
+      </genOperations>
+      <genOperations ecoreOperation="bike.ecore#//BikeOpenApiClient/GetTotalTraffic"
+          body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/statistical/total&quot;;&#xA;EClass resultEClass = BikePackage.eINSTANCE.getStatisticalTraffic();&#xA;if ( null != domainId ) queryParameter.put(&quot;domainId&quot;, toQueryString(&quot;domainId&quot;,domainId));&#xA;if ( null != siteId ) queryParameter.put(&quot;siteId&quot;, toQueryString(&quot;siteId&quot;,siteId));&#xA;if ( null != dateRange ) queryParameter.put(&quot;dateRange&quot;, toQueryString(&quot;dateRange&quot;,dateRange));&#xA;if ( null != month ) queryParameter.put(&quot;month&quot;, toQueryString(&quot;month&quot;,month));&#xA;if ( null != year ) queryParameter.put(&quot;year&quot;, toQueryString(&quot;year&quot;,year));&#xA;if ( null != groupBy ) queryParameter.put(&quot;groupBy&quot;, toQueryString(&quot;groupBy&quot;,groupBy));&#xA;if ( null != travelModes ) queryParameter.put(&quot;travelModes&quot;, toQueryString(&quot;travelModes&quot;,travelModes));&#xA;if ( null != validatedDataOnly ) queryParameter.put(&quot;validatedDataOnly&quot;, toQueryString(&quot;validatedDataOnly&quot;,validatedDataOnly));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetTotalTraffic/domainId"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetTotalTraffic/siteId"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetTotalTraffic/dateRange"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetTotalTraffic/month"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetTotalTraffic/year"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetTotalTraffic/groupBy"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetTotalTraffic/travelModes"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetTotalTraffic/validatedDataOnly"/>
+      </genOperations>
+      <genOperations ecoreOperation="bike.ecore#//BikeOpenApiClient/GetRawTraffic"
+          body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/history/traffic/raw&quot;;&#xA;EClass resultEClass = BikePackage.eINSTANCE.getHistoricalRawTraffic();&#xA;if ( null != siteId ) queryParameter.put(&quot;siteId&quot;, toQueryString(&quot;siteId&quot;,siteId));&#xA;if ( null != include ) queryParameter.put(&quot;include&quot;, toQueryString(&quot;include&quot;,include));&#xA;if ( null != startDate ) queryParameter.put(&quot;startDate&quot;, toQueryString(&quot;startDate&quot;,startDate));&#xA;if ( null != endDate ) queryParameter.put(&quot;endDate&quot;, toQueryString(&quot;endDate&quot;,endDate));&#xA;if ( null != startTime ) queryParameter.put(&quot;startTime&quot;, toQueryString(&quot;startTime&quot;,startTime));&#xA;if ( null != endTime ) queryParameter.put(&quot;endTime&quot;, toQueryString(&quot;endTime&quot;,endTime));&#xA;if ( null != gapFilling ) queryParameter.put(&quot;gapFilling&quot;, toQueryString(&quot;gapFilling&quot;,gapFilling));&#xA;if ( null != travelModes ) queryParameter.put(&quot;travelModes&quot;, toQueryString(&quot;travelModes&quot;,travelModes));&#xA;if ( null != validatedDataOnly ) queryParameter.put(&quot;validatedDataOnly&quot;, toQueryString(&quot;validatedDataOnly&quot;,validatedDataOnly));&#xA;if ( null != rawDataOnly ) queryParameter.put(&quot;rawDataOnly&quot;, toQueryString(&quot;rawDataOnly&quot;,rawDataOnly));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetRawTraffic/siteId"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetRawTraffic/include"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetRawTraffic/startDate"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetRawTraffic/endDate"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetRawTraffic/startTime"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetRawTraffic/endTime"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetRawTraffic/gapFilling"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetRawTraffic/travelModes"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetRawTraffic/validatedDataOnly"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetRawTraffic/rawDataOnly"/>
+      </genOperations>
+      <genOperations ecoreOperation="bike.ecore#//BikeOpenApiClient/GetAggregatedTraffic"
+          body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/history/traffic/aggregated&quot;;&#xA;EClass resultEClass = BikePackage.eINSTANCE.getHistoricalAggregatedTraffic();&#xA;if ( null != siteId ) queryParameter.put(&quot;siteId&quot;, toQueryString(&quot;siteId&quot;,siteId));&#xA;if ( null != include ) queryParameter.put(&quot;include&quot;, toQueryString(&quot;include&quot;,include));&#xA;if ( null != startDate ) queryParameter.put(&quot;startDate&quot;, toQueryString(&quot;startDate&quot;,startDate));&#xA;if ( null != endDate ) queryParameter.put(&quot;endDate&quot;, toQueryString(&quot;endDate&quot;,endDate));&#xA;if ( null != startTime ) queryParameter.put(&quot;startTime&quot;, toQueryString(&quot;startTime&quot;,startTime));&#xA;if ( null != endTime ) queryParameter.put(&quot;endTime&quot;, toQueryString(&quot;endTime&quot;,endTime));&#xA;if ( null != granularity ) queryParameter.put(&quot;granularity&quot;, toQueryString(&quot;granularity&quot;,granularity));&#xA;if ( null != groupBy ) queryParameter.put(&quot;groupBy&quot;, toQueryString(&quot;groupBy&quot;,groupBy));&#xA;if ( null != gapFilling ) queryParameter.put(&quot;gapFilling&quot;, toQueryString(&quot;gapFilling&quot;,gapFilling));&#xA;if ( null != travelModes ) queryParameter.put(&quot;travelModes&quot;, toQueryString(&quot;travelModes&quot;,travelModes));&#xA;if ( null != validatedDataOnly ) queryParameter.put(&quot;validatedDataOnly&quot;, toQueryString(&quot;validatedDataOnly&quot;,validatedDataOnly));&#xA;if ( null != rawDataOnly ) queryParameter.put(&quot;rawDataOnly&quot;, toQueryString(&quot;rawDataOnly&quot;,rawDataOnly));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetAggregatedTraffic/siteId"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetAggregatedTraffic/include"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetAggregatedTraffic/startDate"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetAggregatedTraffic/endDate"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetAggregatedTraffic/startTime"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetAggregatedTraffic/endTime"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetAggregatedTraffic/granularity"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetAggregatedTraffic/groupBy"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetAggregatedTraffic/gapFilling"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetAggregatedTraffic/travelModes"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetAggregatedTraffic/validatedDataOnly"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetAggregatedTraffic/rawDataOnly"/>
+      </genOperations>
+      <genOperations ecoreOperation="bike.ecore#//BikeOpenApiClient/GetTimestampTraffic"
+          body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/history/traffic/timestamp&quot;;&#xA;EClass resultEClass = BikePackage.eINSTANCE.getHistoricalTimestampTraffic();&#xA;if ( null != siteId ) queryParameter.put(&quot;siteId&quot;, toQueryString(&quot;siteId&quot;,siteId));&#xA;if ( null != startDate ) queryParameter.put(&quot;startDate&quot;, toQueryString(&quot;startDate&quot;,startDate));&#xA;if ( null != endDate ) queryParameter.put(&quot;endDate&quot;, toQueryString(&quot;endDate&quot;,endDate));&#xA;if ( null != startTime ) queryParameter.put(&quot;startTime&quot;, toQueryString(&quot;startTime&quot;,startTime));&#xA;if ( null != endTime ) queryParameter.put(&quot;endTime&quot;, toQueryString(&quot;endTime&quot;,endTime));&#xA;if ( null != travelModes ) queryParameter.put(&quot;travelModes&quot;, toQueryString(&quot;travelModes&quot;,travelModes));&#xA;if ( null != directions ) queryParameter.put(&quot;directions&quot;, toQueryString(&quot;directions&quot;,directions));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetTimestampTraffic/siteId"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetTimestampTraffic/startDate"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetTimestampTraffic/endDate"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetTimestampTraffic/startTime"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetTimestampTraffic/endTime"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetTimestampTraffic/travelModes"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetTimestampTraffic/directions"/>
+      </genOperations>
+      <genOperations ecoreOperation="bike.ecore#//BikeOpenApiClient/ValidationJobsGet"
+          body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/validation/data/jobs&quot;;&#xA;EClass resultEClass = BikePackage.eINSTANCE.getvalidationJob();&#xA;if ( null != page ) queryParameter.put(&quot;page&quot;, toQueryString(&quot;page&quot;,page));&#xA;if ( null != pageSize ) queryParameter.put(&quot;pageSize&quot;, toQueryString(&quot;pageSize&quot;,pageSize));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/ValidationJobsGet/page"/>
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/ValidationJobsGet/pageSize"/>
+      </genOperations>
+      <genOperations ecoreOperation="bike.ecore#//BikeOpenApiClient/ValidationJobCreate">
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/ValidationJobCreate/request"/>
+      </genOperations>
+      <genOperations ecoreOperation="bike.ecore#//BikeOpenApiClient/ValidationJobGet"
+          body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/validation/data/jobs/{jobId}&quot;;&#xA;EClass resultEClass = BikePackage.eINSTANCE.getvalidationJob();&#xA;pathParameter.put(&quot;jobId&quot;, toQueryString(&quot;jobId&quot;,jobId));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">
+        <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/ValidationJobGet/jobId"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="bike.ecore#//ValidationJobCreate_request">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//ValidationJobCreate_request/siteIds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//ValidationJobCreate_request/startDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//ValidationJobCreate_request/endDate"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -59,12 +59,12 @@ de.jena.ibis-ip:de.jena.ibis.txw2:4.0.2
 
 
 # Codec
-org.geckoprojects.codec:org.gecko.codec:1.0.1-SNAPSHOT
-org.geckoprojects.codec:org.gecko.codec.json:1.0.1-SNAPSHOT
-org.geckoprojects.codec:org.gecko.codec.emfjson:1.0.1-SNAPSHOT
-org.geckoprojects.codec:org.gecko.codec.info:1.0.1-SNAPSHOT
-org.geckoprojects.codec:org.gecko.codec.info.model:1.0.0-SNAPSHOT
-org.geckoprojects.codec:org.gecko.codec.constants:1.0.1-SNAPSHOT
+#org.geckoprojects.codec:org.eclipse.fennec.codec:1.1.0-SNAPSHOT
+#org.geckoprojects.codec:org.eclipse.fennec.codec.json:1.1.0-SNAPSHOT
+#org.geckoprojects.codec:org.eclipse.fennec.codec.emfjson:1.1.0-SNAPSHOT
+#org.geckoprojects.codec:org.eclipse.fennec.codec.info:1.1.0-SNAPSHOT
+#org.geckoprojects.codec:org.eclipse.fennec.codec.info.model:1.1.0-SNAPSHOT
+#org.geckoprojects.codec:org.eclipse.fennec.codec.constants:1.1.0-SNAPSHOT
 
 #Weather
 org.geckoprojects.weather:org.gecko.weather.dwd.stations:1.1.0-SNAPSHOT

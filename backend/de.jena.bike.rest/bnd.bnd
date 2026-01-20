@@ -1,0 +1,16 @@
+-buildpath: \
+	org.osgi.service.component.annotations,\
+	de.jena.bike.rest.model,\
+	org.gecko.emf.osgi.api,\
+	org.eclipse.emf.ecore,\
+	org.osgi.service.component,\
+	org.osgi.service.metatype,\
+	org.osgi.service.metatype.annotations,\
+	jakarta.ws.rs-api,\
+	org.eclipse.emf.common,\
+	org.osgi.annotation.versioning,\
+	org.osgi.annotation.bundle,\
+	org.eclipse.fennec.codec.v2,\
+	org.eclipse.fennec.codec.metadata,\
+	org.eclipse.fennec.model.metadata,\
+	tools.jackson.core.jackson-databind
