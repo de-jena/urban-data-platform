@@ -68,7 +68,7 @@ public class ReferenceAreaResourceCriterium implements ICriterion{
 	@Override
 	public Predicate<ResourceSnapshot> getResourceFilter() {
 		return snapshot -> {
-			return snapshot.getName().startsWith("pfWert");
+			return snapshot.getName().equals("pfWertAvg");
 		};
 	}
 

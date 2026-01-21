@@ -13,7 +13,8 @@
  */
 package de.jena.udp.reference.area.sensinact.rules;
 
-import java.util.HashMap;
+import java.time.Instant;
+import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -52,55 +53,44 @@ public class ReferenceAreaRule implements RuleDefinition{
 	 */
 	@Override
 	public void evaluate(List<ProviderSnapshot> providerSnapshots, ResourceUpdater resourceUpdater) {
-
-		//		Map to collect refArea,providers 
-		Map<String, List<ProviderSnapshot>> providerToMatchingAreaMap = new HashMap<>();
-
-		//		We should retrieve from SensiNact all the ReferenceAreas
-		Map<String, GeoJsonObject> refAreasMap = refAreaNotification.getProviderLocationMap();
-
-		//		We are looping over all the chirpstack-xxxxx-derived
-		for(ProviderSnapshot provider : providerSnapshots) {		
+		
+		ProviderSnapshot triggeredProvider = findRuleTriggerProvider(providerSnapshots);
+		if(triggeredProvider != null) {
+			LOGGER.info(String.format("Provider that triggered the ReferenceArea rule is %s", triggeredProvider.getName()));
+			
 			Map<String, GeoJsonObject> providerLocationMap = chirpstackNotification.getProviderLocationMap();
-			if(!providerLocationMap.containsKey(provider.getName().replaceFirst("-derived", ""))) {
-				LOGGER.warning(String.format("No Location Information for provider %s", provider.getName()));
-				continue;
+			Map<String, GeoJsonObject> refAreasMap = refAreaNotification.getProviderLocationMap();
+			if(!providerLocationMap.containsKey(triggeredProvider.getName().replaceFirst("-derived", ""))) {
+				LOGGER.warning(String.format("No Location Information for provider %s", triggeredProvider.getName()));
+				return;
 			}
-			//			We should check to which reference area it belongs and somehow store the provider together with the ref areas
-			GeoJsonObject location = (GeoJsonObject) providerLocationMap.get(provider.getName().replaceFirst("-derived", ""));
+			GeoJsonObject location = (GeoJsonObject) providerLocationMap.get(triggeredProvider.getName().replaceFirst("-derived", ""));
 			if(location instanceof Point point) {
 				String refArea = getBelongingArea(point, refAreasMap);
-				if(refArea != null) {
-					if(!providerToMatchingAreaMap.containsKey(refArea)) {
-						providerToMatchingAreaMap.put(refArea, new LinkedList<>());
-					}
-					providerToMatchingAreaMap.get(refArea).add(provider);
-				} else {
-					LOGGER.info(String.format("Provider %s does not belong to any known reference area", provider.getName()));
+				if(refArea == null) {
+					LOGGER.warning(String.format("No Ref Area Information for provider %s", triggeredProvider.getName()));
+					return;
 				}
+				List<ProviderSnapshot> sameAreaProviders = getProvidersInSameArea(refArea, providerSnapshots);
+				List<Double> pfWerts = new LinkedList<>();
+				sameAreaProviders.forEach(provider -> {
+					provider.getService("derivedQuantities").getResources().forEach(resource -> {
+						if(resource.getName().equals("pfWertAvg")) {
+							pfWerts.add((double) resource.getValue().getValue());
+						}
+					});
+				});
+//				It may happen that some providers do not have a pfWertAvg yet because they did not get data, so we put those at 0.
+				if(pfWerts.size() < sameAreaProviders.size()) {
+					for(int i = pfWerts.size(); i < sameAreaProviders.size(); i++) {
+						pfWerts.add(0.);
+					}
+				}
+				ColorType color = getReferenceAreaColor(pfWerts, pfWerts.size());
+				resourceUpdater.updateResource(refArea, "referenceArea", "color", color);
+				LOGGER.info(String.format("Setting color %s for reference area %s", color, refArea));
 			}
 		}
-
-		//		We should go over the map <refArea, List<providers>> and make the update of the ref area
-		providerToMatchingAreaMap.forEach((areaId, providers) -> {
-			List<Double> pfWerts = new LinkedList<>();
-			providers.forEach(provider -> {
-				provider.getService("derivedQuantities").getResources().forEach(resource -> {
-					if(resource.getName().equals("pfWertAvg")) {
-						pfWerts.add((double) resource.getValue().getValue());
-					}
-				});
-			});
-//			It may happen that some providers do not have a pfWertAvg yet because they did not get data, so we put those at 0.
-			if(pfWerts.size() < providers.size()) {
-				for(int i = pfWerts.size(); i < providers.size(); i++) {
-					pfWerts.add(0.);
-				}
-			}
-			ColorType color = getReferenceAreaColor(pfWerts, pfWerts.size());
-			resourceUpdater.updateResource(areaId, "referenceArea", "color", color);
-			LOGGER.info(String.format("Setting color %s for reference area %s", color, areaId));
-		});
 	}
 
 	/* 
@@ -110,6 +100,38 @@ public class ReferenceAreaRule implements RuleDefinition{
 	@Override
 	public ICriterion getInputFilter() {
 		return new ReferenceAreaResourceCriterium();
+	}
+	
+	private ProviderSnapshot findRuleTriggerProvider(List<ProviderSnapshot> providerSnapshots) {
+		return providerSnapshots.stream()
+			    .max(Comparator.comparing(this::getLatestPfWertAvgTimestamp))
+			    .orElse(null);
+
+	}
+	
+	private Instant getLatestPfWertAvgTimestamp(ProviderSnapshot p) {
+		return p.getService("derivedQuantities").getResource("pfWertAvg").getValue().getTimestamp();
+	}
+	
+	private List<ProviderSnapshot> getProvidersInSameArea(String areaId, List<ProviderSnapshot> providerSnapshots) {
+		List<ProviderSnapshot> sameAreaProviders = new LinkedList<>();
+		Map<String, GeoJsonObject> providerLocationMap = chirpstackNotification.getProviderLocationMap();
+		Map<String, GeoJsonObject> refAreasMap = refAreaNotification.getProviderLocationMap();
+		for(ProviderSnapshot provider : providerSnapshots) {					
+			if(!providerLocationMap.containsKey(provider.getName().replaceFirst("-derived", ""))) {
+				LOGGER.warning(String.format("No Location Information for provider %s", provider.getName()));
+				continue;
+			}
+			//			We should check to which reference area it belongs and somehow store the provider together with the ref areas
+			GeoJsonObject location = (GeoJsonObject) providerLocationMap.get(provider.getName().replaceFirst("-derived", ""));
+			if(location instanceof Point point) {
+				String refArea = getBelongingArea(point, refAreasMap);
+				if(refArea != null && areaId.equals(refArea)) {
+					sameAreaProviders.add(provider);
+				} 
+			}
+		}
+		return sameAreaProviders;
 	}
 
 	private String getBelongingArea(Point point, Map<String, GeoJsonObject> refAreasMap) {
