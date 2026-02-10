@@ -53,6 +53,12 @@ public class ChirpstackConfigurator {
 		@AttributeDefinition(name = "port", description = "Network port of the chirpstack gateway")
 		int port();
 
+		@AttributeDefinition(name = "user", description = "Username of the chirpstack gateway")
+		String user();
+		
+		@AttributeDefinition(name = "_password", description = "Password of the chirpstack gateway")
+		String _password();
+
 		@AttributeDefinition(name = "topics", description = "mqtt topics of the chirpstack applications")
 		String[] topics();
 
@@ -113,19 +119,31 @@ public class ChirpstackConfigurator {
 		Configuration config = configAdmin.getFactoryConfiguration(MQTT_PID, name, "?");
 		Dictionary<String, Object> props = new Hashtable<>();
 		props.put("id", name);
-		props.put("protocol", csConfig.protocol());
-		props.put("host", csConfig.host());
+		putIfNonNull(props, "protocol", csConfig.protocol());
+		putIfNonNull(props, "host", csConfig.host());
 		props.put("port", csConfig.port());
-		props.put("topics", csConfig.topics());
-		props.put("auth.clientcert.path", csConfig.certPath());
-		props.put("auth.clientcert.key", csConfig.certKey());
-		props.put("auth.clientcert.key.algorithm", "EC");
-		props.put("auth.clientcert.ca.path", csConfig.caPath());
-		props.put("auth.trusted.certs", csConfig.caChainPath());
+		putIfNonNull(props, "topics", csConfig.topics());
+		putIfNonNull(props, "user", csConfig.user());
+		putIfNonNull(props, ".password", csConfig._password());
+		putIfNonNull(props, "auth.clientcert.path", csConfig.certPath());
+		putIfNonNull(props, "auth.clientcert.key", csConfig.certKey());
+		putIfNonNull(props, "auth.clientcert.ca.path", csConfig.caPath());
+		if(csConfig.caChainPath() != null && csConfig.caChainPath().length != 0) {
+			props.put("auth.trusted.certs", csConfig.caChainPath());
+		}
+		if (csConfig.certPath() != null) {
+			props.put("auth.clientcert.key.algorithm", "EC");
+		}
 		props.put("auth.allow.expired", true);
 
 		logger.log(Level.DEBUG, "Update configuration for {0} with {1}", config, props);
 		config.updateIfDifferent(props);
+	}
+
+	private void putIfNonNull(Dictionary<String, Object> props, String key, Object value) {
+		if (value != null) {
+			props.put(key, value);
+		}
 	}
 
 }
