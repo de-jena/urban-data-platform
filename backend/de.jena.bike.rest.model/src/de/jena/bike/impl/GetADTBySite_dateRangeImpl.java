@@ -14,7 +14,7 @@
 package de.jena.bike.impl;
 
 import de.jena.bike.BikePackage;
-import de.jena.bike.HistoricalAggregatedTrafficGroupBy;
+import de.jena.bike.GetADTBySite_dateRange;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -22,18 +22,18 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Historical Aggregated Traffic Group By</b></em>'.
+ * An implementation of the model object '<em><b>Get ADT By Site date Range</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class HistoricalAggregatedTrafficGroupByImpl extends MinimalEObjectImpl.Container implements HistoricalAggregatedTrafficGroupBy {
+public class GetADTBySite_dateRangeImpl extends MinimalEObjectImpl.Container implements GetADTBySite_dateRange {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected HistoricalAggregatedTrafficGroupByImpl() {
+	protected GetADTBySite_dateRangeImpl() {
 		super();
 	}
 
@@ -44,7 +44,7 @@ public class HistoricalAggregatedTrafficGroupByImpl extends MinimalEObjectImpl.C
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return BikePackage.Literals.HISTORICAL_AGGREGATED_TRAFFIC_GROUP_BY;
+		return BikePackage.Literals.GET_ADT_BY_SITE_DATE_RANGE;
 	}
 
-} //HistoricalAggregatedTrafficGroupByImpl
+} //GetADTBySite_dateRangeImpl

@@ -14,7 +14,7 @@
 package de.jena.bike.impl;
 
 import de.jena.bike.BikePackage;
-import de.jena.bike.DateRange;
+import de.jena.bike.GetADT_dateRange;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -22,18 +22,18 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Date Range</b></em>'.
+ * An implementation of the model object '<em><b>Get ADT date Range</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class DateRangeImpl extends MinimalEObjectImpl.Container implements DateRange {
+public class GetADT_dateRangeImpl extends MinimalEObjectImpl.Container implements GetADT_dateRange {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DateRangeImpl() {
+	protected GetADT_dateRangeImpl() {
 		super();
 	}
 
@@ -44,7 +44,7 @@ public class DateRangeImpl extends MinimalEObjectImpl.Container implements DateR
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return BikePackage.Literals.DATE_RANGE;
+		return BikePackage.Literals.GET_ADT_DATE_RANGE;
 	}
 
-} //DateRangeImpl
+} //GetADT_dateRangeImpl

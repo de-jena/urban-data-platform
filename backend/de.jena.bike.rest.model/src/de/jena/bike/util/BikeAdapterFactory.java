@@ -103,10 +103,6 @@ public class BikeAdapterFactory extends AdapterFactoryImpl {
 				return createGeoJsonObjectAdapter();
 			}
 			@Override
-			public Adapter caseTravelModeLabel(TravelModeLabel object) {
-				return createTravelModeLabelAdapter();
-			}
-			@Override
 			public Adapter casesiteCounter(siteCounter object) {
 				return createsiteCounterAdapter();
 			}
@@ -159,18 +155,6 @@ public class BikeAdapterFactory extends AdapterFactoryImpl {
 				return createNotFoundAdapter();
 			}
 			@Override
-			public Adapter caseDateRange(DateRange object) {
-				return createDateRangeAdapter();
-			}
-			@Override
-			public Adapter caseStatisticalAverageGroupBy(StatisticalAverageGroupBy object) {
-				return createStatisticalAverageGroupByAdapter();
-			}
-			@Override
-			public Adapter caseDirection(Direction object) {
-				return createDirectionAdapter();
-			}
-			@Override
 			public Adapter caseDirectionName(DirectionName object) {
 				return createDirectionNameAdapter();
 			}
@@ -181,14 +165,6 @@ public class BikeAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseStatisticalTraffic(StatisticalTraffic object) {
 				return createStatisticalTrafficAdapter();
-			}
-			@Override
-			public Adapter caseStatisticalTotalGroupBy(StatisticalTotalGroupBy object) {
-				return createStatisticalTotalGroupByAdapter();
-			}
-			@Override
-			public Adapter caseHistoricalRawTrafficInclude(HistoricalRawTrafficInclude object) {
-				return createHistoricalRawTrafficIncludeAdapter();
 			}
 			@Override
 			public Adapter caseBaseSerie(BaseSerie object) {
@@ -211,18 +187,6 @@ public class BikeAdapterFactory extends AdapterFactoryImpl {
 				return createHistoricalRawTrafficAdapter();
 			}
 			@Override
-			public Adapter caseHistoricalAggregatedTrafficInclude(HistoricalAggregatedTrafficInclude object) {
-				return createHistoricalAggregatedTrafficIncludeAdapter();
-			}
-			@Override
-			public Adapter caseGranularity(Granularity object) {
-				return createGranularityAdapter();
-			}
-			@Override
-			public Adapter caseHistoricalAggregatedTrafficGroupBy(HistoricalAggregatedTrafficGroupBy object) {
-				return createHistoricalAggregatedTrafficGroupByAdapter();
-			}
-			@Override
 			public Adapter caseHistoricalAggregatedTraffic(HistoricalAggregatedTraffic object) {
 				return createHistoricalAggregatedTrafficAdapter();
 			}
@@ -233,10 +197,6 @@ public class BikeAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseHistoricalTimestampTraffic(HistoricalTimestampTraffic object) {
 				return createHistoricalTimestampTrafficAdapter();
-			}
-			@Override
-			public Adapter casevalidationJobStatus(validationJobStatus object) {
-				return createvalidationJobStatusAdapter();
 			}
 			@Override
 			public Adapter casevalidationJob(validationJob object) {
@@ -251,20 +211,120 @@ public class BikeAdapterFactory extends AdapterFactoryImpl {
 				return createConflictAdapter();
 			}
 			@Override
+			public Adapter caseLineString_coordinates(LineString_coordinates object) {
+				return createLineString_coordinatesAdapter();
+			}
+			@Override
+			public Adapter casesite_location(site_location object) {
+				return createsite_locationAdapter();
+			}
+			@Override
+			public Adapter casesite_segments(site_segments object) {
+				return createsite_segmentsAdapter();
+			}
+			@Override
+			public Adapter casesite_travelModes(site_travelModes object) {
+				return createsite_travelModesAdapter();
+			}
+			@Override
+			public Adapter casesite_counters(site_counters object) {
+				return createsite_countersAdapter();
+			}
+			@Override
+			public Adapter casesite_domain(site_domain object) {
+				return createsite_domainAdapter();
+			}
+			@Override
+			public Adapter casesite_tags(site_tags object) {
+				return createsite_tagsAdapter();
+			}
+			@Override
+			public Adapter casesite_images(site_images object) {
+				return createsite_imagesAdapter();
+			}
+			@Override
+			public Adapter casetag_domain(tag_domain object) {
+				return createtag_domainAdapter();
+			}
+			@Override
+			public Adapter caseStatisticalTraffic_travelMode(StatisticalTraffic_travelMode object) {
+				return createStatisticalTraffic_travelModeAdapter();
+			}
+			@Override
+			public Adapter caseStatisticalTraffic_direction(StatisticalTraffic_direction object) {
+				return createStatisticalTraffic_directionAdapter();
+			}
+			@Override
+			public Adapter caseStatisticalTraffic_directionName(StatisticalTraffic_directionName object) {
+				return createStatisticalTraffic_directionNameAdapter();
+			}
+			@Override
+			public Adapter caseStatisticalTraffic_value(StatisticalTraffic_value object) {
+				return createStatisticalTraffic_valueAdapter();
+			}
+			@Override
+			public Adapter caseBaseSerie_travelMode(BaseSerie_travelMode object) {
+				return createBaseSerie_travelModeAdapter();
+			}
+			@Override
+			public Adapter caseBaseSerie_direction(BaseSerie_direction object) {
+				return createBaseSerie_directionAdapter();
+			}
+			@Override
 			public Adapter caseHistoricalRawTraffic_data(HistoricalRawTraffic_data object) {
 				return createHistoricalRawTraffic_dataAdapter();
+			}
+			@Override
+			public Adapter caseHistoricalRawTraffic_data_timestamp(HistoricalRawTraffic_data_timestamp object) {
+				return createHistoricalRawTraffic_data_timestampAdapter();
+			}
+			@Override
+			public Adapter caseHistoricalRawTraffic_data_counts(HistoricalRawTraffic_data_counts object) {
+				return createHistoricalRawTraffic_data_countsAdapter();
+			}
+			@Override
+			public Adapter caseHistoricalRawTraffic_data_status(HistoricalRawTraffic_data_status object) {
+				return createHistoricalRawTraffic_data_statusAdapter();
 			}
 			@Override
 			public Adapter caseHistoricalAggregatedTraffic_data(HistoricalAggregatedTraffic_data object) {
 				return createHistoricalAggregatedTraffic_dataAdapter();
 			}
 			@Override
+			public Adapter caseHistoricalAggregatedTraffic_data_timestamp(HistoricalAggregatedTraffic_data_timestamp object) {
+				return createHistoricalAggregatedTraffic_data_timestampAdapter();
+			}
+			@Override
 			public Adapter caseHistoricalAggregatedTraffic_data_traffic(HistoricalAggregatedTraffic_data_traffic object) {
 				return createHistoricalAggregatedTraffic_data_trafficAdapter();
 			}
 			@Override
+			public Adapter caseHistoricalAggregatedTraffic_data_traffic_counts(HistoricalAggregatedTraffic_data_traffic_counts object) {
+				return createHistoricalAggregatedTraffic_data_traffic_countsAdapter();
+			}
+			@Override
 			public Adapter caseHistoricalAggregatedTraffic_data_weather(HistoricalAggregatedTraffic_data_weather object) {
 				return createHistoricalAggregatedTraffic_data_weatherAdapter();
+			}
+			@Override
+			public Adapter caseHistoricalAggregatedTraffic_directionName(HistoricalAggregatedTraffic_directionName object) {
+				return createHistoricalAggregatedTraffic_directionNameAdapter();
+			}
+			@Override
+			public Adapter caseHistoricalTimestampTraffic_timestamp(HistoricalTimestampTraffic_timestamp object) {
+				return createHistoricalTimestampTraffic_timestampAdapter();
+			}
+			@Override
+			public Adapter caseHistoricalTimestampTraffic_lane(HistoricalTimestampTraffic_lane object) {
+				return createHistoricalTimestampTraffic_laneAdapter();
+			}
+			@Override
+			public Adapter casevalidationJob_status(validationJob_status object) {
+				return createvalidationJob_statusAdapter();
+			}
+			@Override
+			public Adapter casevalidationJobCreated_status(validationJobCreated_status object) {
+				return createvalidationJobCreated_statusAdapter();
 			}
 			@Override
 			public Adapter caseResponse(Response object) {
@@ -277,6 +337,78 @@ public class BikeAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseBikeOpenApiClient(BikeOpenApiClient object) {
 				return createBikeOpenApiClientAdapter();
+			}
+			@Override
+			public Adapter caseCreateExport_request(CreateExport_request object) {
+				return createCreateExport_requestAdapter();
+			}
+			@Override
+			public Adapter caseGetADT_dateRange(GetADT_dateRange object) {
+				return createGetADT_dateRangeAdapter();
+			}
+			@Override
+			public Adapter caseGetADT_groupBy(GetADT_groupBy object) {
+				return createGetADT_groupByAdapter();
+			}
+			@Override
+			public Adapter caseGetADT_travelModes(GetADT_travelModes object) {
+				return createGetADT_travelModesAdapter();
+			}
+			@Override
+			public Adapter caseGetADTBySite_dateRange(GetADTBySite_dateRange object) {
+				return createGetADTBySite_dateRangeAdapter();
+			}
+			@Override
+			public Adapter caseGetADTBySite_groupBy(GetADTBySite_groupBy object) {
+				return createGetADTBySite_groupByAdapter();
+			}
+			@Override
+			public Adapter caseGetADTBySite_travelModes(GetADTBySite_travelModes object) {
+				return createGetADTBySite_travelModesAdapter();
+			}
+			@Override
+			public Adapter caseGetTotalTraffic_dateRange(GetTotalTraffic_dateRange object) {
+				return createGetTotalTraffic_dateRangeAdapter();
+			}
+			@Override
+			public Adapter caseGetTotalTraffic_groupBy(GetTotalTraffic_groupBy object) {
+				return createGetTotalTraffic_groupByAdapter();
+			}
+			@Override
+			public Adapter caseGetTotalTraffic_travelModes(GetTotalTraffic_travelModes object) {
+				return createGetTotalTraffic_travelModesAdapter();
+			}
+			@Override
+			public Adapter caseGetRawTraffic_include(GetRawTraffic_include object) {
+				return createGetRawTraffic_includeAdapter();
+			}
+			@Override
+			public Adapter caseGetRawTraffic_travelModes(GetRawTraffic_travelModes object) {
+				return createGetRawTraffic_travelModesAdapter();
+			}
+			@Override
+			public Adapter caseGetAggregatedTraffic_include(GetAggregatedTraffic_include object) {
+				return createGetAggregatedTraffic_includeAdapter();
+			}
+			@Override
+			public Adapter caseGetAggregatedTraffic_granularity(GetAggregatedTraffic_granularity object) {
+				return createGetAggregatedTraffic_granularityAdapter();
+			}
+			@Override
+			public Adapter caseGetAggregatedTraffic_groupBy(GetAggregatedTraffic_groupBy object) {
+				return createGetAggregatedTraffic_groupByAdapter();
+			}
+			@Override
+			public Adapter caseGetAggregatedTraffic_travelModes(GetAggregatedTraffic_travelModes object) {
+				return createGetAggregatedTraffic_travelModesAdapter();
+			}
+			@Override
+			public Adapter caseGetTimestampTraffic_travelModes(GetTimestampTraffic_travelModes object) {
+				return createGetTimestampTraffic_travelModesAdapter();
+			}
+			@Override
+			public Adapter caseGetTimestampTraffic_directions(GetTimestampTraffic_directions object) {
+				return createGetTimestampTraffic_directionsAdapter();
 			}
 			@Override
 			public Adapter caseValidationJobCreate_request(ValidationJobCreate_request object) {
@@ -383,20 +515,6 @@ public class BikeAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGeoJsonObjectAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link de.jena.bike.TravelModeLabel <em>Travel Mode Label</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.jena.bike.TravelModeLabel
-	 * @generated
-	 */
-	public Adapter createTravelModeLabelAdapter() {
 		return null;
 	}
 
@@ -583,48 +701,6 @@ public class BikeAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.jena.bike.DateRange <em>Date Range</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.jena.bike.DateRange
-	 * @generated
-	 */
-	public Adapter createDateRangeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link de.jena.bike.StatisticalAverageGroupBy <em>Statistical Average Group By</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.jena.bike.StatisticalAverageGroupBy
-	 * @generated
-	 */
-	public Adapter createStatisticalAverageGroupByAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link de.jena.bike.Direction <em>Direction</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.jena.bike.Direction
-	 * @generated
-	 */
-	public Adapter createDirectionAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link de.jena.bike.DirectionName <em>Direction Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -663,34 +739,6 @@ public class BikeAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createStatisticalTrafficAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link de.jena.bike.StatisticalTotalGroupBy <em>Statistical Total Group By</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.jena.bike.StatisticalTotalGroupBy
-	 * @generated
-	 */
-	public Adapter createStatisticalTotalGroupByAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link de.jena.bike.HistoricalRawTrafficInclude <em>Historical Raw Traffic Include</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.jena.bike.HistoricalRawTrafficInclude
-	 * @generated
-	 */
-	public Adapter createHistoricalRawTrafficIncludeAdapter() {
 		return null;
 	}
 
@@ -765,48 +813,6 @@ public class BikeAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.jena.bike.HistoricalAggregatedTrafficInclude <em>Historical Aggregated Traffic Include</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.jena.bike.HistoricalAggregatedTrafficInclude
-	 * @generated
-	 */
-	public Adapter createHistoricalAggregatedTrafficIncludeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link de.jena.bike.Granularity <em>Granularity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.jena.bike.Granularity
-	 * @generated
-	 */
-	public Adapter createGranularityAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link de.jena.bike.HistoricalAggregatedTrafficGroupBy <em>Historical Aggregated Traffic Group By</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.jena.bike.HistoricalAggregatedTrafficGroupBy
-	 * @generated
-	 */
-	public Adapter createHistoricalAggregatedTrafficGroupByAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link de.jena.bike.HistoricalAggregatedTraffic <em>Historical Aggregated Traffic</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -845,20 +851,6 @@ public class BikeAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createHistoricalTimestampTrafficAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link de.jena.bike.validationJobStatus <em>validation Job Status</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.jena.bike.validationJobStatus
-	 * @generated
-	 */
-	public Adapter createvalidationJobStatusAdapter() {
 		return null;
 	}
 
@@ -905,6 +897,216 @@ public class BikeAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.LineString_coordinates <em>Line String coordinates</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.LineString_coordinates
+	 * @generated
+	 */
+	public Adapter createLineString_coordinatesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.site_location <em>site location</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.site_location
+	 * @generated
+	 */
+	public Adapter createsite_locationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.site_segments <em>site segments</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.site_segments
+	 * @generated
+	 */
+	public Adapter createsite_segmentsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.site_travelModes <em>site travel Modes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.site_travelModes
+	 * @generated
+	 */
+	public Adapter createsite_travelModesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.site_counters <em>site counters</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.site_counters
+	 * @generated
+	 */
+	public Adapter createsite_countersAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.site_domain <em>site domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.site_domain
+	 * @generated
+	 */
+	public Adapter createsite_domainAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.site_tags <em>site tags</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.site_tags
+	 * @generated
+	 */
+	public Adapter createsite_tagsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.site_images <em>site images</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.site_images
+	 * @generated
+	 */
+	public Adapter createsite_imagesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.tag_domain <em>tag domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.tag_domain
+	 * @generated
+	 */
+	public Adapter createtag_domainAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.StatisticalTraffic_travelMode <em>Statistical Traffic travel Mode</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.StatisticalTraffic_travelMode
+	 * @generated
+	 */
+	public Adapter createStatisticalTraffic_travelModeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.StatisticalTraffic_direction <em>Statistical Traffic direction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.StatisticalTraffic_direction
+	 * @generated
+	 */
+	public Adapter createStatisticalTraffic_directionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.StatisticalTraffic_directionName <em>Statistical Traffic direction Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.StatisticalTraffic_directionName
+	 * @generated
+	 */
+	public Adapter createStatisticalTraffic_directionNameAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.StatisticalTraffic_value <em>Statistical Traffic value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.StatisticalTraffic_value
+	 * @generated
+	 */
+	public Adapter createStatisticalTraffic_valueAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.BaseSerie_travelMode <em>Base Serie travel Mode</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.BaseSerie_travelMode
+	 * @generated
+	 */
+	public Adapter createBaseSerie_travelModeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.BaseSerie_direction <em>Base Serie direction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.BaseSerie_direction
+	 * @generated
+	 */
+	public Adapter createBaseSerie_directionAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link de.jena.bike.HistoricalRawTraffic_data <em>Historical Raw Traffic data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -915,6 +1117,48 @@ public class BikeAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createHistoricalRawTraffic_dataAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.HistoricalRawTraffic_data_timestamp <em>Historical Raw Traffic data timestamp</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.HistoricalRawTraffic_data_timestamp
+	 * @generated
+	 */
+	public Adapter createHistoricalRawTraffic_data_timestampAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.HistoricalRawTraffic_data_counts <em>Historical Raw Traffic data counts</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.HistoricalRawTraffic_data_counts
+	 * @generated
+	 */
+	public Adapter createHistoricalRawTraffic_data_countsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.HistoricalRawTraffic_data_status <em>Historical Raw Traffic data status</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.HistoricalRawTraffic_data_status
+	 * @generated
+	 */
+	public Adapter createHistoricalRawTraffic_data_statusAdapter() {
 		return null;
 	}
 
@@ -933,6 +1177,20 @@ public class BikeAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.HistoricalAggregatedTraffic_data_timestamp <em>Historical Aggregated Traffic data timestamp</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.HistoricalAggregatedTraffic_data_timestamp
+	 * @generated
+	 */
+	public Adapter createHistoricalAggregatedTraffic_data_timestampAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link de.jena.bike.HistoricalAggregatedTraffic_data_traffic <em>Historical Aggregated Traffic data traffic</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -947,6 +1205,20 @@ public class BikeAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.HistoricalAggregatedTraffic_data_traffic_counts <em>Historical Aggregated Traffic data traffic counts</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.HistoricalAggregatedTraffic_data_traffic_counts
+	 * @generated
+	 */
+	public Adapter createHistoricalAggregatedTraffic_data_traffic_countsAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link de.jena.bike.HistoricalAggregatedTraffic_data_weather <em>Historical Aggregated Traffic data weather</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -957,6 +1229,76 @@ public class BikeAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createHistoricalAggregatedTraffic_data_weatherAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.HistoricalAggregatedTraffic_directionName <em>Historical Aggregated Traffic direction Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.HistoricalAggregatedTraffic_directionName
+	 * @generated
+	 */
+	public Adapter createHistoricalAggregatedTraffic_directionNameAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.HistoricalTimestampTraffic_timestamp <em>Historical Timestamp Traffic timestamp</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.HistoricalTimestampTraffic_timestamp
+	 * @generated
+	 */
+	public Adapter createHistoricalTimestampTraffic_timestampAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.HistoricalTimestampTraffic_lane <em>Historical Timestamp Traffic lane</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.HistoricalTimestampTraffic_lane
+	 * @generated
+	 */
+	public Adapter createHistoricalTimestampTraffic_laneAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.validationJob_status <em>validation Job status</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.validationJob_status
+	 * @generated
+	 */
+	public Adapter createvalidationJob_statusAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.validationJobCreated_status <em>validation Job Created status</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.validationJobCreated_status
+	 * @generated
+	 */
+	public Adapter createvalidationJobCreated_statusAdapter() {
 		return null;
 	}
 
@@ -999,6 +1341,258 @@ public class BikeAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createBikeOpenApiClientAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.CreateExport_request <em>Create Export request</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.CreateExport_request
+	 * @generated
+	 */
+	public Adapter createCreateExport_requestAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.GetADT_dateRange <em>Get ADT date Range</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.GetADT_dateRange
+	 * @generated
+	 */
+	public Adapter createGetADT_dateRangeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.GetADT_groupBy <em>Get ADT group By</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.GetADT_groupBy
+	 * @generated
+	 */
+	public Adapter createGetADT_groupByAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.GetADT_travelModes <em>Get ADT travel Modes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.GetADT_travelModes
+	 * @generated
+	 */
+	public Adapter createGetADT_travelModesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.GetADTBySite_dateRange <em>Get ADT By Site date Range</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.GetADTBySite_dateRange
+	 * @generated
+	 */
+	public Adapter createGetADTBySite_dateRangeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.GetADTBySite_groupBy <em>Get ADT By Site group By</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.GetADTBySite_groupBy
+	 * @generated
+	 */
+	public Adapter createGetADTBySite_groupByAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.GetADTBySite_travelModes <em>Get ADT By Site travel Modes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.GetADTBySite_travelModes
+	 * @generated
+	 */
+	public Adapter createGetADTBySite_travelModesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.GetTotalTraffic_dateRange <em>Get Total Traffic date Range</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.GetTotalTraffic_dateRange
+	 * @generated
+	 */
+	public Adapter createGetTotalTraffic_dateRangeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.GetTotalTraffic_groupBy <em>Get Total Traffic group By</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.GetTotalTraffic_groupBy
+	 * @generated
+	 */
+	public Adapter createGetTotalTraffic_groupByAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.GetTotalTraffic_travelModes <em>Get Total Traffic travel Modes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.GetTotalTraffic_travelModes
+	 * @generated
+	 */
+	public Adapter createGetTotalTraffic_travelModesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.GetRawTraffic_include <em>Get Raw Traffic include</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.GetRawTraffic_include
+	 * @generated
+	 */
+	public Adapter createGetRawTraffic_includeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.GetRawTraffic_travelModes <em>Get Raw Traffic travel Modes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.GetRawTraffic_travelModes
+	 * @generated
+	 */
+	public Adapter createGetRawTraffic_travelModesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.GetAggregatedTraffic_include <em>Get Aggregated Traffic include</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.GetAggregatedTraffic_include
+	 * @generated
+	 */
+	public Adapter createGetAggregatedTraffic_includeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.GetAggregatedTraffic_granularity <em>Get Aggregated Traffic granularity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.GetAggregatedTraffic_granularity
+	 * @generated
+	 */
+	public Adapter createGetAggregatedTraffic_granularityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.GetAggregatedTraffic_groupBy <em>Get Aggregated Traffic group By</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.GetAggregatedTraffic_groupBy
+	 * @generated
+	 */
+	public Adapter createGetAggregatedTraffic_groupByAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.GetAggregatedTraffic_travelModes <em>Get Aggregated Traffic travel Modes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.GetAggregatedTraffic_travelModes
+	 * @generated
+	 */
+	public Adapter createGetAggregatedTraffic_travelModesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.GetTimestampTraffic_travelModes <em>Get Timestamp Traffic travel Modes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.GetTimestampTraffic_travelModes
+	 * @generated
+	 */
+	public Adapter createGetTimestampTraffic_travelModesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.bike.GetTimestampTraffic_directions <em>Get Timestamp Traffic directions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.bike.GetTimestampTraffic_directions
+	 * @generated
+	 */
+	public Adapter createGetTimestampTraffic_directionsAdapter() {
 		return null;
 	}
 

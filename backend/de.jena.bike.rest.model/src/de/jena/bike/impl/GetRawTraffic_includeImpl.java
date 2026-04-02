@@ -14,7 +14,7 @@
 package de.jena.bike.impl;
 
 import de.jena.bike.BikePackage;
-import de.jena.bike.Direction;
+import de.jena.bike.GetRawTraffic_include;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -22,18 +22,18 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Direction</b></em>'.
+ * An implementation of the model object '<em><b>Get Raw Traffic include</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class DirectionImpl extends MinimalEObjectImpl.Container implements Direction {
+public class GetRawTraffic_includeImpl extends MinimalEObjectImpl.Container implements GetRawTraffic_include {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DirectionImpl() {
+	protected GetRawTraffic_includeImpl() {
 		super();
 	}
 
@@ -44,7 +44,7 @@ public class DirectionImpl extends MinimalEObjectImpl.Container implements Direc
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return BikePackage.Literals.DIRECTION;
+		return BikePackage.Literals.GET_RAW_TRAFFIC_INCLUDE;
 	}
 
-} //DirectionImpl
+} //GetRawTraffic_includeImpl

@@ -14,7 +14,7 @@
 package de.jena.bike.impl;
 
 import de.jena.bike.BikePackage;
-import de.jena.bike.StatisticalAverageGroupBy;
+import de.jena.bike.GetAggregatedTraffic_groupBy;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -22,18 +22,18 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Statistical Average Group By</b></em>'.
+ * An implementation of the model object '<em><b>Get Aggregated Traffic group By</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class StatisticalAverageGroupByImpl extends MinimalEObjectImpl.Container implements StatisticalAverageGroupBy {
+public class GetAggregatedTraffic_groupByImpl extends MinimalEObjectImpl.Container implements GetAggregatedTraffic_groupBy {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected StatisticalAverageGroupByImpl() {
+	protected GetAggregatedTraffic_groupByImpl() {
 		super();
 	}
 
@@ -44,7 +44,7 @@ public class StatisticalAverageGroupByImpl extends MinimalEObjectImpl.Container 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return BikePackage.Literals.STATISTICAL_AVERAGE_GROUP_BY;
+		return BikePackage.Literals.GET_AGGREGATED_TRAFFIC_GROUP_BY;
 	}
 
-} //StatisticalAverageGroupByImpl
+} //GetAggregatedTraffic_groupByImpl

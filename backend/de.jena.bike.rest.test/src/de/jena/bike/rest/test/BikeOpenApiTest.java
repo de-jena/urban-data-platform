@@ -16,7 +16,6 @@ package de.jena.bike.rest.test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.math.BigInteger;
-import java.time.Instant;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
@@ -38,7 +37,7 @@ import org.osgi.test.junit5.context.BundleContextExtension;
 import org.osgi.test.junit5.service.ServiceExtension;
 
 import de.jena.bike.BikeFactory;
-import de.jena.bike.DateRange;
+import de.jena.bike.GetTotalTraffic_dateRange;
 import de.jena.bike.HistoricalRawTraffic;
 import de.jena.bike.HistoricalRawTraffic_data;
 import de.jena.bike.Response;
@@ -96,7 +95,7 @@ public class BikeOpenApiTest {
 			HistoricalRawTraffic hrt = (HistoricalRawTraffic) eObject;
 			EList<HistoricalRawTraffic_data> data = hrt.getData();
 		}
-		DateRange range = BikeFactory.eINSTANCE.createDateRange();
+		GetTotalTraffic_dateRange range = BikeFactory.eINSTANCE.createGetTotalTraffic_dateRange();
 		Response totalResponse = api.GetTotalTraffic(null, BigInteger.valueOf(100046725), range , null, null, null, null, false);
 
 	}

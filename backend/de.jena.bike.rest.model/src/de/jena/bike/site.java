@@ -149,12 +149,12 @@ public interface site extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Location</em>' containment reference.
-	 * @see #setLocation(Location)
+	 * @see #setLocation(site_location)
 	 * @see de.jena.bike.BikePackage#getsite_Location()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Location getLocation();
+	site_location getLocation();
 
 	/**
 	 * Sets the value of the '{@link de.jena.bike.site#getLocation <em>Location</em>}' containment reference.
@@ -164,19 +164,19 @@ public interface site extends EObject {
 	 * @see #getLocation()
 	 * @generated
 	 */
-	void setLocation(Location value);
+	void setLocation(site_location value);
 
 	/**
 	 * Returns the value of the '<em><b>Segments</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Segments</em>' containment reference.
-	 * @see #setSegments(GeoJsonObject)
+	 * @see #setSegments(site_segments)
 	 * @see de.jena.bike.BikePackage#getsite_Segments()
 	 * @model containment="true"
 	 * @generated
 	 */
-	GeoJsonObject getSegments();
+	site_segments getSegments();
 
 	/**
 	 * Sets the value of the '{@link de.jena.bike.site#getSegments <em>Segments</em>}' containment reference.
@@ -186,7 +186,7 @@ public interface site extends EObject {
 	 * @see #getSegments()
 	 * @generated
 	 */
-	void setSegments(GeoJsonObject value);
+	void setSegments(site_segments value);
 
 	/**
 	 * Returns the value of the '<em><b>First Data</b></em>' attribute.
@@ -256,7 +256,7 @@ public interface site extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Travel Modes</b></em>' containment reference list.
-	 * The list contents are of type {@link de.jena.bike.TravelModeLabel}.
+	 * The list contents are of type {@link de.jena.bike.site_travelModes}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Travel Modes</em>' containment reference list.
@@ -264,7 +264,7 @@ public interface site extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<TravelModeLabel> getTravelModes();
+	EList<site_travelModes> getTravelModes();
 
 	/**
 	 * Returns the value of the '<em><b>Directional</b></em>' attribute.
@@ -290,7 +290,7 @@ public interface site extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Counters</b></em>' containment reference list.
-	 * The list contents are of type {@link de.jena.bike.siteCounter}.
+	 * The list contents are of type {@link de.jena.bike.site_counters}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Counters</em>' containment reference list.
@@ -298,19 +298,19 @@ public interface site extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<siteCounter> getCounters();
+	EList<site_counters> getCounters();
 
 	/**
 	 * Returns the value of the '<em><b>Domain</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Domain</em>' containment reference.
-	 * @see #setDomain(Domain)
+	 * @see #setDomain(site_domain)
 	 * @see de.jena.bike.BikePackage#getsite_Domain()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Domain getDomain();
+	site_domain getDomain();
 
 	/**
 	 * Sets the value of the '{@link de.jena.bike.site#getDomain <em>Domain</em>}' containment reference.
@@ -320,11 +320,11 @@ public interface site extends EObject {
 	 * @see #getDomain()
 	 * @generated
 	 */
-	void setDomain(Domain value);
+	void setDomain(site_domain value);
 
 	/**
 	 * Returns the value of the '<em><b>Tags</b></em>' containment reference list.
-	 * The list contents are of type {@link de.jena.bike.siteTag}.
+	 * The list contents are of type {@link de.jena.bike.site_tags}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Tags</em>' containment reference list.
@@ -332,11 +332,11 @@ public interface site extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<siteTag> getTags();
+	EList<site_tags> getTags();
 
 	/**
 	 * Returns the value of the '<em><b>Images</b></em>' containment reference list.
-	 * The list contents are of type {@link de.jena.bike.Image}.
+	 * The list contents are of type {@link de.jena.bike.site_images}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Images</em>' containment reference list.
@@ -344,7 +344,7 @@ public interface site extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Image> getImages();
+	EList<site_images> getImages();
 
 	/**
 	 * Returns the value of the '<em><b>Attributes</b></em>' attribute.

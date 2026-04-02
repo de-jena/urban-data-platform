@@ -14,9 +14,9 @@
 package de.jena.bike.impl;
 
 import de.jena.bike.BaseSerie;
+import de.jena.bike.BaseSerie_direction;
+import de.jena.bike.BaseSerie_travelMode;
 import de.jena.bike.BikePackage;
-import de.jena.bike.Direction;
-import de.jena.bike.TravelModeLabel;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -50,7 +50,7 @@ public class BaseSerieImpl extends MinimalEObjectImpl.Container implements BaseS
 	 * @generated
 	 * @ordered
 	 */
-	protected TravelModeLabel travelMode;
+	protected BaseSerie_travelMode travelMode;
 
 	/**
 	 * The cached value of the '{@link #getDirection() <em>Direction</em>}' containment reference.
@@ -60,7 +60,7 @@ public class BaseSerieImpl extends MinimalEObjectImpl.Container implements BaseS
 	 * @generated
 	 * @ordered
 	 */
-	protected Direction direction;
+	protected BaseSerie_direction direction;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -87,7 +87,7 @@ public class BaseSerieImpl extends MinimalEObjectImpl.Container implements BaseS
 	 * @generated
 	 */
 	@Override
-	public TravelModeLabel getTravelMode() {
+	public BaseSerie_travelMode getTravelMode() {
 		return travelMode;
 	}
 
@@ -96,8 +96,8 @@ public class BaseSerieImpl extends MinimalEObjectImpl.Container implements BaseS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTravelMode(TravelModeLabel newTravelMode, NotificationChain msgs) {
-		TravelModeLabel oldTravelMode = travelMode;
+	public NotificationChain basicSetTravelMode(BaseSerie_travelMode newTravelMode, NotificationChain msgs) {
+		BaseSerie_travelMode oldTravelMode = travelMode;
 		travelMode = newTravelMode;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BikePackage.BASE_SERIE__TRAVEL_MODE, oldTravelMode, newTravelMode);
@@ -112,7 +112,7 @@ public class BaseSerieImpl extends MinimalEObjectImpl.Container implements BaseS
 	 * @generated
 	 */
 	@Override
-	public void setTravelMode(TravelModeLabel newTravelMode) {
+	public void setTravelMode(BaseSerie_travelMode newTravelMode) {
 		if (newTravelMode != travelMode) {
 			NotificationChain msgs = null;
 			if (travelMode != null)
@@ -132,7 +132,7 @@ public class BaseSerieImpl extends MinimalEObjectImpl.Container implements BaseS
 	 * @generated
 	 */
 	@Override
-	public Direction getDirection() {
+	public BaseSerie_direction getDirection() {
 		return direction;
 	}
 
@@ -141,8 +141,8 @@ public class BaseSerieImpl extends MinimalEObjectImpl.Container implements BaseS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDirection(Direction newDirection, NotificationChain msgs) {
-		Direction oldDirection = direction;
+	public NotificationChain basicSetDirection(BaseSerie_direction newDirection, NotificationChain msgs) {
+		BaseSerie_direction oldDirection = direction;
 		direction = newDirection;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BikePackage.BASE_SERIE__DIRECTION, oldDirection, newDirection);
@@ -157,7 +157,7 @@ public class BaseSerieImpl extends MinimalEObjectImpl.Container implements BaseS
 	 * @generated
 	 */
 	@Override
-	public void setDirection(Direction newDirection) {
+	public void setDirection(BaseSerie_direction newDirection) {
 		if (newDirection != direction) {
 			NotificationChain msgs = null;
 			if (direction != null)
@@ -212,10 +212,10 @@ public class BaseSerieImpl extends MinimalEObjectImpl.Container implements BaseS
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case BikePackage.BASE_SERIE__TRAVEL_MODE:
-				setTravelMode((TravelModeLabel)newValue);
+				setTravelMode((BaseSerie_travelMode)newValue);
 				return;
 			case BikePackage.BASE_SERIE__DIRECTION:
-				setDirection((Direction)newValue);
+				setDirection((BaseSerie_direction)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -230,10 +230,10 @@ public class BaseSerieImpl extends MinimalEObjectImpl.Container implements BaseS
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case BikePackage.BASE_SERIE__TRAVEL_MODE:
-				setTravelMode((TravelModeLabel)null);
+				setTravelMode((BaseSerie_travelMode)null);
 				return;
 			case BikePackage.BASE_SERIE__DIRECTION:
-				setDirection((Direction)null);
+				setDirection((BaseSerie_direction)null);
 				return;
 		}
 		super.eUnset(featureID);

@@ -14,8 +14,8 @@
 package de.jena.bike.impl;
 
 import de.jena.bike.BikePackage;
-import de.jena.bike.DateTime;
 import de.jena.bike.HistoricalAggregatedTraffic_data;
+import de.jena.bike.HistoricalAggregatedTraffic_data_timestamp;
 import de.jena.bike.HistoricalAggregatedTraffic_data_traffic;
 import de.jena.bike.HistoricalAggregatedTraffic_data_weather;
 
@@ -52,7 +52,7 @@ public class HistoricalAggregatedTraffic_dataImpl extends MinimalEObjectImpl.Con
 	 * @generated
 	 * @ordered
 	 */
-	protected DateTime timestamp;
+	protected HistoricalAggregatedTraffic_data_timestamp timestamp;
 
 	/**
 	 * The cached value of the '{@link #getTraffic() <em>Traffic</em>}' containment reference.
@@ -99,7 +99,7 @@ public class HistoricalAggregatedTraffic_dataImpl extends MinimalEObjectImpl.Con
 	 * @generated
 	 */
 	@Override
-	public DateTime getTimestamp() {
+	public HistoricalAggregatedTraffic_data_timestamp getTimestamp() {
 		return timestamp;
 	}
 
@@ -108,8 +108,8 @@ public class HistoricalAggregatedTraffic_dataImpl extends MinimalEObjectImpl.Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTimestamp(DateTime newTimestamp, NotificationChain msgs) {
-		DateTime oldTimestamp = timestamp;
+	public NotificationChain basicSetTimestamp(HistoricalAggregatedTraffic_data_timestamp newTimestamp, NotificationChain msgs) {
+		HistoricalAggregatedTraffic_data_timestamp oldTimestamp = timestamp;
 		timestamp = newTimestamp;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BikePackage.HISTORICAL_AGGREGATED_TRAFFIC_DATA__TIMESTAMP, oldTimestamp, newTimestamp);
@@ -124,7 +124,7 @@ public class HistoricalAggregatedTraffic_dataImpl extends MinimalEObjectImpl.Con
 	 * @generated
 	 */
 	@Override
-	public void setTimestamp(DateTime newTimestamp) {
+	public void setTimestamp(HistoricalAggregatedTraffic_data_timestamp newTimestamp) {
 		if (newTimestamp != timestamp) {
 			NotificationChain msgs = null;
 			if (timestamp != null)
@@ -273,7 +273,7 @@ public class HistoricalAggregatedTraffic_dataImpl extends MinimalEObjectImpl.Con
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case BikePackage.HISTORICAL_AGGREGATED_TRAFFIC_DATA__TIMESTAMP:
-				setTimestamp((DateTime)newValue);
+				setTimestamp((HistoricalAggregatedTraffic_data_timestamp)newValue);
 				return;
 			case BikePackage.HISTORICAL_AGGREGATED_TRAFFIC_DATA__TRAFFIC:
 				setTraffic((HistoricalAggregatedTraffic_data_traffic)newValue);
@@ -294,7 +294,7 @@ public class HistoricalAggregatedTraffic_dataImpl extends MinimalEObjectImpl.Con
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case BikePackage.HISTORICAL_AGGREGATED_TRAFFIC_DATA__TIMESTAMP:
-				setTimestamp((DateTime)null);
+				setTimestamp((HistoricalAggregatedTraffic_data_timestamp)null);
 				return;
 			case BikePackage.HISTORICAL_AGGREGATED_TRAFFIC_DATA__TRAFFIC:
 				setTraffic((HistoricalAggregatedTraffic_data_traffic)null);

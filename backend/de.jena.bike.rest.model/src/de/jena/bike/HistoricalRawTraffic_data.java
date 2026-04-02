@@ -43,12 +43,12 @@ public interface HistoricalRawTraffic_data extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Timestamp</em>' containment reference.
-	 * @see #setTimestamp(DateTime)
+	 * @see #setTimestamp(HistoricalRawTraffic_data_timestamp)
 	 * @see de.jena.bike.BikePackage#getHistoricalRawTraffic_data_Timestamp()
 	 * @model containment="true"
 	 * @generated
 	 */
-	DateTime getTimestamp();
+	HistoricalRawTraffic_data_timestamp getTimestamp();
 
 	/**
 	 * Sets the value of the '{@link de.jena.bike.HistoricalRawTraffic_data#getTimestamp <em>Timestamp</em>}' containment reference.
@@ -58,7 +58,7 @@ public interface HistoricalRawTraffic_data extends EObject {
 	 * @see #getTimestamp()
 	 * @generated
 	 */
-	void setTimestamp(DateTime value);
+	void setTimestamp(HistoricalRawTraffic_data_timestamp value);
 
 	/**
 	 * Returns the value of the '<em><b>Granularity</b></em>' attribute.
@@ -87,12 +87,12 @@ public interface HistoricalRawTraffic_data extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Counts</em>' containment reference.
-	 * @see #setCounts(Count)
+	 * @see #setCounts(HistoricalRawTraffic_data_counts)
 	 * @see de.jena.bike.BikePackage#getHistoricalRawTraffic_data_Counts()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Count getCounts();
+	HistoricalRawTraffic_data_counts getCounts();
 
 	/**
 	 * Sets the value of the '{@link de.jena.bike.HistoricalRawTraffic_data#getCounts <em>Counts</em>}' containment reference.
@@ -102,19 +102,19 @@ public interface HistoricalRawTraffic_data extends EObject {
 	 * @see #getCounts()
 	 * @generated
 	 */
-	void setCounts(Count value);
+	void setCounts(HistoricalRawTraffic_data_counts value);
 
 	/**
 	 * Returns the value of the '<em><b>Status</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Status</em>' containment reference.
-	 * @see #setStatus(DataStatus)
+	 * @see #setStatus(HistoricalRawTraffic_data_status)
 	 * @see de.jena.bike.BikePackage#getHistoricalRawTraffic_data_Status()
 	 * @model containment="true"
 	 * @generated
 	 */
-	DataStatus getStatus();
+	HistoricalRawTraffic_data_status getStatus();
 
 	/**
 	 * Sets the value of the '{@link de.jena.bike.HistoricalRawTraffic_data#getStatus <em>Status</em>}' containment reference.
@@ -124,6 +124,6 @@ public interface HistoricalRawTraffic_data extends EObject {
 	 * @see #getStatus()
 	 * @generated
 	 */
-	void setStatus(DataStatus value);
+	void setStatus(HistoricalRawTraffic_data_status value);
 
 } // HistoricalRawTraffic_data

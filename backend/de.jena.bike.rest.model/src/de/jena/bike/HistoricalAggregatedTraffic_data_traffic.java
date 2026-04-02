@@ -41,12 +41,12 @@ public interface HistoricalAggregatedTraffic_data_traffic extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Counts</em>' containment reference.
-	 * @see #setCounts(Count)
+	 * @see #setCounts(HistoricalAggregatedTraffic_data_traffic_counts)
 	 * @see de.jena.bike.BikePackage#getHistoricalAggregatedTraffic_data_traffic_Counts()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Count getCounts();
+	HistoricalAggregatedTraffic_data_traffic_counts getCounts();
 
 	/**
 	 * Sets the value of the '{@link de.jena.bike.HistoricalAggregatedTraffic_data_traffic#getCounts <em>Counts</em>}' containment reference.
@@ -56,7 +56,7 @@ public interface HistoricalAggregatedTraffic_data_traffic extends EObject {
 	 * @see #getCounts()
 	 * @generated
 	 */
-	void setCounts(Count value);
+	void setCounts(HistoricalAggregatedTraffic_data_traffic_counts value);
 
 	/**
 	 * Returns the value of the '<em><b>Status</b></em>' attribute.

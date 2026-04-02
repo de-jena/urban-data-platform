@@ -14,7 +14,7 @@
 package de.jena.bike.impl;
 
 import de.jena.bike.BikePackage;
-import de.jena.bike.HistoricalAggregatedTrafficInclude;
+import de.jena.bike.HistoricalAggregatedTraffic_data_traffic_counts;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -22,18 +22,18 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Historical Aggregated Traffic Include</b></em>'.
+ * An implementation of the model object '<em><b>Historical Aggregated Traffic data traffic counts</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class HistoricalAggregatedTrafficIncludeImpl extends MinimalEObjectImpl.Container implements HistoricalAggregatedTrafficInclude {
+public class HistoricalAggregatedTraffic_data_traffic_countsImpl extends MinimalEObjectImpl.Container implements HistoricalAggregatedTraffic_data_traffic_counts {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected HistoricalAggregatedTrafficIncludeImpl() {
+	protected HistoricalAggregatedTraffic_data_traffic_countsImpl() {
 		super();
 	}
 
@@ -44,7 +44,7 @@ public class HistoricalAggregatedTrafficIncludeImpl extends MinimalEObjectImpl.C
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return BikePackage.Literals.HISTORICAL_AGGREGATED_TRAFFIC_INCLUDE;
+		return BikePackage.Literals.HISTORICAL_AGGREGATED_TRAFFIC_DATA_TRAFFIC_COUNTS;
 	}
 
-} //HistoricalAggregatedTrafficIncludeImpl
+} //HistoricalAggregatedTraffic_data_traffic_countsImpl

@@ -41,12 +41,12 @@ public interface BaseSerie extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Travel Mode</em>' containment reference.
-	 * @see #setTravelMode(TravelModeLabel)
+	 * @see #setTravelMode(BaseSerie_travelMode)
 	 * @see de.jena.bike.BikePackage#getBaseSerie_TravelMode()
 	 * @model containment="true"
 	 * @generated
 	 */
-	TravelModeLabel getTravelMode();
+	BaseSerie_travelMode getTravelMode();
 
 	/**
 	 * Sets the value of the '{@link de.jena.bike.BaseSerie#getTravelMode <em>Travel Mode</em>}' containment reference.
@@ -56,19 +56,19 @@ public interface BaseSerie extends EObject {
 	 * @see #getTravelMode()
 	 * @generated
 	 */
-	void setTravelMode(TravelModeLabel value);
+	void setTravelMode(BaseSerie_travelMode value);
 
 	/**
 	 * Returns the value of the '<em><b>Direction</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Direction</em>' containment reference.
-	 * @see #setDirection(Direction)
+	 * @see #setDirection(BaseSerie_direction)
 	 * @see de.jena.bike.BikePackage#getBaseSerie_Direction()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Direction getDirection();
+	BaseSerie_direction getDirection();
 
 	/**
 	 * Sets the value of the '{@link de.jena.bike.BaseSerie#getDirection <em>Direction</em>}' containment reference.
@@ -78,6 +78,6 @@ public interface BaseSerie extends EObject {
 	 * @see #getDirection()
 	 * @generated
 	 */
-	void setDirection(Direction value);
+	void setDirection(BaseSerie_direction value);
 
 } // BaseSerie

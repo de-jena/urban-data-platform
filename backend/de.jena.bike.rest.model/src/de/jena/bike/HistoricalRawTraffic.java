@@ -17,6 +17,8 @@ import java.math.BigInteger;
 
 import org.eclipse.emf.common.util.EList;
 
+import org.eclipse.emf.ecore.EObject;
+
 import org.osgi.annotation.versioning.ProviderType;
 
 /**
@@ -38,7 +40,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-public interface HistoricalRawTraffic extends BaseSerie {
+public interface HistoricalRawTraffic extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Flow ID</b></em>' attribute.
 	 * <!-- begin-user-doc -->

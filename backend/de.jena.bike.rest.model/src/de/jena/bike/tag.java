@@ -134,12 +134,12 @@ public interface tag extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Domain</em>' containment reference.
-	 * @see #setDomain(Domain)
+	 * @see #setDomain(tag_domain)
 	 * @see de.jena.bike.BikePackage#gettag_Domain()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Domain getDomain();
+	tag_domain getDomain();
 
 	/**
 	 * Sets the value of the '{@link de.jena.bike.tag#getDomain <em>Domain</em>}' containment reference.
@@ -149,6 +149,6 @@ public interface tag extends EObject {
 	 * @see #getDomain()
 	 * @generated
 	 */
-	void setDomain(Domain value);
+	void setDomain(tag_domain value);
 
 } // tag

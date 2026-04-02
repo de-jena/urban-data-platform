@@ -14,8 +14,8 @@
 package de.jena.bike.impl;
 
 import de.jena.bike.BikePackage;
-import de.jena.bike.Domain;
 import de.jena.bike.tag;
+import de.jena.bike.tag_domain;
 
 import java.math.BigInteger;
 
@@ -134,7 +134,7 @@ public class tagImpl extends MinimalEObjectImpl.Container implements tag {
 	 * @generated
 	 * @ordered
 	 */
-	protected Domain domain;
+	protected tag_domain domain;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -253,7 +253,7 @@ public class tagImpl extends MinimalEObjectImpl.Container implements tag {
 	 * @generated
 	 */
 	@Override
-	public Domain getDomain() {
+	public tag_domain getDomain() {
 		return domain;
 	}
 
@@ -262,8 +262,8 @@ public class tagImpl extends MinimalEObjectImpl.Container implements tag {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDomain(Domain newDomain, NotificationChain msgs) {
-		Domain oldDomain = domain;
+	public NotificationChain basicSetDomain(tag_domain newDomain, NotificationChain msgs) {
+		tag_domain oldDomain = domain;
 		domain = newDomain;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BikePackage.TAG__DOMAIN, oldDomain, newDomain);
@@ -278,7 +278,7 @@ public class tagImpl extends MinimalEObjectImpl.Container implements tag {
 	 * @generated
 	 */
 	@Override
-	public void setDomain(Domain newDomain) {
+	public void setDomain(tag_domain newDomain) {
 		if (newDomain != domain) {
 			NotificationChain msgs = null;
 			if (domain != null)
@@ -349,7 +349,7 @@ public class tagImpl extends MinimalEObjectImpl.Container implements tag {
 				setColor((String)newValue);
 				return;
 			case BikePackage.TAG__DOMAIN:
-				setDomain((Domain)newValue);
+				setDomain((tag_domain)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -376,7 +376,7 @@ public class tagImpl extends MinimalEObjectImpl.Container implements tag {
 				setColor(COLOR_EDEFAULT);
 				return;
 			case BikePackage.TAG__DOMAIN:
-				setDomain((Domain)null);
+				setDomain((tag_domain)null);
 				return;
 		}
 		super.eUnset(featureID);

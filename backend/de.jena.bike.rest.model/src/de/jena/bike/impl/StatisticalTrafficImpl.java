@@ -14,11 +14,11 @@
 package de.jena.bike.impl;
 
 import de.jena.bike.BikePackage;
-import de.jena.bike.Direction;
-import de.jena.bike.DirectionName;
 import de.jena.bike.StatisticalTraffic;
-import de.jena.bike.TravelModeLabel;
-import de.jena.bike.Value;
+import de.jena.bike.StatisticalTraffic_direction;
+import de.jena.bike.StatisticalTraffic_directionName;
+import de.jena.bike.StatisticalTraffic_travelMode;
+import de.jena.bike.StatisticalTraffic_value;
 
 import java.math.BigInteger;
 
@@ -98,7 +98,7 @@ public class StatisticalTrafficImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 * @ordered
 	 */
-	protected TravelModeLabel travelMode;
+	protected StatisticalTraffic_travelMode travelMode;
 
 	/**
 	 * The cached value of the '{@link #getDirection() <em>Direction</em>}' containment reference.
@@ -108,7 +108,7 @@ public class StatisticalTrafficImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 * @ordered
 	 */
-	protected Direction direction;
+	protected StatisticalTraffic_direction direction;
 
 	/**
 	 * The cached value of the '{@link #getDirectionName() <em>Direction Name</em>}' containment reference.
@@ -118,7 +118,7 @@ public class StatisticalTrafficImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 * @ordered
 	 */
-	protected DirectionName directionName;
+	protected StatisticalTraffic_directionName directionName;
 
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference.
@@ -128,7 +128,7 @@ public class StatisticalTrafficImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 * @ordered
 	 */
-	protected Value value;
+	protected StatisticalTraffic_value value;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -201,7 +201,7 @@ public class StatisticalTrafficImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	public TravelModeLabel getTravelMode() {
+	public StatisticalTraffic_travelMode getTravelMode() {
 		return travelMode;
 	}
 
@@ -210,8 +210,8 @@ public class StatisticalTrafficImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTravelMode(TravelModeLabel newTravelMode, NotificationChain msgs) {
-		TravelModeLabel oldTravelMode = travelMode;
+	public NotificationChain basicSetTravelMode(StatisticalTraffic_travelMode newTravelMode, NotificationChain msgs) {
+		StatisticalTraffic_travelMode oldTravelMode = travelMode;
 		travelMode = newTravelMode;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BikePackage.STATISTICAL_TRAFFIC__TRAVEL_MODE, oldTravelMode, newTravelMode);
@@ -226,7 +226,7 @@ public class StatisticalTrafficImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	public void setTravelMode(TravelModeLabel newTravelMode) {
+	public void setTravelMode(StatisticalTraffic_travelMode newTravelMode) {
 		if (newTravelMode != travelMode) {
 			NotificationChain msgs = null;
 			if (travelMode != null)
@@ -246,7 +246,7 @@ public class StatisticalTrafficImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	public Direction getDirection() {
+	public StatisticalTraffic_direction getDirection() {
 		return direction;
 	}
 
@@ -255,8 +255,8 @@ public class StatisticalTrafficImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDirection(Direction newDirection, NotificationChain msgs) {
-		Direction oldDirection = direction;
+	public NotificationChain basicSetDirection(StatisticalTraffic_direction newDirection, NotificationChain msgs) {
+		StatisticalTraffic_direction oldDirection = direction;
 		direction = newDirection;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BikePackage.STATISTICAL_TRAFFIC__DIRECTION, oldDirection, newDirection);
@@ -271,7 +271,7 @@ public class StatisticalTrafficImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	public void setDirection(Direction newDirection) {
+	public void setDirection(StatisticalTraffic_direction newDirection) {
 		if (newDirection != direction) {
 			NotificationChain msgs = null;
 			if (direction != null)
@@ -291,7 +291,7 @@ public class StatisticalTrafficImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	public DirectionName getDirectionName() {
+	public StatisticalTraffic_directionName getDirectionName() {
 		return directionName;
 	}
 
@@ -300,8 +300,8 @@ public class StatisticalTrafficImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDirectionName(DirectionName newDirectionName, NotificationChain msgs) {
-		DirectionName oldDirectionName = directionName;
+	public NotificationChain basicSetDirectionName(StatisticalTraffic_directionName newDirectionName, NotificationChain msgs) {
+		StatisticalTraffic_directionName oldDirectionName = directionName;
 		directionName = newDirectionName;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BikePackage.STATISTICAL_TRAFFIC__DIRECTION_NAME, oldDirectionName, newDirectionName);
@@ -316,7 +316,7 @@ public class StatisticalTrafficImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	public void setDirectionName(DirectionName newDirectionName) {
+	public void setDirectionName(StatisticalTraffic_directionName newDirectionName) {
 		if (newDirectionName != directionName) {
 			NotificationChain msgs = null;
 			if (directionName != null)
@@ -336,7 +336,7 @@ public class StatisticalTrafficImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	public Value getValue() {
+	public StatisticalTraffic_value getValue() {
 		return value;
 	}
 
@@ -345,8 +345,8 @@ public class StatisticalTrafficImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetValue(Value newValue, NotificationChain msgs) {
-		Value oldValue = value;
+	public NotificationChain basicSetValue(StatisticalTraffic_value newValue, NotificationChain msgs) {
+		StatisticalTraffic_value oldValue = value;
 		value = newValue;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BikePackage.STATISTICAL_TRAFFIC__VALUE, oldValue, newValue);
@@ -361,7 +361,7 @@ public class StatisticalTrafficImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	public void setValue(Value newValue) {
+	public void setValue(StatisticalTraffic_value newValue) {
 		if (newValue != value) {
 			NotificationChain msgs = null;
 			if (value != null)
@@ -434,16 +434,16 @@ public class StatisticalTrafficImpl extends MinimalEObjectImpl.Container impleme
 				setDate((String)newValue);
 				return;
 			case BikePackage.STATISTICAL_TRAFFIC__TRAVEL_MODE:
-				setTravelMode((TravelModeLabel)newValue);
+				setTravelMode((StatisticalTraffic_travelMode)newValue);
 				return;
 			case BikePackage.STATISTICAL_TRAFFIC__DIRECTION:
-				setDirection((Direction)newValue);
+				setDirection((StatisticalTraffic_direction)newValue);
 				return;
 			case BikePackage.STATISTICAL_TRAFFIC__DIRECTION_NAME:
-				setDirectionName((DirectionName)newValue);
+				setDirectionName((StatisticalTraffic_directionName)newValue);
 				return;
 			case BikePackage.STATISTICAL_TRAFFIC__VALUE:
-				setValue((Value)newValue);
+				setValue((StatisticalTraffic_value)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -464,16 +464,16 @@ public class StatisticalTrafficImpl extends MinimalEObjectImpl.Container impleme
 				setDate(DATE_EDEFAULT);
 				return;
 			case BikePackage.STATISTICAL_TRAFFIC__TRAVEL_MODE:
-				setTravelMode((TravelModeLabel)null);
+				setTravelMode((StatisticalTraffic_travelMode)null);
 				return;
 			case BikePackage.STATISTICAL_TRAFFIC__DIRECTION:
-				setDirection((Direction)null);
+				setDirection((StatisticalTraffic_direction)null);
 				return;
 			case BikePackage.STATISTICAL_TRAFFIC__DIRECTION_NAME:
-				setDirectionName((DirectionName)null);
+				setDirectionName((StatisticalTraffic_directionName)null);
 				return;
 			case BikePackage.STATISTICAL_TRAFFIC__VALUE:
-				setValue((Value)null);
+				setValue((StatisticalTraffic_value)null);
 				return;
 		}
 		super.eUnset(featureID);

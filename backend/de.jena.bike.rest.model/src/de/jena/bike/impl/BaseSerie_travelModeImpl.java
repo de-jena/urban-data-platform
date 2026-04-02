@@ -13,8 +13,8 @@
  */
 package de.jena.bike.impl;
 
+import de.jena.bike.BaseSerie_travelMode;
 import de.jena.bike.BikePackage;
-import de.jena.bike.TravelModeLabel;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -22,18 +22,18 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Travel Mode Label</b></em>'.
+ * An implementation of the model object '<em><b>Base Serie travel Mode</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class TravelModeLabelImpl extends MinimalEObjectImpl.Container implements TravelModeLabel {
+public class BaseSerie_travelModeImpl extends MinimalEObjectImpl.Container implements BaseSerie_travelMode {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TravelModeLabelImpl() {
+	protected BaseSerie_travelModeImpl() {
 		super();
 	}
 
@@ -44,7 +44,7 @@ public class TravelModeLabelImpl extends MinimalEObjectImpl.Container implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return BikePackage.Literals.TRAVEL_MODE_LABEL;
+		return BikePackage.Literals.BASE_SERIE_TRAVEL_MODE;
 	}
 
-} //TravelModeLabelImpl
+} //BaseSerie_travelModeImpl

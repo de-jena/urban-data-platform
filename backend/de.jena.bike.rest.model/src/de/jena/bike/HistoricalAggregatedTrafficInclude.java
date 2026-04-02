@@ -13,20 +13,211 @@
  */
 package de.jena.bike;
 
-import org.eclipse.emf.ecore.EObject;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+import org.eclipse.emf.common.util.Enumerator;
 
 import org.osgi.annotation.versioning.ProviderType;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Historical Aggregated Traffic Include</b></em>'.
+ * A representation of the literals of the enumeration '<em><b>Historical Aggregated Traffic Include</b></em>',
+ * and utility methods for working with them.
  * <!-- end-user-doc -->
- *
- *
  * @see de.jena.bike.BikePackage#getHistoricalAggregatedTrafficInclude()
  * @model
  * @generated
  */
 @ProviderType
-public interface HistoricalAggregatedTrafficInclude extends EObject {
-} // HistoricalAggregatedTrafficInclude
+public enum HistoricalAggregatedTrafficInclude implements Enumerator {
+	/**
+	 * The '<em><b>Status</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #STATUS_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	STATUS(0, "status", "status"),
+
+	/**
+	 * The '<em><b>Weather</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #WEATHER_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	WEATHER(1, "weather", "weather");
+
+	/**
+	 * The '<em><b>Status</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #STATUS
+	 * @model name="status"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int STATUS_VALUE = 0;
+
+	/**
+	 * The '<em><b>Weather</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #WEATHER
+	 * @model name="weather"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int WEATHER_VALUE = 1;
+
+	/**
+	 * An array of all the '<em><b>Historical Aggregated Traffic Include</b></em>' enumerators.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private static final HistoricalAggregatedTrafficInclude[] VALUES_ARRAY =
+		new HistoricalAggregatedTrafficInclude[] {
+			STATUS,
+			WEATHER,
+		};
+
+	/**
+	 * A public read-only list of all the '<em><b>Historical Aggregated Traffic Include</b></em>' enumerators.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final List<HistoricalAggregatedTrafficInclude> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+
+	/**
+	 * Returns the '<em><b>Historical Aggregated Traffic Include</b></em>' literal with the specified literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
+	 * @generated
+	 */
+	public static HistoricalAggregatedTrafficInclude get(String literal) {
+		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+			HistoricalAggregatedTrafficInclude result = VALUES_ARRAY[i];
+			if (result.toString().equals(literal)) {
+				return result;
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * Returns the '<em><b>Historical Aggregated Traffic Include</b></em>' literal with the specified name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
+	 * @generated
+	 */
+	public static HistoricalAggregatedTrafficInclude getByName(String name) {
+		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+			HistoricalAggregatedTrafficInclude result = VALUES_ARRAY[i];
+			if (result.getName().equals(name)) {
+				return result;
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * Returns the '<em><b>Historical Aggregated Traffic Include</b></em>' literal with the specified integer value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
+	 * @generated
+	 */
+	public static HistoricalAggregatedTrafficInclude get(int value) {
+		switch (value) {
+			case STATUS_VALUE: return STATUS;
+			case WEATHER_VALUE: return WEATHER;
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private final int value;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private final String name;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private final String literal;
+
+	/**
+	 * Only this class can construct instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private HistoricalAggregatedTrafficInclude(int value, String name, String literal) {
+		this.value = value;
+		this.name = name;
+		this.literal = literal;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int getValue() {
+	  return value;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getName() {
+	  return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getLiteral() {
+	  return literal;
+	}
+
+	/**
+	 * Returns the literal value of the enumerator, which is its string representation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		return literal;
+	}
+	
+} //HistoricalAggregatedTrafficInclude

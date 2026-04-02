@@ -14,7 +14,7 @@
 package de.jena.bike.impl;
 
 import de.jena.bike.BikePackage;
-import de.jena.bike.StatisticalTotalGroupBy;
+import de.jena.bike.HistoricalTimestampTraffic_lane;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -22,18 +22,18 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Statistical Total Group By</b></em>'.
+ * An implementation of the model object '<em><b>Historical Timestamp Traffic lane</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class StatisticalTotalGroupByImpl extends MinimalEObjectImpl.Container implements StatisticalTotalGroupBy {
+public class HistoricalTimestampTraffic_laneImpl extends MinimalEObjectImpl.Container implements HistoricalTimestampTraffic_lane {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected StatisticalTotalGroupByImpl() {
+	protected HistoricalTimestampTraffic_laneImpl() {
 		super();
 	}
 
@@ -44,7 +44,7 @@ public class StatisticalTotalGroupByImpl extends MinimalEObjectImpl.Container im
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return BikePackage.Literals.STATISTICAL_TOTAL_GROUP_BY;
+		return BikePackage.Literals.HISTORICAL_TIMESTAMP_TRAFFIC_LANE;
 	}
 
-} //StatisticalTotalGroupByImpl
+} //HistoricalTimestampTraffic_laneImpl

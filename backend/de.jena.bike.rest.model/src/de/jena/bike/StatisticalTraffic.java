@@ -91,12 +91,12 @@ public interface StatisticalTraffic extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Travel Mode</em>' containment reference.
-	 * @see #setTravelMode(TravelModeLabel)
+	 * @see #setTravelMode(StatisticalTraffic_travelMode)
 	 * @see de.jena.bike.BikePackage#getStatisticalTraffic_TravelMode()
 	 * @model containment="true"
 	 * @generated
 	 */
-	TravelModeLabel getTravelMode();
+	StatisticalTraffic_travelMode getTravelMode();
 
 	/**
 	 * Sets the value of the '{@link de.jena.bike.StatisticalTraffic#getTravelMode <em>Travel Mode</em>}' containment reference.
@@ -106,19 +106,19 @@ public interface StatisticalTraffic extends EObject {
 	 * @see #getTravelMode()
 	 * @generated
 	 */
-	void setTravelMode(TravelModeLabel value);
+	void setTravelMode(StatisticalTraffic_travelMode value);
 
 	/**
 	 * Returns the value of the '<em><b>Direction</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Direction</em>' containment reference.
-	 * @see #setDirection(Direction)
+	 * @see #setDirection(StatisticalTraffic_direction)
 	 * @see de.jena.bike.BikePackage#getStatisticalTraffic_Direction()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Direction getDirection();
+	StatisticalTraffic_direction getDirection();
 
 	/**
 	 * Sets the value of the '{@link de.jena.bike.StatisticalTraffic#getDirection <em>Direction</em>}' containment reference.
@@ -128,19 +128,19 @@ public interface StatisticalTraffic extends EObject {
 	 * @see #getDirection()
 	 * @generated
 	 */
-	void setDirection(Direction value);
+	void setDirection(StatisticalTraffic_direction value);
 
 	/**
 	 * Returns the value of the '<em><b>Direction Name</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Direction Name</em>' containment reference.
-	 * @see #setDirectionName(DirectionName)
+	 * @see #setDirectionName(StatisticalTraffic_directionName)
 	 * @see de.jena.bike.BikePackage#getStatisticalTraffic_DirectionName()
 	 * @model containment="true"
 	 * @generated
 	 */
-	DirectionName getDirectionName();
+	StatisticalTraffic_directionName getDirectionName();
 
 	/**
 	 * Sets the value of the '{@link de.jena.bike.StatisticalTraffic#getDirectionName <em>Direction Name</em>}' containment reference.
@@ -150,19 +150,19 @@ public interface StatisticalTraffic extends EObject {
 	 * @see #getDirectionName()
 	 * @generated
 	 */
-	void setDirectionName(DirectionName value);
+	void setDirectionName(StatisticalTraffic_directionName value);
 
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' containment reference.
-	 * @see #setValue(Value)
+	 * @see #setValue(StatisticalTraffic_value)
 	 * @see de.jena.bike.BikePackage#getStatisticalTraffic_Value()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Value getValue();
+	StatisticalTraffic_value getValue();
 
 	/**
 	 * Sets the value of the '{@link de.jena.bike.StatisticalTraffic#getValue <em>Value</em>}' containment reference.
@@ -172,6 +172,6 @@ public interface StatisticalTraffic extends EObject {
 	 * @see #getValue()
 	 * @generated
 	 */
-	void setValue(Value value);
+	void setValue(StatisticalTraffic_value value);
 
 } // StatisticalTraffic

@@ -14,9 +14,9 @@
 package de.jena.bike.impl;
 
 import de.jena.bike.BikePackage;
-import de.jena.bike.DateTime;
 import de.jena.bike.HistoricalTimestampTraffic;
-import de.jena.bike.Lane;
+import de.jena.bike.HistoricalTimestampTraffic_lane;
+import de.jena.bike.HistoricalTimestampTraffic_timestamp;
 
 import java.math.BigInteger;
 
@@ -27,6 +27,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -43,7 +44,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class HistoricalTimestampTrafficImpl extends BaseSerieImpl implements HistoricalTimestampTraffic {
+public class HistoricalTimestampTrafficImpl extends MinimalEObjectImpl.Container implements HistoricalTimestampTraffic {
 	/**
 	 * The cached value of the '{@link #getTimestamp() <em>Timestamp</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -52,7 +53,7 @@ public class HistoricalTimestampTrafficImpl extends BaseSerieImpl implements His
 	 * @generated
 	 * @ordered
 	 */
-	protected DateTime timestamp;
+	protected HistoricalTimestampTraffic_timestamp timestamp;
 
 	/**
 	 * The cached value of the '{@link #getLane() <em>Lane</em>}' containment reference.
@@ -62,7 +63,7 @@ public class HistoricalTimestampTrafficImpl extends BaseSerieImpl implements His
 	 * @generated
 	 * @ordered
 	 */
-	protected Lane lane;
+	protected HistoricalTimestampTraffic_lane lane;
 
 	/**
 	 * The default value of the '{@link #getSpeed() <em>Speed</em>}' attribute.
@@ -109,7 +110,7 @@ public class HistoricalTimestampTrafficImpl extends BaseSerieImpl implements His
 	 * @generated
 	 */
 	@Override
-	public DateTime getTimestamp() {
+	public HistoricalTimestampTraffic_timestamp getTimestamp() {
 		return timestamp;
 	}
 
@@ -118,8 +119,8 @@ public class HistoricalTimestampTrafficImpl extends BaseSerieImpl implements His
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTimestamp(DateTime newTimestamp, NotificationChain msgs) {
-		DateTime oldTimestamp = timestamp;
+	public NotificationChain basicSetTimestamp(HistoricalTimestampTraffic_timestamp newTimestamp, NotificationChain msgs) {
+		HistoricalTimestampTraffic_timestamp oldTimestamp = timestamp;
 		timestamp = newTimestamp;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BikePackage.HISTORICAL_TIMESTAMP_TRAFFIC__TIMESTAMP, oldTimestamp, newTimestamp);
@@ -134,7 +135,7 @@ public class HistoricalTimestampTrafficImpl extends BaseSerieImpl implements His
 	 * @generated
 	 */
 	@Override
-	public void setTimestamp(DateTime newTimestamp) {
+	public void setTimestamp(HistoricalTimestampTraffic_timestamp newTimestamp) {
 		if (newTimestamp != timestamp) {
 			NotificationChain msgs = null;
 			if (timestamp != null)
@@ -154,7 +155,7 @@ public class HistoricalTimestampTrafficImpl extends BaseSerieImpl implements His
 	 * @generated
 	 */
 	@Override
-	public Lane getLane() {
+	public HistoricalTimestampTraffic_lane getLane() {
 		return lane;
 	}
 
@@ -163,8 +164,8 @@ public class HistoricalTimestampTrafficImpl extends BaseSerieImpl implements His
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetLane(Lane newLane, NotificationChain msgs) {
-		Lane oldLane = lane;
+	public NotificationChain basicSetLane(HistoricalTimestampTraffic_lane newLane, NotificationChain msgs) {
+		HistoricalTimestampTraffic_lane oldLane = lane;
 		lane = newLane;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BikePackage.HISTORICAL_TIMESTAMP_TRAFFIC__LANE, oldLane, newLane);
@@ -179,7 +180,7 @@ public class HistoricalTimestampTrafficImpl extends BaseSerieImpl implements His
 	 * @generated
 	 */
 	@Override
-	public void setLane(Lane newLane) {
+	public void setLane(HistoricalTimestampTraffic_lane newLane) {
 		if (newLane != lane) {
 			NotificationChain msgs = null;
 			if (lane != null)
@@ -259,10 +260,10 @@ public class HistoricalTimestampTrafficImpl extends BaseSerieImpl implements His
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case BikePackage.HISTORICAL_TIMESTAMP_TRAFFIC__TIMESTAMP:
-				setTimestamp((DateTime)newValue);
+				setTimestamp((HistoricalTimestampTraffic_timestamp)newValue);
 				return;
 			case BikePackage.HISTORICAL_TIMESTAMP_TRAFFIC__LANE:
-				setLane((Lane)newValue);
+				setLane((HistoricalTimestampTraffic_lane)newValue);
 				return;
 			case BikePackage.HISTORICAL_TIMESTAMP_TRAFFIC__SPEED:
 				setSpeed((BigInteger)newValue);
@@ -280,10 +281,10 @@ public class HistoricalTimestampTrafficImpl extends BaseSerieImpl implements His
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case BikePackage.HISTORICAL_TIMESTAMP_TRAFFIC__TIMESTAMP:
-				setTimestamp((DateTime)null);
+				setTimestamp((HistoricalTimestampTraffic_timestamp)null);
 				return;
 			case BikePackage.HISTORICAL_TIMESTAMP_TRAFFIC__LANE:
-				setLane((Lane)null);
+				setLane((HistoricalTimestampTraffic_lane)null);
 				return;
 			case BikePackage.HISTORICAL_TIMESTAMP_TRAFFIC__SPEED:
 				setSpeed(SPEED_EDEFAULT);

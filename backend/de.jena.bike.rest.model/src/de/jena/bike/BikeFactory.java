@@ -90,15 +90,6 @@ public interface BikeFactory extends EFactory {
 	GeoJsonObject createGeoJsonObject();
 
 	/**
-	 * Returns a new object of class '<em>Travel Mode Label</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Travel Mode Label</em>'.
-	 * @generated
-	 */
-	TravelModeLabel createTravelModeLabel();
-
-	/**
 	 * Returns a new object of class '<em>site Counter</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -216,33 +207,6 @@ public interface BikeFactory extends EFactory {
 	NotFound createNotFound();
 
 	/**
-	 * Returns a new object of class '<em>Date Range</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Date Range</em>'.
-	 * @generated
-	 */
-	DateRange createDateRange();
-
-	/**
-	 * Returns a new object of class '<em>Statistical Average Group By</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Statistical Average Group By</em>'.
-	 * @generated
-	 */
-	StatisticalAverageGroupBy createStatisticalAverageGroupBy();
-
-	/**
-	 * Returns a new object of class '<em>Direction</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Direction</em>'.
-	 * @generated
-	 */
-	Direction createDirection();
-
-	/**
 	 * Returns a new object of class '<em>Direction Name</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -268,24 +232,6 @@ public interface BikeFactory extends EFactory {
 	 * @generated
 	 */
 	StatisticalTraffic createStatisticalTraffic();
-
-	/**
-	 * Returns a new object of class '<em>Statistical Total Group By</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Statistical Total Group By</em>'.
-	 * @generated
-	 */
-	StatisticalTotalGroupBy createStatisticalTotalGroupBy();
-
-	/**
-	 * Returns a new object of class '<em>Historical Raw Traffic Include</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Historical Raw Traffic Include</em>'.
-	 * @generated
-	 */
-	HistoricalRawTrafficInclude createHistoricalRawTrafficInclude();
 
 	/**
 	 * Returns a new object of class '<em>Base Serie</em>'.
@@ -333,33 +279,6 @@ public interface BikeFactory extends EFactory {
 	HistoricalRawTraffic createHistoricalRawTraffic();
 
 	/**
-	 * Returns a new object of class '<em>Historical Aggregated Traffic Include</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Historical Aggregated Traffic Include</em>'.
-	 * @generated
-	 */
-	HistoricalAggregatedTrafficInclude createHistoricalAggregatedTrafficInclude();
-
-	/**
-	 * Returns a new object of class '<em>Granularity</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Granularity</em>'.
-	 * @generated
-	 */
-	Granularity createGranularity();
-
-	/**
-	 * Returns a new object of class '<em>Historical Aggregated Traffic Group By</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Historical Aggregated Traffic Group By</em>'.
-	 * @generated
-	 */
-	HistoricalAggregatedTrafficGroupBy createHistoricalAggregatedTrafficGroupBy();
-
-	/**
 	 * Returns a new object of class '<em>Historical Aggregated Traffic</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -385,15 +304,6 @@ public interface BikeFactory extends EFactory {
 	 * @generated
 	 */
 	HistoricalTimestampTraffic createHistoricalTimestampTraffic();
-
-	/**
-	 * Returns a new object of class '<em>validation Job Status</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>validation Job Status</em>'.
-	 * @generated
-	 */
-	validationJobStatus createvalidationJobStatus();
 
 	/**
 	 * Returns a new object of class '<em>validation Job</em>'.
@@ -423,6 +333,141 @@ public interface BikeFactory extends EFactory {
 	Conflict createConflict();
 
 	/**
+	 * Returns a new object of class '<em>Line String coordinates</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Line String coordinates</em>'.
+	 * @generated
+	 */
+	LineString_coordinates createLineString_coordinates();
+
+	/**
+	 * Returns a new object of class '<em>site location</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>site location</em>'.
+	 * @generated
+	 */
+	site_location createsite_location();
+
+	/**
+	 * Returns a new object of class '<em>site segments</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>site segments</em>'.
+	 * @generated
+	 */
+	site_segments createsite_segments();
+
+	/**
+	 * Returns a new object of class '<em>site travel Modes</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>site travel Modes</em>'.
+	 * @generated
+	 */
+	site_travelModes createsite_travelModes();
+
+	/**
+	 * Returns a new object of class '<em>site counters</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>site counters</em>'.
+	 * @generated
+	 */
+	site_counters createsite_counters();
+
+	/**
+	 * Returns a new object of class '<em>site domain</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>site domain</em>'.
+	 * @generated
+	 */
+	site_domain createsite_domain();
+
+	/**
+	 * Returns a new object of class '<em>site tags</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>site tags</em>'.
+	 * @generated
+	 */
+	site_tags createsite_tags();
+
+	/**
+	 * Returns a new object of class '<em>site images</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>site images</em>'.
+	 * @generated
+	 */
+	site_images createsite_images();
+
+	/**
+	 * Returns a new object of class '<em>tag domain</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>tag domain</em>'.
+	 * @generated
+	 */
+	tag_domain createtag_domain();
+
+	/**
+	 * Returns a new object of class '<em>Statistical Traffic travel Mode</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Statistical Traffic travel Mode</em>'.
+	 * @generated
+	 */
+	StatisticalTraffic_travelMode createStatisticalTraffic_travelMode();
+
+	/**
+	 * Returns a new object of class '<em>Statistical Traffic direction</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Statistical Traffic direction</em>'.
+	 * @generated
+	 */
+	StatisticalTraffic_direction createStatisticalTraffic_direction();
+
+	/**
+	 * Returns a new object of class '<em>Statistical Traffic direction Name</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Statistical Traffic direction Name</em>'.
+	 * @generated
+	 */
+	StatisticalTraffic_directionName createStatisticalTraffic_directionName();
+
+	/**
+	 * Returns a new object of class '<em>Statistical Traffic value</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Statistical Traffic value</em>'.
+	 * @generated
+	 */
+	StatisticalTraffic_value createStatisticalTraffic_value();
+
+	/**
+	 * Returns a new object of class '<em>Base Serie travel Mode</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Base Serie travel Mode</em>'.
+	 * @generated
+	 */
+	BaseSerie_travelMode createBaseSerie_travelMode();
+
+	/**
+	 * Returns a new object of class '<em>Base Serie direction</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Base Serie direction</em>'.
+	 * @generated
+	 */
+	BaseSerie_direction createBaseSerie_direction();
+
+	/**
 	 * Returns a new object of class '<em>Historical Raw Traffic data</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -430,6 +475,33 @@ public interface BikeFactory extends EFactory {
 	 * @generated
 	 */
 	HistoricalRawTraffic_data createHistoricalRawTraffic_data();
+
+	/**
+	 * Returns a new object of class '<em>Historical Raw Traffic data timestamp</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Historical Raw Traffic data timestamp</em>'.
+	 * @generated
+	 */
+	HistoricalRawTraffic_data_timestamp createHistoricalRawTraffic_data_timestamp();
+
+	/**
+	 * Returns a new object of class '<em>Historical Raw Traffic data counts</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Historical Raw Traffic data counts</em>'.
+	 * @generated
+	 */
+	HistoricalRawTraffic_data_counts createHistoricalRawTraffic_data_counts();
+
+	/**
+	 * Returns a new object of class '<em>Historical Raw Traffic data status</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Historical Raw Traffic data status</em>'.
+	 * @generated
+	 */
+	HistoricalRawTraffic_data_status createHistoricalRawTraffic_data_status();
 
 	/**
 	 * Returns a new object of class '<em>Historical Aggregated Traffic data</em>'.
@@ -441,6 +513,15 @@ public interface BikeFactory extends EFactory {
 	HistoricalAggregatedTraffic_data createHistoricalAggregatedTraffic_data();
 
 	/**
+	 * Returns a new object of class '<em>Historical Aggregated Traffic data timestamp</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Historical Aggregated Traffic data timestamp</em>'.
+	 * @generated
+	 */
+	HistoricalAggregatedTraffic_data_timestamp createHistoricalAggregatedTraffic_data_timestamp();
+
+	/**
 	 * Returns a new object of class '<em>Historical Aggregated Traffic data traffic</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -448,6 +529,15 @@ public interface BikeFactory extends EFactory {
 	 * @generated
 	 */
 	HistoricalAggregatedTraffic_data_traffic createHistoricalAggregatedTraffic_data_traffic();
+
+	/**
+	 * Returns a new object of class '<em>Historical Aggregated Traffic data traffic counts</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Historical Aggregated Traffic data traffic counts</em>'.
+	 * @generated
+	 */
+	HistoricalAggregatedTraffic_data_traffic_counts createHistoricalAggregatedTraffic_data_traffic_counts();
 
 	/**
 	 * Returns a new object of class '<em>Historical Aggregated Traffic data weather</em>'.
@@ -459,6 +549,51 @@ public interface BikeFactory extends EFactory {
 	HistoricalAggregatedTraffic_data_weather createHistoricalAggregatedTraffic_data_weather();
 
 	/**
+	 * Returns a new object of class '<em>Historical Aggregated Traffic direction Name</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Historical Aggregated Traffic direction Name</em>'.
+	 * @generated
+	 */
+	HistoricalAggregatedTraffic_directionName createHistoricalAggregatedTraffic_directionName();
+
+	/**
+	 * Returns a new object of class '<em>Historical Timestamp Traffic timestamp</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Historical Timestamp Traffic timestamp</em>'.
+	 * @generated
+	 */
+	HistoricalTimestampTraffic_timestamp createHistoricalTimestampTraffic_timestamp();
+
+	/**
+	 * Returns a new object of class '<em>Historical Timestamp Traffic lane</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Historical Timestamp Traffic lane</em>'.
+	 * @generated
+	 */
+	HistoricalTimestampTraffic_lane createHistoricalTimestampTraffic_lane();
+
+	/**
+	 * Returns a new object of class '<em>validation Job status</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>validation Job status</em>'.
+	 * @generated
+	 */
+	validationJob_status createvalidationJob_status();
+
+	/**
+	 * Returns a new object of class '<em>validation Job Created status</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>validation Job Created status</em>'.
+	 * @generated
+	 */
+	validationJobCreated_status createvalidationJobCreated_status();
+
+	/**
 	 * Returns a new object of class '<em>Response</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -466,6 +601,168 @@ public interface BikeFactory extends EFactory {
 	 * @generated
 	 */
 	Response createResponse();
+
+	/**
+	 * Returns a new object of class '<em>Create Export request</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Create Export request</em>'.
+	 * @generated
+	 */
+	CreateExport_request createCreateExport_request();
+
+	/**
+	 * Returns a new object of class '<em>Get ADT date Range</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Get ADT date Range</em>'.
+	 * @generated
+	 */
+	GetADT_dateRange createGetADT_dateRange();
+
+	/**
+	 * Returns a new object of class '<em>Get ADT group By</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Get ADT group By</em>'.
+	 * @generated
+	 */
+	GetADT_groupBy createGetADT_groupBy();
+
+	/**
+	 * Returns a new object of class '<em>Get ADT travel Modes</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Get ADT travel Modes</em>'.
+	 * @generated
+	 */
+	GetADT_travelModes createGetADT_travelModes();
+
+	/**
+	 * Returns a new object of class '<em>Get ADT By Site date Range</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Get ADT By Site date Range</em>'.
+	 * @generated
+	 */
+	GetADTBySite_dateRange createGetADTBySite_dateRange();
+
+	/**
+	 * Returns a new object of class '<em>Get ADT By Site group By</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Get ADT By Site group By</em>'.
+	 * @generated
+	 */
+	GetADTBySite_groupBy createGetADTBySite_groupBy();
+
+	/**
+	 * Returns a new object of class '<em>Get ADT By Site travel Modes</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Get ADT By Site travel Modes</em>'.
+	 * @generated
+	 */
+	GetADTBySite_travelModes createGetADTBySite_travelModes();
+
+	/**
+	 * Returns a new object of class '<em>Get Total Traffic date Range</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Get Total Traffic date Range</em>'.
+	 * @generated
+	 */
+	GetTotalTraffic_dateRange createGetTotalTraffic_dateRange();
+
+	/**
+	 * Returns a new object of class '<em>Get Total Traffic group By</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Get Total Traffic group By</em>'.
+	 * @generated
+	 */
+	GetTotalTraffic_groupBy createGetTotalTraffic_groupBy();
+
+	/**
+	 * Returns a new object of class '<em>Get Total Traffic travel Modes</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Get Total Traffic travel Modes</em>'.
+	 * @generated
+	 */
+	GetTotalTraffic_travelModes createGetTotalTraffic_travelModes();
+
+	/**
+	 * Returns a new object of class '<em>Get Raw Traffic include</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Get Raw Traffic include</em>'.
+	 * @generated
+	 */
+	GetRawTraffic_include createGetRawTraffic_include();
+
+	/**
+	 * Returns a new object of class '<em>Get Raw Traffic travel Modes</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Get Raw Traffic travel Modes</em>'.
+	 * @generated
+	 */
+	GetRawTraffic_travelModes createGetRawTraffic_travelModes();
+
+	/**
+	 * Returns a new object of class '<em>Get Aggregated Traffic include</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Get Aggregated Traffic include</em>'.
+	 * @generated
+	 */
+	GetAggregatedTraffic_include createGetAggregatedTraffic_include();
+
+	/**
+	 * Returns a new object of class '<em>Get Aggregated Traffic granularity</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Get Aggregated Traffic granularity</em>'.
+	 * @generated
+	 */
+	GetAggregatedTraffic_granularity createGetAggregatedTraffic_granularity();
+
+	/**
+	 * Returns a new object of class '<em>Get Aggregated Traffic group By</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Get Aggregated Traffic group By</em>'.
+	 * @generated
+	 */
+	GetAggregatedTraffic_groupBy createGetAggregatedTraffic_groupBy();
+
+	/**
+	 * Returns a new object of class '<em>Get Aggregated Traffic travel Modes</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Get Aggregated Traffic travel Modes</em>'.
+	 * @generated
+	 */
+	GetAggregatedTraffic_travelModes createGetAggregatedTraffic_travelModes();
+
+	/**
+	 * Returns a new object of class '<em>Get Timestamp Traffic travel Modes</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Get Timestamp Traffic travel Modes</em>'.
+	 * @generated
+	 */
+	GetTimestampTraffic_travelModes createGetTimestampTraffic_travelModes();
+
+	/**
+	 * Returns a new object of class '<em>Get Timestamp Traffic directions</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Get Timestamp Traffic directions</em>'.
+	 * @generated
+	 */
+	GetTimestampTraffic_directions createGetTimestampTraffic_directions();
 
 	/**
 	 * Returns a new object of class '<em>Validation Job Create request</em>'.

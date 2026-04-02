@@ -14,7 +14,7 @@
 package de.jena.bike.impl;
 
 import de.jena.bike.BikePackage;
-import de.jena.bike.validationJobStatus;
+import de.jena.bike.StatisticalTraffic_direction;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -22,18 +22,18 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>validation Job Status</b></em>'.
+ * An implementation of the model object '<em><b>Statistical Traffic direction</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class validationJobStatusImpl extends MinimalEObjectImpl.Container implements validationJobStatus {
+public class StatisticalTraffic_directionImpl extends MinimalEObjectImpl.Container implements StatisticalTraffic_direction {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected validationJobStatusImpl() {
+	protected StatisticalTraffic_directionImpl() {
 		super();
 	}
 
@@ -44,7 +44,7 @@ public class validationJobStatusImpl extends MinimalEObjectImpl.Container implem
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return BikePackage.Literals.VALIDATION_JOB_STATUS;
+		return BikePackage.Literals.STATISTICAL_TRAFFIC_DIRECTION;
 	}
 
-} //validationJobStatusImpl
+} //StatisticalTraffic_directionImpl

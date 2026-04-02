@@ -15,7 +15,7 @@ package de.jena.bike.impl;
 
 import de.jena.bike.BikePackage;
 import de.jena.bike.validationJobCreated;
-import de.jena.bike.validationJobStatus;
+import de.jena.bike.validationJobCreated_status;
 
 import java.math.BigInteger;
 
@@ -80,7 +80,7 @@ public class validationJobCreatedImpl extends MinimalEObjectImpl.Container imple
 	 * @generated
 	 * @ordered
 	 */
-	protected validationJobStatus status;
+	protected validationJobCreated_status status;
 
 	/**
 	 * The cached value of the '{@link #getSiteIds() <em>Site Ids</em>}' attribute list.
@@ -180,7 +180,7 @@ public class validationJobCreatedImpl extends MinimalEObjectImpl.Container imple
 	 * @generated
 	 */
 	@Override
-	public validationJobStatus getStatus() {
+	public validationJobCreated_status getStatus() {
 		return status;
 	}
 
@@ -189,8 +189,8 @@ public class validationJobCreatedImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetStatus(validationJobStatus newStatus, NotificationChain msgs) {
-		validationJobStatus oldStatus = status;
+	public NotificationChain basicSetStatus(validationJobCreated_status newStatus, NotificationChain msgs) {
+		validationJobCreated_status oldStatus = status;
 		status = newStatus;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BikePackage.VALIDATION_JOB_CREATED__STATUS, oldStatus, newStatus);
@@ -205,7 +205,7 @@ public class validationJobCreatedImpl extends MinimalEObjectImpl.Container imple
 	 * @generated
 	 */
 	@Override
-	public void setStatus(validationJobStatus newStatus) {
+	public void setStatus(validationJobCreated_status newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
 			if (status != null)
@@ -327,7 +327,7 @@ public class validationJobCreatedImpl extends MinimalEObjectImpl.Container imple
 				setId((BigInteger)newValue);
 				return;
 			case BikePackage.VALIDATION_JOB_CREATED__STATUS:
-				setStatus((validationJobStatus)newValue);
+				setStatus((validationJobCreated_status)newValue);
 				return;
 			case BikePackage.VALIDATION_JOB_CREATED__SITE_IDS:
 				getSiteIds().clear();
@@ -355,7 +355,7 @@ public class validationJobCreatedImpl extends MinimalEObjectImpl.Container imple
 				setId(ID_EDEFAULT);
 				return;
 			case BikePackage.VALIDATION_JOB_CREATED__STATUS:
-				setStatus((validationJobStatus)null);
+				setStatus((validationJobCreated_status)null);
 				return;
 			case BikePackage.VALIDATION_JOB_CREATED__SITE_IDS:
 				getSiteIds().clear();

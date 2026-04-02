@@ -42,12 +42,12 @@ public interface HistoricalAggregatedTraffic_data extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Timestamp</em>' containment reference.
-	 * @see #setTimestamp(DateTime)
+	 * @see #setTimestamp(HistoricalAggregatedTraffic_data_timestamp)
 	 * @see de.jena.bike.BikePackage#getHistoricalAggregatedTraffic_data_Timestamp()
 	 * @model containment="true"
 	 * @generated
 	 */
-	DateTime getTimestamp();
+	HistoricalAggregatedTraffic_data_timestamp getTimestamp();
 
 	/**
 	 * Sets the value of the '{@link de.jena.bike.HistoricalAggregatedTraffic_data#getTimestamp <em>Timestamp</em>}' containment reference.
@@ -57,7 +57,7 @@ public interface HistoricalAggregatedTraffic_data extends EObject {
 	 * @see #getTimestamp()
 	 * @generated
 	 */
-	void setTimestamp(DateTime value);
+	void setTimestamp(HistoricalAggregatedTraffic_data_timestamp value);
 
 	/**
 	 * Returns the value of the '<em><b>Traffic</b></em>' containment reference.

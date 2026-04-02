@@ -73,12 +73,12 @@ public interface validationJob extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Status</em>' containment reference.
-	 * @see #setStatus(validationJobStatus)
+	 * @see #setStatus(validationJob_status)
 	 * @see de.jena.bike.BikePackage#getvalidationJob_Status()
 	 * @model containment="true"
 	 * @generated
 	 */
-	validationJobStatus getStatus();
+	validationJob_status getStatus();
 
 	/**
 	 * Sets the value of the '{@link de.jena.bike.validationJob#getStatus <em>Status</em>}' containment reference.
@@ -88,7 +88,7 @@ public interface validationJob extends EObject {
 	 * @see #getStatus()
 	 * @generated
 	 */
-	void setStatus(validationJobStatus value);
+	void setStatus(validationJob_status value);
 
 	/**
 	 * Returns the value of the '<em><b>Site Ids</b></em>' attribute list.

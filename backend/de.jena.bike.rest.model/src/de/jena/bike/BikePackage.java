@@ -17,6 +17,7 @@ package de.jena.bike;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EReference;
 
@@ -57,7 +58,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "https://api.eco-counter.com/api/v2/sites";
+	String eNS_URI = "https://api.eco-counter.com/api/v2/";
 
 	/**
 	 * The package namespace name.
@@ -225,22 +226,13 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	int LINE_STRING = 4;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINE_STRING__TYPE = GEOMETRY__TYPE;
-
-	/**
 	 * The feature id for the '<em><b>Coordinates</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LINE_STRING__COORDINATES = GEOMETRY_FEATURE_COUNT + 0;
+	int LINE_STRING__COORDINATES = 0;
 
 	/**
 	 * The number of structural features of the '<em>Line String</em>' class.
@@ -249,7 +241,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINE_STRING_FEATURE_COUNT = GEOMETRY_FEATURE_COUNT + 1;
+	int LINE_STRING_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Line String</em>' class.
@@ -258,7 +250,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINE_STRING_OPERATION_COUNT = GEOMETRY_OPERATION_COUNT + 0;
+	int LINE_STRING_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link de.jena.bike.impl.GeoJsonObjectImpl <em>Geo Json Object</em>}' class.
@@ -289,34 +281,6 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	int GEO_JSON_OBJECT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link de.jena.bike.impl.TravelModeLabelImpl <em>Travel Mode Label</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.jena.bike.impl.TravelModeLabelImpl
-	 * @see de.jena.bike.impl.BikePackageImpl#getTravelModeLabel()
-	 * @generated
-	 */
-	int TRAVEL_MODE_LABEL = 6;
-
-	/**
-	 * The number of structural features of the '<em>Travel Mode Label</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRAVEL_MODE_LABEL_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Travel Mode Label</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRAVEL_MODE_LABEL_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link de.jena.bike.impl.siteCounterImpl <em>site Counter</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -324,7 +288,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.bike.impl.BikePackageImpl#getsiteCounter()
 	 * @generated
 	 */
-	int SITE_COUNTER = 7;
+	int SITE_COUNTER = 6;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -388,7 +352,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.bike.impl.BikePackageImpl#getDomain()
 	 * @generated
 	 */
-	int DOMAIN = 8;
+	int DOMAIN = 7;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -434,7 +398,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.bike.impl.BikePackageImpl#getsiteTag()
 	 * @generated
 	 */
-	int SITE_TAG = 9;
+	int SITE_TAG = 8;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -480,7 +444,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.bike.impl.BikePackageImpl#getImage()
 	 * @generated
 	 */
-	int IMAGE = 10;
+	int IMAGE = 9;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -517,7 +481,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.bike.impl.BikePackageImpl#getsite()
 	 * @generated
 	 */
-	int SITE = 11;
+	int SITE = 10;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -707,7 +671,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.bike.impl.BikePackageImpl#getBadRequest()
 	 * @generated
 	 */
-	int BAD_REQUEST = 12;
+	int BAD_REQUEST = 11;
 
 	/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
@@ -762,7 +726,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.bike.impl.BikePackageImpl#getUnauthorized()
 	 * @generated
 	 */
-	int UNAUTHORIZED = 13;
+	int UNAUTHORIZED = 12;
 
 	/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
@@ -817,7 +781,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.bike.impl.BikePackageImpl#getForbidden()
 	 * @generated
 	 */
-	int FORBIDDEN = 14;
+	int FORBIDDEN = 13;
 
 	/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
@@ -872,7 +836,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.bike.impl.BikePackageImpl#getTooManyRequests()
 	 * @generated
 	 */
-	int TOO_MANY_REQUESTS = 15;
+	int TOO_MANY_REQUESTS = 14;
 
 	/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
@@ -927,7 +891,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.bike.impl.BikePackageImpl#gettag()
 	 * @generated
 	 */
-	int TAG = 16;
+	int TAG = 15;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1000,7 +964,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.bike.impl.BikePackageImpl#getExportCreation()
 	 * @generated
 	 */
-	int EXPORT_CREATION = 17;
+	int EXPORT_CREATION = 16;
 
 	/**
 	 * The feature id for the '<em><b>Start Date</b></em>' attribute.
@@ -1118,7 +1082,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.bike.impl.BikePackageImpl#getExport()
 	 * @generated
 	 */
-	int EXPORT = 18;
+	int EXPORT = 17;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1191,7 +1155,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.bike.impl.BikePackageImpl#getNotFound()
 	 * @generated
 	 */
-	int NOT_FOUND = 19;
+	int NOT_FOUND = 18;
 
 	/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
@@ -1239,90 +1203,6 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	int NOT_FOUND_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link de.jena.bike.impl.DateRangeImpl <em>Date Range</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.jena.bike.impl.DateRangeImpl
-	 * @see de.jena.bike.impl.BikePackageImpl#getDateRange()
-	 * @generated
-	 */
-	int DATE_RANGE = 20;
-
-	/**
-	 * The number of structural features of the '<em>Date Range</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_RANGE_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Date Range</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_RANGE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link de.jena.bike.impl.StatisticalAverageGroupByImpl <em>Statistical Average Group By</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.jena.bike.impl.StatisticalAverageGroupByImpl
-	 * @see de.jena.bike.impl.BikePackageImpl#getStatisticalAverageGroupBy()
-	 * @generated
-	 */
-	int STATISTICAL_AVERAGE_GROUP_BY = 21;
-
-	/**
-	 * The number of structural features of the '<em>Statistical Average Group By</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATISTICAL_AVERAGE_GROUP_BY_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Statistical Average Group By</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATISTICAL_AVERAGE_GROUP_BY_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link de.jena.bike.impl.DirectionImpl <em>Direction</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.jena.bike.impl.DirectionImpl
-	 * @see de.jena.bike.impl.BikePackageImpl#getDirection()
-	 * @generated
-	 */
-	int DIRECTION = 22;
-
-	/**
-	 * The number of structural features of the '<em>Direction</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DIRECTION_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Direction</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DIRECTION_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link de.jena.bike.impl.DirectionNameImpl <em>Direction Name</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1330,7 +1210,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.bike.impl.BikePackageImpl#getDirectionName()
 	 * @generated
 	 */
-	int DIRECTION_NAME = 23;
+	int DIRECTION_NAME = 19;
 
 	/**
 	 * The number of structural features of the '<em>Direction Name</em>' class.
@@ -1358,7 +1238,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.bike.impl.BikePackageImpl#getValue()
 	 * @generated
 	 */
-	int VALUE = 24;
+	int VALUE = 20;
 
 	/**
 	 * The number of structural features of the '<em>Value</em>' class.
@@ -1386,7 +1266,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.bike.impl.BikePackageImpl#getStatisticalTraffic()
 	 * @generated
 	 */
-	int STATISTICAL_TRAFFIC = 25;
+	int STATISTICAL_TRAFFIC = 21;
 
 	/**
 	 * The feature id for the '<em><b>Site Id</b></em>' attribute.
@@ -1461,62 +1341,6 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	int STATISTICAL_TRAFFIC_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link de.jena.bike.impl.StatisticalTotalGroupByImpl <em>Statistical Total Group By</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.jena.bike.impl.StatisticalTotalGroupByImpl
-	 * @see de.jena.bike.impl.BikePackageImpl#getStatisticalTotalGroupBy()
-	 * @generated
-	 */
-	int STATISTICAL_TOTAL_GROUP_BY = 26;
-
-	/**
-	 * The number of structural features of the '<em>Statistical Total Group By</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATISTICAL_TOTAL_GROUP_BY_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Statistical Total Group By</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATISTICAL_TOTAL_GROUP_BY_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link de.jena.bike.impl.HistoricalRawTrafficIncludeImpl <em>Historical Raw Traffic Include</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.jena.bike.impl.HistoricalRawTrafficIncludeImpl
-	 * @see de.jena.bike.impl.BikePackageImpl#getHistoricalRawTrafficInclude()
-	 * @generated
-	 */
-	int HISTORICAL_RAW_TRAFFIC_INCLUDE = 27;
-
-	/**
-	 * The number of structural features of the '<em>Historical Raw Traffic Include</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HISTORICAL_RAW_TRAFFIC_INCLUDE_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Historical Raw Traffic Include</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HISTORICAL_RAW_TRAFFIC_INCLUDE_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link de.jena.bike.impl.BaseSerieImpl <em>Base Serie</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1524,7 +1348,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.bike.impl.BikePackageImpl#getBaseSerie()
 	 * @generated
 	 */
-	int BASE_SERIE = 28;
+	int BASE_SERIE = 22;
 
 	/**
 	 * The feature id for the '<em><b>Travel Mode</b></em>' containment reference.
@@ -1570,7 +1394,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.bike.impl.BikePackageImpl#getDateTime()
 	 * @generated
 	 */
-	int DATE_TIME = 29;
+	int DATE_TIME = 23;
 
 	/**
 	 * The number of structural features of the '<em>Date Time</em>' class.
@@ -1598,7 +1422,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.bike.impl.BikePackageImpl#getCount()
 	 * @generated
 	 */
-	int COUNT = 30;
+	int COUNT = 24;
 
 	/**
 	 * The number of structural features of the '<em>Count</em>' class.
@@ -1626,7 +1450,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.bike.impl.BikePackageImpl#getDataStatus()
 	 * @generated
 	 */
-	int DATA_STATUS = 31;
+	int DATA_STATUS = 25;
 
 	/**
 	 * The number of structural features of the '<em>Data Status</em>' class.
@@ -1654,25 +1478,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.bike.impl.BikePackageImpl#getHistoricalRawTraffic()
 	 * @generated
 	 */
-	int HISTORICAL_RAW_TRAFFIC = 32;
-
-	/**
-	 * The feature id for the '<em><b>Travel Mode</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HISTORICAL_RAW_TRAFFIC__TRAVEL_MODE = BASE_SERIE__TRAVEL_MODE;
-
-	/**
-	 * The feature id for the '<em><b>Direction</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HISTORICAL_RAW_TRAFFIC__DIRECTION = BASE_SERIE__DIRECTION;
+	int HISTORICAL_RAW_TRAFFIC = 26;
 
 	/**
 	 * The feature id for the '<em><b>Flow ID</b></em>' attribute.
@@ -1681,7 +1487,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HISTORICAL_RAW_TRAFFIC__FLOW_ID = BASE_SERIE_FEATURE_COUNT + 0;
+	int HISTORICAL_RAW_TRAFFIC__FLOW_ID = 0;
 
 	/**
 	 * The feature id for the '<em><b>Flow Name</b></em>' attribute.
@@ -1690,7 +1496,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HISTORICAL_RAW_TRAFFIC__FLOW_NAME = BASE_SERIE_FEATURE_COUNT + 1;
+	int HISTORICAL_RAW_TRAFFIC__FLOW_NAME = 1;
 
 	/**
 	 * The feature id for the '<em><b>Data</b></em>' containment reference list.
@@ -1699,7 +1505,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HISTORICAL_RAW_TRAFFIC__DATA = BASE_SERIE_FEATURE_COUNT + 2;
+	int HISTORICAL_RAW_TRAFFIC__DATA = 2;
 
 	/**
 	 * The number of structural features of the '<em>Historical Raw Traffic</em>' class.
@@ -1708,7 +1514,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HISTORICAL_RAW_TRAFFIC_FEATURE_COUNT = BASE_SERIE_FEATURE_COUNT + 3;
+	int HISTORICAL_RAW_TRAFFIC_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Historical Raw Traffic</em>' class.
@@ -1717,91 +1523,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HISTORICAL_RAW_TRAFFIC_OPERATION_COUNT = BASE_SERIE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link de.jena.bike.impl.HistoricalAggregatedTrafficIncludeImpl <em>Historical Aggregated Traffic Include</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.jena.bike.impl.HistoricalAggregatedTrafficIncludeImpl
-	 * @see de.jena.bike.impl.BikePackageImpl#getHistoricalAggregatedTrafficInclude()
-	 * @generated
-	 */
-	int HISTORICAL_AGGREGATED_TRAFFIC_INCLUDE = 33;
-
-	/**
-	 * The number of structural features of the '<em>Historical Aggregated Traffic Include</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HISTORICAL_AGGREGATED_TRAFFIC_INCLUDE_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Historical Aggregated Traffic Include</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HISTORICAL_AGGREGATED_TRAFFIC_INCLUDE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link de.jena.bike.impl.GranularityImpl <em>Granularity</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.jena.bike.impl.GranularityImpl
-	 * @see de.jena.bike.impl.BikePackageImpl#getGranularity()
-	 * @generated
-	 */
-	int GRANULARITY = 34;
-
-	/**
-	 * The number of structural features of the '<em>Granularity</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GRANULARITY_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Granularity</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GRANULARITY_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link de.jena.bike.impl.HistoricalAggregatedTrafficGroupByImpl <em>Historical Aggregated Traffic Group By</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.jena.bike.impl.HistoricalAggregatedTrafficGroupByImpl
-	 * @see de.jena.bike.impl.BikePackageImpl#getHistoricalAggregatedTrafficGroupBy()
-	 * @generated
-	 */
-	int HISTORICAL_AGGREGATED_TRAFFIC_GROUP_BY = 35;
-
-	/**
-	 * The number of structural features of the '<em>Historical Aggregated Traffic Group By</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HISTORICAL_AGGREGATED_TRAFFIC_GROUP_BY_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Historical Aggregated Traffic Group By</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HISTORICAL_AGGREGATED_TRAFFIC_GROUP_BY_OPERATION_COUNT = 0;
+	int HISTORICAL_RAW_TRAFFIC_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link de.jena.bike.impl.HistoricalAggregatedTrafficImpl <em>Historical Aggregated Traffic</em>}' class.
@@ -1811,25 +1533,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.bike.impl.BikePackageImpl#getHistoricalAggregatedTraffic()
 	 * @generated
 	 */
-	int HISTORICAL_AGGREGATED_TRAFFIC = 36;
-
-	/**
-	 * The feature id for the '<em><b>Travel Mode</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HISTORICAL_AGGREGATED_TRAFFIC__TRAVEL_MODE = BASE_SERIE__TRAVEL_MODE;
-
-	/**
-	 * The feature id for the '<em><b>Direction</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HISTORICAL_AGGREGATED_TRAFFIC__DIRECTION = BASE_SERIE__DIRECTION;
+	int HISTORICAL_AGGREGATED_TRAFFIC = 27;
 
 	/**
 	 * The feature id for the '<em><b>Data</b></em>' containment reference list.
@@ -1838,7 +1542,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HISTORICAL_AGGREGATED_TRAFFIC__DATA = BASE_SERIE_FEATURE_COUNT + 0;
+	int HISTORICAL_AGGREGATED_TRAFFIC__DATA = 0;
 
 	/**
 	 * The feature id for the '<em><b>Direction Name</b></em>' containment reference.
@@ -1847,7 +1551,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HISTORICAL_AGGREGATED_TRAFFIC__DIRECTION_NAME = BASE_SERIE_FEATURE_COUNT + 1;
+	int HISTORICAL_AGGREGATED_TRAFFIC__DIRECTION_NAME = 1;
 
 	/**
 	 * The feature id for the '<em><b>Flow ID</b></em>' attribute.
@@ -1856,7 +1560,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HISTORICAL_AGGREGATED_TRAFFIC__FLOW_ID = BASE_SERIE_FEATURE_COUNT + 2;
+	int HISTORICAL_AGGREGATED_TRAFFIC__FLOW_ID = 2;
 
 	/**
 	 * The feature id for the '<em><b>Flow Name</b></em>' attribute.
@@ -1865,7 +1569,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HISTORICAL_AGGREGATED_TRAFFIC__FLOW_NAME = BASE_SERIE_FEATURE_COUNT + 3;
+	int HISTORICAL_AGGREGATED_TRAFFIC__FLOW_NAME = 3;
 
 	/**
 	 * The number of structural features of the '<em>Historical Aggregated Traffic</em>' class.
@@ -1874,7 +1578,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HISTORICAL_AGGREGATED_TRAFFIC_FEATURE_COUNT = BASE_SERIE_FEATURE_COUNT + 4;
+	int HISTORICAL_AGGREGATED_TRAFFIC_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Historical Aggregated Traffic</em>' class.
@@ -1883,7 +1587,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HISTORICAL_AGGREGATED_TRAFFIC_OPERATION_COUNT = BASE_SERIE_OPERATION_COUNT + 0;
+	int HISTORICAL_AGGREGATED_TRAFFIC_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link de.jena.bike.impl.LaneImpl <em>Lane</em>}' class.
@@ -1893,7 +1597,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.bike.impl.BikePackageImpl#getLane()
 	 * @generated
 	 */
-	int LANE = 37;
+	int LANE = 28;
 
 	/**
 	 * The number of structural features of the '<em>Lane</em>' class.
@@ -1921,25 +1625,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.bike.impl.BikePackageImpl#getHistoricalTimestampTraffic()
 	 * @generated
 	 */
-	int HISTORICAL_TIMESTAMP_TRAFFIC = 38;
-
-	/**
-	 * The feature id for the '<em><b>Travel Mode</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HISTORICAL_TIMESTAMP_TRAFFIC__TRAVEL_MODE = BASE_SERIE__TRAVEL_MODE;
-
-	/**
-	 * The feature id for the '<em><b>Direction</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HISTORICAL_TIMESTAMP_TRAFFIC__DIRECTION = BASE_SERIE__DIRECTION;
+	int HISTORICAL_TIMESTAMP_TRAFFIC = 29;
 
 	/**
 	 * The feature id for the '<em><b>Timestamp</b></em>' containment reference.
@@ -1948,7 +1634,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HISTORICAL_TIMESTAMP_TRAFFIC__TIMESTAMP = BASE_SERIE_FEATURE_COUNT + 0;
+	int HISTORICAL_TIMESTAMP_TRAFFIC__TIMESTAMP = 0;
 
 	/**
 	 * The feature id for the '<em><b>Lane</b></em>' containment reference.
@@ -1957,7 +1643,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HISTORICAL_TIMESTAMP_TRAFFIC__LANE = BASE_SERIE_FEATURE_COUNT + 1;
+	int HISTORICAL_TIMESTAMP_TRAFFIC__LANE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Speed</b></em>' attribute.
@@ -1966,7 +1652,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HISTORICAL_TIMESTAMP_TRAFFIC__SPEED = BASE_SERIE_FEATURE_COUNT + 2;
+	int HISTORICAL_TIMESTAMP_TRAFFIC__SPEED = 2;
 
 	/**
 	 * The number of structural features of the '<em>Historical Timestamp Traffic</em>' class.
@@ -1975,7 +1661,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HISTORICAL_TIMESTAMP_TRAFFIC_FEATURE_COUNT = BASE_SERIE_FEATURE_COUNT + 3;
+	int HISTORICAL_TIMESTAMP_TRAFFIC_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Historical Timestamp Traffic</em>' class.
@@ -1984,35 +1670,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HISTORICAL_TIMESTAMP_TRAFFIC_OPERATION_COUNT = BASE_SERIE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link de.jena.bike.impl.validationJobStatusImpl <em>validation Job Status</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.jena.bike.impl.validationJobStatusImpl
-	 * @see de.jena.bike.impl.BikePackageImpl#getvalidationJobStatus()
-	 * @generated
-	 */
-	int VALIDATION_JOB_STATUS = 39;
-
-	/**
-	 * The number of structural features of the '<em>validation Job Status</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VALIDATION_JOB_STATUS_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>validation Job Status</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VALIDATION_JOB_STATUS_OPERATION_COUNT = 0;
+	int HISTORICAL_TIMESTAMP_TRAFFIC_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link de.jena.bike.impl.validationJobImpl <em>validation Job</em>}' class.
@@ -2022,7 +1680,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.bike.impl.BikePackageImpl#getvalidationJob()
 	 * @generated
 	 */
-	int VALIDATION_JOB = 40;
+	int VALIDATION_JOB = 30;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2122,7 +1780,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.bike.impl.BikePackageImpl#getvalidationJobCreated()
 	 * @generated
 	 */
-	int VALIDATION_JOB_CREATED = 41;
+	int VALIDATION_JOB_CREATED = 31;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2195,7 +1853,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.bike.impl.BikePackageImpl#getConflict()
 	 * @generated
 	 */
-	int CONFLICT = 42;
+	int CONFLICT = 32;
 
 	/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
@@ -2243,6 +1901,426 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	int CONFLICT_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.LineString_coordinatesImpl <em>Line String coordinates</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.LineString_coordinatesImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getLineString_coordinates()
+	 * @generated
+	 */
+	int LINE_STRING_COORDINATES = 33;
+
+	/**
+	 * The number of structural features of the '<em>Line String coordinates</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINE_STRING_COORDINATES_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Line String coordinates</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINE_STRING_COORDINATES_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.site_locationImpl <em>site location</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.site_locationImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getsite_location()
+	 * @generated
+	 */
+	int SITE_LOCATION = 34;
+
+	/**
+	 * The number of structural features of the '<em>site location</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SITE_LOCATION_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>site location</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SITE_LOCATION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.site_segmentsImpl <em>site segments</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.site_segmentsImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getsite_segments()
+	 * @generated
+	 */
+	int SITE_SEGMENTS = 35;
+
+	/**
+	 * The number of structural features of the '<em>site segments</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SITE_SEGMENTS_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>site segments</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SITE_SEGMENTS_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.site_travelModesImpl <em>site travel Modes</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.site_travelModesImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getsite_travelModes()
+	 * @generated
+	 */
+	int SITE_TRAVEL_MODES = 36;
+
+	/**
+	 * The number of structural features of the '<em>site travel Modes</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SITE_TRAVEL_MODES_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>site travel Modes</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SITE_TRAVEL_MODES_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.site_countersImpl <em>site counters</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.site_countersImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getsite_counters()
+	 * @generated
+	 */
+	int SITE_COUNTERS = 37;
+
+	/**
+	 * The number of structural features of the '<em>site counters</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SITE_COUNTERS_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>site counters</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SITE_COUNTERS_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.site_domainImpl <em>site domain</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.site_domainImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getsite_domain()
+	 * @generated
+	 */
+	int SITE_DOMAIN = 38;
+
+	/**
+	 * The number of structural features of the '<em>site domain</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SITE_DOMAIN_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>site domain</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SITE_DOMAIN_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.site_tagsImpl <em>site tags</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.site_tagsImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getsite_tags()
+	 * @generated
+	 */
+	int SITE_TAGS = 39;
+
+	/**
+	 * The number of structural features of the '<em>site tags</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SITE_TAGS_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>site tags</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SITE_TAGS_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.site_imagesImpl <em>site images</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.site_imagesImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getsite_images()
+	 * @generated
+	 */
+	int SITE_IMAGES = 40;
+
+	/**
+	 * The number of structural features of the '<em>site images</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SITE_IMAGES_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>site images</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SITE_IMAGES_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.tag_domainImpl <em>tag domain</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.tag_domainImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#gettag_domain()
+	 * @generated
+	 */
+	int TAG_DOMAIN = 41;
+
+	/**
+	 * The number of structural features of the '<em>tag domain</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAG_DOMAIN_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>tag domain</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAG_DOMAIN_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.StatisticalTraffic_travelModeImpl <em>Statistical Traffic travel Mode</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.StatisticalTraffic_travelModeImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getStatisticalTraffic_travelMode()
+	 * @generated
+	 */
+	int STATISTICAL_TRAFFIC_TRAVEL_MODE = 42;
+
+	/**
+	 * The number of structural features of the '<em>Statistical Traffic travel Mode</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTICAL_TRAFFIC_TRAVEL_MODE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Statistical Traffic travel Mode</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTICAL_TRAFFIC_TRAVEL_MODE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.StatisticalTraffic_directionImpl <em>Statistical Traffic direction</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.StatisticalTraffic_directionImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getStatisticalTraffic_direction()
+	 * @generated
+	 */
+	int STATISTICAL_TRAFFIC_DIRECTION = 43;
+
+	/**
+	 * The number of structural features of the '<em>Statistical Traffic direction</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTICAL_TRAFFIC_DIRECTION_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Statistical Traffic direction</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTICAL_TRAFFIC_DIRECTION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.StatisticalTraffic_directionNameImpl <em>Statistical Traffic direction Name</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.StatisticalTraffic_directionNameImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getStatisticalTraffic_directionName()
+	 * @generated
+	 */
+	int STATISTICAL_TRAFFIC_DIRECTION_NAME = 44;
+
+	/**
+	 * The number of structural features of the '<em>Statistical Traffic direction Name</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTICAL_TRAFFIC_DIRECTION_NAME_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Statistical Traffic direction Name</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTICAL_TRAFFIC_DIRECTION_NAME_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.StatisticalTraffic_valueImpl <em>Statistical Traffic value</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.StatisticalTraffic_valueImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getStatisticalTraffic_value()
+	 * @generated
+	 */
+	int STATISTICAL_TRAFFIC_VALUE = 45;
+
+	/**
+	 * The number of structural features of the '<em>Statistical Traffic value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTICAL_TRAFFIC_VALUE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Statistical Traffic value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATISTICAL_TRAFFIC_VALUE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.BaseSerie_travelModeImpl <em>Base Serie travel Mode</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.BaseSerie_travelModeImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getBaseSerie_travelMode()
+	 * @generated
+	 */
+	int BASE_SERIE_TRAVEL_MODE = 46;
+
+	/**
+	 * The number of structural features of the '<em>Base Serie travel Mode</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BASE_SERIE_TRAVEL_MODE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Base Serie travel Mode</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BASE_SERIE_TRAVEL_MODE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.BaseSerie_directionImpl <em>Base Serie direction</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.BaseSerie_directionImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getBaseSerie_direction()
+	 * @generated
+	 */
+	int BASE_SERIE_DIRECTION = 47;
+
+	/**
+	 * The number of structural features of the '<em>Base Serie direction</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BASE_SERIE_DIRECTION_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Base Serie direction</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BASE_SERIE_DIRECTION_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link de.jena.bike.impl.HistoricalRawTraffic_dataImpl <em>Historical Raw Traffic data</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2250,7 +2328,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.bike.impl.BikePackageImpl#getHistoricalRawTraffic_data()
 	 * @generated
 	 */
-	int HISTORICAL_RAW_TRAFFIC_DATA = 43;
+	int HISTORICAL_RAW_TRAFFIC_DATA = 48;
 
 	/**
 	 * The feature id for the '<em><b>Timestamp</b></em>' containment reference.
@@ -2307,6 +2385,90 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	int HISTORICAL_RAW_TRAFFIC_DATA_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.HistoricalRawTraffic_data_timestampImpl <em>Historical Raw Traffic data timestamp</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.HistoricalRawTraffic_data_timestampImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getHistoricalRawTraffic_data_timestamp()
+	 * @generated
+	 */
+	int HISTORICAL_RAW_TRAFFIC_DATA_TIMESTAMP = 49;
+
+	/**
+	 * The number of structural features of the '<em>Historical Raw Traffic data timestamp</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HISTORICAL_RAW_TRAFFIC_DATA_TIMESTAMP_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Historical Raw Traffic data timestamp</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HISTORICAL_RAW_TRAFFIC_DATA_TIMESTAMP_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.HistoricalRawTraffic_data_countsImpl <em>Historical Raw Traffic data counts</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.HistoricalRawTraffic_data_countsImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getHistoricalRawTraffic_data_counts()
+	 * @generated
+	 */
+	int HISTORICAL_RAW_TRAFFIC_DATA_COUNTS = 50;
+
+	/**
+	 * The number of structural features of the '<em>Historical Raw Traffic data counts</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HISTORICAL_RAW_TRAFFIC_DATA_COUNTS_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Historical Raw Traffic data counts</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HISTORICAL_RAW_TRAFFIC_DATA_COUNTS_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.HistoricalRawTraffic_data_statusImpl <em>Historical Raw Traffic data status</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.HistoricalRawTraffic_data_statusImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getHistoricalRawTraffic_data_status()
+	 * @generated
+	 */
+	int HISTORICAL_RAW_TRAFFIC_DATA_STATUS = 51;
+
+	/**
+	 * The number of structural features of the '<em>Historical Raw Traffic data status</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HISTORICAL_RAW_TRAFFIC_DATA_STATUS_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Historical Raw Traffic data status</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HISTORICAL_RAW_TRAFFIC_DATA_STATUS_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link de.jena.bike.impl.HistoricalAggregatedTraffic_dataImpl <em>Historical Aggregated Traffic data</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2314,7 +2476,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.bike.impl.BikePackageImpl#getHistoricalAggregatedTraffic_data()
 	 * @generated
 	 */
-	int HISTORICAL_AGGREGATED_TRAFFIC_DATA = 44;
+	int HISTORICAL_AGGREGATED_TRAFFIC_DATA = 52;
 
 	/**
 	 * The feature id for the '<em><b>Timestamp</b></em>' containment reference.
@@ -2362,6 +2524,34 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	int HISTORICAL_AGGREGATED_TRAFFIC_DATA_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.HistoricalAggregatedTraffic_data_timestampImpl <em>Historical Aggregated Traffic data timestamp</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.HistoricalAggregatedTraffic_data_timestampImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getHistoricalAggregatedTraffic_data_timestamp()
+	 * @generated
+	 */
+	int HISTORICAL_AGGREGATED_TRAFFIC_DATA_TIMESTAMP = 53;
+
+	/**
+	 * The number of structural features of the '<em>Historical Aggregated Traffic data timestamp</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HISTORICAL_AGGREGATED_TRAFFIC_DATA_TIMESTAMP_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Historical Aggregated Traffic data timestamp</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HISTORICAL_AGGREGATED_TRAFFIC_DATA_TIMESTAMP_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link de.jena.bike.impl.HistoricalAggregatedTraffic_data_trafficImpl <em>Historical Aggregated Traffic data traffic</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2369,7 +2559,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.bike.impl.BikePackageImpl#getHistoricalAggregatedTraffic_data_traffic()
 	 * @generated
 	 */
-	int HISTORICAL_AGGREGATED_TRAFFIC_DATA_TRAFFIC = 45;
+	int HISTORICAL_AGGREGATED_TRAFFIC_DATA_TRAFFIC = 54;
 
 	/**
 	 * The feature id for the '<em><b>Counts</b></em>' containment reference.
@@ -2408,6 +2598,34 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	int HISTORICAL_AGGREGATED_TRAFFIC_DATA_TRAFFIC_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.HistoricalAggregatedTraffic_data_traffic_countsImpl <em>Historical Aggregated Traffic data traffic counts</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.HistoricalAggregatedTraffic_data_traffic_countsImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getHistoricalAggregatedTraffic_data_traffic_counts()
+	 * @generated
+	 */
+	int HISTORICAL_AGGREGATED_TRAFFIC_DATA_TRAFFIC_COUNTS = 55;
+
+	/**
+	 * The number of structural features of the '<em>Historical Aggregated Traffic data traffic counts</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HISTORICAL_AGGREGATED_TRAFFIC_DATA_TRAFFIC_COUNTS_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Historical Aggregated Traffic data traffic counts</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HISTORICAL_AGGREGATED_TRAFFIC_DATA_TRAFFIC_COUNTS_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link de.jena.bike.impl.HistoricalAggregatedTraffic_data_weatherImpl <em>Historical Aggregated Traffic data weather</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2415,7 +2633,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.bike.impl.BikePackageImpl#getHistoricalAggregatedTraffic_data_weather()
 	 * @generated
 	 */
-	int HISTORICAL_AGGREGATED_TRAFFIC_DATA_WEATHER = 46;
+	int HISTORICAL_AGGREGATED_TRAFFIC_DATA_WEATHER = 56;
 
 	/**
 	 * The feature id for the '<em><b>Temperature</b></em>' attribute.
@@ -2463,6 +2681,146 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	int HISTORICAL_AGGREGATED_TRAFFIC_DATA_WEATHER_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.HistoricalAggregatedTraffic_directionNameImpl <em>Historical Aggregated Traffic direction Name</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.HistoricalAggregatedTraffic_directionNameImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getHistoricalAggregatedTraffic_directionName()
+	 * @generated
+	 */
+	int HISTORICAL_AGGREGATED_TRAFFIC_DIRECTION_NAME = 57;
+
+	/**
+	 * The number of structural features of the '<em>Historical Aggregated Traffic direction Name</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HISTORICAL_AGGREGATED_TRAFFIC_DIRECTION_NAME_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Historical Aggregated Traffic direction Name</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HISTORICAL_AGGREGATED_TRAFFIC_DIRECTION_NAME_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.HistoricalTimestampTraffic_timestampImpl <em>Historical Timestamp Traffic timestamp</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.HistoricalTimestampTraffic_timestampImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getHistoricalTimestampTraffic_timestamp()
+	 * @generated
+	 */
+	int HISTORICAL_TIMESTAMP_TRAFFIC_TIMESTAMP = 58;
+
+	/**
+	 * The number of structural features of the '<em>Historical Timestamp Traffic timestamp</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HISTORICAL_TIMESTAMP_TRAFFIC_TIMESTAMP_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Historical Timestamp Traffic timestamp</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HISTORICAL_TIMESTAMP_TRAFFIC_TIMESTAMP_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.HistoricalTimestampTraffic_laneImpl <em>Historical Timestamp Traffic lane</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.HistoricalTimestampTraffic_laneImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getHistoricalTimestampTraffic_lane()
+	 * @generated
+	 */
+	int HISTORICAL_TIMESTAMP_TRAFFIC_LANE = 59;
+
+	/**
+	 * The number of structural features of the '<em>Historical Timestamp Traffic lane</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HISTORICAL_TIMESTAMP_TRAFFIC_LANE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Historical Timestamp Traffic lane</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HISTORICAL_TIMESTAMP_TRAFFIC_LANE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.validationJob_statusImpl <em>validation Job status</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.validationJob_statusImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getvalidationJob_status()
+	 * @generated
+	 */
+	int VALIDATION_JOB_STATUS = 60;
+
+	/**
+	 * The number of structural features of the '<em>validation Job status</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VALIDATION_JOB_STATUS_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>validation Job status</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VALIDATION_JOB_STATUS_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.validationJobCreated_statusImpl <em>validation Job Created status</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.validationJobCreated_statusImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getvalidationJobCreated_status()
+	 * @generated
+	 */
+	int VALIDATION_JOB_CREATED_STATUS = 61;
+
+	/**
+	 * The number of structural features of the '<em>validation Job Created status</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VALIDATION_JOB_CREATED_STATUS_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>validation Job Created status</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VALIDATION_JOB_CREATED_STATUS_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link de.jena.bike.impl.ResponseImpl <em>Response</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2470,7 +2828,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.bike.impl.BikePackageImpl#getResponse()
 	 * @generated
 	 */
-	int RESPONSE = 47;
+	int RESPONSE = 62;
 
 	/**
 	 * The feature id for the '<em><b>Code</b></em>' attribute.
@@ -2534,7 +2892,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.bike.impl.BikePackageImpl#getOpenApiClient()
 	 * @generated
 	 */
-	int OPEN_API_CLIENT = 48;
+	int OPEN_API_CLIENT = 63;
 
 	/**
 	 * The number of structural features of the '<em>Open Api Client</em>' class.
@@ -2589,7 +2947,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.bike.impl.BikePackageImpl#getBikeOpenApiClient()
 	 * @generated
 	 */
-	int BIKE_OPEN_API_CLIENT = 49;
+	int BIKE_OPEN_API_CLIENT = 64;
 
 	/**
 	 * The number of structural features of the '<em>Open Api Client</em>' class.
@@ -2652,7 +3010,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BIKE_OPEN_API_CLIENT___CREATE_EXPORT__EXPORTCREATION = OPEN_API_CLIENT_OPERATION_COUNT + 2;
+	int BIKE_OPEN_API_CLIENT___CREATE_EXPORT__CREATEEXPORT_REQUEST = OPEN_API_CLIENT_OPERATION_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Get Export Status</em>' operation.
@@ -2679,7 +3037,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BIKE_OPEN_API_CLIENT___GET_ADT__BIGINTEGER_BIGINTEGER_DATERANGE_INTEGER_INTEGER_STATISTICALAVERAGEGROUPBY_ELIST_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 5;
+	int BIKE_OPEN_API_CLIENT___GET_ADT__BIGINTEGER_BIGINTEGER_GETADT_DATERANGE_INTEGER_INTEGER_GETADT_GROUPBY_ELIST_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 5;
 
 	/**
 	 * The operation id for the '<em>Get ADT By Site</em>' operation.
@@ -2688,7 +3046,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BIKE_OPEN_API_CLIENT___GET_ADT_BY_SITE__BIGINTEGER_BIGINTEGER_DATERANGE_INTEGER_INTEGER_STATISTICALAVERAGEGROUPBY_ELIST_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 6;
+	int BIKE_OPEN_API_CLIENT___GET_ADT_BY_SITE__BIGINTEGER_BIGINTEGER_GETADTBYSITE_DATERANGE_INTEGER_INTEGER_GETADTBYSITE_GROUPBY_ELIST_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 6;
 
 	/**
 	 * The operation id for the '<em>Get Total Traffic</em>' operation.
@@ -2697,7 +3055,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BIKE_OPEN_API_CLIENT___GET_TOTAL_TRAFFIC__BIGINTEGER_BIGINTEGER_DATERANGE_INTEGER_INTEGER_STATISTICALTOTALGROUPBY_ELIST_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 7;
+	int BIKE_OPEN_API_CLIENT___GET_TOTAL_TRAFFIC__BIGINTEGER_BIGINTEGER_GETTOTALTRAFFIC_DATERANGE_INTEGER_INTEGER_GETTOTALTRAFFIC_GROUPBY_ELIST_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 7;
 
 	/**
 	 * The operation id for the '<em>Get Raw Traffic</em>' operation.
@@ -2715,7 +3073,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BIKE_OPEN_API_CLIENT___GET_AGGREGATED_TRAFFIC__BIGINTEGER_ELIST_STRING_STRING_STRING_STRING_GRANULARITY_HISTORICALAGGREGATEDTRAFFICGROUPBY_BOOLEAN_ELIST_BOOLEAN_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 9;
+	int BIKE_OPEN_API_CLIENT___GET_AGGREGATED_TRAFFIC__BIGINTEGER_ELIST_STRING_STRING_STRING_STRING_GETAGGREGATEDTRAFFIC_GRANULARITY_GETAGGREGATEDTRAFFIC_GROUPBY_BOOLEAN_ELIST_BOOLEAN_BOOLEAN = OPEN_API_CLIENT_OPERATION_COUNT + 9;
 
 	/**
 	 * The operation id for the '<em>Get Timestamp Traffic</em>' operation.
@@ -2763,6 +3121,510 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	int BIKE_OPEN_API_CLIENT_OPERATION_COUNT = OPEN_API_CLIENT_OPERATION_COUNT + 14;
 
 	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.CreateExport_requestImpl <em>Create Export request</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.CreateExport_requestImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getCreateExport_request()
+	 * @generated
+	 */
+	int CREATE_EXPORT_REQUEST = 65;
+
+	/**
+	 * The number of structural features of the '<em>Create Export request</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_EXPORT_REQUEST_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Create Export request</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_EXPORT_REQUEST_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.GetADT_dateRangeImpl <em>Get ADT date Range</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.GetADT_dateRangeImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getGetADT_dateRange()
+	 * @generated
+	 */
+	int GET_ADT_DATE_RANGE = 66;
+
+	/**
+	 * The number of structural features of the '<em>Get ADT date Range</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_ADT_DATE_RANGE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Get ADT date Range</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_ADT_DATE_RANGE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.GetADT_groupByImpl <em>Get ADT group By</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.GetADT_groupByImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getGetADT_groupBy()
+	 * @generated
+	 */
+	int GET_ADT_GROUP_BY = 67;
+
+	/**
+	 * The number of structural features of the '<em>Get ADT group By</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_ADT_GROUP_BY_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Get ADT group By</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_ADT_GROUP_BY_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.GetADT_travelModesImpl <em>Get ADT travel Modes</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.GetADT_travelModesImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getGetADT_travelModes()
+	 * @generated
+	 */
+	int GET_ADT_TRAVEL_MODES = 68;
+
+	/**
+	 * The number of structural features of the '<em>Get ADT travel Modes</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_ADT_TRAVEL_MODES_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Get ADT travel Modes</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_ADT_TRAVEL_MODES_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.GetADTBySite_dateRangeImpl <em>Get ADT By Site date Range</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.GetADTBySite_dateRangeImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getGetADTBySite_dateRange()
+	 * @generated
+	 */
+	int GET_ADT_BY_SITE_DATE_RANGE = 69;
+
+	/**
+	 * The number of structural features of the '<em>Get ADT By Site date Range</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_ADT_BY_SITE_DATE_RANGE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Get ADT By Site date Range</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_ADT_BY_SITE_DATE_RANGE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.GetADTBySite_groupByImpl <em>Get ADT By Site group By</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.GetADTBySite_groupByImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getGetADTBySite_groupBy()
+	 * @generated
+	 */
+	int GET_ADT_BY_SITE_GROUP_BY = 70;
+
+	/**
+	 * The number of structural features of the '<em>Get ADT By Site group By</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_ADT_BY_SITE_GROUP_BY_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Get ADT By Site group By</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_ADT_BY_SITE_GROUP_BY_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.GetADTBySite_travelModesImpl <em>Get ADT By Site travel Modes</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.GetADTBySite_travelModesImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getGetADTBySite_travelModes()
+	 * @generated
+	 */
+	int GET_ADT_BY_SITE_TRAVEL_MODES = 71;
+
+	/**
+	 * The number of structural features of the '<em>Get ADT By Site travel Modes</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_ADT_BY_SITE_TRAVEL_MODES_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Get ADT By Site travel Modes</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_ADT_BY_SITE_TRAVEL_MODES_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.GetTotalTraffic_dateRangeImpl <em>Get Total Traffic date Range</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.GetTotalTraffic_dateRangeImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getGetTotalTraffic_dateRange()
+	 * @generated
+	 */
+	int GET_TOTAL_TRAFFIC_DATE_RANGE = 72;
+
+	/**
+	 * The number of structural features of the '<em>Get Total Traffic date Range</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_TOTAL_TRAFFIC_DATE_RANGE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Get Total Traffic date Range</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_TOTAL_TRAFFIC_DATE_RANGE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.GetTotalTraffic_groupByImpl <em>Get Total Traffic group By</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.GetTotalTraffic_groupByImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getGetTotalTraffic_groupBy()
+	 * @generated
+	 */
+	int GET_TOTAL_TRAFFIC_GROUP_BY = 73;
+
+	/**
+	 * The number of structural features of the '<em>Get Total Traffic group By</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_TOTAL_TRAFFIC_GROUP_BY_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Get Total Traffic group By</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_TOTAL_TRAFFIC_GROUP_BY_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.GetTotalTraffic_travelModesImpl <em>Get Total Traffic travel Modes</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.GetTotalTraffic_travelModesImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getGetTotalTraffic_travelModes()
+	 * @generated
+	 */
+	int GET_TOTAL_TRAFFIC_TRAVEL_MODES = 74;
+
+	/**
+	 * The number of structural features of the '<em>Get Total Traffic travel Modes</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_TOTAL_TRAFFIC_TRAVEL_MODES_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Get Total Traffic travel Modes</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_TOTAL_TRAFFIC_TRAVEL_MODES_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.GetRawTraffic_includeImpl <em>Get Raw Traffic include</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.GetRawTraffic_includeImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getGetRawTraffic_include()
+	 * @generated
+	 */
+	int GET_RAW_TRAFFIC_INCLUDE = 75;
+
+	/**
+	 * The number of structural features of the '<em>Get Raw Traffic include</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_RAW_TRAFFIC_INCLUDE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Get Raw Traffic include</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_RAW_TRAFFIC_INCLUDE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.GetRawTraffic_travelModesImpl <em>Get Raw Traffic travel Modes</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.GetRawTraffic_travelModesImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getGetRawTraffic_travelModes()
+	 * @generated
+	 */
+	int GET_RAW_TRAFFIC_TRAVEL_MODES = 76;
+
+	/**
+	 * The number of structural features of the '<em>Get Raw Traffic travel Modes</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_RAW_TRAFFIC_TRAVEL_MODES_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Get Raw Traffic travel Modes</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_RAW_TRAFFIC_TRAVEL_MODES_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.GetAggregatedTraffic_includeImpl <em>Get Aggregated Traffic include</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.GetAggregatedTraffic_includeImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getGetAggregatedTraffic_include()
+	 * @generated
+	 */
+	int GET_AGGREGATED_TRAFFIC_INCLUDE = 77;
+
+	/**
+	 * The number of structural features of the '<em>Get Aggregated Traffic include</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_AGGREGATED_TRAFFIC_INCLUDE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Get Aggregated Traffic include</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_AGGREGATED_TRAFFIC_INCLUDE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.GetAggregatedTraffic_granularityImpl <em>Get Aggregated Traffic granularity</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.GetAggregatedTraffic_granularityImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getGetAggregatedTraffic_granularity()
+	 * @generated
+	 */
+	int GET_AGGREGATED_TRAFFIC_GRANULARITY = 78;
+
+	/**
+	 * The number of structural features of the '<em>Get Aggregated Traffic granularity</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_AGGREGATED_TRAFFIC_GRANULARITY_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Get Aggregated Traffic granularity</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_AGGREGATED_TRAFFIC_GRANULARITY_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.GetAggregatedTraffic_groupByImpl <em>Get Aggregated Traffic group By</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.GetAggregatedTraffic_groupByImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getGetAggregatedTraffic_groupBy()
+	 * @generated
+	 */
+	int GET_AGGREGATED_TRAFFIC_GROUP_BY = 79;
+
+	/**
+	 * The number of structural features of the '<em>Get Aggregated Traffic group By</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_AGGREGATED_TRAFFIC_GROUP_BY_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Get Aggregated Traffic group By</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_AGGREGATED_TRAFFIC_GROUP_BY_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.GetAggregatedTraffic_travelModesImpl <em>Get Aggregated Traffic travel Modes</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.GetAggregatedTraffic_travelModesImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getGetAggregatedTraffic_travelModes()
+	 * @generated
+	 */
+	int GET_AGGREGATED_TRAFFIC_TRAVEL_MODES = 80;
+
+	/**
+	 * The number of structural features of the '<em>Get Aggregated Traffic travel Modes</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_AGGREGATED_TRAFFIC_TRAVEL_MODES_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Get Aggregated Traffic travel Modes</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_AGGREGATED_TRAFFIC_TRAVEL_MODES_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.GetTimestampTraffic_travelModesImpl <em>Get Timestamp Traffic travel Modes</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.GetTimestampTraffic_travelModesImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getGetTimestampTraffic_travelModes()
+	 * @generated
+	 */
+	int GET_TIMESTAMP_TRAFFIC_TRAVEL_MODES = 81;
+
+	/**
+	 * The number of structural features of the '<em>Get Timestamp Traffic travel Modes</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_TIMESTAMP_TRAFFIC_TRAVEL_MODES_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Get Timestamp Traffic travel Modes</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_TIMESTAMP_TRAFFIC_TRAVEL_MODES_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.impl.GetTimestampTraffic_directionsImpl <em>Get Timestamp Traffic directions</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.impl.GetTimestampTraffic_directionsImpl
+	 * @see de.jena.bike.impl.BikePackageImpl#getGetTimestampTraffic_directions()
+	 * @generated
+	 */
+	int GET_TIMESTAMP_TRAFFIC_DIRECTIONS = 82;
+
+	/**
+	 * The number of structural features of the '<em>Get Timestamp Traffic directions</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_TIMESTAMP_TRAFFIC_DIRECTIONS_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Get Timestamp Traffic directions</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_TIMESTAMP_TRAFFIC_DIRECTIONS_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link de.jena.bike.impl.ValidationJobCreate_requestImpl <em>Validation Job Create request</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2770,7 +3632,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.bike.impl.BikePackageImpl#getValidationJobCreate_request()
 	 * @generated
 	 */
-	int VALIDATION_JOB_CREATE_REQUEST = 50;
+	int VALIDATION_JOB_CREATE_REQUEST = 83;
 
 	/**
 	 * The feature id for the '<em><b>Site Ids</b></em>' attribute list.
@@ -2818,6 +3680,106 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	int VALIDATION_JOB_CREATE_REQUEST_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link de.jena.bike.TravelModeLabel <em>Travel Mode Label</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.TravelModeLabel
+	 * @see de.jena.bike.impl.BikePackageImpl#getTravelModeLabel()
+	 * @generated
+	 */
+	int TRAVEL_MODE_LABEL = 84;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.DateRange <em>Date Range</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.DateRange
+	 * @see de.jena.bike.impl.BikePackageImpl#getDateRange()
+	 * @generated
+	 */
+	int DATE_RANGE = 85;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.StatisticalAverageGroupBy <em>Statistical Average Group By</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.StatisticalAverageGroupBy
+	 * @see de.jena.bike.impl.BikePackageImpl#getStatisticalAverageGroupBy()
+	 * @generated
+	 */
+	int STATISTICAL_AVERAGE_GROUP_BY = 86;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.Direction <em>Direction</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.Direction
+	 * @see de.jena.bike.impl.BikePackageImpl#getDirection()
+	 * @generated
+	 */
+	int DIRECTION = 87;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.StatisticalTotalGroupBy <em>Statistical Total Group By</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.StatisticalTotalGroupBy
+	 * @see de.jena.bike.impl.BikePackageImpl#getStatisticalTotalGroupBy()
+	 * @generated
+	 */
+	int STATISTICAL_TOTAL_GROUP_BY = 88;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.HistoricalRawTrafficInclude <em>Historical Raw Traffic Include</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.HistoricalRawTrafficInclude
+	 * @see de.jena.bike.impl.BikePackageImpl#getHistoricalRawTrafficInclude()
+	 * @generated
+	 */
+	int HISTORICAL_RAW_TRAFFIC_INCLUDE = 89;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.HistoricalAggregatedTrafficInclude <em>Historical Aggregated Traffic Include</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.HistoricalAggregatedTrafficInclude
+	 * @see de.jena.bike.impl.BikePackageImpl#getHistoricalAggregatedTrafficInclude()
+	 * @generated
+	 */
+	int HISTORICAL_AGGREGATED_TRAFFIC_INCLUDE = 90;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.Granularity <em>Granularity</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.Granularity
+	 * @see de.jena.bike.impl.BikePackageImpl#getGranularity()
+	 * @generated
+	 */
+	int GRANULARITY = 91;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.HistoricalAggregatedTrafficGroupBy <em>Historical Aggregated Traffic Group By</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.HistoricalAggregatedTrafficGroupBy
+	 * @see de.jena.bike.impl.BikePackageImpl#getHistoricalAggregatedTrafficGroupBy()
+	 * @generated
+	 */
+	int HISTORICAL_AGGREGATED_TRAFFIC_GROUP_BY = 92;
+
+	/**
+	 * The meta object id for the '{@link de.jena.bike.validationJobStatus <em>validation Job Status</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.bike.validationJobStatus
+	 * @see de.jena.bike.impl.BikePackageImpl#getvalidationJobStatus()
+	 * @generated
+	 */
+	int VALIDATION_JOB_STATUS = 93;
+
+	/**
 	 * The meta object id for the '<em>JResponse</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2825,7 +3787,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.bike.impl.BikePackageImpl#getJResponse()
 	 * @generated
 	 */
-	int JRESPONSE = 51;
+	int JRESPONSE = 94;
 
 
 	/**
@@ -2931,16 +3893,6 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EClass getGeoJsonObject();
-
-	/**
-	 * Returns the meta object for class '{@link de.jena.bike.TravelModeLabel <em>Travel Mode Label</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Travel Mode Label</em>'.
-	 * @see de.jena.bike.TravelModeLabel
-	 * @generated
-	 */
-	EClass getTravelModeLabel();
 
 	/**
 	 * Returns the meta object for class '{@link de.jena.bike.siteCounter <em>site Counter</em>}'.
@@ -3755,36 +4707,6 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getNotFound_Message();
 
 	/**
-	 * Returns the meta object for class '{@link de.jena.bike.DateRange <em>Date Range</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Date Range</em>'.
-	 * @see de.jena.bike.DateRange
-	 * @generated
-	 */
-	EClass getDateRange();
-
-	/**
-	 * Returns the meta object for class '{@link de.jena.bike.StatisticalAverageGroupBy <em>Statistical Average Group By</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Statistical Average Group By</em>'.
-	 * @see de.jena.bike.StatisticalAverageGroupBy
-	 * @generated
-	 */
-	EClass getStatisticalAverageGroupBy();
-
-	/**
-	 * Returns the meta object for class '{@link de.jena.bike.Direction <em>Direction</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Direction</em>'.
-	 * @see de.jena.bike.Direction
-	 * @generated
-	 */
-	EClass getDirection();
-
-	/**
 	 * Returns the meta object for class '{@link de.jena.bike.DirectionName <em>Direction Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3879,26 +4801,6 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EReference getStatisticalTraffic_Value();
-
-	/**
-	 * Returns the meta object for class '{@link de.jena.bike.StatisticalTotalGroupBy <em>Statistical Total Group By</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Statistical Total Group By</em>'.
-	 * @see de.jena.bike.StatisticalTotalGroupBy
-	 * @generated
-	 */
-	EClass getStatisticalTotalGroupBy();
-
-	/**
-	 * Returns the meta object for class '{@link de.jena.bike.HistoricalRawTrafficInclude <em>Historical Raw Traffic Include</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Historical Raw Traffic Include</em>'.
-	 * @see de.jena.bike.HistoricalRawTrafficInclude
-	 * @generated
-	 */
-	EClass getHistoricalRawTrafficInclude();
 
 	/**
 	 * Returns the meta object for class '{@link de.jena.bike.BaseSerie <em>Base Serie</em>}'.
@@ -4006,36 +4908,6 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getHistoricalRawTraffic_Data();
 
 	/**
-	 * Returns the meta object for class '{@link de.jena.bike.HistoricalAggregatedTrafficInclude <em>Historical Aggregated Traffic Include</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Historical Aggregated Traffic Include</em>'.
-	 * @see de.jena.bike.HistoricalAggregatedTrafficInclude
-	 * @generated
-	 */
-	EClass getHistoricalAggregatedTrafficInclude();
-
-	/**
-	 * Returns the meta object for class '{@link de.jena.bike.Granularity <em>Granularity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Granularity</em>'.
-	 * @see de.jena.bike.Granularity
-	 * @generated
-	 */
-	EClass getGranularity();
-
-	/**
-	 * Returns the meta object for class '{@link de.jena.bike.HistoricalAggregatedTrafficGroupBy <em>Historical Aggregated Traffic Group By</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Historical Aggregated Traffic Group By</em>'.
-	 * @see de.jena.bike.HistoricalAggregatedTrafficGroupBy
-	 * @generated
-	 */
-	EClass getHistoricalAggregatedTrafficGroupBy();
-
-	/**
 	 * Returns the meta object for class '{@link de.jena.bike.HistoricalAggregatedTraffic <em>Historical Aggregated Traffic</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4141,16 +5013,6 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EAttribute getHistoricalTimestampTraffic_Speed();
-
-	/**
-	 * Returns the meta object for class '{@link de.jena.bike.validationJobStatus <em>validation Job Status</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>validation Job Status</em>'.
-	 * @see de.jena.bike.validationJobStatus
-	 * @generated
-	 */
-	EClass getvalidationJobStatus();
 
 	/**
 	 * Returns the meta object for class '{@link de.jena.bike.validationJob <em>validation Job</em>}'.
@@ -4359,6 +5221,156 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getConflict_Message();
 
 	/**
+	 * Returns the meta object for class '{@link de.jena.bike.LineString_coordinates <em>Line String coordinates</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Line String coordinates</em>'.
+	 * @see de.jena.bike.LineString_coordinates
+	 * @generated
+	 */
+	EClass getLineString_coordinates();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.site_location <em>site location</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>site location</em>'.
+	 * @see de.jena.bike.site_location
+	 * @generated
+	 */
+	EClass getsite_location();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.site_segments <em>site segments</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>site segments</em>'.
+	 * @see de.jena.bike.site_segments
+	 * @generated
+	 */
+	EClass getsite_segments();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.site_travelModes <em>site travel Modes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>site travel Modes</em>'.
+	 * @see de.jena.bike.site_travelModes
+	 * @generated
+	 */
+	EClass getsite_travelModes();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.site_counters <em>site counters</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>site counters</em>'.
+	 * @see de.jena.bike.site_counters
+	 * @generated
+	 */
+	EClass getsite_counters();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.site_domain <em>site domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>site domain</em>'.
+	 * @see de.jena.bike.site_domain
+	 * @generated
+	 */
+	EClass getsite_domain();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.site_tags <em>site tags</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>site tags</em>'.
+	 * @see de.jena.bike.site_tags
+	 * @generated
+	 */
+	EClass getsite_tags();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.site_images <em>site images</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>site images</em>'.
+	 * @see de.jena.bike.site_images
+	 * @generated
+	 */
+	EClass getsite_images();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.tag_domain <em>tag domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>tag domain</em>'.
+	 * @see de.jena.bike.tag_domain
+	 * @generated
+	 */
+	EClass gettag_domain();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.StatisticalTraffic_travelMode <em>Statistical Traffic travel Mode</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Statistical Traffic travel Mode</em>'.
+	 * @see de.jena.bike.StatisticalTraffic_travelMode
+	 * @generated
+	 */
+	EClass getStatisticalTraffic_travelMode();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.StatisticalTraffic_direction <em>Statistical Traffic direction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Statistical Traffic direction</em>'.
+	 * @see de.jena.bike.StatisticalTraffic_direction
+	 * @generated
+	 */
+	EClass getStatisticalTraffic_direction();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.StatisticalTraffic_directionName <em>Statistical Traffic direction Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Statistical Traffic direction Name</em>'.
+	 * @see de.jena.bike.StatisticalTraffic_directionName
+	 * @generated
+	 */
+	EClass getStatisticalTraffic_directionName();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.StatisticalTraffic_value <em>Statistical Traffic value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Statistical Traffic value</em>'.
+	 * @see de.jena.bike.StatisticalTraffic_value
+	 * @generated
+	 */
+	EClass getStatisticalTraffic_value();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.BaseSerie_travelMode <em>Base Serie travel Mode</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Base Serie travel Mode</em>'.
+	 * @see de.jena.bike.BaseSerie_travelMode
+	 * @generated
+	 */
+	EClass getBaseSerie_travelMode();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.BaseSerie_direction <em>Base Serie direction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Base Serie direction</em>'.
+	 * @see de.jena.bike.BaseSerie_direction
+	 * @generated
+	 */
+	EClass getBaseSerie_direction();
+
+	/**
 	 * Returns the meta object for class '{@link de.jena.bike.HistoricalRawTraffic_data <em>Historical Raw Traffic data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4413,6 +5425,36 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getHistoricalRawTraffic_data_Status();
 
 	/**
+	 * Returns the meta object for class '{@link de.jena.bike.HistoricalRawTraffic_data_timestamp <em>Historical Raw Traffic data timestamp</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Historical Raw Traffic data timestamp</em>'.
+	 * @see de.jena.bike.HistoricalRawTraffic_data_timestamp
+	 * @generated
+	 */
+	EClass getHistoricalRawTraffic_data_timestamp();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.HistoricalRawTraffic_data_counts <em>Historical Raw Traffic data counts</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Historical Raw Traffic data counts</em>'.
+	 * @see de.jena.bike.HistoricalRawTraffic_data_counts
+	 * @generated
+	 */
+	EClass getHistoricalRawTraffic_data_counts();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.HistoricalRawTraffic_data_status <em>Historical Raw Traffic data status</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Historical Raw Traffic data status</em>'.
+	 * @see de.jena.bike.HistoricalRawTraffic_data_status
+	 * @generated
+	 */
+	EClass getHistoricalRawTraffic_data_status();
+
+	/**
 	 * Returns the meta object for class '{@link de.jena.bike.HistoricalAggregatedTraffic_data <em>Historical Aggregated Traffic data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4456,6 +5498,16 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getHistoricalAggregatedTraffic_data_Weather();
 
 	/**
+	 * Returns the meta object for class '{@link de.jena.bike.HistoricalAggregatedTraffic_data_timestamp <em>Historical Aggregated Traffic data timestamp</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Historical Aggregated Traffic data timestamp</em>'.
+	 * @see de.jena.bike.HistoricalAggregatedTraffic_data_timestamp
+	 * @generated
+	 */
+	EClass getHistoricalAggregatedTraffic_data_timestamp();
+
+	/**
 	 * Returns the meta object for class '{@link de.jena.bike.HistoricalAggregatedTraffic_data_traffic <em>Historical Aggregated Traffic data traffic</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4486,6 +5538,16 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EAttribute getHistoricalAggregatedTraffic_data_traffic_Status();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.HistoricalAggregatedTraffic_data_traffic_counts <em>Historical Aggregated Traffic data traffic counts</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Historical Aggregated Traffic data traffic counts</em>'.
+	 * @see de.jena.bike.HistoricalAggregatedTraffic_data_traffic_counts
+	 * @generated
+	 */
+	EClass getHistoricalAggregatedTraffic_data_traffic_counts();
 
 	/**
 	 * Returns the meta object for class '{@link de.jena.bike.HistoricalAggregatedTraffic_data_weather <em>Historical Aggregated Traffic data weather</em>}'.
@@ -4529,6 +5591,56 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EAttribute getHistoricalAggregatedTraffic_data_weather_SnowAccumulation();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.HistoricalAggregatedTraffic_directionName <em>Historical Aggregated Traffic direction Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Historical Aggregated Traffic direction Name</em>'.
+	 * @see de.jena.bike.HistoricalAggregatedTraffic_directionName
+	 * @generated
+	 */
+	EClass getHistoricalAggregatedTraffic_directionName();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.HistoricalTimestampTraffic_timestamp <em>Historical Timestamp Traffic timestamp</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Historical Timestamp Traffic timestamp</em>'.
+	 * @see de.jena.bike.HistoricalTimestampTraffic_timestamp
+	 * @generated
+	 */
+	EClass getHistoricalTimestampTraffic_timestamp();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.HistoricalTimestampTraffic_lane <em>Historical Timestamp Traffic lane</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Historical Timestamp Traffic lane</em>'.
+	 * @see de.jena.bike.HistoricalTimestampTraffic_lane
+	 * @generated
+	 */
+	EClass getHistoricalTimestampTraffic_lane();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.validationJob_status <em>validation Job status</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>validation Job status</em>'.
+	 * @see de.jena.bike.validationJob_status
+	 * @generated
+	 */
+	EClass getvalidationJob_status();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.validationJobCreated_status <em>validation Job Created status</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>validation Job Created status</em>'.
+	 * @see de.jena.bike.validationJobCreated_status
+	 * @generated
+	 */
+	EClass getvalidationJobCreated_status();
 
 	/**
 	 * Returns the meta object for class '{@link de.jena.bike.Response <em>Response</em>}'.
@@ -4655,14 +5767,14 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	EOperation getBikeOpenApiClient__GetTags__Integer_Integer_String_String_EList_EList_EList();
 
 	/**
-	 * Returns the meta object for the '{@link de.jena.bike.BikeOpenApiClient#CreateExport(de.jena.bike.ExportCreation) <em>Create Export</em>}' operation.
+	 * Returns the meta object for the '{@link de.jena.bike.BikeOpenApiClient#CreateExport(de.jena.bike.CreateExport_request) <em>Create Export</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Export</em>' operation.
-	 * @see de.jena.bike.BikeOpenApiClient#CreateExport(de.jena.bike.ExportCreation)
+	 * @see de.jena.bike.BikeOpenApiClient#CreateExport(de.jena.bike.CreateExport_request)
 	 * @generated
 	 */
-	EOperation getBikeOpenApiClient__CreateExport__ExportCreation();
+	EOperation getBikeOpenApiClient__CreateExport__CreateExport_request();
 
 	/**
 	 * Returns the meta object for the '{@link de.jena.bike.BikeOpenApiClient#GetExportStatus(java.lang.Integer) <em>Get Export Status</em>}' operation.
@@ -4685,34 +5797,34 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	EOperation getBikeOpenApiClient__DownloadExportData__Integer();
 
 	/**
-	 * Returns the meta object for the '{@link de.jena.bike.BikeOpenApiClient#GetADT(java.math.BigInteger, java.math.BigInteger, de.jena.bike.DateRange, java.lang.Integer, java.lang.Integer, de.jena.bike.StatisticalAverageGroupBy, org.eclipse.emf.common.util.EList, java.lang.Boolean) <em>Get ADT</em>}' operation.
+	 * Returns the meta object for the '{@link de.jena.bike.BikeOpenApiClient#GetADT(java.math.BigInteger, java.math.BigInteger, de.jena.bike.GetADT_dateRange, java.lang.Integer, java.lang.Integer, de.jena.bike.GetADT_groupBy, org.eclipse.emf.common.util.EList, java.lang.Boolean) <em>Get ADT</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get ADT</em>' operation.
-	 * @see de.jena.bike.BikeOpenApiClient#GetADT(java.math.BigInteger, java.math.BigInteger, de.jena.bike.DateRange, java.lang.Integer, java.lang.Integer, de.jena.bike.StatisticalAverageGroupBy, org.eclipse.emf.common.util.EList, java.lang.Boolean)
+	 * @see de.jena.bike.BikeOpenApiClient#GetADT(java.math.BigInteger, java.math.BigInteger, de.jena.bike.GetADT_dateRange, java.lang.Integer, java.lang.Integer, de.jena.bike.GetADT_groupBy, org.eclipse.emf.common.util.EList, java.lang.Boolean)
 	 * @generated
 	 */
-	EOperation getBikeOpenApiClient__GetADT__BigInteger_BigInteger_DateRange_Integer_Integer_StatisticalAverageGroupBy_EList_Boolean();
+	EOperation getBikeOpenApiClient__GetADT__BigInteger_BigInteger_GetADT_dateRange_Integer_Integer_GetADT_groupBy_EList_Boolean();
 
 	/**
-	 * Returns the meta object for the '{@link de.jena.bike.BikeOpenApiClient#GetADTBySite(java.math.BigInteger, java.math.BigInteger, de.jena.bike.DateRange, java.lang.Integer, java.lang.Integer, de.jena.bike.StatisticalAverageGroupBy, org.eclipse.emf.common.util.EList, java.lang.Boolean) <em>Get ADT By Site</em>}' operation.
+	 * Returns the meta object for the '{@link de.jena.bike.BikeOpenApiClient#GetADTBySite(java.math.BigInteger, java.math.BigInteger, de.jena.bike.GetADTBySite_dateRange, java.lang.Integer, java.lang.Integer, de.jena.bike.GetADTBySite_groupBy, org.eclipse.emf.common.util.EList, java.lang.Boolean) <em>Get ADT By Site</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get ADT By Site</em>' operation.
-	 * @see de.jena.bike.BikeOpenApiClient#GetADTBySite(java.math.BigInteger, java.math.BigInteger, de.jena.bike.DateRange, java.lang.Integer, java.lang.Integer, de.jena.bike.StatisticalAverageGroupBy, org.eclipse.emf.common.util.EList, java.lang.Boolean)
+	 * @see de.jena.bike.BikeOpenApiClient#GetADTBySite(java.math.BigInteger, java.math.BigInteger, de.jena.bike.GetADTBySite_dateRange, java.lang.Integer, java.lang.Integer, de.jena.bike.GetADTBySite_groupBy, org.eclipse.emf.common.util.EList, java.lang.Boolean)
 	 * @generated
 	 */
-	EOperation getBikeOpenApiClient__GetADTBySite__BigInteger_BigInteger_DateRange_Integer_Integer_StatisticalAverageGroupBy_EList_Boolean();
+	EOperation getBikeOpenApiClient__GetADTBySite__BigInteger_BigInteger_GetADTBySite_dateRange_Integer_Integer_GetADTBySite_groupBy_EList_Boolean();
 
 	/**
-	 * Returns the meta object for the '{@link de.jena.bike.BikeOpenApiClient#GetTotalTraffic(java.math.BigInteger, java.math.BigInteger, de.jena.bike.DateRange, java.lang.Integer, java.lang.Integer, de.jena.bike.StatisticalTotalGroupBy, org.eclipse.emf.common.util.EList, java.lang.Boolean) <em>Get Total Traffic</em>}' operation.
+	 * Returns the meta object for the '{@link de.jena.bike.BikeOpenApiClient#GetTotalTraffic(java.math.BigInteger, java.math.BigInteger, de.jena.bike.GetTotalTraffic_dateRange, java.lang.Integer, java.lang.Integer, de.jena.bike.GetTotalTraffic_groupBy, org.eclipse.emf.common.util.EList, java.lang.Boolean) <em>Get Total Traffic</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Total Traffic</em>' operation.
-	 * @see de.jena.bike.BikeOpenApiClient#GetTotalTraffic(java.math.BigInteger, java.math.BigInteger, de.jena.bike.DateRange, java.lang.Integer, java.lang.Integer, de.jena.bike.StatisticalTotalGroupBy, org.eclipse.emf.common.util.EList, java.lang.Boolean)
+	 * @see de.jena.bike.BikeOpenApiClient#GetTotalTraffic(java.math.BigInteger, java.math.BigInteger, de.jena.bike.GetTotalTraffic_dateRange, java.lang.Integer, java.lang.Integer, de.jena.bike.GetTotalTraffic_groupBy, org.eclipse.emf.common.util.EList, java.lang.Boolean)
 	 * @generated
 	 */
-	EOperation getBikeOpenApiClient__GetTotalTraffic__BigInteger_BigInteger_DateRange_Integer_Integer_StatisticalTotalGroupBy_EList_Boolean();
+	EOperation getBikeOpenApiClient__GetTotalTraffic__BigInteger_BigInteger_GetTotalTraffic_dateRange_Integer_Integer_GetTotalTraffic_groupBy_EList_Boolean();
 
 	/**
 	 * Returns the meta object for the '{@link de.jena.bike.BikeOpenApiClient#GetRawTraffic(java.math.BigInteger, org.eclipse.emf.common.util.EList, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Boolean, org.eclipse.emf.common.util.EList, java.lang.Boolean, java.lang.Boolean) <em>Get Raw Traffic</em>}' operation.
@@ -4725,14 +5837,14 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	EOperation getBikeOpenApiClient__GetRawTraffic__BigInteger_EList_String_String_String_String_Boolean_EList_Boolean_Boolean();
 
 	/**
-	 * Returns the meta object for the '{@link de.jena.bike.BikeOpenApiClient#GetAggregatedTraffic(java.math.BigInteger, org.eclipse.emf.common.util.EList, java.lang.String, java.lang.String, java.lang.String, java.lang.String, de.jena.bike.Granularity, de.jena.bike.HistoricalAggregatedTrafficGroupBy, java.lang.Boolean, org.eclipse.emf.common.util.EList, java.lang.Boolean, java.lang.Boolean) <em>Get Aggregated Traffic</em>}' operation.
+	 * Returns the meta object for the '{@link de.jena.bike.BikeOpenApiClient#GetAggregatedTraffic(java.math.BigInteger, org.eclipse.emf.common.util.EList, java.lang.String, java.lang.String, java.lang.String, java.lang.String, de.jena.bike.GetAggregatedTraffic_granularity, de.jena.bike.GetAggregatedTraffic_groupBy, java.lang.Boolean, org.eclipse.emf.common.util.EList, java.lang.Boolean, java.lang.Boolean) <em>Get Aggregated Traffic</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Aggregated Traffic</em>' operation.
-	 * @see de.jena.bike.BikeOpenApiClient#GetAggregatedTraffic(java.math.BigInteger, org.eclipse.emf.common.util.EList, java.lang.String, java.lang.String, java.lang.String, java.lang.String, de.jena.bike.Granularity, de.jena.bike.HistoricalAggregatedTrafficGroupBy, java.lang.Boolean, org.eclipse.emf.common.util.EList, java.lang.Boolean, java.lang.Boolean)
+	 * @see de.jena.bike.BikeOpenApiClient#GetAggregatedTraffic(java.math.BigInteger, org.eclipse.emf.common.util.EList, java.lang.String, java.lang.String, java.lang.String, java.lang.String, de.jena.bike.GetAggregatedTraffic_granularity, de.jena.bike.GetAggregatedTraffic_groupBy, java.lang.Boolean, org.eclipse.emf.common.util.EList, java.lang.Boolean, java.lang.Boolean)
 	 * @generated
 	 */
-	EOperation getBikeOpenApiClient__GetAggregatedTraffic__BigInteger_EList_String_String_String_String_Granularity_HistoricalAggregatedTrafficGroupBy_Boolean_EList_Boolean_Boolean();
+	EOperation getBikeOpenApiClient__GetAggregatedTraffic__BigInteger_EList_String_String_String_String_GetAggregatedTraffic_granularity_GetAggregatedTraffic_groupBy_Boolean_EList_Boolean_Boolean();
 
 	/**
 	 * Returns the meta object for the '{@link de.jena.bike.BikeOpenApiClient#GetTimestampTraffic(java.math.BigInteger, java.lang.String, java.lang.String, java.lang.String, java.lang.String, org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList) <em>Get Timestamp Traffic</em>}' operation.
@@ -4773,6 +5885,186 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EOperation getBikeOpenApiClient__ValidationJobGet__Integer();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.CreateExport_request <em>Create Export request</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Create Export request</em>'.
+	 * @see de.jena.bike.CreateExport_request
+	 * @generated
+	 */
+	EClass getCreateExport_request();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.GetADT_dateRange <em>Get ADT date Range</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Get ADT date Range</em>'.
+	 * @see de.jena.bike.GetADT_dateRange
+	 * @generated
+	 */
+	EClass getGetADT_dateRange();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.GetADT_groupBy <em>Get ADT group By</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Get ADT group By</em>'.
+	 * @see de.jena.bike.GetADT_groupBy
+	 * @generated
+	 */
+	EClass getGetADT_groupBy();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.GetADT_travelModes <em>Get ADT travel Modes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Get ADT travel Modes</em>'.
+	 * @see de.jena.bike.GetADT_travelModes
+	 * @generated
+	 */
+	EClass getGetADT_travelModes();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.GetADTBySite_dateRange <em>Get ADT By Site date Range</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Get ADT By Site date Range</em>'.
+	 * @see de.jena.bike.GetADTBySite_dateRange
+	 * @generated
+	 */
+	EClass getGetADTBySite_dateRange();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.GetADTBySite_groupBy <em>Get ADT By Site group By</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Get ADT By Site group By</em>'.
+	 * @see de.jena.bike.GetADTBySite_groupBy
+	 * @generated
+	 */
+	EClass getGetADTBySite_groupBy();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.GetADTBySite_travelModes <em>Get ADT By Site travel Modes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Get ADT By Site travel Modes</em>'.
+	 * @see de.jena.bike.GetADTBySite_travelModes
+	 * @generated
+	 */
+	EClass getGetADTBySite_travelModes();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.GetTotalTraffic_dateRange <em>Get Total Traffic date Range</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Get Total Traffic date Range</em>'.
+	 * @see de.jena.bike.GetTotalTraffic_dateRange
+	 * @generated
+	 */
+	EClass getGetTotalTraffic_dateRange();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.GetTotalTraffic_groupBy <em>Get Total Traffic group By</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Get Total Traffic group By</em>'.
+	 * @see de.jena.bike.GetTotalTraffic_groupBy
+	 * @generated
+	 */
+	EClass getGetTotalTraffic_groupBy();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.GetTotalTraffic_travelModes <em>Get Total Traffic travel Modes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Get Total Traffic travel Modes</em>'.
+	 * @see de.jena.bike.GetTotalTraffic_travelModes
+	 * @generated
+	 */
+	EClass getGetTotalTraffic_travelModes();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.GetRawTraffic_include <em>Get Raw Traffic include</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Get Raw Traffic include</em>'.
+	 * @see de.jena.bike.GetRawTraffic_include
+	 * @generated
+	 */
+	EClass getGetRawTraffic_include();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.GetRawTraffic_travelModes <em>Get Raw Traffic travel Modes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Get Raw Traffic travel Modes</em>'.
+	 * @see de.jena.bike.GetRawTraffic_travelModes
+	 * @generated
+	 */
+	EClass getGetRawTraffic_travelModes();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.GetAggregatedTraffic_include <em>Get Aggregated Traffic include</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Get Aggregated Traffic include</em>'.
+	 * @see de.jena.bike.GetAggregatedTraffic_include
+	 * @generated
+	 */
+	EClass getGetAggregatedTraffic_include();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.GetAggregatedTraffic_granularity <em>Get Aggregated Traffic granularity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Get Aggregated Traffic granularity</em>'.
+	 * @see de.jena.bike.GetAggregatedTraffic_granularity
+	 * @generated
+	 */
+	EClass getGetAggregatedTraffic_granularity();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.GetAggregatedTraffic_groupBy <em>Get Aggregated Traffic group By</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Get Aggregated Traffic group By</em>'.
+	 * @see de.jena.bike.GetAggregatedTraffic_groupBy
+	 * @generated
+	 */
+	EClass getGetAggregatedTraffic_groupBy();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.GetAggregatedTraffic_travelModes <em>Get Aggregated Traffic travel Modes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Get Aggregated Traffic travel Modes</em>'.
+	 * @see de.jena.bike.GetAggregatedTraffic_travelModes
+	 * @generated
+	 */
+	EClass getGetAggregatedTraffic_travelModes();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.GetTimestampTraffic_travelModes <em>Get Timestamp Traffic travel Modes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Get Timestamp Traffic travel Modes</em>'.
+	 * @see de.jena.bike.GetTimestampTraffic_travelModes
+	 * @generated
+	 */
+	EClass getGetTimestampTraffic_travelModes();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.bike.GetTimestampTraffic_directions <em>Get Timestamp Traffic directions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Get Timestamp Traffic directions</em>'.
+	 * @see de.jena.bike.GetTimestampTraffic_directions
+	 * @generated
+	 */
+	EClass getGetTimestampTraffic_directions();
 
 	/**
 	 * Returns the meta object for class '{@link de.jena.bike.ValidationJobCreate_request <em>Validation Job Create request</em>}'.
@@ -4816,6 +6108,106 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EAttribute getValidationJobCreate_request_EndDate();
+
+	/**
+	 * Returns the meta object for enum '{@link de.jena.bike.TravelModeLabel <em>Travel Mode Label</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Travel Mode Label</em>'.
+	 * @see de.jena.bike.TravelModeLabel
+	 * @generated
+	 */
+	EEnum getTravelModeLabel();
+
+	/**
+	 * Returns the meta object for enum '{@link de.jena.bike.DateRange <em>Date Range</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Date Range</em>'.
+	 * @see de.jena.bike.DateRange
+	 * @generated
+	 */
+	EEnum getDateRange();
+
+	/**
+	 * Returns the meta object for enum '{@link de.jena.bike.StatisticalAverageGroupBy <em>Statistical Average Group By</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Statistical Average Group By</em>'.
+	 * @see de.jena.bike.StatisticalAverageGroupBy
+	 * @generated
+	 */
+	EEnum getStatisticalAverageGroupBy();
+
+	/**
+	 * Returns the meta object for enum '{@link de.jena.bike.Direction <em>Direction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Direction</em>'.
+	 * @see de.jena.bike.Direction
+	 * @generated
+	 */
+	EEnum getDirection();
+
+	/**
+	 * Returns the meta object for enum '{@link de.jena.bike.StatisticalTotalGroupBy <em>Statistical Total Group By</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Statistical Total Group By</em>'.
+	 * @see de.jena.bike.StatisticalTotalGroupBy
+	 * @generated
+	 */
+	EEnum getStatisticalTotalGroupBy();
+
+	/**
+	 * Returns the meta object for enum '{@link de.jena.bike.HistoricalRawTrafficInclude <em>Historical Raw Traffic Include</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Historical Raw Traffic Include</em>'.
+	 * @see de.jena.bike.HistoricalRawTrafficInclude
+	 * @generated
+	 */
+	EEnum getHistoricalRawTrafficInclude();
+
+	/**
+	 * Returns the meta object for enum '{@link de.jena.bike.HistoricalAggregatedTrafficInclude <em>Historical Aggregated Traffic Include</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Historical Aggregated Traffic Include</em>'.
+	 * @see de.jena.bike.HistoricalAggregatedTrafficInclude
+	 * @generated
+	 */
+	EEnum getHistoricalAggregatedTrafficInclude();
+
+	/**
+	 * Returns the meta object for enum '{@link de.jena.bike.Granularity <em>Granularity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Granularity</em>'.
+	 * @see de.jena.bike.Granularity
+	 * @generated
+	 */
+	EEnum getGranularity();
+
+	/**
+	 * Returns the meta object for enum '{@link de.jena.bike.HistoricalAggregatedTrafficGroupBy <em>Historical Aggregated Traffic Group By</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Historical Aggregated Traffic Group By</em>'.
+	 * @see de.jena.bike.HistoricalAggregatedTrafficGroupBy
+	 * @generated
+	 */
+	EEnum getHistoricalAggregatedTrafficGroupBy();
+
+	/**
+	 * Returns the meta object for enum '{@link de.jena.bike.validationJobStatus <em>validation Job Status</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>validation Job Status</em>'.
+	 * @see de.jena.bike.validationJobStatus
+	 * @generated
+	 */
+	EEnum getvalidationJobStatus();
 
 	/**
 	 * Returns the meta object for data type '{@link jakarta.ws.rs.core.Response <em>JResponse</em>}'.
@@ -4942,16 +6334,6 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 		 * @generated
 		 */
 		EClass GEO_JSON_OBJECT = eINSTANCE.getGeoJsonObject();
-
-		/**
-		 * The meta object literal for the '{@link de.jena.bike.impl.TravelModeLabelImpl <em>Travel Mode Label</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.jena.bike.impl.TravelModeLabelImpl
-		 * @see de.jena.bike.impl.BikePackageImpl#getTravelModeLabel()
-		 * @generated
-		 */
-		EClass TRAVEL_MODE_LABEL = eINSTANCE.getTravelModeLabel();
 
 		/**
 		 * The meta object literal for the '{@link de.jena.bike.impl.siteCounterImpl <em>site Counter</em>}' class.
@@ -5580,36 +6962,6 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 		EAttribute NOT_FOUND__MESSAGE = eINSTANCE.getNotFound_Message();
 
 		/**
-		 * The meta object literal for the '{@link de.jena.bike.impl.DateRangeImpl <em>Date Range</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.jena.bike.impl.DateRangeImpl
-		 * @see de.jena.bike.impl.BikePackageImpl#getDateRange()
-		 * @generated
-		 */
-		EClass DATE_RANGE = eINSTANCE.getDateRange();
-
-		/**
-		 * The meta object literal for the '{@link de.jena.bike.impl.StatisticalAverageGroupByImpl <em>Statistical Average Group By</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.jena.bike.impl.StatisticalAverageGroupByImpl
-		 * @see de.jena.bike.impl.BikePackageImpl#getStatisticalAverageGroupBy()
-		 * @generated
-		 */
-		EClass STATISTICAL_AVERAGE_GROUP_BY = eINSTANCE.getStatisticalAverageGroupBy();
-
-		/**
-		 * The meta object literal for the '{@link de.jena.bike.impl.DirectionImpl <em>Direction</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.jena.bike.impl.DirectionImpl
-		 * @see de.jena.bike.impl.BikePackageImpl#getDirection()
-		 * @generated
-		 */
-		EClass DIRECTION = eINSTANCE.getDirection();
-
-		/**
 		 * The meta object literal for the '{@link de.jena.bike.impl.DirectionNameImpl <em>Direction Name</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5686,26 +7038,6 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 		 * @generated
 		 */
 		EReference STATISTICAL_TRAFFIC__VALUE = eINSTANCE.getStatisticalTraffic_Value();
-
-		/**
-		 * The meta object literal for the '{@link de.jena.bike.impl.StatisticalTotalGroupByImpl <em>Statistical Total Group By</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.jena.bike.impl.StatisticalTotalGroupByImpl
-		 * @see de.jena.bike.impl.BikePackageImpl#getStatisticalTotalGroupBy()
-		 * @generated
-		 */
-		EClass STATISTICAL_TOTAL_GROUP_BY = eINSTANCE.getStatisticalTotalGroupBy();
-
-		/**
-		 * The meta object literal for the '{@link de.jena.bike.impl.HistoricalRawTrafficIncludeImpl <em>Historical Raw Traffic Include</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.jena.bike.impl.HistoricalRawTrafficIncludeImpl
-		 * @see de.jena.bike.impl.BikePackageImpl#getHistoricalRawTrafficInclude()
-		 * @generated
-		 */
-		EClass HISTORICAL_RAW_TRAFFIC_INCLUDE = eINSTANCE.getHistoricalRawTrafficInclude();
 
 		/**
 		 * The meta object literal for the '{@link de.jena.bike.impl.BaseSerieImpl <em>Base Serie</em>}' class.
@@ -5798,36 +7130,6 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 		EReference HISTORICAL_RAW_TRAFFIC__DATA = eINSTANCE.getHistoricalRawTraffic_Data();
 
 		/**
-		 * The meta object literal for the '{@link de.jena.bike.impl.HistoricalAggregatedTrafficIncludeImpl <em>Historical Aggregated Traffic Include</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.jena.bike.impl.HistoricalAggregatedTrafficIncludeImpl
-		 * @see de.jena.bike.impl.BikePackageImpl#getHistoricalAggregatedTrafficInclude()
-		 * @generated
-		 */
-		EClass HISTORICAL_AGGREGATED_TRAFFIC_INCLUDE = eINSTANCE.getHistoricalAggregatedTrafficInclude();
-
-		/**
-		 * The meta object literal for the '{@link de.jena.bike.impl.GranularityImpl <em>Granularity</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.jena.bike.impl.GranularityImpl
-		 * @see de.jena.bike.impl.BikePackageImpl#getGranularity()
-		 * @generated
-		 */
-		EClass GRANULARITY = eINSTANCE.getGranularity();
-
-		/**
-		 * The meta object literal for the '{@link de.jena.bike.impl.HistoricalAggregatedTrafficGroupByImpl <em>Historical Aggregated Traffic Group By</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.jena.bike.impl.HistoricalAggregatedTrafficGroupByImpl
-		 * @see de.jena.bike.impl.BikePackageImpl#getHistoricalAggregatedTrafficGroupBy()
-		 * @generated
-		 */
-		EClass HISTORICAL_AGGREGATED_TRAFFIC_GROUP_BY = eINSTANCE.getHistoricalAggregatedTrafficGroupBy();
-
-		/**
 		 * The meta object literal for the '{@link de.jena.bike.impl.HistoricalAggregatedTrafficImpl <em>Historical Aggregated Traffic</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5912,16 +7214,6 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 		 * @generated
 		 */
 		EAttribute HISTORICAL_TIMESTAMP_TRAFFIC__SPEED = eINSTANCE.getHistoricalTimestampTraffic_Speed();
-
-		/**
-		 * The meta object literal for the '{@link de.jena.bike.impl.validationJobStatusImpl <em>validation Job Status</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.jena.bike.impl.validationJobStatusImpl
-		 * @see de.jena.bike.impl.BikePackageImpl#getvalidationJobStatus()
-		 * @generated
-		 */
-		EClass VALIDATION_JOB_STATUS = eINSTANCE.getvalidationJobStatus();
 
 		/**
 		 * The meta object literal for the '{@link de.jena.bike.impl.validationJobImpl <em>validation Job</em>}' class.
@@ -6082,6 +7374,156 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 		EAttribute CONFLICT__MESSAGE = eINSTANCE.getConflict_Message();
 
 		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.LineString_coordinatesImpl <em>Line String coordinates</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.LineString_coordinatesImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getLineString_coordinates()
+		 * @generated
+		 */
+		EClass LINE_STRING_COORDINATES = eINSTANCE.getLineString_coordinates();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.site_locationImpl <em>site location</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.site_locationImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getsite_location()
+		 * @generated
+		 */
+		EClass SITE_LOCATION = eINSTANCE.getsite_location();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.site_segmentsImpl <em>site segments</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.site_segmentsImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getsite_segments()
+		 * @generated
+		 */
+		EClass SITE_SEGMENTS = eINSTANCE.getsite_segments();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.site_travelModesImpl <em>site travel Modes</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.site_travelModesImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getsite_travelModes()
+		 * @generated
+		 */
+		EClass SITE_TRAVEL_MODES = eINSTANCE.getsite_travelModes();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.site_countersImpl <em>site counters</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.site_countersImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getsite_counters()
+		 * @generated
+		 */
+		EClass SITE_COUNTERS = eINSTANCE.getsite_counters();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.site_domainImpl <em>site domain</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.site_domainImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getsite_domain()
+		 * @generated
+		 */
+		EClass SITE_DOMAIN = eINSTANCE.getsite_domain();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.site_tagsImpl <em>site tags</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.site_tagsImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getsite_tags()
+		 * @generated
+		 */
+		EClass SITE_TAGS = eINSTANCE.getsite_tags();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.site_imagesImpl <em>site images</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.site_imagesImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getsite_images()
+		 * @generated
+		 */
+		EClass SITE_IMAGES = eINSTANCE.getsite_images();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.tag_domainImpl <em>tag domain</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.tag_domainImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#gettag_domain()
+		 * @generated
+		 */
+		EClass TAG_DOMAIN = eINSTANCE.gettag_domain();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.StatisticalTraffic_travelModeImpl <em>Statistical Traffic travel Mode</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.StatisticalTraffic_travelModeImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getStatisticalTraffic_travelMode()
+		 * @generated
+		 */
+		EClass STATISTICAL_TRAFFIC_TRAVEL_MODE = eINSTANCE.getStatisticalTraffic_travelMode();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.StatisticalTraffic_directionImpl <em>Statistical Traffic direction</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.StatisticalTraffic_directionImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getStatisticalTraffic_direction()
+		 * @generated
+		 */
+		EClass STATISTICAL_TRAFFIC_DIRECTION = eINSTANCE.getStatisticalTraffic_direction();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.StatisticalTraffic_directionNameImpl <em>Statistical Traffic direction Name</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.StatisticalTraffic_directionNameImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getStatisticalTraffic_directionName()
+		 * @generated
+		 */
+		EClass STATISTICAL_TRAFFIC_DIRECTION_NAME = eINSTANCE.getStatisticalTraffic_directionName();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.StatisticalTraffic_valueImpl <em>Statistical Traffic value</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.StatisticalTraffic_valueImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getStatisticalTraffic_value()
+		 * @generated
+		 */
+		EClass STATISTICAL_TRAFFIC_VALUE = eINSTANCE.getStatisticalTraffic_value();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.BaseSerie_travelModeImpl <em>Base Serie travel Mode</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.BaseSerie_travelModeImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getBaseSerie_travelMode()
+		 * @generated
+		 */
+		EClass BASE_SERIE_TRAVEL_MODE = eINSTANCE.getBaseSerie_travelMode();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.BaseSerie_directionImpl <em>Base Serie direction</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.BaseSerie_directionImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getBaseSerie_direction()
+		 * @generated
+		 */
+		EClass BASE_SERIE_DIRECTION = eINSTANCE.getBaseSerie_direction();
+
+		/**
 		 * The meta object literal for the '{@link de.jena.bike.impl.HistoricalRawTraffic_dataImpl <em>Historical Raw Traffic data</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6124,6 +7566,36 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 		EReference HISTORICAL_RAW_TRAFFIC_DATA__STATUS = eINSTANCE.getHistoricalRawTraffic_data_Status();
 
 		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.HistoricalRawTraffic_data_timestampImpl <em>Historical Raw Traffic data timestamp</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.HistoricalRawTraffic_data_timestampImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getHistoricalRawTraffic_data_timestamp()
+		 * @generated
+		 */
+		EClass HISTORICAL_RAW_TRAFFIC_DATA_TIMESTAMP = eINSTANCE.getHistoricalRawTraffic_data_timestamp();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.HistoricalRawTraffic_data_countsImpl <em>Historical Raw Traffic data counts</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.HistoricalRawTraffic_data_countsImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getHistoricalRawTraffic_data_counts()
+		 * @generated
+		 */
+		EClass HISTORICAL_RAW_TRAFFIC_DATA_COUNTS = eINSTANCE.getHistoricalRawTraffic_data_counts();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.HistoricalRawTraffic_data_statusImpl <em>Historical Raw Traffic data status</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.HistoricalRawTraffic_data_statusImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getHistoricalRawTraffic_data_status()
+		 * @generated
+		 */
+		EClass HISTORICAL_RAW_TRAFFIC_DATA_STATUS = eINSTANCE.getHistoricalRawTraffic_data_status();
+
+		/**
 		 * The meta object literal for the '{@link de.jena.bike.impl.HistoricalAggregatedTraffic_dataImpl <em>Historical Aggregated Traffic data</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6158,6 +7630,16 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 		EReference HISTORICAL_AGGREGATED_TRAFFIC_DATA__WEATHER = eINSTANCE.getHistoricalAggregatedTraffic_data_Weather();
 
 		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.HistoricalAggregatedTraffic_data_timestampImpl <em>Historical Aggregated Traffic data timestamp</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.HistoricalAggregatedTraffic_data_timestampImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getHistoricalAggregatedTraffic_data_timestamp()
+		 * @generated
+		 */
+		EClass HISTORICAL_AGGREGATED_TRAFFIC_DATA_TIMESTAMP = eINSTANCE.getHistoricalAggregatedTraffic_data_timestamp();
+
+		/**
 		 * The meta object literal for the '{@link de.jena.bike.impl.HistoricalAggregatedTraffic_data_trafficImpl <em>Historical Aggregated Traffic data traffic</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6182,6 +7664,16 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 		 * @generated
 		 */
 		EAttribute HISTORICAL_AGGREGATED_TRAFFIC_DATA_TRAFFIC__STATUS = eINSTANCE.getHistoricalAggregatedTraffic_data_traffic_Status();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.HistoricalAggregatedTraffic_data_traffic_countsImpl <em>Historical Aggregated Traffic data traffic counts</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.HistoricalAggregatedTraffic_data_traffic_countsImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getHistoricalAggregatedTraffic_data_traffic_counts()
+		 * @generated
+		 */
+		EClass HISTORICAL_AGGREGATED_TRAFFIC_DATA_TRAFFIC_COUNTS = eINSTANCE.getHistoricalAggregatedTraffic_data_traffic_counts();
 
 		/**
 		 * The meta object literal for the '{@link de.jena.bike.impl.HistoricalAggregatedTraffic_data_weatherImpl <em>Historical Aggregated Traffic data weather</em>}' class.
@@ -6216,6 +7708,56 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 		 * @generated
 		 */
 		EAttribute HISTORICAL_AGGREGATED_TRAFFIC_DATA_WEATHER__SNOW_ACCUMULATION = eINSTANCE.getHistoricalAggregatedTraffic_data_weather_SnowAccumulation();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.HistoricalAggregatedTraffic_directionNameImpl <em>Historical Aggregated Traffic direction Name</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.HistoricalAggregatedTraffic_directionNameImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getHistoricalAggregatedTraffic_directionName()
+		 * @generated
+		 */
+		EClass HISTORICAL_AGGREGATED_TRAFFIC_DIRECTION_NAME = eINSTANCE.getHistoricalAggregatedTraffic_directionName();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.HistoricalTimestampTraffic_timestampImpl <em>Historical Timestamp Traffic timestamp</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.HistoricalTimestampTraffic_timestampImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getHistoricalTimestampTraffic_timestamp()
+		 * @generated
+		 */
+		EClass HISTORICAL_TIMESTAMP_TRAFFIC_TIMESTAMP = eINSTANCE.getHistoricalTimestampTraffic_timestamp();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.HistoricalTimestampTraffic_laneImpl <em>Historical Timestamp Traffic lane</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.HistoricalTimestampTraffic_laneImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getHistoricalTimestampTraffic_lane()
+		 * @generated
+		 */
+		EClass HISTORICAL_TIMESTAMP_TRAFFIC_LANE = eINSTANCE.getHistoricalTimestampTraffic_lane();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.validationJob_statusImpl <em>validation Job status</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.validationJob_statusImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getvalidationJob_status()
+		 * @generated
+		 */
+		EClass VALIDATION_JOB_STATUS = eINSTANCE.getvalidationJob_status();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.validationJobCreated_statusImpl <em>validation Job Created status</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.validationJobCreated_statusImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getvalidationJobCreated_status()
+		 * @generated
+		 */
+		EClass VALIDATION_JOB_CREATED_STATUS = eINSTANCE.getvalidationJobCreated_status();
 
 		/**
 		 * The meta object literal for the '{@link de.jena.bike.impl.ResponseImpl <em>Response</em>}' class.
@@ -6325,7 +7867,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation BIKE_OPEN_API_CLIENT___CREATE_EXPORT__EXPORTCREATION = eINSTANCE.getBikeOpenApiClient__CreateExport__ExportCreation();
+		EOperation BIKE_OPEN_API_CLIENT___CREATE_EXPORT__CREATEEXPORT_REQUEST = eINSTANCE.getBikeOpenApiClient__CreateExport__CreateExport_request();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Export Status</b></em>' operation.
@@ -6349,7 +7891,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation BIKE_OPEN_API_CLIENT___GET_ADT__BIGINTEGER_BIGINTEGER_DATERANGE_INTEGER_INTEGER_STATISTICALAVERAGEGROUPBY_ELIST_BOOLEAN = eINSTANCE.getBikeOpenApiClient__GetADT__BigInteger_BigInteger_DateRange_Integer_Integer_StatisticalAverageGroupBy_EList_Boolean();
+		EOperation BIKE_OPEN_API_CLIENT___GET_ADT__BIGINTEGER_BIGINTEGER_GETADT_DATERANGE_INTEGER_INTEGER_GETADT_GROUPBY_ELIST_BOOLEAN = eINSTANCE.getBikeOpenApiClient__GetADT__BigInteger_BigInteger_GetADT_dateRange_Integer_Integer_GetADT_groupBy_EList_Boolean();
 
 		/**
 		 * The meta object literal for the '<em><b>Get ADT By Site</b></em>' operation.
@@ -6357,7 +7899,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation BIKE_OPEN_API_CLIENT___GET_ADT_BY_SITE__BIGINTEGER_BIGINTEGER_DATERANGE_INTEGER_INTEGER_STATISTICALAVERAGEGROUPBY_ELIST_BOOLEAN = eINSTANCE.getBikeOpenApiClient__GetADTBySite__BigInteger_BigInteger_DateRange_Integer_Integer_StatisticalAverageGroupBy_EList_Boolean();
+		EOperation BIKE_OPEN_API_CLIENT___GET_ADT_BY_SITE__BIGINTEGER_BIGINTEGER_GETADTBYSITE_DATERANGE_INTEGER_INTEGER_GETADTBYSITE_GROUPBY_ELIST_BOOLEAN = eINSTANCE.getBikeOpenApiClient__GetADTBySite__BigInteger_BigInteger_GetADTBySite_dateRange_Integer_Integer_GetADTBySite_groupBy_EList_Boolean();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Total Traffic</b></em>' operation.
@@ -6365,7 +7907,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation BIKE_OPEN_API_CLIENT___GET_TOTAL_TRAFFIC__BIGINTEGER_BIGINTEGER_DATERANGE_INTEGER_INTEGER_STATISTICALTOTALGROUPBY_ELIST_BOOLEAN = eINSTANCE.getBikeOpenApiClient__GetTotalTraffic__BigInteger_BigInteger_DateRange_Integer_Integer_StatisticalTotalGroupBy_EList_Boolean();
+		EOperation BIKE_OPEN_API_CLIENT___GET_TOTAL_TRAFFIC__BIGINTEGER_BIGINTEGER_GETTOTALTRAFFIC_DATERANGE_INTEGER_INTEGER_GETTOTALTRAFFIC_GROUPBY_ELIST_BOOLEAN = eINSTANCE.getBikeOpenApiClient__GetTotalTraffic__BigInteger_BigInteger_GetTotalTraffic_dateRange_Integer_Integer_GetTotalTraffic_groupBy_EList_Boolean();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Raw Traffic</b></em>' operation.
@@ -6381,7 +7923,7 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation BIKE_OPEN_API_CLIENT___GET_AGGREGATED_TRAFFIC__BIGINTEGER_ELIST_STRING_STRING_STRING_STRING_GRANULARITY_HISTORICALAGGREGATEDTRAFFICGROUPBY_BOOLEAN_ELIST_BOOLEAN_BOOLEAN = eINSTANCE.getBikeOpenApiClient__GetAggregatedTraffic__BigInteger_EList_String_String_String_String_Granularity_HistoricalAggregatedTrafficGroupBy_Boolean_EList_Boolean_Boolean();
+		EOperation BIKE_OPEN_API_CLIENT___GET_AGGREGATED_TRAFFIC__BIGINTEGER_ELIST_STRING_STRING_STRING_STRING_GETAGGREGATEDTRAFFIC_GRANULARITY_GETAGGREGATEDTRAFFIC_GROUPBY_BOOLEAN_ELIST_BOOLEAN_BOOLEAN = eINSTANCE.getBikeOpenApiClient__GetAggregatedTraffic__BigInteger_EList_String_String_String_String_GetAggregatedTraffic_granularity_GetAggregatedTraffic_groupBy_Boolean_EList_Boolean_Boolean();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Timestamp Traffic</b></em>' operation.
@@ -6416,6 +7958,186 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 		EOperation BIKE_OPEN_API_CLIENT___VALIDATION_JOB_GET__INTEGER = eINSTANCE.getBikeOpenApiClient__ValidationJobGet__Integer();
 
 		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.CreateExport_requestImpl <em>Create Export request</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.CreateExport_requestImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getCreateExport_request()
+		 * @generated
+		 */
+		EClass CREATE_EXPORT_REQUEST = eINSTANCE.getCreateExport_request();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.GetADT_dateRangeImpl <em>Get ADT date Range</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.GetADT_dateRangeImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getGetADT_dateRange()
+		 * @generated
+		 */
+		EClass GET_ADT_DATE_RANGE = eINSTANCE.getGetADT_dateRange();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.GetADT_groupByImpl <em>Get ADT group By</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.GetADT_groupByImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getGetADT_groupBy()
+		 * @generated
+		 */
+		EClass GET_ADT_GROUP_BY = eINSTANCE.getGetADT_groupBy();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.GetADT_travelModesImpl <em>Get ADT travel Modes</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.GetADT_travelModesImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getGetADT_travelModes()
+		 * @generated
+		 */
+		EClass GET_ADT_TRAVEL_MODES = eINSTANCE.getGetADT_travelModes();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.GetADTBySite_dateRangeImpl <em>Get ADT By Site date Range</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.GetADTBySite_dateRangeImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getGetADTBySite_dateRange()
+		 * @generated
+		 */
+		EClass GET_ADT_BY_SITE_DATE_RANGE = eINSTANCE.getGetADTBySite_dateRange();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.GetADTBySite_groupByImpl <em>Get ADT By Site group By</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.GetADTBySite_groupByImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getGetADTBySite_groupBy()
+		 * @generated
+		 */
+		EClass GET_ADT_BY_SITE_GROUP_BY = eINSTANCE.getGetADTBySite_groupBy();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.GetADTBySite_travelModesImpl <em>Get ADT By Site travel Modes</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.GetADTBySite_travelModesImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getGetADTBySite_travelModes()
+		 * @generated
+		 */
+		EClass GET_ADT_BY_SITE_TRAVEL_MODES = eINSTANCE.getGetADTBySite_travelModes();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.GetTotalTraffic_dateRangeImpl <em>Get Total Traffic date Range</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.GetTotalTraffic_dateRangeImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getGetTotalTraffic_dateRange()
+		 * @generated
+		 */
+		EClass GET_TOTAL_TRAFFIC_DATE_RANGE = eINSTANCE.getGetTotalTraffic_dateRange();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.GetTotalTraffic_groupByImpl <em>Get Total Traffic group By</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.GetTotalTraffic_groupByImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getGetTotalTraffic_groupBy()
+		 * @generated
+		 */
+		EClass GET_TOTAL_TRAFFIC_GROUP_BY = eINSTANCE.getGetTotalTraffic_groupBy();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.GetTotalTraffic_travelModesImpl <em>Get Total Traffic travel Modes</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.GetTotalTraffic_travelModesImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getGetTotalTraffic_travelModes()
+		 * @generated
+		 */
+		EClass GET_TOTAL_TRAFFIC_TRAVEL_MODES = eINSTANCE.getGetTotalTraffic_travelModes();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.GetRawTraffic_includeImpl <em>Get Raw Traffic include</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.GetRawTraffic_includeImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getGetRawTraffic_include()
+		 * @generated
+		 */
+		EClass GET_RAW_TRAFFIC_INCLUDE = eINSTANCE.getGetRawTraffic_include();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.GetRawTraffic_travelModesImpl <em>Get Raw Traffic travel Modes</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.GetRawTraffic_travelModesImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getGetRawTraffic_travelModes()
+		 * @generated
+		 */
+		EClass GET_RAW_TRAFFIC_TRAVEL_MODES = eINSTANCE.getGetRawTraffic_travelModes();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.GetAggregatedTraffic_includeImpl <em>Get Aggregated Traffic include</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.GetAggregatedTraffic_includeImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getGetAggregatedTraffic_include()
+		 * @generated
+		 */
+		EClass GET_AGGREGATED_TRAFFIC_INCLUDE = eINSTANCE.getGetAggregatedTraffic_include();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.GetAggregatedTraffic_granularityImpl <em>Get Aggregated Traffic granularity</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.GetAggregatedTraffic_granularityImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getGetAggregatedTraffic_granularity()
+		 * @generated
+		 */
+		EClass GET_AGGREGATED_TRAFFIC_GRANULARITY = eINSTANCE.getGetAggregatedTraffic_granularity();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.GetAggregatedTraffic_groupByImpl <em>Get Aggregated Traffic group By</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.GetAggregatedTraffic_groupByImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getGetAggregatedTraffic_groupBy()
+		 * @generated
+		 */
+		EClass GET_AGGREGATED_TRAFFIC_GROUP_BY = eINSTANCE.getGetAggregatedTraffic_groupBy();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.GetAggregatedTraffic_travelModesImpl <em>Get Aggregated Traffic travel Modes</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.GetAggregatedTraffic_travelModesImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getGetAggregatedTraffic_travelModes()
+		 * @generated
+		 */
+		EClass GET_AGGREGATED_TRAFFIC_TRAVEL_MODES = eINSTANCE.getGetAggregatedTraffic_travelModes();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.GetTimestampTraffic_travelModesImpl <em>Get Timestamp Traffic travel Modes</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.GetTimestampTraffic_travelModesImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getGetTimestampTraffic_travelModes()
+		 * @generated
+		 */
+		EClass GET_TIMESTAMP_TRAFFIC_TRAVEL_MODES = eINSTANCE.getGetTimestampTraffic_travelModes();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.impl.GetTimestampTraffic_directionsImpl <em>Get Timestamp Traffic directions</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.impl.GetTimestampTraffic_directionsImpl
+		 * @see de.jena.bike.impl.BikePackageImpl#getGetTimestampTraffic_directions()
+		 * @generated
+		 */
+		EClass GET_TIMESTAMP_TRAFFIC_DIRECTIONS = eINSTANCE.getGetTimestampTraffic_directions();
+
+		/**
 		 * The meta object literal for the '{@link de.jena.bike.impl.ValidationJobCreate_requestImpl <em>Validation Job Create request</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6448,6 +8170,106 @@ public interface BikePackage extends org.eclipse.emf.ecore.EPackage {
 		 * @generated
 		 */
 		EAttribute VALIDATION_JOB_CREATE_REQUEST__END_DATE = eINSTANCE.getValidationJobCreate_request_EndDate();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.TravelModeLabel <em>Travel Mode Label</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.TravelModeLabel
+		 * @see de.jena.bike.impl.BikePackageImpl#getTravelModeLabel()
+		 * @generated
+		 */
+		EEnum TRAVEL_MODE_LABEL = eINSTANCE.getTravelModeLabel();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.DateRange <em>Date Range</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.DateRange
+		 * @see de.jena.bike.impl.BikePackageImpl#getDateRange()
+		 * @generated
+		 */
+		EEnum DATE_RANGE = eINSTANCE.getDateRange();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.StatisticalAverageGroupBy <em>Statistical Average Group By</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.StatisticalAverageGroupBy
+		 * @see de.jena.bike.impl.BikePackageImpl#getStatisticalAverageGroupBy()
+		 * @generated
+		 */
+		EEnum STATISTICAL_AVERAGE_GROUP_BY = eINSTANCE.getStatisticalAverageGroupBy();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.Direction <em>Direction</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.Direction
+		 * @see de.jena.bike.impl.BikePackageImpl#getDirection()
+		 * @generated
+		 */
+		EEnum DIRECTION = eINSTANCE.getDirection();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.StatisticalTotalGroupBy <em>Statistical Total Group By</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.StatisticalTotalGroupBy
+		 * @see de.jena.bike.impl.BikePackageImpl#getStatisticalTotalGroupBy()
+		 * @generated
+		 */
+		EEnum STATISTICAL_TOTAL_GROUP_BY = eINSTANCE.getStatisticalTotalGroupBy();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.HistoricalRawTrafficInclude <em>Historical Raw Traffic Include</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.HistoricalRawTrafficInclude
+		 * @see de.jena.bike.impl.BikePackageImpl#getHistoricalRawTrafficInclude()
+		 * @generated
+		 */
+		EEnum HISTORICAL_RAW_TRAFFIC_INCLUDE = eINSTANCE.getHistoricalRawTrafficInclude();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.HistoricalAggregatedTrafficInclude <em>Historical Aggregated Traffic Include</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.HistoricalAggregatedTrafficInclude
+		 * @see de.jena.bike.impl.BikePackageImpl#getHistoricalAggregatedTrafficInclude()
+		 * @generated
+		 */
+		EEnum HISTORICAL_AGGREGATED_TRAFFIC_INCLUDE = eINSTANCE.getHistoricalAggregatedTrafficInclude();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.Granularity <em>Granularity</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.Granularity
+		 * @see de.jena.bike.impl.BikePackageImpl#getGranularity()
+		 * @generated
+		 */
+		EEnum GRANULARITY = eINSTANCE.getGranularity();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.HistoricalAggregatedTrafficGroupBy <em>Historical Aggregated Traffic Group By</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.HistoricalAggregatedTrafficGroupBy
+		 * @see de.jena.bike.impl.BikePackageImpl#getHistoricalAggregatedTrafficGroupBy()
+		 * @generated
+		 */
+		EEnum HISTORICAL_AGGREGATED_TRAFFIC_GROUP_BY = eINSTANCE.getHistoricalAggregatedTrafficGroupBy();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.bike.validationJobStatus <em>validation Job Status</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.bike.validationJobStatus
+		 * @see de.jena.bike.impl.BikePackageImpl#getvalidationJobStatus()
+		 * @generated
+		 */
+		EEnum VALIDATION_JOB_STATUS = eINSTANCE.getvalidationJobStatus();
 
 		/**
 		 * The meta object literal for the '<em>JResponse</em>' data type.

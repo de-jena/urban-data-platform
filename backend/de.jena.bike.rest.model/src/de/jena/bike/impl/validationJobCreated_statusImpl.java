@@ -14,7 +14,7 @@
 package de.jena.bike.impl;
 
 import de.jena.bike.BikePackage;
-import de.jena.bike.Granularity;
+import de.jena.bike.validationJobCreated_status;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -22,18 +22,18 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Granularity</b></em>'.
+ * An implementation of the model object '<em><b>validation Job Created status</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class GranularityImpl extends MinimalEObjectImpl.Container implements Granularity {
+public class validationJobCreated_statusImpl extends MinimalEObjectImpl.Container implements validationJobCreated_status {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected GranularityImpl() {
+	protected validationJobCreated_statusImpl() {
 		super();
 	}
 
@@ -44,7 +44,7 @@ public class GranularityImpl extends MinimalEObjectImpl.Container implements Gra
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return BikePackage.Literals.GRANULARITY;
+		return BikePackage.Literals.VALIDATION_JOB_CREATED_STATUS;
 	}
 
-} //GranularityImpl
+} //validationJobCreated_statusImpl

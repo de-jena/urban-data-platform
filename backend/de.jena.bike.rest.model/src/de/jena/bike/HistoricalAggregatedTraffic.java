@@ -17,6 +17,8 @@ import java.math.BigInteger;
 
 import org.eclipse.emf.common.util.EList;
 
+import org.eclipse.emf.ecore.EObject;
+
 import org.osgi.annotation.versioning.ProviderType;
 
 /**
@@ -39,7 +41,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-public interface HistoricalAggregatedTraffic extends BaseSerie {
+public interface HistoricalAggregatedTraffic extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Data</b></em>' containment reference list.
 	 * The list contents are of type {@link de.jena.bike.HistoricalAggregatedTraffic_data}.
@@ -57,12 +59,12 @@ public interface HistoricalAggregatedTraffic extends BaseSerie {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Direction Name</em>' containment reference.
-	 * @see #setDirectionName(DirectionName)
+	 * @see #setDirectionName(HistoricalAggregatedTraffic_directionName)
 	 * @see de.jena.bike.BikePackage#getHistoricalAggregatedTraffic_DirectionName()
 	 * @model containment="true"
 	 * @generated
 	 */
-	DirectionName getDirectionName();
+	HistoricalAggregatedTraffic_directionName getDirectionName();
 
 	/**
 	 * Sets the value of the '{@link de.jena.bike.HistoricalAggregatedTraffic#getDirectionName <em>Direction Name</em>}' containment reference.
@@ -72,7 +74,7 @@ public interface HistoricalAggregatedTraffic extends BaseSerie {
 	 * @see #getDirectionName()
 	 * @generated
 	 */
-	void setDirectionName(DirectionName value);
+	void setDirectionName(HistoricalAggregatedTraffic_directionName value);
 
 	/**
 	 * Returns the value of the '<em><b>Flow ID</b></em>' attribute.

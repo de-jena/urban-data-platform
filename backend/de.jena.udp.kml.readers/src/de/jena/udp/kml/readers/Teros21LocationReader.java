@@ -84,21 +84,21 @@ public class Teros21LocationReader implements KMLReader, LocationReader{
 			if(config.kml_folder_name() != null) {
 				folders = document.getAbstractFeatureGroup().
 						stream().
-						filter(f -> f instanceof FolderType).
+						filter(FolderType.class::isInstance).
 						map(f -> (FolderType) f).
 						filter(f -> config.kml_folder_name().equals(f.getName())).
 						toList();
 			} else {
 				folders = document.getAbstractFeatureGroup().
 						stream().
-						filter(f -> f instanceof FolderType).
+						filter(FolderType.class::isInstance).
 						map(f -> (FolderType) f).
 						toList();
 			}
 			for (FolderType folder : folders) {
 				List<PlacemarkType> placemarks = folder.getAbstractFeatureGroup().
 						stream().
-						filter(f -> f instanceof PlacemarkType).
+						filter(PlacemarkType.class::isInstance).
 						map(f -> (PlacemarkType) f).
 						toList();
 				for(PlacemarkType placemark : placemarks) {

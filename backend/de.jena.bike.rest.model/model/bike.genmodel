@@ -8,6 +8,74 @@
   <foreignModel>bike.ecore</foreignModel>
   <genPackages prefix="Bike" basePackage="de.jena" disposableProviderFactory="true"
       ecorePackage="bike.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="bike.ecore#//TravelModeLabel">
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//TravelModeLabel/pedestrian"/>
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//TravelModeLabel/bike"/>
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//TravelModeLabel/horse"/>
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//TravelModeLabel/car"/>
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//TravelModeLabel/bus"/>
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//TravelModeLabel/minibus"/>
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//TravelModeLabel/undefined"/>
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//TravelModeLabel/motorbike"/>
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//TravelModeLabel/kayak"/>
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//TravelModeLabel/scooter"/>
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//TravelModeLabel/truck"/>
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//TravelModeLabel/cargobike"/>
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//TravelModeLabel/motorized"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="bike.ecore#//DateRange">
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//DateRange/currentYear"/>
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//DateRange/lastYear"/>
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//DateRange/currentMonth"/>
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//DateRange/lastMonth"/>
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//DateRange/currentWeek"/>
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//DateRange/lastWeek"/>
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//DateRange/yesterday"/>
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//DateRange/custom"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="bike.ecore#//StatisticalAverageGroupBy">
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//StatisticalAverageGroupBy/site"/>
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//StatisticalAverageGroupBy/travelMode"/>
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//StatisticalAverageGroupBy/direction"/>
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//StatisticalAverageGroupBy/siteAndTravelMode"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="bike.ecore#//Direction">
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//Direction/in"/>
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//Direction/out"/>
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//Direction/undefined"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="bike.ecore#//StatisticalTotalGroupBy">
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//StatisticalTotalGroupBy/site"/>
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//StatisticalTotalGroupBy/travelMode"/>
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//StatisticalTotalGroupBy/siteAndTravelMode"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="bike.ecore#//HistoricalRawTrafficInclude">
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//HistoricalRawTrafficInclude/status"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="bike.ecore#//HistoricalAggregatedTrafficInclude">
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//HistoricalAggregatedTrafficInclude/status"/>
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//HistoricalAggregatedTrafficInclude/weather"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="bike.ecore#//Granularity">
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//Granularity/PT15M"/>
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//Granularity/PT1H"/>
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//Granularity/P1D"/>
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//Granularity/P1W"/>
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//Granularity/P1M"/>
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//Granularity/P1Y"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="bike.ecore#//HistoricalAggregatedTrafficGroupBy">
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//HistoricalAggregatedTrafficGroupBy/site"/>
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//HistoricalAggregatedTrafficGroupBy/travelMode"/>
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//HistoricalAggregatedTrafficGroupBy/direction"/>
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//HistoricalAggregatedTrafficGroupBy/travelModeAndDirection"/>
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//HistoricalAggregatedTrafficGroupBy/flow"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="bike.ecore#//validationJobStatus">
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//validationJobStatus/IN_PROGRESS"/>
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//validationJobStatus/SUCCESS"/>
+      <genEnumLiterals ecoreEnumLiteral="bike.ecore#//validationJobStatus/FAILURE"/>
+    </genEnums>
     <genDataTypes ecoreDataType="bike.ecore#//JResponse"/>
     <genClasses ecoreClass="bike.ecore#//Location">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//Location/lat"/>
@@ -22,7 +90,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//LineString/coordinates"/>
     </genClasses>
     <genClasses ecoreClass="bike.ecore#//GeoJsonObject"/>
-    <genClasses ecoreClass="bike.ecore#//TravelModeLabel"/>
     <genClasses ecoreClass="bike.ecore#//siteCounter">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//siteCounter/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//siteCounter/serial"/>
@@ -111,9 +178,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//NotFound/code"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//NotFound/message"/>
     </genClasses>
-    <genClasses ecoreClass="bike.ecore#//DateRange"/>
-    <genClasses ecoreClass="bike.ecore#//StatisticalAverageGroupBy"/>
-    <genClasses ecoreClass="bike.ecore#//Direction"/>
     <genClasses ecoreClass="bike.ecore#//DirectionName"/>
     <genClasses ecoreClass="bike.ecore#//Value"/>
     <genClasses ecoreClass="bike.ecore#//StatisticalTraffic">
@@ -124,8 +188,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//StatisticalTraffic/directionName"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//StatisticalTraffic/value"/>
     </genClasses>
-    <genClasses ecoreClass="bike.ecore#//StatisticalTotalGroupBy"/>
-    <genClasses ecoreClass="bike.ecore#//HistoricalRawTrafficInclude"/>
     <genClasses ecoreClass="bike.ecore#//BaseSerie">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//BaseSerie/travelMode"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//BaseSerie/direction"/>
@@ -138,9 +200,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//HistoricalRawTraffic/flowName"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//HistoricalRawTraffic/data"/>
     </genClasses>
-    <genClasses ecoreClass="bike.ecore#//HistoricalAggregatedTrafficInclude"/>
-    <genClasses ecoreClass="bike.ecore#//Granularity"/>
-    <genClasses ecoreClass="bike.ecore#//HistoricalAggregatedTrafficGroupBy"/>
     <genClasses ecoreClass="bike.ecore#//HistoricalAggregatedTraffic">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//HistoricalAggregatedTraffic/data"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//HistoricalAggregatedTraffic/directionName"/>
@@ -153,7 +212,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//HistoricalTimestampTraffic/lane"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//HistoricalTimestampTraffic/speed"/>
     </genClasses>
-    <genClasses ecoreClass="bike.ecore#//validationJobStatus"/>
     <genClasses ecoreClass="bike.ecore#//validationJob">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//validationJob/id"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//validationJob/status"/>
@@ -176,26 +234,51 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//Conflict/code"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//Conflict/message"/>
     </genClasses>
+    <genClasses ecoreClass="bike.ecore#//LineString_coordinates"/>
+    <genClasses ecoreClass="bike.ecore#//site_location"/>
+    <genClasses ecoreClass="bike.ecore#//site_segments"/>
+    <genClasses ecoreClass="bike.ecore#//site_travelModes"/>
+    <genClasses ecoreClass="bike.ecore#//site_counters"/>
+    <genClasses ecoreClass="bike.ecore#//site_domain"/>
+    <genClasses ecoreClass="bike.ecore#//site_tags"/>
+    <genClasses ecoreClass="bike.ecore#//site_images"/>
+    <genClasses ecoreClass="bike.ecore#//tag_domain"/>
+    <genClasses ecoreClass="bike.ecore#//StatisticalTraffic_travelMode"/>
+    <genClasses ecoreClass="bike.ecore#//StatisticalTraffic_direction"/>
+    <genClasses ecoreClass="bike.ecore#//StatisticalTraffic_directionName"/>
+    <genClasses ecoreClass="bike.ecore#//StatisticalTraffic_value"/>
+    <genClasses ecoreClass="bike.ecore#//BaseSerie_travelMode"/>
+    <genClasses ecoreClass="bike.ecore#//BaseSerie_direction"/>
     <genClasses ecoreClass="bike.ecore#//HistoricalRawTraffic_data">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//HistoricalRawTraffic_data/timestamp"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//HistoricalRawTraffic_data/granularity"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//HistoricalRawTraffic_data/counts"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//HistoricalRawTraffic_data/status"/>
     </genClasses>
+    <genClasses ecoreClass="bike.ecore#//HistoricalRawTraffic_data_timestamp"/>
+    <genClasses ecoreClass="bike.ecore#//HistoricalRawTraffic_data_counts"/>
+    <genClasses ecoreClass="bike.ecore#//HistoricalRawTraffic_data_status"/>
     <genClasses ecoreClass="bike.ecore#//HistoricalAggregatedTraffic_data">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//HistoricalAggregatedTraffic_data/timestamp"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//HistoricalAggregatedTraffic_data/traffic"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//HistoricalAggregatedTraffic_data/weather"/>
     </genClasses>
+    <genClasses ecoreClass="bike.ecore#//HistoricalAggregatedTraffic_data_timestamp"/>
     <genClasses ecoreClass="bike.ecore#//HistoricalAggregatedTraffic_data_traffic">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bike.ecore#//HistoricalAggregatedTraffic_data_traffic/counts"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//HistoricalAggregatedTraffic_data_traffic/status"/>
     </genClasses>
+    <genClasses ecoreClass="bike.ecore#//HistoricalAggregatedTraffic_data_traffic_counts"/>
     <genClasses ecoreClass="bike.ecore#//HistoricalAggregatedTraffic_data_weather">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//HistoricalAggregatedTraffic_data_weather/temperature"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//HistoricalAggregatedTraffic_data_weather/rainAccumulation"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//HistoricalAggregatedTraffic_data_weather/snowAccumulation"/>
     </genClasses>
+    <genClasses ecoreClass="bike.ecore#//HistoricalAggregatedTraffic_directionName"/>
+    <genClasses ecoreClass="bike.ecore#//HistoricalTimestampTraffic_timestamp"/>
+    <genClasses ecoreClass="bike.ecore#//HistoricalTimestampTraffic_lane"/>
+    <genClasses ecoreClass="bike.ecore#//validationJob_status"/>
+    <genClasses ecoreClass="bike.ecore#//validationJobCreated_status"/>
     <genClasses ecoreClass="bike.ecore#//Response">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//Response/code"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//Response/description"/>
@@ -221,7 +304,7 @@
       </genOperations>
     </genClasses>
     <genClasses image="false" ecoreClass="bike.ecore#//BikeOpenApiClient">
-      <genOperations ecoreOperation="bike.ecore#//BikeOpenApiClient/GetSites" body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/sites&quot;;&#xA;EClass resultEClass = BikePackage.eINSTANCE.getsite();&#xA;if ( null != page ) queryParameter.put(&quot;page&quot;, toQueryString(&quot;page&quot;,page));&#xA;if ( null != pageSize ) queryParameter.put(&quot;pageSize&quot;, toQueryString(&quot;pageSize&quot;,pageSize));&#xA;if ( null != sortBy ) queryParameter.put(&quot;sortBy&quot;, toQueryString(&quot;sortBy&quot;,sortBy));&#xA;if ( null != orderBy ) queryParameter.put(&quot;orderBy&quot;, toQueryString(&quot;orderBy&quot;,orderBy));&#xA;if ( null != include ) queryParameter.put(&quot;include&quot;, toQueryString(&quot;include&quot;,include));&#xA;if ( null != ids ) queryParameter.put(&quot;ids&quot;, toQueryString(&quot;ids&quot;,ids));&#xA;if ( null != domainIds ) queryParameter.put(&quot;domainIds&quot;, toQueryString(&quot;domainIds&quot;,domainIds));&#xA;if ( null != tagIds ) queryParameter.put(&quot;tagIds&quot;, toQueryString(&quot;tagIds&quot;,tagIds));&#xA;if ( null != customIds ) queryParameter.put(&quot;customIds&quot;, toQueryString(&quot;customIds&quot;,customIds));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">
+      <genOperations ecoreOperation="bike.ecore#//BikeOpenApiClient/GetSites" body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/sites&quot;;&#xA;EClass resultEClass = org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEObject();&#xA;if ( null != page ) queryParameter.put(&quot;page&quot;, toQueryString(&quot;page&quot;,page));&#xA;if ( null != pageSize ) queryParameter.put(&quot;pageSize&quot;, toQueryString(&quot;pageSize&quot;,pageSize));&#xA;if ( null != sortBy ) queryParameter.put(&quot;sortBy&quot;, toQueryString(&quot;sortBy&quot;,sortBy));&#xA;if ( null != orderBy ) queryParameter.put(&quot;orderBy&quot;, toQueryString(&quot;orderBy&quot;,orderBy));&#xA;if ( null != include ) queryParameter.put(&quot;include&quot;, toQueryString(&quot;include&quot;,include));&#xA;if ( null != ids ) queryParameter.put(&quot;ids&quot;, toQueryString(&quot;ids&quot;,ids));&#xA;if ( null != domainIds ) queryParameter.put(&quot;domainIds&quot;, toQueryString(&quot;domainIds&quot;,domainIds));&#xA;if ( null != tagIds ) queryParameter.put(&quot;tagIds&quot;, toQueryString(&quot;tagIds&quot;,tagIds));&#xA;if ( null != customIds ) queryParameter.put(&quot;customIds&quot;, toQueryString(&quot;customIds&quot;,customIds));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetSites/page"/>
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetSites/pageSize"/>
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetSites/sortBy"/>
@@ -232,7 +315,7 @@
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetSites/tagIds"/>
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetSites/customIds"/>
       </genOperations>
-      <genOperations ecoreOperation="bike.ecore#//BikeOpenApiClient/GetTags" body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/tags&quot;;&#xA;EClass resultEClass = BikePackage.eINSTANCE.gettag();&#xA;if ( null != page ) queryParameter.put(&quot;page&quot;, toQueryString(&quot;page&quot;,page));&#xA;if ( null != pageSize ) queryParameter.put(&quot;pageSize&quot;, toQueryString(&quot;pageSize&quot;,pageSize));&#xA;if ( null != sortBy ) queryParameter.put(&quot;sortBy&quot;, toQueryString(&quot;sortBy&quot;,sortBy));&#xA;if ( null != orderBy ) queryParameter.put(&quot;orderBy&quot;, toQueryString(&quot;orderBy&quot;,orderBy));&#xA;if ( null != include ) queryParameter.put(&quot;include&quot;, toQueryString(&quot;include&quot;,include));&#xA;if ( null != ids ) queryParameter.put(&quot;ids&quot;, toQueryString(&quot;ids&quot;,ids));&#xA;if ( null != domainIds ) queryParameter.put(&quot;domainIds&quot;, toQueryString(&quot;domainIds&quot;,domainIds));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">
+      <genOperations ecoreOperation="bike.ecore#//BikeOpenApiClient/GetTags" body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/tags&quot;;&#xA;EClass resultEClass = org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEObject();&#xA;if ( null != page ) queryParameter.put(&quot;page&quot;, toQueryString(&quot;page&quot;,page));&#xA;if ( null != pageSize ) queryParameter.put(&quot;pageSize&quot;, toQueryString(&quot;pageSize&quot;,pageSize));&#xA;if ( null != sortBy ) queryParameter.put(&quot;sortBy&quot;, toQueryString(&quot;sortBy&quot;,sortBy));&#xA;if ( null != orderBy ) queryParameter.put(&quot;orderBy&quot;, toQueryString(&quot;orderBy&quot;,orderBy));&#xA;if ( null != include ) queryParameter.put(&quot;include&quot;, toQueryString(&quot;include&quot;,include));&#xA;if ( null != ids ) queryParameter.put(&quot;ids&quot;, toQueryString(&quot;ids&quot;,ids));&#xA;if ( null != domainIds ) queryParameter.put(&quot;domainIds&quot;, toQueryString(&quot;domainIds&quot;,domainIds));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetTags/page"/>
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetTags/pageSize"/>
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetTags/sortBy"/>
@@ -245,14 +328,14 @@
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/CreateExport/request"/>
       </genOperations>
       <genOperations ecoreOperation="bike.ecore#//BikeOpenApiClient/GetExportStatus"
-          body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/exports/{jobId}&quot;;&#xA;EClass resultEClass = BikePackage.eINSTANCE.getExport();&#xA;pathParameter.put(&quot;jobId&quot;, toQueryString(&quot;jobId&quot;,jobId));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">
+          body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/exports/{jobId}&quot;;&#xA;EClass resultEClass = org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEObject();&#xA;pathParameter.put(&quot;jobId&quot;, toQueryString(&quot;jobId&quot;,jobId));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetExportStatus/jobId"/>
       </genOperations>
       <genOperations ecoreOperation="bike.ecore#//BikeOpenApiClient/DownloadExportData"
           body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/exports/{jobId}/data&quot;;&#xA;EClass resultEClass = org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEObject();&#xA;pathParameter.put(&quot;jobId&quot;, toQueryString(&quot;jobId&quot;,jobId));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/DownloadExportData/jobId"/>
       </genOperations>
-      <genOperations ecoreOperation="bike.ecore#//BikeOpenApiClient/GetADT" body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/statistical/adt&quot;;&#xA;EClass resultEClass = BikePackage.eINSTANCE.getStatisticalTraffic();&#xA;if ( null != domainId ) queryParameter.put(&quot;domainId&quot;, toQueryString(&quot;domainId&quot;,domainId));&#xA;if ( null != siteId ) queryParameter.put(&quot;siteId&quot;, toQueryString(&quot;siteId&quot;,siteId));&#xA;if ( null != dateRange ) queryParameter.put(&quot;dateRange&quot;, toQueryString(&quot;dateRange&quot;,dateRange));&#xA;if ( null != month ) queryParameter.put(&quot;month&quot;, toQueryString(&quot;month&quot;,month));&#xA;if ( null != year ) queryParameter.put(&quot;year&quot;, toQueryString(&quot;year&quot;,year));&#xA;if ( null != groupBy ) queryParameter.put(&quot;groupBy&quot;, toQueryString(&quot;groupBy&quot;,groupBy));&#xA;if ( null != travelModes ) queryParameter.put(&quot;travelModes&quot;, toQueryString(&quot;travelModes&quot;,travelModes));&#xA;if ( null != validatedDataOnly ) queryParameter.put(&quot;validatedDataOnly&quot;, toQueryString(&quot;validatedDataOnly&quot;,validatedDataOnly));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">
+      <genOperations ecoreOperation="bike.ecore#//BikeOpenApiClient/GetADT" body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/statistical/adt&quot;;&#xA;EClass resultEClass = org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEObject();&#xA;if ( null != domainId ) queryParameter.put(&quot;domainId&quot;, toQueryString(&quot;domainId&quot;,domainId));&#xA;if ( null != siteId ) queryParameter.put(&quot;siteId&quot;, toQueryString(&quot;siteId&quot;,siteId));&#xA;if ( null != dateRange ) queryParameter.put(&quot;dateRange&quot;, toQueryString(&quot;dateRange&quot;,dateRange));&#xA;if ( null != month ) queryParameter.put(&quot;month&quot;, toQueryString(&quot;month&quot;,month));&#xA;if ( null != year ) queryParameter.put(&quot;year&quot;, toQueryString(&quot;year&quot;,year));&#xA;if ( null != groupBy ) queryParameter.put(&quot;groupBy&quot;, toQueryString(&quot;groupBy&quot;,groupBy));&#xA;if ( null != travelModes ) queryParameter.put(&quot;travelModes&quot;, toQueryString(&quot;travelModes&quot;,travelModes));&#xA;if ( null != validatedDataOnly ) queryParameter.put(&quot;validatedDataOnly&quot;, toQueryString(&quot;validatedDataOnly&quot;,validatedDataOnly));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetADT/domainId"/>
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetADT/siteId"/>
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetADT/dateRange"/>
@@ -263,7 +346,7 @@
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetADT/validatedDataOnly"/>
       </genOperations>
       <genOperations ecoreOperation="bike.ecore#//BikeOpenApiClient/GetADTBySite"
-          body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/statistical/adt/by/site&quot;;&#xA;EClass resultEClass = BikePackage.eINSTANCE.getStatisticalTraffic();&#xA;if ( null != domainId ) queryParameter.put(&quot;domainId&quot;, toQueryString(&quot;domainId&quot;,domainId));&#xA;if ( null != siteId ) queryParameter.put(&quot;siteId&quot;, toQueryString(&quot;siteId&quot;,siteId));&#xA;if ( null != dateRange ) queryParameter.put(&quot;dateRange&quot;, toQueryString(&quot;dateRange&quot;,dateRange));&#xA;if ( null != month ) queryParameter.put(&quot;month&quot;, toQueryString(&quot;month&quot;,month));&#xA;if ( null != year ) queryParameter.put(&quot;year&quot;, toQueryString(&quot;year&quot;,year));&#xA;if ( null != groupBy ) queryParameter.put(&quot;groupBy&quot;, toQueryString(&quot;groupBy&quot;,groupBy));&#xA;if ( null != travelModes ) queryParameter.put(&quot;travelModes&quot;, toQueryString(&quot;travelModes&quot;,travelModes));&#xA;if ( null != validatedDataOnly ) queryParameter.put(&quot;validatedDataOnly&quot;, toQueryString(&quot;validatedDataOnly&quot;,validatedDataOnly));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">
+          body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/statistical/adt/by/site&quot;;&#xA;EClass resultEClass = org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEObject();&#xA;if ( null != domainId ) queryParameter.put(&quot;domainId&quot;, toQueryString(&quot;domainId&quot;,domainId));&#xA;if ( null != siteId ) queryParameter.put(&quot;siteId&quot;, toQueryString(&quot;siteId&quot;,siteId));&#xA;if ( null != dateRange ) queryParameter.put(&quot;dateRange&quot;, toQueryString(&quot;dateRange&quot;,dateRange));&#xA;if ( null != month ) queryParameter.put(&quot;month&quot;, toQueryString(&quot;month&quot;,month));&#xA;if ( null != year ) queryParameter.put(&quot;year&quot;, toQueryString(&quot;year&quot;,year));&#xA;if ( null != groupBy ) queryParameter.put(&quot;groupBy&quot;, toQueryString(&quot;groupBy&quot;,groupBy));&#xA;if ( null != travelModes ) queryParameter.put(&quot;travelModes&quot;, toQueryString(&quot;travelModes&quot;,travelModes));&#xA;if ( null != validatedDataOnly ) queryParameter.put(&quot;validatedDataOnly&quot;, toQueryString(&quot;validatedDataOnly&quot;,validatedDataOnly));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetADTBySite/domainId"/>
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetADTBySite/siteId"/>
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetADTBySite/dateRange"/>
@@ -274,7 +357,7 @@
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetADTBySite/validatedDataOnly"/>
       </genOperations>
       <genOperations ecoreOperation="bike.ecore#//BikeOpenApiClient/GetTotalTraffic"
-          body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/statistical/total&quot;;&#xA;EClass resultEClass = BikePackage.eINSTANCE.getStatisticalTraffic();&#xA;if ( null != domainId ) queryParameter.put(&quot;domainId&quot;, toQueryString(&quot;domainId&quot;,domainId));&#xA;if ( null != siteId ) queryParameter.put(&quot;siteId&quot;, toQueryString(&quot;siteId&quot;,siteId));&#xA;if ( null != dateRange ) queryParameter.put(&quot;dateRange&quot;, toQueryString(&quot;dateRange&quot;,dateRange));&#xA;if ( null != month ) queryParameter.put(&quot;month&quot;, toQueryString(&quot;month&quot;,month));&#xA;if ( null != year ) queryParameter.put(&quot;year&quot;, toQueryString(&quot;year&quot;,year));&#xA;if ( null != groupBy ) queryParameter.put(&quot;groupBy&quot;, toQueryString(&quot;groupBy&quot;,groupBy));&#xA;if ( null != travelModes ) queryParameter.put(&quot;travelModes&quot;, toQueryString(&quot;travelModes&quot;,travelModes));&#xA;if ( null != validatedDataOnly ) queryParameter.put(&quot;validatedDataOnly&quot;, toQueryString(&quot;validatedDataOnly&quot;,validatedDataOnly));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">
+          body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/statistical/total&quot;;&#xA;EClass resultEClass = org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEObject();&#xA;if ( null != domainId ) queryParameter.put(&quot;domainId&quot;, toQueryString(&quot;domainId&quot;,domainId));&#xA;if ( null != siteId ) queryParameter.put(&quot;siteId&quot;, toQueryString(&quot;siteId&quot;,siteId));&#xA;if ( null != dateRange ) queryParameter.put(&quot;dateRange&quot;, toQueryString(&quot;dateRange&quot;,dateRange));&#xA;if ( null != month ) queryParameter.put(&quot;month&quot;, toQueryString(&quot;month&quot;,month));&#xA;if ( null != year ) queryParameter.put(&quot;year&quot;, toQueryString(&quot;year&quot;,year));&#xA;if ( null != groupBy ) queryParameter.put(&quot;groupBy&quot;, toQueryString(&quot;groupBy&quot;,groupBy));&#xA;if ( null != travelModes ) queryParameter.put(&quot;travelModes&quot;, toQueryString(&quot;travelModes&quot;,travelModes));&#xA;if ( null != validatedDataOnly ) queryParameter.put(&quot;validatedDataOnly&quot;, toQueryString(&quot;validatedDataOnly&quot;,validatedDataOnly));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetTotalTraffic/domainId"/>
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetTotalTraffic/siteId"/>
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetTotalTraffic/dateRange"/>
@@ -285,7 +368,7 @@
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetTotalTraffic/validatedDataOnly"/>
       </genOperations>
       <genOperations ecoreOperation="bike.ecore#//BikeOpenApiClient/GetRawTraffic"
-          body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/history/traffic/raw&quot;;&#xA;EClass resultEClass = BikePackage.eINSTANCE.getHistoricalRawTraffic();&#xA;if ( null != siteId ) queryParameter.put(&quot;siteId&quot;, toQueryString(&quot;siteId&quot;,siteId));&#xA;if ( null != include ) queryParameter.put(&quot;include&quot;, toQueryString(&quot;include&quot;,include));&#xA;if ( null != startDate ) queryParameter.put(&quot;startDate&quot;, toQueryString(&quot;startDate&quot;,startDate));&#xA;if ( null != endDate ) queryParameter.put(&quot;endDate&quot;, toQueryString(&quot;endDate&quot;,endDate));&#xA;if ( null != startTime ) queryParameter.put(&quot;startTime&quot;, toQueryString(&quot;startTime&quot;,startTime));&#xA;if ( null != endTime ) queryParameter.put(&quot;endTime&quot;, toQueryString(&quot;endTime&quot;,endTime));&#xA;if ( null != gapFilling ) queryParameter.put(&quot;gapFilling&quot;, toQueryString(&quot;gapFilling&quot;,gapFilling));&#xA;if ( null != travelModes ) queryParameter.put(&quot;travelModes&quot;, toQueryString(&quot;travelModes&quot;,travelModes));&#xA;if ( null != validatedDataOnly ) queryParameter.put(&quot;validatedDataOnly&quot;, toQueryString(&quot;validatedDataOnly&quot;,validatedDataOnly));&#xA;if ( null != rawDataOnly ) queryParameter.put(&quot;rawDataOnly&quot;, toQueryString(&quot;rawDataOnly&quot;,rawDataOnly));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">
+          body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/history/traffic/raw&quot;;&#xA;EClass resultEClass = org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEObject();&#xA;if ( null != siteId ) queryParameter.put(&quot;siteId&quot;, toQueryString(&quot;siteId&quot;,siteId));&#xA;if ( null != include ) queryParameter.put(&quot;include&quot;, toQueryString(&quot;include&quot;,include));&#xA;if ( null != startDate ) queryParameter.put(&quot;startDate&quot;, toQueryString(&quot;startDate&quot;,startDate));&#xA;if ( null != endDate ) queryParameter.put(&quot;endDate&quot;, toQueryString(&quot;endDate&quot;,endDate));&#xA;if ( null != startTime ) queryParameter.put(&quot;startTime&quot;, toQueryString(&quot;startTime&quot;,startTime));&#xA;if ( null != endTime ) queryParameter.put(&quot;endTime&quot;, toQueryString(&quot;endTime&quot;,endTime));&#xA;if ( null != gapFilling ) queryParameter.put(&quot;gapFilling&quot;, toQueryString(&quot;gapFilling&quot;,gapFilling));&#xA;if ( null != travelModes ) queryParameter.put(&quot;travelModes&quot;, toQueryString(&quot;travelModes&quot;,travelModes));&#xA;if ( null != validatedDataOnly ) queryParameter.put(&quot;validatedDataOnly&quot;, toQueryString(&quot;validatedDataOnly&quot;,validatedDataOnly));&#xA;if ( null != rawDataOnly ) queryParameter.put(&quot;rawDataOnly&quot;, toQueryString(&quot;rawDataOnly&quot;,rawDataOnly));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetRawTraffic/siteId"/>
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetRawTraffic/include"/>
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetRawTraffic/startDate"/>
@@ -298,7 +381,7 @@
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetRawTraffic/rawDataOnly"/>
       </genOperations>
       <genOperations ecoreOperation="bike.ecore#//BikeOpenApiClient/GetAggregatedTraffic"
-          body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/history/traffic/aggregated&quot;;&#xA;EClass resultEClass = BikePackage.eINSTANCE.getHistoricalAggregatedTraffic();&#xA;if ( null != siteId ) queryParameter.put(&quot;siteId&quot;, toQueryString(&quot;siteId&quot;,siteId));&#xA;if ( null != include ) queryParameter.put(&quot;include&quot;, toQueryString(&quot;include&quot;,include));&#xA;if ( null != startDate ) queryParameter.put(&quot;startDate&quot;, toQueryString(&quot;startDate&quot;,startDate));&#xA;if ( null != endDate ) queryParameter.put(&quot;endDate&quot;, toQueryString(&quot;endDate&quot;,endDate));&#xA;if ( null != startTime ) queryParameter.put(&quot;startTime&quot;, toQueryString(&quot;startTime&quot;,startTime));&#xA;if ( null != endTime ) queryParameter.put(&quot;endTime&quot;, toQueryString(&quot;endTime&quot;,endTime));&#xA;if ( null != granularity ) queryParameter.put(&quot;granularity&quot;, toQueryString(&quot;granularity&quot;,granularity));&#xA;if ( null != groupBy ) queryParameter.put(&quot;groupBy&quot;, toQueryString(&quot;groupBy&quot;,groupBy));&#xA;if ( null != gapFilling ) queryParameter.put(&quot;gapFilling&quot;, toQueryString(&quot;gapFilling&quot;,gapFilling));&#xA;if ( null != travelModes ) queryParameter.put(&quot;travelModes&quot;, toQueryString(&quot;travelModes&quot;,travelModes));&#xA;if ( null != validatedDataOnly ) queryParameter.put(&quot;validatedDataOnly&quot;, toQueryString(&quot;validatedDataOnly&quot;,validatedDataOnly));&#xA;if ( null != rawDataOnly ) queryParameter.put(&quot;rawDataOnly&quot;, toQueryString(&quot;rawDataOnly&quot;,rawDataOnly));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">
+          body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/history/traffic/aggregated&quot;;&#xA;EClass resultEClass = org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEObject();&#xA;if ( null != siteId ) queryParameter.put(&quot;siteId&quot;, toQueryString(&quot;siteId&quot;,siteId));&#xA;if ( null != include ) queryParameter.put(&quot;include&quot;, toQueryString(&quot;include&quot;,include));&#xA;if ( null != startDate ) queryParameter.put(&quot;startDate&quot;, toQueryString(&quot;startDate&quot;,startDate));&#xA;if ( null != endDate ) queryParameter.put(&quot;endDate&quot;, toQueryString(&quot;endDate&quot;,endDate));&#xA;if ( null != startTime ) queryParameter.put(&quot;startTime&quot;, toQueryString(&quot;startTime&quot;,startTime));&#xA;if ( null != endTime ) queryParameter.put(&quot;endTime&quot;, toQueryString(&quot;endTime&quot;,endTime));&#xA;if ( null != granularity ) queryParameter.put(&quot;granularity&quot;, toQueryString(&quot;granularity&quot;,granularity));&#xA;if ( null != groupBy ) queryParameter.put(&quot;groupBy&quot;, toQueryString(&quot;groupBy&quot;,groupBy));&#xA;if ( null != gapFilling ) queryParameter.put(&quot;gapFilling&quot;, toQueryString(&quot;gapFilling&quot;,gapFilling));&#xA;if ( null != travelModes ) queryParameter.put(&quot;travelModes&quot;, toQueryString(&quot;travelModes&quot;,travelModes));&#xA;if ( null != validatedDataOnly ) queryParameter.put(&quot;validatedDataOnly&quot;, toQueryString(&quot;validatedDataOnly&quot;,validatedDataOnly));&#xA;if ( null != rawDataOnly ) queryParameter.put(&quot;rawDataOnly&quot;, toQueryString(&quot;rawDataOnly&quot;,rawDataOnly));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetAggregatedTraffic/siteId"/>
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetAggregatedTraffic/include"/>
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetAggregatedTraffic/startDate"/>
@@ -313,7 +396,7 @@
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetAggregatedTraffic/rawDataOnly"/>
       </genOperations>
       <genOperations ecoreOperation="bike.ecore#//BikeOpenApiClient/GetTimestampTraffic"
-          body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/history/traffic/timestamp&quot;;&#xA;EClass resultEClass = BikePackage.eINSTANCE.getHistoricalTimestampTraffic();&#xA;if ( null != siteId ) queryParameter.put(&quot;siteId&quot;, toQueryString(&quot;siteId&quot;,siteId));&#xA;if ( null != startDate ) queryParameter.put(&quot;startDate&quot;, toQueryString(&quot;startDate&quot;,startDate));&#xA;if ( null != endDate ) queryParameter.put(&quot;endDate&quot;, toQueryString(&quot;endDate&quot;,endDate));&#xA;if ( null != startTime ) queryParameter.put(&quot;startTime&quot;, toQueryString(&quot;startTime&quot;,startTime));&#xA;if ( null != endTime ) queryParameter.put(&quot;endTime&quot;, toQueryString(&quot;endTime&quot;,endTime));&#xA;if ( null != travelModes ) queryParameter.put(&quot;travelModes&quot;, toQueryString(&quot;travelModes&quot;,travelModes));&#xA;if ( null != directions ) queryParameter.put(&quot;directions&quot;, toQueryString(&quot;directions&quot;,directions));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">
+          body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/history/traffic/timestamp&quot;;&#xA;EClass resultEClass = org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEObject();&#xA;if ( null != siteId ) queryParameter.put(&quot;siteId&quot;, toQueryString(&quot;siteId&quot;,siteId));&#xA;if ( null != startDate ) queryParameter.put(&quot;startDate&quot;, toQueryString(&quot;startDate&quot;,startDate));&#xA;if ( null != endDate ) queryParameter.put(&quot;endDate&quot;, toQueryString(&quot;endDate&quot;,endDate));&#xA;if ( null != startTime ) queryParameter.put(&quot;startTime&quot;, toQueryString(&quot;startTime&quot;,startTime));&#xA;if ( null != endTime ) queryParameter.put(&quot;endTime&quot;, toQueryString(&quot;endTime&quot;,endTime));&#xA;if ( null != travelModes ) queryParameter.put(&quot;travelModes&quot;, toQueryString(&quot;travelModes&quot;,travelModes));&#xA;if ( null != directions ) queryParameter.put(&quot;directions&quot;, toQueryString(&quot;directions&quot;,directions));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetTimestampTraffic/siteId"/>
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetTimestampTraffic/startDate"/>
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetTimestampTraffic/endDate"/>
@@ -323,7 +406,7 @@
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/GetTimestampTraffic/directions"/>
       </genOperations>
       <genOperations ecoreOperation="bike.ecore#//BikeOpenApiClient/ValidationJobsGet"
-          body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/validation/data/jobs&quot;;&#xA;EClass resultEClass = BikePackage.eINSTANCE.getvalidationJob();&#xA;if ( null != page ) queryParameter.put(&quot;page&quot;, toQueryString(&quot;page&quot;,page));&#xA;if ( null != pageSize ) queryParameter.put(&quot;pageSize&quot;, toQueryString(&quot;pageSize&quot;,pageSize));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">
+          body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/validation/data/jobs&quot;;&#xA;EClass resultEClass = org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEObject();&#xA;if ( null != page ) queryParameter.put(&quot;page&quot;, toQueryString(&quot;page&quot;,page));&#xA;if ( null != pageSize ) queryParameter.put(&quot;pageSize&quot;, toQueryString(&quot;pageSize&quot;,pageSize));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/ValidationJobsGet/page"/>
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/ValidationJobsGet/pageSize"/>
       </genOperations>
@@ -331,10 +414,28 @@
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/ValidationJobCreate/request"/>
       </genOperations>
       <genOperations ecoreOperation="bike.ecore#//BikeOpenApiClient/ValidationJobGet"
-          body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/validation/data/jobs/{jobId}&quot;;&#xA;EClass resultEClass = BikePackage.eINSTANCE.getvalidationJob();&#xA;pathParameter.put(&quot;jobId&quot;, toQueryString(&quot;jobId&quot;,jobId));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">
+          body="java.util.HashMap&lt;String, String> queryParameter = new java.util.HashMap&lt;>();&#xA;java.util.HashMap&lt;String, String> pathParameter = new java.util.HashMap&lt;>();&#xA;String endpoint = &quot;/validation/data/jobs/{jobId}&quot;;&#xA;EClass resultEClass = org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEObject();&#xA;pathParameter.put(&quot;jobId&quot;, toQueryString(&quot;jobId&quot;,jobId));&#xA;return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));">
         <genParameters ecoreParameter="bike.ecore#//BikeOpenApiClient/ValidationJobGet/jobId"/>
       </genOperations>
     </genClasses>
+    <genClasses ecoreClass="bike.ecore#//CreateExport_request"/>
+    <genClasses ecoreClass="bike.ecore#//GetADT_dateRange"/>
+    <genClasses ecoreClass="bike.ecore#//GetADT_groupBy"/>
+    <genClasses ecoreClass="bike.ecore#//GetADT_travelModes"/>
+    <genClasses ecoreClass="bike.ecore#//GetADTBySite_dateRange"/>
+    <genClasses ecoreClass="bike.ecore#//GetADTBySite_groupBy"/>
+    <genClasses ecoreClass="bike.ecore#//GetADTBySite_travelModes"/>
+    <genClasses ecoreClass="bike.ecore#//GetTotalTraffic_dateRange"/>
+    <genClasses ecoreClass="bike.ecore#//GetTotalTraffic_groupBy"/>
+    <genClasses ecoreClass="bike.ecore#//GetTotalTraffic_travelModes"/>
+    <genClasses ecoreClass="bike.ecore#//GetRawTraffic_include"/>
+    <genClasses ecoreClass="bike.ecore#//GetRawTraffic_travelModes"/>
+    <genClasses ecoreClass="bike.ecore#//GetAggregatedTraffic_include"/>
+    <genClasses ecoreClass="bike.ecore#//GetAggregatedTraffic_granularity"/>
+    <genClasses ecoreClass="bike.ecore#//GetAggregatedTraffic_groupBy"/>
+    <genClasses ecoreClass="bike.ecore#//GetAggregatedTraffic_travelModes"/>
+    <genClasses ecoreClass="bike.ecore#//GetTimestampTraffic_travelModes"/>
+    <genClasses ecoreClass="bike.ecore#//GetTimestampTraffic_directions"/>
     <genClasses ecoreClass="bike.ecore#//ValidationJobCreate_request">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//ValidationJobCreate_request/siteIds"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bike.ecore#//ValidationJobCreate_request/startDate"/>

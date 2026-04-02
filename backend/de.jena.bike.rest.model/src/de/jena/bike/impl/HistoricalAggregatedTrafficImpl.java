@@ -14,9 +14,9 @@
 package de.jena.bike.impl;
 
 import de.jena.bike.BikePackage;
-import de.jena.bike.DirectionName;
 import de.jena.bike.HistoricalAggregatedTraffic;
 import de.jena.bike.HistoricalAggregatedTraffic_data;
+import de.jena.bike.HistoricalAggregatedTraffic_directionName;
 
 import java.math.BigInteger;
 
@@ -31,6 +31,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -51,7 +52,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class HistoricalAggregatedTrafficImpl extends BaseSerieImpl implements HistoricalAggregatedTraffic {
+public class HistoricalAggregatedTrafficImpl extends MinimalEObjectImpl.Container implements HistoricalAggregatedTraffic {
 	/**
 	 * The cached value of the '{@link #getData() <em>Data</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -70,7 +71,7 @@ public class HistoricalAggregatedTrafficImpl extends BaseSerieImpl implements Hi
 	 * @generated
 	 * @ordered
 	 */
-	protected DirectionName directionName;
+	protected HistoricalAggregatedTraffic_directionName directionName;
 
 	/**
 	 * The default value of the '{@link #getFlowID() <em>Flow ID</em>}' attribute.
@@ -150,7 +151,7 @@ public class HistoricalAggregatedTrafficImpl extends BaseSerieImpl implements Hi
 	 * @generated
 	 */
 	@Override
-	public DirectionName getDirectionName() {
+	public HistoricalAggregatedTraffic_directionName getDirectionName() {
 		return directionName;
 	}
 
@@ -159,8 +160,8 @@ public class HistoricalAggregatedTrafficImpl extends BaseSerieImpl implements Hi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDirectionName(DirectionName newDirectionName, NotificationChain msgs) {
-		DirectionName oldDirectionName = directionName;
+	public NotificationChain basicSetDirectionName(HistoricalAggregatedTraffic_directionName newDirectionName, NotificationChain msgs) {
+		HistoricalAggregatedTraffic_directionName oldDirectionName = directionName;
 		directionName = newDirectionName;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BikePackage.HISTORICAL_AGGREGATED_TRAFFIC__DIRECTION_NAME, oldDirectionName, newDirectionName);
@@ -175,7 +176,7 @@ public class HistoricalAggregatedTrafficImpl extends BaseSerieImpl implements Hi
 	 * @generated
 	 */
 	@Override
-	public void setDirectionName(DirectionName newDirectionName) {
+	public void setDirectionName(HistoricalAggregatedTraffic_directionName newDirectionName) {
 		if (newDirectionName != directionName) {
 			NotificationChain msgs = null;
 			if (directionName != null)
@@ -285,7 +286,7 @@ public class HistoricalAggregatedTrafficImpl extends BaseSerieImpl implements Hi
 				getData().addAll((Collection<? extends HistoricalAggregatedTraffic_data>)newValue);
 				return;
 			case BikePackage.HISTORICAL_AGGREGATED_TRAFFIC__DIRECTION_NAME:
-				setDirectionName((DirectionName)newValue);
+				setDirectionName((HistoricalAggregatedTraffic_directionName)newValue);
 				return;
 			case BikePackage.HISTORICAL_AGGREGATED_TRAFFIC__FLOW_ID:
 				setFlowID((BigInteger)newValue);
@@ -309,7 +310,7 @@ public class HistoricalAggregatedTrafficImpl extends BaseSerieImpl implements Hi
 				getData().clear();
 				return;
 			case BikePackage.HISTORICAL_AGGREGATED_TRAFFIC__DIRECTION_NAME:
-				setDirectionName((DirectionName)null);
+				setDirectionName((HistoricalAggregatedTraffic_directionName)null);
 				return;
 			case BikePackage.HISTORICAL_AGGREGATED_TRAFFIC__FLOW_ID:
 				setFlowID(FLOW_ID_EDEFAULT);

@@ -15,17 +15,25 @@ package de.jena.bike.impl;
 
 import de.jena.bike.BikeOpenApiClient;
 import de.jena.bike.BikePackage;
-import de.jena.bike.DateRange;
-import de.jena.bike.Direction;
-import de.jena.bike.ExportCreation;
-import de.jena.bike.Granularity;
-import de.jena.bike.HistoricalAggregatedTrafficGroupBy;
-import de.jena.bike.HistoricalAggregatedTrafficInclude;
-import de.jena.bike.HistoricalRawTrafficInclude;
+import de.jena.bike.CreateExport_request;
+import de.jena.bike.GetADTBySite_dateRange;
+import de.jena.bike.GetADTBySite_groupBy;
+import de.jena.bike.GetADTBySite_travelModes;
+import de.jena.bike.GetADT_dateRange;
+import de.jena.bike.GetADT_groupBy;
+import de.jena.bike.GetADT_travelModes;
+import de.jena.bike.GetAggregatedTraffic_granularity;
+import de.jena.bike.GetAggregatedTraffic_groupBy;
+import de.jena.bike.GetAggregatedTraffic_include;
+import de.jena.bike.GetAggregatedTraffic_travelModes;
+import de.jena.bike.GetRawTraffic_include;
+import de.jena.bike.GetRawTraffic_travelModes;
+import de.jena.bike.GetTimestampTraffic_directions;
+import de.jena.bike.GetTimestampTraffic_travelModes;
+import de.jena.bike.GetTotalTraffic_dateRange;
+import de.jena.bike.GetTotalTraffic_groupBy;
+import de.jena.bike.GetTotalTraffic_travelModes;
 import de.jena.bike.Response;
-import de.jena.bike.StatisticalAverageGroupBy;
-import de.jena.bike.StatisticalTotalGroupBy;
-import de.jena.bike.TravelModeLabel;
 import de.jena.bike.ValidationJobCreate_request;
 
 import java.lang.reflect.InvocationTargetException;
@@ -76,7 +84,7 @@ public abstract class BikeOpenApiClientImpl extends MinimalEObjectImpl.Container
 		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
 		String endpoint = "/sites";
-		EClass resultEClass = BikePackage.eINSTANCE.getsite();
+		EClass resultEClass = org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEObject();
 		if ( null != page ) queryParameter.put("page", toQueryString("page",page));
 		if ( null != pageSize ) queryParameter.put("pageSize", toQueryString("pageSize",pageSize));
 		if ( null != sortBy ) queryParameter.put("sortBy", toQueryString("sortBy",sortBy));
@@ -99,7 +107,7 @@ public abstract class BikeOpenApiClientImpl extends MinimalEObjectImpl.Container
 		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
 		String endpoint = "/tags";
-		EClass resultEClass = BikePackage.eINSTANCE.gettag();
+		EClass resultEClass = org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEObject();
 		if ( null != page ) queryParameter.put("page", toQueryString("page",page));
 		if ( null != pageSize ) queryParameter.put("pageSize", toQueryString("pageSize",pageSize));
 		if ( null != sortBy ) queryParameter.put("sortBy", toQueryString("sortBy",sortBy));
@@ -116,7 +124,7 @@ public abstract class BikeOpenApiClientImpl extends MinimalEObjectImpl.Container
 	 * @generated
 	 */
 	@Override
-	public Response CreateExport(ExportCreation request) {
+	public Response CreateExport(CreateExport_request request) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -132,7 +140,7 @@ public abstract class BikeOpenApiClientImpl extends MinimalEObjectImpl.Container
 		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
 		String endpoint = "/exports/{jobId}";
-		EClass resultEClass = BikePackage.eINSTANCE.getExport();
+		EClass resultEClass = org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEObject();
 		pathParameter.put("jobId", toQueryString("jobId",jobId));
 		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
@@ -158,11 +166,11 @@ public abstract class BikeOpenApiClientImpl extends MinimalEObjectImpl.Container
 	 * @generated
 	 */
 	@Override
-	public Response GetADT(final BigInteger domainId, final BigInteger siteId, final DateRange dateRange, final Integer month, final Integer year, final StatisticalAverageGroupBy groupBy, final EList<TravelModeLabel> travelModes, final Boolean validatedDataOnly) {
+	public Response GetADT(final BigInteger domainId, final BigInteger siteId, final GetADT_dateRange dateRange, final Integer month, final Integer year, final GetADT_groupBy groupBy, final EList<GetADT_travelModes> travelModes, final Boolean validatedDataOnly) {
 		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
 		String endpoint = "/statistical/adt";
-		EClass resultEClass = BikePackage.eINSTANCE.getStatisticalTraffic();
+		EClass resultEClass = org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEObject();
 		if ( null != domainId ) queryParameter.put("domainId", toQueryString("domainId",domainId));
 		if ( null != siteId ) queryParameter.put("siteId", toQueryString("siteId",siteId));
 		if ( null != dateRange ) queryParameter.put("dateRange", toQueryString("dateRange",dateRange));
@@ -180,11 +188,11 @@ public abstract class BikeOpenApiClientImpl extends MinimalEObjectImpl.Container
 	 * @generated
 	 */
 	@Override
-	public Response GetADTBySite(final BigInteger domainId, final BigInteger siteId, final DateRange dateRange, final Integer month, final Integer year, final StatisticalAverageGroupBy groupBy, final EList<TravelModeLabel> travelModes, final Boolean validatedDataOnly) {
+	public Response GetADTBySite(final BigInteger domainId, final BigInteger siteId, final GetADTBySite_dateRange dateRange, final Integer month, final Integer year, final GetADTBySite_groupBy groupBy, final EList<GetADTBySite_travelModes> travelModes, final Boolean validatedDataOnly) {
 		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
 		String endpoint = "/statistical/adt/by/site";
-		EClass resultEClass = BikePackage.eINSTANCE.getStatisticalTraffic();
+		EClass resultEClass = org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEObject();
 		if ( null != domainId ) queryParameter.put("domainId", toQueryString("domainId",domainId));
 		if ( null != siteId ) queryParameter.put("siteId", toQueryString("siteId",siteId));
 		if ( null != dateRange ) queryParameter.put("dateRange", toQueryString("dateRange",dateRange));
@@ -202,11 +210,11 @@ public abstract class BikeOpenApiClientImpl extends MinimalEObjectImpl.Container
 	 * @generated
 	 */
 	@Override
-	public Response GetTotalTraffic(final BigInteger domainId, final BigInteger siteId, final DateRange dateRange, final Integer month, final Integer year, final StatisticalTotalGroupBy groupBy, final EList<TravelModeLabel> travelModes, final Boolean validatedDataOnly) {
+	public Response GetTotalTraffic(final BigInteger domainId, final BigInteger siteId, final GetTotalTraffic_dateRange dateRange, final Integer month, final Integer year, final GetTotalTraffic_groupBy groupBy, final EList<GetTotalTraffic_travelModes> travelModes, final Boolean validatedDataOnly) {
 		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
 		String endpoint = "/statistical/total";
-		EClass resultEClass = BikePackage.eINSTANCE.getStatisticalTraffic();
+		EClass resultEClass = org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEObject();
 		if ( null != domainId ) queryParameter.put("domainId", toQueryString("domainId",domainId));
 		if ( null != siteId ) queryParameter.put("siteId", toQueryString("siteId",siteId));
 		if ( null != dateRange ) queryParameter.put("dateRange", toQueryString("dateRange",dateRange));
@@ -224,11 +232,11 @@ public abstract class BikeOpenApiClientImpl extends MinimalEObjectImpl.Container
 	 * @generated
 	 */
 	@Override
-	public Response GetRawTraffic(final BigInteger siteId, final EList<HistoricalRawTrafficInclude> include, final String startDate, final String endDate, final String startTime, final String endTime, final Boolean gapFilling, final EList<TravelModeLabel> travelModes, final Boolean validatedDataOnly, final Boolean rawDataOnly) {
+	public Response GetRawTraffic(final BigInteger siteId, final EList<GetRawTraffic_include> include, final String startDate, final String endDate, final String startTime, final String endTime, final Boolean gapFilling, final EList<GetRawTraffic_travelModes> travelModes, final Boolean validatedDataOnly, final Boolean rawDataOnly) {
 		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
 		String endpoint = "/history/traffic/raw";
-		EClass resultEClass = BikePackage.eINSTANCE.getHistoricalRawTraffic();
+		EClass resultEClass = org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEObject();
 		if ( null != siteId ) queryParameter.put("siteId", toQueryString("siteId",siteId));
 		if ( null != include ) queryParameter.put("include", toQueryString("include",include));
 		if ( null != startDate ) queryParameter.put("startDate", toQueryString("startDate",startDate));
@@ -248,11 +256,11 @@ public abstract class BikeOpenApiClientImpl extends MinimalEObjectImpl.Container
 	 * @generated
 	 */
 	@Override
-	public Response GetAggregatedTraffic(final BigInteger siteId, final EList<HistoricalAggregatedTrafficInclude> include, final String startDate, final String endDate, final String startTime, final String endTime, final Granularity granularity, final HistoricalAggregatedTrafficGroupBy groupBy, final Boolean gapFilling, final EList<TravelModeLabel> travelModes, final Boolean validatedDataOnly, final Boolean rawDataOnly) {
+	public Response GetAggregatedTraffic(final BigInteger siteId, final EList<GetAggregatedTraffic_include> include, final String startDate, final String endDate, final String startTime, final String endTime, final GetAggregatedTraffic_granularity granularity, final GetAggregatedTraffic_groupBy groupBy, final Boolean gapFilling, final EList<GetAggregatedTraffic_travelModes> travelModes, final Boolean validatedDataOnly, final Boolean rawDataOnly) {
 		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
 		String endpoint = "/history/traffic/aggregated";
-		EClass resultEClass = BikePackage.eINSTANCE.getHistoricalAggregatedTraffic();
+		EClass resultEClass = org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEObject();
 		if ( null != siteId ) queryParameter.put("siteId", toQueryString("siteId",siteId));
 		if ( null != include ) queryParameter.put("include", toQueryString("include",include));
 		if ( null != startDate ) queryParameter.put("startDate", toQueryString("startDate",startDate));
@@ -274,11 +282,11 @@ public abstract class BikeOpenApiClientImpl extends MinimalEObjectImpl.Container
 	 * @generated
 	 */
 	@Override
-	public Response GetTimestampTraffic(final BigInteger siteId, final String startDate, final String endDate, final String startTime, final String endTime, final EList<TravelModeLabel> travelModes, final EList<Direction> directions) {
+	public Response GetTimestampTraffic(final BigInteger siteId, final String startDate, final String endDate, final String startTime, final String endTime, final EList<GetTimestampTraffic_travelModes> travelModes, final EList<GetTimestampTraffic_directions> directions) {
 		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
 		String endpoint = "/history/traffic/timestamp";
-		EClass resultEClass = BikePackage.eINSTANCE.getHistoricalTimestampTraffic();
+		EClass resultEClass = org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEObject();
 		if ( null != siteId ) queryParameter.put("siteId", toQueryString("siteId",siteId));
 		if ( null != startDate ) queryParameter.put("startDate", toQueryString("startDate",startDate));
 		if ( null != endDate ) queryParameter.put("endDate", toQueryString("endDate",endDate));
@@ -299,7 +307,7 @@ public abstract class BikeOpenApiClientImpl extends MinimalEObjectImpl.Container
 		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
 		String endpoint = "/validation/data/jobs";
-		EClass resultEClass = BikePackage.eINSTANCE.getvalidationJob();
+		EClass resultEClass = org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEObject();
 		if ( null != page ) queryParameter.put("page", toQueryString("page",page));
 		if ( null != pageSize ) queryParameter.put("pageSize", toQueryString("pageSize",pageSize));
 		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
@@ -327,7 +335,7 @@ public abstract class BikeOpenApiClientImpl extends MinimalEObjectImpl.Container
 		java.util.HashMap<String, String> queryParameter = new java.util.HashMap<>();
 		java.util.HashMap<String, String> pathParameter = new java.util.HashMap<>();
 		String endpoint = "/validation/data/jobs/{jobId}";
-		EClass resultEClass = BikePackage.eINSTANCE.getvalidationJob();
+		EClass resultEClass = org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getEObject();
 		pathParameter.put("jobId", toQueryString("jobId",jobId));
 		return _get(endpoint, resultEClass ,org.eclipse.emf.common.util.ECollections.asEMap(pathParameter), org.eclipse.emf.common.util.ECollections.asEMap(queryParameter));
 	}
@@ -383,24 +391,24 @@ public abstract class BikeOpenApiClientImpl extends MinimalEObjectImpl.Container
 				return GetSites((Integer)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (EList<String>)arguments.get(4), (EList<BigInteger>)arguments.get(5), (EList<BigInteger>)arguments.get(6), (EList<BigInteger>)arguments.get(7), (EList<String>)arguments.get(8));
 			case BikePackage.BIKE_OPEN_API_CLIENT___GET_TAGS__INTEGER_INTEGER_STRING_STRING_ELIST_ELIST_ELIST:
 				return GetTags((Integer)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (EList<String>)arguments.get(4), (EList<BigInteger>)arguments.get(5), (EList<BigInteger>)arguments.get(6));
-			case BikePackage.BIKE_OPEN_API_CLIENT___CREATE_EXPORT__EXPORTCREATION:
-				return CreateExport((ExportCreation)arguments.get(0));
+			case BikePackage.BIKE_OPEN_API_CLIENT___CREATE_EXPORT__CREATEEXPORT_REQUEST:
+				return CreateExport((CreateExport_request)arguments.get(0));
 			case BikePackage.BIKE_OPEN_API_CLIENT___GET_EXPORT_STATUS__INTEGER:
 				return GetExportStatus((Integer)arguments.get(0));
 			case BikePackage.BIKE_OPEN_API_CLIENT___DOWNLOAD_EXPORT_DATA__INTEGER:
 				return DownloadExportData((Integer)arguments.get(0));
-			case BikePackage.BIKE_OPEN_API_CLIENT___GET_ADT__BIGINTEGER_BIGINTEGER_DATERANGE_INTEGER_INTEGER_STATISTICALAVERAGEGROUPBY_ELIST_BOOLEAN:
-				return GetADT((BigInteger)arguments.get(0), (BigInteger)arguments.get(1), (DateRange)arguments.get(2), (Integer)arguments.get(3), (Integer)arguments.get(4), (StatisticalAverageGroupBy)arguments.get(5), (EList<TravelModeLabel>)arguments.get(6), (Boolean)arguments.get(7));
-			case BikePackage.BIKE_OPEN_API_CLIENT___GET_ADT_BY_SITE__BIGINTEGER_BIGINTEGER_DATERANGE_INTEGER_INTEGER_STATISTICALAVERAGEGROUPBY_ELIST_BOOLEAN:
-				return GetADTBySite((BigInteger)arguments.get(0), (BigInteger)arguments.get(1), (DateRange)arguments.get(2), (Integer)arguments.get(3), (Integer)arguments.get(4), (StatisticalAverageGroupBy)arguments.get(5), (EList<TravelModeLabel>)arguments.get(6), (Boolean)arguments.get(7));
-			case BikePackage.BIKE_OPEN_API_CLIENT___GET_TOTAL_TRAFFIC__BIGINTEGER_BIGINTEGER_DATERANGE_INTEGER_INTEGER_STATISTICALTOTALGROUPBY_ELIST_BOOLEAN:
-				return GetTotalTraffic((BigInteger)arguments.get(0), (BigInteger)arguments.get(1), (DateRange)arguments.get(2), (Integer)arguments.get(3), (Integer)arguments.get(4), (StatisticalTotalGroupBy)arguments.get(5), (EList<TravelModeLabel>)arguments.get(6), (Boolean)arguments.get(7));
+			case BikePackage.BIKE_OPEN_API_CLIENT___GET_ADT__BIGINTEGER_BIGINTEGER_GETADT_DATERANGE_INTEGER_INTEGER_GETADT_GROUPBY_ELIST_BOOLEAN:
+				return GetADT((BigInteger)arguments.get(0), (BigInteger)arguments.get(1), (GetADT_dateRange)arguments.get(2), (Integer)arguments.get(3), (Integer)arguments.get(4), (GetADT_groupBy)arguments.get(5), (EList<GetADT_travelModes>)arguments.get(6), (Boolean)arguments.get(7));
+			case BikePackage.BIKE_OPEN_API_CLIENT___GET_ADT_BY_SITE__BIGINTEGER_BIGINTEGER_GETADTBYSITE_DATERANGE_INTEGER_INTEGER_GETADTBYSITE_GROUPBY_ELIST_BOOLEAN:
+				return GetADTBySite((BigInteger)arguments.get(0), (BigInteger)arguments.get(1), (GetADTBySite_dateRange)arguments.get(2), (Integer)arguments.get(3), (Integer)arguments.get(4), (GetADTBySite_groupBy)arguments.get(5), (EList<GetADTBySite_travelModes>)arguments.get(6), (Boolean)arguments.get(7));
+			case BikePackage.BIKE_OPEN_API_CLIENT___GET_TOTAL_TRAFFIC__BIGINTEGER_BIGINTEGER_GETTOTALTRAFFIC_DATERANGE_INTEGER_INTEGER_GETTOTALTRAFFIC_GROUPBY_ELIST_BOOLEAN:
+				return GetTotalTraffic((BigInteger)arguments.get(0), (BigInteger)arguments.get(1), (GetTotalTraffic_dateRange)arguments.get(2), (Integer)arguments.get(3), (Integer)arguments.get(4), (GetTotalTraffic_groupBy)arguments.get(5), (EList<GetTotalTraffic_travelModes>)arguments.get(6), (Boolean)arguments.get(7));
 			case BikePackage.BIKE_OPEN_API_CLIENT___GET_RAW_TRAFFIC__BIGINTEGER_ELIST_STRING_STRING_STRING_STRING_BOOLEAN_ELIST_BOOLEAN_BOOLEAN:
-				return GetRawTraffic((BigInteger)arguments.get(0), (EList<HistoricalRawTrafficInclude>)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (Boolean)arguments.get(6), (EList<TravelModeLabel>)arguments.get(7), (Boolean)arguments.get(8), (Boolean)arguments.get(9));
-			case BikePackage.BIKE_OPEN_API_CLIENT___GET_AGGREGATED_TRAFFIC__BIGINTEGER_ELIST_STRING_STRING_STRING_STRING_GRANULARITY_HISTORICALAGGREGATEDTRAFFICGROUPBY_BOOLEAN_ELIST_BOOLEAN_BOOLEAN:
-				return GetAggregatedTraffic((BigInteger)arguments.get(0), (EList<HistoricalAggregatedTrafficInclude>)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (Granularity)arguments.get(6), (HistoricalAggregatedTrafficGroupBy)arguments.get(7), (Boolean)arguments.get(8), (EList<TravelModeLabel>)arguments.get(9), (Boolean)arguments.get(10), (Boolean)arguments.get(11));
+				return GetRawTraffic((BigInteger)arguments.get(0), (EList<GetRawTraffic_include>)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (Boolean)arguments.get(6), (EList<GetRawTraffic_travelModes>)arguments.get(7), (Boolean)arguments.get(8), (Boolean)arguments.get(9));
+			case BikePackage.BIKE_OPEN_API_CLIENT___GET_AGGREGATED_TRAFFIC__BIGINTEGER_ELIST_STRING_STRING_STRING_STRING_GETAGGREGATEDTRAFFIC_GRANULARITY_GETAGGREGATEDTRAFFIC_GROUPBY_BOOLEAN_ELIST_BOOLEAN_BOOLEAN:
+				return GetAggregatedTraffic((BigInteger)arguments.get(0), (EList<GetAggregatedTraffic_include>)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (GetAggregatedTraffic_granularity)arguments.get(6), (GetAggregatedTraffic_groupBy)arguments.get(7), (Boolean)arguments.get(8), (EList<GetAggregatedTraffic_travelModes>)arguments.get(9), (Boolean)arguments.get(10), (Boolean)arguments.get(11));
 			case BikePackage.BIKE_OPEN_API_CLIENT___GET_TIMESTAMP_TRAFFIC__BIGINTEGER_STRING_STRING_STRING_STRING_ELIST_ELIST:
-				return GetTimestampTraffic((BigInteger)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (EList<TravelModeLabel>)arguments.get(5), (EList<Direction>)arguments.get(6));
+				return GetTimestampTraffic((BigInteger)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (EList<GetTimestampTraffic_travelModes>)arguments.get(5), (EList<GetTimestampTraffic_directions>)arguments.get(6));
 			case BikePackage.BIKE_OPEN_API_CLIENT___VALIDATION_JOBS_GET__INTEGER_INTEGER:
 				return ValidationJobsGet((Integer)arguments.get(0), (Integer)arguments.get(1));
 			case BikePackage.BIKE_OPEN_API_CLIENT___VALIDATION_JOB_CREATE__VALIDATIONJOBCREATE_REQUEST:

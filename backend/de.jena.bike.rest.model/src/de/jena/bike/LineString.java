@@ -13,6 +13,8 @@
  */
 package de.jena.bike;
 
+import org.eclipse.emf.ecore.EObject;
+
 import org.osgi.annotation.versioning.ProviderType;
 
 /**
@@ -32,18 +34,18 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-public interface LineString extends Geometry {
+public interface LineString extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Coordinates</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Coordinates</em>' containment reference.
-	 * @see #setCoordinates(LineStringCoordinates)
+	 * @see #setCoordinates(LineString_coordinates)
 	 * @see de.jena.bike.BikePackage#getLineString_Coordinates()
 	 * @model containment="true"
 	 * @generated
 	 */
-	LineStringCoordinates getCoordinates();
+	LineString_coordinates getCoordinates();
 
 	/**
 	 * Sets the value of the '{@link de.jena.bike.LineString#getCoordinates <em>Coordinates</em>}' containment reference.
@@ -53,6 +55,6 @@ public interface LineString extends Geometry {
 	 * @see #getCoordinates()
 	 * @generated
 	 */
-	void setCoordinates(LineStringCoordinates value);
+	void setCoordinates(LineString_coordinates value);
 
 } // LineString

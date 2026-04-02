@@ -15,6 +15,8 @@ package de.jena.bike;
 
 import java.math.BigInteger;
 
+import org.eclipse.emf.ecore.EObject;
+
 import org.osgi.annotation.versioning.ProviderType;
 
 /**
@@ -36,18 +38,18 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-public interface HistoricalTimestampTraffic extends BaseSerie {
+public interface HistoricalTimestampTraffic extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Timestamp</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Timestamp</em>' containment reference.
-	 * @see #setTimestamp(DateTime)
+	 * @see #setTimestamp(HistoricalTimestampTraffic_timestamp)
 	 * @see de.jena.bike.BikePackage#getHistoricalTimestampTraffic_Timestamp()
 	 * @model containment="true"
 	 * @generated
 	 */
-	DateTime getTimestamp();
+	HistoricalTimestampTraffic_timestamp getTimestamp();
 
 	/**
 	 * Sets the value of the '{@link de.jena.bike.HistoricalTimestampTraffic#getTimestamp <em>Timestamp</em>}' containment reference.
@@ -57,19 +59,19 @@ public interface HistoricalTimestampTraffic extends BaseSerie {
 	 * @see #getTimestamp()
 	 * @generated
 	 */
-	void setTimestamp(DateTime value);
+	void setTimestamp(HistoricalTimestampTraffic_timestamp value);
 
 	/**
 	 * Returns the value of the '<em><b>Lane</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Lane</em>' containment reference.
-	 * @see #setLane(Lane)
+	 * @see #setLane(HistoricalTimestampTraffic_lane)
 	 * @see de.jena.bike.BikePackage#getHistoricalTimestampTraffic_Lane()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Lane getLane();
+	HistoricalTimestampTraffic_lane getLane();
 
 	/**
 	 * Sets the value of the '{@link de.jena.bike.HistoricalTimestampTraffic#getLane <em>Lane</em>}' containment reference.
@@ -79,7 +81,7 @@ public interface HistoricalTimestampTraffic extends BaseSerie {
 	 * @see #getLane()
 	 * @generated
 	 */
-	void setLane(Lane value);
+	void setLane(HistoricalTimestampTraffic_lane value);
 
 	/**
 	 * Returns the value of the '<em><b>Speed</b></em>' attribute.

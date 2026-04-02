@@ -14,10 +14,10 @@
 package de.jena.bike.impl;
 
 import de.jena.bike.BikePackage;
-import de.jena.bike.Count;
-import de.jena.bike.DataStatus;
-import de.jena.bike.DateTime;
 import de.jena.bike.HistoricalRawTraffic_data;
+import de.jena.bike.HistoricalRawTraffic_data_counts;
+import de.jena.bike.HistoricalRawTraffic_data_status;
+import de.jena.bike.HistoricalRawTraffic_data_timestamp;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -53,7 +53,7 @@ public class HistoricalRawTraffic_dataImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 * @ordered
 	 */
-	protected DateTime timestamp;
+	protected HistoricalRawTraffic_data_timestamp timestamp;
 
 	/**
 	 * The default value of the '{@link #getGranularity() <em>Granularity</em>}' attribute.
@@ -83,7 +83,7 @@ public class HistoricalRawTraffic_dataImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 * @ordered
 	 */
-	protected Count counts;
+	protected HistoricalRawTraffic_data_counts counts;
 
 	/**
 	 * The cached value of the '{@link #getStatus() <em>Status</em>}' containment reference.
@@ -93,7 +93,7 @@ public class HistoricalRawTraffic_dataImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 * @ordered
 	 */
-	protected DataStatus status;
+	protected HistoricalRawTraffic_data_status status;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -120,7 +120,7 @@ public class HistoricalRawTraffic_dataImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public DateTime getTimestamp() {
+	public HistoricalRawTraffic_data_timestamp getTimestamp() {
 		return timestamp;
 	}
 
@@ -129,8 +129,8 @@ public class HistoricalRawTraffic_dataImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTimestamp(DateTime newTimestamp, NotificationChain msgs) {
-		DateTime oldTimestamp = timestamp;
+	public NotificationChain basicSetTimestamp(HistoricalRawTraffic_data_timestamp newTimestamp, NotificationChain msgs) {
+		HistoricalRawTraffic_data_timestamp oldTimestamp = timestamp;
 		timestamp = newTimestamp;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BikePackage.HISTORICAL_RAW_TRAFFIC_DATA__TIMESTAMP, oldTimestamp, newTimestamp);
@@ -145,7 +145,7 @@ public class HistoricalRawTraffic_dataImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public void setTimestamp(DateTime newTimestamp) {
+	public void setTimestamp(HistoricalRawTraffic_data_timestamp newTimestamp) {
 		if (newTimestamp != timestamp) {
 			NotificationChain msgs = null;
 			if (timestamp != null)
@@ -188,7 +188,7 @@ public class HistoricalRawTraffic_dataImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public Count getCounts() {
+	public HistoricalRawTraffic_data_counts getCounts() {
 		return counts;
 	}
 
@@ -197,8 +197,8 @@ public class HistoricalRawTraffic_dataImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetCounts(Count newCounts, NotificationChain msgs) {
-		Count oldCounts = counts;
+	public NotificationChain basicSetCounts(HistoricalRawTraffic_data_counts newCounts, NotificationChain msgs) {
+		HistoricalRawTraffic_data_counts oldCounts = counts;
 		counts = newCounts;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BikePackage.HISTORICAL_RAW_TRAFFIC_DATA__COUNTS, oldCounts, newCounts);
@@ -213,7 +213,7 @@ public class HistoricalRawTraffic_dataImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public void setCounts(Count newCounts) {
+	public void setCounts(HistoricalRawTraffic_data_counts newCounts) {
 		if (newCounts != counts) {
 			NotificationChain msgs = null;
 			if (counts != null)
@@ -233,7 +233,7 @@ public class HistoricalRawTraffic_dataImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public DataStatus getStatus() {
+	public HistoricalRawTraffic_data_status getStatus() {
 		return status;
 	}
 
@@ -242,8 +242,8 @@ public class HistoricalRawTraffic_dataImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetStatus(DataStatus newStatus, NotificationChain msgs) {
-		DataStatus oldStatus = status;
+	public NotificationChain basicSetStatus(HistoricalRawTraffic_data_status newStatus, NotificationChain msgs) {
+		HistoricalRawTraffic_data_status oldStatus = status;
 		status = newStatus;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BikePackage.HISTORICAL_RAW_TRAFFIC_DATA__STATUS, oldStatus, newStatus);
@@ -258,7 +258,7 @@ public class HistoricalRawTraffic_dataImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public void setStatus(DataStatus newStatus) {
+	public void setStatus(HistoricalRawTraffic_data_status newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
 			if (status != null)
@@ -319,16 +319,16 @@ public class HistoricalRawTraffic_dataImpl extends MinimalEObjectImpl.Container 
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case BikePackage.HISTORICAL_RAW_TRAFFIC_DATA__TIMESTAMP:
-				setTimestamp((DateTime)newValue);
+				setTimestamp((HistoricalRawTraffic_data_timestamp)newValue);
 				return;
 			case BikePackage.HISTORICAL_RAW_TRAFFIC_DATA__GRANULARITY:
 				setGranularity((String)newValue);
 				return;
 			case BikePackage.HISTORICAL_RAW_TRAFFIC_DATA__COUNTS:
-				setCounts((Count)newValue);
+				setCounts((HistoricalRawTraffic_data_counts)newValue);
 				return;
 			case BikePackage.HISTORICAL_RAW_TRAFFIC_DATA__STATUS:
-				setStatus((DataStatus)newValue);
+				setStatus((HistoricalRawTraffic_data_status)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -343,16 +343,16 @@ public class HistoricalRawTraffic_dataImpl extends MinimalEObjectImpl.Container 
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case BikePackage.HISTORICAL_RAW_TRAFFIC_DATA__TIMESTAMP:
-				setTimestamp((DateTime)null);
+				setTimestamp((HistoricalRawTraffic_data_timestamp)null);
 				return;
 			case BikePackage.HISTORICAL_RAW_TRAFFIC_DATA__GRANULARITY:
 				setGranularity(GRANULARITY_EDEFAULT);
 				return;
 			case BikePackage.HISTORICAL_RAW_TRAFFIC_DATA__COUNTS:
-				setCounts((Count)null);
+				setCounts((HistoricalRawTraffic_data_counts)null);
 				return;
 			case BikePackage.HISTORICAL_RAW_TRAFFIC_DATA__STATUS:
-				setStatus((DataStatus)null);
+				setStatus((HistoricalRawTraffic_data_status)null);
 				return;
 		}
 		super.eUnset(featureID);

@@ -14,8 +14,8 @@
 package de.jena.bike.impl;
 
 import de.jena.bike.BikePackage;
-import de.jena.bike.Count;
 import de.jena.bike.HistoricalAggregatedTraffic_data_traffic;
+import de.jena.bike.HistoricalAggregatedTraffic_data_traffic_counts;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -49,7 +49,7 @@ public class HistoricalAggregatedTraffic_data_trafficImpl extends MinimalEObject
 	 * @generated
 	 * @ordered
 	 */
-	protected Count counts;
+	protected HistoricalAggregatedTraffic_data_traffic_counts counts;
 
 	/**
 	 * The default value of the '{@link #getStatus() <em>Status</em>}' attribute.
@@ -96,7 +96,7 @@ public class HistoricalAggregatedTraffic_data_trafficImpl extends MinimalEObject
 	 * @generated
 	 */
 	@Override
-	public Count getCounts() {
+	public HistoricalAggregatedTraffic_data_traffic_counts getCounts() {
 		return counts;
 	}
 
@@ -105,8 +105,8 @@ public class HistoricalAggregatedTraffic_data_trafficImpl extends MinimalEObject
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetCounts(Count newCounts, NotificationChain msgs) {
-		Count oldCounts = counts;
+	public NotificationChain basicSetCounts(HistoricalAggregatedTraffic_data_traffic_counts newCounts, NotificationChain msgs) {
+		HistoricalAggregatedTraffic_data_traffic_counts oldCounts = counts;
 		counts = newCounts;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BikePackage.HISTORICAL_AGGREGATED_TRAFFIC_DATA_TRAFFIC__COUNTS, oldCounts, newCounts);
@@ -121,7 +121,7 @@ public class HistoricalAggregatedTraffic_data_trafficImpl extends MinimalEObject
 	 * @generated
 	 */
 	@Override
-	public void setCounts(Count newCounts) {
+	public void setCounts(HistoricalAggregatedTraffic_data_traffic_counts newCounts) {
 		if (newCounts != counts) {
 			NotificationChain msgs = null;
 			if (counts != null)
@@ -197,7 +197,7 @@ public class HistoricalAggregatedTraffic_data_trafficImpl extends MinimalEObject
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case BikePackage.HISTORICAL_AGGREGATED_TRAFFIC_DATA_TRAFFIC__COUNTS:
-				setCounts((Count)newValue);
+				setCounts((HistoricalAggregatedTraffic_data_traffic_counts)newValue);
 				return;
 			case BikePackage.HISTORICAL_AGGREGATED_TRAFFIC_DATA_TRAFFIC__STATUS:
 				setStatus(newValue);
@@ -215,7 +215,7 @@ public class HistoricalAggregatedTraffic_data_trafficImpl extends MinimalEObject
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case BikePackage.HISTORICAL_AGGREGATED_TRAFFIC_DATA_TRAFFIC__COUNTS:
-				setCounts((Count)null);
+				setCounts((HistoricalAggregatedTraffic_data_traffic_counts)null);
 				return;
 			case BikePackage.HISTORICAL_AGGREGATED_TRAFFIC_DATA_TRAFFIC__STATUS:
 				setStatus(STATUS_EDEFAULT);

@@ -14,14 +14,14 @@
 package de.jena.bike.impl;
 
 import de.jena.bike.BikePackage;
-import de.jena.bike.Domain;
-import de.jena.bike.GeoJsonObject;
-import de.jena.bike.Image;
-import de.jena.bike.Location;
-import de.jena.bike.TravelModeLabel;
 import de.jena.bike.site;
-import de.jena.bike.siteCounter;
-import de.jena.bike.siteTag;
+import de.jena.bike.site_counters;
+import de.jena.bike.site_domain;
+import de.jena.bike.site_images;
+import de.jena.bike.site_location;
+import de.jena.bike.site_segments;
+import de.jena.bike.site_tags;
+import de.jena.bike.site_travelModes;
 
 import java.math.BigInteger;
 
@@ -160,7 +160,7 @@ public class siteImpl extends MinimalEObjectImpl.Container implements site {
 	 * @generated
 	 * @ordered
 	 */
-	protected Location location;
+	protected site_location location;
 
 	/**
 	 * The cached value of the '{@link #getSegments() <em>Segments</em>}' containment reference.
@@ -170,7 +170,7 @@ public class siteImpl extends MinimalEObjectImpl.Container implements site {
 	 * @generated
 	 * @ordered
 	 */
-	protected GeoJsonObject segments;
+	protected site_segments segments;
 
 	/**
 	 * The default value of the '{@link #getFirstData() <em>First Data</em>}' attribute.
@@ -240,7 +240,7 @@ public class siteImpl extends MinimalEObjectImpl.Container implements site {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TravelModeLabel> travelModes;
+	protected EList<site_travelModes> travelModes;
 
 	/**
 	 * The default value of the '{@link #getDirectional() <em>Directional</em>}' attribute.
@@ -270,7 +270,7 @@ public class siteImpl extends MinimalEObjectImpl.Container implements site {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<siteCounter> counters;
+	protected EList<site_counters> counters;
 
 	/**
 	 * The cached value of the '{@link #getDomain() <em>Domain</em>}' containment reference.
@@ -280,7 +280,7 @@ public class siteImpl extends MinimalEObjectImpl.Container implements site {
 	 * @generated
 	 * @ordered
 	 */
-	protected Domain domain;
+	protected site_domain domain;
 
 	/**
 	 * The cached value of the '{@link #getTags() <em>Tags</em>}' containment reference list.
@@ -290,7 +290,7 @@ public class siteImpl extends MinimalEObjectImpl.Container implements site {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<siteTag> tags;
+	protected EList<site_tags> tags;
 
 	/**
 	 * The cached value of the '{@link #getImages() <em>Images</em>}' containment reference list.
@@ -300,7 +300,7 @@ public class siteImpl extends MinimalEObjectImpl.Container implements site {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Image> images;
+	protected EList<site_images> images;
 
 	/**
 	 * The default value of the '{@link #getAttributes() <em>Attributes</em>}' attribute.
@@ -479,7 +479,7 @@ public class siteImpl extends MinimalEObjectImpl.Container implements site {
 	 * @generated
 	 */
 	@Override
-	public Location getLocation() {
+	public site_location getLocation() {
 		return location;
 	}
 
@@ -488,8 +488,8 @@ public class siteImpl extends MinimalEObjectImpl.Container implements site {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetLocation(Location newLocation, NotificationChain msgs) {
-		Location oldLocation = location;
+	public NotificationChain basicSetLocation(site_location newLocation, NotificationChain msgs) {
+		site_location oldLocation = location;
 		location = newLocation;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BikePackage.SITE__LOCATION, oldLocation, newLocation);
@@ -504,7 +504,7 @@ public class siteImpl extends MinimalEObjectImpl.Container implements site {
 	 * @generated
 	 */
 	@Override
-	public void setLocation(Location newLocation) {
+	public void setLocation(site_location newLocation) {
 		if (newLocation != location) {
 			NotificationChain msgs = null;
 			if (location != null)
@@ -524,7 +524,7 @@ public class siteImpl extends MinimalEObjectImpl.Container implements site {
 	 * @generated
 	 */
 	@Override
-	public GeoJsonObject getSegments() {
+	public site_segments getSegments() {
 		return segments;
 	}
 
@@ -533,8 +533,8 @@ public class siteImpl extends MinimalEObjectImpl.Container implements site {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSegments(GeoJsonObject newSegments, NotificationChain msgs) {
-		GeoJsonObject oldSegments = segments;
+	public NotificationChain basicSetSegments(site_segments newSegments, NotificationChain msgs) {
+		site_segments oldSegments = segments;
 		segments = newSegments;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BikePackage.SITE__SEGMENTS, oldSegments, newSegments);
@@ -549,7 +549,7 @@ public class siteImpl extends MinimalEObjectImpl.Container implements site {
 	 * @generated
 	 */
 	@Override
-	public void setSegments(GeoJsonObject newSegments) {
+	public void setSegments(site_segments newSegments) {
 		if (newSegments != segments) {
 			NotificationChain msgs = null;
 			if (segments != null)
@@ -638,9 +638,9 @@ public class siteImpl extends MinimalEObjectImpl.Container implements site {
 	 * @generated
 	 */
 	@Override
-	public EList<TravelModeLabel> getTravelModes() {
+	public EList<site_travelModes> getTravelModes() {
 		if (travelModes == null) {
-			travelModes = new EObjectContainmentEList<TravelModeLabel>(TravelModeLabel.class, this, BikePackage.SITE__TRAVEL_MODES);
+			travelModes = new EObjectContainmentEList<site_travelModes>(site_travelModes.class, this, BikePackage.SITE__TRAVEL_MODES);
 		}
 		return travelModes;
 	}
@@ -674,9 +674,9 @@ public class siteImpl extends MinimalEObjectImpl.Container implements site {
 	 * @generated
 	 */
 	@Override
-	public EList<siteCounter> getCounters() {
+	public EList<site_counters> getCounters() {
 		if (counters == null) {
-			counters = new EObjectContainmentEList<siteCounter>(siteCounter.class, this, BikePackage.SITE__COUNTERS);
+			counters = new EObjectContainmentEList<site_counters>(site_counters.class, this, BikePackage.SITE__COUNTERS);
 		}
 		return counters;
 	}
@@ -687,7 +687,7 @@ public class siteImpl extends MinimalEObjectImpl.Container implements site {
 	 * @generated
 	 */
 	@Override
-	public Domain getDomain() {
+	public site_domain getDomain() {
 		return domain;
 	}
 
@@ -696,8 +696,8 @@ public class siteImpl extends MinimalEObjectImpl.Container implements site {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDomain(Domain newDomain, NotificationChain msgs) {
-		Domain oldDomain = domain;
+	public NotificationChain basicSetDomain(site_domain newDomain, NotificationChain msgs) {
+		site_domain oldDomain = domain;
 		domain = newDomain;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BikePackage.SITE__DOMAIN, oldDomain, newDomain);
@@ -712,7 +712,7 @@ public class siteImpl extends MinimalEObjectImpl.Container implements site {
 	 * @generated
 	 */
 	@Override
-	public void setDomain(Domain newDomain) {
+	public void setDomain(site_domain newDomain) {
 		if (newDomain != domain) {
 			NotificationChain msgs = null;
 			if (domain != null)
@@ -732,9 +732,9 @@ public class siteImpl extends MinimalEObjectImpl.Container implements site {
 	 * @generated
 	 */
 	@Override
-	public EList<siteTag> getTags() {
+	public EList<site_tags> getTags() {
 		if (tags == null) {
-			tags = new EObjectContainmentEList<siteTag>(siteTag.class, this, BikePackage.SITE__TAGS);
+			tags = new EObjectContainmentEList<site_tags>(site_tags.class, this, BikePackage.SITE__TAGS);
 		}
 		return tags;
 	}
@@ -745,9 +745,9 @@ public class siteImpl extends MinimalEObjectImpl.Container implements site {
 	 * @generated
 	 */
 	@Override
-	public EList<Image> getImages() {
+	public EList<site_images> getImages() {
 		if (images == null) {
-			images = new EObjectContainmentEList<Image>(Image.class, this, BikePackage.SITE__IMAGES);
+			images = new EObjectContainmentEList<site_images>(site_images.class, this, BikePackage.SITE__IMAGES);
 		}
 		return images;
 	}
@@ -917,10 +917,10 @@ public class siteImpl extends MinimalEObjectImpl.Container implements site {
 				setCustomId((String)newValue);
 				return;
 			case BikePackage.SITE__LOCATION:
-				setLocation((Location)newValue);
+				setLocation((site_location)newValue);
 				return;
 			case BikePackage.SITE__SEGMENTS:
-				setSegments((GeoJsonObject)newValue);
+				setSegments((site_segments)newValue);
 				return;
 			case BikePackage.SITE__FIRST_DATA:
 				setFirstData((String)newValue);
@@ -933,25 +933,25 @@ public class siteImpl extends MinimalEObjectImpl.Container implements site {
 				return;
 			case BikePackage.SITE__TRAVEL_MODES:
 				getTravelModes().clear();
-				getTravelModes().addAll((Collection<? extends TravelModeLabel>)newValue);
+				getTravelModes().addAll((Collection<? extends site_travelModes>)newValue);
 				return;
 			case BikePackage.SITE__DIRECTIONAL:
 				setDirectional((Boolean)newValue);
 				return;
 			case BikePackage.SITE__COUNTERS:
 				getCounters().clear();
-				getCounters().addAll((Collection<? extends siteCounter>)newValue);
+				getCounters().addAll((Collection<? extends site_counters>)newValue);
 				return;
 			case BikePackage.SITE__DOMAIN:
-				setDomain((Domain)newValue);
+				setDomain((site_domain)newValue);
 				return;
 			case BikePackage.SITE__TAGS:
 				getTags().clear();
-				getTags().addAll((Collection<? extends siteTag>)newValue);
+				getTags().addAll((Collection<? extends site_tags>)newValue);
 				return;
 			case BikePackage.SITE__IMAGES:
 				getImages().clear();
-				getImages().addAll((Collection<? extends Image>)newValue);
+				getImages().addAll((Collection<? extends site_images>)newValue);
 				return;
 			case BikePackage.SITE__ATTRIBUTES:
 				setAttributes(newValue);
@@ -987,10 +987,10 @@ public class siteImpl extends MinimalEObjectImpl.Container implements site {
 				setCustomId(CUSTOM_ID_EDEFAULT);
 				return;
 			case BikePackage.SITE__LOCATION:
-				setLocation((Location)null);
+				setLocation((site_location)null);
 				return;
 			case BikePackage.SITE__SEGMENTS:
-				setSegments((GeoJsonObject)null);
+				setSegments((site_segments)null);
 				return;
 			case BikePackage.SITE__FIRST_DATA:
 				setFirstData(FIRST_DATA_EDEFAULT);
@@ -1011,7 +1011,7 @@ public class siteImpl extends MinimalEObjectImpl.Container implements site {
 				getCounters().clear();
 				return;
 			case BikePackage.SITE__DOMAIN:
-				setDomain((Domain)null);
+				setDomain((site_domain)null);
 				return;
 			case BikePackage.SITE__TAGS:
 				getTags().clear();

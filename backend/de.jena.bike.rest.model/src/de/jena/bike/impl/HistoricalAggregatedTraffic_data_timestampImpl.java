@@ -14,7 +14,7 @@
 package de.jena.bike.impl;
 
 import de.jena.bike.BikePackage;
-import de.jena.bike.HistoricalRawTrafficInclude;
+import de.jena.bike.HistoricalAggregatedTraffic_data_timestamp;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -22,18 +22,18 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Historical Raw Traffic Include</b></em>'.
+ * An implementation of the model object '<em><b>Historical Aggregated Traffic data timestamp</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class HistoricalRawTrafficIncludeImpl extends MinimalEObjectImpl.Container implements HistoricalRawTrafficInclude {
+public class HistoricalAggregatedTraffic_data_timestampImpl extends MinimalEObjectImpl.Container implements HistoricalAggregatedTraffic_data_timestamp {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected HistoricalRawTrafficIncludeImpl() {
+	protected HistoricalAggregatedTraffic_data_timestampImpl() {
 		super();
 	}
 
@@ -44,7 +44,7 @@ public class HistoricalRawTrafficIncludeImpl extends MinimalEObjectImpl.Containe
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return BikePackage.Literals.HISTORICAL_RAW_TRAFFIC_INCLUDE;
+		return BikePackage.Literals.HISTORICAL_AGGREGATED_TRAFFIC_DATA_TIMESTAMP;
 	}
 
-} //HistoricalRawTrafficIncludeImpl
+} //HistoricalAggregatedTraffic_data_timestampImpl

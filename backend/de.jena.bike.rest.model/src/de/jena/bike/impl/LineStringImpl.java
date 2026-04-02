@@ -15,7 +15,7 @@ package de.jena.bike.impl;
 
 import de.jena.bike.BikePackage;
 import de.jena.bike.LineString;
-import de.jena.bike.LineStringCoordinates;
+import de.jena.bike.LineString_coordinates;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,7 +39,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class LineStringImpl extends GeometryImpl implements LineString {
+public class LineStringImpl extends MinimalEObjectImpl.Container implements LineString {
 	/**
 	 * The cached value of the '{@link #getCoordinates() <em>Coordinates</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -47,7 +48,7 @@ public class LineStringImpl extends GeometryImpl implements LineString {
 	 * @generated
 	 * @ordered
 	 */
-	protected LineStringCoordinates coordinates;
+	protected LineString_coordinates coordinates;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -74,7 +75,7 @@ public class LineStringImpl extends GeometryImpl implements LineString {
 	 * @generated
 	 */
 	@Override
-	public LineStringCoordinates getCoordinates() {
+	public LineString_coordinates getCoordinates() {
 		return coordinates;
 	}
 
@@ -83,8 +84,8 @@ public class LineStringImpl extends GeometryImpl implements LineString {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetCoordinates(LineStringCoordinates newCoordinates, NotificationChain msgs) {
-		LineStringCoordinates oldCoordinates = coordinates;
+	public NotificationChain basicSetCoordinates(LineString_coordinates newCoordinates, NotificationChain msgs) {
+		LineString_coordinates oldCoordinates = coordinates;
 		coordinates = newCoordinates;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BikePackage.LINE_STRING__COORDINATES, oldCoordinates, newCoordinates);
@@ -99,7 +100,7 @@ public class LineStringImpl extends GeometryImpl implements LineString {
 	 * @generated
 	 */
 	@Override
-	public void setCoordinates(LineStringCoordinates newCoordinates) {
+	public void setCoordinates(LineString_coordinates newCoordinates) {
 		if (newCoordinates != coordinates) {
 			NotificationChain msgs = null;
 			if (coordinates != null)
@@ -150,7 +151,7 @@ public class LineStringImpl extends GeometryImpl implements LineString {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case BikePackage.LINE_STRING__COORDINATES:
-				setCoordinates((LineStringCoordinates)newValue);
+				setCoordinates((LineString_coordinates)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -165,7 +166,7 @@ public class LineStringImpl extends GeometryImpl implements LineString {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case BikePackage.LINE_STRING__COORDINATES:
-				setCoordinates((LineStringCoordinates)null);
+				setCoordinates((LineString_coordinates)null);
 				return;
 		}
 		super.eUnset(featureID);
