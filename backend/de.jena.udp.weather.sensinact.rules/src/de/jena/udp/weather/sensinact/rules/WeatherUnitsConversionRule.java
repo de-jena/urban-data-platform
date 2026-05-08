@@ -32,27 +32,32 @@ import org.osgi.service.component.annotations.Component;
  * @since May 8, 2026
  */
 @Component(immediate = true, name = "WeatherUnitsConversionRule")
-public class WeatherUnitsConversionRule implements RuleDefinition{
-	
+public class WeatherUnitsConversionRule implements RuleDefinition {
+
 	public static final Logger LOGGER = Logger.getLogger(WeatherUnitsConversionRule.class.getName());
 	public static final String UPDATED_PROVIDER_SUFFIX = "-derived";
 
-	/* 
+	/*
 	 * (non-Javadoc)
-	 * @see org.eclipse.sensinact.southbound.rules.api.RuleDefinition#evaluate(java.util.List, org.eclipse.sensinact.southbound.rules.api.ResourceUpdater)
+	 * 
+	 * @see
+	 * org.eclipse.sensinact.southbound.rules.api.RuleDefinition#evaluate(java.util.
+	 * List, org.eclipse.sensinact.southbound.rules.api.ResourceUpdater)
 	 */
 	@Override
 	public void evaluate(List<ProviderSnapshot> providerSnapshots, ResourceUpdater resourceUpdater) {
-		if(providerSnapshots.size() != 1) {
+		if (providerSnapshots.size() != 1) {
 			LOGGER.severe("More than one provider found for WeatherUnitsConversionRule. This should not happen");
 		}
 		ProviderSnapshot provider = providerSnapshots.get(0);
 		BatchUpdate updateBatch = resourceUpdater.updateBatch();
-		for(ServiceSnapshot service : provider.getServices()) {
-			for(ResourceSnapshot resource : service.getResources()) {
-				if(resource.getName().startsWith(WeatherRuleCriterium.TEMPERATURE_PREFIX) && resource.getValue() != null) {
+		for (ServiceSnapshot service : provider.getServices()) {
+			for (ResourceSnapshot resource : service.getResources()) {
+				if (resource.getName().startsWith(WeatherRuleCriterium.TEMPERATURE_PREFIX)
+						&& resource.getValue() != null) {
 					float convertedValue = convertTemperatureValue(resource.getValue().getValue());
-					updateBatch.updateResource(provider.getName().concat(UPDATED_PROVIDER_SUFFIX), service.getName(), resource.getName(), convertedValue, Instant.now());
+					updateBatch.updateResource(provider.getName().concat(UPDATED_PROVIDER_SUFFIX), service.getName(),
+							resource.getName(), convertedValue, Instant.now());
 				}
 			}
 		}
@@ -64,16 +69,17 @@ public class WeatherUnitsConversionRule implements RuleDefinition{
 	 * @return
 	 */
 	private float convertTemperatureValue(Object value) {
-		if(value instanceof Float floatValue) {
+		if (value instanceof Float floatValue) {
 			return floatValue - 273.15f;
 		}
 		throw new IllegalArgumentException("Expected a float value as Temperature");
 	}
 
-	
-	/* 
+	/*
 	 * (non-Javadoc)
-	 * @see org.eclipse.sensinact.southbound.rules.api.RuleDefinition#getInputFilter()
+	 * 
+	 * @see
+	 * org.eclipse.sensinact.southbound.rules.api.RuleDefinition#getInputFilter()
 	 */
 	@Override
 	public ICriterion getInputFilter() {
