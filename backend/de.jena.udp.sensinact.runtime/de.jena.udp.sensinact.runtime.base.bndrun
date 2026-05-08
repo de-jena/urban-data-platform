@@ -87,6 +87,7 @@ slf4j.runpath:  \
 	bnd.identity;id='de.jena.udp.sensinact.sensor.mapping',\
 	bnd.identity;id='de.jena.udp.sensinact.location.notification',\
 	bnd.identity;id='de.jena.chirpstack.sensinact.rules',\
-	bnd.identity;id='de.jena.udp.kml.readers'
+	bnd.identity;id='de.jena.udp.kml.readers',\
+	bnd.identity;id='de.jena.udp.weather.sensinact.rules'
 #   osgi.implementation;filter:='(&(osgi.implementation=org.eclipse.osgitech.rest.adapter)(provider=osgi.http)),\
     

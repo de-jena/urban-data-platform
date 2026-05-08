@@ -149,3 +149,12 @@ net.time4j:time4j-base:5.9.4
 
 #needed for rules.config
 org.apache.commons:commons-jexl3:3.5.0
+
+com.fasterxml.jackson.core:jackson-annotations:2.21
+org.snakeyaml:snakeyaml-engine:3.0.1
+tools.jackson.core:jackson-core:3.1.0
+tools.jackson.core:jackson-databind:3.1.0
+tools.jackson.dataformat:jackson-dataformat-cbor:3.1.0
+tools.jackson.dataformat:jackson-dataformat-yaml:3.1.0
+tools.jackson.jakarta.rs:jackson-jakarta-rs-json-provider:3.1.0
+tools.jackson.jakarta.rs:jackson-jakarta-rs-base:3.1.0
