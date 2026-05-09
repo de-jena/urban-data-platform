@@ -30,7 +30,6 @@ import org.osgi.service.http.whiteboard.propertytypes.HttpWhiteboardResource;
 import org.osgi.service.jakartars.whiteboard.propertytypes.JakartarsApplicationSelect;
 import org.osgi.service.jakartars.whiteboard.propertytypes.JakartarsResource;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 
 import io.swagger.v3.core.util.Json;
 import io.swagger.v3.core.util.Yaml;
@@ -75,7 +74,7 @@ public class OpenApiResource extends BaseOpenApiResource {
 	@GET
 	@Produces({ MediaType.APPLICATION_JSON, "application/yaml" })
 	@Operation(hidden = true)
-	public Response getOpenApi(@Context HttpHeaders headers, @Context UriInfo uriInfo, @PathParam("type") String type) throws OpenApiConfigurationException, JsonProcessingException {
+	public Response getOpenApi(@Context HttpHeaders headers, @Context UriInfo uriInfo, @PathParam("type") String type) throws Exception {
 
 		SwaggerConfiguration openApiConfig = new SwaggerConfiguration().prettyPrint(true);
 

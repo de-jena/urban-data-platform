@@ -1,5 +1,11 @@
 Test-Cases: ${classes;HIERARCHY_INDIRECTLY_ANNOTATED;org.junit.platform.commons.annotation.Testable;CONCRETE}
 
+-dependson: \
+	de.dim.trafficos.publictransport.api.mmt,\
+	de.dim.trafficos.publictransport.api.component,\
+	de.dim.trafficos.publictransport.component,\
+	de.dim.trafficos.publictransport.itest.config
+
 -library: enableOSGi-Test,\
 	enable-emf
 

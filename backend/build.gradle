@@ -26,14 +26,12 @@ subprojects {
   tasks.withType(Test) {
     useJUnitPlatform()
   }
-}
-
-// Disable bnd plugin built-in task 'testOSGi' and register custom task for testing
-//gradle.startParameter.excludedTaskNames += "testOSGi"
-tasks.whenTaskAdded {task ->
-    if(task.name.contains("testOSGi")) {
-        task.enabled = false
+  // Disable bnd plugin built-in task 'testOSGi' in all subprojects (Gradle 8 compatible)
+  tasks.configureEach { task ->
+    if (task.name.contains("testOSGi")) {
+      task.enabled = false
     }
+  }
 }
 tasks.register('itest'){
   subprojects.each { sp ->
@@ -70,9 +68,9 @@ task codeCoverageReport(type: JacocoReport) {
     }
 
     reports {
-        xml.enabled true
-        html.enabled true
-        csv.enabled false
+        xml.required = true
+        html.required = true
+        csv.required = false
     }
 }
 

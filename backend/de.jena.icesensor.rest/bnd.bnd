@@ -2,14 +2,15 @@
 	org.apache.commons.io,\
 	jakarta.ws.rs-api,\
 	de.jena.icesensor.model;version=latest,\
-	org.eclipse.emfcloud.emfjson-jackson;version=latest,\
+	org.eclipse.fennec.codec.api,\
+	org.eclipse.fennec.codec,\
 	org.osgi.service.component,\
 	org.osgi.util.pushstream;version=latest,\
 	org.osgi.util.promise;version=latest,\
 	org.osgi.util.function;version=latest,\
 	org.osgi.service.cdi,\
 	de.jena.icesensor.api,\
-	com.fasterxml.jackson.core.jackson-databind,\
+	tools.jackson.core.jackson-databind,\
 	org.eclipse.fennec.qvt.api,\
 	biz.aQute.bnd.annotation,\
 	org.gecko.emf.osgi.component,\

@@ -1,4 +1,7 @@
 -library: enableOSGi-Test
+-runrequires.engine: \
+	bnd.identity;id='junit-jupiter-engine',\
+	bnd.identity;id='junit-platform-launcher'
 -resolve.effective: active;skip:="osgi.service"
 
 -runrequires: \
@@ -18,7 +21,9 @@
 	base.path=${.}
 
 -runfw: org.apache.felix.framework;version='[7.0.5,7.0.5]'
--runee: JavaSE-17
+-runee: JavaSE-21
+-runvm: --enable-native-access=ALL-UNNAMED
+-runproperties: org.apache.lucene.store.MMapDirectory.enableMemorySegments=false
 -runbundles: \
 	de.dim.trafficos.gtfs.component;version=snapshot,\
 	de.dim.trafficos.gtfs.component.tests;version=snapshot,\

@@ -30,7 +30,7 @@ import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import tools.jackson.databind.ObjectMapper;
 
 @Component
 public class ConfigurationUpdater {
@@ -41,6 +41,7 @@ public class ConfigurationUpdater {
 	private static final String CLIENT_PID = "TrafiCamWSC"; 
 	private static final String READER_PID = "TrafiCamReader"; 
 	private static final String SENDER_PID = "TrafiCamSender"; 
+	private static final String CPU_TEMP_PID = "CPUTempMonitor"; 
 	private static final String MQTT_PID = "MQTTService"; 
 
 	@Reference
@@ -72,14 +73,21 @@ public class ConfigurationUpdater {
 				configureClient(id, map);
 				configureReader(id, map);
 				configureSender(id, map);
-//				Configuration config = configAdmin.getFactoryConfiguration(pid, id, "?");
-//				Dictionary<String, Object> props = new Hashtable<>(map);
-//				logger.log(Level.INFO,"Update configuration for {0} with {1}", config, props);
-//				config.updateIfDifferent(props);
-				
 			}
+			configureCPUTempMonitor(list);
 		} catch (IOException e) {
 			logger.log(Level.ERROR,"Error while update configuration from {0}", CONFIG_PATH, e);
+		}
+	}
+
+	private void configureCPUTempMonitor(List<Map<String, String>> list) throws IOException {
+		if (!list.isEmpty()) {
+			String id = list.get(0).get("id");
+			Configuration config = configAdmin.getFactoryConfiguration(CPU_TEMP_PID, id, "?");
+			Dictionary<String, String> properties = new Hashtable<String, String>();
+			logger.log(Level.INFO,"Configure CPU temperature monitoring for {0}", id);
+			properties.put("id", id);
+			config.updateIfDifferent(properties);
 		}
 	}
 	

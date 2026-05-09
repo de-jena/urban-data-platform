@@ -1,10 +1,13 @@
 -library: enableOSGi-Test
+-runrequires.engine: \
+	bnd.identity;id='junit-jupiter-engine',\
+	bnd.identity;id='junit-platform-launcher'
 
 -runrequires: \
 	bnd.identity;id='de.dim.trafficos.publictransport.api.component.tests',\
 	bnd.identity;id='de.dim.trafficos.publictransport.component',\
 	bnd.identity;id='de.dim.trafficos.publictransport.api.mmt',\
-	bnd.identity;id='org.gecko.qvt.osgi.component',\
+	bnd.identity;id='org.eclipse.fennec.qvt.component',\
 	bnd.identity;id='org.gecko.emf.repository.mongo',\
 	bnd.identity;id='org.gecko.emf.mongo.component',\
 	bnd.identity;id='de.dim.trafficos.publictransport.api.component',\
@@ -19,7 +22,9 @@
 	bnd.identity;id='org.gecko.emf.osgi.component';version='[4,5)',\
 	
 -runfw: org.apache.felix.framework;version='[7.0.5,7.0.5]'
--runee: JavaSE-17
+-runee: JavaSE-21
+-runvm: --enable-native-access=ALL-UNNAMED
+-runproperties: org.apache.lucene.store.MMapDirectory.enableMemorySegments=false
 -runbundles: \
 	de.dim.trafficos.publictransport.api.component;version=snapshot,\
 	de.dim.trafficos.publictransport.api.component.tests;version=snapshot,\
@@ -29,7 +34,7 @@
 	org.apache.felix.configadmin;version='[1.9.26,1.9.27)',\
 	org.eclipse.core.runtime;version='[3.14.0,3.14.1)',\
 	org.eclipse.m2m.qvt.oml.cst.parser;version='[3.9.0,3.9.1)',\
-	org.gecko.qvt.osgi.component;version='[1.0.6,1.0.7)',\
+	org.eclipse.fennec.qvt.component;version='[1.1.0,1.1.1)',\
 	org.osgi.test.common;version='[1.2.1,1.2.2)',\
 	org.osgi.test.junit5;version='[1.2.1,1.2.2)',\
 	org.osgi.util.function;version='[1.2.0,1.2.1)',\

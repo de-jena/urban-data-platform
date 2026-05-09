@@ -104,7 +104,7 @@ public class GltOpenApiClientTest {
 		assertThat(response).isNotNull();
 		assertThat(response.getCode()).isEqualTo(200);
 		EList<EObject> result = response.getResult();
-		assertThat(result).hasSize(480);
+		assertThat(result).hasSize(485);
 		assertThat(result.get(0)).isInstanceOf(DatalogContentPojo.class);
 		DatalogContentPojo content = (DatalogContentPojo) result.get(0);
 		assertThat(content.getName()).isEqualTo("T01 VLT Sonden");

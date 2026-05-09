@@ -33,8 +33,8 @@ Bundle-Developers: \
     	
 java: java
 javac: javac
-javac.source: 17
-javac.target: 17
+javac.source: 21
+javac.target: 21
 javac.debug:  on
 
 -library:\
@@ -47,7 +47,8 @@ javac.debug:  on
 	jakartaREST,\
 	geckoMessaging,\
 	geckoEMFModels,\
-	geckoSearch
+	geckoSearch,\
+	fennecCodec
 	
 # This can be replaced, as soon as we have the latest release figuered out
 #	geckoSearch
@@ -55,11 +56,12 @@ javac.debug:  on
 -releaserepo: UDP_Nexus_Release
 
 sensinact.version: 0.0.2-SNAPSHOT
-jackson.version: 2.20.0
+jackson.version: 3.1.3
+jackson2.version: 2.20.0
 jersey.version: 3.0.8
 jakarta.ws.rs-api.version: 3.1.0
 upd.models.version: 1.2.0-SNAPSHOT
-bnd.version: 7.0.0
+bnd.version: 7.2.1
 	
 github-project: de-jena/broker
 base-version: 1.0.0
@@ -68,7 +70,11 @@ Bundle-Version: ${broker-base-version}
 
 -removeheaders: Bnd-LastModified, Tool, Created-By, Private-Package
 -snapshot: ${tstamp}-SNAPSHOT
--pom: version=${versionmask;===s;${@version}}	
+-pom: version=${versionmask;===s;${@version}}
+
+# Ensure junit-platform-launcher is on the test classpath so Gradle 8 uses it
+# instead of its bundled 1.8.2 which is API-incompatible with Platform 1.14.x
+-testpath.junit_launcher: junit-platform-launcher;version=latest
 
 -digest: sha256
 	
@@ -78,7 +84,6 @@ Bundle-Version: ${broker-base-version}
   test;member=${filter;${p};.*\.*test*},\
   upd_runtime;member=${filter;${p};.*\.udp\.runtime\.*},\
   5g_runtime;member=${filter;${p};.*\.5g\.runtime\.*},\
-  icesensor;member=${filter;${p};.*\.icesensor\.*},\
   traficam;member=${filter;${p};.*\.traficam\.*},\
   ilsa;member=${filter;${p};.*\.ilsa\.*},\
   ttn;member=${filter;${p};.*\.ttn\.*},\

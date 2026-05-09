@@ -17,12 +17,6 @@ import java.lang.System.Logger;
 import java.lang.System.Logger.Level;
 import java.util.Date;
 
-import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.emfcloud.jackson.module.EMFModule;
-import org.eclipse.emfcloud.jackson.resource.JsonResourceFactory;
 import org.eclipse.jetty.websocket.api.RemoteEndpoint;
 import org.eclipse.jetty.websocket.api.Session;
 import org.eclipse.jetty.websocket.api.annotations.OnWebSocketClose;
@@ -30,8 +24,6 @@ import org.eclipse.jetty.websocket.api.annotations.OnWebSocketConnect;
 import org.eclipse.jetty.websocket.api.annotations.OnWebSocketError;
 import org.eclipse.jetty.websocket.api.annotations.OnWebSocketMessage;
 import org.eclipse.jetty.websocket.api.annotations.WebSocket;
-
-import com.fasterxml.jackson.core.JsonProcessingException;
 
 import de.jena.model.icesensor.IceSENSOR;
 
@@ -60,16 +52,8 @@ public class IceWebSocket {
 	}
 
 	private String toJson(IceSENSOR sensor) {
-		ResourceSet resourceSet = new ResourceSetImpl();
-		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("json", new JsonResourceFactory());
-		Resource resource = resourceSet.createResource(URI.createFileURI("sensor.json"), "application/json");
-		resource.getContents().add(sensor);
-		try {
-			return EMFModule.setupDefaultMapper().writeValueAsString(resource);
-		} catch (JsonProcessingException e) {
-			e.printStackTrace();
-			return "";
-		}
+		// TODO: migrate to org.eclipse.fennec.codec before removing icesensor
+		throw new UnsupportedOperationException("IceSensor serialization pending migration to fennec codec");
 	}
 
 	@OnWebSocketClose

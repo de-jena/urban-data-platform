@@ -19,9 +19,8 @@ Require-Capability: \
 	org.eclipse.sensinact.gateway.core.models.provider,\
 	org.eclipse.sensinact.gateway.core.geo-json,\
 	org.eclipse.sensinact.gateway.southbound.mqtt.mqtt-client,\
-	com.fasterxml.jackson.core.jackson-databind,\
-	com.fasterxml.jackson.core.jackson-core,\
-	com.fasterxml.jackson.core.jackson-annotations,\
+	tools.jackson.core.jackson-databind,\
+	tools.jackson.core.jackson-core,\
 	org.osgi.framework,\
 	org.osgi.service.component,\
 	org.eclipse.osgi-technology.scheduler.api,\
