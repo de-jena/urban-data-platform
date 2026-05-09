@@ -10,5 +10,4 @@
 	org.osgi.util.promise,\
 	org.gecko.util.pushstream,\
 	org.gecko.util.pushstream,\
-	org.eclipse.fennec.codec.api,\
-	org.eclipse.fennec.codec
+	org.eclipse.emfcloud.emfjson-jackson,\

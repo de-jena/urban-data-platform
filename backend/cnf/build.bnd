@@ -47,8 +47,7 @@ javac.debug:  on
 	jakartaREST,\
 	geckoMessaging,\
 	geckoEMFModels,\
-	geckoSearch,\
-	fennecCodec
+	geckoSearch
 	
 # This can be replaced, as soon as we have the latest release figuered out
 #	geckoSearch
@@ -71,10 +70,6 @@ Bundle-Version: ${broker-base-version}
 -removeheaders: Bnd-LastModified, Tool, Created-By, Private-Package
 -snapshot: ${tstamp}-SNAPSHOT
 -pom: version=${versionmask;===s;${@version}}
-
-# Ensure junit-platform-launcher is on the test classpath so Gradle 8 uses it
-# instead of its bundled 1.8.2 which is API-incompatible with Platform 1.14.x
--testpath.junit_launcher: junit-platform-launcher;version=latest
 
 -digest: sha256
 	

@@ -12,4 +12,3 @@ org.geckoprojects.bnd:org.gecko.bnd.dimc.library:2.2.0
 org.geckoprojects.bnd:org.gecko.bnd.jacoco.library:2.2.0
 org.geckoprojects.bnd:org.gecko.bnd.osgitest.library:2.2.0
 org.geckoprojects.emf.model:org.gecko.emf.models.library:1.0.1-SNAPSHOT
-org.eclipse.fennec.codec:org.eclipse.fennec.codec.workspace.library:0.1.0-SNAPSHOT

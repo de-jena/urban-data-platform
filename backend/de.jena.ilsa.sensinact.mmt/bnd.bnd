@@ -20,8 +20,7 @@
 	org.osgi.util.pushstream,\
 	org.osgi.util.function,\
 	org.gecko.osgi.messaging,\
-	org.eclipse.fennec.codec.api,\
-	org.eclipse.fennec.codec
+	org.eclipse.emfcloud.emfjson-jackson,\
 	
 	
 -library: enable-emf

@@ -2,8 +2,7 @@
 	org.apache.commons.io,\
 	jakarta.ws.rs-api,\
 	de.jena.icesensor.model;version=latest,\
-	org.eclipse.fennec.codec.api,\
-	org.eclipse.fennec.codec,\
+	org.eclipse.emfcloud.emfjson-jackson,\
 	org.osgi.service.component,\
 	org.osgi.util.pushstream;version=latest,\
 	org.osgi.util.promise;version=latest,\
