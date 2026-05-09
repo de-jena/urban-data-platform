@@ -11,6 +11,6 @@ Require-Capability: osgi.extender;filter:='(osgi.extender=osgi.configurator)'
 	org.eclipse.fennec.qvt.api,\
 	org.eclipse.sensinact.gateway.core.geo-json,\
 	org.osgi.service.condition,\
-	com.fasterxml.jackson.core.jackson-annotations;version=latest
+	tools.jackson.core.jackson-databind
 	
 -library: enable-emf

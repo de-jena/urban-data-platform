@@ -15,9 +15,8 @@
     order=sortbynameversion 
     
 
--runee: JavaSE-17
+-runee: JavaSE-21
 -runblacklist: \
-	bnd.identity;id='de.jena.icesensor.websocket',\
 	bnd.identity;id='jakarta.servlet-api';version:Version='5.0.0',\
 	bnd.identity;id='slf4j.simple',\
 	bnd.identity;id='net.opengis.wfs2.model'
@@ -56,7 +55,6 @@ slf4j.runpath:  \
 	bnd.identity;id='org.eclipse.sensinact.gateway.northbound.gogo-shell',\
 	bnd.identity;id='org.eclipse.sensinact.gateway.southbound.mqtt.mqtt-client',\
 	bnd.identity;id='org.eclipse.sensinact.gateway.southbound.mqtt.mqtt-device-factory',\
-	bnd.identity;id='com.fasterxml.jackson.datatype.jackson-datatype-jsr310',\
 	bnd.identity;id='org.eclipse.sensinact.gateway.southbound.device-factory.parser-json',\
 	bnd.identity;id='org.eclipse.sensinact.gateway.southbound.http.http-device-factory',\
 	bnd.identity;id='org.eclipse.sensinact.gateway.southbound.history.timescale-provider',\

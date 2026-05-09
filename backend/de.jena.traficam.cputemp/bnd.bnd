@@ -1,0 +1,5 @@
+-buildpath: \
+	org.osgi.service.metatype.annotations,\
+	org.osgi.service.component.annotations,\
+	org.gecko.osgi.messaging
+Private-Package: de.jena.traficam.cputemp

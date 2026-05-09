@@ -5,8 +5,8 @@
 	io.swagger.core.v3.swagger-core.jakarta,\
 	io.swagger.core.v3.swagger-annotations.jakarta,\
 	io.swagger.core.v3.swagger-integration.jakarta,\
-	com.fasterxml.jackson.core.jackson-databind,\
-	com.fasterxml.jackson.core.jackson-core,\
+	tools.jackson.core.jackson-databind,\
+	tools.jackson.core.jackson-core,\
 	org.osgi.service.jakartars,\
 	org.osgi.service.http.whiteboard,\
 	org.osgi.service.component,\

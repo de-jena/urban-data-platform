@@ -48,8 +48,8 @@ import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Reference;
 import org.osgi.util.promise.Promise;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import tools.jackson.databind.JsonNode;
+import tools.jackson.databind.ObjectMapper;
 
 import de.jena.chirpstack.model.chirpstack.ChirpstackPackage;
 import de.jena.udp.kml.readers.api.LocationReader;

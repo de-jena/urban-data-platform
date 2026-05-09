@@ -17,8 +17,7 @@ Require-Capability: \
 	org.eclipse.sensinact.gateway.core.annotation,\
 	org.eclipse.sensinact.gateway.core.models.provider,\
 	org.eclipse.sensinact.gateway.core.geo-json,\
-	com.fasterxml.jackson.core.jackson-databind,\
-	com.fasterxml.jackson.core.jackson-core,\
-	com.fasterxml.jackson.core.jackson-annotations,\
+	tools.jackson.core.jackson-databind,\
+	tools.jackson.core.jackson-core,\
 	org.osgi.framework,\
 	org.osgi.service.component

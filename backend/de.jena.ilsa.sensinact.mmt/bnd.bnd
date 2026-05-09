@@ -5,7 +5,7 @@
 	org.eclipse.fennec.qvt.api,\
 	org.eclipse.sensinact.gateway.core.geo-json,\
 	org.osgi.service.condition,\
-	com.fasterxml.jackson.core.jackson-annotations;version=latest,\
+	tools.jackson.core.jackson-databind,\
 	de.jena.udp.trafficos.trafficlight.model,\
 	org.osgi.service.component,\
 	org.gecko.emf.json,\
@@ -16,12 +16,12 @@
 	org.eclipse.sensinact.gateway.northbound.session.session-impl,\
 	org.eclipse.sensinact.gateway.core.emf-api,\
 	org.eclipse.sensinact.gateway.core.annotation;version=latest,\
-	com.fasterxml.jackson.core.jackson-databind,\
 	org.osgi.util.promise,\
 	org.osgi.util.pushstream,\
 	org.osgi.util.function,\
 	org.gecko.osgi.messaging,\
-	org.eclipse.emfcloud.emfjson-jackson
+	org.eclipse.fennec.codec.api,\
+	org.eclipse.fennec.codec
 	
 	
 -library: enable-emf

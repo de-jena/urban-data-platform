@@ -7,11 +7,12 @@
 	org.osgi.service.component,\
 	org.gecko.emf.json,\
 	org.eclipse.sensinact.gateway.core.models.provider;version='0.0',\
-	com.fasterxml.jackson.core.jackson-databind,\
-	com.fasterxml.jackson.core.jackson-core,\
+	tools.jackson.core.jackson-databind,\
+	tools.jackson.core.jackson-core,\
 	org.osgi.util.function,\
 	de.jena.udp.trafficos.trafficlight.model;version=latest,\
-	org.eclipse.emfcloud.emfjson-jackson,\
+	org.eclipse.fennec.codec.api,\
+	org.eclipse.fennec.codec,\
 	org.eclipse.fennec.qvt.api,\
 	de.jena.udp.trafficos.common.model,\
 	de.jena.ilsa.sensinact.model,\

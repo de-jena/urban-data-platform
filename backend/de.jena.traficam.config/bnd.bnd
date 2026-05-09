@@ -1,8 +1,8 @@
 -buildpath: \
 	org.osgi.service.component.annotations,\
 	org.osgi.service.cm,\
-	com.fasterxml.jackson.core.jackson-core,\
-	com.fasterxml.jackson.core.jackson-databind,\
+	tools.jackson.core.jackson-core,\
+	tools.jackson.core.jackson-databind,\
 	org.gecko.osgi.messaging,\
 	org.gecko.emf.json,\
 	de.jena.traficam.api,\

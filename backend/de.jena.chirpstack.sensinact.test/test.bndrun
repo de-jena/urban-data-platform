@@ -1,4 +1,7 @@
 -library: enableOSGi-Test
+-runrequires.engine: \
+	bnd.identity;id='junit-jupiter-engine',\
+	bnd.identity;id='junit-platform-launcher'
 
 -runproperties: \
 	jakarta.ws.rs.client.ClientBuilder=org.glassfish.jersey.client.JerseyClientBuilder,\
