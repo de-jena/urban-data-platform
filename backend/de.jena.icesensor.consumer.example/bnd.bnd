@@ -14,7 +14,6 @@
 	org.osgi.service.component,\
 	org.gecko.emf.json,\
 	org.eclipse.emf.common;version=latest,\
-	org.eclipse.emfcloud.emfjson-jackson,\
 	org.osgi.framework,\
 	org.eclipse.jetty.websocket.server;version=latest,\
 	org.eclipse.jetty.websocket.servlet;version=latest,\

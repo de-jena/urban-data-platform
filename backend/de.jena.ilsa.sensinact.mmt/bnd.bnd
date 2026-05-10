@@ -19,10 +19,8 @@
 	org.osgi.util.promise,\
 	org.osgi.util.pushstream,\
 	org.osgi.util.function,\
-	org.gecko.osgi.messaging,\
-	org.eclipse.emfcloud.emfjson-jackson,\
-	
-	
+	org.gecko.osgi.messaging
+
 -library: enable-emf
 
 -includeresource: transformations=transformations

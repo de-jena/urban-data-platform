@@ -24,12 +24,15 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.sensinact.core.notification.ResourceDataNotification;
-import org.gecko.emf.json.configuration.ConfigurableJsonResourceFactory;
 import org.gecko.emf.json.constants.EMFJs;
+import org.gecko.emf.osgi.ResourceSetFactory;
+import org.gecko.emf.osgi.constants.EMFNamespaces;
 import org.gecko.osgi.messaging.MessagingService;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
+import org.osgi.service.component.annotations.ReferenceScope;
 import org.osgi.service.typedevent.TypedEventHandler;
 import org.osgi.service.typedevent.propertytypes.EventTopics;
 import org.osgi.util.promise.PromiseFactory;
@@ -49,8 +52,10 @@ public class SensninactToMQTTBridgeNotification implements TypedEventHandler<Res
 	@Reference(target = "(id=full)")
 	MessagingService messaging;
 
+	@Reference(target = "(" + EMFNamespaces.EMF_CONFIGURATOR_NAME + "=EMFJson)", scope = ReferenceScope.PROTOTYPE_REQUIRED)
+	ResourceSetFactory resourceSetFactory;
+
 	private PromiseFactory promiseFactory = new PromiseFactory(Executors.newCachedThreadPool());
-	private ConfigurableJsonResourceFactory factory = new ConfigurableJsonResourceFactory();
 
 	@Override
 	public void notify(String topic, ResourceDataNotification event) {
@@ -91,7 +96,8 @@ public class SensninactToMQTTBridgeNotification implements TypedEventHandler<Res
 		}
 
 		try (ByteArrayOutputStream baos = new ByteArrayOutputStream()) {
-			Resource resource = factory.createResource(URI.createFileURI("temp.json"));
+			ResourceSet resourceSet = resourceSetFactory.createResourceSet();
+			Resource resource = resourceSet.createResource(URI.createFileURI("temp.json"));
 			resource.getContents().add(object);
 			resource.save(baos, Collections.singletonMap(EMFJs.OPTION_SERIALIZE_DEFAULT_VALUE, true));
 			messaging.publish(topic, ByteBuffer.wrap(baos.toByteArray()));
