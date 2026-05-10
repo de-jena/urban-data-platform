@@ -9,7 +9,6 @@
 	org.eclipse.emf.ecore,\
 	org.gecko.emf.json,\
 	org.eclipse.emf.common,\
-	org.eclipse.emfcloud.emfjson-jackson,\
 	org.osgi.service.component;version='1.4',\
 	de.jena.traficam.model,\
 	org.osgi.service.component.annotations,\

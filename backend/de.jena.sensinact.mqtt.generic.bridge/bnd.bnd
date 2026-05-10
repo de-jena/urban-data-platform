@@ -3,11 +3,11 @@
 	org.eclipse.sensinact.gateway.core.api,\
 	org.gecko.osgi.messaging,\
 	org.gecko.emf.json,\
+	org.gecko.emf.osgi.api,\
 	org.osgi.service.component,\
 	org.osgi.service.typedevent,\
 	de.jena.sensinact.mqtt.generic.message,\
 	org.osgi.util.pushstream;version=latest,\
 	org.osgi.util.promise,\
 	org.gecko.util.pushstream,\
-	org.gecko.util.pushstream,\
-	org.eclipse.emfcloud.emfjson-jackson,\
+	org.gecko.util.pushstream

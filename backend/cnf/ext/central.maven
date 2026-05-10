@@ -95,6 +95,7 @@ tools.jackson.jakarta.rs:jackson-jakarta-rs-base:${jackson.version}
 tools.jackson.jakarta.rs:jackson-jakarta-rs-json-provider:${jackson.version}
 tools.jackson.module:jackson-module-jakarta-xmlbind-annotations:${jackson.version}
 
+org.yaml:snakeyaml:2.4
 com.fasterxml.jackson.core:jackson-core:${jackson2.version}
 com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:${jackson2.version}
 com.fasterxml.jackson.datatype:jackson-datatype-jsr310:${jackson2.version}
