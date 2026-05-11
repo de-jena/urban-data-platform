@@ -27,6 +27,7 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 import org.eclipse.sensinact.gateway.geojson.FeatureCollection;
+import org.eclipse.sensinact.gateway.geojson.GeoJsonObject;
 import org.eclipse.sensinact.gateway.geojson.Point;
 import org.eclipse.sensinact.gateway.geojson.Polygon;
 
@@ -103,6 +104,8 @@ public class MessageFactoryImpl extends EFactoryImpl implements MessageFactory {
 		switch (eDataType.getClassifierID()) {
 			case MessagePackage.EINSTANT:
 				return createEInstantFromString(eDataType, initialValue);
+			case MessagePackage.EGEO_JSON_OBJECT:
+				return createEGeoJsonObjectFromString(eDataType, initialValue);
 			case MessagePackage.EPOINT:
 				return createEPointFromString(eDataType, initialValue);
 			case MessagePackage.EFEATURE_COLLECTION:
@@ -124,6 +127,8 @@ public class MessageFactoryImpl extends EFactoryImpl implements MessageFactory {
 		switch (eDataType.getClassifierID()) {
 			case MessagePackage.EINSTANT:
 				return convertEInstantToString(eDataType, instanceValue);
+			case MessagePackage.EGEO_JSON_OBJECT:
+				return convertEGeoJsonObjectToString(eDataType, instanceValue);
 			case MessagePackage.EPOINT:
 				return convertEPointToString(eDataType, instanceValue);
 			case MessagePackage.EFEATURE_COLLECTION:
@@ -309,6 +314,42 @@ public class MessageFactoryImpl extends EFactoryImpl implements MessageFactory {
 	 */
 	public String convertEInstantToString(EDataType eDataType, Object instanceValue) {
 		return convertEInstant((Instant)instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GeoJsonObject createEGeoJsonObject(final String it) {
+		try { return new tools.jackson.databind.ObjectMapper().readValue(it, org.eclipse.sensinact.gateway.geojson.GeoJsonObject.class); } catch (tools.jackson.core.JacksonException e) { throw new IllegalArgumentException(e); }
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GeoJsonObject createEGeoJsonObjectFromString(EDataType eDataType, String initialValue) {
+		return createEGeoJsonObject(initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertEGeoJsonObject(final GeoJsonObject it) {
+		try { return new tools.jackson.databind.ObjectMapper().writeValueAsString(it); } catch (tools.jackson.core.JacksonException e) { throw new IllegalArgumentException(e); }
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertEGeoJsonObjectToString(EDataType eDataType, Object instanceValue) {
+		return convertEGeoJsonObject((GeoJsonObject)instanceValue);
 	}
 
 	/**

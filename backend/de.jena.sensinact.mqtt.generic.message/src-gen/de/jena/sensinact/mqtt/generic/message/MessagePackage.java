@@ -1028,6 +1028,16 @@ public interface MessagePackage extends org.eclipse.emf.ecore.EPackage {
 	int EINSTANT = 15;
 
 	/**
+	 * The meta object id for the '<em>EGeo Json Object</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.sensinact.gateway.geojson.GeoJsonObject
+	 * @see de.jena.sensinact.mqtt.generic.message.impl.MessagePackageImpl#getEGeoJsonObject()
+	 * @generated
+	 */
+	int EGEO_JSON_OBJECT = 16;
+
+	/**
 	 * The meta object id for the '<em>EPoint</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1035,7 +1045,7 @@ public interface MessagePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.sensinact.mqtt.generic.message.impl.MessagePackageImpl#getEPoint()
 	 * @generated
 	 */
-	int EPOINT = 16;
+	int EPOINT = 17;
 
 	/**
 	 * The meta object id for the '<em>EFeature Collection</em>' data type.
@@ -1045,7 +1055,7 @@ public interface MessagePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.sensinact.mqtt.generic.message.impl.MessagePackageImpl#getEFeatureCollection()
 	 * @generated
 	 */
-	int EFEATURE_COLLECTION = 17;
+	int EFEATURE_COLLECTION = 18;
 
 	/**
 	 * The meta object id for the '<em>EPolygon</em>' data type.
@@ -1055,7 +1065,7 @@ public interface MessagePackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.sensinact.mqtt.generic.message.impl.MessagePackageImpl#getEPolygon()
 	 * @generated
 	 */
-	int EPOLYGON = 18;
+	int EPOLYGON = 19;
 
 
 	/**
@@ -1550,6 +1560,17 @@ public interface MessagePackage extends org.eclipse.emf.ecore.EPackage {
 	EDataType getEInstant();
 
 	/**
+	 * Returns the meta object for data type '{@link org.eclipse.sensinact.gateway.geojson.GeoJsonObject <em>EGeo Json Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>EGeo Json Object</em>'.
+	 * @see org.eclipse.sensinact.gateway.geojson.GeoJsonObject
+	 * @model instanceClass="org.eclipse.sensinact.gateway.geojson.GeoJsonObject"
+	 * @generated
+	 */
+	EDataType getEGeoJsonObject();
+
+	/**
 	 * Returns the meta object for data type '{@link org.eclipse.sensinact.gateway.geojson.Point <em>EPoint</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2004,6 +2025,16 @@ public interface MessagePackage extends org.eclipse.emf.ecore.EPackage {
 		 * @generated
 		 */
 		EDataType EINSTANT = eINSTANCE.getEInstant();
+
+		/**
+		 * The meta object literal for the '<em>EGeo Json Object</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.sensinact.gateway.geojson.GeoJsonObject
+		 * @see de.jena.sensinact.mqtt.generic.message.impl.MessagePackageImpl#getEGeoJsonObject()
+		 * @generated
+		 */
+		EDataType EGEO_JSON_OBJECT = eINSTANCE.getEGeoJsonObject();
 
 		/**
 		 * The meta object literal for the '<em>EPoint</em>' data type.

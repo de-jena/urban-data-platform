@@ -42,10 +42,9 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.sensinact.gateway.geojson.FeatureCollection;
+import org.eclipse.sensinact.gateway.geojson.GeoJsonObject;
 import org.eclipse.sensinact.gateway.geojson.Point;
 import org.eclipse.sensinact.gateway.geojson.Polygon;
-
-import org.eclipse.sensinact.model.core.provider.ProviderPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -171,6 +170,13 @@ public class MessagePackageImpl extends EPackageImpl implements MessagePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EDataType eGeoJsonObjectEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EDataType ePointEDataType = null;
 
 	/**
@@ -232,9 +238,6 @@ public class MessagePackageImpl extends EPackageImpl implements MessagePackage {
 		MessagePackageImpl theMessagePackage = registeredMessagePackage instanceof MessagePackageImpl ? (MessagePackageImpl)registeredMessagePackage : new MessagePackageImpl();
 
 		isInited = true;
-
-		// Initialize simple dependencies
-		ProviderPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theMessagePackage.createPackageContents();
@@ -669,6 +672,15 @@ public class MessagePackageImpl extends EPackageImpl implements MessagePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EDataType getEGeoJsonObject() {
+		return eGeoJsonObjectEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EDataType getEPoint() {
 		return ePointEDataType;
 	}
@@ -781,6 +793,7 @@ public class MessagePackageImpl extends EPackageImpl implements MessagePackage {
 
 		// Create data types
 		eInstantEDataType = createEDataType(EINSTANT);
+		eGeoJsonObjectEDataType = createEDataType(EGEO_JSON_OBJECT);
 		ePointEDataType = createEDataType(EPOINT);
 		eFeatureCollectionEDataType = createEDataType(EFEATURE_COLLECTION);
 		ePolygonEDataType = createEDataType(EPOLYGON);
@@ -808,9 +821,6 @@ public class MessagePackageImpl extends EPackageImpl implements MessagePackage {
 		setName(eNAME);
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
-
-		// Obtain other dependent packages
-		ProviderPackage theProviderPackage = (ProviderPackage)EPackage.Registry.INSTANCE.getEPackage(ProviderPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -878,8 +888,8 @@ public class MessagePackageImpl extends EPackageImpl implements MessagePackage {
 		initEAttribute(getBigDecimalValueUpdate_NewValue(), ecorePackage.getEBigDecimal(), "newValue", null, 0, 1, BigDecimalValueUpdate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(geoJsonObjectValueUpdateEClass, GeoJsonObjectValueUpdate.class, "GeoJsonObjectValueUpdate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGeoJsonObjectValueUpdate_OldValue(), theProviderPackage.getEGeoJsonObject(), "oldValue", null, 0, 1, GeoJsonObjectValueUpdate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGeoJsonObjectValueUpdate_NewValue(), theProviderPackage.getEGeoJsonObject(), "newValue", null, 0, 1, GeoJsonObjectValueUpdate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGeoJsonObjectValueUpdate_OldValue(), this.getEGeoJsonObject(), "oldValue", null, 0, 1, GeoJsonObjectValueUpdate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGeoJsonObjectValueUpdate_NewValue(), this.getEGeoJsonObject(), "newValue", null, 0, 1, GeoJsonObjectValueUpdate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(pointValueUpdateEClass, PointValueUpdate.class, "PointValueUpdate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPointValueUpdate_OldValue(), this.getEPoint(), "oldValue", null, 0, 1, PointValueUpdate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -895,6 +905,7 @@ public class MessagePackageImpl extends EPackageImpl implements MessagePackage {
 
 		// Initialize data types
 		initEDataType(eInstantEDataType, Instant.class, "EInstant", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(eGeoJsonObjectEDataType, GeoJsonObject.class, "EGeoJsonObject", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(ePointEDataType, Point.class, "EPoint", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(eFeatureCollectionEDataType, FeatureCollection.class, "EFeatureCollection", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(ePolygonEDataType, Polygon.class, "EPolygon", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

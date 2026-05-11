@@ -19,7 +19,7 @@
 -buildpath: \
 	org.osgi.service.condition,\
 	org.eclipse.sensinact.gateway.core.geo-json,\
-	org.eclipse.sensinact.gateway.core.models.provider;version='0.0',\
+	org.eclipse.sensinact.gateway.core.models.provider,\
 	tools.jackson.core.jackson-databind,\
 	tools.jackson.core.jackson-core
 

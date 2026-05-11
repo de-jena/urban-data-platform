@@ -57,9 +57,15 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="oldValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="newValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="EGeoJsonObject" instanceClassName="org.eclipse.sensinact.gateway.geojson.GeoJsonObject">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="convert" value="try { return new tools.jackson.databind.ObjectMapper().writeValueAsString(it); } catch (tools.jackson.core.JacksonException e) { throw new IllegalArgumentException(e); }"/>
+      <details key="create" value="try { return new tools.jackson.databind.ObjectMapper().readValue(it, org.eclipse.sensinact.gateway.geojson.GeoJsonObject.class); } catch (tools.jackson.core.JacksonException e) { throw new IllegalArgumentException(e); }"/>
+    </eAnnotations>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GeoJsonObjectValueUpdate" eSuperTypes="#//UpdateMessage">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="oldValue" eType="ecore:EDataType ../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//EGeoJsonObject"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="newValue" eType="ecore:EDataType ../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//EGeoJsonObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="oldValue" eType="#//EGeoJsonObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="newValue" eType="#//EGeoJsonObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="EPoint" instanceClassName="org.eclipse.sensinact.gateway.geojson.Point">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
