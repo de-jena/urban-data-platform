@@ -43,7 +43,7 @@ public interface GeoJsonObjectValueUpdate extends UpdateMessage {
 	 * @return the value of the '<em>Old Value</em>' attribute.
 	 * @see #setOldValue(GeoJsonObject)
 	 * @see de.jena.sensinact.mqtt.generic.message.MessagePackage#getGeoJsonObjectValueUpdate_OldValue()
-	 * @model dataType="org.eclipse.sensinact.model.core.provider.EGeoJsonObject"
+	 * @model dataType="de.jena.sensinact.mqtt.generic.message.EGeoJsonObject"
 	 * @generated
 	 */
 	GeoJsonObject getOldValue();
@@ -65,7 +65,7 @@ public interface GeoJsonObjectValueUpdate extends UpdateMessage {
 	 * @return the value of the '<em>New Value</em>' attribute.
 	 * @see #setNewValue(GeoJsonObject)
 	 * @see de.jena.sensinact.mqtt.generic.message.MessagePackage#getGeoJsonObjectValueUpdate_NewValue()
-	 * @model dataType="org.eclipse.sensinact.model.core.provider.EGeoJsonObject"
+	 * @model dataType="de.jena.sensinact.mqtt.generic.message.EGeoJsonObject"
 	 * @generated
 	 */
 	GeoJsonObject getNewValue();

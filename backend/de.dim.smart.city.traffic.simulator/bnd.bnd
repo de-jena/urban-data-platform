@@ -1,3 +1,5 @@
+-dependson: de.dim.smart.city.mqtt
+
 -buildpath: \
 	org.osgi.annotation.versioning,\
 	org.osgi.annotation.bundle,\

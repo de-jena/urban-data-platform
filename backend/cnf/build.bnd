@@ -64,12 +64,13 @@ bnd.version: 7.2.1
 	
 github-project: de-jena/broker
 base-version: 1.0.0
-broker-base-version: ${base-version}.SNAPSHOT
+broker-base-version: ${base-version}-SNAPSHOT
 Bundle-Version: ${broker-base-version}
 
 -removeheaders: Bnd-LastModified, Tool, Created-By, Private-Package
 -snapshot: ${tstamp}-SNAPSHOT
--pom: version=${versionmask;===s;${@version}}
+pom.version: ${versionmask;===s;${@version}}
+-pom: version=${pom.version}
 
 -digest: sha256
 	
@@ -89,4 +90,3 @@ Bundle-Version: ${broker-base-version}
   dashboard;member=${filter;${p};.*\.dashboard\.*},\
   weather;member=${filter;${p};.*\.weather\.*},\
   reference_area;member=${filter;${p};.*\.reference\.area\.*}
-  
