@@ -168,3 +168,9 @@ net.time4j:time4j-base:5.9.4
 #needed for rules.config
 org.apache.commons:commons-jexl3:3.5.0
 
+#mockito (required by geckoOSGi-Test testpath on Jenkins where OSGi-Test Dependencies repo URL is blocked)
+org.mockito:mockito-core:4.11.0
+org.mockito:mockito-junit-jupiter:4.11.0
+net.bytebuddy:byte-buddy:1.14.18
+org.objenesis:objenesis:3.3
+
