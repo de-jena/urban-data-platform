@@ -71,7 +71,6 @@
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
 	bnd.identity;id='org.eclipse.fennec.weather.sensinact',\
-	bnd.identity;id='org.eclipse.fennec.weather.sensinact.mmt',\
 	bnd.identity;id='org.gecko.weather.dwd.forecast',\
 	bnd.identity;id='org.gecko.time4j'
 -runfw: org.apache.felix.framework;version='[7.0.5,7.0.5]'
