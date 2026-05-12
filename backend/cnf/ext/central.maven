@@ -69,13 +69,6 @@ biz.aQute:biz.aQute.gogo.commands.provider:1.10.0
 org.owasp.encoder:encoder:1.2.3
 
 
-# Swagger OpenAPI
-io.swagger.core.v3:swagger-annotations-jakarta:2.2.22
-io.swagger.core.v3:swagger-jaxrs2-jakarta:2.2.22
-io.swagger.core.v3:swagger-models-jakarta:2.2.22
-io.swagger.core.v3:swagger-integration-jakarta:2.2.22
-io.swagger.core.v3:swagger-core-jakarta:2.2.22
-io.github.classgraph:classgraph:4.8.165
 jakarta.validation:jakarta.validation-api:3.1.0
 jakarta.xml.bind:jakarta.xml.bind-api:3.0.1
 commons-io:commons-io:2.6
