@@ -49,19 +49,21 @@ public class WeatherUnitsConversionRule implements RuleDefinition {
 		if (providerSnapshots.size() != 1) {
 			LOGGER.severe("More than one provider found for WeatherUnitsConversionRule. This should not happen");
 		}
-		ProviderSnapshot provider = providerSnapshots.get(0);
-		BatchUpdate updateBatch = resourceUpdater.updateBatch();
-		for (ServiceSnapshot service : provider.getServices()) {
-			for (ResourceSnapshot resource : service.getResources()) {
-				if (resource.getName().startsWith(WeatherRuleCriterium.TEMPERATURE_PREFIX)
-						&& resource.getValue() != null) {
-					float convertedValue = convertTemperatureValue(resource.getValue().getValue());
-					updateBatch.updateResource(provider.getName().concat(UPDATED_PROVIDER_SUFFIX), service.getName(),
-							resource.getName(), convertedValue, Instant.now());
+		if (providerSnapshots.size() >= 1) {
+			ProviderSnapshot provider = providerSnapshots.get(0);
+			BatchUpdate updateBatch = resourceUpdater.updateBatch();
+			for (ServiceSnapshot service : provider.getServices()) {
+				for (ResourceSnapshot resource : service.getResources()) {
+					if (resource.getName().startsWith(WeatherRuleCriterium.TEMPERATURE_PREFIX)
+							&& resource.getValue() != null) {
+						float convertedValue = convertTemperatureValue(resource.getValue().getValue());
+						updateBatch.updateResource(provider.getName().concat(UPDATED_PROVIDER_SUFFIX),
+								service.getName(), resource.getName(), convertedValue, Instant.now());
+					}
 				}
 			}
+			updateBatch.completeBatch();
 		}
-		updateBatch.completeBatch();
 	}
 
 	/**
