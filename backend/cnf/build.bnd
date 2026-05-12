@@ -5,6 +5,12 @@ Bundle-SCM: url=https://github.com/${github-project}, \
 
 
 Bundle-Developers: \
+    ggrune; \
+        email="g.grune@datainmotion.com "; \
+        name="Guido Grune"; \
+        organization="Data In Motion"; \
+        organizationUrl="https://www.datainmotion.de"; \
+        roles="architect,developer", \
     sbischof; \
         email="stefan.bischof@jena.de"; \
         name="Stefan Bischof"; \
