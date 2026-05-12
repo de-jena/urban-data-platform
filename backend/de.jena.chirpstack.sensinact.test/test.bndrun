@@ -13,7 +13,7 @@
 
 -runfw: org.apache.felix.framework
 
--runee: JavaSE-21
+-runee: JavaSE-25
 
 -runblacklist: \
 	bnd.identity;id='org.gecko.emf.json',\

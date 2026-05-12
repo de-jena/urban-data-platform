@@ -54,4 +54,4 @@
 	bnd.identity;id='org.apache.felix.configadmin',\
 	bnd.identity;id='org.glassfish.jersey.core.jersey-client'
 -runfw: org.apache.felix.framework;version='[7.0.5,7.0.5]'
--runee: JavaSE-21
+-runee: JavaSE-25

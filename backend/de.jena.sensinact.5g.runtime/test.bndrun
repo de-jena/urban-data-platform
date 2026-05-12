@@ -88,4 +88,4 @@
 
 -runrequires: \
 	bnd.identity;id='de.dim.smart.city.traffic.simulator'
--runee: JavaSE-21
+-runee: JavaSE-25

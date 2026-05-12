@@ -74,6 +74,6 @@
 	bnd.identity;id='org.gecko.weather.dwd.forecast',\
 	bnd.identity;id='org.gecko.time4j'
 -runfw: org.apache.felix.framework;version='[7.0.5,7.0.5]'
--runee: JavaSE-21
+-runee: JavaSE-25
 -runvm: --enable-native-access=ALL-UNNAMED
 -runproperties: org.apache.lucene.store.MMapDirectory.enableMemorySegments=false

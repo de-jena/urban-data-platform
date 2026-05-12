@@ -1,4 +1,4 @@
-FROM eclipse-temurin:21-jre-alpine
+FROM eclipse-temurin:25-jre-alpine
 
 ENV USERNAME=sensinact \
 	HOME_DIR=/sensinact \

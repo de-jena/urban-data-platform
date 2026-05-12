@@ -41,4 +41,4 @@
 	bnd.identity;id='de.jena.udp.reference.area.component',\
 	bnd.identity;id='org.gecko.emf.json'
 -runfw: org.apache.felix.framework;version='[7.0.5,7.0.5]'
--runee: JavaSE-21
+-runee: JavaSE-25

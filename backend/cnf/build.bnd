@@ -39,9 +39,13 @@ Bundle-Developers: \
     	
 java: java
 javac: javac
-javac.source: 21
-javac.target: 21
+javac.source: 25
+javac.target: 25
 javac.debug:  on
+
+target-dir = ${if;${driver;tycho-maven-build};target;generated${if;${driver;eclipse};;/${driver}}}
+bin = ${target-dir}/classes
+testbin = ${target-dir}/test-classes
 
 -library:\
 	geckoEMF,\

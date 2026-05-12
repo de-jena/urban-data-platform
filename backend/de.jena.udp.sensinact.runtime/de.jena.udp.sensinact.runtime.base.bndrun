@@ -15,7 +15,7 @@
     order=sortbynameversion 
     
 
--runee: JavaSE-21
+-runee: JavaSE-25
 -runblacklist: \
 	bnd.identity;id='jakarta.servlet-api';version:Version='5.0.0',\
 	bnd.identity;id='slf4j.simple',\

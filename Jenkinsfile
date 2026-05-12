@@ -7,7 +7,7 @@ pipeline  {
   }
 
 	tools {
-		jdk 'OpenJDK21'
+		jdk 'OpenJDK25'
 		nodejs 'NodeJS22'
 	}
 

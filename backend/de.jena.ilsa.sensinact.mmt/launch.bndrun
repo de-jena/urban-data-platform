@@ -46,4 +46,4 @@
 	bnd.identity;id='de.jena.ilsa.sensinact.mmt',\
 	bnd.identity;id='de.jena.sensinact.udp.runtime.config.local'
 -runfw: org.apache.felix.framework;version='[7.0.5,7.0.5]'
--runee: JavaSE-21
+-runee: JavaSE-25
