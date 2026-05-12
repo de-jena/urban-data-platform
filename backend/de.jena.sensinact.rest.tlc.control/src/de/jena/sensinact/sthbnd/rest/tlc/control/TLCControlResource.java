@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2012 - 2024 Data In Motion and others.
- * All rights reserved. 
+ * All rights reserved.
  *
  * This program and the accompanying materials are made
  * available under the terms of the Eclipse Public License 2.0
@@ -34,11 +34,6 @@ import de.jena.sensinact.rest.tlc.control.model.control.PhasesListReponse;
 import de.jena.sensinact.rest.tlc.control.model.control.Tlc;
 import de.jena.sensinact.rest.tlc.control.model.control.TlcControlFactory;
 import de.jena.sensinact.tlc.control.service.api.TlcControl;
-import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.media.Content;
-import io.swagger.v3.oas.annotations.media.Schema;
-import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import io.swagger.v3.oas.annotations.servers.Server;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.DELETE;
 import jakarta.ws.rs.GET;
@@ -56,7 +51,7 @@ import jakarta.ws.rs.core.Response.Status;
  * <p>
  * A control endpoint for TLCs
  * </p>
- * 
+ *
  * @since 1.0
  * @author Juergen Albert
  * @since 15 Sep 2022
@@ -68,24 +63,17 @@ import jakarta.ws.rs.core.Response.Status;
 @Produces(MediaType.APPLICATION_JSON)
 @RequireEMFMessageBodyReaderWriter
 @RequireEMFJson
-@Server(url = "http://localhost:8080/sensinact/rest/")
 @JakartarsApplicationSelect("(applicationId=tlc)")
 public class TLCControlResource {
 
 	@Reference
 	private TlcControl tlcControl;
-	
+
 	@Reference
 	private TlcControlFactory factory;
-	
+
 	@GET
 	@Path("/")
-	@Operation(description = "Returns a Response containing the Ids of known TLCs", 
-		
-		responses = {
-				@ApiResponse(responseCode = "204", description = "No TLCs available", content = {@Content(schema = @Schema(oneOf = IdsListReponse.class))}),
-				@ApiResponse(responseCode = "200", description = "A IdsList Response")
-		})
 	@EMFJSONConfig(serializeDefaultValues = true)
 	public Response getTlcIds() {
 		List<String> ids = tlcControl.getTlcIds();
@@ -99,11 +87,6 @@ public class TLCControlResource {
 
 	@GET
 	@Path("/{tlcId}")
-	@Operation(description = "Returns a Response containing the Ids of known TLCs", 
-	responses = {
-			@ApiResponse(responseCode = "204", description = "No TLC with this ID found", content = {@Content(schema = @Schema(oneOf = Tlc.class))}),
-			@ApiResponse(responseCode = "200", description = "The desired TLC")
-	})
 	@EMFJSONConfig(serializeDefaultValues = true)
 	public Response getTlcById(@PathParam("tlcId") String tlcId) {
 		Optional<Tlc> tlc = tlcControl.getTlc(tlcId);
@@ -112,11 +95,6 @@ public class TLCControlResource {
 
 	@POST
 	@Path("/{tlcId}/control/alive")
-	@Operation(description = "Post the alive ping for this TLC. Will return after the ping was forwarded.",
-	responses = {
-			@ApiResponse(responseCode = "404", description = "No TLC with this ID found"),
-			@ApiResponse(responseCode = "200", description = "Ping sucessfully send")
-	})
 	@EMFJSONConfig(serializeDefaultValues = true)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response setTlcAliveById(@PathParam("tlcId") String tlcId) {
@@ -125,12 +103,6 @@ public class TLCControlResource {
 
 	@GET
 	@Path("/{tlcId}/control/phase")
-	@Operation(description = "Returns a Response containing the Phases", 
-	responses = {
-			@ApiResponse(responseCode = "404", description = "No TLC with the given ID exists"),
-			@ApiResponse(responseCode = "204", description = "No Phases for this TLC available"),
-			@ApiResponse(responseCode = "200", description = "A Response with the availalble Phases", content = {@Content(schema = @Schema(oneOf = PhasesListReponse.class))})
-	})
 	@EMFJSONConfig(serializeDefaultValues = true)
 	public Response getAllTlcPhases(@PathParam("tlcId") String tlcId) {
 		if(tlcControl.tlcExists(tlcId)) {
@@ -147,12 +119,6 @@ public class TLCControlResource {
 
 	@GET
 	@Path("/{tlcId}/control/phase/{phaseId}")
-	@Operation(description = "Returns the Phase with the specified ID", 
-	responses = {
-			@ApiResponse(responseCode = "404", description = "No TLC with the given ID exists"),
-			@ApiResponse(responseCode = "204", description = "No Phase with the fiven ID for this TLC available"),
-			@ApiResponse(responseCode = "200", description = "The requested Phase", content = {@Content(schema = @Schema(oneOf = Phase.class))})
-	})
 	@EMFJSONConfig(serializeDefaultValues = true)
 	public Response getTlcPhase(@PathParam("tlcId") String tlcId, @PathParam("phaseId") String phaseId) {
 		if(tlcControl.tlcExists(tlcId)) {
@@ -165,14 +131,9 @@ public class TLCControlResource {
 	@PUT
 	@POST
 	@Path("/{tlcId}/control/phase")
-	@Operation(description = "Adds or replaces the Phase for a TLC", 
-	responses = {
-			@ApiResponse(responseCode = "404", description = "No TLC with the given ID exists"),
-			@ApiResponse(responseCode = "200", description = "Phase saved sucessfully")
-	})
 	@EMFJSONConfig(serializeDefaultValues = true)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Response addTlcPhase(@PathParam("tlcId") String tlcId,@EMFJSONConfig(typeUSE = USE.CLASS) Phase phase) {
+	public Response addTlcPhase(@PathParam("tlcId") String tlcId, @EMFJSONConfig(typeUSE = USE.CLASS) Phase phase) {
 		if(tlcControl.tlcExists(tlcId)) {
 			tlcControl.savePhase(tlcId, phase);
 			return Response.ok().build();
@@ -182,12 +143,6 @@ public class TLCControlResource {
 
 	@DELETE
 	@Path("/{tlcId}/control/phase/{phaseId}")
-	@Operation(description = "Deltes a Phase for a TLC", 
-	responses = {
-			@ApiResponse(responseCode = "404", description = "No TLC with the given ID exists"),
-			@ApiResponse(responseCode = "204", description = "Phase with the given ID does not exist"),
-			@ApiResponse(responseCode = "200", description = "Phase deleted sucessfully")
-	})
 	@EMFJSONConfig(serializeDefaultValues = true)
 	public Response removeTlcPhase(@PathParam("tlcId") String tlcId, @PathParam("phaseId") String phaseId) {
 		if(tlcControl.tlcExists(tlcId)) {
@@ -200,19 +155,10 @@ public class TLCControlResource {
 		throw new WebApplicationException("TLC does not exist", Status.NOT_FOUND);
 	}
 
-	/**
-	 * @param tlcId
-	 * @return the currently set phase. If no control is set yet, a 204 will be returned.
-	 */
 	@GET
 	@Path("/{tlcId}/control")
-	@Operation(description = "Gets the current control phase", 
-	responses = {
-			@ApiResponse(responseCode = "404", description = "No TLC with the given ID exists"),
-			@ApiResponse(responseCode = "200", description = "The current control phase", content = {@Content(schema = @Schema(oneOf = Control.class))})
-	})
 	@EMFJSONConfig(serializeDefaultValues = true)
-	public Optional<Control> getTlcPhase(@PathParam("tlcId") String tlcId) {
+	public Optional<Control> getControlPhase(@PathParam("tlcId") String tlcId) {
 		if(tlcControl.tlcExists(tlcId)) {
 			return tlcControl.getControlPhase(tlcId);
 		}
@@ -221,11 +167,6 @@ public class TLCControlResource {
 
 	@POST
 	@Path("/{tlcId}/control")
-	@Operation(description = "Sets the current control phase", 
-	responses = {
-			@ApiResponse(responseCode = "404", description = "No TLC with the given ID exists"),
-			@ApiResponse(responseCode = "200", description = "Control phase set sucesfully")
-	})
 	@EMFJSONConfig(serializeDefaultValues = true)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response setTlcPhase(@PathParam("tlcId") String tlcId, Control control) {
