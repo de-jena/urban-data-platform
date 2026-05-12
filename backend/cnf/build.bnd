@@ -84,6 +84,7 @@ pom.version: ${versionmask;===s;${@version}}
   ilsa;member=${filter;${p};.*\.ilsa\.*},\
   ttn;member=${filter;${p};.*\.ttn\.*},\
   chirpstack;member=${filter;${p};.*\.chirpstack\.*},\
+  icesensor;member=${filter;${p};.*\.icesensor\.*},\
   trafficos;member=${filter;${p};.*\.trafficos\.*},\
   ibis;member=${filter;${p};.*\.ibis\.*},\
   glt;member=${filter;${p};.*\.glt\.*},\
