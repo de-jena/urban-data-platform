@@ -68,7 +68,7 @@ public class ChirpstackDeviceFactoryHandler implements IMqttMessageListener {
 	@Reference(target = "(component.name=Teros21LocationReader)")
 	LocationReader teros21LocationReader;
 	
-	@Reference(target = "(" + EMFNamespaces.EMF_CONFIGURATOR_NAME + "=CodecJson)")
+	@Reference(target = "(" + EMFNamespaces.EMF_CONFIGURATOR_NAME + "=EMFJson)")
     private ComponentServiceObjects<ResourceSet> serviceObjects;
 
     @Reference
@@ -76,10 +76,10 @@ public class ChirpstackDeviceFactoryHandler implements IMqttMessageListener {
 
     private ServiceRegistration<IMqttMessageListener> svcReg;
     private ObjectMapper objectMapper = new ObjectMapper();
-    
+
     @Reference
     private ChirpstackPackage chirpstackPackage;
-    
+
     private EClass providerEClass = ProviderPackage.eINSTANCE.getProvider();
 //    private EClass serviceEClass = ProviderPackage.eINSTANCE.getService();
 
@@ -130,10 +130,10 @@ public class ChirpstackDeviceFactoryHandler implements IMqttMessageListener {
             
             // Extract device information
             JsonNode deviceInfo = payload.path("deviceInfo");
-            String devEui = deviceInfo.path("devEui").asText();
-            String deviceProfileName = deviceInfo.path("deviceProfileName").asText();
-            String deviceProfileId = deviceInfo.path("deviceProfileId").asText();
-            String deviceName = deviceInfo.path("deviceName").asText();
+            String devEui = deviceInfo.path("devEui").asString();
+            String deviceProfileName = deviceInfo.path("deviceProfileName").asString();
+            String deviceProfileId = deviceInfo.path("deviceProfileId").asString();
+            String deviceName = deviceInfo.path("deviceName").asString();
             
             if (devEui.isEmpty()) {
                 logger.log(Level.WARNING, "No devEui found in ChirpStack message, skipping");
@@ -298,7 +298,7 @@ public class ChirpstackDeviceFactoryHandler implements IMqttMessageListener {
 
             // Convert based on target type
 			return switch (typeName) {
-			case "java.lang.String" -> valueNode.asText();
+			case "java.lang.String" -> valueNode.asString();
 			case "double", "java.lang.Double" -> valueNode.asDouble();
 			case "float", "java.lang.Float" -> (float) valueNode.asDouble();
 			case "int", "java.lang.Integer" -> valueNode.asInt();
@@ -312,7 +312,7 @@ public class ChirpstackDeviceFactoryHandler implements IMqttMessageListener {
             
         } catch (Exception e) {
             logger.log(Level.WARNING, "Error converting value {0} to type {1}: {2}", 
-                valueNode.asText(), dataType.getName(), e.getMessage());
+                valueNode.asString(), dataType.getName(), e.getMessage());
             return null;
         }
     }
