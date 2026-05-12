@@ -11,7 +11,7 @@
 
 -runstartlevel: \
 	order=sortbynameversion 
--runee: JavaSE-21
+-runee: JavaSE-25
 -runvm: --enable-native-access=ALL-UNNAMED
 -runproperties: org.apache.lucene.store.MMapDirectory.enableMemorySegments=false
 -runblacklist: \

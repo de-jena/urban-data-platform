@@ -19,7 +19,7 @@
 
 -runfw: org.apache.felix.framework
 
--runee: JavaSE-21
+-runee: JavaSE-25
 
 -runbundles: \
 	de.jena.glt.rest.model;version=snapshot,\

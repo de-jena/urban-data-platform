@@ -1,7 +1,7 @@
 -resolve.effective: active
 
 -runfw: org.apache.felix.framework;version=latest
--runee: JavaSE-21
+-runee: JavaSE-25
 -runrequires: \
 	bnd.identity;id='de.jena.sensinact.sthbnd.rest.tlc.control',\
 	bnd.identity;id='biz.aQute.gogo.commands.provider',\

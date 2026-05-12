@@ -25,7 +25,7 @@
 	de.dim.trafficos.publictransport.component.tests;version=snapshot
 
 -runfw: org.apache.felix.framework;version='[7.0.5,7.0.5]'
--runee: JavaSE-21
+-runee: JavaSE-25
 -runvm: --enable-native-access=ALL-UNNAMED
 -runproperties: org.apache.lucene.store.MMapDirectory.enableMemorySegments=false
 	

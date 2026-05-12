@@ -56,5 +56,5 @@
 	bnd.identity;id='org.eclipse.emfcloud.emfjson-jackson',\
 	bnd.identity;id='de.jena.sensinact',\
 	bnd.identity;id='de.jena.icesensor.websocket'
--runee: JavaSE-21
+-runee: JavaSE-25
 -runblacklist: bnd.identity;id='slf4j.log4j12'

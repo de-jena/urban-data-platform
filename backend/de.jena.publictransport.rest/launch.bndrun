@@ -136,6 +136,6 @@
 	bnd.identity;id='de.dim.trafficos.gtfs.component',\
 	bnd.identity;id='org.apache.felix.gogo.shell'
 -runfw: org.apache.felix.framework;version='[7.0.5,7.0.5]'
--runee: JavaSE-21
+-runee: JavaSE-25
 -runvm: --enable-native-access=ALL-UNNAMED
 -runproperties: org.apache.lucene.store.MMapDirectory.enableMemorySegments=false

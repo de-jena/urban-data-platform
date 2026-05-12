@@ -58,7 +58,7 @@
 	bnd.identity;id='org.apache.felix.gogo.runtime',\
 	bnd.identity;id='org.apache.felix.scr',\
 	bnd.identity;id='de.jena.icesensor.websocket'
--runee: JavaSE-21
+-runee: JavaSE-25
 
 -runblacklist: osgi.identity;filter:='(osgi.identity=org.osgi.service.*)'
 

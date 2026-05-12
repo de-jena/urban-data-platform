@@ -7,7 +7,7 @@
 	bnd.identity;id='org.apache.felix.configadmin',\
 	bnd.identity;id='org.eclipse.jetty.webapp'
 -runfw: org.apache.felix.framework;version='[7.0.5,7.0.5]'
--runee: JavaSE-21
+-runee: JavaSE-25
 -runbundles: \
 	tools.jackson.core.jackson-core;version='[3.1.3,3.1.4)',\
 	tools.jackson.core.jackson-databind;version='[3.1.3,3.1.4)',\
