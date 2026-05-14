@@ -11,6 +11,6 @@
 	org.osgi.util.promise,\
 	org.eclipse.sensinact.gateway.core.annotation
 
--library: enable-emf
+-library: enableEMF
 
 -privatepackage: de.jena.sensinact.publictransport

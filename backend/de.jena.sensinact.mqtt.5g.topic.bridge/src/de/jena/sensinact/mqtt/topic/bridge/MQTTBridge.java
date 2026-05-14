@@ -34,7 +34,7 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.gecko.adapter.mqtt.MQTTContext;
 import org.gecko.adapter.mqtt.MQTTContextBuilder;
-import org.gecko.emf.osgi.constants.EMFNamespaces;
+import org.eclipse.fennec.emf.osgi.constants.EMFNamespaces;
 import org.gecko.osgi.messaging.Message;
 import org.gecko.osgi.messaging.MessagingContext;
 import org.gecko.osgi.messaging.MessagingService;

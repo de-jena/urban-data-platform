@@ -37,7 +37,7 @@ import org.eclipse.sensinact.model.core.provider.Admin;
 import org.eclipse.sensinact.model.core.provider.Provider;
 import org.eclipse.sensinact.model.core.provider.ProviderFactory;
 import org.eclipse.sensinact.model.core.provider.ProviderPackage;
-import org.gecko.emf.osgi.constants.EMFNamespaces;
+import org.eclipse.fennec.emf.osgi.constants.EMFNamespaces;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceRegistration;
 import org.osgi.service.component.ComponentServiceObjects;

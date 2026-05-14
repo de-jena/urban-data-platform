@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EReference;
 
-import org.gecko.emf.osgi.annotation.provide.EPackage;
+import org.eclipse.fennec.emf.osgi.annotation.provide.EPackage;
 
 import org.osgi.annotation.versioning.ProviderType;
 
@@ -41,7 +41,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = MessagePackage.eNS_URI, genModel = "/model/generic_message.genmodel", genModelSourceLocations = {"model/generic_message.genmodel","de.jena.sensinact.mqtt.generic.message/model/generic_message.genmodel"}, ecore="/model/generic_message.ecore", ecoreSourceLocations="/model/generic_message.ecore")
+@EPackage(uri = MessagePackage.eNS_URI, genModel = "/model/generic_message.genmodel", genModelSourceLocations = {"model/generic_message.genmodel","de.jena.sensinact.mqtt.generic.message/model/generic_message.genmodel"}, ecore = "/model/generic_message.ecore", ecoreSourceLocations = "/model/generic_message.ecore")
 public interface MessagePackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

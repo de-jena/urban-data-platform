@@ -1,4 +1,4 @@
--library: enable-emf
+-library: enableEMF
 -buildpath: \
 	de.jena.sensinact.tlc.control.service.api,\
 	de.jena.sensinact.rest.tlc.control.model,\

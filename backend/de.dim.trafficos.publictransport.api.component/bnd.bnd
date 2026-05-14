@@ -1,4 +1,4 @@
--library: enable-emf
+-library: enableEMF
 Bundle-Version: 1.0.0.SNAPSHOT
 
 -buildpath: \

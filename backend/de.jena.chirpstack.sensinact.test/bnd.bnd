@@ -13,8 +13,7 @@ Test-Cases: ${classes;HIERARCHY_INDIRECTLY_ANNOTATED;org.junit.platform.commons.
 	tools.jackson.core.jackson-core,\
 	de.jena.chirpstack.model,\
 	org.eclipse.emf.ecore,\
-	org.eclipse.emf.common,\
-	org.gecko.emf.osgi.api
+	org.eclipse.emf.common
 	
 	
 Private-Package: de.jena.chirpstack.sensinact.test

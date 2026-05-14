@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EReference;
 
-import org.gecko.emf.osgi.annotation.provide.EPackage;
+import org.eclipse.fennec.emf.osgi.annotation.provide.EPackage;
 
 import org.osgi.annotation.versioning.ProviderType;
 
@@ -38,7 +38,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = TlcControlPackage.eNS_URI, genModel = "/model/tlc-control-api.genmodel", genModelSourceLocations = {"model/tlc-control-api.genmodel","de.jena.sensinact.rest.tlc.control.model/model/tlc-control-api.genmodel"}, ecore="/model/tlc-control-api.ecore", ecoreSourceLocations="/model/tlc-control-api.ecore")
+@EPackage(uri = TlcControlPackage.eNS_URI, genModel = "/model/tlc-control-api.genmodel", genModelSourceLocations = {"model/tlc-control-api.genmodel","de.jena.sensinact.rest.tlc.control.model/model/tlc-control-api.genmodel"}, ecore = "/model/tlc-control-api.ecore", ecoreSourceLocations = "/model/tlc-control-api.ecore")
 public interface TlcControlPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

@@ -31,7 +31,7 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.gecko.emf.json.constants.EMFJs;
-import org.gecko.emf.osgi.constants.EMFNamespaces;
+import org.eclipse.fennec.emf.osgi.constants.EMFNamespaces;
 import org.gecko.osgi.messaging.Message;
 import org.gecko.osgi.messaging.MessagingService;
 import org.osgi.service.component.ComponentServiceObjects;

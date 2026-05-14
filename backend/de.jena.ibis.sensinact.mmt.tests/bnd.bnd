@@ -1,5 +1,5 @@
 -library: \
-	enable-emf,\
+	enableEMF,\
 	enableOSGi-Test
 	
 Bundle-Version: 1.0.0.SNAPSHOT

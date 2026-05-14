@@ -19,9 +19,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EReference;
 
-import org.eclipse.sensinact.model.core.provider.ProviderPackage;
+import org.eclipse.fennec.emf.osgi.annotation.provide.EPackage;
 
-import org.gecko.emf.osgi.annotation.provide.EPackage;
+import org.eclipse.sensinact.model.core.provider.ProviderPackage;
 
 import org.osgi.annotation.versioning.ProviderType;
 
@@ -43,7 +43,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = DummyMoisturePackage.eNS_URI, genModel = "/model/dummy-moisture.genmodel", genModelSourceLocations = {"model/dummy-moisture.genmodel","de.jena.chirpstack.dummymoisture.model/model/dummy-moisture.genmodel"}, ecore="/model/dummy-moisture.ecore", ecoreSourceLocations="/model/dummy-moisture.ecore")
+@EPackage(uri = DummyMoisturePackage.eNS_URI, genModel = "/model/dummy-moisture.genmodel", genModelSourceLocations = {"model/dummy-moisture.genmodel","de.jena.chirpstack.dummymoisture.model/model/dummy-moisture.genmodel"}, ecore = "/model/dummy-moisture.ecore", ecoreSourceLocations = "/model/dummy-moisture.ecore")
 public interface DummyMoisturePackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

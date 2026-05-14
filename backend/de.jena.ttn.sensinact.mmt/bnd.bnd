@@ -13,4 +13,4 @@ Require-Capability: osgi.extender;filter:='(osgi.extender=osgi.configurator)'
 	org.osgi.service.condition,\
 	tools.jackson.core.jackson-databind
 	
--library: enable-emf
+-library: enableEMF

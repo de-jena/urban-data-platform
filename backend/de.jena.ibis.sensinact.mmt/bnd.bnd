@@ -1,7 +1,7 @@
 -includeresource: \
 	transformations=transformations
 
--library: enable-emf
+-library: enableEMF
 
 -buildpath: \
 	org.eclipse.m2m.qvt.oml,\

@@ -26,11 +26,13 @@ import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.resource.Resource.Factory;
 
-import org.gecko.emf.osgi.configurator.EPackageConfigurator;
+import org.eclipse.fennec.emf.osgi.configurator.EPackageConfigurator;
 
 import org.osgi.annotation.bundle.Capability;
 
+import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleContext;
+import org.osgi.framework.BundleException;
 import org.osgi.framework.ServiceRegistration;
 
 import org.osgi.service.component.annotations.Activate;
@@ -48,7 +50,7 @@ import org.osgi.service.condition.Condition;
 @Capability( namespace = "osgi.service", attribute = { "objectClass:List<String>=\"de.jena.model.ttn.util.TTNResourceFactoryImpl, org.eclipse.emf.ecore.resource.Resource$Factory\"" , "uses:=\"org.eclipse.emf.ecore.resource,de.jena.model.ttn.util\"" })
 @Capability( namespace = "osgi.service", attribute = { "objectClass:List<String>=\"de.jena.model.ttn.TTNFactory, org.eclipse.emf.ecore.EFactory\"" , "uses:=\"org.eclipse.emf.ecore,de.jena.model.ttn\"" })
 @Capability( namespace = "osgi.service", attribute = { "objectClass:List<String>=\"de.jena.model.ttn.TTNPackage, org.eclipse.emf.ecore.EPackage\"" , "uses:=\"org.eclipse.emf.ecore,de.jena.model.ttn\"" })
-@Capability( namespace = "osgi.service", attribute = { "objectClass:List<String>=\"org.gecko.emf.osgi.configurator.EPackageConfigurator\"" , "uses:=\"org.eclipse.emf.ecore,de.jena.model.ttn\"" })
+@Capability( namespace = "osgi.service", attribute = { "objectClass:List<String>=\"org.eclipse.fennec.emf.osgi.configurator.EPackageConfigurator\"" , "uses:=\"org.eclipse.emf.ecore,de.jena.model.ttn\"" })
 @Capability( namespace = "osgi.service", attribute = { "objectClass:List<String>=\"org.osgi.service.condition.Condition\"" , "uses:=org.osgi.service.condition" })
 public class TTNConfigurationComponent {
 	
@@ -65,14 +67,40 @@ public class TTNConfigurationComponent {
 	 */
 	@Activate
 	public void activate(BundleContext ctx) {
+	
+		checkEMFEcore(ctx);
 		TTNPackage ePackage = TTNPackageImpl.eINSTANCE;
 		
+		if(!EPackage.Registry.INSTANCE.containsKey(TTNPackage.eNS_URI)){
+			EPackage.Registry.INSTANCE.put(TTNPackage.eNS_URI, ePackage);
+		}
 		
 		TTNEPackageConfigurator packageConfigurator = registerEPackageConfiguratorService(ePackage, ctx);
 		registerResourceFactoryService(ctx);
 		registerEPackageService(ePackage, packageConfigurator, ctx);
 		registerEFactoryService(ePackage, packageConfigurator, ctx);
 		registerConditionService(packageConfigurator, ctx);
+	}
+	
+	/**
+	 * We have to make sure that org.eclipse.emf.ecore is started, so we don't run 
+	 * into start order issues due to the use of static access in EMF 
+	 * @param ctx the {@link BundleContext} to use
+	 */
+	private void checkEMFEcore(BundleContext ctx) {
+		Bundle[] bundles = ctx.getBundles();
+		
+		for(Bundle bundle : bundles) {
+			if("org.eclipse.emf.ecore".equals(bundle.getSymbolicName())) {
+				try {
+					bundle.start();
+				} catch (BundleException e) {
+					System.err.println("Could not start Bundle org.eclipse.emf.ecore, something seems seriously wrong: " + e.getMessage());
+					e.printStackTrace();
+				}
+				break;
+			}
+		}
 	}
 	
 	/**

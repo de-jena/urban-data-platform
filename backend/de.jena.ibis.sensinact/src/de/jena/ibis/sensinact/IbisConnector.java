@@ -33,7 +33,7 @@ import org.eclipse.sensinact.gateway.geojson.Point;
 import org.eclipse.sensinact.model.core.provider.Service;
 import org.gecko.emf.json.annotation.RequireEMFJson;
 import org.gecko.emf.json.constants.EMFJs;
-import org.gecko.emf.osgi.constants.EMFNamespaces;
+import org.eclipse.fennec.emf.osgi.constants.EMFNamespaces;
 import org.gecko.osgi.messaging.Message;
 import org.gecko.osgi.messaging.MessagingService;
 import org.osgi.annotation.bundle.Requirement;

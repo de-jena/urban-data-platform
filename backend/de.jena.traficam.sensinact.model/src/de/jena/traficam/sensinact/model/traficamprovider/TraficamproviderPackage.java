@@ -16,9 +16,9 @@ package de.jena.traficam.sensinact.model.traficamprovider;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.sensinact.model.core.provider.ProviderPackage;
+import org.eclipse.fennec.emf.osgi.annotation.provide.EPackage;
 
-import org.gecko.emf.osgi.annotation.provide.EPackage;
+import org.eclipse.sensinact.model.core.provider.ProviderPackage;
 
 import org.osgi.annotation.versioning.ProviderType;
 
@@ -40,7 +40,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = TraficamproviderPackage.eNS_URI, genModel = "/model/traficam.genmodel", genModelSourceLocations = {"model/traficam.genmodel","de.jena.traficam.sensinact.model/model/traficam.genmodel"}, ecore="/model/traficam.ecore", ecoreSourceLocations="/model/traficam.ecore")
+@EPackage(uri = TraficamproviderPackage.eNS_URI, genModel = "/model/traficam.genmodel", genModelSourceLocations = {"model/traficam.genmodel","de.jena.traficam.sensinact.model/model/traficam.genmodel"}, ecore = "/model/traficam.ecore", ecoreSourceLocations = "/model/traficam.ecore")
 public interface TraficamproviderPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

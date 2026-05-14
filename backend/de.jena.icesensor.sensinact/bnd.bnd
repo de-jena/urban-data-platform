@@ -18,4 +18,4 @@
 	org.eclipse.sensinact.gateway.core.models.provider,\
 	de.jena.icesensor.sensinact.model
 	
--library: enable-emf
+-library: enableEMF

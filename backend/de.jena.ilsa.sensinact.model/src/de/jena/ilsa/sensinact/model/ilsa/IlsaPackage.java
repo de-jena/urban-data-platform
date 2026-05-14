@@ -18,9 +18,9 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EReference;
 
-import org.eclipse.sensinact.model.core.provider.ProviderPackage;
+import org.eclipse.fennec.emf.osgi.annotation.provide.EPackage;
 
-import org.gecko.emf.osgi.annotation.provide.EPackage;
+import org.eclipse.sensinact.model.core.provider.ProviderPackage;
 
 import org.osgi.annotation.versioning.ProviderType;
 
@@ -42,7 +42,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = IlsaPackage.eNS_URI, genModel = "/model/ilsa.genmodel", genModelSourceLocations = {"model/ilsa.genmodel","de.jena.ilsa.sensinact.model/model/ilsa.genmodel"}, ecore="/model/ilsa.ecore", ecoreSourceLocations="/model/ilsa.ecore")
+@EPackage(uri = IlsaPackage.eNS_URI, genModel = "/model/ilsa.genmodel", genModelSourceLocations = {"model/ilsa.genmodel","de.jena.ilsa.sensinact.model/model/ilsa.genmodel"}, ecore = "/model/ilsa.ecore", ecoreSourceLocations = "/model/ilsa.ecore")
 public interface IlsaPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

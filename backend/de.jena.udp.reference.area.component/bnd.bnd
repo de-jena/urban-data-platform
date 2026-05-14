@@ -1,4 +1,4 @@
--library: enable-emf
+-library: enableEMF
 -buildpath: \
 	net.opengis.kml.model,\
 	org.gecko.emf.json,\

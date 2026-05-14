@@ -3,7 +3,7 @@ Bundle-Description: Service component for mapping and translating sensor data to
 
 -workingset: SensiNact
 
--library: enable-emf
+-library: enableEMF
 
 -includeresource: \
 	mapping=mapping
@@ -13,5 +13,4 @@ Bundle-Description: Service component for mapping and translating sensor data to
 	org.osgi.service.component;version=latest,\
 	org.eclipse.sensinact.gateway.core.api;version=latest,\
 	org.gecko.emf.sensinact.model;version=latest,\
-	org.gecko.weather.model,\
-	org.gecko.emf.osgi.api
+	org.gecko.weather.model

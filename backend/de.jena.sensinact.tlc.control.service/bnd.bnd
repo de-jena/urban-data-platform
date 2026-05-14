@@ -11,7 +11,7 @@
 	org.gecko.emf.json
 
 -library: \
-	enable-emf
+	enableEMF
 	
 -sub: *.bnd
 

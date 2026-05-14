@@ -15,12 +15,10 @@
 	de.jena.traficam.websocket,\
 	de.jena.traficam.api,\
 	org.osgi.service.metatype.annotations,\
-	org.gecko.emf.osgi.api
+	org.eclipse.fennec.emf.osgi.api
 
 -testpath: \
 	${junit}
-
-Bundle-Version: 0.0.0.${tstamp}
 
 Export-Package: de.jena.traficam.mqtt
 

@@ -1,4 +1,4 @@
--library: enable-emf
+-library: enableEMF
 -buildpath: \
 	org.eclipse.sensinact.gateway.southbound.rules.rules.api,\
 	org.eclipse.sensinact.gateway.core.api,\

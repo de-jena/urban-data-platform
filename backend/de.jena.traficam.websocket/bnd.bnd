@@ -13,7 +13,7 @@
 	de.jena.traficam.model;version=latest,\
 	de.jena.traficam.api,\
 	org.osgi.service.metatype.annotations,\
-	org.gecko.emf.osgi.api
+	org.eclipse.fennec.emf.osgi.api
 	
 -includepackage de.jena.traficam.api,\
 	de.jena.traficam.websocket

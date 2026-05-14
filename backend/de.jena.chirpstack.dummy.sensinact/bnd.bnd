@@ -12,7 +12,6 @@ Require-Capability: \
 	de.jena.chirpstack.dummymoisture.model,\
 	org.eclipse.emf.common,\
 	org.eclipse.emf.ecore,\
-	org.gecko.emf.osgi.api,\
 	org.eclipse.sensinact.gateway.core.api,\
 	org.eclipse.sensinact.gateway.core.annotation,\
 	org.eclipse.sensinact.gateway.core.models.provider,\

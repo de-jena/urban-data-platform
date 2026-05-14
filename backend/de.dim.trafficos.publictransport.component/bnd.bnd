@@ -1,5 +1,5 @@
 -library: \
-	enable-emf
+	enableEMF
 	
 -buildpath: \
 	de.dim.trafficos.publictransport.apis;version=latest,\

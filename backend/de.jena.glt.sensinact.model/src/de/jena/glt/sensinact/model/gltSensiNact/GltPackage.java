@@ -17,9 +17,9 @@ package de.jena.glt.sensinact.model.gltSensiNact;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.sensinact.model.core.provider.ProviderPackage;
+import org.eclipse.fennec.emf.osgi.annotation.provide.EPackage;
 
-import org.gecko.emf.osgi.annotation.provide.EPackage;
+import org.eclipse.sensinact.model.core.provider.ProviderPackage;
 
 import org.osgi.annotation.versioning.ProviderType;
 
@@ -41,7 +41,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = GltPackage.eNS_URI, genModel = "/model/glt.genmodel", genModelSourceLocations = {"model/glt.genmodel","de.jena.glt.sensinact.model/model/glt.genmodel"}, ecore="/model/glt.ecore", ecoreSourceLocations="/model/glt.ecore")
+@EPackage(uri = GltPackage.eNS_URI, genModel = "/model/glt.genmodel", genModelSourceLocations = {"model/glt.genmodel","de.jena.glt.sensinact.model/model/glt.genmodel"}, ecore = "/model/glt.ecore", ecoreSourceLocations = "/model/glt.ecore")
 public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

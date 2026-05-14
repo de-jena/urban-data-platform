@@ -2,13 +2,12 @@ Test-Cases: ${classes;HIERARCHY_INDIRECTLY_ANNOTATED;org.junit.platform.commons.
 
 -library: \
 	enableOSGi-Test,\
-	enable-emf
+	enableEMF
 
 # sets the usually required buildpath using the bnd library, you can extend it with the normal -buildpath to your liking
 -buildpath: \
 	tools.jackson.core.jackson-databind,\
 	org.osgi.framework;version=latest,\
-	org.gecko.emf.osgi.api,\
 	org.osgi.service.component,\
 	org.osgi.service.component.annotations,\
 	org.osgi.resource,\
@@ -16,8 +15,6 @@ Test-Cases: ${classes;HIERARCHY_INDIRECTLY_ANNOTATED;org.junit.platform.commons.
 	de.jena.glt.rest.model,\
 	de.jena.glt.rest;version=snapshot,\
 	org.osgi.test.junit5.cm,\
-	org.gecko.codec,\
-	org.gecko.codec.constants,\
 	jakarta.ws.rs-api
 	
 Private-Package: de.jena.glt.rest.test

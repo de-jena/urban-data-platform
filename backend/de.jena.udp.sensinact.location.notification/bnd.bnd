@@ -1,4 +1,4 @@
--library: enable-emf
+-library: enableEMF
 -buildpath: \
 	org.eclipse.sensinact.gateway.core.geo-json,\
 	org.osgi.service.metatype.annotations,\
