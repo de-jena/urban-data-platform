@@ -101,6 +101,5 @@ pom.version: ${versionmask;===s;${@version}}
   trafficos;member=${filter;${p};.*\.trafficos\.*},\
   ibis;member=${filter;${p};.*\.ibis\.*},\
   glt;member=${filter;${p};.*\.glt\.*},\
-  dashboard;member=${filter;${p};.*\.dashboard\.*},\
   weather;member=${filter;${p};.*\.weather\.*},\
   reference_area;member=${filter;${p};.*\.reference\.area\.*}

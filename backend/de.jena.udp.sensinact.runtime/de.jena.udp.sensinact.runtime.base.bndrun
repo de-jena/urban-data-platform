@@ -66,9 +66,7 @@ slf4j.runpath:  \
 	bnd.identity;id='de.jena.udp.sensinact.runtime.config',\
 	bnd.identity;id='de.jena.traficam.sensinact',\
 	bnd.identity;id='de.jena.ilsa.sensinact',\
-	bnd.identity;id='de.jena.udp.dashboard.view.web.app',\
 	bnd.identity;id='de.jena.chirpstack.sensinact',\
-	bnd.identity;id='de.jena.udp.5g.ui.web.app',\
 	bnd.identity;id='de.jena.ibis.sensinact',\
 	bnd.identity;id='de.jena.conflict.sensinact',\
 	bnd.identity;id='de.jena.glt.sensinact',\
