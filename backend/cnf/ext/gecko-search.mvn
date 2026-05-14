@@ -41,9 +41,9 @@ org.geckoprojects.search:org.gecko.search.suggest:1.4.1
 org.geckoprojects.search:org.gecko.search.util:1.4.1
 com.google.code.findbugs:jsr305:3.0.2
 org.locationtech.spatial4j:spatial4j:0.8
-org.ow2.asm:asm:9.7
-org.ow2.asm:asm-commons:9.7
-org.ow2.asm:asm-tree:9.7
+org.ow2.asm:asm:9.9.1
+org.ow2.asm:asm-commons:9.9.1
+org.ow2.asm:asm-tree:9.9.1
 org.osgi:org.osgi.util.pushstream:1.1.0
 org.slf4j:slf4j-api:1.7.36
 org.slf4j:slf4j-simple:1.7.36
