@@ -7,10 +7,10 @@
 	org.osgi.util.pushstream;version=latest,\
 	org.osgi.util.promise,\
 	org.gecko.util.pushstream,\
-	org.gecko.emf.osgi.api,\
 	org.eclipse.emf.ecore,\
 	org.eclipse.emf.common,\
 	org.gecko.adapter.mqtt;version=latest,\
-	org.gecko.emf.json
+	org.gecko.emf.json,\
+	org.eclipse.fennec.emf.osgi.api
 
 -testpath: ${junit}

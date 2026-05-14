@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EReference;
 
-import org.gecko.emf.osgi.annotation.provide.EPackage;
+import org.eclipse.fennec.emf.osgi.annotation.provide.EPackage;
 
 import org.osgi.annotation.versioning.ProviderType;
 
@@ -41,7 +41,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = TrafiCamPackage.eNS_URI, genModel = "/model/traficam.genmodel", genModelSourceLocations = {"model/traficam.genmodel","de.jena.traficam.model/model/traficam.genmodel"}, ecore="/model/traficam.ecore", ecoreSourceLocations="/model/traficam.ecore")
+@EPackage(uri = TrafiCamPackage.eNS_URI, genModel = "/model/traficam.genmodel", genModelSourceLocations = {"model/traficam.genmodel","de.jena.traficam.model/model/traficam.genmodel"}, ecore = "/model/traficam.ecore", ecoreSourceLocations = "/model/traficam.ecore")
 public interface TrafiCamPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

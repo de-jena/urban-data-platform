@@ -2,7 +2,7 @@ Bundle-Name: PublicTransport Model 2 Model Transformation
 Bundle-Description: Model2Model transformation from publictransport to publictransport-api
 Bundle-Version: 1.0.0.SNAPSHOT
 
--library: enable-emf
+-library: enableEMF
 
 -includeresource: \
 	transforms/=transforms,\

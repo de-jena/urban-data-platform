@@ -1,4 +1,4 @@
--library: enable-emf
+-library: enableEMF
 -buildpath: \
 	org.osgi.service.component.annotations,\
 	org.osgi.service.typedevent,\
@@ -11,10 +11,6 @@
 	org.osgi.service.metatype.annotations,\
 	de.jena.glt.rest,\
 	de.jena.glt.rest.model,\
-	org.gecko.codec,\
-	org.gecko.codec.info,\
-	org.gecko.codec.info.model,\
-	org.gecko.codec.json,\
 	jakarta.ws.rs-api,\
 	org.eclipse.sensinact.gateway.core.annotation
 

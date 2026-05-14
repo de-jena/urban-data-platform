@@ -21,6 +21,6 @@
 	org.osgi.util.function,\
 	org.gecko.osgi.messaging
 
--library: enable-emf
+-library: enableEMF
 
 -includeresource: transformations=transformations

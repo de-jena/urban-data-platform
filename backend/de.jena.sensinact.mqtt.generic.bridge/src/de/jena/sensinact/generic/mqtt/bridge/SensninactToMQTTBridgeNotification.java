@@ -27,8 +27,7 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.sensinact.core.notification.ResourceDataNotification;
 import org.gecko.emf.json.constants.EMFJs;
-import org.gecko.emf.osgi.ResourceSetFactory;
-import org.gecko.emf.osgi.constants.EMFNamespaces;
+import org.eclipse.fennec.emf.osgi.constants.EMFNamespaces;
 import org.gecko.osgi.messaging.MessagingService;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
@@ -39,6 +38,7 @@ import org.osgi.util.promise.PromiseFactory;
 
 import de.jena.sensinact.mqtt.generic.message.UpdateMessage;
 import de.jena.sensinact.mqtt.generic.message.util.MessageUtil;
+import org.eclipse.fennec.emf.osgi.ResourceSetFactory;
 
 /**
  * Default forward of any Sensinact events to MQTT

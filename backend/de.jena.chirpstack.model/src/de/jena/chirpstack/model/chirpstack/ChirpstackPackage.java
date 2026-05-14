@@ -18,9 +18,9 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EReference;
 
-import org.eclipse.sensinact.model.core.provider.ProviderPackage;
+import org.eclipse.fennec.emf.osgi.annotation.provide.EPackage;
 
-import org.gecko.emf.osgi.annotation.provide.EPackage;
+import org.eclipse.sensinact.model.core.provider.ProviderPackage;
 
 import org.osgi.annotation.versioning.ProviderType;
 
@@ -42,7 +42,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = ChirpstackPackage.eNS_URI, genModel = "/model/chirpstack.genmodel", genModelSourceLocations = {"model/chirpstack.genmodel","de.jena.chirpstack.model/model/chirpstack.genmodel"}, ecore="/model/chirpstack.ecore", ecoreSourceLocations="/model/chirpstack.ecore")
+@EPackage(uri = ChirpstackPackage.eNS_URI, genModel = "/model/chirpstack.genmodel", genModelSourceLocations = {"model/chirpstack.genmodel","de.jena.chirpstack.model/model/chirpstack.genmodel"}, ecore = "/model/chirpstack.ecore", ecoreSourceLocations = "/model/chirpstack.ecore")
 public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

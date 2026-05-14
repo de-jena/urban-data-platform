@@ -17,7 +17,7 @@
 	org.osgi.namespace.service,\
 	org.gecko.emf.repository.api
 	
--library: enable-emf
+-library: enableEMF
 
 Export-Package: de.dim.trafficos.simulator.api
 -privatepackage: de.dim.smart.city.traffic.simulator,\

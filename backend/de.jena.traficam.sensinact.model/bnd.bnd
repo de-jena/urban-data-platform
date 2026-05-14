@@ -1,8 +1,8 @@
--library: enable-emf
+-library: enableEMF
 
 -generate:\
 	model/traficam.genmodel;\
-		generate=geckoEMF;\
+		generate=fennecEMF;\
 		genmodel=model/traficam.genmodel;\
 		output=src
 

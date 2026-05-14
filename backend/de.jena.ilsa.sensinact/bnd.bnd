@@ -17,6 +17,6 @@
 	org.eclipse.sensinact.gateway.core.geo-json,\
 	org.eclipse.sensinact.gateway.core.annotation,\
 	org.eclipse.sensinact.gateway.core.api,\
-	org.gecko.codec.constants
+	org.eclipse.fennec.codec.constants
 	
--library: enable-emf
+-library: enableEMF

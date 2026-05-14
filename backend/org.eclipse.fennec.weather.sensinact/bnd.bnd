@@ -1,4 +1,4 @@
--library: enable-emf
+-library: enableEMF
 -buildpath: \
 	org.gecko.weather.dwd.forecast;version=latest,\
 	org.eclipse.sensinact.gateway.core.api,\

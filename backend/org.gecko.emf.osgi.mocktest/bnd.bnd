@@ -1,7 +1,6 @@
 -buildpath: \
 	org.eclipse.emf.ecore,\
 	org.eclipse.emf.common,\
-	org.gecko.emf.osgi.api,\
 	org.osgi.annotation.bundle,\
 	org.osgi.annotation.versioning,\
 	org.mockito.mockito-core

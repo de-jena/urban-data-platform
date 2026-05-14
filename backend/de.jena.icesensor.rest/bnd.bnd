@@ -12,6 +12,7 @@
 	org.eclipse.fennec.qvt.api,\
 	biz.aQute.bnd.annotation,\
 	org.gecko.emf.osgi.component,\
-	org.gecko.emf.util.annotations
+	org.gecko.emf.util.annotations,\
+	org.eclipse.fennec.emf.osgi.component
 
--library: enable-emf
+-library: enableEMF

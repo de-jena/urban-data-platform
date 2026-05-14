@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EReference;
 
-import org.gecko.emf.osgi.annotation.provide.EPackage;
+import org.eclipse.fennec.emf.osgi.annotation.provide.EPackage;
 
 import org.osgi.annotation.versioning.ProviderType;
 
@@ -41,7 +41,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = GltPackage.eNS_URI, genModel = "/model/glt.genmodel", genModelSourceLocations = {"model/glt.genmodel","de.jena.glt.rest.model/model/glt.genmodel"}, ecore="/model/glt.ecore", ecoreSourceLocations="/model/glt.ecore")
+@EPackage(uri = GltPackage.eNS_URI, genModel = "/model/glt.genmodel", genModelSourceLocations = {"model/glt.genmodel","de.jena.glt.rest.model/model/glt.genmodel"}, ecore = "/model/glt.ecore", ecoreSourceLocations = "/model/glt.ecore")
 public interface GltPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

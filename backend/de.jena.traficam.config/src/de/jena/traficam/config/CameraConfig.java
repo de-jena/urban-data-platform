@@ -32,7 +32,7 @@ import org.eclipse.jetty.websocket.client.WebSocketClient;
 import org.gecko.adapter.mqtt.MQTTContextBuilder;
 import org.gecko.emf.json.annotation.RequireEMFJson;
 import org.gecko.emf.json.constants.EMFJs;
-import org.gecko.emf.osgi.constants.EMFNamespaces;
+import org.eclipse.fennec.emf.osgi.constants.EMFNamespaces;
 import org.gecko.osgi.messaging.MessagingContext;
 import org.gecko.osgi.messaging.MessagingService;
 import org.osgi.service.component.ComponentServiceObjects;

@@ -19,9 +19,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EReference;
 
-import org.eclipse.sensinact.model.core.provider.ProviderPackage;
+import org.eclipse.fennec.emf.osgi.annotation.provide.EPackage;
 
-import org.gecko.emf.osgi.annotation.provide.EPackage;
+import org.eclipse.sensinact.model.core.provider.ProviderPackage;
 
 import org.osgi.annotation.versioning.ProviderType;
 
@@ -43,7 +43,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = SensinactRefAreaPackage.eNS_URI, genModel = "/model/sensinact-refarea.genmodel", genModelSourceLocations = {"model/sensinact-refarea.genmodel","de.jena.udp.reference.area.sensinact.model/model/sensinact-refarea.genmodel"}, ecore="/model/sensinact-refarea.ecore", ecoreSourceLocations="/model/sensinact-refarea.ecore")
+@EPackage(uri = SensinactRefAreaPackage.eNS_URI, genModel = "/model/sensinact-refarea.genmodel", genModelSourceLocations = {"model/sensinact-refarea.genmodel","de.jena.udp.reference.area.sensinact.model/model/sensinact-refarea.genmodel"}, ecore = "/model/sensinact-refarea.ecore", ecoreSourceLocations = "/model/sensinact-refarea.ecore")
 public interface SensinactRefAreaPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

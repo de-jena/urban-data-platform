@@ -11,18 +11,14 @@
 	org.eclipse.emf.ecore,\
 	org.eclipse.emf.common,\
 	org.osgi.service.component,\
-	org.gecko.emf.osgi.api,\
 	org.gecko.adapter.mqtt,\
 	org.eclipse.jetty.websocket.client,\
 	org.eclipse.jetty.websocket.api,\
-	org.apache.felix.http.jetty
+	org.apache.felix.http.jetty,\
+	org.eclipse.fennec.emf.osgi.api
 
 -testpath: \
 	${junit}
-
-javac.source: 17
-javac.target: 17
-
 
 -includepackage de.jena.traficam.api
 

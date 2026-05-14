@@ -22,4 +22,4 @@
 	org.eclipse.sensinact.gateway.core.geo-json,\
 	org.gecko.util.pushstream
 	
--library: enable-emf
+-library: enableEMF

@@ -47,18 +47,21 @@ target-dir = ${if;${driver;tycho-maven-build};target;generated${if;${driver;ecli
 bin = ${target-dir}/classes
 testbin = ${target-dir}/test-classes
 
--library:\
-	geckoEMF,\
-	geckoOSGi-Test,\
-	geckoEMFRepository,\
-	geckoEMFUtil,\
+-library: \
+    fennec,\
+    fennecTest,\
+    fennecEMF,\
+    fennecM2X,\
+    fennecQVT,\
+    geckoEMFUtil,\
 	geckoUtil,\
-	fennecQVT,\
-	jakartaREST,\
-	geckoMessaging,\
-	geckoEMFModels,\
+    geckoMessaging,\
+    geckoEMFRepository,\
+    geckoEMFModels,\
+    jakartaREST,\
+    geckoLibraries,\
 	geckoSearch
-	
+
 # This can be replaced, as soon as we have the latest release figuered out
 #	geckoSearch
 

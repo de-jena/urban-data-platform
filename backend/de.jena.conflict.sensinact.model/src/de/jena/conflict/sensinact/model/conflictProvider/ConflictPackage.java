@@ -18,9 +18,9 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EReference;
 
-import org.eclipse.sensinact.model.core.provider.ProviderPackage;
+import org.eclipse.fennec.emf.osgi.annotation.provide.EPackage;
 
-import org.gecko.emf.osgi.annotation.provide.EPackage;
+import org.eclipse.sensinact.model.core.provider.ProviderPackage;
 
 import org.osgi.annotation.versioning.ProviderType;
 
@@ -42,7 +42,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = ConflictPackage.eNS_URI, genModel = "/model/conflict.genmodel", genModelSourceLocations = {"model/conflict.genmodel","de.jena.conflict.sensinact.model/model/conflict.genmodel"}, ecore="/model/conflict.ecore", ecoreSourceLocations="/model/conflict.ecore")
+@EPackage(uri = ConflictPackage.eNS_URI, genModel = "/model/conflict.genmodel", genModelSourceLocations = {"model/conflict.genmodel","de.jena.conflict.sensinact.model/model/conflict.genmodel"}, ecore = "/model/conflict.ecore", ecoreSourceLocations = "/model/conflict.ecore")
 public interface ConflictPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.
