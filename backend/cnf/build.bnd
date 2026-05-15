@@ -47,6 +47,8 @@ target-dir = ${if;${driver;tycho-maven-build};target;generated${if;${driver;ecli
 bin = ${target-dir}/classes
 testbin = ${target-dir}/test-classes
 
+-testpath.junitlauncher: junit-platform-launcher;version=latest
+
 -library: \
     fennec,\
     fennecTest,\
