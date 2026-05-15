@@ -10,9 +10,9 @@
 -require-bnd: "(version>=6.4.0)"
 	
 -plugin.libraries:\
-	aQute.bnd.repository.maven.provider.MavenBndRepository;\
-		releaseUrl			= "https://repo.maven.apache.org/maven2/,https://devel.data-in-motion.biz/nexus/repository/dim-release/"; \
-		snapshotUrl			= "https://devel.data-in-motion.biz/nexus/repository/dim-snapshot/,https://oss.sonatype.org/content/repositories/snapshots/";\
-		poll_time 			= -1;\
-		index=${.}/libraries.maven;\
-		name='Libraries'
+    aQute.bnd.repository.maven.provider.MavenBndRepository;\
+        releaseUrl          = "https://repo.maven.apache.org/maven2/,https://devel.data-in-motion.biz/nexus/repository/dim-release/"; \
+        snapshotUrl         = "https://central.sonatype.com/repository/maven-snapshots/,https://devel.data-in-motion.biz/nexus/repository/dim-snapshot/,https://oss.sonatype.org/content/repositories/snapshots/";\
+        poll_time           = -1;\
+        index               = ${.}/libraries.maven;\
+        name                = 'Libraries'
