@@ -13,7 +13,7 @@ task prepareDocker(){
 		stageDir.mkdirs()
 	     // copy all necessary files to  build/docker/ dir
     	copy {
-	        from new File("../../backend/de.jena.udp.sensinact.runtime/generated/distributions/executable/de.jena.udp.sensinact.runtime.docker.jar")
+	        from new File("../../backend/de.jena.udp.sensinact.runtime/generated/gradle/distributions/executable/de.jena.udp.sensinact.runtime.docker.jar")
 	        into stageDir
 	        rename("de.jena.udp.sensinact.runtime.docker.jar", "de.jena.udp.sensinact.runtime.jar")
 	    }
