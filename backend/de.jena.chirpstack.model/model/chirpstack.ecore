@@ -319,4 +319,64 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PMXTCR" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Provider">
+    <eAnnotations source="model">
+      <details key="name" value="PMX_TCR"/>
+      <details key="profileName" value="PMX TCR"/>
+      <details key="profileId" value="3ad23c8d-1965-4535-8ef0-ab56ca502f03"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="counter" eType="#//PMXCounter"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="status" eType="#//PMXStatus"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PMXCounter" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="totalCount" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/total_count"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ltrCount" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/ltr/count"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ltrAvgSpeedKmh" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/ltr/avg_speed_kmh"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rtlCount" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/rtl/count"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rtlAvgSpeedKmh" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/rtl/avg_speed_kmh"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PMXStatus" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="volts" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/volts"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="counterCategory" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/counter_category"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="counterKind" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/counter_kind"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestampUtcHhmm" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/timestamp_utc_hhmm"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
 </ecore:EPackage>

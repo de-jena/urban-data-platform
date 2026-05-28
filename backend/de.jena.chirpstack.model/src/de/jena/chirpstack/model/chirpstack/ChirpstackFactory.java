@@ -198,6 +198,33 @@ public interface ChirpstackFactory extends EFactory {
 	Teros21 createTeros21();
 
 	/**
+	 * Returns a new object of class '<em>PMXTCR</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>PMXTCR</em>'.
+	 * @generated
+	 */
+	PMXTCR createPMXTCR();
+
+	/**
+	 * Returns a new object of class '<em>PMX Counter</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>PMX Counter</em>'.
+	 * @generated
+	 */
+	PMXCounter createPMXCounter();
+
+	/**
+	 * Returns a new object of class '<em>PMX Status</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>PMX Status</em>'.
+	 * @generated
+	 */
+	PMXStatus createPMXStatus();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

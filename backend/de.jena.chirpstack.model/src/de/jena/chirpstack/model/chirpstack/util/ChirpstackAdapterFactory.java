@@ -154,6 +154,18 @@ public class ChirpstackAdapterFactory extends AdapterFactoryImpl {
 				return createTeros21Adapter();
 			}
 			@Override
+			public Adapter casePMXTCR(PMXTCR object) {
+				return createPMXTCRAdapter();
+			}
+			@Override
+			public Adapter casePMXCounter(PMXCounter object) {
+				return createPMXCounterAdapter();
+			}
+			@Override
+			public Adapter casePMXStatus(PMXStatus object) {
+				return createPMXStatusAdapter();
+			}
+			@Override
 			public Adapter caseProvider(Provider object) {
 				return createProviderAdapter();
 			}
@@ -430,6 +442,48 @@ public class ChirpstackAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTeros21Adapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.chirpstack.model.chirpstack.PMXTCR <em>PMXTCR</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.chirpstack.model.chirpstack.PMXTCR
+	 * @generated
+	 */
+	public Adapter createPMXTCRAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.chirpstack.model.chirpstack.PMXCounter <em>PMX Counter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.chirpstack.model.chirpstack.PMXCounter
+	 * @generated
+	 */
+	public Adapter createPMXCounterAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.chirpstack.model.chirpstack.PMXStatus <em>PMX Status</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.chirpstack.model.chirpstack.PMXStatus
+	 * @generated
+	 */
+	public Adapter createPMXStatusAdapter() {
 		return null;
 	}
 

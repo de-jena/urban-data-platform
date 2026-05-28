@@ -206,6 +206,27 @@ public class ChirpstackSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ChirpstackPackage.PMXTCR: {
+				PMXTCR pmxtcr = (PMXTCR)theEObject;
+				T result = casePMXTCR(pmxtcr);
+				if (result == null) result = caseProvider(pmxtcr);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ChirpstackPackage.PMX_COUNTER: {
+				PMXCounter pmxCounter = (PMXCounter)theEObject;
+				T result = casePMXCounter(pmxCounter);
+				if (result == null) result = caseService(pmxCounter);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ChirpstackPackage.PMX_STATUS: {
+				PMXStatus pmxStatus = (PMXStatus)theEObject;
+				T result = casePMXStatus(pmxStatus);
+				if (result == null) result = caseService(pmxStatus);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -477,6 +498,51 @@ public class ChirpstackSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTeros21(Teros21 object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>PMXTCR</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>PMXTCR</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePMXTCR(PMXTCR object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>PMX Counter</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>PMX Counter</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePMXCounter(PMXCounter object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>PMX Status</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>PMX Status</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePMXStatus(PMXStatus object) {
 		return null;
 	}
 

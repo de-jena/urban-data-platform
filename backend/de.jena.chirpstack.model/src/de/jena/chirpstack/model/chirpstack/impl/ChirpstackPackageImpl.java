@@ -19,6 +19,8 @@ import de.jena.chirpstack.model.chirpstack.ChirpstackPackage;
 import de.jena.chirpstack.model.chirpstack.Device;
 import de.jena.chirpstack.model.chirpstack.Dragino;
 import de.jena.chirpstack.model.chirpstack.Light;
+import de.jena.chirpstack.model.chirpstack.PMXCounter;
+import de.jena.chirpstack.model.chirpstack.PMXStatus;
 import de.jena.chirpstack.model.chirpstack.Rain;
 import de.jena.chirpstack.model.chirpstack.SenseCap;
 import de.jena.chirpstack.model.chirpstack.SenseCapS2105;
@@ -171,6 +173,27 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 	 * @generated
 	 */
 	private EClass teros21EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass pmxtcrEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass pmxCounterEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass pmxStatusEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -1011,6 +1034,146 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 	 * @generated
 	 */
 	@Override
+	public EClass getPMXTCR() {
+		return pmxtcrEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getPMXTCR_Counter() {
+		return (EReference)pmxtcrEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getPMXTCR_Status() {
+		return (EReference)pmxtcrEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getPMXCounter() {
+		return pmxCounterEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getPMXCounter_TotalCount() {
+		return (EAttribute)pmxCounterEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getPMXCounter_LtrCount() {
+		return (EAttribute)pmxCounterEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getPMXCounter_LtrAvgSpeedKmh() {
+		return (EAttribute)pmxCounterEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getPMXCounter_RtlCount() {
+		return (EAttribute)pmxCounterEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getPMXCounter_RtlAvgSpeedKmh() {
+		return (EAttribute)pmxCounterEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getPMXStatus() {
+		return pmxStatusEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getPMXStatus_Volts() {
+		return (EAttribute)pmxStatusEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getPMXStatus_CounterCategory() {
+		return (EAttribute)pmxStatusEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getPMXStatus_CounterKind() {
+		return (EAttribute)pmxStatusEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getPMXStatus_TimestampUtcHhmm() {
+		return (EAttribute)pmxStatusEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public ChirpstackFactory getChirpstackFactory() {
 		return (ChirpstackFactory)getEFactoryInstance();
 	}
@@ -1128,6 +1291,23 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 		createEAttribute(teros21EClass, TEROS21__TEMPERATUR1);
 		createEAttribute(teros21EClass, TEROS21__TEMPERATUR2);
 		createEAttribute(teros21EClass, TEROS21__BATTERY);
+
+		pmxtcrEClass = createEClass(PMXTCR);
+		createEReference(pmxtcrEClass, PMXTCR__COUNTER);
+		createEReference(pmxtcrEClass, PMXTCR__STATUS);
+
+		pmxCounterEClass = createEClass(PMX_COUNTER);
+		createEAttribute(pmxCounterEClass, PMX_COUNTER__TOTAL_COUNT);
+		createEAttribute(pmxCounterEClass, PMX_COUNTER__LTR_COUNT);
+		createEAttribute(pmxCounterEClass, PMX_COUNTER__LTR_AVG_SPEED_KMH);
+		createEAttribute(pmxCounterEClass, PMX_COUNTER__RTL_COUNT);
+		createEAttribute(pmxCounterEClass, PMX_COUNTER__RTL_AVG_SPEED_KMH);
+
+		pmxStatusEClass = createEClass(PMX_STATUS);
+		createEAttribute(pmxStatusEClass, PMX_STATUS__VOLTS);
+		createEAttribute(pmxStatusEClass, PMX_STATUS__COUNTER_CATEGORY);
+		createEAttribute(pmxStatusEClass, PMX_STATUS__COUNTER_KIND);
+		createEAttribute(pmxStatusEClass, PMX_STATUS__TIMESTAMP_UTC_HHMM);
 	}
 
 	/**
@@ -1179,6 +1359,9 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 		snEClass.getESuperTypes().add(theProviderPackage.getService());
 		solidosTeros21EClass.getESuperTypes().add(theProviderPackage.getProvider());
 		teros21EClass.getESuperTypes().add(theProviderPackage.getService());
+		pmxtcrEClass.getESuperTypes().add(theProviderPackage.getProvider());
+		pmxCounterEClass.getESuperTypes().add(theProviderPackage.getService());
+		pmxStatusEClass.getESuperTypes().add(theProviderPackage.getService());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(draginoEClass, Dragino.class, "Dragino", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1275,6 +1458,23 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 		initEAttribute(getTeros21_Temperatur1(), ecorePackage.getEDouble(), "temperatur1", null, 0, 1, Teros21.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTeros21_Temperatur2(), ecorePackage.getEDouble(), "temperatur2", null, 0, 1, Teros21.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTeros21_Battery(), ecorePackage.getEDouble(), "battery", null, 0, 1, Teros21.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(pmxtcrEClass, de.jena.chirpstack.model.chirpstack.PMXTCR.class, "PMXTCR", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPMXTCR_Counter(), this.getPMXCounter(), null, "counter", null, 0, 1, de.jena.chirpstack.model.chirpstack.PMXTCR.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPMXTCR_Status(), this.getPMXStatus(), null, "status", null, 0, 1, de.jena.chirpstack.model.chirpstack.PMXTCR.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(pmxCounterEClass, PMXCounter.class, "PMXCounter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPMXCounter_TotalCount(), ecorePackage.getEDouble(), "totalCount", null, 0, 1, PMXCounter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPMXCounter_LtrCount(), ecorePackage.getEDouble(), "ltrCount", null, 0, 1, PMXCounter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPMXCounter_LtrAvgSpeedKmh(), ecorePackage.getEDouble(), "ltrAvgSpeedKmh", null, 0, 1, PMXCounter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPMXCounter_RtlCount(), ecorePackage.getEDouble(), "rtlCount", null, 0, 1, PMXCounter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPMXCounter_RtlAvgSpeedKmh(), ecorePackage.getEDouble(), "rtlAvgSpeedKmh", null, 0, 1, PMXCounter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(pmxStatusEClass, PMXStatus.class, "PMXStatus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPMXStatus_Volts(), ecorePackage.getEDouble(), "volts", null, 0, 1, PMXStatus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPMXStatus_CounterCategory(), ecorePackage.getEDouble(), "counterCategory", null, 0, 1, PMXStatus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPMXStatus_CounterKind(), ecorePackage.getEString(), "counterKind", null, 0, 1, PMXStatus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPMXStatus_TimestampUtcHhmm(), ecorePackage.getEString(), "timestampUtcHhmm", null, 0, 1, PMXStatus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -1373,6 +1573,14 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 			   "name", "Solidos_Teros21",
 			   "profileName", "Solidos Teros21",
 			   "profileId", "7022e9ce-7673-4d0c-b3d1-ed51afc3fe27"
+		   });
+		addAnnotation
+		  (pmxtcrEClass,
+		   source,
+		   new String[] {
+			   "name", "PMX_TCR",
+			   "profileName", "PMX TCR",
+			   "profileId", "3ad23c8d-1965-4535-8ef0-ab56ca502f03"
 		   });
 	}
 
@@ -1642,6 +1850,60 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 		   source,
 		   new String[] {
 			   "path", "object/battery_voltage"
+		   });
+		addAnnotation
+		  (getPMXCounter_TotalCount(),
+		   source,
+		   new String[] {
+			   "path", "object/total_count"
+		   });
+		addAnnotation
+		  (getPMXCounter_LtrCount(),
+		   source,
+		   new String[] {
+			   "path", "object/ltr/count"
+		   });
+		addAnnotation
+		  (getPMXCounter_LtrAvgSpeedKmh(),
+		   source,
+		   new String[] {
+			   "path", "object/ltr/avg_speed_kmh"
+		   });
+		addAnnotation
+		  (getPMXCounter_RtlCount(),
+		   source,
+		   new String[] {
+			   "path", "object/rtl/count"
+		   });
+		addAnnotation
+		  (getPMXCounter_RtlAvgSpeedKmh(),
+		   source,
+		   new String[] {
+			   "path", "object/rtl/avg_speed_kmh"
+		   });
+		addAnnotation
+		  (getPMXStatus_Volts(),
+		   source,
+		   new String[] {
+			   "path", "object/volts"
+		   });
+		addAnnotation
+		  (getPMXStatus_CounterCategory(),
+		   source,
+		   new String[] {
+			   "path", "object/counter_category"
+		   });
+		addAnnotation
+		  (getPMXStatus_CounterKind(),
+		   source,
+		   new String[] {
+			   "path", "object/counter_kind"
+		   });
+		addAnnotation
+		  (getPMXStatus_TimestampUtcHhmm(),
+		   source,
+		   new String[] {
+			   "path", "object/timestamp_utc_hhmm"
 		   });
 	}
 

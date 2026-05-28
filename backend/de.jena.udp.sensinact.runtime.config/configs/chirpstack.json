@@ -15,7 +15,8 @@
 			"chirpstack/application/e8d62144-b9b6-4fee-937f-5d8248eee499/device/+/event/up",
 			"chirpstack/application/6e3f1860-3644-4d13-806c-bcbc6f9b89b6/device/+/event/up",
 			"chirpstack/application/3a24ad7f-be3e-4679-bdd6-789209c75560/device/+/event/up",
-			"chirpstack/application/b186270e-812c-40c2-bb03-a06ffb640f03/device/+/event/up"
+			"chirpstack/application/b186270e-812c-40c2-bb03-a06ffb640f03/device/+/event/up",
+			"chirpstack/application/6c05c20d-a152-43be-bd50-0af072e909d4/device/+/event/up"
 		],
 		"user": "$[env:CHIRPSTACK_USER;default=$[prop:CHIRPSTACK_USER;default=sensinact]]",
 		".password": "$[env:CHIRPSTACK_PASSWORD;default=$[prop:CHIRPSTACK_PASSWORD;default=]]"

@@ -85,6 +85,9 @@ public class ChirpstackFactoryImpl extends EFactoryImpl implements ChirpstackFac
 			case ChirpstackPackage.SN: return createSN();
 			case ChirpstackPackage.SOLIDOS_TEROS21: return createSolidosTeros21();
 			case ChirpstackPackage.TEROS21: return createTeros21();
+			case ChirpstackPackage.PMXTCR: return createPMXTCR();
+			case ChirpstackPackage.PMX_COUNTER: return createPMXCounter();
+			case ChirpstackPackage.PMX_STATUS: return createPMXStatus();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -286,6 +289,39 @@ public class ChirpstackFactoryImpl extends EFactoryImpl implements ChirpstackFac
 	public Teros21 createTeros21() {
 		Teros21Impl teros21 = new Teros21Impl();
 		return teros21;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public PMXTCR createPMXTCR() {
+		PMXTCRImpl pmxtcr = new PMXTCRImpl();
+		return pmxtcr;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public PMXCounter createPMXCounter() {
+		PMXCounterImpl pmxCounter = new PMXCounterImpl();
+		return pmxCounter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public PMXStatus createPMXStatus() {
+		PMXStatusImpl pmxStatus = new PMXStatusImpl();
+		return pmxStatus;
 	}
 
 	/**

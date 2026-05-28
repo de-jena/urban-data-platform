@@ -1651,6 +1651,270 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 */
 	int TEROS21_OPERATION_COUNT = ProviderPackage.SERVICE_OPERATION_COUNT + 0;
 
+	/**
+	 * The meta object id for the '{@link de.jena.chirpstack.model.chirpstack.impl.PMXTCRImpl <em>PMXTCR</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.chirpstack.model.chirpstack.impl.PMXTCRImpl
+	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getPMXTCR()
+	 * @generated
+	 */
+	int PMXTCR = 18;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PMXTCR__ID = ProviderPackage.PROVIDER__ID;
+
+	/**
+	 * The feature id for the '<em><b>Admin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PMXTCR__ADMIN = ProviderPackage.PROVIDER__ADMIN;
+
+	/**
+	 * The feature id for the '<em><b>Linked Providers</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PMXTCR__LINKED_PROVIDERS = ProviderPackage.PROVIDER__LINKED_PROVIDERS;
+
+	/**
+	 * The feature id for the '<em><b>Counter</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PMXTCR__COUNTER = ProviderPackage.PROVIDER_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Status</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PMXTCR__STATUS = ProviderPackage.PROVIDER_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>PMXTCR</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PMXTCR_FEATURE_COUNT = ProviderPackage.PROVIDER_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Get Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PMXTCR___GET_SERVICE__STRING = ProviderPackage.PROVIDER___GET_SERVICE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Service EClass</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PMXTCR___GET_SERVICE_ECLASS__STRING = ProviderPackage.PROVIDER___GET_SERVICE_ECLASS__STRING;
+
+	/**
+	 * The number of operations of the '<em>PMXTCR</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PMXTCR_OPERATION_COUNT = ProviderPackage.PROVIDER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.chirpstack.model.chirpstack.impl.PMXCounterImpl <em>PMX Counter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.chirpstack.model.chirpstack.impl.PMXCounterImpl
+	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getPMXCounter()
+	 * @generated
+	 */
+	int PMX_COUNTER = 19;
+
+	/**
+	 * The feature id for the '<em><b>Metadata</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PMX_COUNTER__METADATA = ProviderPackage.SERVICE__METADATA;
+
+	/**
+	 * The feature id for the '<em><b>Total Count</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PMX_COUNTER__TOTAL_COUNT = ProviderPackage.SERVICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Ltr Count</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PMX_COUNTER__LTR_COUNT = ProviderPackage.SERVICE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Ltr Avg Speed Kmh</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PMX_COUNTER__LTR_AVG_SPEED_KMH = ProviderPackage.SERVICE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Rtl Count</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PMX_COUNTER__RTL_COUNT = ProviderPackage.SERVICE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Rtl Avg Speed Kmh</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PMX_COUNTER__RTL_AVG_SPEED_KMH = ProviderPackage.SERVICE_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of structural features of the '<em>PMX Counter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PMX_COUNTER_FEATURE_COUNT = ProviderPackage.SERVICE_FEATURE_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>EIs Set</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PMX_COUNTER___EIS_SET__ESTRUCTURALFEATURE = ProviderPackage.SERVICE___EIS_SET__ESTRUCTURALFEATURE;
+
+	/**
+	 * The number of operations of the '<em>PMX Counter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PMX_COUNTER_OPERATION_COUNT = ProviderPackage.SERVICE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.chirpstack.model.chirpstack.impl.PMXStatusImpl <em>PMX Status</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.chirpstack.model.chirpstack.impl.PMXStatusImpl
+	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getPMXStatus()
+	 * @generated
+	 */
+	int PMX_STATUS = 20;
+
+	/**
+	 * The feature id for the '<em><b>Metadata</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PMX_STATUS__METADATA = ProviderPackage.SERVICE__METADATA;
+
+	/**
+	 * The feature id for the '<em><b>Volts</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PMX_STATUS__VOLTS = ProviderPackage.SERVICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Counter Category</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PMX_STATUS__COUNTER_CATEGORY = ProviderPackage.SERVICE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Counter Kind</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PMX_STATUS__COUNTER_KIND = ProviderPackage.SERVICE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Timestamp Utc Hhmm</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PMX_STATUS__TIMESTAMP_UTC_HHMM = ProviderPackage.SERVICE_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>PMX Status</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PMX_STATUS_FEATURE_COUNT = ProviderPackage.SERVICE_FEATURE_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>EIs Set</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PMX_STATUS___EIS_SET__ESTRUCTURALFEATURE = ProviderPackage.SERVICE___EIS_SET__ESTRUCTURALFEATURE;
+
+	/**
+	 * The number of operations of the '<em>PMX Status</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PMX_STATUS_OPERATION_COUNT = ProviderPackage.SERVICE_OPERATION_COUNT + 0;
+
 
 	/**
 	 * Returns the meta object for class '{@link de.jena.chirpstack.model.chirpstack.Dragino <em>Dragino</em>}'.
@@ -2482,6 +2746,157 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getTeros21_Battery();
 
 	/**
+	 * Returns the meta object for class '{@link de.jena.chirpstack.model.chirpstack.PMXTCR <em>PMXTCR</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>PMXTCR</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.PMXTCR
+	 * @generated
+	 */
+	EClass getPMXTCR();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link de.jena.chirpstack.model.chirpstack.PMXTCR#getCounter <em>Counter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Counter</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.PMXTCR#getCounter()
+	 * @see #getPMXTCR()
+	 * @generated
+	 */
+	EReference getPMXTCR_Counter();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link de.jena.chirpstack.model.chirpstack.PMXTCR#getStatus <em>Status</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Status</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.PMXTCR#getStatus()
+	 * @see #getPMXTCR()
+	 * @generated
+	 */
+	EReference getPMXTCR_Status();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.chirpstack.model.chirpstack.PMXCounter <em>PMX Counter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>PMX Counter</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.PMXCounter
+	 * @generated
+	 */
+	EClass getPMXCounter();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.PMXCounter#getTotalCount <em>Total Count</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Total Count</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.PMXCounter#getTotalCount()
+	 * @see #getPMXCounter()
+	 * @generated
+	 */
+	EAttribute getPMXCounter_TotalCount();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.PMXCounter#getLtrCount <em>Ltr Count</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Ltr Count</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.PMXCounter#getLtrCount()
+	 * @see #getPMXCounter()
+	 * @generated
+	 */
+	EAttribute getPMXCounter_LtrCount();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.PMXCounter#getLtrAvgSpeedKmh <em>Ltr Avg Speed Kmh</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Ltr Avg Speed Kmh</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.PMXCounter#getLtrAvgSpeedKmh()
+	 * @see #getPMXCounter()
+	 * @generated
+	 */
+	EAttribute getPMXCounter_LtrAvgSpeedKmh();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.PMXCounter#getRtlCount <em>Rtl Count</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Rtl Count</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.PMXCounter#getRtlCount()
+	 * @see #getPMXCounter()
+	 * @generated
+	 */
+	EAttribute getPMXCounter_RtlCount();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.PMXCounter#getRtlAvgSpeedKmh <em>Rtl Avg Speed Kmh</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Rtl Avg Speed Kmh</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.PMXCounter#getRtlAvgSpeedKmh()
+	 * @see #getPMXCounter()
+	 * @generated
+	 */
+	EAttribute getPMXCounter_RtlAvgSpeedKmh();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.chirpstack.model.chirpstack.PMXStatus <em>PMX Status</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>PMX Status</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.PMXStatus
+	 * @generated
+	 */
+	EClass getPMXStatus();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.PMXStatus#getVolts <em>Volts</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Volts</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.PMXStatus#getVolts()
+	 * @see #getPMXStatus()
+	 * @generated
+	 */
+	EAttribute getPMXStatus_Volts();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.PMXStatus#getCounterCategory <em>Counter Category</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Counter Category</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.PMXStatus#getCounterCategory()
+	 * @see #getPMXStatus()
+	 * @generated
+	 */
+	EAttribute getPMXStatus_CounterCategory();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.PMXStatus#getCounterKind <em>Counter Kind</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Counter Kind</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.PMXStatus#getCounterKind()
+	 * @see #getPMXStatus()
+	 * @generated
+	 */
+	EAttribute getPMXStatus_CounterKind();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.PMXStatus#getTimestampUtcHhmm <em>Timestamp Utc Hhmm</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Timestamp Utc Hhmm</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.PMXStatus#getTimestampUtcHhmm()
+	 * @see #getPMXStatus()
+	 * @generated
+	 */
+	EAttribute getPMXStatus_TimestampUtcHhmm();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3155,6 +3570,124 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 		 * @generated
 		 */
 		EAttribute TEROS21__BATTERY = eINSTANCE.getTeros21_Battery();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.chirpstack.model.chirpstack.impl.PMXTCRImpl <em>PMXTCR</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.chirpstack.model.chirpstack.impl.PMXTCRImpl
+		 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getPMXTCR()
+		 * @generated
+		 */
+		EClass PMXTCR = eINSTANCE.getPMXTCR();
+
+		/**
+		 * The meta object literal for the '<em><b>Counter</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PMXTCR__COUNTER = eINSTANCE.getPMXTCR_Counter();
+
+		/**
+		 * The meta object literal for the '<em><b>Status</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PMXTCR__STATUS = eINSTANCE.getPMXTCR_Status();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.chirpstack.model.chirpstack.impl.PMXCounterImpl <em>PMX Counter</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.chirpstack.model.chirpstack.impl.PMXCounterImpl
+		 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getPMXCounter()
+		 * @generated
+		 */
+		EClass PMX_COUNTER = eINSTANCE.getPMXCounter();
+
+		/**
+		 * The meta object literal for the '<em><b>Total Count</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PMX_COUNTER__TOTAL_COUNT = eINSTANCE.getPMXCounter_TotalCount();
+
+		/**
+		 * The meta object literal for the '<em><b>Ltr Count</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PMX_COUNTER__LTR_COUNT = eINSTANCE.getPMXCounter_LtrCount();
+
+		/**
+		 * The meta object literal for the '<em><b>Ltr Avg Speed Kmh</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PMX_COUNTER__LTR_AVG_SPEED_KMH = eINSTANCE.getPMXCounter_LtrAvgSpeedKmh();
+
+		/**
+		 * The meta object literal for the '<em><b>Rtl Count</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PMX_COUNTER__RTL_COUNT = eINSTANCE.getPMXCounter_RtlCount();
+
+		/**
+		 * The meta object literal for the '<em><b>Rtl Avg Speed Kmh</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PMX_COUNTER__RTL_AVG_SPEED_KMH = eINSTANCE.getPMXCounter_RtlAvgSpeedKmh();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.chirpstack.model.chirpstack.impl.PMXStatusImpl <em>PMX Status</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.chirpstack.model.chirpstack.impl.PMXStatusImpl
+		 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getPMXStatus()
+		 * @generated
+		 */
+		EClass PMX_STATUS = eINSTANCE.getPMXStatus();
+
+		/**
+		 * The meta object literal for the '<em><b>Volts</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PMX_STATUS__VOLTS = eINSTANCE.getPMXStatus_Volts();
+
+		/**
+		 * The meta object literal for the '<em><b>Counter Category</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PMX_STATUS__COUNTER_CATEGORY = eINSTANCE.getPMXStatus_CounterCategory();
+
+		/**
+		 * The meta object literal for the '<em><b>Counter Kind</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PMX_STATUS__COUNTER_KIND = eINSTANCE.getPMXStatus_CounterKind();
+
+		/**
+		 * The meta object literal for the '<em><b>Timestamp Utc Hhmm</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PMX_STATUS__TIMESTAMP_UTC_HHMM = eINSTANCE.getPMXStatus_TimestampUtcHhmm();
 
 	}
 

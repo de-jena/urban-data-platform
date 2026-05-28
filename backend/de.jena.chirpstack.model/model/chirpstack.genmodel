@@ -104,5 +104,22 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//Teros21/temperatur2"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//Teros21/battery"/>
     </genClasses>
+    <genClasses ecoreClass="chirpstack.ecore#//PMXTCR">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack.ecore#//PMXTCR/counter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack.ecore#//PMXTCR/status"/>
+    </genClasses>
+    <genClasses ecoreClass="chirpstack.ecore#//PMXCounter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//PMXCounter/totalCount"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//PMXCounter/ltrCount"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//PMXCounter/ltrAvgSpeedKmh"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//PMXCounter/rtlCount"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//PMXCounter/rtlAvgSpeedKmh"/>
+    </genClasses>
+    <genClasses ecoreClass="chirpstack.ecore#//PMXStatus">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//PMXStatus/volts"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//PMXStatus/counterCategory"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//PMXStatus/counterKind"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//PMXStatus/timestampUtcHhmm"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>
