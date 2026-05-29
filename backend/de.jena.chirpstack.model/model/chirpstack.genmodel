@@ -168,5 +168,16 @@
     <genClasses ecoreClass="chirpstack.ecore#//SE212Status">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//SE212Status/battery"/>
     </genClasses>
+    <genClasses ecoreClass="chirpstack.ecore#//DDS45">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack.ecore#//DDS45/distance"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack.ecore#//DDS45/status"/>
+    </genClasses>
+    <genClasses ecoreClass="chirpstack.ecore#//DDS45Distance">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//DDS45Distance/distance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//DDS45Distance/temperature"/>
+    </genClasses>
+    <genClasses ecoreClass="chirpstack.ecore#//DDS45Status">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//DDS45Status/battery"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

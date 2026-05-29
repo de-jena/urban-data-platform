@@ -100,6 +100,9 @@ public class ChirpstackFactoryImpl extends EFactoryImpl implements ChirpstackFac
 			case ChirpstackPackage.SE212: return createSE212();
 			case ChirpstackPackage.SE212_LIGHT: return createSE212Light();
 			case ChirpstackPackage.SE212_STATUS: return createSE212Status();
+			case ChirpstackPackage.DDS45: return createDDS45();
+			case ChirpstackPackage.DDS45_DISTANCE: return createDDS45Distance();
+			case ChirpstackPackage.DDS45_STATUS: return createDDS45Status();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -466,6 +469,39 @@ public class ChirpstackFactoryImpl extends EFactoryImpl implements ChirpstackFac
 	public SE212Status createSE212Status() {
 		SE212StatusImpl se212Status = new SE212StatusImpl();
 		return se212Status;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DDS45 createDDS45() {
+		DDS45Impl dds45 = new DDS45Impl();
+		return dds45;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DDS45Distance createDDS45Distance() {
+		DDS45DistanceImpl dds45Distance = new DDS45DistanceImpl();
+		return dds45Distance;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DDS45Status createDDS45Status() {
+		DDS45StatusImpl dds45Status = new DDS45StatusImpl();
+		return dds45Status;
 	}
 
 	/**

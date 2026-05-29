@@ -333,6 +333,33 @@ public interface ChirpstackFactory extends EFactory {
 	SE212Status createSE212Status();
 
 	/**
+	 * Returns a new object of class '<em>DDS45</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>DDS45</em>'.
+	 * @generated
+	 */
+	DDS45 createDDS45();
+
+	/**
+	 * Returns a new object of class '<em>DDS45 Distance</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>DDS45 Distance</em>'.
+	 * @generated
+	 */
+	DDS45Distance createDDS45Distance();
+
+	/**
+	 * Returns a new object of class '<em>DDS45 Status</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>DDS45 Status</em>'.
+	 * @generated
+	 */
+	DDS45Status createDDS45Status();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

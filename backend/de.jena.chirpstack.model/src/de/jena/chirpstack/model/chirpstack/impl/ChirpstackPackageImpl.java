@@ -21,6 +21,8 @@ import de.jena.chirpstack.model.chirpstack.AtmosStatus;
 import de.jena.chirpstack.model.chirpstack.Atmosphere;
 import de.jena.chirpstack.model.chirpstack.ChirpstackFactory;
 import de.jena.chirpstack.model.chirpstack.ChirpstackPackage;
+import de.jena.chirpstack.model.chirpstack.DDS45Distance;
+import de.jena.chirpstack.model.chirpstack.DDS45Status;
 import de.jena.chirpstack.model.chirpstack.Device;
 import de.jena.chirpstack.model.chirpstack.Dragino;
 import de.jena.chirpstack.model.chirpstack.Kalyx;
@@ -289,6 +291,27 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 	 * @generated
 	 */
 	private EClass se212StatusEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass dds45EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass dds45DistanceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass dds45StatusEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -1619,6 +1642,86 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 	 * @generated
 	 */
 	@Override
+	public EClass getDDS45() {
+		return dds45EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDDS45_Distance() {
+		return (EReference)dds45EClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDDS45_Status() {
+		return (EReference)dds45EClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getDDS45Distance() {
+		return dds45DistanceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getDDS45Distance_Distance() {
+		return (EAttribute)dds45DistanceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getDDS45Distance_Temperature() {
+		return (EAttribute)dds45DistanceEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getDDS45Status() {
+		return dds45StatusEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getDDS45Status_Battery() {
+		return (EAttribute)dds45StatusEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public ChirpstackFactory getChirpstackFactory() {
 		return (ChirpstackFactory)getEFactoryInstance();
 	}
@@ -1800,6 +1903,17 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 
 		se212StatusEClass = createEClass(SE212_STATUS);
 		createEAttribute(se212StatusEClass, SE212_STATUS__BATTERY);
+
+		dds45EClass = createEClass(DDS45);
+		createEReference(dds45EClass, DDS45__DISTANCE);
+		createEReference(dds45EClass, DDS45__STATUS);
+
+		dds45DistanceEClass = createEClass(DDS45_DISTANCE);
+		createEAttribute(dds45DistanceEClass, DDS45_DISTANCE__DISTANCE);
+		createEAttribute(dds45DistanceEClass, DDS45_DISTANCE__TEMPERATURE);
+
+		dds45StatusEClass = createEClass(DDS45_STATUS);
+		createEAttribute(dds45StatusEClass, DDS45_STATUS__BATTERY);
 	}
 
 	/**
@@ -1866,6 +1980,9 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 		se212EClass.getESuperTypes().add(theProviderPackage.getProvider());
 		se212LightEClass.getESuperTypes().add(theProviderPackage.getService());
 		se212StatusEClass.getESuperTypes().add(theProviderPackage.getService());
+		dds45EClass.getESuperTypes().add(theProviderPackage.getProvider());
+		dds45DistanceEClass.getESuperTypes().add(theProviderPackage.getService());
+		dds45StatusEClass.getESuperTypes().add(theProviderPackage.getService());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(draginoEClass, Dragino.class, "Dragino", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2027,6 +2144,17 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 		initEClass(se212StatusEClass, SE212Status.class, "SE212Status", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSE212Status_Battery(), ecorePackage.getEDouble(), "battery", null, 0, 1, SE212Status.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(dds45EClass, de.jena.chirpstack.model.chirpstack.DDS45.class, "DDS45", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDDS45_Distance(), this.getDDS45Distance(), null, "distance", null, 0, 1, de.jena.chirpstack.model.chirpstack.DDS45.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDDS45_Status(), this.getDDS45Status(), null, "status", null, 0, 1, de.jena.chirpstack.model.chirpstack.DDS45.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(dds45DistanceEClass, DDS45Distance.class, "DDS45Distance", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDDS45Distance_Distance(), ecorePackage.getEDouble(), "distance", null, 0, 1, DDS45Distance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDDS45Distance_Temperature(), ecorePackage.getEDouble(), "temperature", null, 0, 1, DDS45Distance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(dds45StatusEClass, DDS45Status.class, "DDS45Status", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDDS45Status_Battery(), ecorePackage.getEDouble(), "battery", null, 0, 1, DDS45Status.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		// Create resource
 		createResource(eNS_URI);
 
@@ -2164,6 +2292,14 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 			   "name", "SE-212",
 			   "profileName", "SE-212",
 			   "profileId", "f5b5ae47-348e-4dc2-a59d-34c61f74a86a"
+		   });
+		addAnnotation
+		  (dds45EClass,
+		   source,
+		   new String[] {
+			   "name", "Dragino DDS45-LB",
+			   "profileName", "Dragino DDS45-LB",
+			   "profileId", "47cda612-0895-4c4a-828f-e3f509907eda"
 		   });
 	}
 
@@ -2577,6 +2713,24 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 		   source,
 		   new String[] {
 			   "path", "object/battery_V"
+		   });
+		addAnnotation
+		  (getDDS45Distance_Distance(),
+		   source,
+		   new String[] {
+			   "path", "object/Distance"
+		   });
+		addAnnotation
+		  (getDDS45Distance_Temperature(),
+		   source,
+		   new String[] {
+			   "path", "object/TempC_DS18B20"
+		   });
+		addAnnotation
+		  (getDDS45Status_Battery(),
+		   source,
+		   new String[] {
+			   "path", "object/Battery"
 		   });
 	}
 
