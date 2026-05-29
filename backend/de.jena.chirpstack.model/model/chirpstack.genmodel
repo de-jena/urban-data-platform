@@ -121,5 +121,18 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//PMXStatus/counterKind"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//PMXStatus/timestampUtcHhmm"/>
     </genClasses>
+    <genClasses ecoreClass="chirpstack.ecore#//Atmos14">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack.ecore#//Atmos14/atmosphere"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack.ecore#//Atmos14/status"/>
+    </genClasses>
+    <genClasses ecoreClass="chirpstack.ecore#//Atmosphere">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//Atmosphere/temperature"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//Atmosphere/relHumidity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//Atmosphere/airPressure"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//Atmosphere/vapourPressure"/>
+    </genClasses>
+    <genClasses ecoreClass="chirpstack.ecore#//AtmosStatus">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//AtmosStatus/battery"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

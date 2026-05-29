@@ -88,6 +88,9 @@ public class ChirpstackFactoryImpl extends EFactoryImpl implements ChirpstackFac
 			case ChirpstackPackage.PMXTCR: return createPMXTCR();
 			case ChirpstackPackage.PMX_COUNTER: return createPMXCounter();
 			case ChirpstackPackage.PMX_STATUS: return createPMXStatus();
+			case ChirpstackPackage.ATMOS14: return createAtmos14();
+			case ChirpstackPackage.ATMOSPHERE: return createAtmosphere();
+			case ChirpstackPackage.ATMOS_STATUS: return createAtmosStatus();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -322,6 +325,39 @@ public class ChirpstackFactoryImpl extends EFactoryImpl implements ChirpstackFac
 	public PMXStatus createPMXStatus() {
 		PMXStatusImpl pmxStatus = new PMXStatusImpl();
 		return pmxStatus;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Atmos14 createAtmos14() {
+		Atmos14Impl atmos14 = new Atmos14Impl();
+		return atmos14;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Atmosphere createAtmosphere() {
+		AtmosphereImpl atmosphere = new AtmosphereImpl();
+		return atmosphere;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AtmosStatus createAtmosStatus() {
+		AtmosStatusImpl atmosStatus = new AtmosStatusImpl();
+		return atmosStatus;
 	}
 
 	/**

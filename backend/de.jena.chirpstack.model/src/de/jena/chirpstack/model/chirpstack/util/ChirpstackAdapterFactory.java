@@ -166,6 +166,18 @@ public class ChirpstackAdapterFactory extends AdapterFactoryImpl {
 				return createPMXStatusAdapter();
 			}
 			@Override
+			public Adapter caseAtmos14(Atmos14 object) {
+				return createAtmos14Adapter();
+			}
+			@Override
+			public Adapter caseAtmosphere(Atmosphere object) {
+				return createAtmosphereAdapter();
+			}
+			@Override
+			public Adapter caseAtmosStatus(AtmosStatus object) {
+				return createAtmosStatusAdapter();
+			}
+			@Override
 			public Adapter caseProvider(Provider object) {
 				return createProviderAdapter();
 			}
@@ -484,6 +496,48 @@ public class ChirpstackAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPMXStatusAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.chirpstack.model.chirpstack.Atmos14 <em>Atmos14</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.chirpstack.model.chirpstack.Atmos14
+	 * @generated
+	 */
+	public Adapter createAtmos14Adapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.chirpstack.model.chirpstack.Atmosphere <em>Atmosphere</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.chirpstack.model.chirpstack.Atmosphere
+	 * @generated
+	 */
+	public Adapter createAtmosphereAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.chirpstack.model.chirpstack.AtmosStatus <em>Atmos Status</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.chirpstack.model.chirpstack.AtmosStatus
+	 * @generated
+	 */
+	public Adapter createAtmosStatusAdapter() {
 		return null;
 	}
 

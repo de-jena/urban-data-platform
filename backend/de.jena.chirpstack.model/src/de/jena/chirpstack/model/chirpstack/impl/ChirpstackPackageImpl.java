@@ -14,6 +14,9 @@
 package de.jena.chirpstack.model.chirpstack.impl;
 
 import de.jena.chirpstack.model.chirpstack.Air;
+import de.jena.chirpstack.model.chirpstack.Atmos14;
+import de.jena.chirpstack.model.chirpstack.AtmosStatus;
+import de.jena.chirpstack.model.chirpstack.Atmosphere;
 import de.jena.chirpstack.model.chirpstack.ChirpstackFactory;
 import de.jena.chirpstack.model.chirpstack.ChirpstackPackage;
 import de.jena.chirpstack.model.chirpstack.Device;
@@ -194,6 +197,27 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 	 * @generated
 	 */
 	private EClass pmxStatusEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass atmos14EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass atmosphereEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass atmosStatusEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -1174,6 +1198,106 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 	 * @generated
 	 */
 	@Override
+	public EClass getAtmos14() {
+		return atmos14EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getAtmos14_Atmosphere() {
+		return (EReference)atmos14EClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getAtmos14_Status() {
+		return (EReference)atmos14EClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getAtmosphere() {
+		return atmosphereEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAtmosphere_Temperature() {
+		return (EAttribute)atmosphereEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAtmosphere_RelHumidity() {
+		return (EAttribute)atmosphereEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAtmosphere_AirPressure() {
+		return (EAttribute)atmosphereEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAtmosphere_VapourPressure() {
+		return (EAttribute)atmosphereEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getAtmosStatus() {
+		return atmosStatusEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAtmosStatus_Battery() {
+		return (EAttribute)atmosStatusEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public ChirpstackFactory getChirpstackFactory() {
 		return (ChirpstackFactory)getEFactoryInstance();
 	}
@@ -1308,6 +1432,19 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 		createEAttribute(pmxStatusEClass, PMX_STATUS__COUNTER_CATEGORY);
 		createEAttribute(pmxStatusEClass, PMX_STATUS__COUNTER_KIND);
 		createEAttribute(pmxStatusEClass, PMX_STATUS__TIMESTAMP_UTC_HHMM);
+
+		atmos14EClass = createEClass(ATMOS14);
+		createEReference(atmos14EClass, ATMOS14__ATMOSPHERE);
+		createEReference(atmos14EClass, ATMOS14__STATUS);
+
+		atmosphereEClass = createEClass(ATMOSPHERE);
+		createEAttribute(atmosphereEClass, ATMOSPHERE__TEMPERATURE);
+		createEAttribute(atmosphereEClass, ATMOSPHERE__REL_HUMIDITY);
+		createEAttribute(atmosphereEClass, ATMOSPHERE__AIR_PRESSURE);
+		createEAttribute(atmosphereEClass, ATMOSPHERE__VAPOUR_PRESSURE);
+
+		atmosStatusEClass = createEClass(ATMOS_STATUS);
+		createEAttribute(atmosStatusEClass, ATMOS_STATUS__BATTERY);
 	}
 
 	/**
@@ -1362,6 +1499,9 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 		pmxtcrEClass.getESuperTypes().add(theProviderPackage.getProvider());
 		pmxCounterEClass.getESuperTypes().add(theProviderPackage.getService());
 		pmxStatusEClass.getESuperTypes().add(theProviderPackage.getService());
+		atmos14EClass.getESuperTypes().add(theProviderPackage.getProvider());
+		atmosphereEClass.getESuperTypes().add(theProviderPackage.getService());
+		atmosStatusEClass.getESuperTypes().add(theProviderPackage.getService());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(draginoEClass, Dragino.class, "Dragino", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1476,6 +1616,19 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 		initEAttribute(getPMXStatus_CounterKind(), ecorePackage.getEString(), "counterKind", null, 0, 1, PMXStatus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPMXStatus_TimestampUtcHhmm(), ecorePackage.getEString(), "timestampUtcHhmm", null, 0, 1, PMXStatus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(atmos14EClass, Atmos14.class, "Atmos14", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAtmos14_Atmosphere(), this.getAtmosphere(), null, "atmosphere", null, 0, 1, Atmos14.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAtmos14_Status(), this.getAtmosStatus(), null, "status", null, 0, 1, Atmos14.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(atmosphereEClass, Atmosphere.class, "Atmosphere", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAtmosphere_Temperature(), ecorePackage.getEDouble(), "temperature", null, 0, 1, Atmosphere.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAtmosphere_RelHumidity(), ecorePackage.getEDouble(), "relHumidity", null, 0, 1, Atmosphere.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAtmosphere_AirPressure(), ecorePackage.getEDouble(), "airPressure", null, 0, 1, Atmosphere.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAtmosphere_VapourPressure(), ecorePackage.getEDouble(), "vapourPressure", null, 0, 1, Atmosphere.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(atmosStatusEClass, AtmosStatus.class, "AtmosStatus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAtmosStatus_Battery(), ecorePackage.getEDouble(), "battery", null, 0, 1, AtmosStatus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		// Create resource
 		createResource(eNS_URI);
 
@@ -1581,6 +1734,14 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 			   "name", "PMX_TCR",
 			   "profileName", "PMX TCR",
 			   "profileId", "3ad23c8d-1965-4535-8ef0-ab56ca502f03"
+		   });
+		addAnnotation
+		  (atmos14EClass,
+		   source,
+		   new String[] {
+			   "name", "Atmos-14",
+			   "profileName", "Atmos-14",
+			   "profileId", "6c6b6dd0-a12c-45f1-ac18-621c12fa2f08"
 		   });
 	}
 
@@ -1904,6 +2065,36 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 		   source,
 		   new String[] {
 			   "path", "object/timestamp_utc_hhmm"
+		   });
+		addAnnotation
+		  (getAtmosphere_Temperature(),
+		   source,
+		   new String[] {
+			   "path", "object/sensors/0/temperature_degC"
+		   });
+		addAnnotation
+		  (getAtmosphere_RelHumidity(),
+		   source,
+		   new String[] {
+			   "path", "object/sensors/0/rel_humidity"
+		   });
+		addAnnotation
+		  (getAtmosphere_AirPressure(),
+		   source,
+		   new String[] {
+			   "path", "object/sensors/0/air_pressure_kPa"
+		   });
+		addAnnotation
+		  (getAtmosphere_VapourPressure(),
+		   source,
+		   new String[] {
+			   "path", "object/sensors/0/vapour_pressure_kPa"
+		   });
+		addAnnotation
+		  (getAtmosStatus_Battery(),
+		   source,
+		   new String[] {
+			   "path", "object/BatV"
 		   });
 	}
 
