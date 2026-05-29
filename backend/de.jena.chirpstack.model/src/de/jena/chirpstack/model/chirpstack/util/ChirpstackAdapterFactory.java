@@ -190,6 +190,18 @@ public class ChirpstackAdapterFactory extends AdapterFactoryImpl {
 				return createAtmos22StatusAdapter();
 			}
 			@Override
+			public Adapter caseKalyx(Kalyx object) {
+				return createKalyxAdapter();
+			}
+			@Override
+			public Adapter caseKalyxRain(KalyxRain object) {
+				return createKalyxRainAdapter();
+			}
+			@Override
+			public Adapter caseKalyxStatus(KalyxStatus object) {
+				return createKalyxStatusAdapter();
+			}
+			@Override
 			public Adapter caseProvider(Provider object) {
 				return createProviderAdapter();
 			}
@@ -592,6 +604,48 @@ public class ChirpstackAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAtmos22StatusAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.chirpstack.model.chirpstack.Kalyx <em>Kalyx</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.chirpstack.model.chirpstack.Kalyx
+	 * @generated
+	 */
+	public Adapter createKalyxAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.chirpstack.model.chirpstack.KalyxRain <em>Kalyx Rain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.chirpstack.model.chirpstack.KalyxRain
+	 * @generated
+	 */
+	public Adapter createKalyxRainAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.chirpstack.model.chirpstack.KalyxStatus <em>Kalyx Status</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.chirpstack.model.chirpstack.KalyxStatus
+	 * @generated
+	 */
+	public Adapter createKalyxStatusAdapter() {
 		return null;
 	}
 

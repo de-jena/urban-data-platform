@@ -2371,6 +2371,216 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 */
 	int ATMOS22_STATUS_OPERATION_COUNT = ProviderPackage.SERVICE_OPERATION_COUNT + 0;
 
+	/**
+	 * The meta object id for the '{@link de.jena.chirpstack.model.chirpstack.impl.KalyxImpl <em>Kalyx</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.chirpstack.model.chirpstack.impl.KalyxImpl
+	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getKalyx()
+	 * @generated
+	 */
+	int KALYX = 27;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KALYX__ID = ProviderPackage.PROVIDER__ID;
+
+	/**
+	 * The feature id for the '<em><b>Admin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KALYX__ADMIN = ProviderPackage.PROVIDER__ADMIN;
+
+	/**
+	 * The feature id for the '<em><b>Linked Providers</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KALYX__LINKED_PROVIDERS = ProviderPackage.PROVIDER__LINKED_PROVIDERS;
+
+	/**
+	 * The feature id for the '<em><b>Rain</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KALYX__RAIN = ProviderPackage.PROVIDER_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Status</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KALYX__STATUS = ProviderPackage.PROVIDER_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Kalyx</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KALYX_FEATURE_COUNT = ProviderPackage.PROVIDER_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Get Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KALYX___GET_SERVICE__STRING = ProviderPackage.PROVIDER___GET_SERVICE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Service EClass</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KALYX___GET_SERVICE_ECLASS__STRING = ProviderPackage.PROVIDER___GET_SERVICE_ECLASS__STRING;
+
+	/**
+	 * The number of operations of the '<em>Kalyx</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KALYX_OPERATION_COUNT = ProviderPackage.PROVIDER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.chirpstack.model.chirpstack.impl.KalyxRainImpl <em>Kalyx Rain</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.chirpstack.model.chirpstack.impl.KalyxRainImpl
+	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getKalyxRain()
+	 * @generated
+	 */
+	int KALYX_RAIN = 28;
+
+	/**
+	 * The feature id for the '<em><b>Metadata</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KALYX_RAIN__METADATA = ProviderPackage.SERVICE__METADATA;
+
+	/**
+	 * The feature id for the '<em><b>Rain Sum</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KALYX_RAIN__RAIN_SUM = ProviderPackage.SERVICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Count</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KALYX_RAIN__COUNT = ProviderPackage.SERVICE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Kalyx Rain</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KALYX_RAIN_FEATURE_COUNT = ProviderPackage.SERVICE_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>EIs Set</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KALYX_RAIN___EIS_SET__ESTRUCTURALFEATURE = ProviderPackage.SERVICE___EIS_SET__ESTRUCTURALFEATURE;
+
+	/**
+	 * The number of operations of the '<em>Kalyx Rain</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KALYX_RAIN_OPERATION_COUNT = ProviderPackage.SERVICE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.chirpstack.model.chirpstack.impl.KalyxStatusImpl <em>Kalyx Status</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.chirpstack.model.chirpstack.impl.KalyxStatusImpl
+	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getKalyxStatus()
+	 * @generated
+	 */
+	int KALYX_STATUS = 29;
+
+	/**
+	 * The feature id for the '<em><b>Metadata</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KALYX_STATUS__METADATA = ProviderPackage.SERVICE__METADATA;
+
+	/**
+	 * The feature id for the '<em><b>Battery</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KALYX_STATUS__BATTERY = ProviderPackage.SERVICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Kalyx Status</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KALYX_STATUS_FEATURE_COUNT = ProviderPackage.SERVICE_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>EIs Set</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KALYX_STATUS___EIS_SET__ESTRUCTURALFEATURE = ProviderPackage.SERVICE___EIS_SET__ESTRUCTURALFEATURE;
+
+	/**
+	 * The number of operations of the '<em>Kalyx Status</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KALYX_STATUS_OPERATION_COUNT = ProviderPackage.SERVICE_OPERATION_COUNT + 0;
+
 
 	/**
 	 * Returns the meta object for class '{@link de.jena.chirpstack.model.chirpstack.Dragino <em>Dragino</em>}'.
@@ -3567,6 +3777,91 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getAtmos22Status_Battery();
 
 	/**
+	 * Returns the meta object for class '{@link de.jena.chirpstack.model.chirpstack.Kalyx <em>Kalyx</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Kalyx</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.Kalyx
+	 * @generated
+	 */
+	EClass getKalyx();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link de.jena.chirpstack.model.chirpstack.Kalyx#getRain <em>Rain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Rain</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.Kalyx#getRain()
+	 * @see #getKalyx()
+	 * @generated
+	 */
+	EReference getKalyx_Rain();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link de.jena.chirpstack.model.chirpstack.Kalyx#getStatus <em>Status</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Status</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.Kalyx#getStatus()
+	 * @see #getKalyx()
+	 * @generated
+	 */
+	EReference getKalyx_Status();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.chirpstack.model.chirpstack.KalyxRain <em>Kalyx Rain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Kalyx Rain</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.KalyxRain
+	 * @generated
+	 */
+	EClass getKalyxRain();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.KalyxRain#getRainSum <em>Rain Sum</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Rain Sum</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.KalyxRain#getRainSum()
+	 * @see #getKalyxRain()
+	 * @generated
+	 */
+	EAttribute getKalyxRain_RainSum();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.KalyxRain#getCount <em>Count</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Count</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.KalyxRain#getCount()
+	 * @see #getKalyxRain()
+	 * @generated
+	 */
+	EAttribute getKalyxRain_Count();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.chirpstack.model.chirpstack.KalyxStatus <em>Kalyx Status</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Kalyx Status</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.KalyxStatus
+	 * @generated
+	 */
+	EClass getKalyxStatus();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.KalyxStatus#getBattery <em>Battery</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Battery</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.KalyxStatus#getBattery()
+	 * @see #getKalyxStatus()
+	 * @generated
+	 */
+	EAttribute getKalyxStatus_Battery();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4530,6 +4825,76 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 		 * @generated
 		 */
 		EAttribute ATMOS22_STATUS__BATTERY = eINSTANCE.getAtmos22Status_Battery();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.chirpstack.model.chirpstack.impl.KalyxImpl <em>Kalyx</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.chirpstack.model.chirpstack.impl.KalyxImpl
+		 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getKalyx()
+		 * @generated
+		 */
+		EClass KALYX = eINSTANCE.getKalyx();
+
+		/**
+		 * The meta object literal for the '<em><b>Rain</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference KALYX__RAIN = eINSTANCE.getKalyx_Rain();
+
+		/**
+		 * The meta object literal for the '<em><b>Status</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference KALYX__STATUS = eINSTANCE.getKalyx_Status();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.chirpstack.model.chirpstack.impl.KalyxRainImpl <em>Kalyx Rain</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.chirpstack.model.chirpstack.impl.KalyxRainImpl
+		 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getKalyxRain()
+		 * @generated
+		 */
+		EClass KALYX_RAIN = eINSTANCE.getKalyxRain();
+
+		/**
+		 * The meta object literal for the '<em><b>Rain Sum</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute KALYX_RAIN__RAIN_SUM = eINSTANCE.getKalyxRain_RainSum();
+
+		/**
+		 * The meta object literal for the '<em><b>Count</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute KALYX_RAIN__COUNT = eINSTANCE.getKalyxRain_Count();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.chirpstack.model.chirpstack.impl.KalyxStatusImpl <em>Kalyx Status</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.chirpstack.model.chirpstack.impl.KalyxStatusImpl
+		 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getKalyxStatus()
+		 * @generated
+		 */
+		EClass KALYX_STATUS = eINSTANCE.getKalyxStatus();
+
+		/**
+		 * The meta object literal for the '<em><b>Battery</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute KALYX_STATUS__BATTERY = eINSTANCE.getKalyxStatus_Battery();
 
 	}
 

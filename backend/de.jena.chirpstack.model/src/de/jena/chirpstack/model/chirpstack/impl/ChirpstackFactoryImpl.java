@@ -94,6 +94,9 @@ public class ChirpstackFactoryImpl extends EFactoryImpl implements ChirpstackFac
 			case ChirpstackPackage.ATMOS22: return createAtmos22();
 			case ChirpstackPackage.WIND: return createWind();
 			case ChirpstackPackage.ATMOS22_STATUS: return createAtmos22Status();
+			case ChirpstackPackage.KALYX: return createKalyx();
+			case ChirpstackPackage.KALYX_RAIN: return createKalyxRain();
+			case ChirpstackPackage.KALYX_STATUS: return createKalyxStatus();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -394,6 +397,39 @@ public class ChirpstackFactoryImpl extends EFactoryImpl implements ChirpstackFac
 	public Atmos22Status createAtmos22Status() {
 		Atmos22StatusImpl atmos22Status = new Atmos22StatusImpl();
 		return atmos22Status;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Kalyx createKalyx() {
+		KalyxImpl kalyx = new KalyxImpl();
+		return kalyx;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public KalyxRain createKalyxRain() {
+		KalyxRainImpl kalyxRain = new KalyxRainImpl();
+		return kalyxRain;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public KalyxStatus createKalyxStatus() {
+		KalyxStatusImpl kalyxStatus = new KalyxStatusImpl();
+		return kalyxStatus;
 	}
 
 	/**

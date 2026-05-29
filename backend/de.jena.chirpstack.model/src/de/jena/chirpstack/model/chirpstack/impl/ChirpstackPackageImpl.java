@@ -23,6 +23,9 @@ import de.jena.chirpstack.model.chirpstack.ChirpstackFactory;
 import de.jena.chirpstack.model.chirpstack.ChirpstackPackage;
 import de.jena.chirpstack.model.chirpstack.Device;
 import de.jena.chirpstack.model.chirpstack.Dragino;
+import de.jena.chirpstack.model.chirpstack.Kalyx;
+import de.jena.chirpstack.model.chirpstack.KalyxRain;
+import de.jena.chirpstack.model.chirpstack.KalyxStatus;
 import de.jena.chirpstack.model.chirpstack.Light;
 import de.jena.chirpstack.model.chirpstack.PMXCounter;
 import de.jena.chirpstack.model.chirpstack.PMXStatus;
@@ -242,6 +245,27 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 	 * @generated
 	 */
 	private EClass atmos22StatusEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass kalyxEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass kalyxRainEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass kalyxStatusEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -1422,6 +1446,86 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 	 * @generated
 	 */
 	@Override
+	public EClass getKalyx() {
+		return kalyxEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getKalyx_Rain() {
+		return (EReference)kalyxEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getKalyx_Status() {
+		return (EReference)kalyxEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getKalyxRain() {
+		return kalyxRainEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getKalyxRain_RainSum() {
+		return (EAttribute)kalyxRainEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getKalyxRain_Count() {
+		return (EAttribute)kalyxRainEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getKalyxStatus() {
+		return kalyxStatusEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getKalyxStatus_Battery() {
+		return (EAttribute)kalyxStatusEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public ChirpstackFactory getChirpstackFactory() {
 		return (ChirpstackFactory)getEFactoryInstance();
 	}
@@ -1582,6 +1686,17 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 
 		atmos22StatusEClass = createEClass(ATMOS22_STATUS);
 		createEAttribute(atmos22StatusEClass, ATMOS22_STATUS__BATTERY);
+
+		kalyxEClass = createEClass(KALYX);
+		createEReference(kalyxEClass, KALYX__RAIN);
+		createEReference(kalyxEClass, KALYX__STATUS);
+
+		kalyxRainEClass = createEClass(KALYX_RAIN);
+		createEAttribute(kalyxRainEClass, KALYX_RAIN__RAIN_SUM);
+		createEAttribute(kalyxRainEClass, KALYX_RAIN__COUNT);
+
+		kalyxStatusEClass = createEClass(KALYX_STATUS);
+		createEAttribute(kalyxStatusEClass, KALYX_STATUS__BATTERY);
 	}
 
 	/**
@@ -1642,6 +1757,9 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 		atmos22EClass.getESuperTypes().add(theProviderPackage.getProvider());
 		windEClass.getESuperTypes().add(theProviderPackage.getService());
 		atmos22StatusEClass.getESuperTypes().add(theProviderPackage.getService());
+		kalyxEClass.getESuperTypes().add(theProviderPackage.getProvider());
+		kalyxRainEClass.getESuperTypes().add(theProviderPackage.getService());
+		kalyxStatusEClass.getESuperTypes().add(theProviderPackage.getService());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(draginoEClass, Dragino.class, "Dragino", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1782,6 +1900,17 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 		initEClass(atmos22StatusEClass, Atmos22Status.class, "Atmos22Status", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAtmos22Status_Battery(), ecorePackage.getEDouble(), "battery", null, 0, 1, Atmos22Status.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(kalyxEClass, Kalyx.class, "Kalyx", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getKalyx_Rain(), this.getKalyxRain(), null, "rain", null, 0, 1, Kalyx.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getKalyx_Status(), this.getKalyxStatus(), null, "status", null, 0, 1, Kalyx.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(kalyxRainEClass, KalyxRain.class, "KalyxRain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getKalyxRain_RainSum(), ecorePackage.getEDouble(), "rainSum", null, 0, 1, KalyxRain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getKalyxRain_Count(), ecorePackage.getEDouble(), "count", null, 0, 1, KalyxRain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(kalyxStatusEClass, KalyxStatus.class, "KalyxStatus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getKalyxStatus_Battery(), ecorePackage.getEDouble(), "battery", null, 0, 1, KalyxStatus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		// Create resource
 		createResource(eNS_URI);
 
@@ -1903,6 +2032,14 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 			   "name", "Atmos-22",
 			   "profileName", "Atmos-22",
 			   "profileId", "33bc4671-bad3-461b-8804-8967a7f2434b"
+		   });
+		addAnnotation
+		  (kalyxEClass,
+		   source,
+		   new String[] {
+			   "name", "Kalyx",
+			   "profileName", "Kalyx",
+			   "profileId", "89daf367-01ce-4b57-8554-2508558a05db"
 		   });
 	}
 
@@ -2283,6 +2420,24 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 		   });
 		addAnnotation
 		  (getAtmos22Status_Battery(),
+		   source,
+		   new String[] {
+			   "path", "object/BatV"
+		   });
+		addAnnotation
+		  (getKalyxRain_RainSum(),
+		   source,
+		   new String[] {
+			   "path", "object/rain_sum_mm"
+		   });
+		addAnnotation
+		  (getKalyxRain_Count(),
+		   source,
+		   new String[] {
+			   "path", "object/Count"
+		   });
+		addAnnotation
+		  (getKalyxStatus_Battery(),
 		   source,
 		   new String[] {
 			   "path", "object/BatV"

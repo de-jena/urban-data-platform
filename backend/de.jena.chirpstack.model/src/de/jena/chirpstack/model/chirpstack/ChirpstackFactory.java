@@ -279,6 +279,33 @@ public interface ChirpstackFactory extends EFactory {
 	Atmos22Status createAtmos22Status();
 
 	/**
+	 * Returns a new object of class '<em>Kalyx</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Kalyx</em>'.
+	 * @generated
+	 */
+	Kalyx createKalyx();
+
+	/**
+	 * Returns a new object of class '<em>Kalyx Rain</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Kalyx Rain</em>'.
+	 * @generated
+	 */
+	KalyxRain createKalyxRain();
+
+	/**
+	 * Returns a new object of class '<em>Kalyx Status</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Kalyx Status</em>'.
+	 * @generated
+	 */
+	KalyxStatus createKalyxStatus();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -269,6 +269,27 @@ public class ChirpstackSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ChirpstackPackage.KALYX: {
+				Kalyx kalyx = (Kalyx)theEObject;
+				T result = caseKalyx(kalyx);
+				if (result == null) result = caseProvider(kalyx);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ChirpstackPackage.KALYX_RAIN: {
+				KalyxRain kalyxRain = (KalyxRain)theEObject;
+				T result = caseKalyxRain(kalyxRain);
+				if (result == null) result = caseService(kalyxRain);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ChirpstackPackage.KALYX_STATUS: {
+				KalyxStatus kalyxStatus = (KalyxStatus)theEObject;
+				T result = caseKalyxStatus(kalyxStatus);
+				if (result == null) result = caseService(kalyxStatus);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -675,6 +696,51 @@ public class ChirpstackSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAtmos22Status(Atmos22Status object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Kalyx</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Kalyx</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseKalyx(Kalyx object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Kalyx Rain</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Kalyx Rain</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseKalyxRain(KalyxRain object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Kalyx Status</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Kalyx Status</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseKalyxStatus(KalyxStatus object) {
 		return null;
 	}
 
