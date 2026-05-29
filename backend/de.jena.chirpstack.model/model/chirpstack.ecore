@@ -459,4 +459,59 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Kalyx" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Provider">
+    <eAnnotations source="model">
+      <details key="name" value="Kalyx"/>
+      <details key="profileName" value="Kalyx"/>
+      <details key="profileId" value="89daf367-01ce-4b57-8554-2508558a05db"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rain" eType="#//KalyxRain"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="status" eType="#//KalyxStatus"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="KalyxRain" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rainSum" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/rain_sum_mm"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="count" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/Count"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="KalyxStatus" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="battery" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/BatV"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SE212" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Provider">
+    <eAnnotations source="model">
+      <details key="name" value="SE-212"/>
+      <details key="profileName" value="SE-212"/>
+      <details key="profileId" value="f5b5ae47-348e-4dc2-a59d-34c61f74a86a"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="light" eType="#//SE212Light"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="status" eType="#//SE212Status"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SE212Light" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lux" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/sensor_0_lux"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SE212Status" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="battery" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/battery_V"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
 </ecore:EPackage>

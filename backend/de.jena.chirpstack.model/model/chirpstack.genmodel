@@ -147,5 +147,26 @@
     <genClasses ecoreClass="chirpstack.ecore#//Atmos22Status">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//Atmos22Status/battery"/>
     </genClasses>
+    <genClasses ecoreClass="chirpstack.ecore#//Kalyx">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack.ecore#//Kalyx/rain"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack.ecore#//Kalyx/status"/>
+    </genClasses>
+    <genClasses ecoreClass="chirpstack.ecore#//KalyxRain">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//KalyxRain/rainSum"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//KalyxRain/count"/>
+    </genClasses>
+    <genClasses ecoreClass="chirpstack.ecore#//KalyxStatus">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//KalyxStatus/battery"/>
+    </genClasses>
+    <genClasses ecoreClass="chirpstack.ecore#//SE212">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack.ecore#//SE212/light"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack.ecore#//SE212/status"/>
+    </genClasses>
+    <genClasses ecoreClass="chirpstack.ecore#//SE212Light">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//SE212Light/lux"/>
+    </genClasses>
+    <genClasses ecoreClass="chirpstack.ecore#//SE212Status">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//SE212Status/battery"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

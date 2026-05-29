@@ -2581,6 +2581,207 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 */
 	int KALYX_STATUS_OPERATION_COUNT = ProviderPackage.SERVICE_OPERATION_COUNT + 0;
 
+	/**
+	 * The meta object id for the '{@link de.jena.chirpstack.model.chirpstack.impl.SE212Impl <em>SE212</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.chirpstack.model.chirpstack.impl.SE212Impl
+	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getSE212()
+	 * @generated
+	 */
+	int SE212 = 30;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SE212__ID = ProviderPackage.PROVIDER__ID;
+
+	/**
+	 * The feature id for the '<em><b>Admin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SE212__ADMIN = ProviderPackage.PROVIDER__ADMIN;
+
+	/**
+	 * The feature id for the '<em><b>Linked Providers</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SE212__LINKED_PROVIDERS = ProviderPackage.PROVIDER__LINKED_PROVIDERS;
+
+	/**
+	 * The feature id for the '<em><b>Light</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SE212__LIGHT = ProviderPackage.PROVIDER_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Status</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SE212__STATUS = ProviderPackage.PROVIDER_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>SE212</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SE212_FEATURE_COUNT = ProviderPackage.PROVIDER_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Get Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SE212___GET_SERVICE__STRING = ProviderPackage.PROVIDER___GET_SERVICE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Service EClass</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SE212___GET_SERVICE_ECLASS__STRING = ProviderPackage.PROVIDER___GET_SERVICE_ECLASS__STRING;
+
+	/**
+	 * The number of operations of the '<em>SE212</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SE212_OPERATION_COUNT = ProviderPackage.PROVIDER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.chirpstack.model.chirpstack.impl.SE212LightImpl <em>SE212 Light</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.chirpstack.model.chirpstack.impl.SE212LightImpl
+	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getSE212Light()
+	 * @generated
+	 */
+	int SE212_LIGHT = 31;
+
+	/**
+	 * The feature id for the '<em><b>Metadata</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SE212_LIGHT__METADATA = ProviderPackage.SERVICE__METADATA;
+
+	/**
+	 * The feature id for the '<em><b>Lux</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SE212_LIGHT__LUX = ProviderPackage.SERVICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>SE212 Light</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SE212_LIGHT_FEATURE_COUNT = ProviderPackage.SERVICE_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>EIs Set</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SE212_LIGHT___EIS_SET__ESTRUCTURALFEATURE = ProviderPackage.SERVICE___EIS_SET__ESTRUCTURALFEATURE;
+
+	/**
+	 * The number of operations of the '<em>SE212 Light</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SE212_LIGHT_OPERATION_COUNT = ProviderPackage.SERVICE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.chirpstack.model.chirpstack.impl.SE212StatusImpl <em>SE212 Status</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.chirpstack.model.chirpstack.impl.SE212StatusImpl
+	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getSE212Status()
+	 * @generated
+	 */
+	int SE212_STATUS = 32;
+
+	/**
+	 * The feature id for the '<em><b>Metadata</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SE212_STATUS__METADATA = ProviderPackage.SERVICE__METADATA;
+
+	/**
+	 * The feature id for the '<em><b>Battery</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SE212_STATUS__BATTERY = ProviderPackage.SERVICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>SE212 Status</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SE212_STATUS_FEATURE_COUNT = ProviderPackage.SERVICE_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>EIs Set</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SE212_STATUS___EIS_SET__ESTRUCTURALFEATURE = ProviderPackage.SERVICE___EIS_SET__ESTRUCTURALFEATURE;
+
+	/**
+	 * The number of operations of the '<em>SE212 Status</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SE212_STATUS_OPERATION_COUNT = ProviderPackage.SERVICE_OPERATION_COUNT + 0;
+
 
 	/**
 	 * Returns the meta object for class '{@link de.jena.chirpstack.model.chirpstack.Dragino <em>Dragino</em>}'.
@@ -3862,6 +4063,80 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getKalyxStatus_Battery();
 
 	/**
+	 * Returns the meta object for class '{@link de.jena.chirpstack.model.chirpstack.SE212 <em>SE212</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>SE212</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.SE212
+	 * @generated
+	 */
+	EClass getSE212();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link de.jena.chirpstack.model.chirpstack.SE212#getLight <em>Light</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Light</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.SE212#getLight()
+	 * @see #getSE212()
+	 * @generated
+	 */
+	EReference getSE212_Light();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link de.jena.chirpstack.model.chirpstack.SE212#getStatus <em>Status</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Status</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.SE212#getStatus()
+	 * @see #getSE212()
+	 * @generated
+	 */
+	EReference getSE212_Status();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.chirpstack.model.chirpstack.SE212Light <em>SE212 Light</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>SE212 Light</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.SE212Light
+	 * @generated
+	 */
+	EClass getSE212Light();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.SE212Light#getLux <em>Lux</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Lux</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.SE212Light#getLux()
+	 * @see #getSE212Light()
+	 * @generated
+	 */
+	EAttribute getSE212Light_Lux();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.chirpstack.model.chirpstack.SE212Status <em>SE212 Status</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>SE212 Status</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.SE212Status
+	 * @generated
+	 */
+	EClass getSE212Status();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.SE212Status#getBattery <em>Battery</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Battery</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.SE212Status#getBattery()
+	 * @see #getSE212Status()
+	 * @generated
+	 */
+	EAttribute getSE212Status_Battery();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4895,6 +5170,68 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 		 * @generated
 		 */
 		EAttribute KALYX_STATUS__BATTERY = eINSTANCE.getKalyxStatus_Battery();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.chirpstack.model.chirpstack.impl.SE212Impl <em>SE212</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.chirpstack.model.chirpstack.impl.SE212Impl
+		 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getSE212()
+		 * @generated
+		 */
+		EClass SE212 = eINSTANCE.getSE212();
+
+		/**
+		 * The meta object literal for the '<em><b>Light</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SE212__LIGHT = eINSTANCE.getSE212_Light();
+
+		/**
+		 * The meta object literal for the '<em><b>Status</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SE212__STATUS = eINSTANCE.getSE212_Status();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.chirpstack.model.chirpstack.impl.SE212LightImpl <em>SE212 Light</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.chirpstack.model.chirpstack.impl.SE212LightImpl
+		 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getSE212Light()
+		 * @generated
+		 */
+		EClass SE212_LIGHT = eINSTANCE.getSE212Light();
+
+		/**
+		 * The meta object literal for the '<em><b>Lux</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SE212_LIGHT__LUX = eINSTANCE.getSE212Light_Lux();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.chirpstack.model.chirpstack.impl.SE212StatusImpl <em>SE212 Status</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.chirpstack.model.chirpstack.impl.SE212StatusImpl
+		 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getSE212Status()
+		 * @generated
+		 */
+		EClass SE212_STATUS = eINSTANCE.getSE212Status();
+
+		/**
+		 * The meta object literal for the '<em><b>Battery</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SE212_STATUS__BATTERY = eINSTANCE.getSE212Status_Battery();
 
 	}
 

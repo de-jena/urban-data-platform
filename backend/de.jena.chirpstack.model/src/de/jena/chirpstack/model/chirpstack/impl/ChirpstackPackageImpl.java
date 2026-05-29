@@ -30,6 +30,8 @@ import de.jena.chirpstack.model.chirpstack.Light;
 import de.jena.chirpstack.model.chirpstack.PMXCounter;
 import de.jena.chirpstack.model.chirpstack.PMXStatus;
 import de.jena.chirpstack.model.chirpstack.Rain;
+import de.jena.chirpstack.model.chirpstack.SE212Light;
+import de.jena.chirpstack.model.chirpstack.SE212Status;
 import de.jena.chirpstack.model.chirpstack.SenseCap;
 import de.jena.chirpstack.model.chirpstack.SenseCapS2105;
 import de.jena.chirpstack.model.chirpstack.SenseCapS2120;
@@ -266,6 +268,27 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 	 * @generated
 	 */
 	private EClass kalyxStatusEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass se212EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass se212LightEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass se212StatusEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -1526,6 +1549,76 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 	 * @generated
 	 */
 	@Override
+	public EClass getSE212() {
+		return se212EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSE212_Light() {
+		return (EReference)se212EClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSE212_Status() {
+		return (EReference)se212EClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSE212Light() {
+		return se212LightEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getSE212Light_Lux() {
+		return (EAttribute)se212LightEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSE212Status() {
+		return se212StatusEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getSE212Status_Battery() {
+		return (EAttribute)se212StatusEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public ChirpstackFactory getChirpstackFactory() {
 		return (ChirpstackFactory)getEFactoryInstance();
 	}
@@ -1697,6 +1790,16 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 
 		kalyxStatusEClass = createEClass(KALYX_STATUS);
 		createEAttribute(kalyxStatusEClass, KALYX_STATUS__BATTERY);
+
+		se212EClass = createEClass(SE212);
+		createEReference(se212EClass, SE212__LIGHT);
+		createEReference(se212EClass, SE212__STATUS);
+
+		se212LightEClass = createEClass(SE212_LIGHT);
+		createEAttribute(se212LightEClass, SE212_LIGHT__LUX);
+
+		se212StatusEClass = createEClass(SE212_STATUS);
+		createEAttribute(se212StatusEClass, SE212_STATUS__BATTERY);
 	}
 
 	/**
@@ -1760,6 +1863,9 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 		kalyxEClass.getESuperTypes().add(theProviderPackage.getProvider());
 		kalyxRainEClass.getESuperTypes().add(theProviderPackage.getService());
 		kalyxStatusEClass.getESuperTypes().add(theProviderPackage.getService());
+		se212EClass.getESuperTypes().add(theProviderPackage.getProvider());
+		se212LightEClass.getESuperTypes().add(theProviderPackage.getService());
+		se212StatusEClass.getESuperTypes().add(theProviderPackage.getService());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(draginoEClass, Dragino.class, "Dragino", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1911,6 +2017,16 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 		initEClass(kalyxStatusEClass, KalyxStatus.class, "KalyxStatus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getKalyxStatus_Battery(), ecorePackage.getEDouble(), "battery", null, 0, 1, KalyxStatus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(se212EClass, de.jena.chirpstack.model.chirpstack.SE212.class, "SE212", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSE212_Light(), this.getSE212Light(), null, "light", null, 0, 1, de.jena.chirpstack.model.chirpstack.SE212.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSE212_Status(), this.getSE212Status(), null, "status", null, 0, 1, de.jena.chirpstack.model.chirpstack.SE212.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(se212LightEClass, SE212Light.class, "SE212Light", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSE212Light_Lux(), ecorePackage.getEDouble(), "lux", null, 0, 1, SE212Light.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(se212StatusEClass, SE212Status.class, "SE212Status", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSE212Status_Battery(), ecorePackage.getEDouble(), "battery", null, 0, 1, SE212Status.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		// Create resource
 		createResource(eNS_URI);
 
@@ -2040,6 +2156,14 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 			   "name", "Kalyx",
 			   "profileName", "Kalyx",
 			   "profileId", "89daf367-01ce-4b57-8554-2508558a05db"
+		   });
+		addAnnotation
+		  (se212EClass,
+		   source,
+		   new String[] {
+			   "name", "SE-212",
+			   "profileName", "SE-212",
+			   "profileId", "f5b5ae47-348e-4dc2-a59d-34c61f74a86a"
 		   });
 	}
 
@@ -2441,6 +2565,18 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 		   source,
 		   new String[] {
 			   "path", "object/BatV"
+		   });
+		addAnnotation
+		  (getSE212Light_Lux(),
+		   source,
+		   new String[] {
+			   "path", "object/sensor_0_lux"
+		   });
+		addAnnotation
+		  (getSE212Status_Battery(),
+		   source,
+		   new String[] {
+			   "path", "object/battery_V"
 		   });
 	}
 

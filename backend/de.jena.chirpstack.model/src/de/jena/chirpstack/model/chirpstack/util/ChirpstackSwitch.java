@@ -290,6 +290,27 @@ public class ChirpstackSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ChirpstackPackage.SE212: {
+				SE212 se212 = (SE212)theEObject;
+				T result = caseSE212(se212);
+				if (result == null) result = caseProvider(se212);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ChirpstackPackage.SE212_LIGHT: {
+				SE212Light se212Light = (SE212Light)theEObject;
+				T result = caseSE212Light(se212Light);
+				if (result == null) result = caseService(se212Light);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ChirpstackPackage.SE212_STATUS: {
+				SE212Status se212Status = (SE212Status)theEObject;
+				T result = caseSE212Status(se212Status);
+				if (result == null) result = caseService(se212Status);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -741,6 +762,51 @@ public class ChirpstackSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseKalyxStatus(KalyxStatus object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>SE212</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>SE212</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSE212(SE212 object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>SE212 Light</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>SE212 Light</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSE212Light(SE212Light object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>SE212 Status</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>SE212 Status</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSE212Status(SE212Status object) {
 		return null;
 	}
 

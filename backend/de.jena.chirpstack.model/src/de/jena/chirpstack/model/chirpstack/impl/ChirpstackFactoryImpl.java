@@ -97,6 +97,9 @@ public class ChirpstackFactoryImpl extends EFactoryImpl implements ChirpstackFac
 			case ChirpstackPackage.KALYX: return createKalyx();
 			case ChirpstackPackage.KALYX_RAIN: return createKalyxRain();
 			case ChirpstackPackage.KALYX_STATUS: return createKalyxStatus();
+			case ChirpstackPackage.SE212: return createSE212();
+			case ChirpstackPackage.SE212_LIGHT: return createSE212Light();
+			case ChirpstackPackage.SE212_STATUS: return createSE212Status();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -430,6 +433,39 @@ public class ChirpstackFactoryImpl extends EFactoryImpl implements ChirpstackFac
 	public KalyxStatus createKalyxStatus() {
 		KalyxStatusImpl kalyxStatus = new KalyxStatusImpl();
 		return kalyxStatus;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public SE212 createSE212() {
+		SE212Impl se212 = new SE212Impl();
+		return se212;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public SE212Light createSE212Light() {
+		SE212LightImpl se212Light = new SE212LightImpl();
+		return se212Light;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public SE212Status createSE212Status() {
+		SE212StatusImpl se212Status = new SE212StatusImpl();
+		return se212Status;
 	}
 
 	/**

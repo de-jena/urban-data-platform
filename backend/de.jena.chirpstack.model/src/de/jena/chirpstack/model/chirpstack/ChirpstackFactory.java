@@ -306,6 +306,33 @@ public interface ChirpstackFactory extends EFactory {
 	KalyxStatus createKalyxStatus();
 
 	/**
+	 * Returns a new object of class '<em>SE212</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>SE212</em>'.
+	 * @generated
+	 */
+	SE212 createSE212();
+
+	/**
+	 * Returns a new object of class '<em>SE212 Light</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>SE212 Light</em>'.
+	 * @generated
+	 */
+	SE212Light createSE212Light();
+
+	/**
+	 * Returns a new object of class '<em>SE212 Status</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>SE212 Status</em>'.
+	 * @generated
+	 */
+	SE212Status createSE212Status();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
