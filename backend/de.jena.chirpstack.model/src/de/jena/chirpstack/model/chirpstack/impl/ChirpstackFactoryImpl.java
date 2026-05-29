@@ -91,6 +91,9 @@ public class ChirpstackFactoryImpl extends EFactoryImpl implements ChirpstackFac
 			case ChirpstackPackage.ATMOS14: return createAtmos14();
 			case ChirpstackPackage.ATMOSPHERE: return createAtmosphere();
 			case ChirpstackPackage.ATMOS_STATUS: return createAtmosStatus();
+			case ChirpstackPackage.ATMOS22: return createAtmos22();
+			case ChirpstackPackage.WIND: return createWind();
+			case ChirpstackPackage.ATMOS22_STATUS: return createAtmos22Status();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -358,6 +361,39 @@ public class ChirpstackFactoryImpl extends EFactoryImpl implements ChirpstackFac
 	public AtmosStatus createAtmosStatus() {
 		AtmosStatusImpl atmosStatus = new AtmosStatusImpl();
 		return atmosStatus;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Atmos22 createAtmos22() {
+		Atmos22Impl atmos22 = new Atmos22Impl();
+		return atmos22;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Wind createWind() {
+		WindImpl wind = new WindImpl();
+		return wind;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Atmos22Status createAtmos22Status() {
+		Atmos22StatusImpl atmos22Status = new Atmos22StatusImpl();
+		return atmos22Status;
 	}
 
 	/**

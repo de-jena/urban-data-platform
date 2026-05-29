@@ -15,6 +15,8 @@ package de.jena.chirpstack.model.chirpstack.impl;
 
 import de.jena.chirpstack.model.chirpstack.Air;
 import de.jena.chirpstack.model.chirpstack.Atmos14;
+import de.jena.chirpstack.model.chirpstack.Atmos22;
+import de.jena.chirpstack.model.chirpstack.Atmos22Status;
 import de.jena.chirpstack.model.chirpstack.AtmosStatus;
 import de.jena.chirpstack.model.chirpstack.Atmosphere;
 import de.jena.chirpstack.model.chirpstack.ChirpstackFactory;
@@ -34,6 +36,7 @@ import de.jena.chirpstack.model.chirpstack.SolidosTeros21;
 import de.jena.chirpstack.model.chirpstack.TSoil;
 import de.jena.chirpstack.model.chirpstack.Teros21;
 import de.jena.chirpstack.model.chirpstack.Trash;
+import de.jena.chirpstack.model.chirpstack.Wind;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -218,6 +221,27 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 	 * @generated
 	 */
 	private EClass atmosStatusEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass atmos22EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass windEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass atmos22StatusEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -1298,6 +1322,106 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 	 * @generated
 	 */
 	@Override
+	public EClass getAtmos22() {
+		return atmos22EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getAtmos22_Wind() {
+		return (EReference)atmos22EClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getAtmos22_Status() {
+		return (EReference)atmos22EClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getWind() {
+		return windEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getWind_WindSpeed() {
+		return (EAttribute)windEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getWind_WindGust() {
+		return (EAttribute)windEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getWind_WindDirection() {
+		return (EAttribute)windEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getWind_Temperature() {
+		return (EAttribute)windEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getAtmos22Status() {
+		return atmos22StatusEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAtmos22Status_Battery() {
+		return (EAttribute)atmos22StatusEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public ChirpstackFactory getChirpstackFactory() {
 		return (ChirpstackFactory)getEFactoryInstance();
 	}
@@ -1445,6 +1569,19 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 
 		atmosStatusEClass = createEClass(ATMOS_STATUS);
 		createEAttribute(atmosStatusEClass, ATMOS_STATUS__BATTERY);
+
+		atmos22EClass = createEClass(ATMOS22);
+		createEReference(atmos22EClass, ATMOS22__WIND);
+		createEReference(atmos22EClass, ATMOS22__STATUS);
+
+		windEClass = createEClass(WIND);
+		createEAttribute(windEClass, WIND__WIND_SPEED);
+		createEAttribute(windEClass, WIND__WIND_GUST);
+		createEAttribute(windEClass, WIND__WIND_DIRECTION);
+		createEAttribute(windEClass, WIND__TEMPERATURE);
+
+		atmos22StatusEClass = createEClass(ATMOS22_STATUS);
+		createEAttribute(atmos22StatusEClass, ATMOS22_STATUS__BATTERY);
 	}
 
 	/**
@@ -1502,6 +1639,9 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 		atmos14EClass.getESuperTypes().add(theProviderPackage.getProvider());
 		atmosphereEClass.getESuperTypes().add(theProviderPackage.getService());
 		atmosStatusEClass.getESuperTypes().add(theProviderPackage.getService());
+		atmos22EClass.getESuperTypes().add(theProviderPackage.getProvider());
+		windEClass.getESuperTypes().add(theProviderPackage.getService());
+		atmos22StatusEClass.getESuperTypes().add(theProviderPackage.getService());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(draginoEClass, Dragino.class, "Dragino", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1629,6 +1769,19 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 		initEClass(atmosStatusEClass, AtmosStatus.class, "AtmosStatus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAtmosStatus_Battery(), ecorePackage.getEDouble(), "battery", null, 0, 1, AtmosStatus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(atmos22EClass, Atmos22.class, "Atmos22", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAtmos22_Wind(), this.getWind(), null, "wind", null, 0, 1, Atmos22.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAtmos22_Status(), this.getAtmos22Status(), null, "status", null, 0, 1, Atmos22.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(windEClass, Wind.class, "Wind", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getWind_WindSpeed(), ecorePackage.getEDouble(), "windSpeed", null, 0, 1, Wind.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWind_WindGust(), ecorePackage.getEDouble(), "windGust", null, 0, 1, Wind.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWind_WindDirection(), ecorePackage.getEDouble(), "windDirection", null, 0, 1, Wind.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWind_Temperature(), ecorePackage.getEDouble(), "temperature", null, 0, 1, Wind.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(atmos22StatusEClass, Atmos22Status.class, "Atmos22Status", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAtmos22Status_Battery(), ecorePackage.getEDouble(), "battery", null, 0, 1, Atmos22Status.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		// Create resource
 		createResource(eNS_URI);
 
@@ -1742,6 +1895,14 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 			   "name", "Atmos-14",
 			   "profileName", "Atmos-14",
 			   "profileId", "6c6b6dd0-a12c-45f1-ac18-621c12fa2f08"
+		   });
+		addAnnotation
+		  (atmos22EClass,
+		   source,
+		   new String[] {
+			   "name", "Atmos-22",
+			   "profileName", "Atmos-22",
+			   "profileId", "33bc4671-bad3-461b-8804-8967a7f2434b"
 		   });
 	}
 
@@ -2092,6 +2253,36 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 		   });
 		addAnnotation
 		  (getAtmosStatus_Battery(),
+		   source,
+		   new String[] {
+			   "path", "object/BatV"
+		   });
+		addAnnotation
+		  (getWind_WindSpeed(),
+		   source,
+		   new String[] {
+			   "path", "object/sensors/0/wind_speed_ms"
+		   });
+		addAnnotation
+		  (getWind_WindGust(),
+		   source,
+		   new String[] {
+			   "path", "object/sensors/0/gust_ms"
+		   });
+		addAnnotation
+		  (getWind_WindDirection(),
+		   source,
+		   new String[] {
+			   "path", "object/sensors/0/wind_direction_deg"
+		   });
+		addAnnotation
+		  (getWind_Temperature(),
+		   source,
+		   new String[] {
+			   "path", "object/sensors/1/air_temperature_degC"
+		   });
+		addAnnotation
+		  (getAtmos22Status_Battery(),
 		   source,
 		   new String[] {
 			   "path", "object/BatV"

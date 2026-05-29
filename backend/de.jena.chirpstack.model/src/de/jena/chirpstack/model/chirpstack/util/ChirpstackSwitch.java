@@ -248,6 +248,27 @@ public class ChirpstackSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ChirpstackPackage.ATMOS22: {
+				Atmos22 atmos22 = (Atmos22)theEObject;
+				T result = caseAtmos22(atmos22);
+				if (result == null) result = caseProvider(atmos22);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ChirpstackPackage.WIND: {
+				Wind wind = (Wind)theEObject;
+				T result = caseWind(wind);
+				if (result == null) result = caseService(wind);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ChirpstackPackage.ATMOS22_STATUS: {
+				Atmos22Status atmos22Status = (Atmos22Status)theEObject;
+				T result = caseAtmos22Status(atmos22Status);
+				if (result == null) result = caseService(atmos22Status);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -609,6 +630,51 @@ public class ChirpstackSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAtmosStatus(AtmosStatus object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Atmos22</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Atmos22</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAtmos22(Atmos22 object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Wind</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Wind</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseWind(Wind object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Atmos22 Status</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Atmos22 Status</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAtmos22Status(Atmos22Status object) {
 		return null;
 	}
 

@@ -134,5 +134,18 @@
     <genClasses ecoreClass="chirpstack.ecore#//AtmosStatus">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//AtmosStatus/battery"/>
     </genClasses>
+    <genClasses ecoreClass="chirpstack.ecore#//Atmos22">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack.ecore#//Atmos22/wind"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack.ecore#//Atmos22/status"/>
+    </genClasses>
+    <genClasses ecoreClass="chirpstack.ecore#//Wind">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//Wind/windSpeed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//Wind/windGust"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//Wind/windDirection"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//Wind/temperature"/>
+    </genClasses>
+    <genClasses ecoreClass="chirpstack.ecore#//Atmos22Status">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//Atmos22Status/battery"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

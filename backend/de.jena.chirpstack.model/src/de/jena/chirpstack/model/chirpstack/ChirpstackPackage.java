@@ -2143,6 +2143,234 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 */
 	int ATMOS_STATUS_OPERATION_COUNT = ProviderPackage.SERVICE_OPERATION_COUNT + 0;
 
+	/**
+	 * The meta object id for the '{@link de.jena.chirpstack.model.chirpstack.impl.Atmos22Impl <em>Atmos22</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.chirpstack.model.chirpstack.impl.Atmos22Impl
+	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getAtmos22()
+	 * @generated
+	 */
+	int ATMOS22 = 24;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATMOS22__ID = ProviderPackage.PROVIDER__ID;
+
+	/**
+	 * The feature id for the '<em><b>Admin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATMOS22__ADMIN = ProviderPackage.PROVIDER__ADMIN;
+
+	/**
+	 * The feature id for the '<em><b>Linked Providers</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATMOS22__LINKED_PROVIDERS = ProviderPackage.PROVIDER__LINKED_PROVIDERS;
+
+	/**
+	 * The feature id for the '<em><b>Wind</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATMOS22__WIND = ProviderPackage.PROVIDER_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Status</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATMOS22__STATUS = ProviderPackage.PROVIDER_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Atmos22</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATMOS22_FEATURE_COUNT = ProviderPackage.PROVIDER_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Get Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATMOS22___GET_SERVICE__STRING = ProviderPackage.PROVIDER___GET_SERVICE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Service EClass</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATMOS22___GET_SERVICE_ECLASS__STRING = ProviderPackage.PROVIDER___GET_SERVICE_ECLASS__STRING;
+
+	/**
+	 * The number of operations of the '<em>Atmos22</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATMOS22_OPERATION_COUNT = ProviderPackage.PROVIDER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.chirpstack.model.chirpstack.impl.WindImpl <em>Wind</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.chirpstack.model.chirpstack.impl.WindImpl
+	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getWind()
+	 * @generated
+	 */
+	int WIND = 25;
+
+	/**
+	 * The feature id for the '<em><b>Metadata</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIND__METADATA = ProviderPackage.SERVICE__METADATA;
+
+	/**
+	 * The feature id for the '<em><b>Wind Speed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIND__WIND_SPEED = ProviderPackage.SERVICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Wind Gust</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIND__WIND_GUST = ProviderPackage.SERVICE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Wind Direction</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIND__WIND_DIRECTION = ProviderPackage.SERVICE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Temperature</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIND__TEMPERATURE = ProviderPackage.SERVICE_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Wind</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIND_FEATURE_COUNT = ProviderPackage.SERVICE_FEATURE_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>EIs Set</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIND___EIS_SET__ESTRUCTURALFEATURE = ProviderPackage.SERVICE___EIS_SET__ESTRUCTURALFEATURE;
+
+	/**
+	 * The number of operations of the '<em>Wind</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIND_OPERATION_COUNT = ProviderPackage.SERVICE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.chirpstack.model.chirpstack.impl.Atmos22StatusImpl <em>Atmos22 Status</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.chirpstack.model.chirpstack.impl.Atmos22StatusImpl
+	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getAtmos22Status()
+	 * @generated
+	 */
+	int ATMOS22_STATUS = 26;
+
+	/**
+	 * The feature id for the '<em><b>Metadata</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATMOS22_STATUS__METADATA = ProviderPackage.SERVICE__METADATA;
+
+	/**
+	 * The feature id for the '<em><b>Battery</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATMOS22_STATUS__BATTERY = ProviderPackage.SERVICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Atmos22 Status</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATMOS22_STATUS_FEATURE_COUNT = ProviderPackage.SERVICE_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>EIs Set</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATMOS22_STATUS___EIS_SET__ESTRUCTURALFEATURE = ProviderPackage.SERVICE___EIS_SET__ESTRUCTURALFEATURE;
+
+	/**
+	 * The number of operations of the '<em>Atmos22 Status</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATMOS22_STATUS_OPERATION_COUNT = ProviderPackage.SERVICE_OPERATION_COUNT + 0;
+
 
 	/**
 	 * Returns the meta object for class '{@link de.jena.chirpstack.model.chirpstack.Dragino <em>Dragino</em>}'.
@@ -3232,6 +3460,113 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getAtmosStatus_Battery();
 
 	/**
+	 * Returns the meta object for class '{@link de.jena.chirpstack.model.chirpstack.Atmos22 <em>Atmos22</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Atmos22</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.Atmos22
+	 * @generated
+	 */
+	EClass getAtmos22();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link de.jena.chirpstack.model.chirpstack.Atmos22#getWind <em>Wind</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Wind</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.Atmos22#getWind()
+	 * @see #getAtmos22()
+	 * @generated
+	 */
+	EReference getAtmos22_Wind();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link de.jena.chirpstack.model.chirpstack.Atmos22#getStatus <em>Status</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Status</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.Atmos22#getStatus()
+	 * @see #getAtmos22()
+	 * @generated
+	 */
+	EReference getAtmos22_Status();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.chirpstack.model.chirpstack.Wind <em>Wind</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Wind</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.Wind
+	 * @generated
+	 */
+	EClass getWind();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.Wind#getWindSpeed <em>Wind Speed</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wind Speed</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.Wind#getWindSpeed()
+	 * @see #getWind()
+	 * @generated
+	 */
+	EAttribute getWind_WindSpeed();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.Wind#getWindGust <em>Wind Gust</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wind Gust</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.Wind#getWindGust()
+	 * @see #getWind()
+	 * @generated
+	 */
+	EAttribute getWind_WindGust();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.Wind#getWindDirection <em>Wind Direction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wind Direction</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.Wind#getWindDirection()
+	 * @see #getWind()
+	 * @generated
+	 */
+	EAttribute getWind_WindDirection();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.Wind#getTemperature <em>Temperature</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Temperature</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.Wind#getTemperature()
+	 * @see #getWind()
+	 * @generated
+	 */
+	EAttribute getWind_Temperature();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.chirpstack.model.chirpstack.Atmos22Status <em>Atmos22 Status</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Atmos22 Status</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.Atmos22Status
+	 * @generated
+	 */
+	EClass getAtmos22Status();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.Atmos22Status#getBattery <em>Battery</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Battery</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.Atmos22Status#getBattery()
+	 * @see #getAtmos22Status()
+	 * @generated
+	 */
+	EAttribute getAtmos22Status_Battery();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4109,6 +4444,92 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 		 * @generated
 		 */
 		EAttribute ATMOS_STATUS__BATTERY = eINSTANCE.getAtmosStatus_Battery();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.chirpstack.model.chirpstack.impl.Atmos22Impl <em>Atmos22</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.chirpstack.model.chirpstack.impl.Atmos22Impl
+		 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getAtmos22()
+		 * @generated
+		 */
+		EClass ATMOS22 = eINSTANCE.getAtmos22();
+
+		/**
+		 * The meta object literal for the '<em><b>Wind</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ATMOS22__WIND = eINSTANCE.getAtmos22_Wind();
+
+		/**
+		 * The meta object literal for the '<em><b>Status</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ATMOS22__STATUS = eINSTANCE.getAtmos22_Status();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.chirpstack.model.chirpstack.impl.WindImpl <em>Wind</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.chirpstack.model.chirpstack.impl.WindImpl
+		 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getWind()
+		 * @generated
+		 */
+		EClass WIND = eINSTANCE.getWind();
+
+		/**
+		 * The meta object literal for the '<em><b>Wind Speed</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WIND__WIND_SPEED = eINSTANCE.getWind_WindSpeed();
+
+		/**
+		 * The meta object literal for the '<em><b>Wind Gust</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WIND__WIND_GUST = eINSTANCE.getWind_WindGust();
+
+		/**
+		 * The meta object literal for the '<em><b>Wind Direction</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WIND__WIND_DIRECTION = eINSTANCE.getWind_WindDirection();
+
+		/**
+		 * The meta object literal for the '<em><b>Temperature</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WIND__TEMPERATURE = eINSTANCE.getWind_Temperature();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.chirpstack.model.chirpstack.impl.Atmos22StatusImpl <em>Atmos22 Status</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.chirpstack.model.chirpstack.impl.Atmos22StatusImpl
+		 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getAtmos22Status()
+		 * @generated
+		 */
+		EClass ATMOS22_STATUS = eINSTANCE.getAtmos22Status();
+
+		/**
+		 * The meta object literal for the '<em><b>Battery</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ATMOS22_STATUS__BATTERY = eINSTANCE.getAtmos22Status_Battery();
 
 	}
 

@@ -252,6 +252,33 @@ public interface ChirpstackFactory extends EFactory {
 	AtmosStatus createAtmosStatus();
 
 	/**
+	 * Returns a new object of class '<em>Atmos22</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Atmos22</em>'.
+	 * @generated
+	 */
+	Atmos22 createAtmos22();
+
+	/**
+	 * Returns a new object of class '<em>Wind</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Wind</em>'.
+	 * @generated
+	 */
+	Wind createWind();
+
+	/**
+	 * Returns a new object of class '<em>Atmos22 Status</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Atmos22 Status</em>'.
+	 * @generated
+	 */
+	Atmos22Status createAtmos22Status();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
