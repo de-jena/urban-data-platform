@@ -113,6 +113,35 @@ The provider keeps its data in a single ```sensinact.history``` table, created o
 
 For detailed information about the TimescaleDB history provider configuration, please refer to: https://eclipse-sensinact.readthedocs.io/en/latest/southbound/history/timescale.html
 
+### Twin Rehydration
+
+The sensiNact digital twin is held in memory only, so after a restart it contains nothing but what has been reported since. A provider that has been quiet since the last restart is absent from the SensorThings API entirely - no Thing, no Datastreams, no Observations - even though the history provider still holds its data.
+
+The ```de.jena.udp.sensinact.history.rehydration``` bundle closes that gap. On startup it reads the last value of every historicised resource directly from the history database and pushes it back into the twin, so the SensorThings entities are complete from the first request on. It reads the database itself rather than going through the history provider, because the restore has to run before any southbound data arrives and ```HistoryProvider``` offers no way to enumerate the resources it knows.
+
+```json
+"de.jena.udp.sensinact.history.rehydration": {
+    "url": "jdbc:postgresql://[host]:[port]/[database]",
+    "user": "[username]",
+    ".password": "[password]",
+    "max.age": "P30D",
+    "batch.size": 500,
+    "start.delay": "PT15S"
+}
+```
+
+**Configuration Options:**
+- **url**, **user**, **.password** (string): the same history database the TimescaleDB provider writes to.
+- **max.age** (string): ISO-8601 duration. Only resources whose last value is newer than this are restored. Default ```P30D```.
+- **batch.size** (int): resources pushed into the twin per bulk update. Default ```500```.
+- **start.delay** (string): ISO-8601 delay before the restore starts, leaving the southbound adapters time to come up. Default ```PT15S```.
+
+The component is configuration-driven (```ConfigurationPolicy.REQUIRE```), so leaving the configuration out disables it. Both the unified ```sensinact.history``` table and the legacy three-table schema are supported; the schema is detected at runtime.
+
+Each value is restored with its **original timestamp**. sensiNact ignores an update whose timestamp is not newer than the value a resource already holds, which makes the restore repeatable and keeps fresher device data from being overwritten while it runs.
+
+One side effect is worth knowing: the ingestion pipeline always stores the first update it sees for a resource after a restart, so every restored value is written back to history as an exact-timestamp duplicate - one extra row per resource per restart.
+
 ### SensorThings MQTT Configuration
 
 ```json

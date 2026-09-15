@@ -80,6 +80,7 @@ slf4j.runpath:  \
 	bnd.identity;id='de.jena.udp.reference.area.component',\
 	bnd.identity;id='de.jena.udp.reference.area.sensinact.rules',\
 	bnd.identity;id='de.jena.udp.sensinact.sensor.mapping',\
+	bnd.identity;id='de.jena.udp.sensinact.history.rehydration',\
 	bnd.identity;id='de.jena.udp.sensinact.location.notification',\
 	bnd.identity;id='de.jena.chirpstack.sensinact.rules',\
 	bnd.identity;id='de.jena.udp.kml.readers',\
@@ -128,6 +129,7 @@ slf4j.runpath:  \
 	de.jena.udp.reference.area.sensinact.model;version=snapshot;startlevel=470,\
 	de.jena.udp.reference.area.sensinact.rules;version=snapshot;startlevel=480,\
 	de.jena.udp.rest.cors;version=snapshot;startlevel=490,\
+	de.jena.udp.sensinact.history.rehydration;version=snapshot;startlevel=495,\
 	de.jena.udp.sensinact.location.notification;version=snapshot;startlevel=500,\
 	de.jena.udp.sensinact.runtime.config;version=snapshot;startlevel=510,\
 	de.jena.udp.sensinact.sensor.mapping;version=snapshot;startlevel=520,\
