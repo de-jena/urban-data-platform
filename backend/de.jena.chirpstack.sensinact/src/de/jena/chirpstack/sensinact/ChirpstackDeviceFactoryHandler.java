@@ -17,8 +17,11 @@ import java.lang.System.Logger;
 import java.lang.System.Logger.Level;
 import java.util.Dictionary;
 import java.util.Hashtable;
+import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.function.Predicate;
+import java.util.stream.Stream;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EAnnotation;
@@ -26,6 +29,7 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -46,6 +50,8 @@ import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.ConfigurationPolicy;
 import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Reference;
+import org.osgi.service.component.annotations.ReferenceCardinality;
+import org.osgi.service.component.annotations.ReferencePolicy;
 import org.osgi.util.promise.Promise;
 
 import tools.jackson.databind.JsonNode;
@@ -79,6 +85,26 @@ public class ChirpstackDeviceFactoryHandler implements IMqttMessageListener {
 
     @Reference
     private ChirpstackPackage chirpstackPackage;
+
+    /**
+     * EPackages governed dynamically through Eclipse Fennec model.atlas. A released
+     * sensor model is dropped onto the watched folder and picked up by the model.atlas
+     * {@code EMFFileWatcher}, which registers it as an OSGi {@link EPackage} service and
+     * forwards the {@code sensinact.model=chirpstack} marker as a service property. The
+     * handler searches these alongside the statically compiled {@link #chirpstackPackage},
+     * so new sensors can be added without rebuilding. Bound dynamically via
+     * {@link #addGovernedPackage}/{@link #removeGovernedPackage}.
+     */
+    private final List<EPackage> governedPackages = new CopyOnWriteArrayList<>();
+
+    @Reference(cardinality = ReferenceCardinality.MULTIPLE, policy = ReferencePolicy.DYNAMIC, target = "(sensinact.model=chirpstack)")
+    void addGovernedPackage(EPackage ePackage) {
+        governedPackages.add(ePackage);
+    }
+
+    void removeGovernedPackage(EPackage ePackage) {
+        governedPackages.remove(ePackage);
+    }
 
     private EClass providerEClass = ProviderPackage.eINSTANCE.getProvider();
 //    private EClass serviceEClass = ProviderPackage.eINSTANCE.getService();
@@ -147,7 +173,8 @@ public class ChirpstackDeviceFactoryHandler implements IMqttMessageListener {
             }
 
             // Create provider instance and populate it reflectively
-            Provider providerInstance = (Provider) chirpstackPackage.getChirpstackFactory().create(providerClass.get());
+            EClass resolvedProviderClass = providerClass.get();
+            Provider providerInstance = (Provider) resolvedProviderClass.getEPackage().getEFactoryInstance().create(resolvedProviderClass);
             populateProviderFromJson(providerInstance, payload);
 
             // Set provider ID and location
@@ -179,11 +206,14 @@ public class ChirpstackDeviceFactoryHandler implements IMqttMessageListener {
     }
 
 	/**
-	 * Find provider EClass by matching deviceProfileName with model annotation
-	 * "name"
+	 * Find provider EClass by matching the device profile id with the model annotation
+	 * "profileId". Searches the statically compiled package and all dynamically governed
+	 * packages registered through model.atlas.
 	 */
 	private Optional<EClass> findProviderClassByName(String deviceProfileName) {
-		return chirpstackPackage.getEClassifiers().stream().filter(EClass.class::isInstance)//
+		return Stream.concat(Stream.of(chirpstackPackage), governedPackages.stream())
+				.flatMap(ePackage -> ePackage.getEClassifiers().stream()) //
+				.filter(EClass.class::isInstance)//
 				.map(EClass.class::cast) //
 				.filter(e -> hasSuperType(providerEClass, e)) //
 				.filter((Predicate<? super EClass>) ec -> {
@@ -204,7 +234,7 @@ public class ChirpstackDeviceFactoryHandler implements IMqttMessageListener {
         for (EReference reference : providerClass.getEReferences()) {
             if (reference.isContainment()) {
                 EClass serviceClass = (EClass) reference.getEType();
-                EObject serviceInstance = chirpstackPackage.getChirpstackFactory().create(serviceClass);
+                EObject serviceInstance = serviceClass.getEPackage().getEFactoryInstance().create(serviceClass);
                 populateServiceFromJson(serviceInstance, payload);
                 provider.eSet(reference, serviceInstance);
                 logger.log(Level.DEBUG, "Created and populated service {0} for provider {1}", 
