@@ -7,7 +7,6 @@
 		"user": "$[env:TIMESCALE_USER;default=$[prop:TIMESCALE_USER;default=snaHistory]]",
 		".password": "$[env:TIMESCALE_PWD;default=$[prop:TIMESCALE_PWD;default=]]",
 		"provider": "brokerHistory",
-		"include.resources": [],
 		"exclude.resources": [
 			"{\"resource\": {\"value\": \"observedArea\",\"type\":\"EXACT\"}} ",
 			"{\"resource\": {\"value\": \"viewport\",\"type\":\"EXACT\"}} "
