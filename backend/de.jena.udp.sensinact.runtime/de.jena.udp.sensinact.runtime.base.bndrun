@@ -57,6 +57,7 @@ slf4j.runpath:  \
 	bnd.identity;id='org.eclipse.sensinact.gateway.southbound.mqtt.mqtt-device-factory',\
 	bnd.identity;id='org.eclipse.sensinact.gateway.southbound.device-factory.parser-json',\
 	bnd.identity;id='org.eclipse.sensinact.gateway.southbound.http.http-device-factory',\
+	bnd.identity;id='org.eclipse.sensinact.gateway.southbound.history.history-core',\
 	bnd.identity;id='org.eclipse.sensinact.gateway.southbound.history.timescale-provider',\
 	bnd.identity;id='org.eclipse.sensinact.gateway.filters.filters.core',\
 	bnd.identity;id='org.eclipse.sensinact.gateway.filters.ldap',\

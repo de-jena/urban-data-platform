@@ -85,13 +85,31 @@ The TimescaleDB configuration includes:
 			"{\"resource\": {\"value\": \"objects\",\"type\":\"EXACT\"}} ",
 			"{\"resource\": {\"value\": \"viewport\",\"type\":\"EXACT\"}} "
     ],
-    "include.resource": [
+    "include.resources": [
 			"{\"provider\": {\"value\": \"foo\",\"type\":\"EXACT\"}} "
     ]
 }
 ```
 
-The configuration allows the definition of black- and whitelists (```exclude```, ```include```) to filter the historicised data. 
+The configuration allows the definition of black- and whitelists (```exclude```, ```include```) to filter the historicised data. Note that ```include.resources``` must never be set to an empty array: the provider refuses to start with *"At least one include resource selector must be set"*. Omit the key entirely to historicise everything.
+
+**Optional:** ```max.page.size``` (default ```10000```) caps the number of rows a single range query returns.
+
+#### Required bundles
+
+History needs three bundles in the runtime, declared in ```de.jena.udp.sensinact.runtime.base.bndrun``` and ```de.jena.sensinact.5g.runtime/base.bndrun```:
+
+| Bundle | Role |
+| --- | --- |
+| ```...southbound.history.history-api``` | service contracts |
+| ```...southbound.history.history-core``` | ingestion, ```HistoryProvider```, the ```brokerHistory``` twin provider and the legacy ACT facade |
+| ```...southbound.history.timescale-provider``` | the PostgreSQL/TimescaleDB backend |
+
+```history-core``` must be listed in ```-runrequires``` explicitly — nothing depends on it, so the resolver will not pull it in on its own, and without it historicisation fails silently.
+
+#### Database schema
+
+The provider keeps its data in a single ```sensinact.history``` table, created on first start. Deployments that still carry the older ```sensinact.numeric_data``` / ```text_data``` / ```geo_data``` tables are migrated automatically in one transaction at startup; the old tables are renamed to ```*_migrated``` rather than dropped, so they can be removed by hand once the migration has been verified. PostGIS must still be installed while that migration runs, but is not required afterwards.
 
 For detailed information about the TimescaleDB history provider configuration, please refer to: https://eclipse-sensinact.readthedocs.io/en/latest/southbound/history/timescale.html
 

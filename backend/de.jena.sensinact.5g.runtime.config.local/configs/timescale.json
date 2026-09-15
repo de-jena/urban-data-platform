@@ -8,7 +8,9 @@
 		"user" : "$[env:TIMESCALE_USER;default=$[prop:TIMESCALE_USER;default=snaHistory]]",
 		".password" : "$[env:TIMESCALE_PWD;default=$[prop:TIMESCALE_PWD;default=]]",
 		"provider": "brokerHistory",
-		"include.resources": ["/DATA/Dragino_LSE01/*"],
+		"include.resources": [
+			"{\"provider\": {\"value\": \"Dragino_LSE01\", \"type\": \"EXACT\"}, \"service\": {\"value\": \"DATA\", \"type\": \"EXACT\"}}"
+		],
 		"exclude.resources": []
 	}
 }
