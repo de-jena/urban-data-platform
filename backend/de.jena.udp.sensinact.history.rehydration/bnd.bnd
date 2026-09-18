@@ -1,0 +1,13 @@
+-buildpath: \
+	org.eclipse.sensinact.gateway.core.api,\
+	org.eclipse.sensinact.gateway.core.geo-json,\
+	org.osgi.service.component.annotations,\
+	org.osgi.service.metatype.annotations,\
+	org.osgi.util.promise,\
+	org.postgresql.jdbc,\
+	tools.jackson.core.jackson-databind
+
+-testpath: \
+	${junit}
+
+-privatepackage: de.jena.udp.sensinact.history.rehydration

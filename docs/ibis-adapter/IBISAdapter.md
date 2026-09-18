@@ -373,13 +373,177 @@ MQTT topic forwarding is configured in:
 
 ### Invalid Date Format
 
-Ensure timestamps match the format: `yyyy-MM-dd'T'HH:mm:ss.SSS'Z'zzz`
+Timestamps are parsed with the pattern `yyyy-MM-dd'T'HH:mm:ss.SSS'Z'zzz`, for
+example `2026-01-07T10:08:00.000ZCET`. In that pattern the `Z` is a literal
+separator, not a UTC marker.
 
-Example valid timestamp: `2026-01-07T10:08:00.000ZCET`
+The trailing zone is **discarded on parsing**: `…000ZCET`, `…000Z` and
+`…000+05:00` all yield the same instant, because the wall-clock is resolved in
+the default timezone of the JVM running the connector. A message therefore has
+to carry wall-clock time in the runtime's zone — writing the time in UTC for a
+runtime that runs in `Europe/Berlin` shifts every reading by one or two hours.
+
+### One MQTT client per topic filter
+
+`AbstractMqttService` keeps one `MqttPushEventSource` per topic filter, and each
+opens its own client:
+
+```java
+mqtt = clientFactory.createClient(config, "gecko" + UUID.randomUUID() + "-" + topic);
+mqtt.subscribe(this.topic, this.qos, this);
+```
+
+So `5g/ibis/#`, `5g/ilsa/#` and `5g/traficam/#` are three separate connections.
+Live ILSA or TrafiCam data says nothing about the state of the IBIS client.
+
+The cache is also never pruned, so restarting `de.jena.ibis.sensinact` hands the
+connector back the *same* source without issuing a new SUBSCRIBE — no retained
+message is replayed and a dead source stays dead. To force a genuine
+resubscribe, restart the MQTT provider (`org.gecko.adapter.mqtt.v5`, or the
+`MQTTService` component) or the whole runtime. With a retained message on the
+broker that is enough on its own to bring the provider back, with no republish.
+
+### An empty IbisDevice list is normal
+
+Only one vehicle, `bus359`, currently feeds the IBIS path. The twin is held in
+memory and a provider exists only once its vehicle has reported, so
+
+```bash
+curl "$BROKER/udp/rest/sensinact/providers?filter=(MODEL=IbisDevice)"
+```
+
+returning an empty list means the bus is not transmitting — it says nothing
+about the health of the connector. Do not read it as a broken adapter, and use
+one of the other `id=read` connectors below to judge the MQTT link instead.
+
+### Published, but no provider appears
+
+A QoS 0 publish is fire-and-forget: a broker whose ACL does not grant write
+access on `5g/ibis/#` discards the message without telling the publisher, and
+`mosquitto_pub` exits 0. `publish-gnss.sh` therefore publishes at QoS 1 and
+fails loudly when the broker refuses:
+
+```
+Warning: Publish 1 failed: Not authorized.
+publish REJECTED by mqttbr.jena.de:8883 for 5g/ibis/bus/bus359
+```
+
+If the publish is accepted and the provider still does not appear, the message
+reached the broker but not the connector. Check in this order:
+
+1. Is the runtime reading from the broker that was published to? `MQTT_READ_HOST`
+   of the deployment, against `--host` of the script.
+2. Is another connector on the same `id=read` service still receiving? ILSA
+   (`5g/ilsa/#`) and TrafiCam (`5g/traficam/#`) share it, so a fresh timestamp
+   on one of their resources proves the MQTT link itself is alive:
+   ```bash
+   curl -s "$BROKER/udp/rest/sensinact/providers/K413/services/admin/resources/location/GET"
+   ```
+3. Is `de.jena.ibis.sensinact` active? It logs `Ibis connector is active!` when
+   it starts and `Error subscribing mqtt 5g/ibis/` when the subscription fails.
+   The Felix console at `/udp/system/console/components` shows the component
+   state and, under `IbisConnector`, which `MQTTService` it bound — ILSA and
+   TrafiCam bind the same instance, so if they receive data the client is
+   connected and only the IBIS topic is in question.
+4. Do publish and subscribe rights differ for the topic? They are separate
+   grants: an account may publish to `5g/ibis/#` and still have its SUBSCRIBE
+   refused, in which case the broker answers SUBACK `0x80` / reason code 135 and
+   the connector waits forever without logging anything. MQTT 5 with `-d` shows
+   the reason code, and a distinct client id avoids kicking the runtime off:
+   ```bash
+   mosquitto_sub -h mqttbr.jena.de -p 8883 --capath /etc/ssl/certs \
+       -u <user> -P <pwd> -i diag-1 -V 5 -d -t '5g/ibis/#' -v -W 15
+   ```
+5. A message whose root `eClass` matches no `rootObjects()` case in
+   `ibisToSensinact.qvto` is dropped **without any log entry**, so a payload
+   error can look exactly like no message at all.
+
+### Connection Refused: identifier rejected
+
+The broker accepted the TCP/TLS connection and the credentials but turned down
+the client id (CONNACK code 2). `mosquitto_pub` introduces itself as
+`mosquitto_pub_<pid>`, which brokers that tie the client id to the account
+reject; the runtime's own clients connect as `gecko-<uuid>` over MQTT 5.
+
+`publish-gnss.sh` sends `<user>-gnss-<random>` by default. If that is still
+refused, name one explicitly and, failing that, switch protocol version:
+
+```bash
+./docs/ibis-adapter/publish-gnss.sh ... --client-id iwoms-gnss-1
+./docs/ibis-adapter/publish-gnss.sh ... --mqtt-version 5
+```
 
 ### Missing Services
 
 Not all IBIS services may be implemented by every vehicle. Check the vehicle's IBIS system capabilities. Services are only created when the corresponding MQTT messages are received.
+
+## Reactivating a Provider
+
+The sensiNact twin is held in memory, so a provider disappears from the REST and
+SensorThings endpoints whenever the runtime restarts and the vehicle has not
+reported since. Publishing one GNSS message for that vehicle is enough to bring
+it back: the connector recreates the `IbisDevice` provider, its `gnssLocation`
+service and `admin/location` in one go.
+
+`publish-gnss.sh` (next to this document) builds the EMF JSON and publishes it:
+
+```bash
+# see what would be sent
+./docs/ibis-adapter/publish-gnss.sh --provider bus359 \
+    --lat 50.9003733 --lon 11.58823 --dry-run
+
+# send it to a broker
+./docs/ibis-adapter/publish-gnss.sh --provider bus359 \
+    --lat 50.9003733 --lon 11.58823 \
+    --host localhost --port 1883
+```
+
+Add `--retain` to leave the message on the broker: the runtime then receives it
+again on every restart and recreates the provider without anyone republishing.
+Clear it later with an empty retained message on the same topic
+(`mosquitto_pub -r -n -t 5g/ibis/bus/bus359`).
+
+The provider id is taken from the **second** topic segment after the prefix, so
+the script publishes to `5g/ibis/<device-type>/<provider>`; `--device-type` only
+fills the segment in between and is not otherwise interpreted.
+
+Pass `--runtime-tz` when the runtime's JVM runs in a different timezone than the
+machine sending the message (`--runtime-tz UTC` for the Docker deployment) —
+see [Invalid Date Format](#invalid-date-format) for why this matters.
+
+Verify afterwards:
+
+```bash
+curl http://localhost:8080/udp/rest/sensinact/providers/bus359/services/gnssLocation/resources/resource/GET
+curl http://localhost:8080/udp/rest/sensinact/providers/bus359/services/admin/resources/location/GET
+```
+
+### Trying it against a local broker
+
+The runtime reads from the broker configured as `MQTTService~read`, which
+defaults to `mqttbr.jena.de:8883`. To rehearse without touching that broker,
+start a local one, point the runtime at it and publish there:
+
+```bash
+printf 'listener 1883\nallow_anonymous true\n' > /tmp/mosquitto.conf
+mosquitto -c /tmp/mosquitto.conf -d
+
+mosquitto_sub -h localhost -t '5g/ibis/#' -v      # watch what arrives
+```
+
+In `de.jena.udp.sensinact.runtime.config.docker/configs/mqtt.json` the whole
+broker URL comes from the environment, so
+`MQTT_READ_PROTOCOL=tcp MQTT_READ_HOST=localhost MQTT_READ_PORT=1883` is enough.
+The `.config.local` bundle hardcodes `ssl://` and only reads host and port from
+the environment, so a plain TCP broker needs that `brokerUrl` edited.
+
+### Known issue: admin/location timestamp
+
+`IbisConnector.updateAdmin` derives the `admin/location` timestamp as
+`date.epochSecond + time.epochSecond`. Real IBIS messages carry the epoch in
+`date` and the full instant in `time`, so the sum happens to equal the fix time;
+a message with a real date lands roughly 56 years in the future. `publish-gnss.sh`
+writes the epoch into `date` for that reason.
 
 ## Dependencies
 
