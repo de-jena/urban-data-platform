@@ -180,21 +180,18 @@ pipeline  {
 			steps  {
 				echo "I am building and publishing a docker image on branch: ${env.GIT_BRANCH}"
 
-				step([$class: 'DockerBuilderPublisher',
-				      dockerFileDirectory: 'udp/docker/broker',
-							cloud: 'docker',
-							tagsString: """registry-git.jena.de/scj/udp/broker:latest
-                                        registry-git.jena.de/scj/udp/broker:0.1.0.${VERSION}""",
-							pushOnSuccess: true,
-							pushCredentialsId: 'github-jena'])
-
-				step([$class: 'DockerBuilderPublisher',
-				      dockerFileDirectory: 'udp/docker/broker',
-							cloud: 'docker',
-							tagsString: """devel.data-in-motion.biz:6000/scj/udp-broker:latest
-							            devel.data-in-motion.biz:6000/scj/udp-broker:0.1.0.${VERSION}""",
-							pushOnSuccess: true,
-							pushCredentialsId: 'dim-nexus'])
+				script {
+					docker.withRegistry('https://registry-git.jena.de', 'github-jena') {
+						def image = docker.build("registry-git.jena.de/scj/udp/broker:0.1.0.${VERSION}", 'udp/docker/broker')
+						image.push()
+						image.push('latest')
+					}
+					docker.withRegistry('https://devel.data-in-motion.biz:6000', 'dim-nexus') {
+						def image = docker.build("devel.data-in-motion.biz:6000/scj/udp-broker:0.1.0.${VERSION}", 'udp/docker/broker')
+						image.push()
+						image.push('latest')
+					}
+				}
 		  }
 		}
         stage('Docker Bridge Image build'){
@@ -203,21 +200,18 @@ pipeline  {
             }
             steps  {
                 echo "I am building and publishing a docker image on branch: ${env.GIT_BRANCH}"
-                step([$class: 'DockerBuilderPublisher',
-                    dockerFileDirectory: 'udp/docker/bridge',
-                             cloud: 'docker',
-                             tagsString: """registry-git.jena.de/scj/udp/mqtt-bridge:latest
-                                         registry-git.jena.de/scj/udp/mqtt-bridge:0.1.0.${VERSION}""",
-                             pushOnSuccess: true,
-                             pushCredentialsId: 'github-jena'])
-
-                step([$class: 'DockerBuilderPublisher',
-                      dockerFileDirectory: 'udp/docker/bridge',
-                            cloud: 'docker',
-                            tagsString: """devel.data-in-motion.biz:6000/scj/mqtt-bridge:latest
-                                        devel.data-in-motion.biz:6000/scj/mqtt-bridge:0.1.0.${VERSION}""",
-                            pushOnSuccess: true,
-                            pushCredentialsId: 'dim-nexus'])
+                script {
+                    docker.withRegistry('https://registry-git.jena.de', 'github-jena') {
+                        def image = docker.build("registry-git.jena.de/scj/udp/mqtt-bridge:0.1.0.${VERSION}", 'udp/docker/bridge')
+                        image.push()
+                        image.push('latest')
+                    }
+                    docker.withRegistry('https://devel.data-in-motion.biz:6000', 'dim-nexus') {
+                        def image = docker.build("devel.data-in-motion.biz:6000/scj/mqtt-bridge:0.1.0.${VERSION}", 'udp/docker/bridge')
+                        image.push()
+                        image.push('latest')
+                    }
+                }
           }
         }
         stage('Release'){
