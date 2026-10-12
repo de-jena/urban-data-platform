@@ -52,3 +52,13 @@
 		index				=${.}/udp_release.maven;\
 		poll.time			= -1;\
 		name				='UDP_Nexus_Release'
+
+# Credentials for uploading to the DIM Nexus. CI injects NEXUS_USER/NEXUS_PASSWORD;
+# when they are unset bnd ignores the entry and falls back to the user settings.
+-connection-settings: \
+	server;\
+		id					="https://devel.data-in-motion.biz";\
+		username			="${env;NEXUS_USER}";\
+		password			="${env;NEXUS_PASSWORD}",\
+	-bnd,\
+	-maven

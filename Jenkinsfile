@@ -221,7 +221,9 @@ pipeline  {
 
             steps  {
 				dir("udp/backend") {
-                    sh "./gradlew release --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2"
+                    withCredentials([usernamePassword(credentialsId: 'dim-nexus', usernameVariable: 'NEXUS_USER', passwordVariable: 'NEXUS_PASSWORD')]) {
+                        sh "./gradlew release --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2"
+                    }
                 }
             }
         } 
