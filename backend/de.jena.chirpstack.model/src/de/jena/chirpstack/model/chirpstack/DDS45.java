@@ -31,7 +31,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * </ul>
  *
  * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getDDS45()
- * @model annotation="model name='Dragino DDS45-LB' profileName='Dragino DDS45-LB' profileId='47cda612-0895-4c4a-828f-e3f509907eda'"
+ * @model annotation="model name='Dragino_DDS45-LB' profileName='Dragino DDS45-LB' profileId='47cda612-0895-4c4a-828f-e3f509907eda'"
  * @generated
  */
 @ProviderType
