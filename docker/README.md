@@ -15,16 +15,22 @@ The platform uses a containerized architecture with the following main component
    - MQTT clients for data ingestion
    - Ports: 8080 (HTTP), 1883 (MQTT), 8885 (MQTT over WebSocket)
 
-2. **MQTT Bridge** (`mqtt-bridge`)
+2. **UDP Atlas Runtime** (`atlas-runtime`)
+   - Successor of the UDP Broker on Model, Event and Data Atlas ([issue #28](https://github.com/de-jena/urban-data-platform/issues/28))
+   - Event Atlas bundles + UDP adapters, Java 25, Felix webconsole
+   - Same image layout as `eclipsefennec/event.atlas`; see `backend/de.jena.udp.atlas.runtime/README.md`
+   - Ports: 8080 (HTTP, context `event/`), 1883 (MQTT), 8885 (MQTT over WebSocket)
+
+3. **MQTT Bridge** (`mqtt-bridge`)
    - MQTT topic bridge service
    - Routes messages between different MQTT brokers
    - Handles protocol translation
 
-3. **MongoDB**
+4. **MongoDB**
    - Document database for provider metadata
    - Port: 27017
 
-4. **TimescaleDB** (PostgreSQL 16)
+5. **TimescaleDB** (PostgreSQL 16)
    - Time-series database for historical data
    - SensiNact history provider backend
    - Port: 5432
@@ -38,6 +44,9 @@ docker/
 │   └── content/               # Application artifacts (copied during build)
 │       ├── jar/               # OSGi bundles
 │       └── de.jena.udp.sensinact.runtime.docker.jar
+├── atlas-runtime/              # UDP Atlas Runtime container (issue #28)
+│   ├── Dockerfile             # Alpine + Temurin 25, uid 65532
+│   └── content/               # de.jena.udp.atlas.runtime.docker.jar (staged by prepareDocker)
 ├── bridge/                     # MQTT Bridge container
 │   ├── Dockerfile
 │   └── content/

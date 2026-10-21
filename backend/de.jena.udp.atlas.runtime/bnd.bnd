@@ -1,0 +1,9 @@
+Bundle-Name: UDP :: Atlas Runtime
+Bundle-Description: Runtime assembly for the UDP runtime on Model, Event and Data Atlas \
+ (issue #28). No code of its own; see README.md.
+
+-include: de.jena.udp.atlas.runtime.docker.bndrun
+-buildpath: \
+	${-runbundles.*}
+
+-workingset: udp_runtime

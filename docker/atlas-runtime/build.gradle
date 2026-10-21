@@ -1,0 +1,13 @@
+task prepareDocker() {
+	def stageDir = file('content')
+	doFirst {
+		stageDir.deleteDir()
+	}
+	doLast {
+		stageDir.mkdirs()
+		copy {
+			from new File("../../backend/de.jena.udp.atlas.runtime/generated/gradle/distributions/executable/de.jena.udp.atlas.runtime.docker.jar")
+			into stageDir
+		}
+	}
+}

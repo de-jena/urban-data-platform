@@ -1,0 +1,11 @@
+Bundle-Name: UDP :: Atlas Runtime Config
+Bundle-Description: Configurator resources the UDP atlas runtime adds on top of the Event Atlas \
+ docker config: the Felix webconsole login.
+
+-resourceonly: true
+-includeresource: OSGI-INF/configurator/=configs/
+Require-Capability: \
+	osgi.extender;filter:='(osgi.extender=osgi.configurator)',\
+	osgi.implementation;filter:='(&(osgi.implementation=osgi.cm)(version>=1.6.0)(!(version>=2.0.0)))'
+
+-workingset: udp_runtime

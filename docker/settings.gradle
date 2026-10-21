@@ -3,3 +3,4 @@ pluginManagement {
 }
 include(':broker')
 include(':bridge')
+include(':atlas-runtime')

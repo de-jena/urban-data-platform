@@ -75,6 +75,7 @@ org.eclipse.sensinact.gateway.southbound.virtual:virtual-temperature-sensor:${se
 ## history
 org.eclipse.sensinact.gateway.southbound.history:history-api:${sensinact.version}
 org.eclipse.sensinact.gateway.southbound.history:timescale-provider:${sensinact.version}
+org.eclipse.sensinact.gateway.southbound.history:history-core:${sensinact.version}
 org.postgresql:postgresql:42.7.9
 org.apache.aries.tx-control:tx-control-service-local:1.0.1
 org.apache.aries.tx-control:tx-control-provider-jdbc-local:1.0.1
