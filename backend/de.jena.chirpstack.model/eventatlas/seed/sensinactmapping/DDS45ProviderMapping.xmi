@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- GENERATED: ChirpStack profile 47cda612-0895-4c4a-828f-e3f509907eda -> sensiNact model Dragino_DDS45-LB (provider = devEui) -->
+<sensinactMapping:ProviderMapping xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:sensinactMapping="https://fennec.eclipse.org/event.atlas/mapping/1.0"
+    mid="Dragino_DDS45-LB" providerTimestamp="true">
+  <name>
+    <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//Uplink/deviceInfo"/>
+    <featurePath xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//DeviceInfo/devEui"/>
+  </name>
+  <timestamp strategy="NOW"/>
+  <providerClasses href="https://model.data.jena.de/chirpstack/uplink/1.0#//DDS45Uplink"/>
+  <admin xsi:type="sensinactMapping:AdminMapping" mid="admin">
+    <timestamp strategy="NOW"/>
+    <name name="Admin"/>
+    <friendlyNameFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//Uplink/deviceInfo"/>
+    <friendlyNameFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//DeviceInfo/deviceName"/>
+  </admin>
+  <services mid="distance">
+    <timestamp strategy="NOW"/>
+    <name name="distance"/>
+    <resources name="distance" mid="distance">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//DDS45Uplink/object"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//DDS45Object/Distance"/>
+    </resources>
+    <resources name="temperature" mid="temperature">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//DDS45Uplink/object"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//DDS45Object/TempC_DS18B20"/>
+    </resources>
+  </services>
+  <services mid="status">
+    <timestamp strategy="NOW"/>
+    <name name="status"/>
+    <resources name="battery" mid="battery">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//DDS45Uplink/object"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//DDS45Object/Battery"/>
+    </resources>
+  </services>
+</sensinactMapping:ProviderMapping>

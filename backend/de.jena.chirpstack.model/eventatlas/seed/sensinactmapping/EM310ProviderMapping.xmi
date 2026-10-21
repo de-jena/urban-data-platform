@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- GENERATED: ChirpStack profile 1e6d47f7-1432-4c83-b48d-dd34a7e5e9c6 -> sensiNact model EM310-UDL (provider = devEui) -->
+<sensinactMapping:ProviderMapping xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:sensinactMapping="https://fennec.eclipse.org/event.atlas/mapping/1.0"
+    mid="EM310-UDL" providerTimestamp="true">
+  <name>
+    <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//Uplink/deviceInfo"/>
+    <featurePath xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//DeviceInfo/devEui"/>
+  </name>
+  <timestamp strategy="NOW"/>
+  <providerClasses href="https://model.data.jena.de/chirpstack/uplink/1.0#//EM310Uplink"/>
+  <admin xsi:type="sensinactMapping:AdminMapping" mid="admin">
+    <timestamp strategy="NOW"/>
+    <name name="Admin"/>
+    <friendlyNameFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//Uplink/deviceInfo"/>
+    <friendlyNameFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//DeviceInfo/deviceName"/>
+  </admin>
+  <services mid="trash">
+    <timestamp strategy="NOW"/>
+    <name name="trash"/>
+    <resources name="distance" mid="distance">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//EM310Uplink/object"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//EM310Object/distance"/>
+    </resources>
+    <resources name="position" mid="position">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//EM310Uplink/object"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//EM310Object/position"/>
+    </resources>
+    <resources name="battery" mid="battery">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//EM310Uplink/object"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//EM310Object/battery"/>
+    </resources>
+  </services>
+</sensinactMapping:ProviderMapping>

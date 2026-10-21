@@ -165,3 +165,80 @@ org.mockito:mockito-junit-jupiter:4.11.0
 net.bytebuddy:byte-buddy:1.14.18
 org.objenesis:objenesis:3.3
 
+
+# --- Event Atlas runtime (issue #28) ---------------------------------------------------
+# The UDP atlas runtime (de.jena.udp.atlas.runtime) is built on the Event Atlas bundles and
+# their closure as pinned by event.atlas' eventatlas.runtime_docker.bndrun. Snapshots come from
+# central.sonatype.com (second snapshotUrl of this repository).
+org.eclipse.fennec.event.atlas:org.eclipse.fennec.event.atlas.mapping:1.0.0-SNAPSHOT
+org.eclipse.fennec.event.atlas:org.eclipse.fennec.event.atlas.mapping.docker.config:1.0.0-SNAPSHOT
+org.eclipse.fennec.event.atlas:org.eclipse.fennec.event.atlas.deployment:1.0.0-SNAPSHOT
+org.eclipse.fennec.event.atlas:org.eclipse.fennec.event.atlas.southbound.common:1.0.0-SNAPSHOT
+org.eclipse.fennec.event.atlas:org.eclipse.fennec.event.atlas.mqtt.southbound.adapter:1.0.0-SNAPSHOT
+org.eclipse.fennec.event.atlas:org.eclipse.fennec.event.atlas.rest.southbound.adapter:1.0.0-SNAPSHOT
+
+# Model Atlas client: mappings are read from the Model Atlas scope `udp` over REST.
+org.eclipse.fennec.model.atlas:org.eclipse.fennec.model.atlas.rest.client.api:0.1.0-SNAPSHOT
+org.eclipse.fennec.model.atlas:org.eclipse.fennec.model.atlas.rest.client.impl:0.1.0-SNAPSHOT
+org.eclipse.fennec.model.atlas:org.eclipse.fennec.model.atlas.rest.client.osgi:0.1.0-SNAPSHOT
+org.eclipse.fennec.model.atlas:org.eclipse.fennec.model.atlas.action.api:0.1.0-SNAPSHOT
+org.eclipse.fennec.model.atlas:org.eclipse.fennec.model.atlas.scope.api:0.1.0-SNAPSHOT
+org.eclipse.fennec.model.atlas:org.eclipse.fennec.model.atlas.eobject.provider:0.1.0-SNAPSHOT
+
+# EMF OSGi 1.1.0 line the Event Atlas bundles import (the fennecEMF library indexes 0.1.2).
+org.eclipse.fennec.emf:org.eclipse.fennec.emf.osgi.component.minimal:1.1.0-SNAPSHOT
+org.eclipse.fennec.emf:org.eclipse.fennec.emf.osgi.eobject.registry:1.1.0-SNAPSHOT
+org.eclipse.fennec.emf:org.eclipse.fennec.emf.osgi.metadata:1.1.0-SNAPSHOT
+
+# EMF JSON codec that registers the `json` resource factory for JSON ingest channels.
+org.eclipse.fennec.codec:org.eclipse.fennec.codec:0.1.0-SNAPSHOT
+org.eclipse.fennec.codec:org.eclipse.fennec.codec.api:0.1.0-SNAPSHOT
+org.eclipse.fennec.codec:org.eclipse.fennec.codec.metadata:0.1.0-SNAPSHOT
+org.eclipse.fennec.codec:org.eclipse.fennec.codec.jsonschema:0.1.0-SNAPSHOT
+
+# The codec imports tools.jackson [3.2,4); jackson-annotations stays on the 2.x line.
+tools.jackson.core:jackson-core:3.2.2
+tools.jackson.core:jackson-databind:3.2.2
+tools.jackson.jakarta.rs:jackson-jakarta-rs-base:3.2.2
+tools.jackson.jakarta.rs:jackson-jakarta-rs-json-provider:3.2.2
+tools.jackson.module:jackson-module-jakarta-xmlbind-annotations:3.2.2
+com.fasterxml.jackson.core:jackson-annotations:2.22
+com.fasterxml.jackson.core:jackson-core:2.19.2
+
+# Netty set for the SensorThings MQTT broker (all modules on one version).
+io.netty:netty-buffer:4.1.133.Final
+io.netty:netty-codec:4.1.133.Final
+io.netty:netty-codec-http:4.1.133.Final
+io.netty:netty-codec-mqtt:4.1.133.Final
+io.netty:netty-common:4.1.133.Final
+io.netty:netty-handler:4.1.133.Final
+io.netty:netty-resolver:4.1.133.Final
+io.netty:netty-transport:4.1.133.Final
+io.netty:netty-transport-classes-epoll:4.1.133.Final
+io.netty:netty-transport-native-unix-common:4.1.133.Final
+
+# History store closure (timescale-provider reaches postgres through tx-control).
+org.postgresql:postgresql:42.7.13
+org.apache.aries.tx-control:tx-control-service-local:1.0.1
+org.apache.aries.tx-control:tx-control-provider-jdbc-local:1.0.1
+io.dropwizard.metrics:metrics-core:4.2.37
+
+org.apache.felix:org.apache.felix.http.jetty12:1.0.34
+org.apache.felix:org.apache.felix.http.servlet-api:6.1.0
+org.apache.felix:org.apache.felix.scr:2.2.12
+org.apache.felix:org.apache.felix.cm.json:2.0.6
+org.apache.felix:org.apache.felix.configadmin:1.9.26
+org.apache.felix:org.apache.felix.gogo.shell:1.1.4
+org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.3.7
+org.eclipse.parsson:jakarta.json:1.1.7
+org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.5
+org.slf4j:slf4j-simple:2.0.17
+org.slf4j:slf4j-api:2.0.17
+
+# ASM for spifly's weaving hook: Java 25 class files (major 69) need ASM >= 9.8, otherwise
+# the typedevent bus fails to start with "Unsupported class file major version 69".
+org.ow2.asm:asm:9.9.1
+org.ow2.asm:asm-commons:9.9.1
+org.ow2.asm:asm-tree:9.9.1
+org.ow2.asm:asm-analysis:9.9.1
+org.ow2.asm:asm-util:9.9.1

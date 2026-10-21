@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- GENERATED from urban-data-platform chirpstack.ecore. ChirpStack v4 uplink JSON;
+     the JSON codec types a payload by deviceInfo.deviceProfileId. -->
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    name="chirpstackuplink" nsURI="https://model.data.jena.de/chirpstack/uplink/1.0" nsPrefix="chirpstackuplink">
+  <eClassifiers xsi:type="ecore:EClass" name="DeviceInfo">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tenantId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tenantName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="applicationId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="applicationName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deviceProfileId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deviceProfileName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deviceName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="devEui" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Uplink" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deduplicationId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="time" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="deviceInfo" eType="#//DeviceInfo" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DraginoUplink" eSuperTypes="#//Uplink">
+    <eAnnotations source="http://eclipse.org/fennec/codec/typeMapping/jena-sensors">
+      <details key="typeDiscriminator" value="37cf9cbd-e7e1-4269-8c22-b46bb5261a2a"/>
+      <details key="typeDiscriminatorPath" value="deviceInfo.deviceProfileId"/>
+      <details key="fallbackStrategy" value="SKIP"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="object" eType="#//DraginoObject" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TEKTELICUplink" eSuperTypes="#//Uplink">
+    <eAnnotations source="http://eclipse.org/fennec/codec/typeMapping/jena-sensors">
+      <details key="typeDiscriminator" value="93f37439-1425-4a5f-a7e7-7eb4b75f1936"/>
+      <details key="typeDiscriminatorPath" value="deviceInfo.deviceProfileId"/>
+      <details key="fallbackStrategy" value="SKIP"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="object" eType="#//TEKTELICObject" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EM310Uplink" eSuperTypes="#//Uplink">
+    <eAnnotations source="http://eclipse.org/fennec/codec/typeMapping/jena-sensors">
+      <details key="typeDiscriminator" value="1e6d47f7-1432-4c83-b48d-dd34a7e5e9c6"/>
+      <details key="typeDiscriminatorPath" value="deviceInfo.deviceProfileId"/>
+      <details key="fallbackStrategy" value="SKIP"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="object" eType="#//EM310Object" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SN50Uplink" eSuperTypes="#//Uplink">
+    <eAnnotations source="http://eclipse.org/fennec/codec/typeMapping/jena-sensors">
+      <details key="typeDiscriminator" value="a610241d-86c3-4d4a-af88-bfa1754f1610"/>
+      <details key="typeDiscriminatorPath" value="deviceInfo.deviceProfileId"/>
+      <details key="fallbackStrategy" value="SKIP"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="object" eType="#//SN50Object" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SolidosTeros21Uplink" eSuperTypes="#//Uplink">
+    <eAnnotations source="http://eclipse.org/fennec/codec/typeMapping/jena-sensors">
+      <details key="typeDiscriminator" value="7022e9ce-7673-4d0c-b3d1-ed51afc3fe27"/>
+      <details key="typeDiscriminatorPath" value="deviceInfo.deviceProfileId"/>
+      <details key="fallbackStrategy" value="SKIP"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="object" eType="#//SolidosTeros21Object" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PMXTCRUplink" eSuperTypes="#//Uplink">
+    <eAnnotations source="http://eclipse.org/fennec/codec/typeMapping/jena-sensors">
+      <details key="typeDiscriminator" value="3ad23c8d-1965-4535-8ef0-ab56ca502f03"/>
+      <details key="typeDiscriminatorPath" value="deviceInfo.deviceProfileId"/>
+      <details key="fallbackStrategy" value="SKIP"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="object" eType="#//PMXTCRObject" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Atmos14Uplink" eSuperTypes="#//Uplink">
+    <eAnnotations source="http://eclipse.org/fennec/codec/typeMapping/jena-sensors">
+      <details key="typeDiscriminator" value="6c6b6dd0-a12c-45f1-ac18-621c12fa2f08"/>
+      <details key="typeDiscriminatorPath" value="deviceInfo.deviceProfileId"/>
+      <details key="fallbackStrategy" value="SKIP"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="object" eType="#//Atmos14Object" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Atmos22Uplink" eSuperTypes="#//Uplink">
+    <eAnnotations source="http://eclipse.org/fennec/codec/typeMapping/jena-sensors">
+      <details key="typeDiscriminator" value="33bc4671-bad3-461b-8804-8967a7f2434b"/>
+      <details key="typeDiscriminatorPath" value="deviceInfo.deviceProfileId"/>
+      <details key="fallbackStrategy" value="SKIP"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="object" eType="#//Atmos22Object" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="KalyxUplink" eSuperTypes="#//Uplink">
+    <eAnnotations source="http://eclipse.org/fennec/codec/typeMapping/jena-sensors">
+      <details key="typeDiscriminator" value="89daf367-01ce-4b57-8554-2508558a05db"/>
+      <details key="typeDiscriminatorPath" value="deviceInfo.deviceProfileId"/>
+      <details key="fallbackStrategy" value="SKIP"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="object" eType="#//KalyxObject" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SE212Uplink" eSuperTypes="#//Uplink">
+    <eAnnotations source="http://eclipse.org/fennec/codec/typeMapping/jena-sensors">
+      <details key="typeDiscriminator" value="f5b5ae47-348e-4dc2-a59d-34c61f74a86a"/>
+      <details key="typeDiscriminatorPath" value="deviceInfo.deviceProfileId"/>
+      <details key="fallbackStrategy" value="SKIP"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="object" eType="#//SE212Object" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DDS45Uplink" eSuperTypes="#//Uplink">
+    <eAnnotations source="http://eclipse.org/fennec/codec/typeMapping/jena-sensors">
+      <details key="typeDiscriminator" value="47cda612-0895-4c4a-828f-e3f509907eda"/>
+      <details key="typeDiscriminatorPath" value="deviceInfo.deviceProfileId"/>
+      <details key="fallbackStrategy" value="SKIP"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="object" eType="#//DDS45Object" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IoTrafficUplink" eSuperTypes="#//Uplink">
+    <eAnnotations source="http://eclipse.org/fennec/codec/typeMapping/jena-sensors">
+      <details key="typeDiscriminator" value="ef645c43-546c-4594-a0e5-9e0852faf29b"/>
+      <details key="typeDiscriminatorPath" value="deviceInfo.deviceProfileId"/>
+      <details key="fallbackStrategy" value="SKIP"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="object" eType="#//IoTrafficObject" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DraginoObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="BatV" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="i_flag" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="s_flag" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Mod" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="temp_DS18B20" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="temp_SOIL_f" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="water_SOIL_f" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="conduct_SOIL_f" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TEKTELICObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="soil_water_tension1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="soil_water_tension2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="soil_moisture_raw1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="soil_moisture_raw2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ambient_light" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EM310Object">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="distance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="battery" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SN50Object">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ADC1_V" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="BatV" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ADC2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ADC3" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SolidosTeros21Object">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="potentialwater_1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="potentialwater_2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="temp_1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="temp_2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="battery_voltage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PMXTCRObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="total_count" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ltr" eType="#//PMXTCRLtr" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rtl" eType="#//PMXTCRRtl" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="volts" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="counter_category" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="counter_kind" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp_utc_hhmm" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PMXTCRLtr">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="count" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="avg_speed_kmh" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PMXTCRRtl">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="count" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="avg_speed_kmh" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Atmos14Object">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sensors" upperBound="-1" eType="#//Atmos14Sensors" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="BatV" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Atmos14Sensors">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="temperature_degC" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rel_humidity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="air_pressure_kPa" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vapour_pressure_kPa" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Atmos22Object">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sensors" upperBound="-1" eType="#//Atmos22Sensors" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="BatV" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Atmos22Sensors">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="wind_speed_ms" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gust_ms" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="wind_direction_deg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="air_temperature_degC" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="KalyxObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rain_sum_mm" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Count" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="BatV" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SE212Object">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sensor_0_lux" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="battery_V" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DDS45Object">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Distance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="TempC_DS18B20" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Battery" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IoTrafficObject">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lines" upperBound="-1" eType="#//IoTrafficLines" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="total_objects" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="line_count" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="payload_version" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="from_time" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="to_time" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="message_type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="from_time_text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="to_time_text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IoTrafficLines">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="line_number" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="person" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bicycle" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="car" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bus" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="truck" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="motorbike" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="train" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="total" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+</ecore:EPackage>
