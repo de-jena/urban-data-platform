@@ -2992,6 +2992,342 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 */
 	int DDS45_STATUS_OPERATION_COUNT = ProviderPackage.SERVICE_OPERATION_COUNT + 0;
 
+	/**
+	 * The meta object id for the '{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficImpl <em>Io Traffic</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.chirpstack.model.chirpstack.impl.IoTrafficImpl
+	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getIoTraffic()
+	 * @generated
+	 */
+	int IO_TRAFFIC = 36;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TRAFFIC__ID = ProviderPackage.PROVIDER__ID;
+
+	/**
+	 * The feature id for the '<em><b>Admin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TRAFFIC__ADMIN = ProviderPackage.PROVIDER__ADMIN;
+
+	/**
+	 * The feature id for the '<em><b>Linked Providers</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TRAFFIC__LINKED_PROVIDERS = ProviderPackage.PROVIDER__LINKED_PROVIDERS;
+
+	/**
+	 * The feature id for the '<em><b>Counter</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TRAFFIC__COUNTER = ProviderPackage.PROVIDER_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Status</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TRAFFIC__STATUS = ProviderPackage.PROVIDER_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Io Traffic</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TRAFFIC_FEATURE_COUNT = ProviderPackage.PROVIDER_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Get Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TRAFFIC___GET_SERVICE__STRING = ProviderPackage.PROVIDER___GET_SERVICE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Service EClass</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TRAFFIC___GET_SERVICE_ECLASS__STRING = ProviderPackage.PROVIDER___GET_SERVICE_ECLASS__STRING;
+
+	/**
+	 * The number of operations of the '<em>Io Traffic</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TRAFFIC_OPERATION_COUNT = ProviderPackage.PROVIDER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficCounterImpl <em>Io Traffic Counter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.chirpstack.model.chirpstack.impl.IoTrafficCounterImpl
+	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getIoTrafficCounter()
+	 * @generated
+	 */
+	int IO_TRAFFIC_COUNTER = 37;
+
+	/**
+	 * The feature id for the '<em><b>Metadata</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TRAFFIC_COUNTER__METADATA = ProviderPackage.SERVICE__METADATA;
+
+	/**
+	 * The feature id for the '<em><b>Line Number</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TRAFFIC_COUNTER__LINE_NUMBER = ProviderPackage.SERVICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Person</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TRAFFIC_COUNTER__PERSON = ProviderPackage.SERVICE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Bicycle</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TRAFFIC_COUNTER__BICYCLE = ProviderPackage.SERVICE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Car</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TRAFFIC_COUNTER__CAR = ProviderPackage.SERVICE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Bus</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TRAFFIC_COUNTER__BUS = ProviderPackage.SERVICE_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Truck</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TRAFFIC_COUNTER__TRUCK = ProviderPackage.SERVICE_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Motorbike</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TRAFFIC_COUNTER__MOTORBIKE = ProviderPackage.SERVICE_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Train</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TRAFFIC_COUNTER__TRAIN = ProviderPackage.SERVICE_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Total</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TRAFFIC_COUNTER__TOTAL = ProviderPackage.SERVICE_FEATURE_COUNT + 8;
+
+	/**
+	 * The number of structural features of the '<em>Io Traffic Counter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TRAFFIC_COUNTER_FEATURE_COUNT = ProviderPackage.SERVICE_FEATURE_COUNT + 9;
+
+	/**
+	 * The operation id for the '<em>EIs Set</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TRAFFIC_COUNTER___EIS_SET__ESTRUCTURALFEATURE = ProviderPackage.SERVICE___EIS_SET__ESTRUCTURALFEATURE;
+
+	/**
+	 * The number of operations of the '<em>Io Traffic Counter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TRAFFIC_COUNTER_OPERATION_COUNT = ProviderPackage.SERVICE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficStatusImpl <em>Io Traffic Status</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.chirpstack.model.chirpstack.impl.IoTrafficStatusImpl
+	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getIoTrafficStatus()
+	 * @generated
+	 */
+	int IO_TRAFFIC_STATUS = 38;
+
+	/**
+	 * The feature id for the '<em><b>Metadata</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TRAFFIC_STATUS__METADATA = ProviderPackage.SERVICE__METADATA;
+
+	/**
+	 * The feature id for the '<em><b>Total Objects</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TRAFFIC_STATUS__TOTAL_OBJECTS = ProviderPackage.SERVICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Line Count</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TRAFFIC_STATUS__LINE_COUNT = ProviderPackage.SERVICE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Payload Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TRAFFIC_STATUS__PAYLOAD_VERSION = ProviderPackage.SERVICE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>From Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TRAFFIC_STATUS__FROM_TIME = ProviderPackage.SERVICE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>To Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TRAFFIC_STATUS__TO_TIME = ProviderPackage.SERVICE_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Message Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TRAFFIC_STATUS__MESSAGE_TYPE = ProviderPackage.SERVICE_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>From Time Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TRAFFIC_STATUS__FROM_TIME_TEXT = ProviderPackage.SERVICE_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>To Time Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TRAFFIC_STATUS__TO_TIME_TEXT = ProviderPackage.SERVICE_FEATURE_COUNT + 7;
+
+	/**
+	 * The number of structural features of the '<em>Io Traffic Status</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TRAFFIC_STATUS_FEATURE_COUNT = ProviderPackage.SERVICE_FEATURE_COUNT + 8;
+
+	/**
+	 * The operation id for the '<em>EIs Set</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TRAFFIC_STATUS___EIS_SET__ESTRUCTURALFEATURE = ProviderPackage.SERVICE___EIS_SET__ESTRUCTURALFEATURE;
+
+	/**
+	 * The number of operations of the '<em>Io Traffic Status</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TRAFFIC_STATUS_OPERATION_COUNT = ProviderPackage.SERVICE_OPERATION_COUNT + 0;
+
 
 	/**
 	 * Returns the meta object for class '{@link de.jena.chirpstack.model.chirpstack.Dragino <em>Dragino</em>}'.
@@ -4432,6 +4768,245 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getDDS45Status_Battery();
 
 	/**
+	 * Returns the meta object for class '{@link de.jena.chirpstack.model.chirpstack.IoTraffic <em>Io Traffic</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Io Traffic</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.IoTraffic
+	 * @generated
+	 */
+	EClass getIoTraffic();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link de.jena.chirpstack.model.chirpstack.IoTraffic#getCounter <em>Counter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Counter</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.IoTraffic#getCounter()
+	 * @see #getIoTraffic()
+	 * @generated
+	 */
+	EReference getIoTraffic_Counter();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link de.jena.chirpstack.model.chirpstack.IoTraffic#getStatus <em>Status</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Status</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.IoTraffic#getStatus()
+	 * @see #getIoTraffic()
+	 * @generated
+	 */
+	EReference getIoTraffic_Status();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.chirpstack.model.chirpstack.IoTrafficCounter <em>Io Traffic Counter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Io Traffic Counter</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.IoTrafficCounter
+	 * @generated
+	 */
+	EClass getIoTrafficCounter();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.IoTrafficCounter#getLineNumber <em>Line Number</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Line Number</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.IoTrafficCounter#getLineNumber()
+	 * @see #getIoTrafficCounter()
+	 * @generated
+	 */
+	EAttribute getIoTrafficCounter_LineNumber();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.IoTrafficCounter#getPerson <em>Person</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Person</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.IoTrafficCounter#getPerson()
+	 * @see #getIoTrafficCounter()
+	 * @generated
+	 */
+	EAttribute getIoTrafficCounter_Person();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.IoTrafficCounter#getBicycle <em>Bicycle</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Bicycle</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.IoTrafficCounter#getBicycle()
+	 * @see #getIoTrafficCounter()
+	 * @generated
+	 */
+	EAttribute getIoTrafficCounter_Bicycle();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.IoTrafficCounter#getCar <em>Car</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Car</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.IoTrafficCounter#getCar()
+	 * @see #getIoTrafficCounter()
+	 * @generated
+	 */
+	EAttribute getIoTrafficCounter_Car();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.IoTrafficCounter#getBus <em>Bus</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Bus</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.IoTrafficCounter#getBus()
+	 * @see #getIoTrafficCounter()
+	 * @generated
+	 */
+	EAttribute getIoTrafficCounter_Bus();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.IoTrafficCounter#getTruck <em>Truck</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Truck</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.IoTrafficCounter#getTruck()
+	 * @see #getIoTrafficCounter()
+	 * @generated
+	 */
+	EAttribute getIoTrafficCounter_Truck();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.IoTrafficCounter#getMotorbike <em>Motorbike</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Motorbike</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.IoTrafficCounter#getMotorbike()
+	 * @see #getIoTrafficCounter()
+	 * @generated
+	 */
+	EAttribute getIoTrafficCounter_Motorbike();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.IoTrafficCounter#getTrain <em>Train</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Train</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.IoTrafficCounter#getTrain()
+	 * @see #getIoTrafficCounter()
+	 * @generated
+	 */
+	EAttribute getIoTrafficCounter_Train();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.IoTrafficCounter#getTotal <em>Total</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Total</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.IoTrafficCounter#getTotal()
+	 * @see #getIoTrafficCounter()
+	 * @generated
+	 */
+	EAttribute getIoTrafficCounter_Total();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.chirpstack.model.chirpstack.IoTrafficStatus <em>Io Traffic Status</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Io Traffic Status</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.IoTrafficStatus
+	 * @generated
+	 */
+	EClass getIoTrafficStatus();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.IoTrafficStatus#getTotalObjects <em>Total Objects</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Total Objects</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.IoTrafficStatus#getTotalObjects()
+	 * @see #getIoTrafficStatus()
+	 * @generated
+	 */
+	EAttribute getIoTrafficStatus_TotalObjects();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.IoTrafficStatus#getLineCount <em>Line Count</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Line Count</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.IoTrafficStatus#getLineCount()
+	 * @see #getIoTrafficStatus()
+	 * @generated
+	 */
+	EAttribute getIoTrafficStatus_LineCount();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.IoTrafficStatus#getPayloadVersion <em>Payload Version</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Payload Version</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.IoTrafficStatus#getPayloadVersion()
+	 * @see #getIoTrafficStatus()
+	 * @generated
+	 */
+	EAttribute getIoTrafficStatus_PayloadVersion();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.IoTrafficStatus#getFromTime <em>From Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>From Time</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.IoTrafficStatus#getFromTime()
+	 * @see #getIoTrafficStatus()
+	 * @generated
+	 */
+	EAttribute getIoTrafficStatus_FromTime();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.IoTrafficStatus#getToTime <em>To Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>To Time</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.IoTrafficStatus#getToTime()
+	 * @see #getIoTrafficStatus()
+	 * @generated
+	 */
+	EAttribute getIoTrafficStatus_ToTime();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.IoTrafficStatus#getMessageType <em>Message Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Message Type</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.IoTrafficStatus#getMessageType()
+	 * @see #getIoTrafficStatus()
+	 * @generated
+	 */
+	EAttribute getIoTrafficStatus_MessageType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.IoTrafficStatus#getFromTimeText <em>From Time Text</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>From Time Text</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.IoTrafficStatus#getFromTimeText()
+	 * @see #getIoTrafficStatus()
+	 * @generated
+	 */
+	EAttribute getIoTrafficStatus_FromTimeText();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.IoTrafficStatus#getToTimeText <em>To Time Text</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>To Time Text</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.IoTrafficStatus#getToTimeText()
+	 * @see #getIoTrafficStatus()
+	 * @generated
+	 */
+	EAttribute getIoTrafficStatus_ToTimeText();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5597,6 +6172,188 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 		 * @generated
 		 */
 		EAttribute DDS45_STATUS__BATTERY = eINSTANCE.getDDS45Status_Battery();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficImpl <em>Io Traffic</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.chirpstack.model.chirpstack.impl.IoTrafficImpl
+		 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getIoTraffic()
+		 * @generated
+		 */
+		EClass IO_TRAFFIC = eINSTANCE.getIoTraffic();
+
+		/**
+		 * The meta object literal for the '<em><b>Counter</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IO_TRAFFIC__COUNTER = eINSTANCE.getIoTraffic_Counter();
+
+		/**
+		 * The meta object literal for the '<em><b>Status</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IO_TRAFFIC__STATUS = eINSTANCE.getIoTraffic_Status();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficCounterImpl <em>Io Traffic Counter</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.chirpstack.model.chirpstack.impl.IoTrafficCounterImpl
+		 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getIoTrafficCounter()
+		 * @generated
+		 */
+		EClass IO_TRAFFIC_COUNTER = eINSTANCE.getIoTrafficCounter();
+
+		/**
+		 * The meta object literal for the '<em><b>Line Number</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IO_TRAFFIC_COUNTER__LINE_NUMBER = eINSTANCE.getIoTrafficCounter_LineNumber();
+
+		/**
+		 * The meta object literal for the '<em><b>Person</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IO_TRAFFIC_COUNTER__PERSON = eINSTANCE.getIoTrafficCounter_Person();
+
+		/**
+		 * The meta object literal for the '<em><b>Bicycle</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IO_TRAFFIC_COUNTER__BICYCLE = eINSTANCE.getIoTrafficCounter_Bicycle();
+
+		/**
+		 * The meta object literal for the '<em><b>Car</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IO_TRAFFIC_COUNTER__CAR = eINSTANCE.getIoTrafficCounter_Car();
+
+		/**
+		 * The meta object literal for the '<em><b>Bus</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IO_TRAFFIC_COUNTER__BUS = eINSTANCE.getIoTrafficCounter_Bus();
+
+		/**
+		 * The meta object literal for the '<em><b>Truck</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IO_TRAFFIC_COUNTER__TRUCK = eINSTANCE.getIoTrafficCounter_Truck();
+
+		/**
+		 * The meta object literal for the '<em><b>Motorbike</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IO_TRAFFIC_COUNTER__MOTORBIKE = eINSTANCE.getIoTrafficCounter_Motorbike();
+
+		/**
+		 * The meta object literal for the '<em><b>Train</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IO_TRAFFIC_COUNTER__TRAIN = eINSTANCE.getIoTrafficCounter_Train();
+
+		/**
+		 * The meta object literal for the '<em><b>Total</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IO_TRAFFIC_COUNTER__TOTAL = eINSTANCE.getIoTrafficCounter_Total();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficStatusImpl <em>Io Traffic Status</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.chirpstack.model.chirpstack.impl.IoTrafficStatusImpl
+		 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getIoTrafficStatus()
+		 * @generated
+		 */
+		EClass IO_TRAFFIC_STATUS = eINSTANCE.getIoTrafficStatus();
+
+		/**
+		 * The meta object literal for the '<em><b>Total Objects</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IO_TRAFFIC_STATUS__TOTAL_OBJECTS = eINSTANCE.getIoTrafficStatus_TotalObjects();
+
+		/**
+		 * The meta object literal for the '<em><b>Line Count</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IO_TRAFFIC_STATUS__LINE_COUNT = eINSTANCE.getIoTrafficStatus_LineCount();
+
+		/**
+		 * The meta object literal for the '<em><b>Payload Version</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IO_TRAFFIC_STATUS__PAYLOAD_VERSION = eINSTANCE.getIoTrafficStatus_PayloadVersion();
+
+		/**
+		 * The meta object literal for the '<em><b>From Time</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IO_TRAFFIC_STATUS__FROM_TIME = eINSTANCE.getIoTrafficStatus_FromTime();
+
+		/**
+		 * The meta object literal for the '<em><b>To Time</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IO_TRAFFIC_STATUS__TO_TIME = eINSTANCE.getIoTrafficStatus_ToTime();
+
+		/**
+		 * The meta object literal for the '<em><b>Message Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IO_TRAFFIC_STATUS__MESSAGE_TYPE = eINSTANCE.getIoTrafficStatus_MessageType();
+
+		/**
+		 * The meta object literal for the '<em><b>From Time Text</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IO_TRAFFIC_STATUS__FROM_TIME_TEXT = eINSTANCE.getIoTrafficStatus_FromTimeText();
+
+		/**
+		 * The meta object literal for the '<em><b>To Time Text</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IO_TRAFFIC_STATUS__TO_TIME_TEXT = eINSTANCE.getIoTrafficStatus_ToTimeText();
 
 	}
 

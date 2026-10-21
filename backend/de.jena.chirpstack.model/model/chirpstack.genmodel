@@ -179,5 +179,30 @@
     <genClasses ecoreClass="chirpstack.ecore#//DDS45Status">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//DDS45Status/battery"/>
     </genClasses>
+    <genClasses ecoreClass="chirpstack.ecore#//IoTraffic">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack.ecore#//IoTraffic/counter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack.ecore#//IoTraffic/status"/>
+    </genClasses>
+    <genClasses ecoreClass="chirpstack.ecore#//IoTrafficCounter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//IoTrafficCounter/lineNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//IoTrafficCounter/person"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//IoTrafficCounter/bicycle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//IoTrafficCounter/car"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//IoTrafficCounter/bus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//IoTrafficCounter/truck"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//IoTrafficCounter/motorbike"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//IoTrafficCounter/train"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//IoTrafficCounter/total"/>
+    </genClasses>
+    <genClasses ecoreClass="chirpstack.ecore#//IoTrafficStatus">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//IoTrafficStatus/totalObjects"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//IoTrafficStatus/lineCount"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//IoTrafficStatus/payloadVersion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//IoTrafficStatus/fromTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//IoTrafficStatus/toTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//IoTrafficStatus/messageType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//IoTrafficStatus/fromTimeText"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//IoTrafficStatus/toTimeText"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

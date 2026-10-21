@@ -1,0 +1,89 @@
+{
+  "deduplicationId": "2614899c-5a98-4aeb-a817-0a58d08f64bb",
+  "time": "2026-10-12T10:25:14.430+00:00",
+  "deviceInfo": {
+    "tenantId": "52f14cd4-c6f1-4fbd-8f87-4025e1d49242",
+    "tenantName": "Jena",
+    "applicationId": "6c05c20d-a152-43be-bd50-0af072e909d4",
+    "applicationName": "Passantenzählung",
+    "deviceProfileId": "ef645c43-546c-4594-a0e5-9e0852faf29b",
+    "deviceProfileName": "iotec iotraffic Camera",
+    "deviceName": "iotraffic Camera Test",
+    "devEui": "37a151dd238fb2e7",
+    "deviceClassEnabled": "CLASS_C",
+    "tags": {}
+  },
+  "devAddr": "00e4e23e",
+  "adr": true,
+  "dr": 5,
+  "fCnt": 1556,
+  "fPort": 16,
+  "confirmed": false,
+  "data": "BdgC55B/AhACAAACAAAA",
+  "object": {
+    "lines": [
+      {
+        "person": 127.0,
+        "line_number": 9.0,
+        "bicycle": 33.0,
+        "car": 2.0,
+        "bus": 2.0,
+        "total": 164.0,
+        "train": 0.0,
+        "truck": 0.0,
+        "motorbike": 0.0
+      }
+    ],
+    "from_time_text": "invalid",
+    "message_type": "counter_data",
+    "payload_version": 5.0,
+    "to_time_text": "12:23",
+    "line_count": 1.0,
+    "to_time": 743.0,
+    "total_objects": 164.0,
+    "from_time": 3456.0
+  },
+  "rxInfo": [
+    {
+      "gatewayId": "7076ff0056080c2c",
+      "uplinkId": 25977,
+      "nsTime": "2026-10-12T10:25:14.467628037+00:00",
+      "timeSinceGpsEpoch": "1475835932.430s",
+      "rssi": -92,
+      "snr": 9.5,
+      "channel": 4,
+      "location": {
+        "latitude": 50.92878723144531,
+        "longitude": 11.584816932678223,
+        "altitude": 282.0
+      },
+      "context": "3wsRIw==",
+      "crcStatus": "CRC_OK"
+    },
+    {
+      "gatewayId": "fcc23dfffe2ea641",
+      "uplinkId": 11785,
+      "nsTime": "2026-10-12T10:25:14.459050166+00:00",
+      "rssi": -111,
+      "snr": -6.0,
+      "channel": 7,
+      "location": {
+        "latitude": 50.932005871988125,
+        "longitude": 11.591793894767763
+      },
+      "context": "OffrVA==",
+      "crcStatus": "CRC_OK"
+    }
+  ],
+  "txInfo": {
+    "frequency": 867900000,
+    "modulation": {
+      "lora": {
+        "bandwidth": 125000,
+        "spreadingFactor": 7,
+        "codeRate": "CR_4_5"
+      }
+    }
+  },
+  "regionConfigId": "eu868"
+}

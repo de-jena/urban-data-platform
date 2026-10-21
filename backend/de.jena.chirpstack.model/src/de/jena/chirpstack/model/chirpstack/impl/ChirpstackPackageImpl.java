@@ -25,6 +25,9 @@ import de.jena.chirpstack.model.chirpstack.DDS45Distance;
 import de.jena.chirpstack.model.chirpstack.DDS45Status;
 import de.jena.chirpstack.model.chirpstack.Device;
 import de.jena.chirpstack.model.chirpstack.Dragino;
+import de.jena.chirpstack.model.chirpstack.IoTraffic;
+import de.jena.chirpstack.model.chirpstack.IoTrafficCounter;
+import de.jena.chirpstack.model.chirpstack.IoTrafficStatus;
 import de.jena.chirpstack.model.chirpstack.Kalyx;
 import de.jena.chirpstack.model.chirpstack.KalyxRain;
 import de.jena.chirpstack.model.chirpstack.KalyxStatus;
@@ -312,6 +315,27 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 	 * @generated
 	 */
 	private EClass dds45StatusEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ioTrafficEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ioTrafficCounterEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ioTrafficStatusEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -1722,6 +1746,226 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 	 * @generated
 	 */
 	@Override
+	public EClass getIoTraffic() {
+		return ioTrafficEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getIoTraffic_Counter() {
+		return (EReference)ioTrafficEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getIoTraffic_Status() {
+		return (EReference)ioTrafficEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getIoTrafficCounter() {
+		return ioTrafficCounterEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getIoTrafficCounter_LineNumber() {
+		return (EAttribute)ioTrafficCounterEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getIoTrafficCounter_Person() {
+		return (EAttribute)ioTrafficCounterEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getIoTrafficCounter_Bicycle() {
+		return (EAttribute)ioTrafficCounterEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getIoTrafficCounter_Car() {
+		return (EAttribute)ioTrafficCounterEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getIoTrafficCounter_Bus() {
+		return (EAttribute)ioTrafficCounterEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getIoTrafficCounter_Truck() {
+		return (EAttribute)ioTrafficCounterEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getIoTrafficCounter_Motorbike() {
+		return (EAttribute)ioTrafficCounterEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getIoTrafficCounter_Train() {
+		return (EAttribute)ioTrafficCounterEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getIoTrafficCounter_Total() {
+		return (EAttribute)ioTrafficCounterEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getIoTrafficStatus() {
+		return ioTrafficStatusEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getIoTrafficStatus_TotalObjects() {
+		return (EAttribute)ioTrafficStatusEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getIoTrafficStatus_LineCount() {
+		return (EAttribute)ioTrafficStatusEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getIoTrafficStatus_PayloadVersion() {
+		return (EAttribute)ioTrafficStatusEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getIoTrafficStatus_FromTime() {
+		return (EAttribute)ioTrafficStatusEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getIoTrafficStatus_ToTime() {
+		return (EAttribute)ioTrafficStatusEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getIoTrafficStatus_MessageType() {
+		return (EAttribute)ioTrafficStatusEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getIoTrafficStatus_FromTimeText() {
+		return (EAttribute)ioTrafficStatusEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getIoTrafficStatus_ToTimeText() {
+		return (EAttribute)ioTrafficStatusEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public ChirpstackFactory getChirpstackFactory() {
 		return (ChirpstackFactory)getEFactoryInstance();
 	}
@@ -1914,6 +2158,31 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 
 		dds45StatusEClass = createEClass(DDS45_STATUS);
 		createEAttribute(dds45StatusEClass, DDS45_STATUS__BATTERY);
+
+		ioTrafficEClass = createEClass(IO_TRAFFIC);
+		createEReference(ioTrafficEClass, IO_TRAFFIC__COUNTER);
+		createEReference(ioTrafficEClass, IO_TRAFFIC__STATUS);
+
+		ioTrafficCounterEClass = createEClass(IO_TRAFFIC_COUNTER);
+		createEAttribute(ioTrafficCounterEClass, IO_TRAFFIC_COUNTER__LINE_NUMBER);
+		createEAttribute(ioTrafficCounterEClass, IO_TRAFFIC_COUNTER__PERSON);
+		createEAttribute(ioTrafficCounterEClass, IO_TRAFFIC_COUNTER__BICYCLE);
+		createEAttribute(ioTrafficCounterEClass, IO_TRAFFIC_COUNTER__CAR);
+		createEAttribute(ioTrafficCounterEClass, IO_TRAFFIC_COUNTER__BUS);
+		createEAttribute(ioTrafficCounterEClass, IO_TRAFFIC_COUNTER__TRUCK);
+		createEAttribute(ioTrafficCounterEClass, IO_TRAFFIC_COUNTER__MOTORBIKE);
+		createEAttribute(ioTrafficCounterEClass, IO_TRAFFIC_COUNTER__TRAIN);
+		createEAttribute(ioTrafficCounterEClass, IO_TRAFFIC_COUNTER__TOTAL);
+
+		ioTrafficStatusEClass = createEClass(IO_TRAFFIC_STATUS);
+		createEAttribute(ioTrafficStatusEClass, IO_TRAFFIC_STATUS__TOTAL_OBJECTS);
+		createEAttribute(ioTrafficStatusEClass, IO_TRAFFIC_STATUS__LINE_COUNT);
+		createEAttribute(ioTrafficStatusEClass, IO_TRAFFIC_STATUS__PAYLOAD_VERSION);
+		createEAttribute(ioTrafficStatusEClass, IO_TRAFFIC_STATUS__FROM_TIME);
+		createEAttribute(ioTrafficStatusEClass, IO_TRAFFIC_STATUS__TO_TIME);
+		createEAttribute(ioTrafficStatusEClass, IO_TRAFFIC_STATUS__MESSAGE_TYPE);
+		createEAttribute(ioTrafficStatusEClass, IO_TRAFFIC_STATUS__FROM_TIME_TEXT);
+		createEAttribute(ioTrafficStatusEClass, IO_TRAFFIC_STATUS__TO_TIME_TEXT);
 	}
 
 	/**
@@ -1983,6 +2252,9 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 		dds45EClass.getESuperTypes().add(theProviderPackage.getProvider());
 		dds45DistanceEClass.getESuperTypes().add(theProviderPackage.getService());
 		dds45StatusEClass.getESuperTypes().add(theProviderPackage.getService());
+		ioTrafficEClass.getESuperTypes().add(theProviderPackage.getProvider());
+		ioTrafficCounterEClass.getESuperTypes().add(theProviderPackage.getService());
+		ioTrafficStatusEClass.getESuperTypes().add(theProviderPackage.getService());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(draginoEClass, Dragino.class, "Dragino", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2155,6 +2427,31 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 		initEClass(dds45StatusEClass, DDS45Status.class, "DDS45Status", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDDS45Status_Battery(), ecorePackage.getEDouble(), "battery", null, 0, 1, DDS45Status.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(ioTrafficEClass, IoTraffic.class, "IoTraffic", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getIoTraffic_Counter(), this.getIoTrafficCounter(), null, "counter", null, 0, 1, IoTraffic.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIoTraffic_Status(), this.getIoTrafficStatus(), null, "status", null, 0, 1, IoTraffic.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(ioTrafficCounterEClass, IoTrafficCounter.class, "IoTrafficCounter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getIoTrafficCounter_LineNumber(), ecorePackage.getEDouble(), "lineNumber", null, 0, 1, IoTrafficCounter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIoTrafficCounter_Person(), ecorePackage.getEDouble(), "person", null, 0, 1, IoTrafficCounter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIoTrafficCounter_Bicycle(), ecorePackage.getEDouble(), "bicycle", null, 0, 1, IoTrafficCounter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIoTrafficCounter_Car(), ecorePackage.getEDouble(), "car", null, 0, 1, IoTrafficCounter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIoTrafficCounter_Bus(), ecorePackage.getEDouble(), "bus", null, 0, 1, IoTrafficCounter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIoTrafficCounter_Truck(), ecorePackage.getEDouble(), "truck", null, 0, 1, IoTrafficCounter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIoTrafficCounter_Motorbike(), ecorePackage.getEDouble(), "motorbike", null, 0, 1, IoTrafficCounter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIoTrafficCounter_Train(), ecorePackage.getEDouble(), "train", null, 0, 1, IoTrafficCounter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIoTrafficCounter_Total(), ecorePackage.getEDouble(), "total", null, 0, 1, IoTrafficCounter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(ioTrafficStatusEClass, IoTrafficStatus.class, "IoTrafficStatus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getIoTrafficStatus_TotalObjects(), ecorePackage.getEDouble(), "totalObjects", null, 0, 1, IoTrafficStatus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIoTrafficStatus_LineCount(), ecorePackage.getEDouble(), "lineCount", null, 0, 1, IoTrafficStatus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIoTrafficStatus_PayloadVersion(), ecorePackage.getEDouble(), "payloadVersion", null, 0, 1, IoTrafficStatus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIoTrafficStatus_FromTime(), ecorePackage.getEDouble(), "fromTime", null, 0, 1, IoTrafficStatus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIoTrafficStatus_ToTime(), ecorePackage.getEDouble(), "toTime", null, 0, 1, IoTrafficStatus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIoTrafficStatus_MessageType(), ecorePackage.getEString(), "messageType", null, 0, 1, IoTrafficStatus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIoTrafficStatus_FromTimeText(), ecorePackage.getEString(), "fromTimeText", null, 0, 1, IoTrafficStatus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIoTrafficStatus_ToTimeText(), ecorePackage.getEString(), "toTimeText", null, 0, 1, IoTrafficStatus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		// Create resource
 		createResource(eNS_URI);
 
@@ -2300,6 +2597,14 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 			   "name", "Dragino_DDS45-LB",
 			   "profileName", "Dragino DDS45-LB",
 			   "profileId", "47cda612-0895-4c4a-828f-e3f509907eda"
+		   });
+		addAnnotation
+		  (ioTrafficEClass,
+		   source,
+		   new String[] {
+			   "name", "iotec_iotraffic_Camera",
+			   "profileName", "iotec iotraffic Camera",
+			   "profileId", "ef645c43-546c-4594-a0e5-9e0852faf29b"
 		   });
 	}
 
@@ -2731,6 +3036,108 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 		   source,
 		   new String[] {
 			   "path", "object/Battery"
+		   });
+		addAnnotation
+		  (getIoTrafficCounter_LineNumber(),
+		   source,
+		   new String[] {
+			   "path", "object/lines/0/line_number"
+		   });
+		addAnnotation
+		  (getIoTrafficCounter_Person(),
+		   source,
+		   new String[] {
+			   "path", "object/lines/0/person"
+		   });
+		addAnnotation
+		  (getIoTrafficCounter_Bicycle(),
+		   source,
+		   new String[] {
+			   "path", "object/lines/0/bicycle"
+		   });
+		addAnnotation
+		  (getIoTrafficCounter_Car(),
+		   source,
+		   new String[] {
+			   "path", "object/lines/0/car"
+		   });
+		addAnnotation
+		  (getIoTrafficCounter_Bus(),
+		   source,
+		   new String[] {
+			   "path", "object/lines/0/bus"
+		   });
+		addAnnotation
+		  (getIoTrafficCounter_Truck(),
+		   source,
+		   new String[] {
+			   "path", "object/lines/0/truck"
+		   });
+		addAnnotation
+		  (getIoTrafficCounter_Motorbike(),
+		   source,
+		   new String[] {
+			   "path", "object/lines/0/motorbike"
+		   });
+		addAnnotation
+		  (getIoTrafficCounter_Train(),
+		   source,
+		   new String[] {
+			   "path", "object/lines/0/train"
+		   });
+		addAnnotation
+		  (getIoTrafficCounter_Total(),
+		   source,
+		   new String[] {
+			   "path", "object/lines/0/total"
+		   });
+		addAnnotation
+		  (getIoTrafficStatus_TotalObjects(),
+		   source,
+		   new String[] {
+			   "path", "object/total_objects"
+		   });
+		addAnnotation
+		  (getIoTrafficStatus_LineCount(),
+		   source,
+		   new String[] {
+			   "path", "object/line_count"
+		   });
+		addAnnotation
+		  (getIoTrafficStatus_PayloadVersion(),
+		   source,
+		   new String[] {
+			   "path", "object/payload_version"
+		   });
+		addAnnotation
+		  (getIoTrafficStatus_FromTime(),
+		   source,
+		   new String[] {
+			   "path", "object/from_time"
+		   });
+		addAnnotation
+		  (getIoTrafficStatus_ToTime(),
+		   source,
+		   new String[] {
+			   "path", "object/to_time"
+		   });
+		addAnnotation
+		  (getIoTrafficStatus_MessageType(),
+		   source,
+		   new String[] {
+			   "path", "object/message_type"
+		   });
+		addAnnotation
+		  (getIoTrafficStatus_FromTimeText(),
+		   source,
+		   new String[] {
+			   "path", "object/from_time_text"
+		   });
+		addAnnotation
+		  (getIoTrafficStatus_ToTimeText(),
+		   source,
+		   new String[] {
+			   "path", "object/to_time_text"
 		   });
 	}
 

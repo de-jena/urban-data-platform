@@ -360,6 +360,33 @@ public interface ChirpstackFactory extends EFactory {
 	DDS45Status createDDS45Status();
 
 	/**
+	 * Returns a new object of class '<em>Io Traffic</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Io Traffic</em>'.
+	 * @generated
+	 */
+	IoTraffic createIoTraffic();
+
+	/**
+	 * Returns a new object of class '<em>Io Traffic Counter</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Io Traffic Counter</em>'.
+	 * @generated
+	 */
+	IoTrafficCounter createIoTrafficCounter();
+
+	/**
+	 * Returns a new object of class '<em>Io Traffic Status</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Io Traffic Status</em>'.
+	 * @generated
+	 */
+	IoTrafficStatus createIoTrafficStatus();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

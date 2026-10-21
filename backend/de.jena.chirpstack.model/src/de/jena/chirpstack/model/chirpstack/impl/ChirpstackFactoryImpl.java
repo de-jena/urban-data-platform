@@ -103,6 +103,9 @@ public class ChirpstackFactoryImpl extends EFactoryImpl implements ChirpstackFac
 			case ChirpstackPackage.DDS45: return createDDS45();
 			case ChirpstackPackage.DDS45_DISTANCE: return createDDS45Distance();
 			case ChirpstackPackage.DDS45_STATUS: return createDDS45Status();
+			case ChirpstackPackage.IO_TRAFFIC: return createIoTraffic();
+			case ChirpstackPackage.IO_TRAFFIC_COUNTER: return createIoTrafficCounter();
+			case ChirpstackPackage.IO_TRAFFIC_STATUS: return createIoTrafficStatus();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -502,6 +505,39 @@ public class ChirpstackFactoryImpl extends EFactoryImpl implements ChirpstackFac
 	public DDS45Status createDDS45Status() {
 		DDS45StatusImpl dds45Status = new DDS45StatusImpl();
 		return dds45Status;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public IoTraffic createIoTraffic() {
+		IoTrafficImpl ioTraffic = new IoTrafficImpl();
+		return ioTraffic;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public IoTrafficCounter createIoTrafficCounter() {
+		IoTrafficCounterImpl ioTrafficCounter = new IoTrafficCounterImpl();
+		return ioTrafficCounter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public IoTrafficStatus createIoTrafficStatus() {
+		IoTrafficStatusImpl ioTrafficStatus = new IoTrafficStatusImpl();
+		return ioTrafficStatus;
 	}
 
 	/**

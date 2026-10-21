@@ -33,6 +33,13 @@ The connector currently supports the following LoRaWAN sensor types:
 ### TEKTELIC Sensors
 - Various environmental monitoring devices with customizable sensor configurations
 
+### iotec iotraffic Camera
+- **Profile ID**: `ef645c43-546c-4594-a0e5-9e0852faf29b`
+- **Model**: `IoTraffic`
+- **Services**:
+  - **Counter**: Per-class counts of the first counting line (person, bicycle, car, bus, truck, motorbike, train, total)
+  - **Status**: Total objects, line count, counting period and payload version
+
 ### Other Supported Models
 - **SN50**: Multi-purpose sensor node
 - **Teros21**: Soil monitoring sensor
