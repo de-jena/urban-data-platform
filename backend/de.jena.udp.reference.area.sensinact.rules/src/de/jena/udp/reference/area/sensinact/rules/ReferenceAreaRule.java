@@ -22,6 +22,8 @@ import java.util.logging.Logger;
 
 import org.eclipse.sensinact.core.snapshot.ICriterion;
 import org.eclipse.sensinact.core.snapshot.ProviderSnapshot;
+import org.eclipse.sensinact.core.snapshot.ResourceSnapshot;
+import org.eclipse.sensinact.core.snapshot.ServiceSnapshot;
 import org.eclipse.sensinact.gateway.geojson.Feature;
 import org.eclipse.sensinact.gateway.geojson.FeatureCollection;
 import org.eclipse.sensinact.gateway.geojson.GeoJsonObject;
@@ -74,11 +76,10 @@ public class ReferenceAreaRule implements RuleDefinition{
 				List<ProviderSnapshot> sameAreaProviders = getProvidersInSameArea(refArea, providerSnapshots);
 				List<Double> pfWerts = new LinkedList<>();
 				sameAreaProviders.forEach(provider -> {
-					provider.getService("derivedQuantities").getResources().forEach(resource -> {
-						if(resource.getName().equals("pfWertAvg")) {
-							pfWerts.add((double) resource.getValue().getValue());
-						}
-					});
+					ResourceSnapshot pfWertAvg = getPfWertAvg(provider);
+					if(pfWertAvg != null) {
+						pfWerts.add((double) pfWertAvg.getValue().getValue());
+					}
 				});
 //				It may happen that some providers do not have a pfWertAvg yet because they did not get data, so we put those at 0.
 				if(pfWerts.size() < sameAreaProviders.size()) {
@@ -104,13 +105,27 @@ public class ReferenceAreaRule implements RuleDefinition{
 	
 	private ProviderSnapshot findRuleTriggerProvider(List<ProviderSnapshot> providerSnapshots) {
 		return providerSnapshots.stream()
+				.filter(provider -> getLatestPfWertAvgTimestamp(provider) != null)
 			    .max(Comparator.comparing(this::getLatestPfWertAvgTimestamp))
 			    .orElse(null);
 
 	}
 	
 	private Instant getLatestPfWertAvgTimestamp(ProviderSnapshot p) {
-		return p.getService("derivedQuantities").getResource("pfWertAvg").getValue().getTimestamp();
+		ResourceSnapshot pfWertAvg = getPfWertAvg(p);
+		return pfWertAvg == null ? null : pfWertAvg.getValue().getTimestamp();
+	}
+	
+	/**
+	 * @return the pfWertAvg of the given provider, or null while it has none yet
+	 */
+	private ResourceSnapshot getPfWertAvg(ProviderSnapshot p) {
+		ServiceSnapshot derivedQuantities = p.getService("derivedQuantities");
+		if(derivedQuantities == null) {
+			return null;
+		}
+		ResourceSnapshot pfWertAvg = derivedQuantities.getResource("pfWertAvg");
+		return pfWertAvg != null && pfWertAvg.isSet() ? pfWertAvg : null;
 	}
 	
 	private List<ProviderSnapshot> getProvidersInSameArea(String areaId, List<ProviderSnapshot> providerSnapshots) {
