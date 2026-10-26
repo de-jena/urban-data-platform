@@ -16,67 +16,9 @@
     <friendlyNameFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//Uplink/deviceInfo"/>
     <friendlyNameFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//DeviceInfo/deviceName"/>
   </admin>
-  <services mid="counter">
+  <services mid="window">
     <timestamp strategy="NOW"/>
-    <name name="counter"/>
-    <resources name="lineNumber" mid="lineNumber">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
-      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/lines"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficLines/line_number"/>
-    </resources>
-    <resources name="person" mid="person">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
-      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/lines"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficLines/person"/>
-    </resources>
-    <resources name="bicycle" mid="bicycle">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
-      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/lines"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficLines/bicycle"/>
-    </resources>
-    <resources name="car" mid="car">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
-      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/lines"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficLines/car"/>
-    </resources>
-    <resources name="bus" mid="bus">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
-      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/lines"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficLines/bus"/>
-    </resources>
-    <resources name="truck" mid="truck">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
-      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/lines"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficLines/truck"/>
-    </resources>
-    <resources name="motorbike" mid="motorbike">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
-      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/lines"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficLines/motorbike"/>
-    </resources>
-    <resources name="train" mid="train">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
-      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/lines"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficLines/train"/>
-    </resources>
-    <resources name="total" mid="total">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
-      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/lines"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficLines/total"/>
-    </resources>
-  </services>
-  <services mid="status">
-    <timestamp strategy="NOW"/>
-    <name name="status"/>
+    <name name="window"/>
     <resources name="totalObjects" mid="totalObjects">
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
@@ -102,11 +44,6 @@
       <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
       <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/to_time"/>
     </resources>
-    <resources name="messageType" mid="messageType">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/message_type"/>
-    </resources>
     <resources name="fromTimeText" mid="fromTimeText">
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
@@ -116,6 +53,201 @@
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
       <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/to_time_text"/>
+    </resources>
+  </services>
+  <services mid="line1">
+    <timestamp strategy="NOW"/>
+    <name name="line1"/>
+    <referencedResource xsi:type="sensinactMapping:ReferenceMapping" collectionFilter="key=line_1">
+      <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
+      <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/lines"/>
+      <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficLinesEntry/value"/>
+    </referencedResource>
+  </services>
+  <services mid="line2">
+    <timestamp strategy="NOW"/>
+    <name name="line2"/>
+    <referencedResource xsi:type="sensinactMapping:ReferenceMapping" collectionFilter="key=line_2">
+      <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
+      <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/lines"/>
+      <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficLinesEntry/value"/>
+    </referencedResource>
+  </services>
+  <services mid="line3">
+    <timestamp strategy="NOW"/>
+    <name name="line3"/>
+    <referencedResource xsi:type="sensinactMapping:ReferenceMapping" collectionFilter="key=line_3">
+      <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
+      <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/lines"/>
+      <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficLinesEntry/value"/>
+    </referencedResource>
+  </services>
+  <services mid="line4">
+    <timestamp strategy="NOW"/>
+    <name name="line4"/>
+    <referencedResource xsi:type="sensinactMapping:ReferenceMapping" collectionFilter="key=line_4">
+      <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
+      <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/lines"/>
+      <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficLinesEntry/value"/>
+    </referencedResource>
+  </services>
+  <services mid="line5">
+    <timestamp strategy="NOW"/>
+    <name name="line5"/>
+    <referencedResource xsi:type="sensinactMapping:ReferenceMapping" collectionFilter="key=line_5">
+      <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
+      <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/lines"/>
+      <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficLinesEntry/value"/>
+    </referencedResource>
+  </services>
+  <services mid="line6">
+    <timestamp strategy="NOW"/>
+    <name name="line6"/>
+    <referencedResource xsi:type="sensinactMapping:ReferenceMapping" collectionFilter="key=line_6">
+      <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
+      <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/lines"/>
+      <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficLinesEntry/value"/>
+    </referencedResource>
+  </services>
+  <services mid="line7">
+    <timestamp strategy="NOW"/>
+    <name name="line7"/>
+    <referencedResource xsi:type="sensinactMapping:ReferenceMapping" collectionFilter="key=line_7">
+      <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
+      <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/lines"/>
+      <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficLinesEntry/value"/>
+    </referencedResource>
+  </services>
+  <services mid="line8">
+    <timestamp strategy="NOW"/>
+    <name name="line8"/>
+    <referencedResource xsi:type="sensinactMapping:ReferenceMapping" collectionFilter="key=line_8">
+      <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
+      <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/lines"/>
+      <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficLinesEntry/value"/>
+    </referencedResource>
+  </services>
+  <services mid="line9">
+    <timestamp strategy="NOW"/>
+    <name name="line9"/>
+    <referencedResource xsi:type="sensinactMapping:ReferenceMapping" collectionFilter="key=line_9">
+      <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
+      <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/lines"/>
+      <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficLinesEntry/value"/>
+    </referencedResource>
+  </services>
+  <services mid="aiModule">
+    <timestamp strategy="NOW"/>
+    <name name="aiModule"/>
+    <resources name="cpuPct" mid="cpuPct">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/cpu_pct"/>
+    </resources>
+    <resources name="cpuTempC" mid="cpuTempC">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/cpu_temp_c"/>
+    </resources>
+    <resources name="gpuTempC" mid="gpuTempC">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/gpu_temp_c"/>
+    </resources>
+    <resources name="gpuUsagePct" mid="gpuUsagePct">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/gpu_usage_pct"/>
+    </resources>
+    <resources name="ramPct" mid="ramPct">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/ram_pct"/>
+    </resources>
+    <resources name="vmemPct" mid="vmemPct">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/vmem_pct"/>
+    </resources>
+    <resources name="swapPct" mid="swapPct">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/swap_pct"/>
+    </resources>
+    <resources name="diskPct" mid="diskPct">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/disk_pct"/>
+    </resources>
+    <resources name="osLoad1Average" mid="osLoad1Average">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/os_load_1_average"/>
+    </resources>
+    <resources name="osLoad5Average" mid="osLoad5Average">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/os_load_5_average"/>
+    </resources>
+    <resources name="osLoad15Average" mid="osLoad15Average">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/os_load_15_average"/>
+    </resources>
+    <resources name="uptimeMinutes" mid="uptimeMinutes">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/uptime_minutes"/>
+    </resources>
+    <resources name="uptimeHours" mid="uptimeHours">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/uptime_hours"/>
+    </resources>
+    <resources name="uptimeDays" mid="uptimeDays">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/uptime_days"/>
+    </resources>
+    <resources name="voltageV" mid="voltageV">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/voltage_v"/>
+    </resources>
+    <resources name="voltageMv" mid="voltageMv">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/voltage_mv"/>
+    </resources>
+    <resources name="wifiActive" mid="wifiActive">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/wifi_active"/>
+    </resources>
+    <resources name="ethernetActive" mid="ethernetActive">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/ethernet_active"/>
+    </resources>
+    <resources name="networkIfStatus" mid="networkIfStatus">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/network_if_status"/>
+    </resources>
+    <resources name="errorCode" mid="errorCode">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/error_code"/>
+    </resources>
+    <resources name="timestamp" mid="timestamp">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/timestamp"/>
+    </resources>
+    <resources name="timestampIso" mid="timestampIso">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficUplink/object"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//IoTrafficObject/timestamp_iso"/>
     </resources>
   </services>
 </sensinactMapping:ProviderMapping>

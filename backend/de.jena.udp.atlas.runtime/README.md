@@ -49,3 +49,7 @@ The Event Atlas mappings for the ChirpStack profiles are generated from
 `de.jena.chirpstack.model/model/chirpstack.ecore` by
 `de.jena.chirpstack.model/eventatlas/gen-chirpstack-mappings.py` into
 `de.jena.chirpstack.model/eventatlas/seed/`, which is what Model Atlas seeds into scope `udp`.
+A service annotated with `collection` + `filter` (the IoTraffic counting lines) becomes an EMF map
+on the uplink model and a `referencedResource` with a `collectionFilter`; see
+`docs/chirpstack/chirpstack-connector.md`. Recorded payloads for a replay through
+`/event/rest/ingest/{channel}` are in `de.jena.chirpstack.sensinact/examples/`.

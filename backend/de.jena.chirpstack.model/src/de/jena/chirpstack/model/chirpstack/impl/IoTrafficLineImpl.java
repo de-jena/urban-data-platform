@@ -14,7 +14,7 @@
 package de.jena.chirpstack.model.chirpstack.impl;
 
 import de.jena.chirpstack.model.chirpstack.ChirpstackPackage;
-import de.jena.chirpstack.model.chirpstack.IoTrafficCounter;
+import de.jena.chirpstack.model.chirpstack.IoTrafficLine;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -26,26 +26,26 @@ import org.eclipse.sensinact.model.core.provider.impl.ServiceImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Io Traffic Counter</b></em>'.
+ * An implementation of the model object '<em><b>Io Traffic Line</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficCounterImpl#getLineNumber <em>Line Number</em>}</li>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficCounterImpl#getPerson <em>Person</em>}</li>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficCounterImpl#getBicycle <em>Bicycle</em>}</li>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficCounterImpl#getCar <em>Car</em>}</li>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficCounterImpl#getBus <em>Bus</em>}</li>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficCounterImpl#getTruck <em>Truck</em>}</li>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficCounterImpl#getMotorbike <em>Motorbike</em>}</li>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficCounterImpl#getTrain <em>Train</em>}</li>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficCounterImpl#getTotal <em>Total</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficLineImpl#getLineNumber <em>Line Number</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficLineImpl#getPerson <em>Person</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficLineImpl#getBicycle <em>Bicycle</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficLineImpl#getCar <em>Car</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficLineImpl#getBus <em>Bus</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficLineImpl#getTruck <em>Truck</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficLineImpl#getMotorbike <em>Motorbike</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficLineImpl#getTrain <em>Train</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficLineImpl#getTotal <em>Total</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class IoTrafficCounterImpl extends ServiceImpl implements IoTrafficCounter {
+public class IoTrafficLineImpl extends ServiceImpl implements IoTrafficLine {
 	/**
 	 * The default value of the '{@link #getLineNumber() <em>Line Number</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -231,7 +231,7 @@ public class IoTrafficCounterImpl extends ServiceImpl implements IoTrafficCounte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected IoTrafficCounterImpl() {
+	protected IoTrafficLineImpl() {
 		super();
 	}
 
@@ -242,7 +242,7 @@ public class IoTrafficCounterImpl extends ServiceImpl implements IoTrafficCounte
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ChirpstackPackage.Literals.IO_TRAFFIC_COUNTER;
+		return ChirpstackPackage.Literals.IO_TRAFFIC_LINE;
 	}
 
 	/**
@@ -265,7 +265,7 @@ public class IoTrafficCounterImpl extends ServiceImpl implements IoTrafficCounte
 		double oldLineNumber = lineNumber;
 		lineNumber = newLineNumber;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.IO_TRAFFIC_COUNTER__LINE_NUMBER, oldLineNumber, lineNumber));
+			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.IO_TRAFFIC_LINE__LINE_NUMBER, oldLineNumber, lineNumber));
 	}
 
 	/**
@@ -288,7 +288,7 @@ public class IoTrafficCounterImpl extends ServiceImpl implements IoTrafficCounte
 		double oldPerson = person;
 		person = newPerson;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.IO_TRAFFIC_COUNTER__PERSON, oldPerson, person));
+			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.IO_TRAFFIC_LINE__PERSON, oldPerson, person));
 	}
 
 	/**
@@ -311,7 +311,7 @@ public class IoTrafficCounterImpl extends ServiceImpl implements IoTrafficCounte
 		double oldBicycle = bicycle;
 		bicycle = newBicycle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.IO_TRAFFIC_COUNTER__BICYCLE, oldBicycle, bicycle));
+			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.IO_TRAFFIC_LINE__BICYCLE, oldBicycle, bicycle));
 	}
 
 	/**
@@ -334,7 +334,7 @@ public class IoTrafficCounterImpl extends ServiceImpl implements IoTrafficCounte
 		double oldCar = car;
 		car = newCar;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.IO_TRAFFIC_COUNTER__CAR, oldCar, car));
+			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.IO_TRAFFIC_LINE__CAR, oldCar, car));
 	}
 
 	/**
@@ -357,7 +357,7 @@ public class IoTrafficCounterImpl extends ServiceImpl implements IoTrafficCounte
 		double oldBus = bus;
 		bus = newBus;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.IO_TRAFFIC_COUNTER__BUS, oldBus, bus));
+			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.IO_TRAFFIC_LINE__BUS, oldBus, bus));
 	}
 
 	/**
@@ -380,7 +380,7 @@ public class IoTrafficCounterImpl extends ServiceImpl implements IoTrafficCounte
 		double oldTruck = truck;
 		truck = newTruck;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.IO_TRAFFIC_COUNTER__TRUCK, oldTruck, truck));
+			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.IO_TRAFFIC_LINE__TRUCK, oldTruck, truck));
 	}
 
 	/**
@@ -403,7 +403,7 @@ public class IoTrafficCounterImpl extends ServiceImpl implements IoTrafficCounte
 		double oldMotorbike = motorbike;
 		motorbike = newMotorbike;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.IO_TRAFFIC_COUNTER__MOTORBIKE, oldMotorbike, motorbike));
+			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.IO_TRAFFIC_LINE__MOTORBIKE, oldMotorbike, motorbike));
 	}
 
 	/**
@@ -426,7 +426,7 @@ public class IoTrafficCounterImpl extends ServiceImpl implements IoTrafficCounte
 		double oldTrain = train;
 		train = newTrain;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.IO_TRAFFIC_COUNTER__TRAIN, oldTrain, train));
+			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.IO_TRAFFIC_LINE__TRAIN, oldTrain, train));
 	}
 
 	/**
@@ -449,7 +449,7 @@ public class IoTrafficCounterImpl extends ServiceImpl implements IoTrafficCounte
 		double oldTotal = total;
 		total = newTotal;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.IO_TRAFFIC_COUNTER__TOTAL, oldTotal, total));
+			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.IO_TRAFFIC_LINE__TOTAL, oldTotal, total));
 	}
 
 	/**
@@ -460,23 +460,23 @@ public class IoTrafficCounterImpl extends ServiceImpl implements IoTrafficCounte
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ChirpstackPackage.IO_TRAFFIC_COUNTER__LINE_NUMBER:
+			case ChirpstackPackage.IO_TRAFFIC_LINE__LINE_NUMBER:
 				return getLineNumber();
-			case ChirpstackPackage.IO_TRAFFIC_COUNTER__PERSON:
+			case ChirpstackPackage.IO_TRAFFIC_LINE__PERSON:
 				return getPerson();
-			case ChirpstackPackage.IO_TRAFFIC_COUNTER__BICYCLE:
+			case ChirpstackPackage.IO_TRAFFIC_LINE__BICYCLE:
 				return getBicycle();
-			case ChirpstackPackage.IO_TRAFFIC_COUNTER__CAR:
+			case ChirpstackPackage.IO_TRAFFIC_LINE__CAR:
 				return getCar();
-			case ChirpstackPackage.IO_TRAFFIC_COUNTER__BUS:
+			case ChirpstackPackage.IO_TRAFFIC_LINE__BUS:
 				return getBus();
-			case ChirpstackPackage.IO_TRAFFIC_COUNTER__TRUCK:
+			case ChirpstackPackage.IO_TRAFFIC_LINE__TRUCK:
 				return getTruck();
-			case ChirpstackPackage.IO_TRAFFIC_COUNTER__MOTORBIKE:
+			case ChirpstackPackage.IO_TRAFFIC_LINE__MOTORBIKE:
 				return getMotorbike();
-			case ChirpstackPackage.IO_TRAFFIC_COUNTER__TRAIN:
+			case ChirpstackPackage.IO_TRAFFIC_LINE__TRAIN:
 				return getTrain();
-			case ChirpstackPackage.IO_TRAFFIC_COUNTER__TOTAL:
+			case ChirpstackPackage.IO_TRAFFIC_LINE__TOTAL:
 				return getTotal();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -490,31 +490,31 @@ public class IoTrafficCounterImpl extends ServiceImpl implements IoTrafficCounte
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ChirpstackPackage.IO_TRAFFIC_COUNTER__LINE_NUMBER:
+			case ChirpstackPackage.IO_TRAFFIC_LINE__LINE_NUMBER:
 				setLineNumber((Double)newValue);
 				return;
-			case ChirpstackPackage.IO_TRAFFIC_COUNTER__PERSON:
+			case ChirpstackPackage.IO_TRAFFIC_LINE__PERSON:
 				setPerson((Double)newValue);
 				return;
-			case ChirpstackPackage.IO_TRAFFIC_COUNTER__BICYCLE:
+			case ChirpstackPackage.IO_TRAFFIC_LINE__BICYCLE:
 				setBicycle((Double)newValue);
 				return;
-			case ChirpstackPackage.IO_TRAFFIC_COUNTER__CAR:
+			case ChirpstackPackage.IO_TRAFFIC_LINE__CAR:
 				setCar((Double)newValue);
 				return;
-			case ChirpstackPackage.IO_TRAFFIC_COUNTER__BUS:
+			case ChirpstackPackage.IO_TRAFFIC_LINE__BUS:
 				setBus((Double)newValue);
 				return;
-			case ChirpstackPackage.IO_TRAFFIC_COUNTER__TRUCK:
+			case ChirpstackPackage.IO_TRAFFIC_LINE__TRUCK:
 				setTruck((Double)newValue);
 				return;
-			case ChirpstackPackage.IO_TRAFFIC_COUNTER__MOTORBIKE:
+			case ChirpstackPackage.IO_TRAFFIC_LINE__MOTORBIKE:
 				setMotorbike((Double)newValue);
 				return;
-			case ChirpstackPackage.IO_TRAFFIC_COUNTER__TRAIN:
+			case ChirpstackPackage.IO_TRAFFIC_LINE__TRAIN:
 				setTrain((Double)newValue);
 				return;
-			case ChirpstackPackage.IO_TRAFFIC_COUNTER__TOTAL:
+			case ChirpstackPackage.IO_TRAFFIC_LINE__TOTAL:
 				setTotal((Double)newValue);
 				return;
 		}
@@ -529,31 +529,31 @@ public class IoTrafficCounterImpl extends ServiceImpl implements IoTrafficCounte
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ChirpstackPackage.IO_TRAFFIC_COUNTER__LINE_NUMBER:
+			case ChirpstackPackage.IO_TRAFFIC_LINE__LINE_NUMBER:
 				setLineNumber(LINE_NUMBER_EDEFAULT);
 				return;
-			case ChirpstackPackage.IO_TRAFFIC_COUNTER__PERSON:
+			case ChirpstackPackage.IO_TRAFFIC_LINE__PERSON:
 				setPerson(PERSON_EDEFAULT);
 				return;
-			case ChirpstackPackage.IO_TRAFFIC_COUNTER__BICYCLE:
+			case ChirpstackPackage.IO_TRAFFIC_LINE__BICYCLE:
 				setBicycle(BICYCLE_EDEFAULT);
 				return;
-			case ChirpstackPackage.IO_TRAFFIC_COUNTER__CAR:
+			case ChirpstackPackage.IO_TRAFFIC_LINE__CAR:
 				setCar(CAR_EDEFAULT);
 				return;
-			case ChirpstackPackage.IO_TRAFFIC_COUNTER__BUS:
+			case ChirpstackPackage.IO_TRAFFIC_LINE__BUS:
 				setBus(BUS_EDEFAULT);
 				return;
-			case ChirpstackPackage.IO_TRAFFIC_COUNTER__TRUCK:
+			case ChirpstackPackage.IO_TRAFFIC_LINE__TRUCK:
 				setTruck(TRUCK_EDEFAULT);
 				return;
-			case ChirpstackPackage.IO_TRAFFIC_COUNTER__MOTORBIKE:
+			case ChirpstackPackage.IO_TRAFFIC_LINE__MOTORBIKE:
 				setMotorbike(MOTORBIKE_EDEFAULT);
 				return;
-			case ChirpstackPackage.IO_TRAFFIC_COUNTER__TRAIN:
+			case ChirpstackPackage.IO_TRAFFIC_LINE__TRAIN:
 				setTrain(TRAIN_EDEFAULT);
 				return;
-			case ChirpstackPackage.IO_TRAFFIC_COUNTER__TOTAL:
+			case ChirpstackPackage.IO_TRAFFIC_LINE__TOTAL:
 				setTotal(TOTAL_EDEFAULT);
 				return;
 		}
@@ -568,23 +568,23 @@ public class IoTrafficCounterImpl extends ServiceImpl implements IoTrafficCounte
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ChirpstackPackage.IO_TRAFFIC_COUNTER__LINE_NUMBER:
+			case ChirpstackPackage.IO_TRAFFIC_LINE__LINE_NUMBER:
 				return lineNumber != LINE_NUMBER_EDEFAULT;
-			case ChirpstackPackage.IO_TRAFFIC_COUNTER__PERSON:
+			case ChirpstackPackage.IO_TRAFFIC_LINE__PERSON:
 				return person != PERSON_EDEFAULT;
-			case ChirpstackPackage.IO_TRAFFIC_COUNTER__BICYCLE:
+			case ChirpstackPackage.IO_TRAFFIC_LINE__BICYCLE:
 				return bicycle != BICYCLE_EDEFAULT;
-			case ChirpstackPackage.IO_TRAFFIC_COUNTER__CAR:
+			case ChirpstackPackage.IO_TRAFFIC_LINE__CAR:
 				return car != CAR_EDEFAULT;
-			case ChirpstackPackage.IO_TRAFFIC_COUNTER__BUS:
+			case ChirpstackPackage.IO_TRAFFIC_LINE__BUS:
 				return bus != BUS_EDEFAULT;
-			case ChirpstackPackage.IO_TRAFFIC_COUNTER__TRUCK:
+			case ChirpstackPackage.IO_TRAFFIC_LINE__TRUCK:
 				return truck != TRUCK_EDEFAULT;
-			case ChirpstackPackage.IO_TRAFFIC_COUNTER__MOTORBIKE:
+			case ChirpstackPackage.IO_TRAFFIC_LINE__MOTORBIKE:
 				return motorbike != MOTORBIKE_EDEFAULT;
-			case ChirpstackPackage.IO_TRAFFIC_COUNTER__TRAIN:
+			case ChirpstackPackage.IO_TRAFFIC_LINE__TRAIN:
 				return train != TRAIN_EDEFAULT;
-			case ChirpstackPackage.IO_TRAFFIC_COUNTER__TOTAL:
+			case ChirpstackPackage.IO_TRAFFIC_LINE__TOTAL:
 				return total != TOTAL_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -622,4 +622,4 @@ public class IoTrafficCounterImpl extends ServiceImpl implements IoTrafficCounte
 		return result.toString();
 	}
 
-} //IoTrafficCounterImpl
+} //IoTrafficLineImpl

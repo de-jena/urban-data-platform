@@ -19,43 +19,42 @@ import org.osgi.annotation.versioning.ProviderType;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Io Traffic Status</b></em>'.
+ * A representation of the model object '<em><b>Io Traffic Window</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTrafficStatus#getTotalObjects <em>Total Objects</em>}</li>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTrafficStatus#getLineCount <em>Line Count</em>}</li>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTrafficStatus#getPayloadVersion <em>Payload Version</em>}</li>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTrafficStatus#getFromTime <em>From Time</em>}</li>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTrafficStatus#getToTime <em>To Time</em>}</li>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTrafficStatus#getMessageType <em>Message Type</em>}</li>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTrafficStatus#getFromTimeText <em>From Time Text</em>}</li>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTrafficStatus#getToTimeText <em>To Time Text</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTrafficWindow#getTotalObjects <em>Total Objects</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTrafficWindow#getLineCount <em>Line Count</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTrafficWindow#getPayloadVersion <em>Payload Version</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTrafficWindow#getFromTime <em>From Time</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTrafficWindow#getToTime <em>To Time</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTrafficWindow#getFromTimeText <em>From Time Text</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTrafficWindow#getToTimeText <em>To Time Text</em>}</li>
  * </ul>
  *
- * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTrafficStatus()
+ * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTrafficWindow()
  * @model
  * @generated
  */
 @ProviderType
-public interface IoTrafficStatus extends Service {
+public interface IoTrafficWindow extends Service {
 	/**
 	 * Returns the value of the '<em><b>Total Objects</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Total Objects</em>' attribute.
 	 * @see #setTotalObjects(double)
-	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTrafficStatus_TotalObjects()
+	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTrafficWindow_TotalObjects()
 	 * @model annotation="mapping path='object/total_objects'"
 	 * @generated
 	 */
 	double getTotalObjects();
 
 	/**
-	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTrafficStatus#getTotalObjects <em>Total Objects</em>}' attribute.
+	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTrafficWindow#getTotalObjects <em>Total Objects</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Total Objects</em>' attribute.
@@ -70,14 +69,14 @@ public interface IoTrafficStatus extends Service {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Line Count</em>' attribute.
 	 * @see #setLineCount(double)
-	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTrafficStatus_LineCount()
+	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTrafficWindow_LineCount()
 	 * @model annotation="mapping path='object/line_count'"
 	 * @generated
 	 */
 	double getLineCount();
 
 	/**
-	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTrafficStatus#getLineCount <em>Line Count</em>}' attribute.
+	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTrafficWindow#getLineCount <em>Line Count</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Line Count</em>' attribute.
@@ -92,14 +91,14 @@ public interface IoTrafficStatus extends Service {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Payload Version</em>' attribute.
 	 * @see #setPayloadVersion(double)
-	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTrafficStatus_PayloadVersion()
+	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTrafficWindow_PayloadVersion()
 	 * @model annotation="mapping path='object/payload_version'"
 	 * @generated
 	 */
 	double getPayloadVersion();
 
 	/**
-	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTrafficStatus#getPayloadVersion <em>Payload Version</em>}' attribute.
+	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTrafficWindow#getPayloadVersion <em>Payload Version</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Payload Version</em>' attribute.
@@ -114,14 +113,14 @@ public interface IoTrafficStatus extends Service {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>From Time</em>' attribute.
 	 * @see #setFromTime(double)
-	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTrafficStatus_FromTime()
+	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTrafficWindow_FromTime()
 	 * @model annotation="mapping path='object/from_time'"
 	 * @generated
 	 */
 	double getFromTime();
 
 	/**
-	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTrafficStatus#getFromTime <em>From Time</em>}' attribute.
+	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTrafficWindow#getFromTime <em>From Time</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>From Time</em>' attribute.
@@ -136,14 +135,14 @@ public interface IoTrafficStatus extends Service {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>To Time</em>' attribute.
 	 * @see #setToTime(double)
-	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTrafficStatus_ToTime()
+	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTrafficWindow_ToTime()
 	 * @model annotation="mapping path='object/to_time'"
 	 * @generated
 	 */
 	double getToTime();
 
 	/**
-	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTrafficStatus#getToTime <em>To Time</em>}' attribute.
+	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTrafficWindow#getToTime <em>To Time</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>To Time</em>' attribute.
@@ -153,41 +152,19 @@ public interface IoTrafficStatus extends Service {
 	void setToTime(double value);
 
 	/**
-	 * Returns the value of the '<em><b>Message Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Message Type</em>' attribute.
-	 * @see #setMessageType(String)
-	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTrafficStatus_MessageType()
-	 * @model annotation="mapping path='object/message_type'"
-	 * @generated
-	 */
-	String getMessageType();
-
-	/**
-	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTrafficStatus#getMessageType <em>Message Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Message Type</em>' attribute.
-	 * @see #getMessageType()
-	 * @generated
-	 */
-	void setMessageType(String value);
-
-	/**
 	 * Returns the value of the '<em><b>From Time Text</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>From Time Text</em>' attribute.
 	 * @see #setFromTimeText(String)
-	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTrafficStatus_FromTimeText()
+	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTrafficWindow_FromTimeText()
 	 * @model annotation="mapping path='object/from_time_text'"
 	 * @generated
 	 */
 	String getFromTimeText();
 
 	/**
-	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTrafficStatus#getFromTimeText <em>From Time Text</em>}' attribute.
+	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTrafficWindow#getFromTimeText <em>From Time Text</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>From Time Text</em>' attribute.
@@ -202,14 +179,14 @@ public interface IoTrafficStatus extends Service {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>To Time Text</em>' attribute.
 	 * @see #setToTimeText(String)
-	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTrafficStatus_ToTimeText()
+	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTrafficWindow_ToTimeText()
 	 * @model annotation="mapping path='object/to_time_text'"
 	 * @generated
 	 */
 	String getToTimeText();
 
 	/**
-	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTrafficStatus#getToTimeText <em>To Time Text</em>}' attribute.
+	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTrafficWindow#getToTimeText <em>To Time Text</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>To Time Text</em>' attribute.
@@ -218,4 +195,4 @@ public interface IoTrafficStatus extends Service {
 	 */
 	void setToTimeText(String value);
 
-} // IoTrafficStatus
+} // IoTrafficWindow
