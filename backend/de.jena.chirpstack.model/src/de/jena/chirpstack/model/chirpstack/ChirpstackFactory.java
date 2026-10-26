@@ -369,22 +369,31 @@ public interface ChirpstackFactory extends EFactory {
 	IoTraffic createIoTraffic();
 
 	/**
-	 * Returns a new object of class '<em>Io Traffic Counter</em>'.
+	 * Returns a new object of class '<em>Io Traffic Line</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Io Traffic Counter</em>'.
+	 * @return a new object of class '<em>Io Traffic Line</em>'.
 	 * @generated
 	 */
-	IoTrafficCounter createIoTrafficCounter();
+	IoTrafficLine createIoTrafficLine();
 
 	/**
-	 * Returns a new object of class '<em>Io Traffic Status</em>'.
+	 * Returns a new object of class '<em>Io Traffic Window</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Io Traffic Status</em>'.
+	 * @return a new object of class '<em>Io Traffic Window</em>'.
 	 * @generated
 	 */
-	IoTrafficStatus createIoTrafficStatus();
+	IoTrafficWindow createIoTrafficWindow();
+
+	/**
+	 * Returns a new object of class '<em>Io Traffic Ai Module</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Io Traffic Ai Module</em>'.
+	 * @generated
+	 */
+	IoTrafficAiModule createIoTrafficAiModule();
 
 	/**
 	 * Returns the package supported by this factory.

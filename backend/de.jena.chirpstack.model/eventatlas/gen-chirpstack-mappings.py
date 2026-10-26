@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Generate the Event Atlas ChirpStack uplink model + ProviderMappings from chirpstack.ecore
 (profileId + mapping/path annotations) into seed/, which Model Atlas seeds into scope `udp`.
+A service reference annotated with mapping/collection + mapping/filter reads one entry of a
+JSON object (EMF map) selected by key; its attribute paths are relative to that entry.
   ./gen-chirpstack-mappings.py [<chirpstack.ecore>] [<out dir>]
 """
 import sys, re, pathlib
@@ -43,16 +45,38 @@ for name, c in classes.items():
         for f in svc.findall("eStructuralFeatures"):
             path = ann(f, "mapping")["path"].split("/")
             res.append((f.get("name"), etype(f), path))
-        services.append((ref.get("name"), res))
+        # a service annotated with collection + filter reads one entry of a JSON object
+        # (EMF map): its resources are the entry value's attributes, paths relative to it
+        svc_ann = ann(ref, "mapping")
+        services.append((ref.get("name"), res, svc_ann.get("collection"), svc_ann.get("filter")))
     providers.append((name, model["name"], model["profileId"], services))
 
 # --- domain model: tree of classes per profile shaped like the JSON ---------------------
 def cls_name(*parts):
     return "".join(p[:1].upper() + p[1:] for p in re.split(r"[^A-Za-z0-9]", "_".join(parts)) if p)
 
-eclasses = {}   # name -> {feature: ("attr", type) | ("ref", class, many)}
+eclasses = {}   # name -> {feature: ("attr", type) | ("ref", class, many) | ("map", entry class)}
+map_entries = set()   # EClasses with instanceClassName java.util.Map$Entry
 def ensure(cn):
     return eclasses.setdefault(cn, {})
+
+def add_map_path(owner, path, prefix):
+    """path below `object` ending in a JSON object keyed by member name. Returns the hrefs
+    down to the entry's `value` and the value class."""
+    hrefs, cn = [], owner
+    for seg in path[:-1]:
+        child = cls_name(prefix, seg)
+        ensure(cn)[seg] = ("ref", child, False)
+        hrefs.append(("EReference", cn, seg))
+        cn = child
+    seg = path[-1]
+    value, entry = cls_name(prefix, seg), cls_name(prefix, seg, "Entry")
+    ensure(cn)[seg] = ("map", entry)
+    ensure(entry).update({"key": ("attr", "EString"), "value": ("ref", value, False)})
+    ensure(value)
+    map_entries.add(entry)
+    hrefs += [("EReference", cn, seg), ("EReference", entry, "value")]
+    return hrefs, value
 
 def add_path(owner, path, typ, prefix):
     """path below `object`; numeric segments mean 'list, element 0'. Returns feature hrefs."""
@@ -78,7 +102,13 @@ for name, model, profile, services in providers:
     ensure(up)["object"] = ("ref", obj, False)
     ensure(obj)
     svc_out = []
-    for sname, res in services:
+    for sname, res, coll, filt in services:
+        if coll:
+            hrefs, value = add_map_path(obj, coll.split("/")[1:], name)
+            for rname, typ, path in res:
+                add_path(value, path, typ, name)
+            svc_out.append((sname, None, filt, [("EReference", up, "object")] + hrefs))
+            continue
         r_out = []
         for rname, typ, path in res:
             if path[0] == "deviceInfo":
@@ -86,13 +116,13 @@ for name, model, profile, services in providers:
             else:
                 hrefs = [("EReference", up, "object")] + add_path(obj, path[1:], typ, name)
             r_out.append((rname, typ, hrefs))
-        svc_out.append((sname, r_out))
+        svc_out.append((sname, r_out, None, None))
     mappings.append((name, model, profile, up, svc_out))
 
 def f_xml(fname, spec):
     if spec[0] == "attr":
         return f'    <eStructuralFeatures xsi:type="ecore:EAttribute" name="{fname}" eType="ecore:EDataType {ECORE}{spec[1]}"/>'
-    many = ' upperBound="-1"' if spec[2] else ""
+    many = ' upperBound="-1"' if spec[0] == "map" or spec[2] else ""
     return f'    <eStructuralFeatures xsi:type="ecore:EReference" name="{fname}"{many} eType="#//{spec[1]}" containment="true"/>'
 
 lines = ['<?xml version="1.0" encoding="UTF-8"?>',
@@ -119,7 +149,8 @@ for name, model, profile, up, _ in mappings:
     lines += [f_xml(f, s) for f, s in eclasses.pop(up).items()]
     lines.append('  </eClassifiers>')
 for cn, feats in eclasses.items():
-    lines.append(f'  <eClassifiers xsi:type="ecore:EClass" name="{cn}">')
+    entry = ' instanceClassName="java.util.Map$Entry"' if cn in map_entries else ""
+    lines.append(f'  <eClassifiers xsi:type="ecore:EClass" name="{cn}"{entry}>')
     lines += [f_xml(f, s) for f, s in feats.items()]
     lines.append('  </eClassifiers>')
 lines.append('</ecore:EPackage>')
@@ -150,8 +181,15 @@ for name, model, profile, up, services in mappings:
          f'    <friendlyNameFeature xsi:type="ecore:EReference" href="{NS}#//Uplink/deviceInfo"/>',
          f'    <friendlyNameFeature xsi:type="ecore:EAttribute" href="{NS}#//DeviceInfo/deviceName"/>',
          '  </admin>']
-    for sname, res in services:
+    for sname, res, filt, hrefs in services:
         x += [f'  <services mid="{sname}">', '    <timestamp strategy="NOW"/>', f'    <name name="{sname}"/>']
+        if res is None:
+            # one entry of a JSON object, selected by key; every attribute of the entry value
+            # becomes a resource. No match (an uplink without that key) skips the service.
+            x.append(f'    <referencedResource xsi:type="sensinactMapping:ReferenceMapping" collectionFilter={quoteattr(filt)}>')
+            x += [f'      <featurePath xsi:type="ecore:{k}" href="{NS}#//{c}/{f}"/>' for k, c, f in hrefs]
+            x += ['    </referencedResource>', '  </services>']
+            continue
         for rname, typ, hrefs in res:
             x += [f'    <resources name="{rname}" mid="{rname}">',
                   f'      <eType xsi:type="ecore:EDataType" href="{ECORE}{typ}"/>']

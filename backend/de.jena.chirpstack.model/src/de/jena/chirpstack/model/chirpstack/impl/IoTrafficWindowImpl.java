@@ -14,7 +14,7 @@
 package de.jena.chirpstack.model.chirpstack.impl;
 
 import de.jena.chirpstack.model.chirpstack.ChirpstackPackage;
-import de.jena.chirpstack.model.chirpstack.IoTrafficStatus;
+import de.jena.chirpstack.model.chirpstack.IoTrafficWindow;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -26,25 +26,24 @@ import org.eclipse.sensinact.model.core.provider.impl.ServiceImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Io Traffic Status</b></em>'.
+ * An implementation of the model object '<em><b>Io Traffic Window</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficStatusImpl#getTotalObjects <em>Total Objects</em>}</li>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficStatusImpl#getLineCount <em>Line Count</em>}</li>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficStatusImpl#getPayloadVersion <em>Payload Version</em>}</li>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficStatusImpl#getFromTime <em>From Time</em>}</li>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficStatusImpl#getToTime <em>To Time</em>}</li>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficStatusImpl#getMessageType <em>Message Type</em>}</li>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficStatusImpl#getFromTimeText <em>From Time Text</em>}</li>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficStatusImpl#getToTimeText <em>To Time Text</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficWindowImpl#getTotalObjects <em>Total Objects</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficWindowImpl#getLineCount <em>Line Count</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficWindowImpl#getPayloadVersion <em>Payload Version</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficWindowImpl#getFromTime <em>From Time</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficWindowImpl#getToTime <em>To Time</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficWindowImpl#getFromTimeText <em>From Time Text</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.IoTrafficWindowImpl#getToTimeText <em>To Time Text</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class IoTrafficStatusImpl extends ServiceImpl implements IoTrafficStatus {
+public class IoTrafficWindowImpl extends ServiceImpl implements IoTrafficWindow {
 	/**
 	 * The default value of the '{@link #getTotalObjects() <em>Total Objects</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -146,26 +145,6 @@ public class IoTrafficStatusImpl extends ServiceImpl implements IoTrafficStatus 
 	protected double toTime = TO_TIME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getMessageType() <em>Message Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMessageType()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String MESSAGE_TYPE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getMessageType() <em>Message Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMessageType()
-	 * @generated
-	 * @ordered
-	 */
-	protected String messageType = MESSAGE_TYPE_EDEFAULT;
-
-	/**
 	 * The default value of the '{@link #getFromTimeText() <em>From Time Text</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -210,7 +189,7 @@ public class IoTrafficStatusImpl extends ServiceImpl implements IoTrafficStatus 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected IoTrafficStatusImpl() {
+	protected IoTrafficWindowImpl() {
 		super();
 	}
 
@@ -221,7 +200,7 @@ public class IoTrafficStatusImpl extends ServiceImpl implements IoTrafficStatus 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ChirpstackPackage.Literals.IO_TRAFFIC_STATUS;
+		return ChirpstackPackage.Literals.IO_TRAFFIC_WINDOW;
 	}
 
 	/**
@@ -244,7 +223,7 @@ public class IoTrafficStatusImpl extends ServiceImpl implements IoTrafficStatus 
 		double oldTotalObjects = totalObjects;
 		totalObjects = newTotalObjects;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.IO_TRAFFIC_STATUS__TOTAL_OBJECTS, oldTotalObjects, totalObjects));
+			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.IO_TRAFFIC_WINDOW__TOTAL_OBJECTS, oldTotalObjects, totalObjects));
 	}
 
 	/**
@@ -267,7 +246,7 @@ public class IoTrafficStatusImpl extends ServiceImpl implements IoTrafficStatus 
 		double oldLineCount = lineCount;
 		lineCount = newLineCount;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.IO_TRAFFIC_STATUS__LINE_COUNT, oldLineCount, lineCount));
+			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.IO_TRAFFIC_WINDOW__LINE_COUNT, oldLineCount, lineCount));
 	}
 
 	/**
@@ -290,7 +269,7 @@ public class IoTrafficStatusImpl extends ServiceImpl implements IoTrafficStatus 
 		double oldPayloadVersion = payloadVersion;
 		payloadVersion = newPayloadVersion;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.IO_TRAFFIC_STATUS__PAYLOAD_VERSION, oldPayloadVersion, payloadVersion));
+			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.IO_TRAFFIC_WINDOW__PAYLOAD_VERSION, oldPayloadVersion, payloadVersion));
 	}
 
 	/**
@@ -313,7 +292,7 @@ public class IoTrafficStatusImpl extends ServiceImpl implements IoTrafficStatus 
 		double oldFromTime = fromTime;
 		fromTime = newFromTime;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.IO_TRAFFIC_STATUS__FROM_TIME, oldFromTime, fromTime));
+			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.IO_TRAFFIC_WINDOW__FROM_TIME, oldFromTime, fromTime));
 	}
 
 	/**
@@ -336,30 +315,7 @@ public class IoTrafficStatusImpl extends ServiceImpl implements IoTrafficStatus 
 		double oldToTime = toTime;
 		toTime = newToTime;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.IO_TRAFFIC_STATUS__TO_TIME, oldToTime, toTime));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getMessageType() {
-		return messageType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setMessageType(String newMessageType) {
-		String oldMessageType = messageType;
-		messageType = newMessageType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.IO_TRAFFIC_STATUS__MESSAGE_TYPE, oldMessageType, messageType));
+			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.IO_TRAFFIC_WINDOW__TO_TIME, oldToTime, toTime));
 	}
 
 	/**
@@ -382,7 +338,7 @@ public class IoTrafficStatusImpl extends ServiceImpl implements IoTrafficStatus 
 		String oldFromTimeText = fromTimeText;
 		fromTimeText = newFromTimeText;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.IO_TRAFFIC_STATUS__FROM_TIME_TEXT, oldFromTimeText, fromTimeText));
+			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.IO_TRAFFIC_WINDOW__FROM_TIME_TEXT, oldFromTimeText, fromTimeText));
 	}
 
 	/**
@@ -405,7 +361,7 @@ public class IoTrafficStatusImpl extends ServiceImpl implements IoTrafficStatus 
 		String oldToTimeText = toTimeText;
 		toTimeText = newToTimeText;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.IO_TRAFFIC_STATUS__TO_TIME_TEXT, oldToTimeText, toTimeText));
+			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.IO_TRAFFIC_WINDOW__TO_TIME_TEXT, oldToTimeText, toTimeText));
 	}
 
 	/**
@@ -416,21 +372,19 @@ public class IoTrafficStatusImpl extends ServiceImpl implements IoTrafficStatus 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ChirpstackPackage.IO_TRAFFIC_STATUS__TOTAL_OBJECTS:
+			case ChirpstackPackage.IO_TRAFFIC_WINDOW__TOTAL_OBJECTS:
 				return getTotalObjects();
-			case ChirpstackPackage.IO_TRAFFIC_STATUS__LINE_COUNT:
+			case ChirpstackPackage.IO_TRAFFIC_WINDOW__LINE_COUNT:
 				return getLineCount();
-			case ChirpstackPackage.IO_TRAFFIC_STATUS__PAYLOAD_VERSION:
+			case ChirpstackPackage.IO_TRAFFIC_WINDOW__PAYLOAD_VERSION:
 				return getPayloadVersion();
-			case ChirpstackPackage.IO_TRAFFIC_STATUS__FROM_TIME:
+			case ChirpstackPackage.IO_TRAFFIC_WINDOW__FROM_TIME:
 				return getFromTime();
-			case ChirpstackPackage.IO_TRAFFIC_STATUS__TO_TIME:
+			case ChirpstackPackage.IO_TRAFFIC_WINDOW__TO_TIME:
 				return getToTime();
-			case ChirpstackPackage.IO_TRAFFIC_STATUS__MESSAGE_TYPE:
-				return getMessageType();
-			case ChirpstackPackage.IO_TRAFFIC_STATUS__FROM_TIME_TEXT:
+			case ChirpstackPackage.IO_TRAFFIC_WINDOW__FROM_TIME_TEXT:
 				return getFromTimeText();
-			case ChirpstackPackage.IO_TRAFFIC_STATUS__TO_TIME_TEXT:
+			case ChirpstackPackage.IO_TRAFFIC_WINDOW__TO_TIME_TEXT:
 				return getToTimeText();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -444,28 +398,25 @@ public class IoTrafficStatusImpl extends ServiceImpl implements IoTrafficStatus 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ChirpstackPackage.IO_TRAFFIC_STATUS__TOTAL_OBJECTS:
+			case ChirpstackPackage.IO_TRAFFIC_WINDOW__TOTAL_OBJECTS:
 				setTotalObjects((Double)newValue);
 				return;
-			case ChirpstackPackage.IO_TRAFFIC_STATUS__LINE_COUNT:
+			case ChirpstackPackage.IO_TRAFFIC_WINDOW__LINE_COUNT:
 				setLineCount((Double)newValue);
 				return;
-			case ChirpstackPackage.IO_TRAFFIC_STATUS__PAYLOAD_VERSION:
+			case ChirpstackPackage.IO_TRAFFIC_WINDOW__PAYLOAD_VERSION:
 				setPayloadVersion((Double)newValue);
 				return;
-			case ChirpstackPackage.IO_TRAFFIC_STATUS__FROM_TIME:
+			case ChirpstackPackage.IO_TRAFFIC_WINDOW__FROM_TIME:
 				setFromTime((Double)newValue);
 				return;
-			case ChirpstackPackage.IO_TRAFFIC_STATUS__TO_TIME:
+			case ChirpstackPackage.IO_TRAFFIC_WINDOW__TO_TIME:
 				setToTime((Double)newValue);
 				return;
-			case ChirpstackPackage.IO_TRAFFIC_STATUS__MESSAGE_TYPE:
-				setMessageType((String)newValue);
-				return;
-			case ChirpstackPackage.IO_TRAFFIC_STATUS__FROM_TIME_TEXT:
+			case ChirpstackPackage.IO_TRAFFIC_WINDOW__FROM_TIME_TEXT:
 				setFromTimeText((String)newValue);
 				return;
-			case ChirpstackPackage.IO_TRAFFIC_STATUS__TO_TIME_TEXT:
+			case ChirpstackPackage.IO_TRAFFIC_WINDOW__TO_TIME_TEXT:
 				setToTimeText((String)newValue);
 				return;
 		}
@@ -480,28 +431,25 @@ public class IoTrafficStatusImpl extends ServiceImpl implements IoTrafficStatus 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ChirpstackPackage.IO_TRAFFIC_STATUS__TOTAL_OBJECTS:
+			case ChirpstackPackage.IO_TRAFFIC_WINDOW__TOTAL_OBJECTS:
 				setTotalObjects(TOTAL_OBJECTS_EDEFAULT);
 				return;
-			case ChirpstackPackage.IO_TRAFFIC_STATUS__LINE_COUNT:
+			case ChirpstackPackage.IO_TRAFFIC_WINDOW__LINE_COUNT:
 				setLineCount(LINE_COUNT_EDEFAULT);
 				return;
-			case ChirpstackPackage.IO_TRAFFIC_STATUS__PAYLOAD_VERSION:
+			case ChirpstackPackage.IO_TRAFFIC_WINDOW__PAYLOAD_VERSION:
 				setPayloadVersion(PAYLOAD_VERSION_EDEFAULT);
 				return;
-			case ChirpstackPackage.IO_TRAFFIC_STATUS__FROM_TIME:
+			case ChirpstackPackage.IO_TRAFFIC_WINDOW__FROM_TIME:
 				setFromTime(FROM_TIME_EDEFAULT);
 				return;
-			case ChirpstackPackage.IO_TRAFFIC_STATUS__TO_TIME:
+			case ChirpstackPackage.IO_TRAFFIC_WINDOW__TO_TIME:
 				setToTime(TO_TIME_EDEFAULT);
 				return;
-			case ChirpstackPackage.IO_TRAFFIC_STATUS__MESSAGE_TYPE:
-				setMessageType(MESSAGE_TYPE_EDEFAULT);
-				return;
-			case ChirpstackPackage.IO_TRAFFIC_STATUS__FROM_TIME_TEXT:
+			case ChirpstackPackage.IO_TRAFFIC_WINDOW__FROM_TIME_TEXT:
 				setFromTimeText(FROM_TIME_TEXT_EDEFAULT);
 				return;
-			case ChirpstackPackage.IO_TRAFFIC_STATUS__TO_TIME_TEXT:
+			case ChirpstackPackage.IO_TRAFFIC_WINDOW__TO_TIME_TEXT:
 				setToTimeText(TO_TIME_TEXT_EDEFAULT);
 				return;
 		}
@@ -516,21 +464,19 @@ public class IoTrafficStatusImpl extends ServiceImpl implements IoTrafficStatus 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ChirpstackPackage.IO_TRAFFIC_STATUS__TOTAL_OBJECTS:
+			case ChirpstackPackage.IO_TRAFFIC_WINDOW__TOTAL_OBJECTS:
 				return totalObjects != TOTAL_OBJECTS_EDEFAULT;
-			case ChirpstackPackage.IO_TRAFFIC_STATUS__LINE_COUNT:
+			case ChirpstackPackage.IO_TRAFFIC_WINDOW__LINE_COUNT:
 				return lineCount != LINE_COUNT_EDEFAULT;
-			case ChirpstackPackage.IO_TRAFFIC_STATUS__PAYLOAD_VERSION:
+			case ChirpstackPackage.IO_TRAFFIC_WINDOW__PAYLOAD_VERSION:
 				return payloadVersion != PAYLOAD_VERSION_EDEFAULT;
-			case ChirpstackPackage.IO_TRAFFIC_STATUS__FROM_TIME:
+			case ChirpstackPackage.IO_TRAFFIC_WINDOW__FROM_TIME:
 				return fromTime != FROM_TIME_EDEFAULT;
-			case ChirpstackPackage.IO_TRAFFIC_STATUS__TO_TIME:
+			case ChirpstackPackage.IO_TRAFFIC_WINDOW__TO_TIME:
 				return toTime != TO_TIME_EDEFAULT;
-			case ChirpstackPackage.IO_TRAFFIC_STATUS__MESSAGE_TYPE:
-				return MESSAGE_TYPE_EDEFAULT == null ? messageType != null : !MESSAGE_TYPE_EDEFAULT.equals(messageType);
-			case ChirpstackPackage.IO_TRAFFIC_STATUS__FROM_TIME_TEXT:
+			case ChirpstackPackage.IO_TRAFFIC_WINDOW__FROM_TIME_TEXT:
 				return FROM_TIME_TEXT_EDEFAULT == null ? fromTimeText != null : !FROM_TIME_TEXT_EDEFAULT.equals(fromTimeText);
-			case ChirpstackPackage.IO_TRAFFIC_STATUS__TO_TIME_TEXT:
+			case ChirpstackPackage.IO_TRAFFIC_WINDOW__TO_TIME_TEXT:
 				return TO_TIME_TEXT_EDEFAULT == null ? toTimeText != null : !TO_TIME_TEXT_EDEFAULT.equals(toTimeText);
 		}
 		return super.eIsSet(featureID);
@@ -556,8 +502,6 @@ public class IoTrafficStatusImpl extends ServiceImpl implements IoTrafficStatus 
 		result.append(fromTime);
 		result.append(", toTime: ");
 		result.append(toTime);
-		result.append(", messageType: ");
-		result.append(messageType);
 		result.append(", fromTimeText: ");
 		result.append(fromTimeText);
 		result.append(", toTimeText: ");
@@ -566,4 +510,4 @@ public class IoTrafficStatusImpl extends ServiceImpl implements IoTrafficStatus 
 		return result.toString();
 	}
 
-} //IoTrafficStatusImpl
+} //IoTrafficWindowImpl

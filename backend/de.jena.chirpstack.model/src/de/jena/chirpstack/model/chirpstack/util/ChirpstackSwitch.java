@@ -339,17 +339,24 @@ public class ChirpstackSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ChirpstackPackage.IO_TRAFFIC_COUNTER: {
-				IoTrafficCounter ioTrafficCounter = (IoTrafficCounter)theEObject;
-				T result = caseIoTrafficCounter(ioTrafficCounter);
-				if (result == null) result = caseService(ioTrafficCounter);
+			case ChirpstackPackage.IO_TRAFFIC_LINE: {
+				IoTrafficLine ioTrafficLine = (IoTrafficLine)theEObject;
+				T result = caseIoTrafficLine(ioTrafficLine);
+				if (result == null) result = caseService(ioTrafficLine);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ChirpstackPackage.IO_TRAFFIC_STATUS: {
-				IoTrafficStatus ioTrafficStatus = (IoTrafficStatus)theEObject;
-				T result = caseIoTrafficStatus(ioTrafficStatus);
-				if (result == null) result = caseService(ioTrafficStatus);
+			case ChirpstackPackage.IO_TRAFFIC_WINDOW: {
+				IoTrafficWindow ioTrafficWindow = (IoTrafficWindow)theEObject;
+				T result = caseIoTrafficWindow(ioTrafficWindow);
+				if (result == null) result = caseService(ioTrafficWindow);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ChirpstackPackage.IO_TRAFFIC_AI_MODULE: {
+				IoTrafficAiModule ioTrafficAiModule = (IoTrafficAiModule)theEObject;
+				T result = caseIoTrafficAiModule(ioTrafficAiModule);
+				if (result == null) result = caseService(ioTrafficAiModule);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -913,32 +920,47 @@ public class ChirpstackSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Io Traffic Counter</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Io Traffic Line</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Io Traffic Counter</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Io Traffic Line</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseIoTrafficCounter(IoTrafficCounter object) {
+	public T caseIoTrafficLine(IoTrafficLine object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Io Traffic Status</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Io Traffic Window</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Io Traffic Status</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Io Traffic Window</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseIoTrafficStatus(IoTrafficStatus object) {
+	public T caseIoTrafficWindow(IoTrafficWindow object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Io Traffic Ai Module</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Io Traffic Ai Module</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIoTrafficAiModule(IoTrafficAiModule object) {
 		return null;
 	}
 

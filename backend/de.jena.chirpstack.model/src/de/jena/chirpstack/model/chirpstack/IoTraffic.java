@@ -26,8 +26,17 @@ import org.osgi.annotation.versioning.ProviderType;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTraffic#getCounter <em>Counter</em>}</li>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTraffic#getStatus <em>Status</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTraffic#getWindow <em>Window</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTraffic#getLine1 <em>Line1</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTraffic#getLine2 <em>Line2</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTraffic#getLine3 <em>Line3</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTraffic#getLine4 <em>Line4</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTraffic#getLine5 <em>Line5</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTraffic#getLine6 <em>Line6</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTraffic#getLine7 <em>Line7</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTraffic#getLine8 <em>Line8</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTraffic#getLine9 <em>Line9</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTraffic#getAiModule <em>Ai Module</em>}</li>
  * </ul>
  *
  * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTraffic()
@@ -37,47 +46,254 @@ import org.osgi.annotation.versioning.ProviderType;
 @ProviderType
 public interface IoTraffic extends Provider {
 	/**
-	 * Returns the value of the '<em><b>Counter</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Window</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Counter</em>' containment reference.
-	 * @see #setCounter(IoTrafficCounter)
-	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTraffic_Counter()
+	 * @return the value of the '<em>Window</em>' containment reference.
+	 * @see #setWindow(IoTrafficWindow)
+	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTraffic_Window()
 	 * @model containment="true"
 	 * @generated
 	 */
-	IoTrafficCounter getCounter();
+	IoTrafficWindow getWindow();
 
 	/**
-	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTraffic#getCounter <em>Counter</em>}' containment reference.
+	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTraffic#getWindow <em>Window</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Counter</em>' containment reference.
-	 * @see #getCounter()
+	 * @param value the new value of the '<em>Window</em>' containment reference.
+	 * @see #getWindow()
 	 * @generated
 	 */
-	void setCounter(IoTrafficCounter value);
+	void setWindow(IoTrafficWindow value);
 
 	/**
-	 * Returns the value of the '<em><b>Status</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Line1</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Status</em>' containment reference.
-	 * @see #setStatus(IoTrafficStatus)
-	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTraffic_Status()
+	 * @return the value of the '<em>Line1</em>' containment reference.
+	 * @see #setLine1(IoTrafficLine)
+	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTraffic_Line1()
+	 * @model containment="true"
+	 *        annotation="mapping collection='object/lines' filter='key=line_1'"
+	 * @generated
+	 */
+	IoTrafficLine getLine1();
+
+	/**
+	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTraffic#getLine1 <em>Line1</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Line1</em>' containment reference.
+	 * @see #getLine1()
+	 * @generated
+	 */
+	void setLine1(IoTrafficLine value);
+
+	/**
+	 * Returns the value of the '<em><b>Line2</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Line2</em>' containment reference.
+	 * @see #setLine2(IoTrafficLine)
+	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTraffic_Line2()
+	 * @model containment="true"
+	 *        annotation="mapping collection='object/lines' filter='key=line_2'"
+	 * @generated
+	 */
+	IoTrafficLine getLine2();
+
+	/**
+	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTraffic#getLine2 <em>Line2</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Line2</em>' containment reference.
+	 * @see #getLine2()
+	 * @generated
+	 */
+	void setLine2(IoTrafficLine value);
+
+	/**
+	 * Returns the value of the '<em><b>Line3</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Line3</em>' containment reference.
+	 * @see #setLine3(IoTrafficLine)
+	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTraffic_Line3()
+	 * @model containment="true"
+	 *        annotation="mapping collection='object/lines' filter='key=line_3'"
+	 * @generated
+	 */
+	IoTrafficLine getLine3();
+
+	/**
+	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTraffic#getLine3 <em>Line3</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Line3</em>' containment reference.
+	 * @see #getLine3()
+	 * @generated
+	 */
+	void setLine3(IoTrafficLine value);
+
+	/**
+	 * Returns the value of the '<em><b>Line4</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Line4</em>' containment reference.
+	 * @see #setLine4(IoTrafficLine)
+	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTraffic_Line4()
+	 * @model containment="true"
+	 *        annotation="mapping collection='object/lines' filter='key=line_4'"
+	 * @generated
+	 */
+	IoTrafficLine getLine4();
+
+	/**
+	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTraffic#getLine4 <em>Line4</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Line4</em>' containment reference.
+	 * @see #getLine4()
+	 * @generated
+	 */
+	void setLine4(IoTrafficLine value);
+
+	/**
+	 * Returns the value of the '<em><b>Line5</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Line5</em>' containment reference.
+	 * @see #setLine5(IoTrafficLine)
+	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTraffic_Line5()
+	 * @model containment="true"
+	 *        annotation="mapping collection='object/lines' filter='key=line_5'"
+	 * @generated
+	 */
+	IoTrafficLine getLine5();
+
+	/**
+	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTraffic#getLine5 <em>Line5</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Line5</em>' containment reference.
+	 * @see #getLine5()
+	 * @generated
+	 */
+	void setLine5(IoTrafficLine value);
+
+	/**
+	 * Returns the value of the '<em><b>Line6</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Line6</em>' containment reference.
+	 * @see #setLine6(IoTrafficLine)
+	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTraffic_Line6()
+	 * @model containment="true"
+	 *        annotation="mapping collection='object/lines' filter='key=line_6'"
+	 * @generated
+	 */
+	IoTrafficLine getLine6();
+
+	/**
+	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTraffic#getLine6 <em>Line6</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Line6</em>' containment reference.
+	 * @see #getLine6()
+	 * @generated
+	 */
+	void setLine6(IoTrafficLine value);
+
+	/**
+	 * Returns the value of the '<em><b>Line7</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Line7</em>' containment reference.
+	 * @see #setLine7(IoTrafficLine)
+	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTraffic_Line7()
+	 * @model containment="true"
+	 *        annotation="mapping collection='object/lines' filter='key=line_7'"
+	 * @generated
+	 */
+	IoTrafficLine getLine7();
+
+	/**
+	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTraffic#getLine7 <em>Line7</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Line7</em>' containment reference.
+	 * @see #getLine7()
+	 * @generated
+	 */
+	void setLine7(IoTrafficLine value);
+
+	/**
+	 * Returns the value of the '<em><b>Line8</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Line8</em>' containment reference.
+	 * @see #setLine8(IoTrafficLine)
+	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTraffic_Line8()
+	 * @model containment="true"
+	 *        annotation="mapping collection='object/lines' filter='key=line_8'"
+	 * @generated
+	 */
+	IoTrafficLine getLine8();
+
+	/**
+	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTraffic#getLine8 <em>Line8</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Line8</em>' containment reference.
+	 * @see #getLine8()
+	 * @generated
+	 */
+	void setLine8(IoTrafficLine value);
+
+	/**
+	 * Returns the value of the '<em><b>Line9</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Line9</em>' containment reference.
+	 * @see #setLine9(IoTrafficLine)
+	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTraffic_Line9()
+	 * @model containment="true"
+	 *        annotation="mapping collection='object/lines' filter='key=line_9'"
+	 * @generated
+	 */
+	IoTrafficLine getLine9();
+
+	/**
+	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTraffic#getLine9 <em>Line9</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Line9</em>' containment reference.
+	 * @see #getLine9()
+	 * @generated
+	 */
+	void setLine9(IoTrafficLine value);
+
+	/**
+	 * Returns the value of the '<em><b>Ai Module</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Ai Module</em>' containment reference.
+	 * @see #setAiModule(IoTrafficAiModule)
+	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTraffic_AiModule()
 	 * @model containment="true"
 	 * @generated
 	 */
-	IoTrafficStatus getStatus();
+	IoTrafficAiModule getAiModule();
 
 	/**
-	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTraffic#getStatus <em>Status</em>}' containment reference.
+	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTraffic#getAiModule <em>Ai Module</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Status</em>' containment reference.
-	 * @see #getStatus()
+	 * @param value the new value of the '<em>Ai Module</em>' containment reference.
+	 * @see #getAiModule()
 	 * @generated
 	 */
-	void setStatus(IoTrafficStatus value);
+	void setAiModule(IoTrafficAiModule value);
 
 } // IoTraffic

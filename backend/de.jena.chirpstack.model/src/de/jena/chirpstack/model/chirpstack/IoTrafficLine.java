@@ -19,44 +19,44 @@ import org.osgi.annotation.versioning.ProviderType;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Io Traffic Counter</b></em>'.
+ * A representation of the model object '<em><b>Io Traffic Line</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTrafficCounter#getLineNumber <em>Line Number</em>}</li>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTrafficCounter#getPerson <em>Person</em>}</li>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTrafficCounter#getBicycle <em>Bicycle</em>}</li>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTrafficCounter#getCar <em>Car</em>}</li>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTrafficCounter#getBus <em>Bus</em>}</li>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTrafficCounter#getTruck <em>Truck</em>}</li>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTrafficCounter#getMotorbike <em>Motorbike</em>}</li>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTrafficCounter#getTrain <em>Train</em>}</li>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTrafficCounter#getTotal <em>Total</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTrafficLine#getLineNumber <em>Line Number</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTrafficLine#getPerson <em>Person</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTrafficLine#getBicycle <em>Bicycle</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTrafficLine#getCar <em>Car</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTrafficLine#getBus <em>Bus</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTrafficLine#getTruck <em>Truck</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTrafficLine#getMotorbike <em>Motorbike</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTrafficLine#getTrain <em>Train</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.IoTrafficLine#getTotal <em>Total</em>}</li>
  * </ul>
  *
- * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTrafficCounter()
+ * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTrafficLine()
  * @model
  * @generated
  */
 @ProviderType
-public interface IoTrafficCounter extends Service {
+public interface IoTrafficLine extends Service {
 	/**
 	 * Returns the value of the '<em><b>Line Number</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Line Number</em>' attribute.
 	 * @see #setLineNumber(double)
-	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTrafficCounter_LineNumber()
-	 * @model annotation="mapping path='object/lines/0/line_number'"
+	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTrafficLine_LineNumber()
+	 * @model annotation="mapping path='line_number'"
 	 * @generated
 	 */
 	double getLineNumber();
 
 	/**
-	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTrafficCounter#getLineNumber <em>Line Number</em>}' attribute.
+	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTrafficLine#getLineNumber <em>Line Number</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Line Number</em>' attribute.
@@ -71,14 +71,14 @@ public interface IoTrafficCounter extends Service {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Person</em>' attribute.
 	 * @see #setPerson(double)
-	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTrafficCounter_Person()
-	 * @model annotation="mapping path='object/lines/0/person'"
+	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTrafficLine_Person()
+	 * @model annotation="mapping path='person'"
 	 * @generated
 	 */
 	double getPerson();
 
 	/**
-	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTrafficCounter#getPerson <em>Person</em>}' attribute.
+	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTrafficLine#getPerson <em>Person</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Person</em>' attribute.
@@ -93,14 +93,14 @@ public interface IoTrafficCounter extends Service {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Bicycle</em>' attribute.
 	 * @see #setBicycle(double)
-	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTrafficCounter_Bicycle()
-	 * @model annotation="mapping path='object/lines/0/bicycle'"
+	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTrafficLine_Bicycle()
+	 * @model annotation="mapping path='bicycle'"
 	 * @generated
 	 */
 	double getBicycle();
 
 	/**
-	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTrafficCounter#getBicycle <em>Bicycle</em>}' attribute.
+	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTrafficLine#getBicycle <em>Bicycle</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Bicycle</em>' attribute.
@@ -115,14 +115,14 @@ public interface IoTrafficCounter extends Service {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Car</em>' attribute.
 	 * @see #setCar(double)
-	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTrafficCounter_Car()
-	 * @model annotation="mapping path='object/lines/0/car'"
+	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTrafficLine_Car()
+	 * @model annotation="mapping path='car'"
 	 * @generated
 	 */
 	double getCar();
 
 	/**
-	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTrafficCounter#getCar <em>Car</em>}' attribute.
+	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTrafficLine#getCar <em>Car</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Car</em>' attribute.
@@ -137,14 +137,14 @@ public interface IoTrafficCounter extends Service {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Bus</em>' attribute.
 	 * @see #setBus(double)
-	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTrafficCounter_Bus()
-	 * @model annotation="mapping path='object/lines/0/bus'"
+	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTrafficLine_Bus()
+	 * @model annotation="mapping path='bus'"
 	 * @generated
 	 */
 	double getBus();
 
 	/**
-	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTrafficCounter#getBus <em>Bus</em>}' attribute.
+	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTrafficLine#getBus <em>Bus</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Bus</em>' attribute.
@@ -159,14 +159,14 @@ public interface IoTrafficCounter extends Service {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Truck</em>' attribute.
 	 * @see #setTruck(double)
-	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTrafficCounter_Truck()
-	 * @model annotation="mapping path='object/lines/0/truck'"
+	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTrafficLine_Truck()
+	 * @model annotation="mapping path='truck'"
 	 * @generated
 	 */
 	double getTruck();
 
 	/**
-	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTrafficCounter#getTruck <em>Truck</em>}' attribute.
+	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTrafficLine#getTruck <em>Truck</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Truck</em>' attribute.
@@ -181,14 +181,14 @@ public interface IoTrafficCounter extends Service {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Motorbike</em>' attribute.
 	 * @see #setMotorbike(double)
-	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTrafficCounter_Motorbike()
-	 * @model annotation="mapping path='object/lines/0/motorbike'"
+	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTrafficLine_Motorbike()
+	 * @model annotation="mapping path='motorbike'"
 	 * @generated
 	 */
 	double getMotorbike();
 
 	/**
-	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTrafficCounter#getMotorbike <em>Motorbike</em>}' attribute.
+	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTrafficLine#getMotorbike <em>Motorbike</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Motorbike</em>' attribute.
@@ -203,14 +203,14 @@ public interface IoTrafficCounter extends Service {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Train</em>' attribute.
 	 * @see #setTrain(double)
-	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTrafficCounter_Train()
-	 * @model annotation="mapping path='object/lines/0/train'"
+	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTrafficLine_Train()
+	 * @model annotation="mapping path='train'"
 	 * @generated
 	 */
 	double getTrain();
 
 	/**
-	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTrafficCounter#getTrain <em>Train</em>}' attribute.
+	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTrafficLine#getTrain <em>Train</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Train</em>' attribute.
@@ -225,14 +225,14 @@ public interface IoTrafficCounter extends Service {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Total</em>' attribute.
 	 * @see #setTotal(double)
-	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTrafficCounter_Total()
-	 * @model annotation="mapping path='object/lines/0/total'"
+	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getIoTrafficLine_Total()
+	 * @model annotation="mapping path='total'"
 	 * @generated
 	 */
 	double getTotal();
 
 	/**
-	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTrafficCounter#getTotal <em>Total</em>}' attribute.
+	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.IoTrafficLine#getTotal <em>Total</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Total</em>' attribute.
@@ -241,4 +241,4 @@ public interface IoTrafficCounter extends Service {
 	 */
 	void setTotal(double value);
 
-} // IoTrafficCounter
+} // IoTrafficLine
