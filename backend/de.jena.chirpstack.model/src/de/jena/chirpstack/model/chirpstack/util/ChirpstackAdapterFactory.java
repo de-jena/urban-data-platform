@@ -230,12 +230,16 @@ public class ChirpstackAdapterFactory extends AdapterFactoryImpl {
 				return createIoTrafficAdapter();
 			}
 			@Override
-			public Adapter caseIoTrafficCounter(IoTrafficCounter object) {
-				return createIoTrafficCounterAdapter();
+			public Adapter caseIoTrafficLine(IoTrafficLine object) {
+				return createIoTrafficLineAdapter();
 			}
 			@Override
-			public Adapter caseIoTrafficStatus(IoTrafficStatus object) {
-				return createIoTrafficStatusAdapter();
+			public Adapter caseIoTrafficWindow(IoTrafficWindow object) {
+				return createIoTrafficWindowAdapter();
+			}
+			@Override
+			public Adapter caseIoTrafficAiModule(IoTrafficAiModule object) {
+				return createIoTrafficAiModuleAdapter();
 			}
 			@Override
 			public Adapter caseProvider(Provider object) {
@@ -784,30 +788,44 @@ public class ChirpstackAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.jena.chirpstack.model.chirpstack.IoTrafficCounter <em>Io Traffic Counter</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.jena.chirpstack.model.chirpstack.IoTrafficLine <em>Io Traffic Line</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.jena.chirpstack.model.chirpstack.IoTrafficCounter
+	 * @see de.jena.chirpstack.model.chirpstack.IoTrafficLine
 	 * @generated
 	 */
-	public Adapter createIoTrafficCounterAdapter() {
+	public Adapter createIoTrafficLineAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.jena.chirpstack.model.chirpstack.IoTrafficStatus <em>Io Traffic Status</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.jena.chirpstack.model.chirpstack.IoTrafficWindow <em>Io Traffic Window</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.jena.chirpstack.model.chirpstack.IoTrafficStatus
+	 * @see de.jena.chirpstack.model.chirpstack.IoTrafficWindow
 	 * @generated
 	 */
-	public Adapter createIoTrafficStatusAdapter() {
+	public Adapter createIoTrafficWindowAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.chirpstack.model.chirpstack.IoTrafficAiModule <em>Io Traffic Ai Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.chirpstack.model.chirpstack.IoTrafficAiModule
+	 * @generated
+	 */
+	public Adapter createIoTrafficAiModuleAdapter() {
 		return null;
 	}
 

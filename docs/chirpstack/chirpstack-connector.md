@@ -37,8 +37,9 @@ The connector currently supports the following LoRaWAN sensor types:
 - **Profile ID**: `ef645c43-546c-4594-a0e5-9e0852faf29b`
 - **Model**: `IoTraffic`
 - **Services**:
-  - **Counter**: Per-class counts of the first counting line (person, bicycle, car, bus, truck, motorbike, train, total)
-  - **Status**: Total objects, line count, counting period and payload version
+  - **window**: Total objects, line count, counting period and payload version of the last counter uplink
+  - **line1** … **line9**: Per-class counts of one configured counting line (line_number, person, bicycle, car, bus, truck, motorbike, train, total). The decoder reports `lines` as a JSON object keyed `line_N` and splits one window over several uplinks; each service is annotated with the collection and the key it reads (see below). Only the atlas runtime (Event Atlas mappings) reads these; the legacy connector cannot address a keyed line.
+  - **aiModule**: The `ai_module_status` message (fPort 20): CPU/GPU temperature and load, memory, disk, OS load, uptime, supply voltage, network flags
 
 ### Other Supported Models
 - **SN50**: Multi-purpose sensor node
@@ -128,6 +129,20 @@ Attributes use `@mapping` annotations to specify JSON path extraction:
 <eStructuralFeatures xsi:type="ecore:EAttribute" name="battery" eType="EDouble">
   <eAnnotations source="mapping">
     <details key="path" value="object/BatV"/>
+  </eAnnotations>
+</eStructuralFeatures>
+```
+
+A service reference may carry a `mapping` annotation with `collection` and `filter` instead. The
+Event Atlas mapping generator (`de.jena.chirpstack.model/eventatlas/gen-chirpstack-mappings.py`)
+turns it into an EMF map on the uplink model and one service per key; the attribute paths of such a
+service are relative to the selected entry. The legacy connector ignores it.
+
+```xml
+<eStructuralFeatures xsi:type="ecore:EReference" name="line1" eType="#//IoTrafficLine" containment="true">
+  <eAnnotations source="mapping">
+    <details key="collection" value="object/lines"/>
+    <details key="filter" value="key=line_1"/>
   </eAnnotations>
 </eStructuralFeatures>
 ```

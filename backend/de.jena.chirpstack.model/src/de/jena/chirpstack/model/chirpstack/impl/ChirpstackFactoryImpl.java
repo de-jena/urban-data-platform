@@ -104,8 +104,9 @@ public class ChirpstackFactoryImpl extends EFactoryImpl implements ChirpstackFac
 			case ChirpstackPackage.DDS45_DISTANCE: return createDDS45Distance();
 			case ChirpstackPackage.DDS45_STATUS: return createDDS45Status();
 			case ChirpstackPackage.IO_TRAFFIC: return createIoTraffic();
-			case ChirpstackPackage.IO_TRAFFIC_COUNTER: return createIoTrafficCounter();
-			case ChirpstackPackage.IO_TRAFFIC_STATUS: return createIoTrafficStatus();
+			case ChirpstackPackage.IO_TRAFFIC_LINE: return createIoTrafficLine();
+			case ChirpstackPackage.IO_TRAFFIC_WINDOW: return createIoTrafficWindow();
+			case ChirpstackPackage.IO_TRAFFIC_AI_MODULE: return createIoTrafficAiModule();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -524,9 +525,9 @@ public class ChirpstackFactoryImpl extends EFactoryImpl implements ChirpstackFac
 	 * @generated
 	 */
 	@Override
-	public IoTrafficCounter createIoTrafficCounter() {
-		IoTrafficCounterImpl ioTrafficCounter = new IoTrafficCounterImpl();
-		return ioTrafficCounter;
+	public IoTrafficLine createIoTrafficLine() {
+		IoTrafficLineImpl ioTrafficLine = new IoTrafficLineImpl();
+		return ioTrafficLine;
 	}
 
 	/**
@@ -535,9 +536,20 @@ public class ChirpstackFactoryImpl extends EFactoryImpl implements ChirpstackFac
 	 * @generated
 	 */
 	@Override
-	public IoTrafficStatus createIoTrafficStatus() {
-		IoTrafficStatusImpl ioTrafficStatus = new IoTrafficStatusImpl();
-		return ioTrafficStatus;
+	public IoTrafficWindow createIoTrafficWindow() {
+		IoTrafficWindowImpl ioTrafficWindow = new IoTrafficWindowImpl();
+		return ioTrafficWindow;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public IoTrafficAiModule createIoTrafficAiModule() {
+		IoTrafficAiModuleImpl ioTrafficAiModule = new IoTrafficAiModuleImpl();
+		return ioTrafficAiModule;
 	}
 
 	/**
