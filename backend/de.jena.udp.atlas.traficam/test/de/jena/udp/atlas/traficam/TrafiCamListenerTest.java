@@ -28,7 +28,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.impl.BinaryResourceImpl;
 import org.eclipse.sensinact.core.push.DataUpdate;
 import org.eclipse.sensinact.gateway.geojson.GeometryCollection;
-import org.eclipse.sensinact.gateway.southbound.mqtt.api.IMqttMessage;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.osgi.util.promise.Promise;
@@ -55,9 +54,9 @@ class TrafiCamListenerTest {
 
 	@Test
 	void detectionsOfOneClassAreFlushedAsOneGeometryCollection() throws Exception {
-		listener.onMqttMessage("broker", "5g/traficam/cam1/2", message(detection(7L, 11.58, 50.92)));
-		listener.onMqttMessage("broker", "5g/traficam/cam1/2", message(detection(8L, 11.59, 50.93)));
-		listener.onMqttMessage("broker", "5g/traficam/cam1/2", message(detection(7L, 11.58, 50.92)));
+		listener.handle("5g/traficam/cam1/2", detection(7L, 11.58, 50.92));
+		listener.handle("5g/traficam/cam1/2", detection(8L, 11.59, 50.93));
+		listener.handle("5g/traficam/cam1/2", detection(7L, 11.58, 50.92));
 
 		listener.flushWindows();
 
@@ -69,7 +68,7 @@ class TrafiCamListenerTest {
 
 	@Test
 	void aQuietClassReportsEmptyOnceAndThenStaysSilent() throws Exception {
-		listener.onMqttMessage("broker", "5g/traficam/cam1/2", message(detection(7L, 11.58, 50.92)));
+		listener.handle("5g/traficam/cam1/2", detection(7L, 11.58, 50.92));
 		listener.flushWindows();
 
 		listener.flushWindows();
@@ -81,8 +80,8 @@ class TrafiCamListenerTest {
 
 	@Test
 	void configurationBecomesTheProviderWithItsViewportAndNamesTheClasses() throws Exception {
-		listener.onMqttMessage("broker", "5g/config/traficam/cam1", message(configuration()));
-		listener.onMqttMessage("broker", "5g/traficam/cam1/2", message(detection(7L, 11.58, 50.92)));
+		listener.handle("5g/config/traficam/cam1", configuration());
+		listener.handle("5g/traficam/cam1/2", detection(7L, 11.58, 50.92));
 		listener.flushWindows();
 
 		TraficamProvider provider = assertInstanceOf(TraficamProvider.class, pushed.get(0));
@@ -139,35 +138,6 @@ class TrafiCamListenerTest {
 		ByteArrayOutputStream out = new ByteArrayOutputStream();
 		resource.save(out, Map.of());
 		return out.toByteArray();
-	}
-
-	static IMqttMessage message(byte[] payload) {
-		return new IMqttMessage() {
-			@Override
-			public String getHandlerId() {
-				return "broker";
-			}
-
-			@Override
-			public String getTopic() {
-				return null;
-			}
-
-			@Override
-			public byte[] getPayload() {
-				return payload;
-			}
-
-			@Override
-			public int getQos() {
-				return 0;
-			}
-
-			@Override
-			public boolean isRetained() {
-				return false;
-			}
-		};
 	}
 
 	record RecordingDataUpdate(List<Object> pushed) implements DataUpdate {

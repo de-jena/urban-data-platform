@@ -19,7 +19,7 @@ The TrafICam adapter follows a streaming data processing architecture using Ecli
   - Namespace: `https://model.data.jena.de/sensinact/traficam/1.0`
   - Defines: TraficamProvider, TraficamAdmin, ObservedObjects
 - **MQTT Subscription**: Receives real-time object detection data (`de.jena.traficam.sensinact`)
-- **Atlas runtime variant**: `de.jena.udp.atlas.traficam` does the same job in the UDP atlas runtime (issue #28) as an `IMqttMessageListener` on the sensiNact MQTT client, with a plain scheduled 2 s window (`DetectionWindow`) instead of the gecko pushstream; `5g/traficam/#` and `5g/config/traficam/#` must be in `EVENTATLAS_MQTT_TOPICS`
+- **Atlas runtime variant**: `de.jena.udp.atlas.traficam` does the same job in the UDP atlas runtime (issue #28) on the same gecko messaging `read` client, with a plain scheduled 2 s window (`DetectionWindow`) instead of the gecko pushstream window
 - **WebSocket Client**: Alternative data ingestion via WebSocket (`de.jena.traficam.websocket`)
 - **MQTT Publisher**: Bridges WebSocket data to MQTT (`de.jena.traficam.mqtt`)
 - **Configuration Service**: Dynamic camera configuration management (`de.jena.traficam.config`)

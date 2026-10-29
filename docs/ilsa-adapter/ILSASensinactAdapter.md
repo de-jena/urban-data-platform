@@ -21,7 +21,7 @@ instead of the two bundles above. Same topics, model and provider shape, differe
 
 | | legacy runtime | atlas runtime |
 |---|---|---|
-| MQTT | gecko `MessagingService` `read` | `IMqttMessageListener` on the sensiNact MQTT client (`5g/ilsa/#` must be in `EVENTATLAS_MQTT_TOPICS`) |
+| MQTT | gecko `MessagingService` `read` | the same, `MQTTService~read` comes from `de.jena.udp.atlas.runtime.config` and defaults to the `EVENTATLAS_MQTT_*` broker |
 | JSON | gecko EMF JSON (`EMFJson` resource set) | Fennec codec: `codec.rootType`, `codec.typeKey=eClass` for the nested geometries, `codec.dateFormat` for the `…ZCET` timestamps; the payload packages are registered with the EMF metadata service, which is where the codec resolves `eClass` URIs |
 | transformation | Eclipse QVTo via `org.eclipse.fennec.qvt` | Fennec M2X QVT-O engine built in the bundle, `transformations/ilsa.qvto`, blackbox `GeoJsonBlackBox` |
 

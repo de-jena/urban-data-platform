@@ -1,0 +1,12 @@
+{
+  ":configurator:resource-version": 1,
+  ":configurator:symbolic-name": "de.jena.udp.atlas.runtime.config.mqtt",
+  ":configurator:version": "1.0.0",
+
+  "MQTTService~read": {
+    "brokerUrl": "$[env:MQTT_READ_PROTOCOL;default=$[env:EVENTATLAS_MQTT_PROTOCOL;default=ssl]]://$[env:MQTT_READ_HOST;default=$[env:EVENTATLAS_MQTT_HOST;default=mqttbr.jena.de]]:$[env:MQTT_READ_PORT;default=$[env:EVENTATLAS_MQTT_PORT;default=8883]]",
+    "username": "$[env:MQTT_READ_USER;default=$[env:EVENTATLAS_MQTT_USER;default=]]",
+    ".password": "$[env:MQTT_READ_PWD;default=$[env:EVENTATLAS_MQTT_PASSWORD;default=]]",
+    "id": "read"
+  }
+}

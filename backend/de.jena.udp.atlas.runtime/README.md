@@ -42,18 +42,16 @@ unchanged (see `event.atlas/docker/eventatlas/README.md`). Added here:
 | Variable | Default | What |
 |---|---|---|
 | `WEBCONSOLE_USER` / `WEBCONSOLE_PASSWORD` | `admin` / `admin` | webconsole login |
+| `MQTT_READ_PROTOCOL` / `MQTT_READ_HOST` / `MQTT_READ_PORT` / `MQTT_READ_USER` / `MQTT_READ_PWD` | the `EVENTATLAS_MQTT_*` values | broker of the gecko messaging client `read` used by the adapters below |
 
-`EVENTATLAS_MQTT_TOPICS` is what the one broker connection subscribes to. The adapters below
-filter on it, so it has to cover their topics as well:
-
-```
-EVENTATLAS_MQTT_TOPICS=chirpstack/application/+/device/+/event/up,5g/ilsa/#,5g/traficam/#,5g/config/traficam/#
-```
+`EVENTATLAS_MQTT_TOPICS` only has to cover the Event Atlas mappings (ChirpStack); the adapters
+subscribe on their own connection.
 
 ## ILSA and TrafiCam adapters
 
-Both are `IMqttMessageListener`s on the sensiNact MQTT client of the Event Atlas image, so they
-share its broker connection and credentials.
+Both subscribe through the gecko messaging `MessagingService` with `id=read`
+(`org.gecko.adapter.mqtt.v5`, configured by `MQTTService~read` in
+`de.jena.udp.atlas.runtime.config/configs/mqtt.json`), the same client the legacy bundles use.
 
 | Bundle | Topics | What |
 |---|---|---|
