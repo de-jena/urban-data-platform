@@ -82,6 +82,7 @@ slf4j.runpath:  \
 	bnd.identity;id='de.jena.ibis.passenger.counting.service.model',\
 	bnd.identity;id='de.jena.ibis.ticket.validation.service.model',\
 	bnd.identity;id='org.eclipse.sensinact.gateway.southbound.history.history-api',\
+	bnd.identity;id='org.eclipse.sensinact.gateway.southbound.history.history-core',\
 	bnd.identity;id='org.eclipse.sensinact.gateway.southbound.history.timescale-provider'
 
 -runbundles+: \
@@ -221,6 +222,7 @@ slf4j.runpath:  \
 	org.eclipse.sensinact.gateway.southbound.device-factory.device-factory-core;version='[0.0.2,0.0.3)';startlevel=1420,\
 	org.eclipse.sensinact.gateway.southbound.device-factory.parser-json;version='[0.0.2,0.0.3)';startlevel=1430,\
 	org.eclipse.sensinact.gateway.southbound.history.history-api;version='[0.0.2,0.0.3)';startlevel=1440,\
+	org.eclipse.sensinact.gateway.southbound.history.history-core;version='[0.0.2,0.0.3)';startlevel=1445,\
 	org.eclipse.sensinact.gateway.southbound.history.timescale-provider;version='[0.0.2,0.0.3)';startlevel=1450,\
 	org.eclipse.sensinact.gateway.southbound.mqtt.mqtt-client;version='[0.0.2,0.0.3)';startlevel=1460,\
 	org.eclipse.sensinact.gateway.southbound.mqtt.mqtt-device-factory;version='[0.0.2,0.0.3)';startlevel=1470,\
