@@ -16,10 +16,9 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.lang.System.Logger;
 import java.lang.System.Logger.Level;
+import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
-import java.util.Dictionary;
 import java.util.HashMap;
-import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutorService;
@@ -42,18 +41,18 @@ import org.eclipse.fennec.emf.osgi.metadata.MetadataWhiteboard;
 import org.eclipse.sensinact.core.push.DataUpdate;
 import org.eclipse.sensinact.core.push.dto.GenericDto;
 import org.eclipse.sensinact.gateway.geojson.Point;
-import org.eclipse.sensinact.gateway.southbound.mqtt.api.IMqttMessage;
-import org.eclipse.sensinact.gateway.southbound.mqtt.api.IMqttMessageListener;
 import org.eclipse.sensinact.model.core.provider.MetadataValue;
 import org.eclipse.sensinact.model.core.provider.ProviderFactory;
 import org.eclipse.sensinact.model.core.provider.ResourceValueMetadata;
 import org.eclipse.sensinact.model.core.provider.Service;
-import org.osgi.framework.BundleContext;
-import org.osgi.framework.ServiceRegistration;
+import org.gecko.osgi.messaging.Message;
+import org.gecko.osgi.messaging.MessagingService;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Reference;
+import org.osgi.util.pushstream.PushEvent;
+import org.osgi.util.pushstream.PushStream;
 
 import de.jena.ilsa.sensinact.model.ilsa.Ilsa;
 import de.jena.ilsa.sensinact.model.ilsa.IlsaPackage;
@@ -66,12 +65,12 @@ import de.jena.udp.model.trafficos.trafficlight.TLSignalState;
 import de.jena.udp.model.trafficos.trafficlight.TOSTrafficLightPackage;
 
 /**
- * Listens on {@code 5g/ilsa/#} of the runtime's sensiNact MQTT client:
+ * Subscribes to {@code 5g/ilsa/#} on the {@code read} gecko messaging service:
  * {@code .../<intersection>/config/retained} carries a TLConfiguration (JSON), {@code .../thermal}
  * a temperature and every other topic a TLSignalState (JSON).
  */
-@Component(service = {}, immediate = true)
-public class IlsaListener implements IMqttMessageListener {
+@Component(immediate = true)
+public class IlsaListener {
 
 	private static final Logger logger = System.getLogger(IlsaListener.class.getName());
 
@@ -82,6 +81,9 @@ public class IlsaListener implements IMqttMessageListener {
 
 	@Reference
 	private DataUpdate sensiNact;
+
+	@Reference(target = "(id=read)")
+	private MessagingService messaging;
 
 	@Reference
 	private ResourceSetFactory resourceSetFactory;
@@ -100,28 +102,26 @@ public class IlsaListener implements IMqttMessageListener {
 	@Reference
 	private GeojsonPackage geojsonPackage;
 
-	private ServiceRegistration<IMqttMessageListener> registration;
+	private PushStream<Message> subscription;
 	private ExecutorService workers;
 	private final AtomicLong sequence = new AtomicLong();
 
 	@Activate
-	void activate(BundleContext context) {
+	void activate() throws Exception {
 		payloadPackages().forEach(metadata::registerPackage);
 		workers = Executors.newFixedThreadPool(4, runnable -> {
 			Thread thread = new Thread(runnable, "udp-ilsa");
 			thread.setDaemon(true);
 			return thread;
 		});
-		Dictionary<String, Object> properties = new Hashtable<>();
-		properties.put(MQTT_TOPICS_FILTERS, new String[] { TOPIC + "#" });
-		properties.put("name", "udp-ilsa");
-		registration = context.registerService(IMqttMessageListener.class, this, properties);
+		subscription = messaging.subscribe(TOPIC + "#");
+		subscription.forEachEvent(this::onEvent);
 		logger.log(Level.INFO, "ILSA adapter listening on {0}#", TOPIC);
 	}
 
 	@Deactivate
 	void deactivate() {
-		registration.unregister();
+		subscription.close();
 		payloadPackages().forEach(metadata::unregisterPackage);
 		workers.shutdown();
 		try {
@@ -131,16 +131,29 @@ public class IlsaListener implements IMqttMessageListener {
 		}
 	}
 
-	@Override
-	public void onMqttMessage(String handlerId, String topic, IMqttMessage message) {
-		byte[] payload = message.getPayload();
-		workers.submit(() -> {
-			try {
-				handle(topic, payload);
-			} catch (Exception e) {
-				logger.log(Level.ERROR, "Error processing message on topic " + topic, e);
-			}
-		});
+	private long onEvent(PushEvent<? extends Message> event) {
+		switch (event.getType()) {
+		case DATA -> {
+			Message message = event.getData();
+			byte[] payload = bytes(message.payload());
+			workers.submit(() -> {
+				try {
+					handle(message.topic(), payload);
+				} catch (Exception e) {
+					logger.log(Level.ERROR, "Error processing message on topic " + message.topic(), e);
+				}
+			});
+		}
+		case ERROR -> logger.log(Level.ERROR, "ILSA subscription failed", event.getFailure());
+		case CLOSE -> logger.log(Level.INFO, "ILSA subscription closed");
+		}
+		return 0;
+	}
+
+	static byte[] bytes(ByteBuffer payload) {
+		byte[] bytes = new byte[payload.remaining()];
+		payload.duplicate().get(bytes);
+		return bytes;
 	}
 
 	void handle(String topic, byte[] payload) throws IOException {

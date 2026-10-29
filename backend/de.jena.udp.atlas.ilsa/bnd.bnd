@@ -1,6 +1,6 @@
 Bundle-Name: UDP :: Atlas :: ILSA
 Bundle-Description: Traffic light (ILSA) adapter for the UDP atlas runtime: reads the 5g/ilsa MQTT \
- topics through the sensiNact MQTT client, decodes the JSON with the Fennec codec and runs the \
+ topics through the gecko messaging MQTT client, decodes the JSON with the Fennec codec and runs the \
  TLConfiguration -> Ilsa transformation on the Fennec M2X QVT-O engine.
 Bundle-Version: 1.0.0.SNAPSHOT
 
@@ -25,7 +25,8 @@ Bundle-Version: 1.0.0.SNAPSHOT
 	org.eclipse.sensinact.gateway.core.annotation,\
 	org.eclipse.sensinact.gateway.core.geo-json,\
 	org.eclipse.sensinact.gateway.core.models.provider,\
-	org.eclipse.sensinact.gateway.southbound.mqtt.mqtt-client,\
+	org.gecko.osgi.messaging,\
+	org.osgi.util.pushstream,\
 	de.jena.ilsa.sensinact.model,\
 	de.jena.udp.trafficos.trafficlight.model,\
 	de.jena.udp.trafficos.common.model
