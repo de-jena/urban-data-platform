@@ -339,7 +339,7 @@ bnd.identity;id='de.jena.ibis.sensinact'
 ### MQTT Bridge Configuration
 
 MQTT topic forwarding is configured in:
-`backend/de.jena.sensinact.5g.runtime.config.docker/configs/mqttforward.json`
+`backend/de.jena.mqttbridge.runtime/configs/mqttforward.json` (the MQTT bridge application)
 
 ```json
 {

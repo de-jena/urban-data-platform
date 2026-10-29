@@ -7,7 +7,7 @@ the UDP-specific adapters that mappings cannot express.
 
 | | |
 |---|---|
-| bndrun | `de.jena.udp.atlas.runtime.docker.bndrun` |
+| bndrun | `de.jena.udp.atlas.runtime.docker.bndrun` (image), `de.jena.udp.atlas.runtime.local.bndrun` (same assembly launched from the workspace) |
 | Java | 25 |
 | config | `org.eclipse.fennec.event.atlas.mapping.docker.config` (Event Atlas, env-driven) + `de.jena.udp.atlas.runtime.config` (webconsole) |
 | image | `docker/atlas-runtime/` |
@@ -19,6 +19,20 @@ the UDP-specific adapters that mappings cannot express.
 ./gradlew :de.jena.udp.atlas.runtime:resolve.de.jena.udp.atlas.runtime.docker
 ./gradlew :de.jena.udp.atlas.runtime:export.de.jena.udp.atlas.runtime.docker
 cd ../docker && ./gradlew :atlas-runtime:prepareDocker && docker build -t udp-atlas-runtime:local atlas-runtime
+```
+
+This is the only UDP runtime; `de.jena.udp.sensinact.runtime` is the one it replaces (the 5g
+runtime is gone). For a local run launch `de.jena.udp.atlas.runtime.local.bndrun`; the config
+bundles read the environment, with localhost defaults for Model Atlas (`:8086`), the broker
+(`:1883`) and Timescale (`:5432`), so the values that differ go into the launch environment:
+
+```
+EVENTATLAS_ATLAS_BASE_URI=http://localhost:8086/atlas/rest
+EVENTATLAS_ATLAS_SCOPE=udp
+EVENTATLAS_DOMAIN_NSURI=https://model.data.jena.de/chirpstack/uplink/1.0
+EVENTATLAS_MQTT_HOST=localhost
+TIMESCALE_HOST=localhost
+TIMESCALE_PWD=...
 ```
 
 ## Endpoints
