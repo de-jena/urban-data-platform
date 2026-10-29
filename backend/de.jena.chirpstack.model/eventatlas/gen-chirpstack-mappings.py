@@ -3,6 +3,8 @@
 (profileId + mapping/path annotations) into seed/, which Model Atlas seeds into scope `udp`.
 A service reference annotated with mapping/collection + mapping/filter reads one entry of a
 JSON object (EMF map) selected by key; its attribute paths are relative to that entry.
+Uplink attributes get the wrapper data types, so a field absent from a payload stays null
+instead of becoming 0/false and overwriting the resource.
   ./gen-chirpstack-mappings.py [<chirpstack.ecore>] [<out dir>]
 """
 import sys, re, pathlib
@@ -17,6 +19,8 @@ TYPEMAP = "jena-sensors"
 XSI = "{http://www.w3.org/2001/XMLSchema-instance}type"
 ECORE = "http://www.eclipse.org/emf/2002/Ecore#//"
 SKIP = {"SenseCapS2120", "SenseCapS2105", "SenseCap"}   # nested arrays, not mappable yet
+WRAPPER = {"EDouble": "EDoubleObject", "EFloat": "EFloatObject", "EBoolean": "EBooleanObject",
+           "EInt": "EIntegerObject", "ELong": "ELongObject", "EShort": "EShortObject"}
 DEVICE_INFO = ["tenantId", "tenantName", "applicationId", "applicationName",
                "deviceProfileId", "deviceProfileName", "deviceName", "devEui"]
 
@@ -121,7 +125,8 @@ for name, model, profile, services in providers:
 
 def f_xml(fname, spec):
     if spec[0] == "attr":
-        return f'    <eStructuralFeatures xsi:type="ecore:EAttribute" name="{fname}" eType="ecore:EDataType {ECORE}{spec[1]}"/>'
+        typ = WRAPPER.get(spec[1], spec[1])
+        return f'    <eStructuralFeatures xsi:type="ecore:EAttribute" name="{fname}" eType="ecore:EDataType {ECORE}{typ}"/>'
     many = ' upperBound="-1"' if spec[0] == "map" or spec[2] else ""
     return f'    <eStructuralFeatures xsi:type="ecore:EReference" name="{fname}"{many} eType="#//{spec[1]}" containment="true"/>'
 

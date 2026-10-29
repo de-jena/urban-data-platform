@@ -136,7 +136,9 @@ Attributes use `@mapping` annotations to specify JSON path extraction:
 A service reference may carry a `mapping` annotation with `collection` and `filter` instead. The
 Event Atlas mapping generator (`de.jena.chirpstack.model/eventatlas/gen-chirpstack-mappings.py`)
 turns it into an EMF map on the uplink model and one service per key; the attribute paths of such a
-service are relative to the selected entry. The legacy connector ignores it.
+service are relative to the selected entry. The legacy connector ignores it. The generated uplink
+model uses the wrapper data types (`EDoubleObject`, `EBooleanObject`, …): a field an uplink does
+not carry stays `null` and the resource keeps its last value instead of being reset to `0`.
 
 ```xml
 <eStructuralFeatures xsi:type="ecore:EReference" name="line1" eType="#//IoTrafficLine" containment="true">
