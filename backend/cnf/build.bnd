@@ -94,7 +94,6 @@ pom.version: ${versionmask;===s;${@version}}
   api;member=${filter;${p};.*\.api}, \
   test;member=${filter;${p};.*\.*test*},\
   upd_runtime;member=${filter;${p};.*\.udp\.runtime\.*},\
-  5g_runtime;member=${filter;${p};.*\.5g\.runtime\.*},\
   traficam;member=${filter;${p};.*\.traficam\.*},\
   ilsa;member=${filter;${p};.*\.ilsa\.*},\
   ttn;member=${filter;${p};.*\.ttn\.*},\
