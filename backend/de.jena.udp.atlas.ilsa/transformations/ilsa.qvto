@@ -1,0 +1,30 @@
+import de.jena.udp.atlas.ilsa.GeoJsonBlackBox;
+
+modeltype ILSA uses 'http://jena.de/udp/trafficos/trafficlight/1.1.1';
+modeltype SENSINACT uses 'https://model.data.jena.de/sensinact/ilsa/1.0';
+modeltype PROVIDER uses 'https://eclipse.org/sensinact/core/provider/1.0';
+
+transformation TrafficLightToIlsa(in ilsa : ILSA, out sensinact : SENSINACT);
+
+main() {
+	ilsa.rootObjects()[trafficlight::TLConfiguration] -> map toProvider();
+}
+
+mapping trafficlight::TLConfiguration::toProvider(): ilsa::Ilsa {
+	id := self.intersectionId;
+	admin := self.map toAdmin();
+	services := self.subcircles->collect(c | c.serialPorts)->collect(p | p.modules)->collect(m | m.signals)->map toSignalMapEntry();
+}
+
+mapping trafficlight::TLConfiguration::toAdmin(): provider::Admin {
+	friendlyName := 'ILSA ' + self.intersectionName;
+}
+
+mapping trafficlight::TLSignal::toSignalMapEntry(): provider::ServiceMap {
+	key := self.id.replaceAll('/', '_');
+	value := self.map toSignal();
+}
+
+mapping trafficlight::TLSignal::toSignal(): ilsa::Signal {
+	observedArea := self.observedArea.convertToFeatureCollection();
+}

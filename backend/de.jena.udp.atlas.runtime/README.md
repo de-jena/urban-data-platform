@@ -43,6 +43,26 @@ unchanged (see `event.atlas/docker/eventatlas/README.md`). Added here:
 |---|---|---|
 | `WEBCONSOLE_USER` / `WEBCONSOLE_PASSWORD` | `admin` / `admin` | webconsole login |
 
+`EVENTATLAS_MQTT_TOPICS` is what the one broker connection subscribes to. The adapters below
+filter on it, so it has to cover their topics as well:
+
+```
+EVENTATLAS_MQTT_TOPICS=chirpstack/application/+/device/+/event/up,5g/ilsa/#,5g/traficam/#,5g/config/traficam/#
+```
+
+## ILSA and TrafiCam adapters
+
+Both are `IMqttMessageListener`s on the sensiNact MQTT client of the Event Atlas image, so they
+share its broker connection and credentials.
+
+| Bundle | Topics | What |
+|---|---|---|
+| `de.jena.udp.atlas.ilsa` | `5g/ilsa/#` | TLConfiguration and TLSignalState JSON decoded by the Fennec codec; the configuration becomes an `Ilsa` provider through `transformations/ilsa.qvto` on the Fennec M2X QVT-O engine (`GeoJsonBlackBox` converts the areas); signal states and thermal values are pushed as DTOs. See `docs/ilsa-adapter/ILSASensinactAdapter.md`. |
+| `de.jena.udp.atlas.traficam` | `5g/traficam/#`, `5g/config/traficam/#` | binary EMF detections and camera configurations; detections are collected per camera and object class and pushed every 2 s. See `docs/traficam-adapter/TrafiCamAdapter.md`. |
+
+The trafficos models are generated against the gecko EMF OSGi API and join the 1.1 runtime
+through `org.eclipse.fennec.emf.gecko.compatibility.api`.
+
 ## ChirpStack mappings
 
 The Event Atlas mappings for the ChirpStack profiles are generated from

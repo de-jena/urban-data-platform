@@ -1,0 +1,30 @@
+Bundle-Name: UDP :: Atlas :: TrafiCam
+Bundle-Description: TrafiCam adapter for the UDP atlas runtime: reads the binary EMF detections \
+ and camera configurations on the 5g/traficam MQTT topics through the sensiNact MQTT client and \
+ pushes them as TrafiCam providers.
+Bundle-Version: 1.0.0.SNAPSHOT
+
+-buildpath: \
+	org.osgi.framework,\
+	org.osgi.service.component,\
+	org.osgi.service.component.annotations,\
+	org.osgi.util.promise,\
+	org.osgi.util.function,\
+	org.eclipse.emf.common,\
+	org.eclipse.emf.ecore,\
+	org.eclipse.sensinact.gateway.core.api,\
+	org.eclipse.sensinact.gateway.core.annotation,\
+	org.eclipse.sensinact.gateway.core.geo-json,\
+	org.eclipse.sensinact.gateway.core.models.provider,\
+	org.eclipse.sensinact.gateway.southbound.mqtt.mqtt-client,\
+	de.jena.traficam.model,\
+	de.jena.traficam.sensinact.model
+
+-testpath: \
+	junit-jupiter-api,\
+	${junit},\
+	tools.jackson.core.jackson-core,\
+	tools.jackson.core.jackson-databind,\
+	com.fasterxml.jackson.core.jackson-annotations
+
+-workingset: udp_runtime

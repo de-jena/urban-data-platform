@@ -14,6 +14,20 @@ The ILSA adapter follows the standard EMF-based architecture with Model-to-Model
 - **MMT Transformation**: QVTo transformation for converting ILSA signal data to SensiNact format (`de.jena.ilsa.sensinact.mmt`)
 - **MQTT Integration**: Receives real-time signal data from traffic light monitoring devices (`de.jena.ilsa.sensinact`)
 
+### Atlas runtime variant
+
+The UDP atlas runtime (`de.jena.udp.atlas.runtime`, issue #28) carries `de.jena.udp.atlas.ilsa`
+instead of the two bundles above. Same topics, model and provider shape, different plumbing:
+
+| | legacy runtime | atlas runtime |
+|---|---|---|
+| MQTT | gecko `MessagingService` `read` | `IMqttMessageListener` on the sensiNact MQTT client (`5g/ilsa/#` must be in `EVENTATLAS_MQTT_TOPICS`) |
+| JSON | gecko EMF JSON (`EMFJson` resource set) | Fennec codec: `codec.rootType`, `codec.typeKey=eClass` for the nested geometries, `codec.dateFormat` for the `…ZCET` timestamps; the payload packages are registered with the EMF metadata service, which is where the codec resolves `eClass` URIs |
+| transformation | Eclipse QVTo via `org.eclipse.fennec.qvt` | Fennec M2X QVT-O engine built in the bundle, `transformations/ilsa.qvto`, blackbox `GeoJsonBlackBox` |
+
+The M2X dialect differs in two places from the Eclipse one: string literals are single-quoted and
+types are qualified by package name (`trafficlight::TLConfiguration`), not by the modeltype alias.
+
 ## Data Model Structure
 
 ### Traffic Signals

@@ -4,7 +4,8 @@
 # Differences to the stock Event Atlas image:
 #  - Java 25 and the Felix webconsole (config in de.jena.udp.atlas.runtime.config)
 #  - no model inference yet (Fennec AI joins in a later step; its bundles are on the DIM nexus)
-#  - UDP-specific adapters are added here step by step (see the issue)
+#  - UDP-specific adapters are added here step by step (see the issue): ILSA and TrafiCam
+#    (de.jena.udp.atlas.*) read their 5g/* topics through the sensiNact MQTT client below
 # Deployment values come from the environment: org.eclipse.fennec.event.atlas.mapping.docker.config
 # resolves the EVENTATLAS_* / TIMESCALE_* / SENSORTHINGS_* placeholders at delivery time.
 -runprovidedcapabilities: ${native_capability}
@@ -23,6 +24,7 @@
 	bnd.identity;id='org.eclipse.fennec.event.atlas.rest.southbound.adapter',\
 	bnd.identity;id='org.eclipse.fennec.emf.osgi.eobject.registry',\
 	bnd.identity;id='org.eclipse.fennec.emf.osgi.component.minimal',\
+	bnd.identity;id='org.eclipse.fennec.emf.gecko.compatibility.api',\
 	bnd.identity;id='org.eclipse.fennec.codec',\
 	bnd.identity;id='org.eclipse.fennec.codec.jsonschema',\
 	bnd.identity;id='org.eclipse.fennec.model.atlas.rest.client.impl',\
@@ -45,7 +47,9 @@
 	bnd.identity;id='org.apache.felix.webconsole.plugins.ds',\
 	bnd.identity;id='org.apache.felix.webconsole.plugins.event',\
 	bnd.identity;id='org.apache.felix.webconsole.plugins.memoryusage',\
-	bnd.identity;id='de.jena.udp.atlas.runtime.config'
+	bnd.identity;id='de.jena.udp.atlas.runtime.config',\
+	bnd.identity;id='de.jena.udp.atlas.ilsa',\
+	bnd.identity;id='de.jena.udp.atlas.traficam'
 
 # http.port=-1: the only HTTP whiteboard is the named instance from the docker.config
 # bundle (context path event/, port 8080).
@@ -201,4 +205,26 @@
 	org.objectweb.asm.commons;version='[9.9.1,9.9.2)',\
 	org.objectweb.asm.tree;version='[9.9.1,9.9.2)',\
 	org.objectweb.asm.tree.analysis;version='[9.9.1,9.9.2)',\
-	org.objectweb.asm.util;version='[9.9.1,9.9.2)'
+	org.objectweb.asm.util;version='[9.9.1,9.9.2)',\
+	de.jena.ilsa.sensinact.model;version=snapshot,\
+	de.jena.traficam.model;version=snapshot,\
+	de.jena.traficam.sensinact.model;version=snapshot,\
+	de.jena.udp.atlas.ilsa;version=snapshot,\
+	de.jena.udp.atlas.traficam;version=snapshot,\
+	de.jena.udp.trafficos.common.model;version='[1.2.0,1.2.1)',\
+	de.jena.udp.trafficos.trafficlight.model;version='[1.2.0,1.2.1)',\
+	org.eclipse.fennec.emf.gecko.compatibility.api;version='[1.1.0,1.1.1)',\
+	org.eclipse.fennec.m2x.ocl.api;version='[0.1.1,0.1.2)',\
+	org.eclipse.fennec.m2x.ocl.engine;version='[0.1.1,0.1.2)',\
+	org.eclipse.fennec.m2x.ocl.model;version='[0.1.1,0.1.2)',\
+	org.eclipse.fennec.m2x.ocl.parser;version='[0.1.1,0.1.2)',\
+	org.eclipse.fennec.m2x.qvt.model;version='[0.1.1,0.1.2)',\
+	org.eclipse.fennec.m2x.qvtd.api;version='[0.1.1,0.1.2)',\
+	org.eclipse.fennec.m2x.qvtd.model;version='[0.1.1,0.1.2)',\
+	org.eclipse.fennec.m2x.qvto.api;version='[0.1.1,0.1.2)',\
+	org.eclipse.fennec.m2x.qvto.engine;version='[0.1.1,0.1.2)',\
+	org.eclipse.fennec.m2x.qvto.model;version='[0.1.1,0.1.2)',\
+	org.eclipse.fennec.m2x.qvto.parser;version='[0.1.1,0.1.2)',\
+	org.eclipse.fennec.m2x.unit;version='[0.1.1,0.1.2)',\
+	org.eclipse.fennec.m2x.unit.osgi;version='[0.1.1,0.1.2)',\
+	org.eclipse.fennec.emf.osgi.model.info;version='[1.1.0,1.1.1)'
