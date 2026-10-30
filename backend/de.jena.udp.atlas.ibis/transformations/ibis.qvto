@@ -1,0 +1,251 @@
+import de.jena.udp.atlas.ibis.IbisDateBlackBox;
+
+modeltype ECORE uses 'http://www.eclipse.org/emf/2002/Ecore';
+modeltype CUSTOMERINFO uses 'https://jena.de/models/ibis/customerinfoservice/1.0';
+modeltype GNSS uses 'https://jena.de/models/ibis/gnsslocationservice/1.0';
+modeltype TICKET uses 'https://jena.de/models/ibis/ticketvalidationservice/1.0';
+modeltype COMMON uses 'https://jena.de/models/ibis/common/1.0';
+modeltype SENSINACT uses 'https://jena.de/models/ibis/sensinact/1.0';
+
+transformation IbisToSensinact(in payload : ECORE, out sensinact : SENSINACT);
+
+-- IBIS wraps every value; an absent wrapper leaves the primitive at its default
+query real(wrapped : common::IBISIPDouble) : Real { return if wrapped.oclIsUndefined() then 0.0 else wrapped.value endif; }
+query integer(wrapped : common::IBISIPInt) : Integer { return if wrapped.oclIsUndefined() then 0 else wrapped.value endif; }
+query boolean(wrapped : common::IBISIPBoolean) : Boolean { return if wrapped.oclIsUndefined() then false else wrapped.value endif; }
+
+main() {
+	payload.rootObjects()[customerinformationservice::AllDataResponse] -> map allDataToService();
+	payload.rootObjects()[customerinformationservice::CurrentAnnouncementResponse] -> map announcementToService();
+	payload.rootObjects()[customerinformationservice::CurrentConnectionInformationResponse] -> map connectionToService();
+	payload.rootObjects()[customerinformationservice::CurrentDisplayContentResponse] -> map displayToService();
+	payload.rootObjects()[customerinformationservice::CurrentStopIndexResponse] -> map stopIndexToService();
+	payload.rootObjects()[customerinformationservice::CurrentStopPointResponse] -> map stopPointToService();
+	payload.rootObjects()[customerinformationservice::TripDataResponse] -> map tripToService();
+	payload.rootObjects()[customerinformationservice::VehicleDataResponse] -> map customerVehicleToService();
+
+	payload.rootObjects()[gnsslocationservice::GNSSLocationData] -> map gnssLocationToService();
+
+	payload.rootObjects()[ticketvalidationservice::CurrentTariffStopResponse] -> map currentTariffStopToService();
+	payload.rootObjects()[ticketvalidationservice::CurrentLineResponse] -> map currentLineToService();
+	payload.rootObjects()[ticketvalidationservice::RazziaResponse] -> map razziaToService();
+	payload.rootObjects()[ticketvalidationservice::VehicleDataResponse] -> map ticketVehicleToService();
+}
+
+-- CustomerInformationService
+
+mapping customerinformationservice::AllDataResponse::allDataToService() : ibis::CustomerInfoAll {
+	resource := object ibis::CustomerInfoAllData {
+		timestamp := self.allData.timeStamp.dateTimeToInstant();
+		serviceName := 'CustomerInformationService';
+		serviceOperation := 'AllData';
+		tripState := self.allData.tripState.toString();
+		stopInformationActive := boolean(self.allData.stopInformationActive);
+		speakerActive := boolean(self.allData.speakerActive);
+		vehicleMode := self.allData.vehicleMode.toString();
+		movingDirectionForward := boolean(self.allData.movingDirectionForward);
+		exitSide := self.allData.exitSide.toString();
+		vehicleStopRequested := boolean(self.allData.vehicleStopRequested);
+		inPanic := boolean(self.allData.inPanic);
+		doorState := self.allData.doorState.toString();
+		routeDeviation := self.allData.routeDeviation.toString();
+		vehicleRef := self.allData.vehicleRef.value;
+		defaultLanguage := self.allData.defaultLanguage.value;
+		currentStopIndex := integer(self.allData.currentStopIndex);
+	};
+}
+
+mapping customerinformationservice::CurrentAnnouncementResponse::announcementToService() : ibis::CustomerInfoCurrentAnnouncement {
+	resource := object ibis::CustomerInfoCurrentAnnouncementData {
+		timestamp := self.currentAnnouncementData.timeStamp.dateTimeToInstant();
+		serviceName := 'CustomerInformationService';
+		serviceOperation := 'CurrentAnnouncement';
+		announcementRef := self.currentAnnouncementData.currentAnnouncement.announcementRef.value;
+		announcementText += self.currentAnnouncementData.currentAnnouncement.announcementText->collect(t | t.value);
+		announcementTTSText += self.currentAnnouncementData.currentAnnouncement.announcementTTSText->collect(t | t.value);
+	};
+}
+
+mapping customerinformationservice::CurrentConnectionInformationResponse::connectionToService() : ibis::CustomerInfoCurrentConnection {
+	resource := object ibis::CustomerInfoCurrentConnectionData {
+		timestamp := self.currentConnectionData.timeStamp.dateTimeToInstant();
+		serviceName := 'CustomerInformationService';
+		serviceOperation := 'CurrentConnectionInformation';
+	};
+}
+
+mapping customerinformationservice::CurrentDisplayContentResponse::displayToService() : ibis::CustomerInfoCurrentDisplayContent {
+	resource := object ibis::CustomerInfoCurrentDisplayContentData {
+		timestamp := self.currentDisplayContentData.timeStamp.dateTimeToInstant();
+		serviceName := 'CustomerInformationService';
+		serviceOperation := 'CurrentDisplayContent';
+		var content := self.currentDisplayContentData.currentDisplayContent->first();
+		lineName := content.lineInformation.lineName->first().value;
+		destinationName := content.destination.destinationName->first().value;
+	};
+}
+
+mapping customerinformationservice::CurrentStopIndexResponse::stopIndexToService() : ibis::CustomerInfoCurrentStopIndex {
+	resource := object ibis::CustomerInfoCurrentStopIndexData {
+		timestamp := self.currentStopIndexData.timeStamp.dateTimeToInstant();
+		serviceName := 'CustomerInformationService';
+		serviceOperation := 'CurrentStopIndex';
+		currentStopIndex := integer(self.currentStopIndexData.currentStopIndex);
+	};
+}
+
+mapping customerinformationservice::CurrentStopPointResponse::stopPointToService() : ibis::CustomerInfoCurrentStopPoint {
+	resource := object ibis::CustomerInfoCurrentStopPointData {
+		var stop := self.currentStopPointData.currentStopPoint;
+		timestamp := self.currentStopPointData.timeStamp.dateTimeToInstant();
+		serviceName := 'CustomerInformationService';
+		serviceOperation := 'CurrentStopPointData';
+		stopIndex := integer(stop.stopIndex);
+		stopRef := stop.stopRef.value;
+		stopName += stop.stopName->collect(t | t.value);
+		stopAlternativeName += stop.stopAlternativeName->collect(t | t.value);
+		platform := stop.platform.value;
+		arrivalScheduled := stop.arrivalScheduled.dateTimeToInstant();
+		arrivalExpected := stop.arrivalExpected.dateTimeToInstant();
+		departureScheduled := stop.departureScheduled.dateTimeToInstant();
+		departureExpected := stop.departureExpected.dateTimeToInstant();
+		recordedArrivalTime := stop.recordedArrivalTime.dateTimeToInstant();
+		distanceToNextStop := integer(stop.distanceToNextStop);
+		fareZone += stop.fareZone->collect(z | z.value);
+	};
+}
+
+mapping customerinformationservice::TripDataResponse::tripToService() : ibis::CustomerInfoTrip {
+	resource := object ibis::CustomerInfoTripData {
+		var trip := self.tripData.tripInformation;
+		timestamp := self.tripData.timeStamp.dateTimeToInstant();
+		serviceName := 'CustomerInformationService';
+		serviceOperation := 'TripData';
+		vehicleRef := self.tripData.vehicleRef.value;
+		defaultLanguage := self.tripData.defaultLanguage.value;
+		tripRef := trip.tripRef.value;
+		locationState := trip.locationState.toString();
+		timetableDelay := integer(trip.timetableDelay);
+		routeDirection := trip.routeDirection.toString();
+		runNumber := integer(trip.runNumber);
+		patternNumber := integer(trip.patternNumber);
+		pathDestinationNumber := integer(trip.pathDestinationNumber);
+		additionalTextMsg := trip.additionalTextMessage.value;
+		additionalTextMsg1 := trip.additionalTextMessage1.value;
+		additionalTextMsg2 := trip.additionalTextMessage2.value;
+		additionalTextMsg3 := trip.additionalTextMessage3.value;
+		additionalTextMsg4 := trip.additionalTextMessage4.value;
+		additionalTextMsg5 := trip.additionalTextMessage5.value;
+		additionalTextMsg6 := trip.additionalTextMessage6.value;
+		additionalTextMsg7 := trip.additionalTextMessage7.value;
+		additionalTextMsg8 := trip.additionalTextMessage8.value;
+		additionalTextMsg9 := trip.additionalTextMessage9.value;
+		currentStopIndex := integer(self.tripData.currentStopIndex);
+	};
+}
+
+mapping customerinformationservice::VehicleDataResponse::customerVehicleToService() : ibis::CustomerInfoVehicle {
+	resource := object ibis::CustomerInfoVehicleData {
+		timestamp := self.vehicleData.timeStamp.dateTimeToInstant();
+		serviceName := 'CustomerInformationService';
+		serviceOperation := 'VehicleData';
+		vehicleRef := self.vehicleData.vehicleRef.value;
+		routeDeviation := self.vehicleData.routeDeviation.toString();
+		doorState := self.vehicleData.doorState.toString();
+		inPanic := boolean(self.vehicleData.inPanic);
+		vehicleStopRequested := boolean(self.vehicleData.vehicleStopRequested);
+		exitSide := self.vehicleData.exitSide.toString();
+		movingDirectionForward := boolean(self.vehicleData.movingDirectionForward);
+		vehicleMode := self.vehicleData.vehicleMode.toString();
+		speakerActive := boolean(self.vehicleData.speakerActive);
+		stopInformationActive := boolean(self.vehicleData.stopInformationActive);
+		tripState := self.vehicleData.tripState.toString();
+	};
+}
+
+-- GNSSLocationService
+
+mapping gnsslocationservice::GNSSLocationData::gnssLocationToService() : ibis::GNSSLocation {
+	resource := object ibis::GNSSLocationData {
+		timestamp := self.time.dateTimeToInstant();
+		serviceName := 'GNSSLocationService';
+		serviceOperation := 'GNSSLocation';
+		latitudeDegree := real(self.latitude.degree);
+		longitudeDegree := real(self.longitude.degree);
+		latitudeDirection := self.latitude.direction.value;
+		longitudeDirection := self.longitude.direction.value;
+		date := self.date.dateToInstant();
+		time := self.time.dateTimeToInstant();
+		altitude := real(self.altitude);
+		speedOverGround := real(self.speedOverGround);
+		signalQuality := self.signalQuality.toString();
+		numberOfSatellites := integer(self.numberOfSatellites);
+		horizontalDilutionOfPrecision := real(self.horiziontalDilutionOfPrecision);
+		verticalDilutionOfPrecision := real(self.verticalDilutionOfPrecision);
+		trackDegreeTrue := real(self.trackDegreeTrue);
+		trackDegreeMagnetic := real(self.trackDegreeMagnetic);
+		gNSSType := self.gNSSType.toString();
+		gNSSCoordinateSystem := self.gNSSCoordinateSystem.toString();
+	};
+}
+
+-- TicketValidationService
+
+mapping ticketvalidationservice::CurrentTariffStopResponse::currentTariffStopToService() : ibis::TicketValidationCurrentTariffStop {
+	resource := object ibis::TicketValidationCurrentTariffStopData {
+		var stop := self.currentTariffStopData.currentTariffStop;
+		timestamp := self.currentTariffStopData.timeStamp.dateTimeToInstant();
+		serviceName := 'TicketValidationService';
+		serviceOperation := 'CurrentTariffStopData';
+		stopIndex := integer(stop.stopIndex);
+		stopRef := stop.stopRef.value;
+		stopName += stop.stopName->collect(t | t.value);
+		stopAlternativeName += stop.stopAlternativeName->collect(t | t.value);
+		platform := stop.platform.value;
+		arrivalScheduled := stop.arrivalScheduled.dateTimeToInstant();
+		arrivalExpected := stop.arrivalExpected.dateTimeToInstant();
+		departureScheduled := stop.departureScheduled.dateTimeToInstant();
+		departureExpected := stop.departureExpected.dateTimeToInstant();
+		recordedArrivalTime := stop.recordedArrivalTime.dateTimeToInstant();
+		distanceToNextStop := integer(stop.distanceToNextStop);
+		fareZone += stop.fareZone->collect(z | z.value);
+		currentTripRef := self.currentTariffStopData.currentTripRef.value;
+	};
+}
+
+mapping ticketvalidationservice::CurrentLineResponse::currentLineToService() : ibis::TicketValidationCurrentLine {
+	resource := object ibis::TicketValidationCurrentLineData {
+		var line := self.currentLineData.currentLine;
+		timestamp := self.currentLineData.timeStamp.dateTimeToInstant();
+		serviceName := 'TicketValidationService';
+		serviceOperation := 'CurrentLineData';
+		lineRef := line.lineRef.value;
+		lineName += line.lineName->collect(t | t.value);
+		lineShortName += line.lineShortName->collect(t | t.value);
+		lineNumber := integer(line.lineNumber);
+		lineCode := integer(line.lineCode);
+	};
+}
+
+mapping ticketvalidationservice::RazziaResponse::razziaToService() : ibis::TicketValidationRazzia {
+	resource := object ibis::TicketValidationRazziaData {
+		timestamp := self.razziaData.timeStamp.dateTimeToInstant();
+		serviceName := 'TicketValidationService';
+		serviceOperation := 'RazziaData';
+		razziaState := self.razziaData.razziaState.toString();
+	};
+}
+
+mapping ticketvalidationservice::VehicleDataResponse::ticketVehicleToService() : ibis::TicketValidationVehicle {
+	resource := object ibis::TicketValidationVehicleData {
+		timestamp := self.vehicleData.timeStamp.dateTimeToInstant();
+		serviceName := 'TicketValidationService';
+		serviceOperation := 'VehicleData';
+		vehicleRef := self.vehicleData.vehicleRef.value;
+		routeDeviation := self.vehicleData.routeDeviation.toString();
+		doorState := self.vehicleData.doorOpenState.toString();
+		movingDirectionForward := boolean(self.vehicleData.movingDirectionForward);
+		vehicleMode := self.vehicleData.vehicleMode.toString();
+		driverNumber := self.vehicleData.driverNumber.value;
+	};
+}

@@ -1,0 +1,56 @@
+Bundle-Name: UDP :: Atlas :: IBIS
+Bundle-Description: IBIS (bus/tram on-board) adapter for the UDP atlas runtime: reads the 5g/ibis MQTT \
+ topics through the gecko messaging MQTT client, decodes the EMF JSON with the Fennec codec and maps \
+ each service response to an IbisDevice service on the Fennec M2X QVT-O engine.
+Bundle-Version: 1.0.0.SNAPSHOT
+
+-buildpath: \
+	org.osgi.framework,\
+	org.osgi.service.component,\
+	org.osgi.service.component.annotations,\
+	org.osgi.util.promise,\
+	org.osgi.util.function,\
+	org.osgi.util.pushstream,\
+	org.eclipse.emf.common,\
+	org.eclipse.emf.ecore,\
+	org.eclipse.fennec.emf.osgi.api,\
+	org.eclipse.fennec.emf.osgi.metadata;version=latest,\
+	org.eclipse.fennec.codec.api,\
+	org.eclipse.fennec.m2x.ocl.api;version=latest,\
+	org.eclipse.fennec.m2x.ocl.parser;version=latest,\
+	org.eclipse.fennec.m2x.ocl.model;version=latest,\
+	org.eclipse.fennec.m2x.qvto.api;version=latest,\
+	org.eclipse.fennec.m2x.qvto.engine;version=latest,\
+	org.eclipse.fennec.m2x.qvto.model;version=latest,\
+	org.eclipse.fennec.m2x.qvtd.api;version=latest,\
+	org.eclipse.sensinact.gateway.core.api,\
+	org.eclipse.sensinact.gateway.core.annotation,\
+	org.eclipse.sensinact.gateway.core.geo-json,\
+	org.eclipse.sensinact.gateway.core.models.provider,\
+	org.gecko.osgi.messaging,\
+	tools.jackson.core.jackson-core,\
+	de.jena.ibis.sensinact.model,\
+	de.jena.ibis.common.model,\
+	de.jena.ibis.enumerations.model,\
+	de.jena.ibis.customer.info.service.model,\
+	de.jena.ibis.gnss.location.service.model,\
+	de.jena.ibis.ticket.validation.service.model
+
+-testpath: \
+	junit-jupiter-api,\
+	${junit},\
+	tools.jackson.core.jackson-databind,\
+	com.fasterxml.jackson.core.jackson-annotations,\
+	org.antlr.antlr4-runtime;version='[4.13,5)',\
+	org.eclipse.emf.ecore.xmi,\
+	org.eclipse.fennec.m2x.ocl.engine;version=latest,\
+	org.eclipse.fennec.m2x.qvto.parser;version=latest,\
+	org.eclipse.fennec.m2x.qvt.model;version=latest,\
+	org.eclipse.fennec.m2x.qvtd.model;version=latest,\
+	org.eclipse.fennec.m2x.unit;version=latest,\
+	org.eclipse.fennec.m2x.unit.osgi;version=latest,\
+	org.eclipse.fennec.emf.osgi.component.minimal;version=latest
+
+-includeresource: transformations=transformations
+
+-workingset: udp_runtime

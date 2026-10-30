@@ -71,9 +71,10 @@ Both subscribe through the gecko messaging `MessagingService` with `id=read`
 |---|---|---|
 | `de.jena.udp.atlas.ilsa` | `5g/ilsa/#` | TLConfiguration and TLSignalState JSON decoded by the Fennec codec; the configuration becomes an `Ilsa` provider through `transformations/ilsa.qvto` on the Fennec M2X QVT-O engine (`GeoJsonBlackBox` converts the areas); signal states and thermal values are pushed as DTOs. See `docs/ilsa-adapter/ILSASensinactAdapter.md`. |
 | `de.jena.udp.atlas.traficam` | `5g/traficam/#`, `5g/config/traficam/#` | binary EMF detections and camera configurations; detections are collected per camera and object class and pushed every 2 s. See `docs/traficam-adapter/TrafiCamAdapter.md`. |
+| `de.jena.udp.atlas.ibis` | `5g/ibis/#` | IBIS-IP service responses (EMF JSON keyed by the XML element names) decoded by the Fennec codec; each response becomes one `IbisDevice` service through `transformations/ibis.qvto` on the M2X engine, a GNSS position also sets the admin location. See `docs/ibis-adapter/IBISAdapter.md`. |
 
-The trafficos models are generated against the gecko EMF OSGi API and join the 1.1 runtime
-through `org.eclipse.fennec.emf.gecko.compatibility.api`.
+The trafficos and IBIS-IP models are generated against the gecko EMF OSGi API and join the 1.1
+runtime through `org.eclipse.fennec.emf.gecko.compatibility.api`.
 
 ## ChirpStack mappings
 
