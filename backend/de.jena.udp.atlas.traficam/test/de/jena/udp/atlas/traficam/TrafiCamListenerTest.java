@@ -27,6 +27,8 @@ import java.util.Map;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.impl.BinaryResourceImpl;
 import org.eclipse.sensinact.core.push.DataUpdate;
+import org.eclipse.sensinact.gateway.geojson.Feature;
+import org.eclipse.sensinact.gateway.geojson.FeatureCollection;
 import org.eclipse.sensinact.gateway.geojson.GeometryCollection;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -53,7 +55,7 @@ class TrafiCamListenerTest {
 	}
 
 	@Test
-	void detectionsOfOneClassAreFlushedAsOneGeometryCollection() throws Exception {
+	void detectionsOfOneClassAreFlushedAsOneFeatureCollectionWithSpeedAndHeading() throws Exception {
 		listener.handle("5g/traficam/cam1/2", detection(7L, 11.58, 50.92));
 		listener.handle("5g/traficam/cam1/2", detection(8L, 11.59, 50.93));
 		listener.handle("5g/traficam/cam1/2", detection(7L, 11.58, 50.92));
@@ -63,7 +65,11 @@ class TrafiCamListenerTest {
 		TrafiCamDto dto = assertInstanceOf(TrafiCamDto.class, pushed.get(0));
 		assertEquals("cam1", dto.camId);
 		assertEquals("2", dto.classification);
-		assertEquals(2, assertInstanceOf(GeometryCollection.class, dto.objects).geometries().size());
+		FeatureCollection objects = assertInstanceOf(FeatureCollection.class, dto.objects);
+		assertEquals(2, objects.features().size());
+		Feature first = objects.features().get(0);
+		assertEquals("7", first.id());
+		assertEquals(Map.of("id", 7L, "speed", 12.0, "heading", 180.0), first.properties());
 	}
 
 	@Test
@@ -75,7 +81,7 @@ class TrafiCamListenerTest {
 		listener.flushWindows();
 
 		assertEquals(2, pushed.size());
-		assertTrue(((GeometryCollection) ((TrafiCamDto) pushed.get(1)).objects).geometries().isEmpty());
+		assertTrue(((FeatureCollection) ((TrafiCamDto) pushed.get(1)).objects).features().isEmpty());
 	}
 
 	@Test
@@ -101,13 +107,23 @@ class TrafiCamListenerTest {
 		Files.write(samples.resolve("cam1-config.bin"), configuration());
 		Files.write(samples.resolve("cam1-class2-object7.bin"), detection(7L, 11.58126, 50.92091));
 		Files.write(samples.resolve("cam1-class2-object8.bin"), detection(8L, 11.58131, 50.92095));
+		Files.write(samples.resolve("felsenkeller-config.bin"), configuration());
+		Files.write(samples.resolve("felsenkeller-class3-south.bin"), detection(31L, 11.58127, 50.92114, 12.0, 180.0));
+		Files.write(samples.resolve("felsenkeller-class3-north.bin"), detection(32L, 11.58127, 50.92114, 12.0, 10.0));
 	}
 
 	static byte[] detection(long id, double lon, double lat) throws IOException {
+		return detection(id, lon, lat, 12.0, 180.0);
+	}
+
+	static byte[] detection(long id, double lon, double lat, double speed, double heading) throws IOException {
 		TrafiCamObject detection = TrafiCamFactory.eINSTANCE.createTrafiCamObject();
 		detection.setId(id);
 		detection.setClassId((short) 2);
-		detection.getGpsCoordinates().add(gps(lon, lat));
+		detection.setSpeed(speed);
+		GpsCoordinates gps = gps(lon, lat);
+		gps.setHeading(heading);
+		detection.getGpsCoordinates().add(gps);
 		return binary(detection);
 	}
 

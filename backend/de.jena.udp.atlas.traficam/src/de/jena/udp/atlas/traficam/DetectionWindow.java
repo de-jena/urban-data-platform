@@ -18,21 +18,21 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-import org.eclipse.sensinact.gateway.geojson.Geometry;
-import org.eclipse.sensinact.gateway.geojson.GeometryCollection;
+import org.eclipse.sensinact.gateway.geojson.Feature;
+import org.eclipse.sensinact.gateway.geojson.FeatureCollection;
 import org.eclipse.sensinact.gateway.geojson.Point;
 
 import de.jena.traficam.GpsCoordinates;
 import de.jena.traficam.TrafiCamObject;
 
 /**
- * Collects the detections of one camera and object class between two flushes. A flush yields the
- * positions seen (one per object id), an empty collection once after the last detection, and
- * nothing while the class stays quiet.
+ * The objects one camera saw in one class since the last flush: one feature per object id with
+ * its first position and the {@code id}, {@code speed} and {@code heading} the camera reported.
+ * An empty window is reported once, then stays quiet.
  */
 class DetectionWindow {
 
-	private final Map<Long, Point> positions = new LinkedHashMap<>();
+	private final Map<Long, Feature> seen = new LinkedHashMap<>();
 	private boolean emptyReported;
 
 	synchronized void add(TrafiCamObject detection) {
@@ -40,20 +40,22 @@ class DetectionWindow {
 			return;
 		}
 		GpsCoordinates gps = detection.getGpsCoordinates().get(0);
-		positions.putIfAbsent(detection.getId(), new Point(gps.getLongitude(), gps.getLatitude()));
+		seen.putIfAbsent(detection.getId(), new Feature(String.valueOf(detection.getId()),
+				new Point(gps.getLongitude(), gps.getLatitude()),
+				Map.of("id", detection.getId(), "speed", detection.getSpeed(), "heading", gps.getHeading()), null, null));
 	}
 
-	synchronized Optional<GeometryCollection> flush() {
-		if (positions.isEmpty()) {
+	synchronized Optional<FeatureCollection> flush() {
+		if (seen.isEmpty()) {
 			if (emptyReported) {
 				return Optional.empty();
 			}
 			emptyReported = true;
-			return Optional.of(new GeometryCollection(List.of(), null, null));
+			return Optional.of(new FeatureCollection(List.of(), null, null));
 		}
-		List<Geometry> geometries = new ArrayList<>(positions.values());
-		positions.clear();
+		List<Feature> features = new ArrayList<>(seen.values());
+		seen.clear();
 		emptyReported = false;
-		return Optional.of(new GeometryCollection(geometries, null, null));
+		return Optional.of(new FeatureCollection(features, null, null));
 	}
 }

@@ -1,0 +1,111 @@
+{
+  ":configurator:resource-version": 1,
+  ":configurator:symbolic-name": "de.jena.udp.atlas.runtime.config.humidity-rules",
+  ":configurator:version": "1.0.0",
+
+  /* The soil-humidity rules of docs/humidity-sensors-rules (JEXL on the sensiNact easy-rules engine):
+   * kPa -> hPa, pF value, average per device and its colour, all on <provider>-derived. The first
+   * selector names the sensor model, the others the derived providers. */
+  "sensinact.rules.easyrules~potentialWaterHPa": {
+    "sensinact.rule.name": "FromkPaTohPa",
+    "resource.selectors": [
+      {
+        "model": "Solidos_Teros21",
+        "service": "sensor",
+        "resource": {
+          "value": "^potentialWater\\d+$",
+          "type": "REGEX"
+        }
+      }
+    ],
+    "rule.definitions": [
+      {
+        "name": "potential-water-to-hPa-conversion",
+        "description": "Converts the value from kPa to hPa of the potentialWater resource",
+        "condition": "true",
+        "action": [
+          "#pragma jexl.namespace.Instant java.time.Instant; newestTimestamp = 0; triggeringResources = {}; for(providerName : $providers) { for(resourceName : $data[providerName].sensor.$resources) { if ($data[providerName].sensor[resourceName].containsKey('$timestamp') && resourceName.matches('^potentialWater\\d+$')) { currentTimestamp = $data[providerName].sensor[resourceName].$timestamp.getEpochSecond(); if (currentTimestamp > newestTimestamp) { newestTimestamp = currentTimestamp; triggeringResources = {}; triggeringResources.add({'provider': providerName, 'resource': resourceName, 'value': $data[providerName].sensor[resourceName].$value}); } else if (currentTimestamp == newestTimestamp) { triggeringResources.add({'provider': providerName, 'resource': resourceName, 'value': $data[providerName].sensor[resourceName].$value}); } } } }; timeNow = Instant:now(); for (r : triggeringResources) { newProvider = r.provider + '-derived'; newName = 'potentialWaterHPa' + r.resource.substring(r.resource.lastIndexOf('Water') + 5); $updater.updateResource(newProvider, 'derivedQuantities', newName, r.value*10, timeNow); }"
+        ],
+        "priority": 1
+      }
+    ]
+  },
+  "sensinact.rules.easyrules~pfWert": {
+    "sensinact.rule.name": "pfWert",
+    "resource.selectors": [
+      {
+        "provider": {
+          "value": "^.*-derived$",
+          "type": "REGEX"
+        },
+        "service": "derivedQuantities",
+        "resource": {
+          "value": "^potentialWaterHPa\\d+$",
+          "type": "REGEX"
+        }
+      }
+    ],
+    "rule.definitions": [
+      {
+        "name": "pfWert",
+        "description": "Computes the value of pf-Wert from the potentialWaterHPa for each sensors",
+        "condition": "true",
+        "action": [
+          "#pragma jexl.namespace.Instant java.time.Instant; #pragma jexl.namespace.Math java.lang.Math; newestTimestamp = 0; triggeringResources = {}; for(providerName : $providers) { for (resourceName : $data[providerName].derivedQuantities.$resources) { if ($data[providerName].derivedQuantities[resourceName].containsKey('$timestamp') && resourceName.matches('^potentialWaterHPa\\d+$')) { currentTimestamp = $data[providerName].derivedQuantities[resourceName].$timestamp.getEpochSecond(); if (currentTimestamp > newestTimestamp) { newestTimestamp = currentTimestamp; triggeringResources = {}; triggeringResources.add({'provider': providerName, 'resource': resourceName, 'value': $data[providerName].derivedQuantities[resourceName].$value}); } else if (currentTimestamp == newestTimestamp) {triggeringResources.add({'provider': providerName, 'resource': resourceName, 'value': $data[providerName].derivedQuantities[resourceName].$value});} } } }; timeNow = Instant:now(); for (r : triggeringResources) { if(r.value != 0) { newName = 'pfWert' + r.resource.substring(r.resource.lastIndexOf('HPa') + 3); $updater.updateResource(r.provider, 'derivedQuantities', newName, Math:log10(Math:abs(r.value)), timeNow); }}"
+        ],
+        "priority": 1
+      }
+    ]
+  },
+  "sensinact.rules.easyrules~avgPfWert": {
+    "sensinact.rule.name": "AveragePfWert",
+    "resource.selectors": [
+      {
+        "provider": {
+          "value": "^.*-derived$",
+          "type": "REGEX"
+        },
+        "service": "derivedQuantities",
+        "resource": {
+          "value": "^pfWert\\d+$",
+          "type": "REGEX"
+        }
+      }
+    ],
+    "rule.definitions": [
+      {
+        "name": "average",
+        "description": "Computes the average of the pfWert among sensors belonging to the same device",
+        "condition": "true",
+        "action": [
+          "#pragma jexl.namespace.Instant java.time.Instant; newestTimestamp = 0; triggeringProvider = null; for(pName : $providers) { service = $data[pName].derivedQuantities; if (service != null) { for(rName : service.$resources) { if (rName.matches('^pfWert\\d+$')) { resObj = service[rName]; if (resObj?.$timestamp != null && resObj.$timestamp.getEpochSecond() > newestTimestamp) { newestTimestamp = resObj.$timestamp.getEpochSecond(); triggeringProvider = pName; } } } } }; if (triggeringProvider != null) { sum = 0.0; count = 0; tps = $data[triggeringProvider].derivedQuantities; for (rn : tps.$resources) { if (rn.matches('^pfWert\\d+$')) { val = tps[rn]?.$value; if (val != null) { sum = sum + val; count = count + 1; } } }; if (count > 0) { $updater.updateResource(triggeringProvider, 'derivedQuantities', 'pfWertAvg', sum / count, Instant:now()); } }"
+        ],
+        "priority": 1
+      }
+    ]
+  },
+  "sensinact.rules.easyrules~color": {
+    "sensinact.rule.name": "Color",
+    "resource.selectors": [
+      {
+        "provider": {
+          "value": "^.*-derived$",
+          "type": "REGEX"
+        },
+        "service": "derivedQuantities",
+        "resource": "pfWertAvg"
+      }
+    ],
+    "rule.definitions": [
+      {
+        "name": "color",
+        "description": "Computes a color code based on the value of the average",
+        "condition": "true",
+        "action": [
+          "#pragma jexl.namespace.Instant java.time.Instant; newestTimestamp = 0; triggeringProvider = null; for(providerName : $providers) { if ($data[providerName].derivedQuantities.pfWertAvg.containsKey('$timestamp') && $data[providerName].derivedQuantities.pfWertAvg.$timestamp.getEpochSecond() > newestTimestamp) { newestTimestamp = $data[providerName].derivedQuantities.pfWertAvg.$timestamp.getEpochSecond(); triggeringProvider = providerName; } }; timeNow = Instant:now(); if (triggeringProvider != null) { if ($data[triggeringProvider].derivedQuantities.pfWertAvg.$value < 1.8) { $updater.updateResource(triggeringProvider, 'derivedQuantities', 'color', 'Blau', timeNow); } else if ($data[triggeringProvider].derivedQuantities.pfWertAvg.$value < 3.0) { $updater.updateResource(triggeringProvider, 'derivedQuantities', 'color', 'Grün', timeNow);} else if ($data[triggeringProvider].derivedQuantities.pfWertAvg.$value < 3.6) { $updater.updateResource(triggeringProvider, 'derivedQuantities', 'color', 'Gelb', timeNow);} else { $updater.updateResource(triggeringProvider, 'derivedQuantities', 'color', 'Rot', timeNow);} }"
+        ],
+        "priority": 1
+      }
+    ]
+  }
+}

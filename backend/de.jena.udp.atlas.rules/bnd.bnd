@@ -1,0 +1,29 @@
+Bundle-Name: UDP :: Atlas :: Rules
+Bundle-Description: sensiNact rules of the UDP atlas runtime: the admin location of the soil sensors \
+ copied to their derived providers, the reference-area colour from the pF values of the sensors \
+ inside the area, and the DWD temperatures in degrees Celsius.
+Bundle-Version: 1.0.0.SNAPSHOT
+
+-buildpath: \
+	org.osgi.framework,\
+	org.osgi.service.component,\
+	org.osgi.service.component.annotations,\
+	org.eclipse.emf.common,\
+	org.eclipse.emf.ecore,\
+	org.eclipse.sensinact.gateway.core.api,\
+	org.eclipse.sensinact.gateway.core.geo-json,\
+	org.eclipse.sensinact.gateway.southbound.rules.rules.api,\
+	com.fasterxml.jackson.core.jackson-annotations,\
+	de.jena.udp.reference.area.sensinact.model
+
+-testpath: \
+	junit-jupiter-api,\
+	${junit},\
+	org.mockito.mockito-core,\
+	net.bytebuddy.byte-buddy,\
+	net.bytebuddy.byte-buddy-agent,\
+	org.objenesis,\
+	tools.jackson.core.jackson-core,\
+	tools.jackson.core.jackson-databind
+
+-workingset: udp_runtime

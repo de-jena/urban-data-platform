@@ -38,7 +38,7 @@ The `Conflict` service contains the conflict detection results:
 
 ```xml
 <eClassifiers xsi:type="ecore:EAttribute" name="conflict"
-    eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
 <eClassifiers xsi:type="ecore:EAttribute" name="bikeId"
     eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject"/>
 ```
@@ -204,6 +204,31 @@ The adapter subscribes to SensiNact events via TypedEventHandler:
 - Ensure bikes are being detected by TrafICam (class3 objects)
 - Verify traffic light states are updating (K440/K4_1/color)
 - Check that bike heading and speed meet detection thresholds
+
+## Atlas runtime
+
+In `de.jena.udp.atlas.runtime` (issue #28) the detector is `de.jena.udp.atlas.conflict`
+(`TrafficConflictDetector`, the model bundle `de.jena.conflict.sensinact.model` is reused). It is a
+`TypedEventHandler` whose topics come from the configuration in
+`de.jena.udp.atlas.runtime.config/configs/rules.json`:
+
+```json
+"TrafficConflictDetector": {
+  "event.topics": ["DATA/Ilsa/K440/K4_1/color", "DATA/TraficamProvider/Felsenkeller/3/objects"]
+}
+```
+
+`provider` (`Conflict01`), `friendlyName`, `longitude`/`latitude`, `minBikeSpeed` (7), `minHeading`
+(90) and `maxHeading` (230) have the values above as defaults; the viewport is the pair of bike
+crossings at Felsenkeller. The provider is pushed at activation with `conflict=false` and again
+whenever the state flips; `bikeId` is the last bike that crossed. `conflict` is an `EBooleanObject`
+since the atlas runtime: an EMF push only carries set attributes, and a primitive `false` is the
+default, so the initial state never reached the twin.
+
+The detector reads `heading` and `speed` from the properties of the camera's `objects` features.
+The legacy TrafiCam adapter published bare points without properties, so the legacy detector
+could never see a bike; the atlas TrafiCam adapter adds `id`, `speed` and `heading`
+(`docs/traficam-adapter/TrafiCamAdapter.md`).
 
 ## Dependencies
 

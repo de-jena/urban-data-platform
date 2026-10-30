@@ -104,9 +104,26 @@ In the atlas runtime (`de.jena.udp.atlas.runtime`, issue #28) the reference area
 pushes one `ReferenceAreaProvider` per placemark (12 today), the placemark name as provider id with
 `/` replaced by `_` (`ZW_Löb-01`, a slash is no REST path segment), the polygons as a GeoJSON
 `FeatureCollection` in `admin/location` and `gid`/`anzahl_sens`/`tour_name_lang` on the `referenceArea`
-service; the colour stays unset (`UNKNOWN` is the enum default, which an EMF push does not carry). The same bundle sets the sensor locations (see
-`docs/Actual Geo Location for Chirpstack Sensors.md`), so no `LocationNotification` is needed there;
-the colour rule itself is still open (step 5).
+service; the colour stays unset (`UNKNOWN` is the enum default, which an EMF push does not carry)
+until the rule below sets it. The same bundle sets the sensor locations (see
+`docs/Actual Geo Location for Chirpstack Sensors.md`), so there is no `LocationNotification`.
+
+The rules of the atlas runtime (`de.jena.udp.atlas.rules` plus the sensiNact rules engine
+`rules.impl` / `easy-rules.osgi` / `easy-rules.config` in the image):
+
+- Rules 1 to 4 are the JEXL rules above, unchanged, in
+  `de.jena.udp.atlas.runtime.config/configs/humidity-rules.json`. The providers are named after
+  the `devEui` now, so the first selector picks the model `Solidos_Teros21` instead of a
+  `chirpstack-` prefix and the others the providers ending in `-derived`.
+- `SensorLocationRule` copies `admin/location` of every `Solidos_Teros21` provider to its
+  `-derived` provider (the legacy `ChirpstackLocationRule`).
+- Rule 5 is `ReferenceAreaRule`. It is evaluated on every new `derivedQuantities/pfWertAvg` of a
+  `-derived` provider with a snapshot of the reference areas, the sensors and the derived
+  providers, so it needs no location cache: the sensor behind the newest average decides the area
+  (point in the area's polygons), every sensor standing in that area contributes its average, 0
+  while it has none, and `ReferenceAreaColour` applies the table of the city for one to five
+  sensors. The colour goes to `<area>/referenceArea/color`. Other sensor models go into the
+  `models` property of both rules.
 
 The actual rule implementation is in `de.jena.udp.reference.area.sensinact.rules`. There we trigger the rule every time we have an update of a `chirpstack-<something>-derived/derivedQuantities/pfWertAvg` resource. 
 

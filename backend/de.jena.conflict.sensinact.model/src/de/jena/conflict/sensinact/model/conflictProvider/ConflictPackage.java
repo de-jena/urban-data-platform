@@ -355,11 +355,11 @@ public interface ConflictPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getConflict();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.jena.conflict.sensinact.model.conflictProvider.Conflict#isConflict <em>Conflict</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.conflict.sensinact.model.conflictProvider.Conflict#getConflict <em>Conflict</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Conflict</em>'.
-	 * @see de.jena.conflict.sensinact.model.conflictProvider.Conflict#isConflict()
+	 * @see de.jena.conflict.sensinact.model.conflictProvider.Conflict#getConflict()
 	 * @see #getConflict()
 	 * @generated
 	 */

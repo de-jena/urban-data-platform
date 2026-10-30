@@ -32,7 +32,7 @@ import org.eclipse.sensinact.model.core.provider.impl.ServiceImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.jena.conflict.sensinact.model.conflictProvider.impl.ConflictImpl#isConflict <em>Conflict</em>}</li>
+ *   <li>{@link de.jena.conflict.sensinact.model.conflictProvider.impl.ConflictImpl#getConflict <em>Conflict</em>}</li>
  *   <li>{@link de.jena.conflict.sensinact.model.conflictProvider.impl.ConflictImpl#getBikeId <em>Bike Id</em>}</li>
  * </ul>
  *
@@ -40,24 +40,24 @@ import org.eclipse.sensinact.model.core.provider.impl.ServiceImpl;
  */
 public class ConflictImpl extends ServiceImpl implements Conflict {
 	/**
-	 * The default value of the '{@link #isConflict() <em>Conflict</em>}' attribute.
+	 * The default value of the '{@link #getConflict() <em>Conflict</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isConflict()
+	 * @see #getConflict()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean CONFLICT_EDEFAULT = false;
+	protected static final Boolean CONFLICT_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #isConflict() <em>Conflict</em>}' attribute.
+	 * The cached value of the '{@link #getConflict() <em>Conflict</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isConflict()
+	 * @see #getConflict()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean conflict = CONFLICT_EDEFAULT;
+	protected Boolean conflict = CONFLICT_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getBikeId() <em>Bike Id</em>}' attribute.
@@ -104,7 +104,7 @@ public class ConflictImpl extends ServiceImpl implements Conflict {
 	 * @generated
 	 */
 	@Override
-	public boolean isConflict() {
+	public Boolean getConflict() {
 		return conflict;
 	}
 
@@ -114,8 +114,8 @@ public class ConflictImpl extends ServiceImpl implements Conflict {
 	 * @generated
 	 */
 	@Override
-	public void setConflict(boolean newConflict) {
-		boolean oldConflict = conflict;
+	public void setConflict(Boolean newConflict) {
+		Boolean oldConflict = conflict;
 		conflict = newConflict;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ConflictPackage.CONFLICT__CONFLICT, oldConflict, conflict));
@@ -153,7 +153,7 @@ public class ConflictImpl extends ServiceImpl implements Conflict {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case ConflictPackage.CONFLICT__CONFLICT:
-				return isConflict();
+				return getConflict();
 			case ConflictPackage.CONFLICT__BIKE_ID:
 				return getBikeId();
 		}
@@ -205,7 +205,7 @@ public class ConflictImpl extends ServiceImpl implements Conflict {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case ConflictPackage.CONFLICT__CONFLICT:
-				return conflict != CONFLICT_EDEFAULT;
+				return CONFLICT_EDEFAULT == null ? conflict != null : !CONFLICT_EDEFAULT.equals(conflict);
 			case ConflictPackage.CONFLICT__BIKE_ID:
 				return BIKE_ID_EDEFAULT == null ? bikeId != null : !BIKE_ID_EDEFAULT.equals(bikeId);
 		}
