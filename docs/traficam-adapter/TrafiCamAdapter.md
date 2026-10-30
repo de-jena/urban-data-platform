@@ -109,10 +109,13 @@ One service per object classification (e.g., "5" for cars, "0" for persons):
 
 **Resources**:
 - `classificationName` (String): Human-readable class name (e.g., "Car", "Person", "Bicycle")
-- `objects` (GeometryCollection): Collection of detected object positions as GeoJSON Points
+- `objects` (FeatureCollection): the detected objects as GeoJSON Point features, one per object id,
+  with the properties `id`, `speed` (as the camera reports it) and `heading` (degrees)
   - Updated every 2 seconds with windowed aggregation
   - Contains only unique objects within the time window
   - Empty collection sent once when no objects detected
+  - The legacy adapter sent a bare `GeometryCollection` of points; the atlas runtime adds the
+    properties because the conflict detector (`docs/conflict-adapter/ConflictAdapter.md`) needs them
 
 ### TrafiCamObject EMF Model
 

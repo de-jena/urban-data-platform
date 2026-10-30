@@ -1,0 +1,28 @@
+Bundle-Name: UDP :: Atlas :: Conflict
+Bundle-Description: Bike/car conflict detector for the UDP atlas runtime: correlates the colour of \
+ an ILSA signal group with the bikes a TrafiCam camera sees crossing it and reports the conflict \
+ as a TrafficConflictProvider.
+Bundle-Version: 1.0.0.SNAPSHOT
+
+-buildpath: \
+	org.osgi.framework,\
+	org.osgi.service.component,\
+	org.osgi.service.component.annotations,\
+	org.osgi.service.typedevent,\
+	org.osgi.util.promise,\
+	org.osgi.util.function,\
+	org.eclipse.emf.common,\
+	org.eclipse.emf.ecore,\
+	org.eclipse.sensinact.gateway.core.api,\
+	org.eclipse.sensinact.gateway.core.geo-json,\
+	org.eclipse.sensinact.gateway.core.models.provider,\
+	com.fasterxml.jackson.core.jackson-annotations,\
+	de.jena.conflict.sensinact.model
+
+-testpath: \
+	junit-jupiter-api,\
+	${junit},\
+	tools.jackson.core.jackson-core,\
+	tools.jackson.core.jackson-databind
+
+-workingset: udp_runtime

@@ -1,0 +1,19 @@
+{
+  ":configurator:resource-version": 1,
+  ":configurator:symbolic-name": "de.jena.udp.atlas.runtime.config.rules",
+  ":configurator:version": "1.0.0",
+
+  /* The Java rules of de.jena.udp.atlas.rules; the sensor model rules keep their defaults. */
+  "WeatherCelsiusRule": {
+    "provider": "$[env:DWD_STATION_ID;default=10567]"
+  },
+
+  /* The bike/car conflict detector (de.jena.udp.atlas.conflict): the signal group and the camera
+   * class it correlates, as sensiNact data topics. */
+  "TrafficConflictDetector": {
+    "event.topics": [
+      "DATA/Ilsa/K440/K4_1/color",
+      "DATA/TraficamProvider/Felsenkeller/3/objects"
+    ]
+  }
+}

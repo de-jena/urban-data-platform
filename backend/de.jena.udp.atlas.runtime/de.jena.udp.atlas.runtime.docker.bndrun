@@ -57,7 +57,12 @@
 	bnd.identity;id='de.jena.udp.atlas.ibis',\
 	bnd.identity;id='org.gecko.weather.dwd.forecast',\
 	bnd.identity;id='de.jena.udp.atlas.dwd',\
-	bnd.identity;id='de.jena.udp.atlas.kml'
+	bnd.identity;id='de.jena.udp.atlas.kml',\
+	bnd.identity;id='org.eclipse.sensinact.gateway.southbound.rules.rules.impl',\
+	bnd.identity;id='org.eclipse.sensinact.gateway.southbound.rules.easy-rules.osgi',\
+	bnd.identity;id='org.eclipse.sensinact.gateway.southbound.rules.easy-rules.config',\
+	bnd.identity;id='de.jena.udp.atlas.rules',\
+	bnd.identity;id='de.jena.udp.atlas.conflict'
 
 # http.port=-1: the only HTTP whiteboard is the named instance from the docker.config
 # bundle (context path event/, port 8080).
@@ -272,4 +277,13 @@
 	org.w3.xlink.model;version='[1.0.0,1.0.1)',\
 	time4j-base;version='[5.9.4,5.9.5)',\
 	de.jena.udp.atlas.kml;version=snapshot,\
-	de.jena.udp.reference.area.sensinact.model;version=snapshot
+	de.jena.udp.reference.area.sensinact.model;version=snapshot,\
+	org.apache.commons.commons-jexl3;version='[3.5.0,3.5.1)',\
+	org.apache.commons.logging;version='[1.2.0,1.2.1)',\
+	org.eclipse.sensinact.gateway.southbound.rules.easy-rules.config;version='[0.0.2,0.0.3)',\
+	org.eclipse.sensinact.gateway.southbound.rules.easy-rules.osgi;version='[0.0.2,0.0.3)',\
+	org.eclipse.sensinact.gateway.southbound.rules.rules.api;version='[0.0.2,0.0.3)',\
+	org.eclipse.sensinact.gateway.southbound.rules.rules.impl;version='[0.0.2,0.0.3)',\
+	de.jena.conflict.sensinact.model;version=snapshot,\
+	de.jena.udp.atlas.conflict;version=snapshot,\
+	de.jena.udp.atlas.rules;version=snapshot

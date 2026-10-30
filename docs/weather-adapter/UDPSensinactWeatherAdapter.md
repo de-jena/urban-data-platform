@@ -69,7 +69,10 @@ replaces only the sensiNact end of it:
 The provider is the station id (`10567`) with `admin`, `currentWeather` and `forecast3H` …
 `forecast72H`; every service has the 42 MOSMIX attributes of a `MOSMIXSWeatherReport` as
 resources (`tempAboveSurface200`, `windSpeed`, `significantWeather3Hours`, …). Temperatures stay
-in Kelvin here; the unit rules (issue #28, step 5) convert them.
+in Kelvin on this provider; `WeatherCelsiusRule` in `de.jena.udp.atlas.rules` writes every
+resource whose unit is `K` (the five `temp…` attributes) in degrees Celsius to the same service of
+`<station>-derived` (`10567-derived/currentWeather/tempAboveSurface200`). The station comes from
+`DWD_STATION_ID` (`configs/rules.json`).
 
 Two things to know about the seed:
 

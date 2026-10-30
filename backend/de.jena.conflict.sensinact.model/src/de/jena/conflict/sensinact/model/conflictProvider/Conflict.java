@@ -26,7 +26,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link de.jena.conflict.sensinact.model.conflictProvider.Conflict#isConflict <em>Conflict</em>}</li>
+ *   <li>{@link de.jena.conflict.sensinact.model.conflictProvider.Conflict#getConflict <em>Conflict</em>}</li>
  *   <li>{@link de.jena.conflict.sensinact.model.conflictProvider.Conflict#getBikeId <em>Bike Id</em>}</li>
  * </ul>
  *
@@ -41,22 +41,22 @@ public interface Conflict extends Service {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Conflict</em>' attribute.
-	 * @see #setConflict(boolean)
+	 * @see #setConflict(Boolean)
 	 * @see de.jena.conflict.sensinact.model.conflictProvider.ConflictPackage#getConflict_Conflict()
 	 * @model
 	 * @generated
 	 */
-	boolean isConflict();
+	Boolean getConflict();
 
 	/**
-	 * Sets the value of the '{@link de.jena.conflict.sensinact.model.conflictProvider.Conflict#isConflict <em>Conflict</em>}' attribute.
+	 * Sets the value of the '{@link de.jena.conflict.sensinact.model.conflictProvider.Conflict#getConflict <em>Conflict</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Conflict</em>' attribute.
-	 * @see #isConflict()
+	 * @see #getConflict()
 	 * @generated
 	 */
-	void setConflict(boolean value);
+	void setConflict(Boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Bike Id</b></em>' attribute.

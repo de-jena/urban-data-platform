@@ -30,6 +30,7 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.BinaryResourceImpl;
 import org.eclipse.sensinact.core.push.DataUpdate;
 import org.eclipse.sensinact.gateway.geojson.Geometry;
+import org.eclipse.sensinact.gateway.geojson.FeatureCollection;
 import org.eclipse.sensinact.gateway.geojson.GeometryCollection;
 import org.eclipse.sensinact.gateway.geojson.Point;
 import org.gecko.osgi.messaging.Message;
@@ -139,7 +140,7 @@ public class TrafiCamListener {
 	void flushWindows() {
 		long now = System.currentTimeMillis();
 		windows.forEach((camId, classes) -> classes.forEach((classId, window) -> {
-			Optional<GeometryCollection> seen = window.flush();
+			Optional<FeatureCollection> seen = window.flush();
 			if (seen.isPresent()) {
 				TrafiCamDto dto = new TrafiCamDto(camId, classId, className(camId, classId), seen.get(), now);
 				push(dto, "objects of class " + classId + " of camera " + camId);
