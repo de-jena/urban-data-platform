@@ -52,3 +52,30 @@ The weather data is collected from this station hourly and at reboot of the appl
 
 
 
+
+## Atlas runtime variant
+
+The atlas runtime (`de.jena.udp.atlas.runtime`, issue #28) keeps the gecko weather stack and
+replaces only the sensiNact end of it:
+
+| | legacy runtime | atlas runtime |
+|---|---|---|
+| fetch | `org.gecko.weather.dwd.forecast` (`DWD-MOSMIX-Station`, hourly + at boot) | same |
+| 3-hour filter | `WeatherReportIndexWithFilter` (Lucene index in memory) | same |
+| storage handler | `org.eclipse.fennec.weather.sensinact` with `org.gecko.emf.sensinact.model` | `de.jena.udp.atlas.dwd.DwdReportPusher` hands the `WeatherReports` to the Event Atlas `InstancePusher` |
+| mapping | `mapping/WeatherReportsProviderMapping.xmi` in `de.jena.udp.sensinact.sensor.mapping` | the same mapping in the Event Atlas dialect (`https://fennec.eclipse.org/event.atlas/mapping/1.0`), seeded into Model Atlas scope `udp`, registry `sensinactmapping`, from `de.jena.udp.atlas.dwd/eventatlas/seed/` |
+| config | `weather.json` | `de.jena.udp.atlas.runtime.config/configs/dwd.json`, station through `DWD_STATION_ID` / `DWD_STATION_NAME` / `DWD_STATION_LATITUDE` / `DWD_STATION_LONGITUDE` (defaults: 10567 Gera, "Weather Forecast for Jena", Jena) |
+
+The provider is the station id (`10567`) with `admin`, `currentWeather` and `forecast3H` …
+`forecast72H`; every service has the 42 MOSMIX attributes of a `MOSMIXSWeatherReport` as
+resources (`tempAboveSurface200`, `windSpeed`, `significantWeather3Hours`, …). Temperatures stay
+in Kelvin here; the unit rules (issue #28, step 5) convert them.
+
+Two things to know about the seed:
+
+- Only the mapping is seeded. The weather model is the `org.gecko.weather.model` bundle of the
+  image; a seeded copy of `dwd-weather.ecore` makes the mapping bind to the Atlas copy and the
+  pushed instances are no longer matched (the registry keys mappings by `EClass`).
+- The admin location is the static `latitude`/`longitude` of the admin mapping, not a
+  `latitudeRef`/`longitudeRef` path: `ValueMapperImpl.mapLocation` in event.atlas returns before it
+  writes a point computed from the refs, so only the static coordinates reach the twin.

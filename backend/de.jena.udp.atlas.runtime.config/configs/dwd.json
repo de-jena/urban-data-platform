@@ -1,0 +1,23 @@
+{
+  ":configurator:resource-version": 1,
+  ":configurator:symbolic-name": "de.jena.udp.atlas.runtime.config.dwd",
+  ":configurator:version": "1.0.0",
+
+  /* The gecko weather MOSMIX fetcher: hourly forecast of one DWD station, kept in an in-memory
+   * index and handed as WeatherReports to de.jena.udp.atlas.dwd, which pushes them through the
+   * Event Atlas mapping dwd-weather-reports. */
+  "EMFLuceneIndex~dwd-forecast": {
+    "id": "dwd.forecast",
+    "directory.type": "ByteBuffer"
+  },
+  "DWD-MOSMIX-Station~udp": {
+    "stationId": "$[env:DWD_STATION_ID;default=10567]",
+    "name": "$[env:DWD_STATION_NAME;default=Weather Forecast for Jena]",
+    "latitude": "$[env:DWD_STATION_LATITUDE;default=50.9271;type=Double]",
+    "longitude": "$[env:DWD_STATION_LONGITUDE;default=11.5892;type=Double]",
+    "reportIndex.target": "(component.name=WeatherReportIndexWithFilter)"
+  },
+  "WeatherReportIndexWithFilter": {
+    "cache.target": "(component.name=DwdReportPusher)"
+  }
+}

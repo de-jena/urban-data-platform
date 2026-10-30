@@ -6,7 +6,9 @@
 #  - no model inference yet (Fennec AI joins in a later step; its bundles are on the DIM nexus)
 #  - UDP-specific adapters are added here step by step (see the issue): ILSA, TrafiCam and IBIS
 #    (de.jena.udp.atlas.*) read their 5g/* topics through the gecko messaging MQTT client
-#    (org.gecko.adapter.mqtt.v5, MQTTService~read in de.jena.udp.atlas.runtime.config)
+#    (org.gecko.adapter.mqtt.v5, MQTTService~read in de.jena.udp.atlas.runtime.config); the DWD
+#    forecast comes from the gecko weather MOSMIX fetcher (configs/dwd.json) and is pushed by
+#    de.jena.udp.atlas.dwd through the mapping seeded from de.jena.udp.atlas.dwd/eventatlas/seed
 # Deployment values come from the environment: org.eclipse.fennec.event.atlas.mapping.docker.config
 # resolves the EVENTATLAS_* / TIMESCALE_* / SENSORTHINGS_* placeholders at delivery time.
 -runprovidedcapabilities: ${native_capability}
@@ -52,7 +54,9 @@
 	bnd.identity;id='org.gecko.adapter.mqtt.v5',\
 	bnd.identity;id='de.jena.udp.atlas.ilsa',\
 	bnd.identity;id='de.jena.udp.atlas.traficam',\
-	bnd.identity;id='de.jena.udp.atlas.ibis'
+	bnd.identity;id='de.jena.udp.atlas.ibis',\
+	bnd.identity;id='org.gecko.weather.dwd.forecast',\
+	bnd.identity;id='de.jena.udp.atlas.dwd'
 
 # http.port=-1: the only HTTP whiteboard is the named instance from the docker.config
 # bundle (context path event/, port 8080).
@@ -76,7 +80,8 @@
 	bnd.identity;id='org.eclipse.fennec.codec.jsonschema';version='[1.1.0,2)',\
 	bnd.identity;id='org.eclipse.fennec.codec.info';version='[1.1.0,2)',\
 	bnd.identity;id='org.eclipse.fennec.codec.info.model';version='[1.1.0,2)',\
-	bnd.identity;id='org.eclipse.fennec.codec.constants';version='[1.1.0,2)'
+	bnd.identity;id='org.eclipse.fennec.codec.constants';version='[1.1.0,2)',\
+	bnd.identity;id='net.opengis.wfs2.model'
 -runbundles: \
 	com.fasterxml.jackson.core.jackson-annotations;version='[2.22.0,2.22.1)',\
 	com.fasterxml.jackson.core.jackson-core;version='[2.20.0,2.20.1)',\
@@ -243,4 +248,25 @@
 	de.jena.ibis.gnss.location.service.model;version='[1.0.0,1.0.1)',\
 	de.jena.ibis.sensinact.model;version=snapshot,\
 	de.jena.ibis.ticket.validation.service.model;version='[1.0.0,1.0.1)',\
-	de.jena.udp.atlas.ibis;version=snapshot
+	de.jena.udp.atlas.ibis;version=snapshot,\
+	de.dwd.cdc.common.model;version='[1.0.1,1.0.2)',\
+	de.dwd.cdc.forecast.model;version='[1.0.0,1.0.1)',\
+	de.jena.udp.atlas.dwd;version=snapshot,\
+	net.opengis.kml.model;version='[1.0.0,1.0.1)',\
+	net.opengis.wfs.model;version='[1.1.0,1.1.1)',\
+	org.apache.felix.eventadmin;version='[1.6.2,1.6.3)',\
+	org.apache.lucene.core;version='[9.12.3,9.12.4)',\
+	org.eclipse.osgi-technology.scheduler.api;version='[0.0.1,0.0.2)',\
+	org.eclipse.osgi-technology.scheduler.basic;version='[0.0.1,0.0.2)',\
+	org.gecko.emf.search;version='[1.4.1,1.4.2)',\
+	org.gecko.search;version='[1.4.1,1.4.2)',\
+	org.gecko.search.document;version='[1.4.1,1.4.2)',\
+	org.gecko.time4j;version='[1.1.0,1.1.1)',\
+	org.gecko.weather.api;version='[1.1.0,1.1.1)',\
+	org.gecko.weather.dwd.forecast;version='[1.1.0,1.1.1)',\
+	org.gecko.weather.model;version='[1.1.0,1.1.1)',\
+	org.osgi.service.servlet;version='[2.0.0,2.0.1)',\
+	org.w3.atom.model;version='[1.0.0,1.0.1)',\
+	org.w3.smil.model;version='[1.0.0,1.0.1)',\
+	org.w3.xlink.model;version='[1.0.0,1.0.1)',\
+	time4j-base;version='[5.9.4,5.9.5)'
