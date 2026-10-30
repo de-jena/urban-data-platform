@@ -13,6 +13,24 @@ IBIS Vehicle System → MQTT Broker → IBIS Adapter → SensiNact Provider
                       (5g/ibis/#)    (EMF JSON)      (IbisDevice)
 ```
 
+### Atlas runtime variant
+
+The UDP atlas runtime (`de.jena.udp.atlas.runtime`, issue #28) carries `de.jena.udp.atlas.ibis`
+instead of `de.jena.ibis.sensinact` and `de.jena.ibis.sensinact.mmt`. Same topics, payloads and
+provider shape, different plumbing:
+
+| | legacy runtime | atlas runtime |
+|---|---|---|
+| MQTT | gecko `MessagingService` `read` | the same, `MQTTService~read` from `de.jena.udp.atlas.runtime.config` |
+| JSON | gecko EMF JSON (`EMFJson` resource set) | Fennec codec: the root class is read from the `eClass` key first and passed as `codec.rootType` (without it the codec falls back to the ChirpStack discriminator of the Event Atlas), `codec.useNamesFromExtendedMetadata` for the XML element names, an `IbisDateReader` for the `…ZCET` timestamps of the `IBISIPDateTime`/`IBISIPDate` values |
+| transformation | Eclipse QVTo, five units in `de.jena.ibis.sensinact.mmt` | Fennec M2X QVT-O engine, one unit `transformations/ibis.qvto`, blackbox `IbisDateBlackBox` (`dateTimeToInstant()`, `dateToInstant()`) |
+
+Two M2X dialect points shaped the unit: an operation call on a null receiver yields null instead of
+running, so the null-tolerant value accessors are parameterised queries (`real(self.altitude)`),
+and a null assigned to a primitive attribute is an error instead of a no-op, which is what those
+queries guard. Enumerations are reported with `toString()` as before, so an absent enumeration
+value shows the model default (e.g. `signalQuality`).
+
 ## EMF Ecore Data Model
 
 The IBIS adapter is built on EMF Ecore models defined in:
