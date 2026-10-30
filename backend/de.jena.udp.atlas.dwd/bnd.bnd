@@ -1,0 +1,22 @@
+Bundle-Name: UDP :: Atlas :: DWD
+Bundle-Description: DWD weather adapter for the UDP atlas runtime: the gecko weather MOSMIX fetcher \
+ downloads the hourly station forecast, the filtered report index hands the WeatherReports to this \
+ bundle, which pushes them through the Event Atlas provider mapping dwd-weather-reports.
+Bundle-Version: 1.0.0.SNAPSHOT
+
+-buildpath: \
+	org.osgi.framework,\
+	org.osgi.service.component,\
+	org.osgi.service.component.annotations,\
+	org.eclipse.emf.common,\
+	org.eclipse.emf.ecore,\
+	org.eclipse.fennec.event.atlas.mapping;version=latest,\
+	org.gecko.weather.dwd.forecast;version=latest,\
+	org.gecko.weather.model;version=latest
+
+-testpath: \
+	junit-jupiter-api,\
+	${junit},\
+	org.eclipse.emf.ecore.xmi
+
+-workingset: udp_runtime
