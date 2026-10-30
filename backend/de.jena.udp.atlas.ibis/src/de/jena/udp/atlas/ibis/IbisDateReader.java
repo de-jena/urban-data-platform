@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.GregorianCalendar;
+import java.util.Locale;
 
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
@@ -26,12 +27,13 @@ import org.eclipse.fennec.codec.value.AttributeValueReader;
 import org.eclipse.fennec.codec.value.CodecReaderContext;
 
 /**
- * Reads the IBIS timestamps, written as {@code 2026-01-07T10:07:08.000ZCET} by the on-board
- * bridge, into the {@link XMLGregorianCalendar} values of the IBIS-IP model.
+ * Reads the IBIS timestamps into the {@link XMLGregorianCalendar} values of the IBIS-IP model. The
+ * on-board bridge writes a local time with a literal Z and the English zone name, e.g.
+ * {@code 2026-01-07T11:07:08.000ZCET}; the XML Schema lexical form is accepted as well.
  */
 public class IbisDateReader implements AttributeValueReader<XMLGregorianCalendar> {
 
-	static final String DATE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'zzz";
+	static final String BRIDGE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'zzz";
 
 	private final DatatypeFactory datatypes;
 
@@ -56,15 +58,21 @@ public class IbisDateReader implements AttributeValueReader<XMLGregorianCalendar
 	@Override
 	public XMLGregorianCalendar read(CodecReaderContext context, EAttribute attribute) throws IOException {
 		String text = context.getParser().getString();
-		if (text == null || text.isBlank()) {
-			return null;
-		}
-		GregorianCalendar calendar = new GregorianCalendar();
+		return text == null || text.isBlank() ? null : parse(text);
+	}
+
+	XMLGregorianCalendar parse(String text) throws IOException {
 		try {
-			calendar.setTime(new SimpleDateFormat(DATE_FORMAT).parse(text));
-		} catch (ParseException e) {
-			throw new IOException("unexpected IBIS timestamp " + text, e);
+			return datatypes.newXMLGregorianCalendar(text);
+		} catch (IllegalArgumentException notLexical) {
+			GregorianCalendar calendar = new GregorianCalendar();
+			try {
+				// the zone names are English whatever the locale of this JVM
+				calendar.setTime(new SimpleDateFormat(BRIDGE_FORMAT, Locale.ENGLISH).parse(text));
+			} catch (ParseException e) {
+				throw new IOException("unexpected IBIS timestamp " + text, e);
+			}
+			return datatypes.newXMLGregorianCalendar(calendar);
 		}
-		return datatypes.newXMLGregorianCalendar(calendar);
 	}
 }
