@@ -58,6 +58,7 @@ unchanged (see `event.atlas/docker/eventatlas/README.md`). Added here:
 | `WEBCONSOLE_USER` / `WEBCONSOLE_PASSWORD` | `admin` / `admin` | webconsole login |
 | `MQTT_READ_PROTOCOL` / `MQTT_READ_HOST` / `MQTT_READ_PORT` / `MQTT_READ_USER` / `MQTT_READ_PWD` | the `EVENTATLAS_MQTT_*` values | broker of the gecko messaging client `read` used by the adapters below |
 | `DWD_STATION_ID` / `DWD_STATION_NAME` / `DWD_STATION_LATITUDE` / `DWD_STATION_LONGITUDE` | `10567` / `Weather Forecast for Jena` / `50.9271` / `11.5892` | MOSMIX station of the DWD forecast (`configs/dwd.json`); the station id is the provider |
+| `KML_FILE` | the KML in `de.jena.udp.atlas.kml/data/` | path of a newer city KML (reference areas + sensor positions, `configs/kml.json`) |
 
 `EVENTATLAS_MQTT_TOPICS` only has to cover the Event Atlas mappings (ChirpStack); the adapters
 subscribe on their own connection.
@@ -74,6 +75,7 @@ The MQTT adapters subscribe through the gecko messaging `MessagingService` with 
 | `de.jena.udp.atlas.traficam` | `5g/traficam/#`, `5g/config/traficam/#` | binary EMF detections and camera configurations; detections are collected per camera and object class and pushed every 2 s. See `docs/traficam-adapter/TrafiCamAdapter.md`. |
 | `de.jena.udp.atlas.ibis` | `5g/ibis/#` | IBIS-IP service responses (EMF JSON keyed by the XML element names) decoded by the Fennec codec; each response becomes one `IbisDevice` service through `transformations/ibis.qvto` on the M2X engine, a GNSS position also sets the admin location. See `docs/ibis-adapter/IBISAdapter.md`. |
 | `de.jena.udp.atlas.dwd` | none (HTTP, hourly) | DWD weather forecast: the gecko weather MOSMIX fetcher (`org.gecko.weather.dwd.forecast`) downloads the station forecast from opendata.dwd.de hourly and at boot, keeps the current hour plus the 3-hour steps up to 72 h and hands them as `WeatherReports` to the bundle, which pushes them through the Event Atlas mapping `dwd-weather-reports` seeded from `de.jena.udp.atlas.dwd/eventatlas/seed/`. See `docs/weather-adapter/UDPSensinactWeatherAdapter.md`. |
+| `de.jena.udp.atlas.kml` | none (KML file) | the city's KML `teros_sensors_and_ref_areas.kml`: the `refflaechen_smartcity` folder is pushed once as `ReferenceAreaProvider`s (id = placemark name with `/` as `_`, polygons as the admin location, colour unset until the rules of step 5), the `sensoren` folder sets the admin location of the ChirpStack provider named after the EUI when it is created. See `docs/Actual Geo Location for Chirpstack Sensors.md`. |
 
 The trafficos and IBIS-IP models are generated against the gecko EMF OSGi API and join the 1.1
 runtime through `org.eclipse.fennec.emf.gecko.compatibility.api`.

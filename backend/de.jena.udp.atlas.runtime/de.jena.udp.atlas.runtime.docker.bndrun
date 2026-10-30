@@ -56,7 +56,8 @@
 	bnd.identity;id='de.jena.udp.atlas.traficam',\
 	bnd.identity;id='de.jena.udp.atlas.ibis',\
 	bnd.identity;id='org.gecko.weather.dwd.forecast',\
-	bnd.identity;id='de.jena.udp.atlas.dwd'
+	bnd.identity;id='de.jena.udp.atlas.dwd',\
+	bnd.identity;id='de.jena.udp.atlas.kml'
 
 # http.port=-1: the only HTTP whiteboard is the named instance from the docker.config
 # bundle (context path event/, port 8080).
@@ -269,4 +270,6 @@
 	org.w3.atom.model;version='[1.0.0,1.0.1)',\
 	org.w3.smil.model;version='[1.0.0,1.0.1)',\
 	org.w3.xlink.model;version='[1.0.0,1.0.1)',\
-	time4j-base;version='[5.9.4,5.9.5)'
+	time4j-base;version='[5.9.4,5.9.5)',\
+	de.jena.udp.atlas.kml;version=snapshot,\
+	de.jena.udp.reference.area.sensinact.model;version=snapshot
