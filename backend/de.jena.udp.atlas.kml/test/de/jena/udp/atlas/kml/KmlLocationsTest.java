@@ -42,6 +42,7 @@ class KmlLocationsTest {
 	@BeforeEach
 	void loadTheCityKml() throws IOException {
 		locations.sensiNact = new RecordingDataUpdate(pushed);
+		locations.resourceSetFactory = KmlPlacemarksTest::kmlResourceSet;
 		locations.locationWriter = (provider, location) -> {
 			located.add(provider + "@" + location.coordinates().longitude());
 			return Promises.resolved(null);

@@ -20,6 +20,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 
+import org.eclipse.fennec.emf.osgi.ResourceSetFactory;
 import org.eclipse.sensinact.core.command.AbstractTwinCommand;
 import org.eclipse.sensinact.core.command.GatewayThread;
 import org.eclipse.sensinact.core.notification.LifecycleNotification;
@@ -78,6 +79,9 @@ public class KmlLocations implements TypedEventHandler<LifecycleNotification> {
 	@Reference
 	private GatewayThread gateway;
 
+	@Reference
+	ResourceSetFactory resourceSetFactory;
+
 	LocationWriter locationWriter = this::writeToTwin;
 	private SensorLocations sensors = SensorLocations.none();
 
@@ -103,7 +107,7 @@ public class KmlLocations implements TypedEventHandler<LifecycleNotification> {
 	}
 
 	void load(InputStream kml, String areaFolder, String sensorFolder) throws IOException {
-		KmlPlacemarks placemarks = KmlPlacemarks.load(kml);
+		KmlPlacemarks placemarks = KmlPlacemarks.load(resourceSetFactory.createResourceSet(), kml);
 		sensors = SensorLocations.of(placemarks.inFolder(sensorFolder));
 		List<PlacemarkType> areas = placemarks.inFolder(areaFolder);
 		areas.forEach(this::pushArea);

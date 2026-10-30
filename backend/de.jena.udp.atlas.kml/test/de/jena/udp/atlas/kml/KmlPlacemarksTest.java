@@ -22,17 +22,29 @@ import java.nio.file.Path;
 import java.util.List;
 import java.util.Map;
 
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.sensinact.gateway.geojson.Coordinates;
 import org.junit.jupiter.api.Test;
 
+import net.opengis.kml.KMLPackage;
 import net.opengis.kml.PlacemarkType;
+import net.opengis.kml.util.KMLResourceFactoryImpl;
 
 class KmlPlacemarksTest {
 
 	static KmlPlacemarks cityKml() throws IOException {
 		try (InputStream kml = Files.newInputStream(Path.of(KmlLocations.BUNDLED_KML))) {
-			return KmlPlacemarks.load(kml);
+			return KmlPlacemarks.load(kmlResourceSet(), kml);
 		}
+	}
+
+	/** What the model bundle registers with emf.osgi at runtime. */
+	static ResourceSet kmlResourceSet() {
+		ResourceSet resourceSet = new ResourceSetImpl();
+		resourceSet.getPackageRegistry().put(KMLPackage.eNS_URI, KMLPackage.eINSTANCE);
+		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("kml", new KMLResourceFactoryImpl());
+		return resourceSet;
 	}
 
 	@Test

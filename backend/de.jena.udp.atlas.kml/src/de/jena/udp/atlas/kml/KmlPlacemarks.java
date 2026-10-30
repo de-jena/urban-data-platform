@@ -22,16 +22,13 @@ import java.util.Map;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.sensinact.gateway.geojson.Coordinates;
 
 import net.opengis.kml.DocumentRoot;
 import net.opengis.kml.DocumentType;
 import net.opengis.kml.ExtendedDataType;
 import net.opengis.kml.FolderType;
-import net.opengis.kml.KMLPackage;
 import net.opengis.kml.PlacemarkType;
-import net.opengis.kml.util.KMLResourceFactoryImpl;
 
 /** The placemarks of a KML document by folder, and the parts of a placemark the adapter reads. */
 final class KmlPlacemarks {
@@ -42,10 +39,8 @@ final class KmlPlacemarks {
 		this.document = document;
 	}
 
-	static KmlPlacemarks load(InputStream kml) throws IOException {
-		ResourceSet resourceSet = new ResourceSetImpl();
-		resourceSet.getPackageRegistry().put(KMLPackage.eNS_URI, KMLPackage.eINSTANCE);
-		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("kml", new KMLResourceFactoryImpl());
+	/** The resource set has to know the KML model: the one emf.osgi configures from the model bundle does. */
+	static KmlPlacemarks load(ResourceSet resourceSet, InputStream kml) throws IOException {
 		Resource resource = resourceSet.createResource(URI.createURI("locations.kml"));
 		resource.load(kml, null);
 		DocumentRoot root = (DocumentRoot) resource.getContents().get(0);
