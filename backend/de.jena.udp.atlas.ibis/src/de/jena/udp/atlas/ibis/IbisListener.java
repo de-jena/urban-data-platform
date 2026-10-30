@@ -27,8 +27,6 @@ import java.util.concurrent.atomic.AtomicLong;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EAttribute;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -48,11 +46,6 @@ import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Reference;
 import org.osgi.util.pushstream.PushEvent;
 import org.osgi.util.pushstream.PushStream;
-
-import tools.jackson.core.JsonParser;
-import tools.jackson.core.JsonToken;
-import tools.jackson.core.ObjectReadContext;
-import tools.jackson.core.json.JsonFactory;
 
 import de.jena.model.ibis.common.IbisCommonPackage;
 import de.jena.model.ibis.customerinformationservice.IbisCustomerInformationServicePackage;
@@ -182,55 +175,34 @@ public class IbisListener {
 		ResourceSet resourceSet = resourceSetFactory.createResourceSet();
 		payloadPackages().forEach(ePackage -> resourceSet.getPackageRegistry().put(ePackage.getNsURI(), ePackage));
 		Resource resource = resourceSet.createResource(URI.createURI("ibis/" + sequence.incrementAndGet() + ".json"));
-		resource.load(new ByteArrayInputStream(payload), loadOptions(rootType(payload, resourceSet)));
+		resource.load(new ByteArrayInputStream(payload), loadOptions(commonPackage, dateReader));
 		if (resource.getContents().isEmpty()) {
 			throw new IOException("payload contained no IBIS response"
 					+ (resource.getErrors().isEmpty() ? "" : ": " + resource.getErrors().get(0).getMessage()));
 		}
-		return resource.getContents().get(0);
+		EObject response = resource.getContents().get(0);
+		if (response.eClass() == commonPackage.getGeneralResponse()) {
+			throw new IOException("payload carries no eClass");
+		}
+		return response;
 	}
 
-	Map<String, Object> loadOptions(EClass rootType) {
+	/**
+	 * The root type is the {@code eClass} of the payload. The hint only keeps the codec from probing
+	 * the discriminator path of an unrelated model such as ChirpStack (eclipse-fennec/emf.codec#285);
+	 * in HINT mode the payload's own type wins and only a payload without {@code eClass} becomes a
+	 * GeneralResponse.
+	 */
+	static Map<String, Object> loadOptions(IbisCommonPackage commonPackage, CodecValueReader<?, ?> dateReader) {
 		Map<EAttribute, CodecValueReader<?, ?>> dateReaders = Map.of(
 				commonPackage.getIBISIPDateTime_Value(), dateReader,
 				commonPackage.getIBISIPDate_Value(), dateReader);
 		return Map.of(
-				"codec.rootType", rootType, // without it the codec falls back to the ChirpStack discriminator
+				"codec.rootType", commonPackage.getGeneralResponse(),
+				"codec.typeHintMode", "HINT",
 				"codec.typeKey", "eClass",
 				"codec.useNamesFromExtendedMetadata", true, // keys are the IBIS-IP XML element names
 				"codec.featureValueReaderInstances", dateReaders);
-	}
-
-	/** The EClass named by the {@code eClass} key of the payload, e.g. {@code <nsURI>#//GNSSLocationData}. */
-	static EClass rootType(byte[] payload, ResourceSet resourceSet) throws IOException {
-		String uri = rootClassUri(payload);
-		int hash = uri.indexOf("#//");
-		if (hash < 0) {
-			throw new IOException("unexpected eClass " + uri);
-		}
-		EPackage ePackage = resourceSet.getPackageRegistry().getEPackage(uri.substring(0, hash));
-		EClassifier classifier = ePackage == null ? null : ePackage.getEClassifier(uri.substring(hash + 3));
-		if (!(classifier instanceof EClass eClass)) {
-			throw new IOException("unknown IBIS class " + uri);
-		}
-		return eClass;
-	}
-
-	static String rootClassUri(byte[] payload) throws IOException {
-		try (JsonParser parser = new JsonFactory().createParser(ObjectReadContext.empty(), payload)) {
-			if (parser.nextToken() != JsonToken.START_OBJECT) {
-				throw new IOException("payload is no JSON object");
-			}
-			while (parser.nextToken() == JsonToken.PROPERTY_NAME) {
-				String name = parser.currentName();
-				parser.nextToken();
-				if ("eClass".equals(name)) {
-					return parser.getString();
-				}
-				parser.skipChildren();
-			}
-		}
-		throw new IOException("payload carries no eClass");
 	}
 
 	private List<EPackage> payloadPackages() {

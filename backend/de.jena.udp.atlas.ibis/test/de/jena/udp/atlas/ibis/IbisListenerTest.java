@@ -13,35 +13,21 @@
 package de.jena.udp.atlas.ibis;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
+import java.util.Map;
 
-import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.junit.jupiter.api.Test;
 
-import de.jena.model.ibis.gnsslocationservice.IbisGNSSLocationServicePackage;
+import de.jena.model.ibis.common.IbisCommonPackage;
 
 class IbisListenerTest {
 
 	@Test
-	void rootTypeComesFromTheEClassKeyWhereverItIsInTheObject() throws IOException {
-		String payload = """
-				{ "latitude": { "Degree": { "Value": 50.9 } },
-				  "eClass": "https://jena.de/models/ibis/gnsslocationservice/1.0#//GNSSLocationData",
-				  "altitude": { "Value": 155.0 } }""";
-		ResourceSet resourceSet = new ResourceSetImpl();
-		resourceSet.getPackageRegistry().put(IbisGNSSLocationServicePackage.eNS_URI, IbisGNSSLocationServicePackage.eINSTANCE);
+	void loadOptionsHintAnIbisClassWithoutOverridingThePayloadsEClass() {
+		Map<String, Object> options = IbisListener.loadOptions(IbisCommonPackage.eINSTANCE, new IbisDateReader());
 
-		assertEquals(IbisGNSSLocationServicePackage.eINSTANCE.getGNSSLocationData(),
-				IbisListener.rootType(payload.getBytes(StandardCharsets.UTF_8), resourceSet));
-	}
-
-	@Test
-	void aPayloadWithoutEClassIsRejected() {
-		assertThrows(IOException.class,
-				() -> IbisListener.rootClassUri("{ \"Value\": 1 }".getBytes(StandardCharsets.UTF_8)));
+		assertEquals("eClass", options.get("codec.typeKey"));
+		assertEquals("HINT", options.get("codec.typeHintMode"));
+		assertEquals(IbisCommonPackage.eINSTANCE.getGeneralResponse(), options.get("codec.rootType"));
 	}
 }
