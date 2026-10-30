@@ -158,6 +158,30 @@ pipeline  {
             }
         }
 	
+        stage('Resolve UDP Atlas Runtime') {
+
+            steps {
+                echo "I am building app on branch: ${env.GIT_BRANCH}"
+
+				dir("udp/backend") {
+                    sh "./gradlew :de.jena.udp.atlas.runtime:resolve.de.jena.udp.atlas.runtime.docker --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2"
+                }
+            }
+        }
+
+        stage('UDP Atlas Runtime Export') {
+            when {
+                branch 'main'
+            }
+            steps {
+                echo "I am building app on branch: ${env.GIT_BRANCH}"
+
+				dir("udp/backend") {
+                    sh "./gradlew :de.jena.udp.atlas.runtime:export.de.jena.udp.atlas.runtime.docker --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2"
+                }
+            }
+        }
+
 		stage('Prepare UDP Docker') {
 			when {
 				branch 'main'
@@ -208,6 +232,26 @@ pipeline  {
                     }
                     docker.withRegistry('https://devel.data-in-motion.biz:6000', 'dim-nexus') {
                         def image = docker.build("devel.data-in-motion.biz:6000/scj/mqtt-bridge:0.1.0.${VERSION}", 'udp/docker/bridge')
+                        image.push()
+                        image.push('latest')
+                    }
+                }
+          }
+        }
+        stage('Docker Atlas Runtime Image build'){
+            when {
+                branch 'main'
+            }
+            steps  {
+                echo "I am building and publishing a docker image on branch: ${env.GIT_BRANCH}"
+                script {
+                    docker.withRegistry('https://registry-git.jena.de', 'github-jena') {
+                        def image = docker.build("registry-git.jena.de/scj/udp/atlas-runtime:0.1.0.${VERSION}", 'udp/docker/atlas-runtime')
+                        image.push()
+                        image.push('latest')
+                    }
+                    docker.withRegistry('https://devel.data-in-motion.biz:6000', 'dim-nexus') {
+                        def image = docker.build("devel.data-in-motion.biz:6000/scj/udp-atlas-runtime:0.1.0.${VERSION}", 'udp/docker/atlas-runtime')
                         image.push()
                         image.push('latest')
                     }

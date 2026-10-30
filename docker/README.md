@@ -90,6 +90,9 @@ docker/
 
    # Build MQTT Bridge image
    docker build -t mqtt-bridge:latest bridge/
+
+   # Build UDP Atlas Runtime image (after exporting de.jena.udp.atlas.runtime.docker)
+   docker build -t udp-atlas-runtime:latest atlas-runtime/
    ```
 
 ## Deployment with Docker Compose

@@ -10,7 +10,7 @@ the UDP-specific adapters that mappings cannot express.
 | bndrun | `de.jena.udp.atlas.runtime.docker.bndrun` (image), `de.jena.udp.atlas.runtime.local.bndrun` (same assembly launched from the workspace) |
 | Java | 25 |
 | config | `org.eclipse.fennec.event.atlas.mapping.docker.config` (Event Atlas, env-driven) + `de.jena.udp.atlas.runtime.config` (webconsole) |
-| image | `docker/atlas-runtime/` |
+| image | `docker/atlas-runtime/`; the Jenkins main build pushes `devel.data-in-motion.biz:6000/scj/udp-atlas-runtime:0.1.0.<build>` and `:latest` (and `registry-git.jena.de/scj/udp/atlas-runtime`) |
 | deployment | `DataInMotion/infrastructure`, `server02/` (`eventatlas` service, `eventatlas.env`) |
 
 ## Build
