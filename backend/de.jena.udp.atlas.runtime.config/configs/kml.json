@@ -1,0 +1,11 @@
+{
+  ":configurator:resource-version": 1,
+  ":configurator:symbolic-name": "de.jena.udp.atlas.runtime.config.kml",
+  ":configurator:version": "1.0.0",
+
+  /* The city's KML with the reference areas and the sensor positions (de.jena.udp.atlas.kml).
+   * KML_FILE points at a newer file on the host; blank keeps the one in the bundle. */
+  "KmlLocations": {
+    "kml.file": "$[env:KML_FILE;default=]"
+  }
+}

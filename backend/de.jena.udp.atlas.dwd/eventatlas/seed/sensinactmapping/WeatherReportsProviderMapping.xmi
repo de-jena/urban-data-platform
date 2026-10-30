@@ -27,9 +27,10 @@
       href="http://cdc.dwd.de/common/weather#//WeatherReports"/>
 
   <!-- Admin service - uses first report (index 0) -->
-  <!-- Static station coordinates: event.atlas' ValueMapperImpl.mapLocation returns before it
-       writes a point computed from latitudeRef/longitudeRef, so only these attributes reach the
-       twin. Switch back to the refs (reports/station/location) once that is fixed upstream. -->
+  <!-- Static station coordinates: the event.atlas snapshot's ValueMapperImpl.mapLocation returns
+       before it writes a point computed from latitudeRef/longitudeRef (fixed on event.atlas branch
+       fix/admin-location-kept). The refs (reports/station/location) would also inherit the
+       lat/lon swap of the gecko MOSMIX fetcher, so the static values stay for now. -->
   <admin
       xsi:type="sensinactMapping:AdminMapping"
       mid="admin"

@@ -1,0 +1,34 @@
+Bundle-Name: UDP :: Atlas :: KML
+Bundle-Description: KML locations for the UDP atlas runtime: pushes the reference areas of the city's \
+ KML file as ReferenceArea providers and sets the admin location of the ChirpStack providers whose \
+ EUI the file lists.
+Bundle-Version: 1.0.0.SNAPSHOT
+
+-buildpath: \
+	org.osgi.framework,\
+	org.osgi.service.component,\
+	org.osgi.service.component.annotations,\
+	org.osgi.service.typedevent,\
+	org.osgi.util.promise,\
+	org.osgi.util.function,\
+	org.eclipse.emf.common,\
+	org.eclipse.emf.ecore,\
+	org.eclipse.sensinact.gateway.core.api,\
+	org.eclipse.sensinact.gateway.core.geo-json,\
+	org.eclipse.sensinact.gateway.core.models.provider,\
+	com.fasterxml.jackson.core.jackson-annotations,\
+	net.opengis.kml.model;version='[1.0,1.1)',\
+	de.jena.udp.reference.area.sensinact.model
+
+-testpath: \
+	junit-jupiter-api,\
+	${junit},\
+	org.eclipse.emf.ecore.xmi,\
+	tools.jackson.core.jackson-core,\
+	tools.jackson.core.jackson-databind,\
+	org.w3.atom.model;version='[1.0,1.1)',\
+	org.w3.xlink.model;version='[1.0,1.1)'
+
+-includeresource: data=data
+
+-workingset: udp_runtime

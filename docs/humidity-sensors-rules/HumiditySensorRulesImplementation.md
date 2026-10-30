@@ -98,6 +98,16 @@ We also built a `ResourceDataNotification` `TypedEventHandler` which listens to 
 
 With these components we can keep track of the location of the sensors and the reference areas. 
 
+In the atlas runtime (`de.jena.udp.atlas.runtime`, issue #28) the reference areas come from
+`de.jena.udp.atlas.kml` instead: it reads the `refflaechen_smartcity` folder of
+`teros_sensors_and_ref_areas.kml` (shipped in the bundle, `KML_FILE` overrides) once at activation and
+pushes one `ReferenceAreaProvider` per placemark (12 today), the placemark name as provider id with
+`/` replaced by `_` (`ZW_Löb-01`, a slash is no REST path segment), the polygons as a GeoJSON
+`FeatureCollection` in `admin/location` and `gid`/`anzahl_sens`/`tour_name_lang` on the `referenceArea`
+service; the colour stays unset (`UNKNOWN` is the enum default, which an EMF push does not carry). The same bundle sets the sensor locations (see
+`docs/Actual Geo Location for Chirpstack Sensors.md`), so no `LocationNotification` is needed there;
+the colour rule itself is still open (step 5).
+
 The actual rule implementation is in `de.jena.udp.reference.area.sensinact.rules`. There we trigger the rule every time we have an update of a `chirpstack-<something>-derived/derivedQuantities/pfWertAvg` resource. 
 
 We then look for the corresponding sensor location and we check to which area it belongs. We also collect the other sensor belonging to that area and their corresponding `pfWertAvg` (assuming we have data for them as well). This means that if a sensor in a certain area has not yet provided any data to sensinact, we have no way to know that this sensor belongs to that area and then the rule calculation is done considering one sensor less in that area.)
