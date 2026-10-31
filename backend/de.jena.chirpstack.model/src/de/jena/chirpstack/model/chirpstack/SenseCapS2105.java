@@ -26,9 +26,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.SenseCapS2105#getAir <em>Air</em>}</li>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.SenseCapS2105#getRain <em>Rain</em>}</li>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.SenseCapS2105#getLight <em>Light</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.SenseCapS2105#getSoil <em>Soil</em>}</li>
  * </ul>
  *
  * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getSenseCapS2105()
@@ -38,69 +36,25 @@ import org.osgi.annotation.versioning.ProviderType;
 @ProviderType
 public interface SenseCapS2105 extends Provider {
 	/**
-	 * Returns the value of the '<em><b>Air</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Soil</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Air</em>' containment reference.
-	 * @see #setAir(Air)
-	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getSenseCapS2105_Air()
+	 * @return the value of the '<em>Soil</em>' containment reference.
+	 * @see #setSoil(SenseCapSoil)
+	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getSenseCapS2105_Soil()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Air getAir();
+	SenseCapSoil getSoil();
 
 	/**
-	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.SenseCapS2105#getAir <em>Air</em>}' containment reference.
+	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.SenseCapS2105#getSoil <em>Soil</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Air</em>' containment reference.
-	 * @see #getAir()
+	 * @param value the new value of the '<em>Soil</em>' containment reference.
+	 * @see #getSoil()
 	 * @generated
 	 */
-	void setAir(Air value);
-
-	/**
-	 * Returns the value of the '<em><b>Rain</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Rain</em>' containment reference.
-	 * @see #setRain(Rain)
-	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getSenseCapS2105_Rain()
-	 * @model containment="true"
-	 * @generated
-	 */
-	Rain getRain();
-
-	/**
-	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.SenseCapS2105#getRain <em>Rain</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Rain</em>' containment reference.
-	 * @see #getRain()
-	 * @generated
-	 */
-	void setRain(Rain value);
-
-	/**
-	 * Returns the value of the '<em><b>Light</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Light</em>' containment reference.
-	 * @see #setLight(Light)
-	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getSenseCapS2105_Light()
-	 * @model containment="true"
-	 * @generated
-	 */
-	Light getLight();
-
-	/**
-	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.SenseCapS2105#getLight <em>Light</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Light</em>' containment reference.
-	 * @see #getLight()
-	 * @generated
-	 */
-	void setLight(Light value);
+	void setSoil(SenseCapSoil value);
 
 } // SenseCapS2105

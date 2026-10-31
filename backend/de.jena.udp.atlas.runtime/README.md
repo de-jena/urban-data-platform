@@ -78,6 +78,7 @@ The MQTT adapters subscribe through the gecko messaging `MessagingService` with 
 | `de.jena.udp.atlas.kml` | none (KML file) | the city's KML `teros_sensors_and_ref_areas.kml`: the `refflaechen_smartcity` folder is pushed once as `ReferenceAreaProvider`s (id = placemark name with `/` as `_`, polygons as the admin location, colour unset until the rules of step 5), the `sensoren` folder sets the admin location of the ChirpStack provider named after the EUI when it is created. See `docs/Actual Geo Location for Chirpstack Sensors.md`. |
 | `de.jena.udp.atlas.rules` | sensiNact data events | the sensiNact rules engine (`rules.impl`, `easy-rules.*`) runs the JEXL humidity rules of `configs/humidity-rules.json` (kPa → hPa, pF, average, colour on `<devEui>-derived`) and three Java rules: the sensor location copied to `-derived`, the reference-area colour (`ReferenceAreaRule`), the DWD temperatures in °C on `<station>-derived` (`WeatherCelsiusRule`, `configs/rules.json`). See `docs/humidity-sensors-rules/HumiditySensorRulesImplementation.md`. |
 | `de.jena.udp.atlas.conflict` | `DATA/Ilsa/K440/K4_1/color`, `DATA/TraficamProvider/Felsenkeller/3/objects` | bike/car conflict at Felsenkeller as provider `Conflict01` (topics and thresholds in `configs/rules.json`). See `docs/conflict-adapter/ConflictAdapter.md`. |
+| `de.jena.udp.atlas.chirpstack` | Event Atlas unknown-model side channel | reshapes the uplinks the generated "flat" profiles expect (SenseCAP `messages` → `measurements.m<id>`, Atmos-22 `sensors[1]` → `sensors_1`), marks the profile id with `-flat` and ingests them again. See `docs/chirpstack/chirpstack-connector.md`. |
 
 The trafficos and IBIS-IP models are generated against the gecko EMF OSGi API and join the 1.1
 runtime through `org.eclipse.fennec.emf.gecko.compatibility.api`.
@@ -92,7 +93,9 @@ The DWD mapping is seeded from `de.jena.udp.atlas.dwd/eventatlas/seed/` alongsid
 (`org.gecko.weather.model`) is a bundle of the image and must not be seeded, or the mapping binds
 to the Atlas copy of the model instead of the classes the fetcher produces.
 A service annotated with `collection` + `filter` (the IoTraffic counting lines) becomes an EMF map
-on the uplink model and a `referencedResource` with a `collectionFilter`; attributes get the
-wrapper data types so an absent field leaves the resource untouched; see
+on the uplink model and a `referencedResource` with a `collectionFilter`; a profile reading a
+list element other than 0 (Atmos-22) or SenseCAP measurements (`measurementId`) is generated
+"flat" for the uplink flattener (all 15 profiles are generated now); attributes get the wrapper
+data types so an absent field leaves the resource untouched; see
 `docs/chirpstack/chirpstack-connector.md`. Recorded payloads for a replay through
 `/event/rest/ingest/{channel}` are in `de.jena.chirpstack.sensinact/examples/`.

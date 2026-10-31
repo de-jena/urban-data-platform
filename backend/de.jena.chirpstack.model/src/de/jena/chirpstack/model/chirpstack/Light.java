@@ -43,7 +43,7 @@ public interface Light extends Service {
 	 * @return the value of the '<em>Light Intensity</em>' attribute.
 	 * @see #setLightIntensity(double)
 	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getLight_LightIntensity()
-	 * @model annotation="mapping path='object/messages/0/2/measurementValue'"
+	 * @model annotation="mapping path='object/messages/0/2/measurementValue' measurementId='4099'"
 	 * @generated
 	 */
 	double getLightIntensity();
@@ -65,7 +65,7 @@ public interface Light extends Service {
 	 * @return the value of the '<em>Uv Index</em>' attribute.
 	 * @see #setUvIndex(double)
 	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getLight_UvIndex()
-	 * @model annotation="mapping path='object/messages/0/3/measurementValue'"
+	 * @model annotation="mapping path='object/messages/0/3/measurementValue' measurementId='4190'"
 	 * @generated
 	 */
 	double getUvIndex();

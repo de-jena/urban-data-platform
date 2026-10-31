@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- GENERATED: ChirpStack profile f74bb315-56ca-48c0-82f8-f7b837f4d917-flat -> sensiNact model SenseCAP_S2105-LoRaWAN_Soil_Moisture_Temperature_and_EC_Sensor (provider = devEui) -->
+<sensinactMapping:ProviderMapping xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:sensinactMapping="https://fennec.eclipse.org/event.atlas/mapping/1.0"
+    mid="SenseCAP_S2105-LoRaWAN_Soil_Moisture_Temperature_and_EC_Sensor" providerTimestamp="true">
+  <name>
+    <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//Uplink/deviceInfo"/>
+    <featurePath xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//DeviceInfo/devEui"/>
+  </name>
+  <timestamp strategy="NOW"/>
+  <providerClasses href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2105Uplink"/>
+  <admin xsi:type="sensinactMapping:AdminMapping" mid="admin">
+    <timestamp strategy="NOW"/>
+    <name name="Admin"/>
+    <friendlyNameFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//Uplink/deviceInfo"/>
+    <friendlyNameFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//DeviceInfo/deviceName"/>
+  </admin>
+  <services mid="soil">
+    <timestamp strategy="NOW"/>
+    <name name="soil"/>
+    <resources name="soilTemperature" mid="soilTemperature">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2105Uplink/object"/>
+      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2105Object/measurements"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2105Measurements/m4102"/>
+    </resources>
+    <resources name="soilMoisture" mid="soilMoisture">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2105Uplink/object"/>
+      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2105Object/measurements"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2105Measurements/m4103"/>
+    </resources>
+    <resources name="soilConductivity" mid="soilConductivity">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2105Uplink/object"/>
+      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2105Object/measurements"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2105Measurements/m4108"/>
+    </resources>
+  </services>
+</sensinactMapping:ProviderMapping>

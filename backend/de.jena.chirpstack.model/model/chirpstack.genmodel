@@ -42,9 +42,12 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack.ecore#//SenseCapS2120/light"/>
     </genClasses>
     <genClasses ecoreClass="chirpstack.ecore#//SenseCapS2105">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack.ecore#//SenseCapS2105/air"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack.ecore#//SenseCapS2105/rain"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack.ecore#//SenseCapS2105/light"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack.ecore#//SenseCapS2105/soil"/>
+    </genClasses>
+    <genClasses ecoreClass="chirpstack.ecore#//SenseCapSoil">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//SenseCapSoil/soilTemperature"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//SenseCapSoil/soilMoisture"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//SenseCapSoil/soilConductivity"/>
     </genClasses>
     <genClasses ecoreClass="chirpstack.ecore#//SenseCap">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack.ecore#//SenseCap/air"/>

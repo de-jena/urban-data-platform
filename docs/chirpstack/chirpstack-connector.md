@@ -27,8 +27,10 @@ The connector currently supports the following LoRaWAN sensor types:
   - **Device**: Metadata (DevEUI, names, tenant information)
 
 ### SenseCap Environmental Sensors
-- **SenseCap S2105**: Soil temperature and moisture sensor
-- **SenseCap S2120**: Weather station with multiple environmental parameters
+- **SenseCap S2105**: Soil temperature and moisture sensor (`soil` service: soil temperature,
+  moisture and conductivity, measurement ids 4102/4103/4108)
+- **SenseCap S2120**: Weather station with multiple environmental parameters (two profiles,
+  "SenseCAP Wetterstation 2.0" and "SenseCAP S2120 8-in-1")
 
 ### TEKTELIC Sensors
 - Various environmental monitoring devices with customizable sensor configurations
@@ -148,6 +150,33 @@ not carry stays `null` and the resource keeps its last value instead of being re
   </eAnnotations>
 </eStructuralFeatures>
 ```
+
+One more annotation detail only the generator reads (the legacy connector keeps using `path`):
+`measurementId` marks a SenseCAP measurement, which is read by its id whatever its position in
+the frames. A numeric path segment is a list element; element 0 is read in place (Atmos-14).
+
+```xml
+<eStructuralFeatures xsi:type="ecore:EAttribute" name="airTemperature" eType="EDouble">
+  <eAnnotations source="mapping">
+    <details key="path" value="object/messages/0/0/measurementValue"/>
+    <details key="measurementId" value="4097"/>
+  </eAnnotations>
+</eStructuralFeatures>
+```
+
+A mapping resource reads one path, and a path reads element 0 of a list. A profile that needs
+more is "flat": SenseCAP, whose `object.messages` is a list of lists of
+`{measurementId, measurementValue}` (one list per frame) that no Ecore model can hold, and
+Atmos-22, whose temperature sits in `object/sensors/1`. The generator gives such a profile the
+discriminator `<profileId>-flat` and plain paths: `object/measurements/m<id>` for a
+measurement, `object/sensors_1/air_temperature_degC` for a list element. The raw payload matches
+no discriminator, so the Event Atlas ingest drops it to its unknown-model side channel, where
+`de.jena.udp.atlas.chirpstack` (`UplinkFlattener`) reshapes it exactly that way - `messages`
+into `measurements` keyed `m<id>`, every other list of objects into members `<list>_<i>` -
+marks the profile id and ingests it again. The first drop of a device is logged as a warning,
+later ones at `FINE` once the handler has flattened for that source. This keeps the mapping
+metamodel untouched, which matters because the Model Atlas image parses the seeded mappings
+with its own copy of it.
 
 ### Supported JSON Path Syntax
 

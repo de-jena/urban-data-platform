@@ -3,6 +3,11 @@
 (profileId + mapping/path annotations) into seed/, which Model Atlas seeds into scope `udp`.
 A service reference annotated with mapping/collection + mapping/filter reads one entry of a
 JSON object (EMF map) selected by key; its attribute paths are relative to that entry.
+A numeric path segment is a list element; element 0 is read in place. A profile that reads
+another element (Atmos-22 sensors/1) or SenseCAP measurements (mapping/measurementId) is
+"flat": de.jena.udp.atlas.chirpstack reshapes its payload first - sensors/1 becomes the member
+sensors_1, the messages become measurements/m<id> - and marks it with the discriminator
+<profileId>-flat, so the mapping reads plain paths.
 Uplink attributes get the wrapper data types, so a field absent from a payload stays null
 instead of becoming 0/false and overwriting the resource.
   ./gen-chirpstack-mappings.py [<chirpstack.ecore>] [<out dir>]
@@ -18,7 +23,7 @@ NS = "https://model.data.jena.de/chirpstack/uplink/1.0"
 TYPEMAP = "jena-sensors"
 XSI = "{http://www.w3.org/2001/XMLSchema-instance}type"
 ECORE = "http://www.eclipse.org/emf/2002/Ecore#//"
-SKIP = {"SenseCapS2120", "SenseCapS2105", "SenseCap"}   # nested arrays, not mappable yet
+FLAT = "-flat"   # discriminator suffix of a flattened payload (see UplinkFlattener)
 WRAPPER = {"EDouble": "EDoubleObject", "EFloat": "EFloatObject", "EBoolean": "EBooleanObject",
            "EInt": "EIntegerObject", "ELong": "ELongObject", "EShort": "EShortObject"}
 DEVICE_INFO = ["tenantId", "tenantName", "applicationId", "applicationName",
@@ -40,15 +45,15 @@ def etype(f):
 providers = []
 for name, c in classes.items():
     model = ann(c, "model")
-    if "profileId" not in model or name in SKIP:
+    if "profileId" not in model:
         continue
     services = []
     for ref in c.findall("eStructuralFeatures"):
         svc = classes[ref.get("eType").split("#//")[-1]]
         res = []
         for f in svc.findall("eStructuralFeatures"):
-            path = ann(f, "mapping")["path"].split("/")
-            res.append((f.get("name"), etype(f), path))
+            mapping = ann(f, "mapping")
+            res.append((f.get("name"), etype(f), mapping["path"].split("/"), mapping.get("measurementId")))
         # a service annotated with collection + filter reads one entry of a JSON object
         # (EMF map): its resources are the entry value's attributes, paths relative to it
         svc_ann = ann(ref, "mapping")
@@ -82,8 +87,27 @@ def add_map_path(owner, path, prefix):
     hrefs += [("EReference", cn, seg), ("EReference", entry, "value")]
     return hrefs, value
 
+def needs_flattening(services):
+    """a list element other than 0 or a SenseCAP measurement: the payload is reshaped first."""
+    for _, res, coll, _ in services:
+        for _, _, path, measurement in res:
+            if measurement or (not coll and any(seg.isdigit() and int(seg) for seg in path)):
+                return True
+    return False
+
+def flat_path(path):
+    """sensors/1/x -> sensors_1/x: the flattener turns element i of a list into member <list>_i."""
+    out = []
+    for seg in path:
+        if seg.isdigit() and out:
+            out[-1] = f"{out[-1]}_{seg}"
+        else:
+            out.append(seg)
+    return out
+
 def add_path(owner, path, typ, prefix):
-    """path below `object`; numeric segments mean 'list, element 0'. Returns feature hrefs."""
+    """path below `object`; a numeric segment is a list element (0, in place). Returns the
+    feature hrefs."""
     hrefs, cn, i = [], owner, 0
     while i < len(path):
         seg = path[i]
@@ -93,6 +117,8 @@ def add_path(owner, path, typ, prefix):
             hrefs.append(("EAttribute", cn, seg))
             break
         many = i + 1 < len(path) and path[i + 1].isdigit()
+        if many and int(path[i + 1]):
+            raise ValueError(f"{'/'.join(path)}: only element 0 can be read in place, flatten the profile")
         child = cls_name(prefix, seg)
         ensure(cn)[seg] = ("ref", child, many)
         hrefs.append(("EReference", cn, seg))
@@ -106,22 +132,27 @@ for name, model, profile, services in providers:
     ensure(up)["object"] = ("ref", obj, False)
     ensure(obj)
     svc_out = []
+    flat = needs_flattening(services)
     for sname, res, coll, filt in services:
         if coll:
             hrefs, value = add_map_path(obj, coll.split("/")[1:], name)
-            for rname, typ, path in res:
+            for rname, typ, path, _ in res:
                 add_path(value, path, typ, name)
             svc_out.append((sname, None, filt, [("EReference", up, "object")] + hrefs))
             continue
         r_out = []
-        for rname, typ, path in res:
+        for rname, typ, path, measurement in res:
+            if measurement:
+                path = ["object", "measurements", f"m{measurement}"]
+            elif flat:
+                path = flat_path(path)
             if path[0] == "deviceInfo":
                 hrefs = [("EReference", "Uplink", "deviceInfo"), ("EAttribute", "DeviceInfo", path[1])]
             else:
                 hrefs = [("EReference", up, "object")] + add_path(obj, path[1:], typ, name)
             r_out.append((rname, typ, hrefs))
         svc_out.append((sname, r_out, None, None))
-    mappings.append((name, model, profile, up, svc_out))
+    mappings.append((name, model, profile + (FLAT if flat else ""), up, svc_out))
 
 def f_xml(fname, spec):
     if spec[0] == "attr":
@@ -204,4 +235,4 @@ for name, model, profile, up, services in mappings:
     x.append('</sensinactMapping:ProviderMapping>')
     (mdir / f"{name}ProviderMapping.xmi").write_text("\n".join(x) + "\n")
 
-print(f"{len(mappings)} profiles; skipped: {sorted(SKIP)}")
+print(f"{len(mappings)} profiles")

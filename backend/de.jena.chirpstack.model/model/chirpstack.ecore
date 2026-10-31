@@ -120,10 +120,27 @@
       <details key="profileName" value="SenseCAP S2105-LoRaWAN® Soil Moisture, Temperature and EC Sensor"/>
       <details key="profileId" value="f74bb315-56ca-48c0-82f8-f7b837f4d917"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="air" eType="#//Air" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="rain" eType="#//Rain" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="light" eType="#//Light"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="soil" eType="#//SenseCapSoil" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SenseCapSoil" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Service">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="soilTemperature" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/messages/0/0/measurementValue"/>
+        <details key="measurementId" value="4102"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="soilMoisture" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/messages/0/1/measurementValue"/>
+        <details key="measurementId" value="4103"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="soilConductivity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="mapping">
+        <details key="path" value="object/messages/0/2/measurementValue"/>
+        <details key="measurementId" value="4108"/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SenseCap" eSuperTypes="../../org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore#//Provider">
     <eAnnotations source="model">
@@ -140,31 +157,37 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="airTemperature" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
       <eAnnotations source="mapping">
         <details key="path" value="object/messages/0/0/measurementValue"/>
+        <details key="measurementId" value="4097"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="airHumidity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
       <eAnnotations source="mapping">
         <details key="path" value="object/messages/0/1/measurementValue"/>
+        <details key="measurementId" value="4098"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="barometricPressure" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
       <eAnnotations source="mapping">
         <details key="path" value="object/messages/1/2/measurementValue"/>
+        <details key="measurementId" value="4101"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="peakWindGust" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
       <eAnnotations source="mapping">
         <details key="path" value="object/messages/2/0/measurementValue"/>
+        <details key="measurementId" value="4191"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="windSpeed" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
       <eAnnotations source="mapping">
         <details key="path" value="object/messages/0/4/measurementValue"/>
+        <details key="measurementId" value="4105"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="windDirectionSensor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
       <eAnnotations source="mapping">
         <details key="path" value="object/messages/1/0/measurementValue"/>
+        <details key="measurementId" value="4104"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -172,11 +195,13 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rainGauge" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
       <eAnnotations source="mapping">
         <details key="path" value="object/messages/1/1/measurementValue"/>
+        <details key="measurementId" value="4113"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rainAccumulation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
       <eAnnotations source="mapping">
         <details key="path" value="object/messages/2/1/measurementValue"/>
+        <details key="measurementId" value="4213"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -184,11 +209,13 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lightIntensity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
       <eAnnotations source="mapping">
         <details key="path" value="object/messages/0/2/measurementValue"/>
+        <details key="measurementId" value="4099"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="uvIndex" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
       <eAnnotations source="mapping">
         <details key="path" value="object/messages/0/3/measurementValue"/>
+        <details key="measurementId" value="4190"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
