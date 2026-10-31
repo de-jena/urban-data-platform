@@ -122,6 +122,13 @@ public class ChirpstackSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ChirpstackPackage.SENSE_CAP_SOIL: {
+				SenseCapSoil senseCapSoil = (SenseCapSoil)theEObject;
+				T result = caseSenseCapSoil(senseCapSoil);
+				if (result == null) result = caseService(senseCapSoil);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ChirpstackPackage.SENSE_CAP: {
 				SenseCap senseCap = (SenseCap)theEObject;
 				T result = caseSenseCap(senseCap);
@@ -451,6 +458,21 @@ public class ChirpstackSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSenseCapS2105(SenseCapS2105 object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Sense Cap Soil</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Sense Cap Soil</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSenseCapSoil(SenseCapSoil object) {
 		return null;
 	}
 

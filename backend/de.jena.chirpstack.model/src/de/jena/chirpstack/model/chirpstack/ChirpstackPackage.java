@@ -596,31 +596,13 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	int SENSE_CAP_S2105__LINKED_PROVIDERS = ProviderPackage.PROVIDER__LINKED_PROVIDERS;
 
 	/**
-	 * The feature id for the '<em><b>Air</b></em>' containment reference.
+	 * The feature id for the '<em><b>Soil</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SENSE_CAP_S2105__AIR = ProviderPackage.PROVIDER_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Rain</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SENSE_CAP_S2105__RAIN = ProviderPackage.PROVIDER_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Light</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SENSE_CAP_S2105__LIGHT = ProviderPackage.PROVIDER_FEATURE_COUNT + 2;
+	int SENSE_CAP_S2105__SOIL = ProviderPackage.PROVIDER_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Sense Cap S2105</em>' class.
@@ -629,7 +611,7 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SENSE_CAP_S2105_FEATURE_COUNT = ProviderPackage.PROVIDER_FEATURE_COUNT + 3;
+	int SENSE_CAP_S2105_FEATURE_COUNT = ProviderPackage.PROVIDER_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Get Service</em>' operation.
@@ -659,6 +641,79 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	int SENSE_CAP_S2105_OPERATION_COUNT = ProviderPackage.PROVIDER_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link de.jena.chirpstack.model.chirpstack.impl.SenseCapSoilImpl <em>Sense Cap Soil</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.chirpstack.model.chirpstack.impl.SenseCapSoilImpl
+	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getSenseCapSoil()
+	 * @generated
+	 */
+	int SENSE_CAP_SOIL = 6;
+
+	/**
+	 * The feature id for the '<em><b>Metadata</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSE_CAP_SOIL__METADATA = ProviderPackage.SERVICE__METADATA;
+
+	/**
+	 * The feature id for the '<em><b>Soil Temperature</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSE_CAP_SOIL__SOIL_TEMPERATURE = ProviderPackage.SERVICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Soil Moisture</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSE_CAP_SOIL__SOIL_MOISTURE = ProviderPackage.SERVICE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Soil Conductivity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSE_CAP_SOIL__SOIL_CONDUCTIVITY = ProviderPackage.SERVICE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Sense Cap Soil</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSE_CAP_SOIL_FEATURE_COUNT = ProviderPackage.SERVICE_FEATURE_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>EIs Set</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSE_CAP_SOIL___EIS_SET__ESTRUCTURALFEATURE = ProviderPackage.SERVICE___EIS_SET__ESTRUCTURALFEATURE;
+
+	/**
+	 * The number of operations of the '<em>Sense Cap Soil</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSE_CAP_SOIL_OPERATION_COUNT = ProviderPackage.SERVICE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link de.jena.chirpstack.model.chirpstack.impl.SenseCapImpl <em>Sense Cap</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -666,7 +721,7 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getSenseCap()
 	 * @generated
 	 */
-	int SENSE_CAP = 6;
+	int SENSE_CAP = 7;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -766,7 +821,7 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getAir()
 	 * @generated
 	 */
-	int AIR = 7;
+	int AIR = 8;
 
 	/**
 	 * The feature id for the '<em><b>Metadata</b></em>' map.
@@ -866,7 +921,7 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getRain()
 	 * @generated
 	 */
-	int RAIN = 8;
+	int RAIN = 9;
 
 	/**
 	 * The feature id for the '<em><b>Metadata</b></em>' map.
@@ -930,7 +985,7 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getLight()
 	 * @generated
 	 */
-	int LIGHT = 9;
+	int LIGHT = 10;
 
 	/**
 	 * The feature id for the '<em><b>Metadata</b></em>' map.
@@ -994,7 +1049,7 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getTEKTELIC()
 	 * @generated
 	 */
-	int TEKTELIC = 10;
+	int TEKTELIC = 11;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1076,7 +1131,7 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getTSoil()
 	 * @generated
 	 */
-	int TSOIL = 11;
+	int TSOIL = 12;
 
 	/**
 	 * The feature id for the '<em><b>Metadata</b></em>' map.
@@ -1167,7 +1222,7 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getEM310()
 	 * @generated
 	 */
-	int EM310 = 12;
+	int EM310 = 13;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1249,7 +1304,7 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getTrash()
 	 * @generated
 	 */
-	int TRASH = 13;
+	int TRASH = 14;
 
 	/**
 	 * The feature id for the '<em><b>Metadata</b></em>' map.
@@ -1322,7 +1377,7 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getSN50()
 	 * @generated
 	 */
-	int SN50 = 14;
+	int SN50 = 15;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1404,7 +1459,7 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getSN()
 	 * @generated
 	 */
-	int SN = 15;
+	int SN = 16;
 
 	/**
 	 * The feature id for the '<em><b>Metadata</b></em>' map.
@@ -1486,7 +1541,7 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getSolidosTeros21()
 	 * @generated
 	 */
-	int SOLIDOS_TEROS21 = 16;
+	int SOLIDOS_TEROS21 = 17;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1568,7 +1623,7 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getTeros21()
 	 * @generated
 	 */
-	int TEROS21 = 17;
+	int TEROS21 = 18;
 
 	/**
 	 * The feature id for the '<em><b>Metadata</b></em>' map.
@@ -1659,7 +1714,7 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getPMXTCR()
 	 * @generated
 	 */
-	int PMXTCR = 18;
+	int PMXTCR = 19;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1750,7 +1805,7 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getPMXCounter()
 	 * @generated
 	 */
-	int PMX_COUNTER = 19;
+	int PMX_COUNTER = 20;
 
 	/**
 	 * The feature id for the '<em><b>Metadata</b></em>' map.
@@ -1841,7 +1896,7 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getPMXStatus()
 	 * @generated
 	 */
-	int PMX_STATUS = 20;
+	int PMX_STATUS = 21;
 
 	/**
 	 * The feature id for the '<em><b>Metadata</b></em>' map.
@@ -1923,7 +1978,7 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getAtmos14()
 	 * @generated
 	 */
-	int ATMOS14 = 21;
+	int ATMOS14 = 22;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2014,7 +2069,7 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getAtmosphere()
 	 * @generated
 	 */
-	int ATMOSPHERE = 22;
+	int ATMOSPHERE = 23;
 
 	/**
 	 * The feature id for the '<em><b>Metadata</b></em>' map.
@@ -2096,7 +2151,7 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getAtmosStatus()
 	 * @generated
 	 */
-	int ATMOS_STATUS = 23;
+	int ATMOS_STATUS = 24;
 
 	/**
 	 * The feature id for the '<em><b>Metadata</b></em>' map.
@@ -2151,7 +2206,7 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getAtmos22()
 	 * @generated
 	 */
-	int ATMOS22 = 24;
+	int ATMOS22 = 25;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2242,7 +2297,7 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getWind()
 	 * @generated
 	 */
-	int WIND = 25;
+	int WIND = 26;
 
 	/**
 	 * The feature id for the '<em><b>Metadata</b></em>' map.
@@ -2324,7 +2379,7 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getAtmos22Status()
 	 * @generated
 	 */
-	int ATMOS22_STATUS = 26;
+	int ATMOS22_STATUS = 27;
 
 	/**
 	 * The feature id for the '<em><b>Metadata</b></em>' map.
@@ -2379,7 +2434,7 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getKalyx()
 	 * @generated
 	 */
-	int KALYX = 27;
+	int KALYX = 28;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2470,7 +2525,7 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getKalyxRain()
 	 * @generated
 	 */
-	int KALYX_RAIN = 28;
+	int KALYX_RAIN = 29;
 
 	/**
 	 * The feature id for the '<em><b>Metadata</b></em>' map.
@@ -2534,7 +2589,7 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getKalyxStatus()
 	 * @generated
 	 */
-	int KALYX_STATUS = 29;
+	int KALYX_STATUS = 30;
 
 	/**
 	 * The feature id for the '<em><b>Metadata</b></em>' map.
@@ -2589,7 +2644,7 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getSE212()
 	 * @generated
 	 */
-	int SE212 = 30;
+	int SE212 = 31;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2680,7 +2735,7 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getSE212Light()
 	 * @generated
 	 */
-	int SE212_LIGHT = 31;
+	int SE212_LIGHT = 32;
 
 	/**
 	 * The feature id for the '<em><b>Metadata</b></em>' map.
@@ -2735,7 +2790,7 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getSE212Status()
 	 * @generated
 	 */
-	int SE212_STATUS = 32;
+	int SE212_STATUS = 33;
 
 	/**
 	 * The feature id for the '<em><b>Metadata</b></em>' map.
@@ -2790,7 +2845,7 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getDDS45()
 	 * @generated
 	 */
-	int DDS45 = 33;
+	int DDS45 = 34;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2881,7 +2936,7 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getDDS45Distance()
 	 * @generated
 	 */
-	int DDS45_DISTANCE = 34;
+	int DDS45_DISTANCE = 35;
 
 	/**
 	 * The feature id for the '<em><b>Metadata</b></em>' map.
@@ -2945,7 +3000,7 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getDDS45Status()
 	 * @generated
 	 */
-	int DDS45_STATUS = 35;
+	int DDS45_STATUS = 36;
 
 	/**
 	 * The feature id for the '<em><b>Metadata</b></em>' map.
@@ -3000,7 +3055,7 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getIoTraffic()
 	 * @generated
 	 */
-	int IO_TRAFFIC = 36;
+	int IO_TRAFFIC = 37;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3172,7 +3227,7 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getIoTrafficLine()
 	 * @generated
 	 */
-	int IO_TRAFFIC_LINE = 37;
+	int IO_TRAFFIC_LINE = 38;
 
 	/**
 	 * The feature id for the '<em><b>Metadata</b></em>' map.
@@ -3299,7 +3354,7 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getIoTrafficWindow()
 	 * @generated
 	 */
-	int IO_TRAFFIC_WINDOW = 38;
+	int IO_TRAFFIC_WINDOW = 39;
 
 	/**
 	 * The feature id for the '<em><b>Metadata</b></em>' map.
@@ -3408,7 +3463,7 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getIoTrafficAiModule()
 	 * @generated
 	 */
-	int IO_TRAFFIC_AI_MODULE = 39;
+	int IO_TRAFFIC_AI_MODULE = 40;
 
 	/**
 	 * The feature id for the '<em><b>Metadata</b></em>' map.
@@ -3948,37 +4003,58 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getSenseCapS2105();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link de.jena.chirpstack.model.chirpstack.SenseCapS2105#getAir <em>Air</em>}'.
+	 * Returns the meta object for the containment reference '{@link de.jena.chirpstack.model.chirpstack.SenseCapS2105#getSoil <em>Soil</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Air</em>'.
-	 * @see de.jena.chirpstack.model.chirpstack.SenseCapS2105#getAir()
+	 * @return the meta object for the containment reference '<em>Soil</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.SenseCapS2105#getSoil()
 	 * @see #getSenseCapS2105()
 	 * @generated
 	 */
-	EReference getSenseCapS2105_Air();
+	EReference getSenseCapS2105_Soil();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link de.jena.chirpstack.model.chirpstack.SenseCapS2105#getRain <em>Rain</em>}'.
+	 * Returns the meta object for class '{@link de.jena.chirpstack.model.chirpstack.SenseCapSoil <em>Sense Cap Soil</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Rain</em>'.
-	 * @see de.jena.chirpstack.model.chirpstack.SenseCapS2105#getRain()
-	 * @see #getSenseCapS2105()
+	 * @return the meta object for class '<em>Sense Cap Soil</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.SenseCapSoil
 	 * @generated
 	 */
-	EReference getSenseCapS2105_Rain();
+	EClass getSenseCapSoil();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link de.jena.chirpstack.model.chirpstack.SenseCapS2105#getLight <em>Light</em>}'.
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.SenseCapSoil#getSoilTemperature <em>Soil Temperature</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Light</em>'.
-	 * @see de.jena.chirpstack.model.chirpstack.SenseCapS2105#getLight()
-	 * @see #getSenseCapS2105()
+	 * @return the meta object for the attribute '<em>Soil Temperature</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.SenseCapSoil#getSoilTemperature()
+	 * @see #getSenseCapSoil()
 	 * @generated
 	 */
-	EReference getSenseCapS2105_Light();
+	EAttribute getSenseCapSoil_SoilTemperature();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.SenseCapSoil#getSoilMoisture <em>Soil Moisture</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Soil Moisture</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.SenseCapSoil#getSoilMoisture()
+	 * @see #getSenseCapSoil()
+	 * @generated
+	 */
+	EAttribute getSenseCapSoil_SoilMoisture();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.chirpstack.model.chirpstack.SenseCapSoil#getSoilConductivity <em>Soil Conductivity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Soil Conductivity</em>'.
+	 * @see de.jena.chirpstack.model.chirpstack.SenseCapSoil#getSoilConductivity()
+	 * @see #getSenseCapSoil()
+	 * @generated
+	 */
+	EAttribute getSenseCapSoil_SoilConductivity();
 
 	/**
 	 * Returns the meta object for class '{@link de.jena.chirpstack.model.chirpstack.SenseCap <em>Sense Cap</em>}'.
@@ -5922,28 +5998,46 @@ public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 		EClass SENSE_CAP_S2105 = eINSTANCE.getSenseCapS2105();
 
 		/**
-		 * The meta object literal for the '<em><b>Air</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Soil</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SENSE_CAP_S2105__AIR = eINSTANCE.getSenseCapS2105_Air();
+		EReference SENSE_CAP_S2105__SOIL = eINSTANCE.getSenseCapS2105_Soil();
 
 		/**
-		 * The meta object literal for the '<em><b>Rain</b></em>' containment reference feature.
+		 * The meta object literal for the '{@link de.jena.chirpstack.model.chirpstack.impl.SenseCapSoilImpl <em>Sense Cap Soil</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see de.jena.chirpstack.model.chirpstack.impl.SenseCapSoilImpl
+		 * @see de.jena.chirpstack.model.chirpstack.impl.ChirpstackPackageImpl#getSenseCapSoil()
 		 * @generated
 		 */
-		EReference SENSE_CAP_S2105__RAIN = eINSTANCE.getSenseCapS2105_Rain();
+		EClass SENSE_CAP_SOIL = eINSTANCE.getSenseCapSoil();
 
 		/**
-		 * The meta object literal for the '<em><b>Light</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Soil Temperature</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SENSE_CAP_S2105__LIGHT = eINSTANCE.getSenseCapS2105_Light();
+		EAttribute SENSE_CAP_SOIL__SOIL_TEMPERATURE = eINSTANCE.getSenseCapSoil_SoilTemperature();
+
+		/**
+		 * The meta object literal for the '<em><b>Soil Moisture</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SENSE_CAP_SOIL__SOIL_MOISTURE = eINSTANCE.getSenseCapSoil_SoilMoisture();
+
+		/**
+		 * The meta object literal for the '<em><b>Soil Conductivity</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SENSE_CAP_SOIL__SOIL_CONDUCTIVITY = eINSTANCE.getSenseCapSoil_SoilConductivity();
 
 		/**
 		 * The meta object literal for the '{@link de.jena.chirpstack.model.chirpstack.impl.SenseCapImpl <em>Sense Cap</em>}' class.

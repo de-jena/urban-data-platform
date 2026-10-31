@@ -13,11 +13,9 @@
  */
 package de.jena.chirpstack.model.chirpstack.impl;
 
-import de.jena.chirpstack.model.chirpstack.Air;
 import de.jena.chirpstack.model.chirpstack.ChirpstackPackage;
-import de.jena.chirpstack.model.chirpstack.Light;
-import de.jena.chirpstack.model.chirpstack.Rain;
 import de.jena.chirpstack.model.chirpstack.SenseCapS2105;
+import de.jena.chirpstack.model.chirpstack.SenseCapSoil;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -37,43 +35,21 @@ import org.eclipse.sensinact.model.core.provider.impl.ProviderImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.SenseCapS2105Impl#getAir <em>Air</em>}</li>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.SenseCapS2105Impl#getRain <em>Rain</em>}</li>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.SenseCapS2105Impl#getLight <em>Light</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.SenseCapS2105Impl#getSoil <em>Soil</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class SenseCapS2105Impl extends ProviderImpl implements SenseCapS2105 {
 	/**
-	 * The cached value of the '{@link #getAir() <em>Air</em>}' containment reference.
+	 * The cached value of the '{@link #getSoil() <em>Soil</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAir()
+	 * @see #getSoil()
 	 * @generated
 	 * @ordered
 	 */
-	protected Air air;
-
-	/**
-	 * The cached value of the '{@link #getRain() <em>Rain</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRain()
-	 * @generated
-	 * @ordered
-	 */
-	protected Rain rain;
-
-	/**
-	 * The cached value of the '{@link #getLight() <em>Light</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLight()
-	 * @generated
-	 * @ordered
-	 */
-	protected Light light;
+	protected SenseCapSoil soil;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -100,8 +76,8 @@ public class SenseCapS2105Impl extends ProviderImpl implements SenseCapS2105 {
 	 * @generated
 	 */
 	@Override
-	public Air getAir() {
-		return air;
+	public SenseCapSoil getSoil() {
+		return soil;
 	}
 
 	/**
@@ -109,11 +85,11 @@ public class SenseCapS2105Impl extends ProviderImpl implements SenseCapS2105 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetAir(Air newAir, NotificationChain msgs) {
-		Air oldAir = air;
-		air = newAir;
+	public NotificationChain basicSetSoil(SenseCapSoil newSoil, NotificationChain msgs) {
+		SenseCapSoil oldSoil = soil;
+		soil = newSoil;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ChirpstackPackage.SENSE_CAP_S2105__AIR, oldAir, newAir);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ChirpstackPackage.SENSE_CAP_S2105__SOIL, oldSoil, newSoil);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -125,108 +101,18 @@ public class SenseCapS2105Impl extends ProviderImpl implements SenseCapS2105 {
 	 * @generated
 	 */
 	@Override
-	public void setAir(Air newAir) {
-		if (newAir != air) {
+	public void setSoil(SenseCapSoil newSoil) {
+		if (newSoil != soil) {
 			NotificationChain msgs = null;
-			if (air != null)
-				msgs = ((InternalEObject)air).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ChirpstackPackage.SENSE_CAP_S2105__AIR, null, msgs);
-			if (newAir != null)
-				msgs = ((InternalEObject)newAir).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ChirpstackPackage.SENSE_CAP_S2105__AIR, null, msgs);
-			msgs = basicSetAir(newAir, msgs);
+			if (soil != null)
+				msgs = ((InternalEObject)soil).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ChirpstackPackage.SENSE_CAP_S2105__SOIL, null, msgs);
+			if (newSoil != null)
+				msgs = ((InternalEObject)newSoil).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ChirpstackPackage.SENSE_CAP_S2105__SOIL, null, msgs);
+			msgs = basicSetSoil(newSoil, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.SENSE_CAP_S2105__AIR, newAir, newAir));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Rain getRain() {
-		return rain;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetRain(Rain newRain, NotificationChain msgs) {
-		Rain oldRain = rain;
-		rain = newRain;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ChirpstackPackage.SENSE_CAP_S2105__RAIN, oldRain, newRain);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setRain(Rain newRain) {
-		if (newRain != rain) {
-			NotificationChain msgs = null;
-			if (rain != null)
-				msgs = ((InternalEObject)rain).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ChirpstackPackage.SENSE_CAP_S2105__RAIN, null, msgs);
-			if (newRain != null)
-				msgs = ((InternalEObject)newRain).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ChirpstackPackage.SENSE_CAP_S2105__RAIN, null, msgs);
-			msgs = basicSetRain(newRain, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.SENSE_CAP_S2105__RAIN, newRain, newRain));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Light getLight() {
-		return light;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetLight(Light newLight, NotificationChain msgs) {
-		Light oldLight = light;
-		light = newLight;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ChirpstackPackage.SENSE_CAP_S2105__LIGHT, oldLight, newLight);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setLight(Light newLight) {
-		if (newLight != light) {
-			NotificationChain msgs = null;
-			if (light != null)
-				msgs = ((InternalEObject)light).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ChirpstackPackage.SENSE_CAP_S2105__LIGHT, null, msgs);
-			if (newLight != null)
-				msgs = ((InternalEObject)newLight).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ChirpstackPackage.SENSE_CAP_S2105__LIGHT, null, msgs);
-			msgs = basicSetLight(newLight, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.SENSE_CAP_S2105__LIGHT, newLight, newLight));
+			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.SENSE_CAP_S2105__SOIL, newSoil, newSoil));
 	}
 
 	/**
@@ -237,12 +123,8 @@ public class SenseCapS2105Impl extends ProviderImpl implements SenseCapS2105 {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ChirpstackPackage.SENSE_CAP_S2105__AIR:
-				return basicSetAir(null, msgs);
-			case ChirpstackPackage.SENSE_CAP_S2105__RAIN:
-				return basicSetRain(null, msgs);
-			case ChirpstackPackage.SENSE_CAP_S2105__LIGHT:
-				return basicSetLight(null, msgs);
+			case ChirpstackPackage.SENSE_CAP_S2105__SOIL:
+				return basicSetSoil(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -255,12 +137,8 @@ public class SenseCapS2105Impl extends ProviderImpl implements SenseCapS2105 {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ChirpstackPackage.SENSE_CAP_S2105__AIR:
-				return getAir();
-			case ChirpstackPackage.SENSE_CAP_S2105__RAIN:
-				return getRain();
-			case ChirpstackPackage.SENSE_CAP_S2105__LIGHT:
-				return getLight();
+			case ChirpstackPackage.SENSE_CAP_S2105__SOIL:
+				return getSoil();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -273,14 +151,8 @@ public class SenseCapS2105Impl extends ProviderImpl implements SenseCapS2105 {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ChirpstackPackage.SENSE_CAP_S2105__AIR:
-				setAir((Air)newValue);
-				return;
-			case ChirpstackPackage.SENSE_CAP_S2105__RAIN:
-				setRain((Rain)newValue);
-				return;
-			case ChirpstackPackage.SENSE_CAP_S2105__LIGHT:
-				setLight((Light)newValue);
+			case ChirpstackPackage.SENSE_CAP_S2105__SOIL:
+				setSoil((SenseCapSoil)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -294,14 +166,8 @@ public class SenseCapS2105Impl extends ProviderImpl implements SenseCapS2105 {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ChirpstackPackage.SENSE_CAP_S2105__AIR:
-				setAir((Air)null);
-				return;
-			case ChirpstackPackage.SENSE_CAP_S2105__RAIN:
-				setRain((Rain)null);
-				return;
-			case ChirpstackPackage.SENSE_CAP_S2105__LIGHT:
-				setLight((Light)null);
+			case ChirpstackPackage.SENSE_CAP_S2105__SOIL:
+				setSoil((SenseCapSoil)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -315,12 +181,8 @@ public class SenseCapS2105Impl extends ProviderImpl implements SenseCapS2105 {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ChirpstackPackage.SENSE_CAP_S2105__AIR:
-				return air != null;
-			case ChirpstackPackage.SENSE_CAP_S2105__RAIN:
-				return rain != null;
-			case ChirpstackPackage.SENSE_CAP_S2105__LIGHT:
-				return light != null;
+			case ChirpstackPackage.SENSE_CAP_S2105__SOIL:
+				return soil != null;
 		}
 		return super.eIsSet(featureID);
 	}

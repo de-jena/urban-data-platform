@@ -43,7 +43,7 @@ public interface Rain extends Service {
 	 * @return the value of the '<em>Rain Gauge</em>' attribute.
 	 * @see #setRainGauge(double)
 	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getRain_RainGauge()
-	 * @model annotation="mapping path='object/messages/1/1/measurementValue'"
+	 * @model annotation="mapping path='object/messages/1/1/measurementValue' measurementId='4113'"
 	 * @generated
 	 */
 	double getRainGauge();
@@ -65,7 +65,7 @@ public interface Rain extends Service {
 	 * @return the value of the '<em>Rain Accumulation</em>' attribute.
 	 * @see #setRainAccumulation(double)
 	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getRain_RainAccumulation()
-	 * @model annotation="mapping path='object/messages/2/1/measurementValue'"
+	 * @model annotation="mapping path='object/messages/2/1/measurementValue' measurementId='4213'"
 	 * @generated
 	 */
 	double getRainAccumulation();

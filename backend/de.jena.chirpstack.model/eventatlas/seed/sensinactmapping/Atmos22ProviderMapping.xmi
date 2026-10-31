@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- GENERATED: ChirpStack profile 33bc4671-bad3-461b-8804-8967a7f2434b -> sensiNact model Atmos-22 (provider = devEui) -->
+<!-- GENERATED: ChirpStack profile 33bc4671-bad3-461b-8804-8967a7f2434b-flat -> sensiNact model Atmos-22 (provider = devEui) -->
 <sensinactMapping:ProviderMapping xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
     xmlns:sensinactMapping="https://fennec.eclipse.org/event.atlas/mapping/1.0"
@@ -22,26 +22,26 @@
     <resources name="windSpeed" mid="windSpeed">
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//Atmos22Uplink/object"/>
-      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//Atmos22Object/sensors"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//Atmos22Sensors/wind_speed_ms"/>
+      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//Atmos22Object/sensors_0"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//Atmos22Sensors0/wind_speed_ms"/>
     </resources>
     <resources name="windGust" mid="windGust">
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//Atmos22Uplink/object"/>
-      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//Atmos22Object/sensors"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//Atmos22Sensors/gust_ms"/>
+      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//Atmos22Object/sensors_0"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//Atmos22Sensors0/gust_ms"/>
     </resources>
     <resources name="windDirection" mid="windDirection">
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//Atmos22Uplink/object"/>
-      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//Atmos22Object/sensors"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//Atmos22Sensors/wind_direction_deg"/>
+      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//Atmos22Object/sensors_0"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//Atmos22Sensors0/wind_direction_deg"/>
     </resources>
     <resources name="temperature" mid="temperature">
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//Atmos22Uplink/object"/>
-      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//Atmos22Object/sensors"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//Atmos22Sensors/air_temperature_degC"/>
+      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//Atmos22Object/sensors_1"/>
+      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//Atmos22Sensors1/air_temperature_degC"/>
     </resources>
   </services>
   <services mid="status">

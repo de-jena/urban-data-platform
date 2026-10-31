@@ -1,0 +1,21 @@
+Bundle-Name: UDP :: Atlas :: ChirpStack
+Bundle-Description: ChirpStack uplink flattener for the UDP atlas runtime: a payload whose object \
+ holds lists the codec cannot type (SenseCAP message frames, a sensor list read beyond element 0) \
+ is taken from the Event Atlas unknown-model side channel, reshaped into plain members, marked with \
+ the profile suffix -flat and ingested again.
+Bundle-Version: 1.0.0.SNAPSHOT
+
+-buildpath: \
+	org.osgi.framework,\
+	org.osgi.service.component,\
+	org.osgi.service.component.annotations,\
+	org.eclipse.fennec.event.atlas.southbound.common;version=latest,\
+	tools.jackson.core.jackson-core,\
+	tools.jackson.core.jackson-databind,\
+	com.fasterxml.jackson.core.jackson-annotations;version='[2.21,3)'
+
+-testpath: \
+	junit-jupiter-api,\
+	${junit}
+
+-workingset: udp_runtime

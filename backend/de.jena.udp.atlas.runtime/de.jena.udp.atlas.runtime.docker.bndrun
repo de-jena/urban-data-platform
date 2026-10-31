@@ -62,7 +62,8 @@
 	bnd.identity;id='org.eclipse.sensinact.gateway.southbound.rules.easy-rules.osgi',\
 	bnd.identity;id='org.eclipse.sensinact.gateway.southbound.rules.easy-rules.config',\
 	bnd.identity;id='de.jena.udp.atlas.rules',\
-	bnd.identity;id='de.jena.udp.atlas.conflict'
+	bnd.identity;id='de.jena.udp.atlas.conflict',\
+	bnd.identity;id='de.jena.udp.atlas.chirpstack'
 
 # http.port=-1: the only HTTP whiteboard is the named instance from the docker.config
 # bundle (context path event/, port 8080).
@@ -286,4 +287,5 @@
 	org.eclipse.sensinact.gateway.southbound.rules.rules.impl;version='[0.0.2,0.0.3)',\
 	de.jena.conflict.sensinact.model;version=snapshot,\
 	de.jena.udp.atlas.conflict;version=snapshot,\
-	de.jena.udp.atlas.rules;version=snapshot
+	de.jena.udp.atlas.rules;version=snapshot,\
+	de.jena.udp.atlas.chirpstack;version=snapshot

@@ -27,6 +27,30 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="object" eType="#//DraginoObject" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SenseCapS2120Uplink" eSuperTypes="#//Uplink">
+    <eAnnotations source="http://eclipse.org/fennec/codec/typeMapping/jena-sensors">
+      <details key="typeDiscriminator" value="d03f1299-95a3-4ab2-a924-e0e5fe3b277d-flat"/>
+      <details key="typeDiscriminatorPath" value="deviceInfo.deviceProfileId"/>
+      <details key="fallbackStrategy" value="SKIP"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="object" eType="#//SenseCapS2120Object" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SenseCapS2105Uplink" eSuperTypes="#//Uplink">
+    <eAnnotations source="http://eclipse.org/fennec/codec/typeMapping/jena-sensors">
+      <details key="typeDiscriminator" value="f74bb315-56ca-48c0-82f8-f7b837f4d917-flat"/>
+      <details key="typeDiscriminatorPath" value="deviceInfo.deviceProfileId"/>
+      <details key="fallbackStrategy" value="SKIP"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="object" eType="#//SenseCapS2105Object" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SenseCapUplink" eSuperTypes="#//Uplink">
+    <eAnnotations source="http://eclipse.org/fennec/codec/typeMapping/jena-sensors">
+      <details key="typeDiscriminator" value="b6a1cea0-c82d-4261-b32c-cf4d2e1f97fb-flat"/>
+      <details key="typeDiscriminatorPath" value="deviceInfo.deviceProfileId"/>
+      <details key="fallbackStrategy" value="SKIP"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="object" eType="#//SenseCapObject" containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TEKTELICUplink" eSuperTypes="#//Uplink">
     <eAnnotations source="http://eclipse.org/fennec/codec/typeMapping/jena-sensors">
       <details key="typeDiscriminator" value="93f37439-1425-4a5f-a7e7-7eb4b75f1936"/>
@@ -77,7 +101,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Atmos22Uplink" eSuperTypes="#//Uplink">
     <eAnnotations source="http://eclipse.org/fennec/codec/typeMapping/jena-sensors">
-      <details key="typeDiscriminator" value="33bc4671-bad3-461b-8804-8967a7f2434b"/>
+      <details key="typeDiscriminator" value="33bc4671-bad3-461b-8804-8967a7f2434b-flat"/>
       <details key="typeDiscriminatorPath" value="deviceInfo.deviceProfileId"/>
       <details key="fallbackStrategy" value="SKIP"/>
     </eAnnotations>
@@ -124,6 +148,44 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="temp_SOIL_f" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="water_SOIL_f" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="conduct_SOIL_f" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SenseCapS2120Object">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="measurements" eType="#//SenseCapS2120Measurements" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SenseCapS2120Measurements">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="m4097" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="m4098" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="m4101" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="m4191" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="m4105" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="m4104" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="m4113" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="m4213" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="m4099" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="m4190" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SenseCapS2105Object">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="measurements" eType="#//SenseCapS2105Measurements" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SenseCapS2105Measurements">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="m4102" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="m4103" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="m4108" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SenseCapObject">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="measurements" eType="#//SenseCapMeasurements" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SenseCapMeasurements">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="m4097" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="m4098" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="m4101" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="m4191" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="m4105" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="m4104" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="m4113" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="m4213" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="m4099" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="m4190" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TEKTELICObject">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="soil_water_tension1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
@@ -178,13 +240,16 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="vapour_pressure_kPa" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Atmos22Object">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sensors" upperBound="-1" eType="#//Atmos22Sensors" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sensors_0" eType="#//Atmos22Sensors0" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sensors_1" eType="#//Atmos22Sensors1" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="BatV" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Atmos22Sensors">
+  <eClassifiers xsi:type="ecore:EClass" name="Atmos22Sensors0">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="wind_speed_ms" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="gust_ms" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="wind_direction_deg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Atmos22Sensors1">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="air_temperature_degC" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="KalyxObject">

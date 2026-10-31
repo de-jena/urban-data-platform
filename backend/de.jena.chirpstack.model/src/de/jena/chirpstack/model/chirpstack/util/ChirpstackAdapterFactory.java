@@ -106,6 +106,10 @@ public class ChirpstackAdapterFactory extends AdapterFactoryImpl {
 				return createSenseCapS2105Adapter();
 			}
 			@Override
+			public Adapter caseSenseCapSoil(SenseCapSoil object) {
+				return createSenseCapSoilAdapter();
+			}
+			@Override
 			public Adapter caseSenseCap(SenseCap object) {
 				return createSenseCapAdapter();
 			}
@@ -350,6 +354,20 @@ public class ChirpstackAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSenseCapS2105Adapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.chirpstack.model.chirpstack.SenseCapSoil <em>Sense Cap Soil</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.chirpstack.model.chirpstack.SenseCapSoil
+	 * @generated
+	 */
+	public Adapter createSenseCapSoilAdapter() {
 		return null;
 	}
 
