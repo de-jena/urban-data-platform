@@ -26,6 +26,9 @@ points at a newer file. The `eui` of the `sensoren` folder, lower-cased, is the 
 name (the mappings name providers after `deviceInfo/devEui`). The bundle listens to the sensiNact
 `LIFECYCLE/*` events and sets `admin/location` on the gateway thread when such a provider is created,
 plus once at activation for the providers already there. The ChirpStack mappings do not map a
-location, and a push only touches the resources it sets, so the point survives the uplinks. Sensors
-without an `eui` in the file (the eight above) and devices the file does not know keep no location:
-the gateway position of `rxInfo` is not used any more.
+location for the surveyed profile (`location=surveyed` in the `model` annotation of
+`SolidosTeros21` in `chirpstack.ecore`), and a push only touches the resources it sets, so the
+point survives the uplinks. Every other profile's mapping sets the admin location to the position
+of the first receiving gateway (`rxInfo/0/location`), as the legacy connector did, on every
+uplink. Teros21 sensors without an `eui` in the file (the eight above) therefore keep no location
+until the file names them.

@@ -96,7 +96,8 @@ to the Atlas copy of the model instead of the classes the fetcher produces.
 A service annotated with `collection` + `filter` (the IoTraffic counting lines) becomes an EMF map
 on the uplink model and a `referencedResource` with a `collectionFilter`; a path to a list
 element other than the first is skipped with a warning (the decoder has to name the value);
-all 15 profiles are generated; attributes get the wrapper data types so an absent field leaves
-the resource untouched; see
+all 15 profiles are generated; the admin location is the first receiving gateway except for the
+surveyed Teros21 (KML); attributes get the wrapper data types so an absent field leaves the
+resource untouched; see
 `docs/chirpstack/chirpstack-connector.md`. Recorded payloads for a replay through
 `/event/rest/ingest/{channel}` are in `de.jena.chirpstack.sensinact/examples/`.

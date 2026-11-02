@@ -8,6 +8,10 @@ element is skipped with a warning: the payload decoder has to name the value ins
 (docs/chirpstack/payload-decoder-leitfaden.md).
 Uplink attributes get the wrapper data types, so a field absent from a payload stays null
 instead of becoming 0/false and overwriting the resource.
+The admin location is the position of the first receiving gateway (rxInfo/0/location), as the
+legacy connector did, unless the provider's model annotation says location=surveyed: those
+devices get their point from the city's KML (de.jena.udp.atlas.kml) and a gateway position
+must not overwrite it.
   ./gen-chirpstack-mappings.py [<chirpstack.ecore>] [<out dir>]
 """
 import sys, re, pathlib
@@ -54,7 +58,7 @@ for name, c in classes.items():
         # (EMF map): its resources are the entry value's attributes, paths relative to it
         svc_ann = ann(ref, "mapping")
         services.append((ref.get("name"), res, svc_ann.get("collection"), svc_ann.get("filter")))
-    providers.append((name, model["name"], model["profileId"], services))
+    providers.append((name, model["name"], model["profileId"], services, model.get("location") != "surveyed"))
 
 # --- domain model: tree of classes per profile shaped like the JSON ---------------------
 def cls_name(*parts):
@@ -109,7 +113,7 @@ def add_path(owner, path, typ, prefix):
     return hrefs
 
 mappings = []
-for name, model, profile, services in providers:
+for name, model, profile, services, gateway_location in providers:
     up, obj = cls_name(name, "Uplink"), cls_name(name, "Object")
     ensure(up)["object"] = ("ref", obj, False)
     ensure(obj)
@@ -131,7 +135,7 @@ for name, model, profile, services in providers:
                 hrefs = [("EReference", up, "object")] + add_path(obj, path[1:], typ, name)
             r_out.append((rname, typ, hrefs))
         svc_out.append((sname, r_out, None, None))
-    mappings.append((name, model, profile, up, svc_out))
+    mappings.append((name, model, profile, up, svc_out, gateway_location))
 
 def f_xml(fname, spec):
     if spec[0] == "attr":
@@ -149,12 +153,22 @@ lines = ['<?xml version="1.0" encoding="UTF-8"?>',
          '  <eClassifiers xsi:type="ecore:EClass" name="DeviceInfo">']
 lines += [f_xml(a, ("attr", "EString")) for a in DEVICE_INFO]
 lines += ['  </eClassifiers>',
+          '  <eClassifiers xsi:type="ecore:EClass" name="GatewayLocation">',
+          f_xml("latitude", ("attr", "EDouble")),
+          f_xml("longitude", ("attr", "EDouble")),
+          f_xml("altitude", ("attr", "EDouble")),
+          '  </eClassifiers>',
+          '  <eClassifiers xsi:type="ecore:EClass" name="RxInfo">',
+          f_xml("gatewayId", ("attr", "EString")),
+          f_xml("location", ("ref", "GatewayLocation", False)),
+          '  </eClassifiers>',
           '  <eClassifiers xsi:type="ecore:EClass" name="Uplink" abstract="true">',
           f_xml("deduplicationId", ("attr", "EString")),
           f_xml("time", ("attr", "EString")),
           f_xml("deviceInfo", ("ref", "DeviceInfo", False)),
+          f_xml("rxInfo", ("ref", "RxInfo", True)),
           '  </eClassifiers>']
-for name, model, profile, up, _ in mappings:
+for name, model, profile, up, _, _ in mappings:
     lines += [f'  <eClassifiers xsi:type="ecore:EClass" name="{up}" eSuperTypes="#//Uplink">',
               f'    <eAnnotations source="http://eclipse.org/fennec/codec/typeMapping/{TYPEMAP}">',
               f'      <details key="typeDiscriminator" value="{profile}"/>',
@@ -175,7 +189,12 @@ OUT.mkdir(parents=True, exist_ok=True)
 # --- one ProviderMapping per profile ------------------------------------------------------
 mdir = OUT / "sensinactmapping"
 mdir.mkdir(exist_ok=True)
-for name, model, profile, up, services in mappings:
+def gateway_ref(ref, attribute):
+    return [f'  <{ref} xsi:type="ecore:EReference" href="{NS}#//Uplink/rxInfo"/>',
+            f'  <{ref} xsi:type="ecore:EReference" href="{NS}#//RxInfo/location"/>',
+            f'  <{ref} xsi:type="ecore:EAttribute" href="{NS}#//GatewayLocation/{attribute}"/>']
+
+for name, model, profile, up, services, gateway_location in mappings:
     x = ['<?xml version="1.0" encoding="UTF-8"?>',
          f'<!-- GENERATED: ChirpStack profile {profile} -> sensiNact model {model} (provider = devEui) -->',
          '<sensinactMapping:ProviderMapping xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"',
@@ -194,8 +213,14 @@ for name, model, profile, up, services in mappings:
          '    <timestamp strategy="NOW"/>',
          '    <name name="Admin"/>',
          f'    <friendlyNameFeature xsi:type="ecore:EReference" href="{NS}#//Uplink/deviceInfo"/>',
-         f'    <friendlyNameFeature xsi:type="ecore:EAttribute" href="{NS}#//DeviceInfo/deviceName"/>',
-         '  </admin>']
+         f'    <friendlyNameFeature xsi:type="ecore:EAttribute" href="{NS}#//DeviceInfo/deviceName"/>']
+    if gateway_location:
+        # the position of the first receiving gateway, written on every uplink; a surveyed
+        # device keeps the point the KML adapter set instead
+        x += ['    <!-- location: the first receiving gateway -->']
+        x += ["  " + line for line in gateway_ref("latitudeRef", "latitude") + gateway_ref("longitudeRef", "longitude")
+              + gateway_ref("elevationRef", "altitude")]
+    x.append('  </admin>')
     for sname, res, filt, hrefs in services:
         x += [f'  <services mid="{sname}">', '    <timestamp strategy="NOW"/>', f'    <name name="{sname}"/>']
         if res is None:
