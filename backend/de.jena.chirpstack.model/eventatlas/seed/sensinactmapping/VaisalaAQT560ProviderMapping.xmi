@@ -37,6 +37,21 @@
       <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/pm1_valid_text"/>
       <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/pm25_valid_text"/>
       <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/pm10_valid_text"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/pm1_valid"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/pm25_valid"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/pm10_valid"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/pm1_valid_text_de"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/pm25_valid_text_de"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/pm10_valid_text_de"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/fog_pm1"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/fog_pm25"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/fog_pm10"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/fog_pm1_text"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/fog_pm25_text"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/fog_pm10_text"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/fog_pm1_text_de"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/fog_pm25_text_de"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/fog_pm10_text_de"/>
     </referencedResource>
   </services>
   <services mid="pm1h">
@@ -64,6 +79,8 @@
       <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/o3_ugm3"/>
       <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/no_ugm3"/>
       <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/gas_valid_text"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/gas_valid"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/gas_valid_text_de"/>
     </referencedResource>
   </services>
   <services mid="env">
@@ -74,6 +91,9 @@
       <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/temperature_c"/>
       <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/humidity_rh"/>
       <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/pressure_hpa"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/temp_invalid"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/temp_invalid_text"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/temp_invalid_text_de"/>
     </referencedResource>
   </services>
   <services mid="aqi">
@@ -99,6 +119,19 @@
       <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/overall_status"/>
       <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/overall_status_de"/>
       <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/overall_status_color_hex"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/dev_status"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/dev_status_text_de"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/dev_status_severity"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/dev_status_color_hex"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/status_code"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/status_code_text_de"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/stab_invalid"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/stab_invalid_text"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/stab_invalid_text_de"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/lpc_ready"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/fog_any"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/fog_any_text_de"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/sec_since_update"/>
     </referencedResource>
   </services>
   <services mid="meta">
