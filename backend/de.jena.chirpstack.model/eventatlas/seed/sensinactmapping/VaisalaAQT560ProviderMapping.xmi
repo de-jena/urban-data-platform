@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ChirpStack profile 5518664c-d65a-468c-8df1-ede0e7666f2e -> sensiNact model Vaisala_AQT560 (provider = devEui) -->
+<sensinactMapping:ProviderMapping xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:sensinactMapping="https://fennec.eclipse.org/event.atlas/mapping/1.0"
+    mid="Vaisala_AQT560" providerTimestamp="true">
+  <name>
+    <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//Uplink/deviceInfo"/>
+    <featurePath xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//DeviceInfo/devEui"/>
+  </name>
+  <timestamp strategy="NOW"/>
+  <providerClasses href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Uplink"/>
+  <admin xsi:type="sensinactMapping:AdminMapping" mid="admin">
+    <timestamp strategy="NOW"/>
+    <name name="Admin"/>
+    <friendlyNameFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//Uplink/deviceInfo"/>
+    <friendlyNameFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//DeviceInfo/deviceName"/>
+    <!-- location: the first receiving gateway -->
+    <latitudeRef xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//Uplink/rxInfo"/>
+    <latitudeRef xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//RxInfo/location"/>
+    <latitudeRef xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//GatewayLocation/latitude"/>
+    <longitudeRef xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//Uplink/rxInfo"/>
+    <longitudeRef xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//RxInfo/location"/>
+    <longitudeRef xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//GatewayLocation/longitude"/>
+    <elevationRef xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//Uplink/rxInfo"/>
+    <elevationRef xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//RxInfo/location"/>
+    <elevationRef xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//GatewayLocation/altitude"/>
+  </admin>
+  <services mid="pm">
+    <timestamp strategy="NOW"/>
+    <name name="pm"/>
+    <referencedResource xsi:type="sensinactMapping:ReferenceMapping" exclude="false">
+      <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Uplink/object"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/pm1_ugm3"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/pm25_ugm3"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/pm10_ugm3"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/pm1_valid_text"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/pm25_valid_text"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/pm10_valid_text"/>
+    </referencedResource>
+  </services>
+  <services mid="pm1h">
+    <timestamp strategy="NOW"/>
+    <name name="pm1h"/>
+    <referencedResource xsi:type="sensinactMapping:ReferenceMapping" exclude="false">
+      <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Uplink/object"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/pm1_1h_ugm3"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/pm25_1h_ugm3"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/pm10_1h_ugm3"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/fog1h_pm1"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/fog1h_pm25"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/fog1h_pm10"/>
+    </referencedResource>
+  </services>
+  <services mid="gas">
+    <timestamp strategy="NOW"/>
+    <name name="gas"/>
+    <referencedResource xsi:type="sensinactMapping:ReferenceMapping" exclude="false">
+      <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Uplink/object"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/no2_ugm3"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/so2_ugm3"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/co_ugm3"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/h2s_ugm3"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/o3_ugm3"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/no_ugm3"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/gas_valid_text"/>
+    </referencedResource>
+  </services>
+  <services mid="env">
+    <timestamp strategy="NOW"/>
+    <name name="env"/>
+    <referencedResource xsi:type="sensinactMapping:ReferenceMapping" exclude="false">
+      <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Uplink/object"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/temperature_c"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/humidity_rh"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/pressure_hpa"/>
+    </referencedResource>
+  </services>
+  <services mid="aqi">
+    <timestamp strategy="NOW"/>
+    <name name="aqi"/>
+    <referencedResource xsi:type="sensinactMapping:ReferenceMapping" exclude="false">
+      <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Uplink/object"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/aqi"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/aqi_category"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/aqi_crit_text"/>
+    </referencedResource>
+  </services>
+  <services mid="status">
+    <timestamp strategy="NOW"/>
+    <name name="status"/>
+    <referencedResource xsi:type="sensinactMapping:ReferenceMapping" exclude="false">
+      <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Uplink/object"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/dev_status_text"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/status_code_text"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/fog_any_text"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/health_pct"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/data_quality"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/overall_status"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/overall_status_de"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/overall_status_color_hex"/>
+    </referencedResource>
+  </services>
+  <services mid="meta">
+    <timestamp strategy="NOW"/>
+    <name name="meta"/>
+    <referencedResource xsi:type="sensinactMapping:ReferenceMapping" exclude="false">
+      <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Uplink/object"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/vendor"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/device_model"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/a_timestamp_local"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/a_tz"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/c_timestamp_local"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/c_timestamp_utc"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/c_timestamp_epoch_utc"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//VaisalaAQT560Object/c_tz"/>
+    </referencedResource>
+  </services>
+</sensinactMapping:ProviderMapping>

@@ -49,6 +49,11 @@ The connector currently supports the following LoRaWAN sensor types:
   - **line1** … **line9**: Per-class counts of one configured counting line (line_number, person, bicycle, car, bus, truck, motorbike, train, total). The decoder reports `lines` as a JSON object keyed `line_N` and splits one window over several uplinks; each service is annotated with the collection and the key it reads (see below). Only the atlas runtime (Event Atlas mappings) reads these; the legacy connector cannot address a keyed line.
   - **aiModule**: The `ai_module_status` message (fPort 20): CPU/GPU temperature and load, memory, disk, OS load, uptime, supply voltage, network flags
 
+### Vaisala AQT560 air quality (atlas runtime only)
+- profile `5518664c-…`, application "Umweltsensorik": particulate matter (`pm`, 1-hour averages
+  `pm1h`), gases (`gas`), `env`, `aqi`, `status`, `meta`. The decoder spreads the readings over
+  several uplinks, one group per port; a provider fills up as they arrive.
+
 ### Other Supported Models
 - **SN50**: Multi-purpose sensor node
 - **Teros21**: Soil monitoring sensor

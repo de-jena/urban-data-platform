@@ -1,0 +1,5 @@
+// the seeds live in other projects: declare them as inputs, or Gradle skips the test as up to date
+tasks.named('test') {
+	inputs.dir('../de.jena.chirpstack.model/eventatlas/seed').withPathSensitivity(PathSensitivity.RELATIVE)
+	inputs.dir('../de.jena.udp.atlas.dwd/eventatlas/seed').withPathSensitivity(PathSensitivity.RELATIVE)
+}

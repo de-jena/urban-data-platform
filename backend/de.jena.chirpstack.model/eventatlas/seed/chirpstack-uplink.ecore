@@ -313,4 +313,121 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="train" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="total" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
   </eClassifiers>
+  <!-- Vaisala AQT560 air quality: the decoder spreads the readings over several uplinks (one
+       group per port) and names every member; an uplink carries only its group. -->
+  <eClassifiers xsi:type="ecore:EClass" name="VaisalaAQT560Uplink" eSuperTypes="#//Uplink">
+    <eAnnotations source="http://eclipse.org/fennec/codec/typeMapping/jena-sensors">
+      <details key="typeDiscriminator" value="5518664c-d65a-468c-8df1-ede0e7666f2e"/>
+      <details key="typeDiscriminatorPath" value="deviceInfo.deviceProfileId"/>
+      <details key="fallbackStrategy" value="SKIP"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="object" eType="#//VaisalaAQT560Object" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VaisalaAQT560Object">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pm1_ugm3" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject">
+      <eAnnotations source="sensinact.mapping">
+        <details key="sensinact.mapping.unit" value="µg/m³"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pm25_ugm3" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject">
+      <eAnnotations source="sensinact.mapping">
+        <details key="sensinact.mapping.unit" value="µg/m³"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pm10_ugm3" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject">
+      <eAnnotations source="sensinact.mapping">
+        <details key="sensinact.mapping.unit" value="µg/m³"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pm1_valid_text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pm25_valid_text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pm10_valid_text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pm1_1h_ugm3" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject">
+      <eAnnotations source="sensinact.mapping">
+        <details key="sensinact.mapping.unit" value="µg/m³"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pm25_1h_ugm3" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject">
+      <eAnnotations source="sensinact.mapping">
+        <details key="sensinact.mapping.unit" value="µg/m³"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pm10_1h_ugm3" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject">
+      <eAnnotations source="sensinact.mapping">
+        <details key="sensinact.mapping.unit" value="µg/m³"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fog1h_pm1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fog1h_pm25" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fog1h_pm10" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="no2_ugm3" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject">
+      <eAnnotations source="sensinact.mapping">
+        <details key="sensinact.mapping.unit" value="µg/m³"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="so2_ugm3" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject">
+      <eAnnotations source="sensinact.mapping">
+        <details key="sensinact.mapping.unit" value="µg/m³"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="co_ugm3" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject">
+      <eAnnotations source="sensinact.mapping">
+        <details key="sensinact.mapping.unit" value="µg/m³"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="h2s_ugm3" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject">
+      <eAnnotations source="sensinact.mapping">
+        <details key="sensinact.mapping.unit" value="µg/m³"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="o3_ugm3" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject">
+      <eAnnotations source="sensinact.mapping">
+        <details key="sensinact.mapping.unit" value="µg/m³"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="no_ugm3" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject">
+      <eAnnotations source="sensinact.mapping">
+        <details key="sensinact.mapping.unit" value="µg/m³"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gas_valid_text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="temperature_c" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject">
+      <eAnnotations source="sensinact.mapping">
+        <details key="sensinact.mapping.unit" value="°C"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="humidity_rh" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject">
+      <eAnnotations source="sensinact.mapping">
+        <details key="sensinact.mapping.unit" value="%"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pressure_hpa" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject">
+      <eAnnotations source="sensinact.mapping">
+        <details key="sensinact.mapping.unit" value="hPa"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="aqi" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="aqi_category" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="aqi_crit_text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dev_status_text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="status_code_text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fog_any_text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="health_pct" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject">
+      <eAnnotations source="sensinact.mapping">
+        <details key="sensinact.mapping.unit" value="%"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="data_quality" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="overall_status" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="overall_status_de" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="overall_status_color_hex" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vendor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="device_model" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="a_timestamp_local" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="a_tz" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="c_timestamp_local" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="c_timestamp_utc" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="c_timestamp_epoch_utc" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="c_tz" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
 </ecore:EPackage>
