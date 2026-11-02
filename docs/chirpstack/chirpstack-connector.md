@@ -14,6 +14,11 @@ The ChirpStack connector uses a **reflective, annotation-driven approach** that 
 - **EMF Model Annotations**: Declarative mappings between JSON paths and model attributes
 - **Reflective Provider Creation**: Automatic instantiation of providers based on device profile matching
 
+Adding a device is configuration, not code, as long as its ChirpStack payload decoder returns
+a mapping-friendly JSON: one named member per measurement, numbers as numbers, no lists whose
+position carries the meaning. The German guide for whoever writes the decoder is
+[`payload-decoder-leitfaden.md`](payload-decoder-leitfaden.md).
+
 ## Supported Devices
 
 The connector currently supports the following LoRaWAN sensor types:

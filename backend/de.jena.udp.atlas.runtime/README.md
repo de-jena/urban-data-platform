@@ -85,6 +85,8 @@ runtime through `org.eclipse.fennec.emf.gecko.compatibility.api`.
 
 ## ChirpStack mappings
 
+A new device needs no code when its ChirpStack decoder returns a mapping-friendly JSON
+(`docs/chirpstack/payload-decoder-leitfaden.md`, German, for whoever writes the decoder).
 The Event Atlas mappings for the ChirpStack profiles are generated from
 `de.jena.chirpstack.model/model/chirpstack.ecore` by
 `de.jena.chirpstack.model/eventatlas/gen-chirpstack-mappings.py` into
