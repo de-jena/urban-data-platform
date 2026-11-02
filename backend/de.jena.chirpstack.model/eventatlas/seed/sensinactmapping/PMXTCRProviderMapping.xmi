@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- GENERATED: ChirpStack profile 3ad23c8d-1965-4535-8ef0-ab56ca502f03 -> sensiNact model PMX_TCR (provider = devEui) -->
+<!-- ChirpStack profile 3ad23c8d-1965-4535-8ef0-ab56ca502f03 -> sensiNact model PMX_TCR (provider = devEui) -->
 <sensinactMapping:ProviderMapping xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
     xmlns:sensinactMapping="https://fennec.eclipse.org/event.atlas/mapping/1.0"

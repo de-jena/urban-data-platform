@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- GENERATED: ChirpStack profile 93f37439-1425-4a5f-a7e7-7eb4b75f1936 -> sensiNact model TEKTELIC_KIWI_Agriculture_Sensor (provider = devEui) -->
+<!-- ChirpStack profile 93f37439-1425-4a5f-a7e7-7eb4b75f1936 -> sensiNact model TEKTELIC_KIWI_Agriculture_Sensor (provider = devEui) -->
 <sensinactMapping:ProviderMapping xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
     xmlns:sensinactMapping="https://fennec.eclipse.org/event.atlas/mapping/1.0"

@@ -141,12 +141,12 @@ Attributes use `@mapping` annotations to specify JSON path extraction:
 </eStructuralFeatures>
 ```
 
-A service reference may carry a `mapping` annotation with `collection` and `filter` instead. The
-Event Atlas mapping generator (`de.jena.chirpstack.model/eventatlas/gen-chirpstack-mappings.py`)
-turns it into an EMF map on the uplink model and one service per key; the attribute paths of such a
-service are relative to the selected entry. The legacy connector ignores it. The generated uplink
-model uses the wrapper data types (`EDoubleObject`, `EBooleanObject`, …): a field an uplink does
-not carry stays `null` and the resource keeps its last value instead of being reset to `0`.
+These annotations drive the legacy connector only. The atlas runtime reads the hand-maintained
+uplink model and mappings in `de.jena.chirpstack.model/eventatlas/seed/` (README there); the
+IoTraffic counting lines are an EMF map on the uplink model read with a `collectionFilter` per
+service, and the uplink model uses the wrapper data types (`EDoubleObject`, `EBooleanObject`, …):
+a field an uplink does not carry stays `null` and the resource keeps its last value instead of
+being reset to `0`.
 
 ```xml
 <eStructuralFeatures xsi:type="ecore:EReference" name="line1" eType="#//IoTrafficLine" containment="true">
@@ -157,19 +157,15 @@ not carry stays `null` and the resource keeps its last value instead of being re
 </eStructuralFeatures>
 ```
 
-The admin service of every generated mapping takes its location from the first receiving
-gateway (`latitudeRef`/`longitudeRef`/`elevationRef` over `rxInfo/0/location`), written on every
-uplink. A provider whose `model` annotation says `location="surveyed"` (the Teros21) gets no such
-refs: its point comes from the city's KML through `de.jena.udp.atlas.kml` and must not be
-overwritten by a gateway position (`docs/Actual Geo Location for Chirpstack Sensors.md`).
+The admin service of every mapping takes its location from the first receiving gateway
+(`latitudeRef`/`longitudeRef`/`elevationRef` over `rxInfo/0/location`), written on every uplink,
+except the Teros21: its point comes from the city's KML through `de.jena.udp.atlas.kml` and must
+not be overwritten by a gateway position (`docs/Actual Geo Location for Chirpstack Sensors.md`).
 
-A numeric path segment is a list element and only element 0 can be read (Atmos-14
-`object/sensors/0/…`). A path to another element is skipped by the generator with a warning:
-the decoder has to name the value instead (the Atmos-22 temperature in `object/sensors/1` is
-missing from the mapping until its decoder does, see the guide's "Sensorliste auflösen"). The
-SenseCAP attributes carry the vendor `measurementId` as documentation; their paths are the
-members of the mapping-friendly decoder (`object/airTemperature`, …,
-`decoders/sensecap-s2120-decoder.js`).
+A mapping reads element 0 of a list and nothing else (Atmos-14 `object/sensors/0/…`); the
+Atmos-22 temperature in `object/sensors/1` has no resource until its decoder names it (the
+guide's "Sensorliste auflösen"). The SenseCAP mappings read the members of the mapping-friendly
+decoder (`object/airTemperature`, …, `decoders/sensecap-s2120-decoder.js`).
 
 ```xml
 <eStructuralFeatures xsi:type="ecore:EAttribute" name="airTemperature" eType="EDouble">

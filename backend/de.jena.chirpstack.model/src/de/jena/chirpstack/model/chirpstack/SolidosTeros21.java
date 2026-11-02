@@ -30,7 +30,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * </ul>
  *
  * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getSolidosTeros21()
- * @model annotation="model name='Solidos_Teros21' profileName='Solidos Teros21' profileId='7022e9ce-7673-4d0c-b3d1-ed51afc3fe27'"
+ * @model annotation="model name='Solidos_Teros21' profileName='Solidos Teros21' profileId='7022e9ce-7673-4d0c-b3d1-ed51afc3fe27' location='surveyed'"
  * @generated
  */
 @ProviderType

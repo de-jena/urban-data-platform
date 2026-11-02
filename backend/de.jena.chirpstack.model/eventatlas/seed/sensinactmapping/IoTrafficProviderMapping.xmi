@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- GENERATED: ChirpStack profile ef645c43-546c-4594-a0e5-9e0852faf29b -> sensiNact model iotec_iotraffic_Camera (provider = devEui) -->
+<!-- ChirpStack profile ef645c43-546c-4594-a0e5-9e0852faf29b -> sensiNact model iotec_iotraffic_Camera (provider = devEui) -->
 <sensinactMapping:ProviderMapping xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
     xmlns:sensinactMapping="https://fennec.eclipse.org/event.atlas/mapping/1.0"

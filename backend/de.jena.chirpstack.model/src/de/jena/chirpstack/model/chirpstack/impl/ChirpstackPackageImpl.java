@@ -3037,7 +3037,8 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 		   new String[] {
 			   "name", "Solidos_Teros21",
 			   "profileName", "Solidos Teros21",
-			   "profileId", "7022e9ce-7673-4d0c-b3d1-ed51afc3fe27"
+			   "profileId", "7022e9ce-7673-4d0c-b3d1-ed51afc3fe27",
+			   "location", "surveyed"
 		   });
 		addAnnotation
 		  (pmxtcrEClass,
