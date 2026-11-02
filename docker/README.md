@@ -50,8 +50,6 @@ docker/
 ├── bridge/                     # MQTT Bridge container
 │   ├── Dockerfile
 │   └── content/
-├── docker-compose/            # Docker Compose orchestration
-│   └── docker-compose.yml    # Service definitions
 └── README.md                  # This file
 ```
 
@@ -94,66 +92,6 @@ docker/
    # Build UDP Atlas Runtime image (after exporting de.jena.udp.atlas.runtime.docker)
    docker build -t udp-atlas-runtime:latest atlas-runtime/
    ```
-
-## Deployment with Docker Compose
-
-### Environment Configuration
-
-Create a `.env` file in the `docker-compose/` directory with the following variables:
-
-```bash
-# MongoDB Configuration
-MONGO_BASE_URI=mongodb://mongodb:27017
-MONGO_USERNAME=admin
-MONGO_PASSWORD=<your-secure-password>
-
-# TimescaleDB Configuration
-TIMESCALE_HOST=timescaledb
-TIMESCALE_DB=sensinact
-TIMESCALE_USER=postgres
-TIMESCALE_PWD=<your-secure-password>
-
-# ChirpStack MQTT (SSL)
-CHIRPSTACK_HOST=mqtt.chirpstack.io
-CHIRPSTACK_PORT=8883
-CHIRPSTACK_CERT=<base64-encoded-client-cert>
-CHIRPSTACK_KEY=<base64-encoded-client-key>
-CHIRPSTACK_CA=<base64-encoded-ca-cert>
-
-# The Things Network
-TTN_APP_ID=<your-ttn-app-id>
-TTN_APP_KEY=<your-ttn-app-key>
-
-# Ice Sensor API
-ICESENSOR_TOKEN=<your-api-token>
-
-# MQTT Credentials
-MQTT_FULL_USER=<mqtt-username>
-MQTT_FULL_PASSWORD=<mqtt-password>
-```
-
-### Start Services
-
-```bash
-cd docker-compose
-docker-compose up -d
-```
-
-### Stop Services
-
-```bash
-docker-compose down
-```
-
-### View Logs
-
-```bash
-# All services
-docker-compose logs -f
-
-# Specific service
-docker-compose logs -f udp-broker
-```
 
 ## Accessing the Platform
 
@@ -299,8 +237,8 @@ To update the platform:
 1. Pull latest code
 2. Rebuild backend
 3. Rebuild Docker images
-4. Stop containers: `docker-compose down`
-5. Start with new images: `docker-compose up -d`
+4. Restart the containers with the new images (on dimserver02 the units are generated from the
+   infrastructure repo's deployment model)
 
 ### Clean Build
 
@@ -310,9 +248,6 @@ Remove all build artifacts and caches:
 # Clean Gradle build
 cd backend
 ./gradlew clean
-
-# Remove Docker volumes (WARNING: deletes data!)
-docker-compose down -v
 
 # Remove Docker images
 docker rmi udp-broker:latest mqtt-bridge:latest

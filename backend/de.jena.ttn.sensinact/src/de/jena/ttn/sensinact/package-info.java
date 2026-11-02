@@ -1,1 +1,0 @@
-package de.jena.ttn.sensinact;
