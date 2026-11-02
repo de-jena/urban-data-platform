@@ -135,6 +135,15 @@ function decodeUplink(input) {
 Eine unbekannte `measurementId` fällt dabei weg, statt als `m4321` einen Namen zu erfinden; sie
 wird erst aufgenommen, wenn sie dokumentiert und ins Modell übernommen ist.
 
+Noch einfacher ist es, die Namen direkt dort zu vergeben, wo der Hersteller-Decoder die Frames
+auseinandernimmt. [`decoders/sensecap-s2120-decoder.js`](decoders/sensecap-s2120-decoder.js) ist
+der vollständige Vorschlag für die S2120: Frame-Zerlegung und Zahlenformate des Herstellers
+unverändert, aber jedes Frame schreibt benannte Werte (`airTemperature`, `windDirection`,
+`battery`, `sensorError`, …) in `data`; die Tabelle im Dateikopf nennt Einheit, Frame und die
+SenseCAP-`measurementId` jedes Members. Gegen den aufgezeichneten Uplink
+`4A00F424…` liefert er dieselben zehn Werte wie der Hersteller-Decoder, nur flach. Für die
+S2105 ist der Umbau derselbe mit den Boden-Messungen 4102/4103/4108.
+
 ## Beispiel: Sensorliste auflösen
 
 Ein Decoder, der mehrere Sensoren eines Geräts als Liste liefert
