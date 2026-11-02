@@ -18,6 +18,7 @@ import de.jena.chirpstack.model.chirpstack.ChirpstackPackage;
 import de.jena.chirpstack.model.chirpstack.Light;
 import de.jena.chirpstack.model.chirpstack.Rain;
 import de.jena.chirpstack.model.chirpstack.SenseCapS2120;
+import de.jena.chirpstack.model.chirpstack.SenseCapStatus;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -40,6 +41,7 @@ import org.eclipse.sensinact.model.core.provider.impl.ProviderImpl;
  *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.SenseCapS2120Impl#getAir <em>Air</em>}</li>
  *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.SenseCapS2120Impl#getRain <em>Rain</em>}</li>
  *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.SenseCapS2120Impl#getLight <em>Light</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.SenseCapS2120Impl#getStatus <em>Status</em>}</li>
  * </ul>
  *
  * @generated
@@ -74,6 +76,16 @@ public class SenseCapS2120Impl extends ProviderImpl implements SenseCapS2120 {
 	 * @ordered
 	 */
 	protected Light light;
+
+	/**
+	 * The cached value of the '{@link #getStatus() <em>Status</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStatus()
+	 * @generated
+	 * @ordered
+	 */
+	protected SenseCapStatus status;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -235,6 +247,51 @@ public class SenseCapS2120Impl extends ProviderImpl implements SenseCapS2120 {
 	 * @generated
 	 */
 	@Override
+	public SenseCapStatus getStatus() {
+		return status;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetStatus(SenseCapStatus newStatus, NotificationChain msgs) {
+		SenseCapStatus oldStatus = status;
+		status = newStatus;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ChirpstackPackage.SENSE_CAP_S2120__STATUS, oldStatus, newStatus);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setStatus(SenseCapStatus newStatus) {
+		if (newStatus != status) {
+			NotificationChain msgs = null;
+			if (status != null)
+				msgs = ((InternalEObject)status).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ChirpstackPackage.SENSE_CAP_S2120__STATUS, null, msgs);
+			if (newStatus != null)
+				msgs = ((InternalEObject)newStatus).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ChirpstackPackage.SENSE_CAP_S2120__STATUS, null, msgs);
+			msgs = basicSetStatus(newStatus, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.SENSE_CAP_S2120__STATUS, newStatus, newStatus));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case ChirpstackPackage.SENSE_CAP_S2120__AIR:
@@ -243,6 +300,8 @@ public class SenseCapS2120Impl extends ProviderImpl implements SenseCapS2120 {
 				return basicSetRain(null, msgs);
 			case ChirpstackPackage.SENSE_CAP_S2120__LIGHT:
 				return basicSetLight(null, msgs);
+			case ChirpstackPackage.SENSE_CAP_S2120__STATUS:
+				return basicSetStatus(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -261,6 +320,8 @@ public class SenseCapS2120Impl extends ProviderImpl implements SenseCapS2120 {
 				return getRain();
 			case ChirpstackPackage.SENSE_CAP_S2120__LIGHT:
 				return getLight();
+			case ChirpstackPackage.SENSE_CAP_S2120__STATUS:
+				return getStatus();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -281,6 +342,9 @@ public class SenseCapS2120Impl extends ProviderImpl implements SenseCapS2120 {
 				return;
 			case ChirpstackPackage.SENSE_CAP_S2120__LIGHT:
 				setLight((Light)newValue);
+				return;
+			case ChirpstackPackage.SENSE_CAP_S2120__STATUS:
+				setStatus((SenseCapStatus)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -303,6 +367,9 @@ public class SenseCapS2120Impl extends ProviderImpl implements SenseCapS2120 {
 			case ChirpstackPackage.SENSE_CAP_S2120__LIGHT:
 				setLight((Light)null);
 				return;
+			case ChirpstackPackage.SENSE_CAP_S2120__STATUS:
+				setStatus((SenseCapStatus)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -321,6 +388,8 @@ public class SenseCapS2120Impl extends ProviderImpl implements SenseCapS2120 {
 				return rain != null;
 			case ChirpstackPackage.SENSE_CAP_S2120__LIGHT:
 				return light != null;
+			case ChirpstackPackage.SENSE_CAP_S2120__STATUS:
+				return status != null;
 		}
 		return super.eIsSet(featureID);
 	}

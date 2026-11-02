@@ -37,7 +37,7 @@ import org.eclipse.sensinact.model.core.provider.impl.ServiceImpl;
  *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.AirImpl#getBarometricPressure <em>Barometric Pressure</em>}</li>
  *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.AirImpl#getPeakWindGust <em>Peak Wind Gust</em>}</li>
  *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.AirImpl#getWindSpeed <em>Wind Speed</em>}</li>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.AirImpl#getWindDirectionSensor <em>Wind Direction Sensor</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.AirImpl#getWindDirection <em>Wind Direction</em>}</li>
  * </ul>
  *
  * @generated
@@ -144,24 +144,24 @@ public class AirImpl extends ServiceImpl implements Air {
 	protected double windSpeed = WIND_SPEED_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getWindDirectionSensor() <em>Wind Direction Sensor</em>}' attribute.
+	 * The default value of the '{@link #getWindDirection() <em>Wind Direction</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getWindDirectionSensor()
+	 * @see #getWindDirection()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double WIND_DIRECTION_SENSOR_EDEFAULT = 0.0;
+	protected static final double WIND_DIRECTION_EDEFAULT = 0.0;
 
 	/**
-	 * The cached value of the '{@link #getWindDirectionSensor() <em>Wind Direction Sensor</em>}' attribute.
+	 * The cached value of the '{@link #getWindDirection() <em>Wind Direction</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getWindDirectionSensor()
+	 * @see #getWindDirection()
 	 * @generated
 	 * @ordered
 	 */
-	protected double windDirectionSensor = WIND_DIRECTION_SENSOR_EDEFAULT;
+	protected double windDirection = WIND_DIRECTION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -303,8 +303,8 @@ public class AirImpl extends ServiceImpl implements Air {
 	 * @generated
 	 */
 	@Override
-	public double getWindDirectionSensor() {
-		return windDirectionSensor;
+	public double getWindDirection() {
+		return windDirection;
 	}
 
 	/**
@@ -313,11 +313,11 @@ public class AirImpl extends ServiceImpl implements Air {
 	 * @generated
 	 */
 	@Override
-	public void setWindDirectionSensor(double newWindDirectionSensor) {
-		double oldWindDirectionSensor = windDirectionSensor;
-		windDirectionSensor = newWindDirectionSensor;
+	public void setWindDirection(double newWindDirection) {
+		double oldWindDirection = windDirection;
+		windDirection = newWindDirection;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.AIR__WIND_DIRECTION_SENSOR, oldWindDirectionSensor, windDirectionSensor));
+			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.AIR__WIND_DIRECTION, oldWindDirection, windDirection));
 	}
 
 	/**
@@ -338,8 +338,8 @@ public class AirImpl extends ServiceImpl implements Air {
 				return getPeakWindGust();
 			case ChirpstackPackage.AIR__WIND_SPEED:
 				return getWindSpeed();
-			case ChirpstackPackage.AIR__WIND_DIRECTION_SENSOR:
-				return getWindDirectionSensor();
+			case ChirpstackPackage.AIR__WIND_DIRECTION:
+				return getWindDirection();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -367,8 +367,8 @@ public class AirImpl extends ServiceImpl implements Air {
 			case ChirpstackPackage.AIR__WIND_SPEED:
 				setWindSpeed((Double)newValue);
 				return;
-			case ChirpstackPackage.AIR__WIND_DIRECTION_SENSOR:
-				setWindDirectionSensor((Double)newValue);
+			case ChirpstackPackage.AIR__WIND_DIRECTION:
+				setWindDirection((Double)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -397,8 +397,8 @@ public class AirImpl extends ServiceImpl implements Air {
 			case ChirpstackPackage.AIR__WIND_SPEED:
 				setWindSpeed(WIND_SPEED_EDEFAULT);
 				return;
-			case ChirpstackPackage.AIR__WIND_DIRECTION_SENSOR:
-				setWindDirectionSensor(WIND_DIRECTION_SENSOR_EDEFAULT);
+			case ChirpstackPackage.AIR__WIND_DIRECTION:
+				setWindDirection(WIND_DIRECTION_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -422,8 +422,8 @@ public class AirImpl extends ServiceImpl implements Air {
 				return peakWindGust != PEAK_WIND_GUST_EDEFAULT;
 			case ChirpstackPackage.AIR__WIND_SPEED:
 				return windSpeed != WIND_SPEED_EDEFAULT;
-			case ChirpstackPackage.AIR__WIND_DIRECTION_SENSOR:
-				return windDirectionSensor != WIND_DIRECTION_SENSOR_EDEFAULT;
+			case ChirpstackPackage.AIR__WIND_DIRECTION:
+				return windDirection != WIND_DIRECTION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -448,8 +448,8 @@ public class AirImpl extends ServiceImpl implements Air {
 		result.append(peakWindGust);
 		result.append(", windSpeed: ");
 		result.append(windSpeed);
-		result.append(", windDirectionSensor: ");
-		result.append(windDirectionSensor);
+		result.append(", windDirection: ");
+		result.append(windDirection);
 		result.append(')');
 		return result.toString();
 	}

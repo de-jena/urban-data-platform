@@ -29,6 +29,7 @@ import org.osgi.annotation.versioning.ProviderType;
  *   <li>{@link de.jena.chirpstack.model.chirpstack.SenseCap#getAir <em>Air</em>}</li>
  *   <li>{@link de.jena.chirpstack.model.chirpstack.SenseCap#getRain <em>Rain</em>}</li>
  *   <li>{@link de.jena.chirpstack.model.chirpstack.SenseCap#getLight <em>Light</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.SenseCap#getStatus <em>Status</em>}</li>
  * </ul>
  *
  * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getSenseCap()
@@ -102,5 +103,27 @@ public interface SenseCap extends Provider {
 	 * @generated
 	 */
 	void setLight(Light value);
+
+	/**
+	 * Returns the value of the '<em><b>Status</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Status</em>' containment reference.
+	 * @see #setStatus(SenseCapStatus)
+	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getSenseCap_Status()
+	 * @model containment="true"
+	 * @generated
+	 */
+	SenseCapStatus getStatus();
+
+	/**
+	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.SenseCap#getStatus <em>Status</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Status</em>' containment reference.
+	 * @see #getStatus()
+	 * @generated
+	 */
+	void setStatus(SenseCapStatus value);
 
 } // SenseCap

@@ -16,6 +16,7 @@ package de.jena.chirpstack.model.chirpstack.impl;
 import de.jena.chirpstack.model.chirpstack.ChirpstackPackage;
 import de.jena.chirpstack.model.chirpstack.SenseCapS2105;
 import de.jena.chirpstack.model.chirpstack.SenseCapSoil;
+import de.jena.chirpstack.model.chirpstack.SenseCapStatus;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -36,6 +37,7 @@ import org.eclipse.sensinact.model.core.provider.impl.ProviderImpl;
  * </p>
  * <ul>
  *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.SenseCapS2105Impl#getSoil <em>Soil</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.impl.SenseCapS2105Impl#getStatus <em>Status</em>}</li>
  * </ul>
  *
  * @generated
@@ -50,6 +52,16 @@ public class SenseCapS2105Impl extends ProviderImpl implements SenseCapS2105 {
 	 * @ordered
 	 */
 	protected SenseCapSoil soil;
+
+	/**
+	 * The cached value of the '{@link #getStatus() <em>Status</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStatus()
+	 * @generated
+	 * @ordered
+	 */
+	protected SenseCapStatus status;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -121,10 +133,57 @@ public class SenseCapS2105Impl extends ProviderImpl implements SenseCapS2105 {
 	 * @generated
 	 */
 	@Override
+	public SenseCapStatus getStatus() {
+		return status;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetStatus(SenseCapStatus newStatus, NotificationChain msgs) {
+		SenseCapStatus oldStatus = status;
+		status = newStatus;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ChirpstackPackage.SENSE_CAP_S2105__STATUS, oldStatus, newStatus);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setStatus(SenseCapStatus newStatus) {
+		if (newStatus != status) {
+			NotificationChain msgs = null;
+			if (status != null)
+				msgs = ((InternalEObject)status).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ChirpstackPackage.SENSE_CAP_S2105__STATUS, null, msgs);
+			if (newStatus != null)
+				msgs = ((InternalEObject)newStatus).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ChirpstackPackage.SENSE_CAP_S2105__STATUS, null, msgs);
+			msgs = basicSetStatus(newStatus, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ChirpstackPackage.SENSE_CAP_S2105__STATUS, newStatus, newStatus));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case ChirpstackPackage.SENSE_CAP_S2105__SOIL:
 				return basicSetSoil(null, msgs);
+			case ChirpstackPackage.SENSE_CAP_S2105__STATUS:
+				return basicSetStatus(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -139,6 +198,8 @@ public class SenseCapS2105Impl extends ProviderImpl implements SenseCapS2105 {
 		switch (featureID) {
 			case ChirpstackPackage.SENSE_CAP_S2105__SOIL:
 				return getSoil();
+			case ChirpstackPackage.SENSE_CAP_S2105__STATUS:
+				return getStatus();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -153,6 +214,9 @@ public class SenseCapS2105Impl extends ProviderImpl implements SenseCapS2105 {
 		switch (featureID) {
 			case ChirpstackPackage.SENSE_CAP_S2105__SOIL:
 				setSoil((SenseCapSoil)newValue);
+				return;
+			case ChirpstackPackage.SENSE_CAP_S2105__STATUS:
+				setStatus((SenseCapStatus)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -169,6 +233,9 @@ public class SenseCapS2105Impl extends ProviderImpl implements SenseCapS2105 {
 			case ChirpstackPackage.SENSE_CAP_S2105__SOIL:
 				setSoil((SenseCapSoil)null);
 				return;
+			case ChirpstackPackage.SENSE_CAP_S2105__STATUS:
+				setStatus((SenseCapStatus)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -183,6 +250,8 @@ public class SenseCapS2105Impl extends ProviderImpl implements SenseCapS2105 {
 		switch (featureID) {
 			case ChirpstackPackage.SENSE_CAP_S2105__SOIL:
 				return soil != null;
+			case ChirpstackPackage.SENSE_CAP_S2105__STATUS:
+				return status != null;
 		}
 		return super.eIsSet(featureID);
 	}

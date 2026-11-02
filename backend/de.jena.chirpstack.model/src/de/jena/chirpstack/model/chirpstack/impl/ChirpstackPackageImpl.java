@@ -42,6 +42,7 @@ import de.jena.chirpstack.model.chirpstack.SenseCap;
 import de.jena.chirpstack.model.chirpstack.SenseCapS2105;
 import de.jena.chirpstack.model.chirpstack.SenseCapS2120;
 import de.jena.chirpstack.model.chirpstack.SenseCapSoil;
+import de.jena.chirpstack.model.chirpstack.SenseCapStatus;
 import de.jena.chirpstack.model.chirpstack.Sensor;
 import de.jena.chirpstack.model.chirpstack.Soil;
 import de.jena.chirpstack.model.chirpstack.SolidosTeros21;
@@ -107,6 +108,13 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 	 * @generated
 	 */
 	private EClass senseCapS2105EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass senseCapStatusEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -692,6 +700,16 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 	 * @generated
 	 */
 	@Override
+	public EReference getSenseCapS2120_Status() {
+		return (EReference)senseCapS2120EClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getSenseCapS2105() {
 		return senseCapS2105EClass;
 	}
@@ -704,6 +722,36 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 	@Override
 	public EReference getSenseCapS2105_Soil() {
 		return (EReference)senseCapS2105EClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSenseCapS2105_Status() {
+		return (EReference)senseCapS2105EClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSenseCapStatus() {
+		return senseCapStatusEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getSenseCapStatus_Battery() {
+		return (EAttribute)senseCapStatusEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -792,6 +840,16 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 	 * @generated
 	 */
 	@Override
+	public EReference getSenseCap_Status() {
+		return (EReference)senseCapEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getAir() {
 		return airEClass;
 	}
@@ -852,7 +910,7 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAir_WindDirectionSensor() {
+	public EAttribute getAir_WindDirection() {
 		return (EAttribute)airEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -2366,9 +2424,14 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 		createEReference(senseCapS2120EClass, SENSE_CAP_S2120__AIR);
 		createEReference(senseCapS2120EClass, SENSE_CAP_S2120__RAIN);
 		createEReference(senseCapS2120EClass, SENSE_CAP_S2120__LIGHT);
+		createEReference(senseCapS2120EClass, SENSE_CAP_S2120__STATUS);
 
 		senseCapS2105EClass = createEClass(SENSE_CAP_S2105);
 		createEReference(senseCapS2105EClass, SENSE_CAP_S2105__SOIL);
+		createEReference(senseCapS2105EClass, SENSE_CAP_S2105__STATUS);
+
+		senseCapStatusEClass = createEClass(SENSE_CAP_STATUS);
+		createEAttribute(senseCapStatusEClass, SENSE_CAP_STATUS__BATTERY);
 
 		senseCapSoilEClass = createEClass(SENSE_CAP_SOIL);
 		createEAttribute(senseCapSoilEClass, SENSE_CAP_SOIL__SOIL_TEMPERATURE);
@@ -2379,6 +2442,7 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 		createEReference(senseCapEClass, SENSE_CAP__AIR);
 		createEReference(senseCapEClass, SENSE_CAP__RAIN);
 		createEReference(senseCapEClass, SENSE_CAP__LIGHT);
+		createEReference(senseCapEClass, SENSE_CAP__STATUS);
 
 		airEClass = createEClass(AIR);
 		createEAttribute(airEClass, AIR__AIR_TEMPERATURE);
@@ -2386,7 +2450,7 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 		createEAttribute(airEClass, AIR__BAROMETRIC_PRESSURE);
 		createEAttribute(airEClass, AIR__PEAK_WIND_GUST);
 		createEAttribute(airEClass, AIR__WIND_SPEED);
-		createEAttribute(airEClass, AIR__WIND_DIRECTION_SENSOR);
+		createEAttribute(airEClass, AIR__WIND_DIRECTION);
 
 		rainEClass = createEClass(RAIN);
 		createEAttribute(rainEClass, RAIN__RAIN_GAUGE);
@@ -2603,6 +2667,7 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 		deviceEClass.getESuperTypes().add(theProviderPackage.getService());
 		senseCapS2120EClass.getESuperTypes().add(theProviderPackage.getProvider());
 		senseCapS2105EClass.getESuperTypes().add(theProviderPackage.getProvider());
+		senseCapStatusEClass.getESuperTypes().add(theProviderPackage.getService());
 		senseCapSoilEClass.getESuperTypes().add(theProviderPackage.getService());
 		senseCapEClass.getESuperTypes().add(theProviderPackage.getProvider());
 		airEClass.getESuperTypes().add(theProviderPackage.getService());
@@ -2671,9 +2736,14 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 		initEReference(getSenseCapS2120_Air(), this.getAir(), null, "air", null, 0, 1, SenseCapS2120.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSenseCapS2120_Rain(), this.getRain(), null, "rain", null, 0, 1, SenseCapS2120.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSenseCapS2120_Light(), this.getLight(), null, "light", null, 0, 1, SenseCapS2120.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSenseCapS2120_Status(), this.getSenseCapStatus(), null, "status", null, 0, 1, SenseCapS2120.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(senseCapS2105EClass, SenseCapS2105.class, "SenseCapS2105", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSenseCapS2105_Soil(), this.getSenseCapSoil(), null, "soil", null, 0, 1, SenseCapS2105.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSenseCapS2105_Status(), this.getSenseCapStatus(), null, "status", null, 0, 1, SenseCapS2105.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(senseCapStatusEClass, SenseCapStatus.class, "SenseCapStatus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSenseCapStatus_Battery(), ecorePackage.getEDouble(), "battery", null, 0, 1, SenseCapStatus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(senseCapSoilEClass, SenseCapSoil.class, "SenseCapSoil", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSenseCapSoil_SoilTemperature(), ecorePackage.getEDouble(), "soilTemperature", null, 0, 1, SenseCapSoil.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2684,6 +2754,7 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 		initEReference(getSenseCap_Air(), this.getAir(), null, "air", null, 0, 1, SenseCap.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSenseCap_Rain(), this.getRain(), null, "rain", null, 0, 1, SenseCap.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSenseCap_Light(), this.getLight(), null, "light", null, 0, 1, SenseCap.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSenseCap_Status(), this.getSenseCapStatus(), null, "status", null, 0, 1, SenseCap.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(airEClass, Air.class, "Air", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAir_AirTemperature(), ecorePackage.getEDouble(), "airTemperature", null, 0, 1, Air.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2691,7 +2762,7 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 		initEAttribute(getAir_BarometricPressure(), ecorePackage.getEDouble(), "barometricPressure", null, 0, 1, Air.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAir_PeakWindGust(), ecorePackage.getEDouble(), "peakWindGust", null, 0, 1, Air.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAir_WindSpeed(), ecorePackage.getEDouble(), "windSpeed", null, 0, 1, Air.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAir_WindDirectionSensor(), ecorePackage.getEDouble(), "windDirectionSensor", null, 0, 1, Air.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAir_WindDirection(), ecorePackage.getEDouble(), "windDirection", null, 0, 1, Air.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(rainEClass, Rain.class, "Rain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRain_RainGauge(), ecorePackage.getEDouble(), "rainGauge", null, 0, 1, Rain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3132,94 +3203,100 @@ public class ChirpstackPackageImpl extends EPackageImpl implements ChirpstackPac
 			   "path", "deviceInfo/applicationName"
 		   });
 		addAnnotation
+		  (getSenseCapStatus_Battery(),
+		   source,
+		   new String[] {
+			   "path", "object/battery"
+		   });
+		addAnnotation
 		  (getSenseCapSoil_SoilTemperature(),
 		   source,
 		   new String[] {
-			   "path", "object/messages/0/0/measurementValue",
+			   "path", "object/soilTemperature",
 			   "measurementId", "4102"
 		   });
 		addAnnotation
 		  (getSenseCapSoil_SoilMoisture(),
 		   source,
 		   new String[] {
-			   "path", "object/messages/0/1/measurementValue",
+			   "path", "object/soilMoisture",
 			   "measurementId", "4103"
 		   });
 		addAnnotation
 		  (getSenseCapSoil_SoilConductivity(),
 		   source,
 		   new String[] {
-			   "path", "object/messages/0/2/measurementValue",
+			   "path", "object/soilConductivity",
 			   "measurementId", "4108"
 		   });
 		addAnnotation
 		  (getAir_AirTemperature(),
 		   source,
 		   new String[] {
-			   "path", "object/messages/0/0/measurementValue",
+			   "path", "object/airTemperature",
 			   "measurementId", "4097"
 		   });
 		addAnnotation
 		  (getAir_AirHumidity(),
 		   source,
 		   new String[] {
-			   "path", "object/messages/0/1/measurementValue",
+			   "path", "object/airHumidity",
 			   "measurementId", "4098"
 		   });
 		addAnnotation
 		  (getAir_BarometricPressure(),
 		   source,
 		   new String[] {
-			   "path", "object/messages/1/2/measurementValue",
+			   "path", "object/barometricPressure",
 			   "measurementId", "4101"
 		   });
 		addAnnotation
 		  (getAir_PeakWindGust(),
 		   source,
 		   new String[] {
-			   "path", "object/messages/2/0/measurementValue",
+			   "path", "object/peakWindGust",
 			   "measurementId", "4191"
 		   });
 		addAnnotation
 		  (getAir_WindSpeed(),
 		   source,
 		   new String[] {
-			   "path", "object/messages/0/4/measurementValue",
+			   "path", "object/windSpeed",
 			   "measurementId", "4105"
 		   });
 		addAnnotation
-		  (getAir_WindDirectionSensor(),
+		  (getAir_WindDirection(),
 		   source,
 		   new String[] {
-			   "path", "object/messages/1/0/measurementValue",
+			   "path", "object/windDirection",
 			   "measurementId", "4104"
 		   });
 		addAnnotation
 		  (getRain_RainGauge(),
 		   source,
 		   new String[] {
-			   "path", "object/messages/1/1/measurementValue",
+			   "path", "object/rainGauge",
 			   "measurementId", "4113"
 		   });
 		addAnnotation
 		  (getRain_RainAccumulation(),
 		   source,
 		   new String[] {
-			   "path", "object/messages/2/1/measurementValue",
+			   "path", "object/rainAccumulation",
 			   "measurementId", "4213"
 		   });
 		addAnnotation
 		  (getLight_LightIntensity(),
 		   source,
 		   new String[] {
-			   "path", "object/messages/0/2/measurementValue",
+			   "path", "object/lightIntensity",
 			   "measurementId", "4099"
 		   });
 		addAnnotation
 		  (getLight_UvIndex(),
 		   source,
 		   new String[] {
-			   "path", "object/messages/0/3/measurementValue",
+			   "path", "object/uvIndex",
 			   "measurementId", "4190"
 		   });
 		addAnnotation

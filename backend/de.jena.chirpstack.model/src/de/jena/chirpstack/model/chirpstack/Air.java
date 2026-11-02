@@ -31,7 +31,7 @@ import org.osgi.annotation.versioning.ProviderType;
  *   <li>{@link de.jena.chirpstack.model.chirpstack.Air#getBarometricPressure <em>Barometric Pressure</em>}</li>
  *   <li>{@link de.jena.chirpstack.model.chirpstack.Air#getPeakWindGust <em>Peak Wind Gust</em>}</li>
  *   <li>{@link de.jena.chirpstack.model.chirpstack.Air#getWindSpeed <em>Wind Speed</em>}</li>
- *   <li>{@link de.jena.chirpstack.model.chirpstack.Air#getWindDirectionSensor <em>Wind Direction Sensor</em>}</li>
+ *   <li>{@link de.jena.chirpstack.model.chirpstack.Air#getWindDirection <em>Wind Direction</em>}</li>
  * </ul>
  *
  * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getAir()
@@ -47,7 +47,7 @@ public interface Air extends Service {
 	 * @return the value of the '<em>Air Temperature</em>' attribute.
 	 * @see #setAirTemperature(double)
 	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getAir_AirTemperature()
-	 * @model annotation="mapping path='object/messages/0/0/measurementValue' measurementId='4097'"
+	 * @model annotation="mapping path='object/airTemperature' measurementId='4097'"
 	 * @generated
 	 */
 	double getAirTemperature();
@@ -69,7 +69,7 @@ public interface Air extends Service {
 	 * @return the value of the '<em>Air Humidity</em>' attribute.
 	 * @see #setAirHumidity(double)
 	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getAir_AirHumidity()
-	 * @model annotation="mapping path='object/messages/0/1/measurementValue' measurementId='4098'"
+	 * @model annotation="mapping path='object/airHumidity' measurementId='4098'"
 	 * @generated
 	 */
 	double getAirHumidity();
@@ -91,7 +91,7 @@ public interface Air extends Service {
 	 * @return the value of the '<em>Barometric Pressure</em>' attribute.
 	 * @see #setBarometricPressure(double)
 	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getAir_BarometricPressure()
-	 * @model annotation="mapping path='object/messages/1/2/measurementValue' measurementId='4101'"
+	 * @model annotation="mapping path='object/barometricPressure' measurementId='4101'"
 	 * @generated
 	 */
 	double getBarometricPressure();
@@ -113,7 +113,7 @@ public interface Air extends Service {
 	 * @return the value of the '<em>Peak Wind Gust</em>' attribute.
 	 * @see #setPeakWindGust(double)
 	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getAir_PeakWindGust()
-	 * @model annotation="mapping path='object/messages/2/0/measurementValue' measurementId='4191'"
+	 * @model annotation="mapping path='object/peakWindGust' measurementId='4191'"
 	 * @generated
 	 */
 	double getPeakWindGust();
@@ -135,7 +135,7 @@ public interface Air extends Service {
 	 * @return the value of the '<em>Wind Speed</em>' attribute.
 	 * @see #setWindSpeed(double)
 	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getAir_WindSpeed()
-	 * @model annotation="mapping path='object/messages/0/4/measurementValue' measurementId='4105'"
+	 * @model annotation="mapping path='object/windSpeed' measurementId='4105'"
 	 * @generated
 	 */
 	double getWindSpeed();
@@ -151,25 +151,25 @@ public interface Air extends Service {
 	void setWindSpeed(double value);
 
 	/**
-	 * Returns the value of the '<em><b>Wind Direction Sensor</b></em>' attribute.
+	 * Returns the value of the '<em><b>Wind Direction</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Wind Direction Sensor</em>' attribute.
-	 * @see #setWindDirectionSensor(double)
-	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getAir_WindDirectionSensor()
-	 * @model annotation="mapping path='object/messages/1/0/measurementValue' measurementId='4104'"
+	 * @return the value of the '<em>Wind Direction</em>' attribute.
+	 * @see #setWindDirection(double)
+	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getAir_WindDirection()
+	 * @model annotation="mapping path='object/windDirection' measurementId='4104'"
 	 * @generated
 	 */
-	double getWindDirectionSensor();
+	double getWindDirection();
 
 	/**
-	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.Air#getWindDirectionSensor <em>Wind Direction Sensor</em>}' attribute.
+	 * Sets the value of the '{@link de.jena.chirpstack.model.chirpstack.Air#getWindDirection <em>Wind Direction</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Wind Direction Sensor</em>' attribute.
-	 * @see #getWindDirectionSensor()
+	 * @param value the new value of the '<em>Wind Direction</em>' attribute.
+	 * @see #getWindDirection()
 	 * @generated
 	 */
-	void setWindDirectionSensor(double value);
+	void setWindDirection(double value);
 
 } // Air

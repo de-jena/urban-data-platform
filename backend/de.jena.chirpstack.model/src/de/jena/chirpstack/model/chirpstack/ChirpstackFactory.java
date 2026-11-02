@@ -90,6 +90,15 @@ public interface ChirpstackFactory extends EFactory {
 	SenseCapS2105 createSenseCapS2105();
 
 	/**
+	 * Returns a new object of class '<em>Sense Cap Status</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Sense Cap Status</em>'.
+	 * @generated
+	 */
+	SenseCapStatus createSenseCapStatus();
+
+	/**
 	 * Returns a new object of class '<em>Sense Cap Soil</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

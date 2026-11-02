@@ -44,7 +44,7 @@ public interface SenseCapSoil extends Service {
 	 * @return the value of the '<em>Soil Temperature</em>' attribute.
 	 * @see #setSoilTemperature(double)
 	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getSenseCapSoil_SoilTemperature()
-	 * @model annotation="mapping path='object/messages/0/0/measurementValue' measurementId='4102'"
+	 * @model annotation="mapping path='object/soilTemperature' measurementId='4102'"
 	 * @generated
 	 */
 	double getSoilTemperature();
@@ -66,7 +66,7 @@ public interface SenseCapSoil extends Service {
 	 * @return the value of the '<em>Soil Moisture</em>' attribute.
 	 * @see #setSoilMoisture(double)
 	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getSenseCapSoil_SoilMoisture()
-	 * @model annotation="mapping path='object/messages/0/1/measurementValue' measurementId='4103'"
+	 * @model annotation="mapping path='object/soilMoisture' measurementId='4103'"
 	 * @generated
 	 */
 	double getSoilMoisture();
@@ -88,7 +88,7 @@ public interface SenseCapSoil extends Service {
 	 * @return the value of the '<em>Soil Conductivity</em>' attribute.
 	 * @see #setSoilConductivity(double)
 	 * @see de.jena.chirpstack.model.chirpstack.ChirpstackPackage#getSenseCapSoil_SoilConductivity()
-	 * @model annotation="mapping path='object/messages/0/2/measurementValue' measurementId='4108'"
+	 * @model annotation="mapping path='object/soilConductivity' measurementId='4108'"
 	 * @generated
 	 */
 	double getSoilConductivity();

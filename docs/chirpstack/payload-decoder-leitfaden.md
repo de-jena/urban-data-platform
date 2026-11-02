@@ -154,7 +154,9 @@ stattdessen benannte Unterobjekte zurück:
 {"wind": {"speed": 3.2, "gust": 6.8, "direction": 210.0}, "air": {"temperature": 11.4}, "battery": 3.9}
 ```
 
-Die Unterobjekte werden zu den Diensten `wind`, `air` und `status` des Providers.
+Die Unterobjekte werden zu den Diensten `wind`, `air` und `status` des Providers. Genau das
+steht für die Atmos-22 an: ihr Decoder liefert heute `sensors[0]` (Wind) und `sensors[1]`
+(Lufttemperatur), und die Temperatur bleibt deshalb ohne Ressource, bis der Decoder sie benennt.
 
 ## Prüfen, bevor es ins Profil geht
 

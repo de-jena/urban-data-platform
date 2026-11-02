@@ -157,9 +157,13 @@ not carry stays `null` and the resource keeps its last value instead of being re
 </eStructuralFeatures>
 ```
 
-One more annotation detail only the generator reads (the legacy connector keeps using `path`):
-`measurementId` marks a SenseCAP measurement, which is read by its id whatever its position in
-the frames. A numeric path segment is a list element; element 0 is read in place (Atmos-14).
+A numeric path segment is a list element and only element 0 can be read (Atmos-14
+`object/sensors/0/…`). A path to another element is skipped by the generator with a warning:
+the decoder has to name the value instead (the Atmos-22 temperature in `object/sensors/1` is
+missing from the mapping until its decoder does, see the guide's "Sensorliste auflösen"). The
+SenseCAP attributes carry the vendor `measurementId` as documentation; their paths are the
+members of the mapping-friendly decoder (`object/airTemperature`, …,
+`decoders/sensecap-s2120-decoder.js`).
 
 ```xml
 <eStructuralFeatures xsi:type="ecore:EAttribute" name="airTemperature" eType="EDouble">
@@ -170,19 +174,9 @@ the frames. A numeric path segment is a list element; element 0 is read in place
 </eStructuralFeatures>
 ```
 
-A mapping resource reads one path, and a path reads element 0 of a list. A profile that needs
-more is "flat": SenseCAP, whose `object.messages` is a list of lists of
-`{measurementId, measurementValue}` (one list per frame) that no Ecore model can hold, and
-Atmos-22, whose temperature sits in `object/sensors/1`. The generator gives such a profile the
-discriminator `<profileId>-flat` and plain paths: `object/measurements/m<id>` for a
-measurement, `object/sensors_1/air_temperature_degC` for a list element. The raw payload matches
-no discriminator, so the Event Atlas ingest drops it to its unknown-model side channel, where
-`de.jena.udp.atlas.chirpstack` (`UplinkFlattener`) reshapes it exactly that way - `messages`
-into `measurements` keyed `m<id>`, every other list of objects into members `<list>_<i>` -
-marks the profile id and ingests it again. The first drop of a device is logged as a warning,
-later ones at `FINE` once the handler has flattened for that source. This keeps the mapping
-metamodel untouched, which matters because the Model Atlas image parses the seeded mappings
-with its own copy of it.
+There is deliberately no runtime code that reshapes a payload: a decoder output the mapping
+cannot read (lists by position, lists of lists, dynamic keys) is fixed in the ChirpStack
+device profile, not in the platform.
 
 ### Supported JSON Path Syntax
 

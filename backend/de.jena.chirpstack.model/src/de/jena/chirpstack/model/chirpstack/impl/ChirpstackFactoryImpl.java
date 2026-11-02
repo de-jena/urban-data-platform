@@ -73,6 +73,7 @@ public class ChirpstackFactoryImpl extends EFactoryImpl implements ChirpstackFac
 			case ChirpstackPackage.DEVICE: return createDevice();
 			case ChirpstackPackage.SENSE_CAP_S2120: return createSenseCapS2120();
 			case ChirpstackPackage.SENSE_CAP_S2105: return createSenseCapS2105();
+			case ChirpstackPackage.SENSE_CAP_STATUS: return createSenseCapStatus();
 			case ChirpstackPackage.SENSE_CAP_SOIL: return createSenseCapSoil();
 			case ChirpstackPackage.SENSE_CAP: return createSenseCap();
 			case ChirpstackPackage.AIR: return createAir();
@@ -177,6 +178,17 @@ public class ChirpstackFactoryImpl extends EFactoryImpl implements ChirpstackFac
 	public SenseCapS2105 createSenseCapS2105() {
 		SenseCapS2105Impl senseCapS2105 = new SenseCapS2105Impl();
 		return senseCapS2105;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public SenseCapStatus createSenseCapStatus() {
+		SenseCapStatusImpl senseCapStatus = new SenseCapStatusImpl();
+		return senseCapStatus;
 	}
 
 	/**
