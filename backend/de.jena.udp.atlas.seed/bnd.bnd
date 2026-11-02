@@ -1,0 +1,18 @@
+Bundle-Name: UDP :: Atlas :: Seed check
+Bundle-Description: Tests only: loads every model and mapping the UDP runtime seeds into the Model \
+ Atlas scope udp the way the Atlas does at startup, so a broken file fails the build instead of \
+ halting the Atlas.
+Bundle-Version: 1.0.0.SNAPSHOT
+
+-buildpath: \
+	org.eclipse.emf.common,\
+	org.eclipse.emf.ecore,\
+	org.eclipse.emf.ecore.xmi,\
+	org.eclipse.fennec.event.atlas.mapping;version=latest,\
+	org.gecko.weather.model;version=latest
+
+-testpath: \
+	junit-jupiter-api,\
+	${junit}
+
+-workingset: udp_runtime

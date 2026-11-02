@@ -86,18 +86,16 @@ runtime through `org.eclipse.fennec.emf.gecko.compatibility.api`.
 
 A new device needs no code when its ChirpStack decoder returns a mapping-friendly JSON
 (`docs/chirpstack/payload-decoder-leitfaden.md`, German, for whoever writes the decoder).
-The Event Atlas mappings for the ChirpStack profiles are generated from
-`de.jena.chirpstack.model/model/chirpstack.ecore` by
-`de.jena.chirpstack.model/eventatlas/gen-chirpstack-mappings.py` into
-`de.jena.chirpstack.model/eventatlas/seed/`, which is what Model Atlas seeds into scope `udp`.
+The uplink model and the Event Atlas mappings for the ChirpStack profiles are hand-maintained in
+`de.jena.chirpstack.model/eventatlas/seed/` (see the README there), which is what Model Atlas seeds
+into scope `udp`; `de.jena.udp.atlas.seed` tests that every seeded file loads.
 The DWD mapping is seeded from `de.jena.udp.atlas.dwd/eventatlas/seed/` alongside; its model
 (`org.gecko.weather.model`) is a bundle of the image and must not be seeded, or the mapping binds
 to the Atlas copy of the model instead of the classes the fetcher produces.
-A service annotated with `collection` + `filter` (the IoTraffic counting lines) becomes an EMF map
-on the uplink model and a `referencedResource` with a `collectionFilter`; a path to a list
-element other than the first is skipped with a warning (the decoder has to name the value);
-all 15 profiles are generated; the admin location is the first receiving gateway except for the
-surveyed Teros21 (KML); attributes get the wrapper data types so an absent field leaves the
+The IoTraffic counting lines are an EMF map on the uplink model read by a `referencedResource`
+with a `collectionFilter` per service; a mapping reads only the first element of a list (the
+decoder has to name anything else); the admin location is the first receiving gateway except for
+the surveyed Teros21 (KML); attributes use the wrapper data types so an absent field leaves the
 resource untouched; see
 `docs/chirpstack/chirpstack-connector.md`. Recorded payloads for a replay through
 `/event/rest/ingest/{channel}` are in `de.jena.chirpstack.sensinact/examples/`.

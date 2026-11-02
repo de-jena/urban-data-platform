@@ -170,11 +170,11 @@ steht für die Atmos-22 an: ihr Decoder liefert heute `sensors[0]` (Wind) und `s
 
 ## Was danach in der Plattform passiert
 
-Mit dem Beispiel-Uplink wird das Geräteprofil im ChirpStack-Modell
-(`backend/de.jena.chirpstack.model/model/chirpstack.ecore`) ergänzt: ein Provider mit der
-`profileId` des Geräteprofils, je Dienst eine Klasse, je Ressource ein Attribut mit dem Pfad
-(`object/airTemperature`) und der Einheit. Der Generator
-(`backend/de.jena.chirpstack.model/eventatlas/gen-chirpstack-mappings.py`) erzeugt daraus das
-Uplink-Modell und das Event-Atlas-Mapping, das in den Model Atlas (Scope `udp`) geladen wird. Ab
-dann wird jeder Uplink des Profils zum Provider, ohne eine Zeile Java. Details:
-`docs/chirpstack/chirpstack-connector.md`.
+Mit dem Beispiel-Uplink entstehen zwei Dinge in `backend/de.jena.chirpstack.model/eventatlas/seed/`
+(README dort): eine Klasse `<Profil>Uplink` im Uplink-Modell, die das JSON des Decoders
+nachbildet (Attribut = Member, mit Einheit als Annotation) und die `deviceProfileId` als
+Typkennung trägt, und ein Mapping, das pro Dienst auf das passende Objekt zeigt - die Ressourcen
+entstehen daraus automatisch, ihre Namen sind die Member-Namen des Decoders. Beides wird in den
+Model Atlas (Scope `udp`) geladen; ab dann wird jeder Uplink des Profils zum Provider, ohne eine
+Zeile Java. Bis zum Laden prüft `./gradlew :de.jena.udp.atlas.seed:test`, dass der Atlas die
+Dateien lesen kann. Details: `docs/chirpstack/chirpstack-connector.md`.

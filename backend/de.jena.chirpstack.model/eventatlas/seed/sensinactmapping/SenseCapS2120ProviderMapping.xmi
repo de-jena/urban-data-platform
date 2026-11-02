@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- GENERATED: ChirpStack profile d03f1299-95a3-4ab2-a924-e0e5fe3b277d -> sensiNact model SenseCAP_S2120_8-in-1_LoRaWAN_Wetterstation (provider = devEui) -->
+<!-- ChirpStack profile d03f1299-95a3-4ab2-a924-e0e5fe3b277d -> sensiNact model SenseCAP_S2120_8-in-1_LoRaWAN_Wetterstation (provider = devEui) -->
 <sensinactMapping:ProviderMapping xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
     xmlns:sensinactMapping="https://fennec.eclipse.org/event.atlas/mapping/1.0"
@@ -29,72 +29,44 @@
   <services mid="air">
     <timestamp strategy="NOW"/>
     <name name="air"/>
-    <resources name="airTemperature" mid="airTemperature">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2120Uplink/object"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2120Object/airTemperature"/>
-    </resources>
-    <resources name="airHumidity" mid="airHumidity">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2120Uplink/object"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2120Object/airHumidity"/>
-    </resources>
-    <resources name="barometricPressure" mid="barometricPressure">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2120Uplink/object"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2120Object/barometricPressure"/>
-    </resources>
-    <resources name="peakWindGust" mid="peakWindGust">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2120Uplink/object"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2120Object/peakWindGust"/>
-    </resources>
-    <resources name="windSpeed" mid="windSpeed">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2120Uplink/object"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2120Object/windSpeed"/>
-    </resources>
-    <resources name="windDirection" mid="windDirection">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2120Uplink/object"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2120Object/windDirection"/>
-    </resources>
+    <!-- only these attributes of object, as resources of this service -->
+    <referencedResource xsi:type="sensinactMapping:ReferenceMapping" exclude="false">
+      <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2120Uplink/object"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2120Object/airTemperature"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2120Object/airHumidity"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2120Object/barometricPressure"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2120Object/peakWindGust"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2120Object/windSpeed"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2120Object/windDirection"/>
+    </referencedResource>
   </services>
   <services mid="rain">
     <timestamp strategy="NOW"/>
     <name name="rain"/>
-    <resources name="rainGauge" mid="rainGauge">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2120Uplink/object"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2120Object/rainGauge"/>
-    </resources>
-    <resources name="rainAccumulation" mid="rainAccumulation">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2120Uplink/object"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2120Object/rainAccumulation"/>
-    </resources>
+    <!-- only these attributes of object, as resources of this service -->
+    <referencedResource xsi:type="sensinactMapping:ReferenceMapping" exclude="false">
+      <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2120Uplink/object"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2120Object/rainGauge"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2120Object/rainAccumulation"/>
+    </referencedResource>
   </services>
   <services mid="light">
     <timestamp strategy="NOW"/>
     <name name="light"/>
-    <resources name="lightIntensity" mid="lightIntensity">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2120Uplink/object"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2120Object/lightIntensity"/>
-    </resources>
-    <resources name="uvIndex" mid="uvIndex">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2120Uplink/object"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2120Object/uvIndex"/>
-    </resources>
+    <!-- only these attributes of object, as resources of this service -->
+    <referencedResource xsi:type="sensinactMapping:ReferenceMapping" exclude="false">
+      <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2120Uplink/object"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2120Object/lightIntensity"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2120Object/uvIndex"/>
+    </referencedResource>
   </services>
   <services mid="status">
     <timestamp strategy="NOW"/>
     <name name="status"/>
-    <resources name="battery" mid="battery">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-      <valueFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2120Uplink/object"/>
-      <valueFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2120Object/battery"/>
-    </resources>
+    <!-- only these attributes of object, as resources of this service -->
+    <referencedResource xsi:type="sensinactMapping:ReferenceMapping" exclude="false">
+      <featurePath xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2120Uplink/object"/>
+      <filter xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//SenseCapS2120Object/battery"/>
+    </referencedResource>
   </services>
 </sensinactMapping:ProviderMapping>
