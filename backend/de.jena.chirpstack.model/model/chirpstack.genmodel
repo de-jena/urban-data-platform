@@ -40,9 +40,14 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack.ecore#//SenseCapS2120/air"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack.ecore#//SenseCapS2120/rain"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack.ecore#//SenseCapS2120/light"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack.ecore#//SenseCapS2120/status"/>
     </genClasses>
     <genClasses ecoreClass="chirpstack.ecore#//SenseCapS2105">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack.ecore#//SenseCapS2105/soil"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack.ecore#//SenseCapS2105/status"/>
+    </genClasses>
+    <genClasses ecoreClass="chirpstack.ecore#//SenseCapStatus">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//SenseCapStatus/battery"/>
     </genClasses>
     <genClasses ecoreClass="chirpstack.ecore#//SenseCapSoil">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//SenseCapSoil/soilTemperature"/>
@@ -53,6 +58,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack.ecore#//SenseCap/air"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack.ecore#//SenseCap/rain"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack.ecore#//SenseCap/light"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chirpstack.ecore#//SenseCap/status"/>
     </genClasses>
     <genClasses ecoreClass="chirpstack.ecore#//Air">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//Air/airTemperature"/>
@@ -60,7 +66,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//Air/barometricPressure"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//Air/peakWindGust"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//Air/windSpeed"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//Air/windDirectionSensor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//Air/windDirection"/>
     </genClasses>
     <genClasses ecoreClass="chirpstack.ecore#//Rain">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chirpstack.ecore#//Rain/rainGauge"/>
