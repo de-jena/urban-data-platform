@@ -15,6 +15,16 @@
     <name name="Admin"/>
     <friendlyNameFeature xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//Uplink/deviceInfo"/>
     <friendlyNameFeature xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//DeviceInfo/deviceName"/>
+    <!-- location: the first receiving gateway -->
+    <latitudeRef xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//Uplink/rxInfo"/>
+    <latitudeRef xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//RxInfo/location"/>
+    <latitudeRef xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//GatewayLocation/latitude"/>
+    <longitudeRef xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//Uplink/rxInfo"/>
+    <longitudeRef xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//RxInfo/location"/>
+    <longitudeRef xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//GatewayLocation/longitude"/>
+    <elevationRef xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//Uplink/rxInfo"/>
+    <elevationRef xsi:type="ecore:EReference" href="https://model.data.jena.de/chirpstack/uplink/1.0#//RxInfo/location"/>
+    <elevationRef xsi:type="ecore:EAttribute" href="https://model.data.jena.de/chirpstack/uplink/1.0#//GatewayLocation/altitude"/>
   </admin>
   <services mid="soil">
     <timestamp strategy="NOW"/>

@@ -157,6 +157,12 @@ not carry stays `null` and the resource keeps its last value instead of being re
 </eStructuralFeatures>
 ```
 
+The admin service of every generated mapping takes its location from the first receiving
+gateway (`latitudeRef`/`longitudeRef`/`elevationRef` over `rxInfo/0/location`), written on every
+uplink. A provider whose `model` annotation says `location="surveyed"` (the Teros21) gets no such
+refs: its point comes from the city's KML through `de.jena.udp.atlas.kml` and must not be
+overwritten by a gateway position (`docs/Actual Geo Location for Chirpstack Sensors.md`).
+
 A numeric path segment is a list element and only element 0 can be read (Atmos-14
 `object/sensors/0/…`). A path to another element is skipped by the generator with a warning:
 the decoder has to name the value instead (the Atmos-22 temperature in `object/sensors/1` is

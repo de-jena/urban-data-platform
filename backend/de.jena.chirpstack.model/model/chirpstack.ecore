@@ -325,6 +325,7 @@
       <details key="name" value="Solidos_Teros21"/>
       <details key="profileName" value="Solidos Teros21"/>
       <details key="profileId" value="7022e9ce-7673-4d0c-b3d1-ed51afc3fe27"/>
+      <details key="location" value="surveyed"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sensor" eType="#//Teros21"
         containment="true"/>
