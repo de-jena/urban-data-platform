@@ -167,11 +167,25 @@ public class IlsaListener {
 			return;
 		}
 		Matcher matcher = SIGNAL_TOPIC.matcher(topic);
-		if (matcher.find()) {
-			updateSignal(matcher.group(1), payload);
-		} else {
+		if (!matcher.find()) {
 			logger.log(Level.WARNING, "unrecognized topic {0}", topic);
+			return;
 		}
+		if (!isJsonObject(payload)) {
+			// the control and phase topics carry a bare number, which is no signal state
+			logger.log(Level.DEBUG, "ignoring {0}: the payload is no JSON object", topic);
+			return;
+		}
+		updateSignal(matcher.group(1), payload);
+	}
+
+	static boolean isJsonObject(byte[] payload) {
+		for (byte b : payload) {
+			if (!Character.isWhitespace(b)) {
+				return b == '{';
+			}
+		}
+		return false;
 	}
 
 	private void updateThermal(String intersectionId, byte[] payload) {

@@ -88,6 +88,8 @@ The ILSA adapter subscribes to MQTT messages with the following topic pattern:
 - Configuration messages: `5g/ilsa/{intersectionId}/config/retained`
 - Signal state messages: `5g/ilsa/{intersectionId}/{subcircle}/{signalId}/...`
 - Thermal data: `5g/ilsa/{intersectionId}/thermal`
+- `5g/ilsa/{intersectionId}/control/…` and `…/{subcircle}/phase` carry a bare number, not a
+  signal state; both adapters ignore them (the atlas one at DEBUG level)
 
 **Examples**:
 - `5g/ilsa/K440/config/retained` - Static intersection configuration
