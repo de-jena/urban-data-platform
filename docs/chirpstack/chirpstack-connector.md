@@ -17,7 +17,8 @@ The ChirpStack connector uses a **reflective, annotation-driven approach** that 
 Adding a device is configuration, not code, as long as its ChirpStack payload decoder returns
 a mapping-friendly JSON: one named member per measurement, numbers as numbers, no lists whose
 position carries the meaning. The German guide for whoever writes the decoder is
-[`payload-decoder-leitfaden.md`](payload-decoder-leitfaden.md).
+[`payload-decoder-leitfaden.md`](payload-decoder-leitfaden.md); `decoders/` holds the
+proposed decoders (SenseCAP S2120).
 
 ## Supported Devices
 
