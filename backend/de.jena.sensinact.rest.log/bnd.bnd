@@ -1,6 +1,0 @@
--library: enableEMF
-
--buildpath: \
-	org.osgi.service.jakartars,\
-	jakarta.ws.rs-api,\
-	jul.to.slf4j

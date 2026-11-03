@@ -1,5 +1,0 @@
--include: de.jena.udp.sensinact.runtime.base.bndrun
--buildpath: \
-	${-runbundles.*}
-	
--workingset: udp_runtime

@@ -1,3 +1,0 @@
-Export-Package: \
-	de.dim.smart.city.csv.api,\
-	de.dim.smart.city.csv.helper
