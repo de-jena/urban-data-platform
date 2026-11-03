@@ -9,7 +9,6 @@ bndrun:
 | `atlas-runtime/` | `udp-atlas-runtime` — the UDP runtime on the Event Atlas (`udp.datainmotion.com`) | `de.jena.udp.atlas.runtime/de.jena.udp.atlas.runtime.docker.bndrun`; see the README there |
 | `bridge/` | `mqtt-bridge` — the MQTT bridge, a separate application | `de.jena.mqttbridge.runtime/mqttbridge.bndrun` |
 
-`civitas/` holds the Civitas image content.
 
 ## Local build
 
