@@ -50,22 +50,14 @@ testbin = ${target-dir}/test-classes
 -testpath.junitlauncher: junit-platform-launcher;version=latest
 
 -library: \
-    fennec,\
     fennecTest,\
     fennecEMF,\
-    fennecM2X,\
-    fennecQVT,\
     geckoEMFUtil,\
-	geckoUtil,\
     geckoMessaging,\
-    geckoEMFRepository,\
     geckoEMFModels,\
     jakartaREST,\
     geckoLibraries,\
-	geckoSearch
-
-# This can be replaced, as soon as we have the latest release figuered out
-#	geckoSearch
+    geckoSearch
 
 -releaserepo: UDP_Nexus_Release
 
@@ -96,10 +88,7 @@ pom.version: ${versionmask;===s;${@version}}
   upd_runtime;member=${filter;${p};.*\.udp\.runtime\.*},\
   traficam;member=${filter;${p};.*\.traficam\.*},\
   ilsa;member=${filter;${p};.*\.ilsa\.*},\
-  ttn;member=${filter;${p};.*\.ttn\.*},\
   chirpstack;member=${filter;${p};.*\.chirpstack\.*},\
-  icesensor;member=${filter;${p};.*\.icesensor\.*},\
-  trafficos;member=${filter;${p};.*\.trafficos\.*},\
   ibis;member=${filter;${p};.*\.ibis\.*},\
   glt;member=${filter;${p};.*\.glt\.*},\
   weather;member=${filter;${p};.*\.weather\.*},\
