@@ -1,5 +1,7 @@
 # TrafICam SensiNact Adapter
 
+> The sensiNact bundles this document describes were removed from the repository on 2026-11-03 with the legacy runtime; the sections on the atlas runtime (`de.jena.udp.atlas.*`) are the current state, the rest is kept as the record of what was ported.
+
 ## Overview
 
 The TrafICam SensiNact Adapter integrates AI-powered traffic cameras into the Urban Data Platform. TrafICam cameras use computer vision to detect and track vehicles, pedestrians, bicycles, and other traffic participants in real-time, providing rich traffic flow data including object positions, speeds, trajectories, and classifications.
@@ -651,11 +653,11 @@ org.gecko.osgi.messaging=INFO
 ## Implementation Reference
 
 **Source Files**:
-- `backend/de.jena.traficam.sensinact/src/de/jena/traficam/sensinact/TrafiCam.java:70` - Main component
-- `backend/de.jena.traficam.sensinact/src/de/jena/traficam/sensinact/TrafiCamDto.java:30` - DTO structure
-- `backend/de.jena.traficam.model/model/traficam.ecore:3` - **EMF data model** (TrafiCamObject, CamConfig)
-- `backend/de.jena.traficam.sensinact.model/model/traficam.ecore:3` - **EMF SensiNact provider model**
-- `backend/de.jena.traficam.websocket/src/de/jena/traficam/websocket/TrafiCamWebsocket.java:39` - WebSocket client
+- `de.jena.traficam.sensinact/src/de/jena/traficam/sensinact/TrafiCam.java:70` - Main component
+- `de.jena.traficam.sensinact/src/de/jena/traficam/sensinact/TrafiCamDto.java:30` - DTO structure
+- `de.jena.traficam.model/model/traficam.ecore:3` - **EMF data model** (TrafiCamObject, CamConfig)
+- `de.jena.traficam.sensinact.model/model/traficam.ecore:3` - **EMF SensiNact provider model**
+- `de.jena.traficam.websocket/src/de/jena/traficam/websocket/TrafiCamWebsocket.java:39` - WebSocket client
 
 **Key Constants** (TrafiCam.java):
 - Config topic: `"5g/config/traficam/"` (line 74)

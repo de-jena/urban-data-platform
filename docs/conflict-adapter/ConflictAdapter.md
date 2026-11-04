@@ -1,5 +1,7 @@
 # Traffic Conflict SensiNact Adapter
 
+> The sensiNact bundles this document describes were removed from the repository on 2026-11-03 with the legacy runtime; the sections on the atlas runtime (`de.jena.udp.atlas.*`) are the current state, the rest is kept as the record of what was ported.
+
 ## Overview
 
 The Traffic Conflict adapter detects potential bike-car conflicts at intersections by correlating traffic light states with bike movement data. It listens to events from both the ILSA (traffic light) and TrafICam (traffic camera) adapters to identify hazardous situations where bikes are moving through an intersection while car traffic has a green light.
@@ -19,7 +21,7 @@ TrafICam Adapter ─┘      (Event Fusion)      (TrafficConflictProvider)
 ## EMF Ecore Data Model
 
 The Conflict adapter is built on EMF Ecore models defined in:
-`backend/de.jena.conflict.sensinact.model/model/conflict.ecore`
+`de.jena.conflict.sensinact.model/model/conflict.ecore`
 
 **EMF Namespace**: `http://model.data.jena.de/sensinact/trafficConflict/1.0`
 
@@ -163,7 +165,7 @@ curl "http://localhost:8080/udp/rest/v1.1/Datastreams(Conflict01~conflict~confli
 ### OSGi Component Configuration
 
 The Conflict adapter is configured in:
-`backend/de.jena.udp.sensinact.runtime/de.jena.udp.sensinact.runtime.base.bndrun`
+`de.jena.udp.sensinact.runtime/de.jena.udp.sensinact.runtime.base.bndrun`
 
 ```
 bnd.identity;id='de.jena.conflict.sensinact'

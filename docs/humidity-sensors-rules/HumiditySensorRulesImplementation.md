@@ -1,5 +1,7 @@
 # Humidity Sensor Rules Implementation
 
+> The sensiNact bundles this document describes were removed from the repository on 2026-11-03 with the legacy runtime; the sections on the atlas runtime (`de.jena.udp.atlas.*`) are the current state, the rest is kept as the record of what was ported.
+
 ### The Model 
 
 We considered the `SolidosTeros21` chirpstack provider. In the corresponding EMF model, this provider has a service `sensor` which contains two resources, `potentialWater1` and `potentialWater2`, that we assumed being in `kPa`.

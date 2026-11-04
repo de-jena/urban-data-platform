@@ -1,5 +1,7 @@
 # IBIS SensiNact Adapter
 
+> The sensiNact bundles this document describes were removed from the repository on 2026-11-03 with the legacy runtime; the sections on the atlas runtime (`de.jena.udp.atlas.*`) are the current state, the rest is kept as the record of what was ported.
+
 ## Overview
 
 The IBIS (Integrierten Bordinformationssystem) adapter integrates public transport vehicle systems into the Eclipse SensiNact Gateway. IBIS is a German standard for onboard computer systems in buses, trams, and other public transport vehicles, providing real-time passenger information, GPS tracking, ticket validation, and operational data.
@@ -46,7 +48,7 @@ de.jena.ibis.passenger.counting.service.model
 de.jena.ibis.ticket.validation.service.model
 ```
 
-This input models will transformed to the models based on the SensiNact provider models defined in `backend/de.jena.ibis.sensinact.model/model/ibis.ecore`
+This input models will transformed to the models based on the SensiNact provider models defined in `de.jena.ibis.sensinact.model/model/ibis.ecore`
 
 **EMF Namespace**: `https://jena.de/models/ibis/sensinact/1.0`
 
@@ -178,7 +180,7 @@ Messages are serialized as **EMF JSON**. Here's a real example for **CustomerInf
 The adapter uses **QVTo (Query/View/Transformation Operational)** to transform IBIS service responses into SensiNact provider structures. The transformations are defined in:
 
 ```
-backend/de.jena.ibis.sensinact.mmt/transformations/
+de.jena.ibis.sensinact.mmt/transformations/
 ├── ibisToSensinact.qvto                    # Main entry point
 ├── ibisCustomerInfoToSensinact.qvto        # Customer info transformations
 ├── ibisGNSSLocationToSensinact.qvto        # GPS transformations
@@ -348,7 +350,7 @@ curl http://localhost:8080/udp/rest/sensinact/providers/bus-42/services/gnssLoca
 ### OSGi Component Configuration
 
 The IBIS adapter is configured in:
-`backend/de.jena.udp.sensinact.runtime/de.jena.udp.sensinact.runtime.base.bndrun`
+`de.jena.udp.sensinact.runtime/de.jena.udp.sensinact.runtime.base.bndrun`
 
 ```
 bnd.identity;id='de.jena.ibis.sensinact'
@@ -357,7 +359,7 @@ bnd.identity;id='de.jena.ibis.sensinact'
 ### MQTT Bridge Configuration
 
 MQTT topic forwarding is configured in:
-`backend/de.jena.mqttbridge.runtime/configs/mqttforward.json` (the MQTT bridge application)
+`de.jena.mqttbridge.runtime/configs/mqttforward.json` (the MQTT bridge application)
 
 ```json
 {

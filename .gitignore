@@ -4,16 +4,11 @@ generated/
 .metadata
 bin/
 bin_test/
-frontend/*/node_modules
-frontend/*/dist/*
-frontend/*/dist
-/frontend/5gDemo/dist/
-/frontend/model-ui/dist/
 *.swp
 
 # Build artifacts
-backend/build/
-backend/cnf/cache/
+build/
+cnf/cache/
 
 # Runtime logs
 **/*.log

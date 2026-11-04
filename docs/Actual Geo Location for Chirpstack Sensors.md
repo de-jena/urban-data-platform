@@ -1,8 +1,10 @@
 # Actual Geo Location for Chirpstack Sensors
 
+> The sensiNact bundles this document describes were removed from the repository on 2026-11-03 with the legacy runtime; the sections on the atlas runtime (`de.jena.udp.atlas.*`) are the current state, the rest is kept as the record of what was ported.
+
 It turned out the location we were using for the sensors was not their actual geographical position, but a gateway location from where the signal was sent. 
 
-The city then provided a `.gpkg` file with the actual geo location for the sensors (the corresponding `kml` file is `backend/de.jena.udp.sensinact.runtime/runtime/data/sensoren.kml`; the combined `teros_sensors_and_ref_areas.kml` next to it also carries the reference areas).
+The city then provided a `.gpkg` file with the actual geo location for the sensors (the corresponding `kml` file is `de.jena.udp.sensinact.runtime/runtime/data/sensoren.kml`; the combined `teros_sensors_and_ref_areas.kml` next to it also carries the reference areas).
 
 In order to match the sensors in this document with the sensors we are getting data from, we used the `eui` attribute provided in the `kml` file. If no `eui` attribute for a certain sensor is found, we then use the `key` attribute. 
 

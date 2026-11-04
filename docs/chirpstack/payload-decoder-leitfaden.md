@@ -165,12 +165,12 @@ steht für die Atmos-22 an: ihr Decoder liefert heute `sensors[0]` (Wind) und `s
 - Zwei verschiedene Uplinks desselben Geräts (z. B. unterschiedliche Ports) liefern dieselben
   Namen für dieselben Größen; ein Wert, den ein Uplink nicht enthält, fehlt dort einfach.
 - Der Uplink erscheint auf dem Broker unter `chirpstack/application/<app>/device/<devEui>/event/up`;
-  ein mitgeschnittenes Beispiel wird als `backend/de.jena.chirpstack.sensinact/examples/<gerät>.json`
+  ein mitgeschnittenes Beispiel wird als `de.jena.chirpstack.model/examples/<gerät>.json`
   abgelegt und dient als Vorlage für das Modell und als Testfall.
 
 ## Was danach in der Plattform passiert
 
-Mit dem Beispiel-Uplink entstehen zwei Dinge in `backend/de.jena.chirpstack.model/eventatlas/seed/`
+Mit dem Beispiel-Uplink entstehen zwei Dinge in `de.jena.chirpstack.model/eventatlas/seed/`
 (README dort): eine Klasse `<Profil>Uplink` im Uplink-Modell, die das JSON des Decoders
 nachbildet (Attribut = Member, mit Einheit als Annotation) und die `deviceProfileId` als
 Typkennung trägt, und ein Mapping, das pro Dienst auf das passende Objekt zeigt - die Ressourcen

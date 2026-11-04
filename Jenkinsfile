@@ -44,48 +44,15 @@ pipeline  {
 		       }
 		}
 		
-		stage('5G Democlient build') {
 
-			steps {
-				echo "I am building 5G Demo client on branch: ${env.GIT_BRANCH}"
 
-				dir("udp/frontend/5gDemo") {
-					sh "npm install"
-					sh "npm run build"
-				}				
-			}
-		}
-
-		stage('Modelling UI build') {
-
-			steps {
-				echo "I am building Modelling UI client on branch: ${env.GIT_BRANCH}"
-
-				dir("udp/frontend/model-ui") {
-					sh "npm install"
-					sh "npm run build-only"
-				}				
-			}
-		}
-
-		stage('DAANSE Dashboard UI build') {
-
-			steps {
-				echo "I am building Modelling UI client on branch: ${env.GIT_BRANCH}"
-
-				dir("legacy.dashboard.client") {
-					sh "npm install"
-					sh "npm run build-only"
-				}				
-			}
-		}
 		
 		stage('Backend build') {
 
 			steps {
 				echo "I am building app on branch: ${env.GIT_BRANCH}"
 
-				dir("udp/backend") {
+				dir("udp") {
 					sh "./gradlew clean build -x testOSGi --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2"
 				}				
 
@@ -97,7 +64,7 @@ pipeline  {
 			steps {
 				echo "I am running integration tests on branch: ${env.GIT_BRANCH}"
 
-//				dir("udp/backend") {
+//				dir("udp") {
 //					script {
 //						try {
 //	                        sh './gradlew testOSGi --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2 --no-daemon' //run a gradle task
@@ -110,36 +77,14 @@ pipeline  {
 			}
 		}
 	
-		stage('Resolve UDP Broker') {
 
-			steps {
-				echo "I am building app on branch: ${env.GIT_BRANCH}"
-
-				dir("udp/backend") {
-					sh "./gradlew :de.jena.udp.sensinact.runtime:resolve.de.jena.udp.sensinact.runtime.base --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2"
-				}
-			}
-		}
-
-		stage('UDP Broker Export') {
-			when {
-				branch 'main'
-			}
-			steps {
-				echo "I am building app on branch: ${env.GIT_BRANCH}"
-
-				dir("udp/backend") {
-					sh "./gradlew :de.jena.udp.sensinact.runtime:export.de.jena.udp.sensinact.runtime.docker --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2"
-				}
-			}
-		}
 
         stage('Resolve MQTT Bridge') {
 
             steps {
                 echo "I am building app on branch: ${env.GIT_BRANCH}"
 
-				dir("udp/backend") {
+				dir("udp") {
                     sh "./gradlew :de.jena.mqttbridge.runtime:resolve.mqttbridge --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2"
                 }
             }
@@ -152,7 +97,7 @@ pipeline  {
             steps {
                 echo "I am building app on branch: ${env.GIT_BRANCH}"
 
-				dir("udp/backend") {
+				dir("udp") {
                     sh "./gradlew :de.jena.mqttbridge.runtime:export.mqttbridge --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2"
                 }
             }
@@ -163,7 +108,7 @@ pipeline  {
             steps {
                 echo "I am building app on branch: ${env.GIT_BRANCH}"
 
-				dir("udp/backend") {
+				dir("udp") {
                     sh "./gradlew :de.jena.udp.atlas.runtime:resolve.de.jena.udp.atlas.runtime.docker --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2"
                 }
             }
@@ -176,7 +121,7 @@ pipeline  {
             steps {
                 echo "I am building app on branch: ${env.GIT_BRANCH}"
 
-				dir("udp/backend") {
+				dir("udp") {
                     sh "./gradlew :de.jena.udp.atlas.runtime:export.de.jena.udp.atlas.runtime.docker --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2"
                 }
             }
@@ -196,28 +141,6 @@ pipeline  {
 
 		}
 
-		stage('Docker UDP Image build'){
-			when {
-				branch 'main'
-			}
-
-			steps  {
-				echo "I am building and publishing a docker image on branch: ${env.GIT_BRANCH}"
-
-				script {
-					docker.withRegistry('https://registry-git.jena.de', 'github-jena') {
-						def image = docker.build("registry-git.jena.de/scj/udp/broker:0.1.0.${VERSION}", 'udp/docker/broker')
-						image.push()
-						image.push('latest')
-					}
-					docker.withRegistry('https://devel.data-in-motion.biz:6000', 'dim-nexus') {
-						def image = docker.build("devel.data-in-motion.biz:6000/scj/udp-broker:0.1.0.${VERSION}", 'udp/docker/broker')
-						image.push()
-						image.push('latest')
-					}
-				}
-		  }
-		}
         stage('Docker Bridge Image build'){
             when {
                 branch 'main'
@@ -264,7 +187,7 @@ pipeline  {
             }
 
             steps  {
-				dir("udp/backend") {
+				dir("udp") {
                     withCredentials([usernamePassword(credentialsId: 'dim-nexus', usernameVariable: 'NEXUS_USER', passwordVariable: 'NEXUS_PASSWORD')]) {
                         sh "./gradlew release --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2"
                     }

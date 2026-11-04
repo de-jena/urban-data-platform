@@ -1,5 +1,7 @@
 # UDP Sensinact Weather Adapter
 
+> The sensiNact bundles this document describes were removed from the repository on 2026-11-03 with the legacy runtime; the sections on the atlas runtime (`de.jena.udp.atlas.*`) are the current state, the rest is kept as the record of what was ported.
+
 This is the sensinact adapter for the weather info obtained from [DWD](https://www.dwd.de/DE/Home/home_node.html).
 
 ## The Models

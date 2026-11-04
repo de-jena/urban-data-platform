@@ -1,5 +1,7 @@
 # ILSA (Integrierte Lichtsignalanlage) SensiNact Adapter
 
+> The sensiNact bundles this document describes were removed from the repository on 2026-11-03 with the legacy runtime; the sections on the atlas runtime (`de.jena.udp.atlas.*`) are the current state, the rest is kept as the record of what was ported.
+
 ## Overview
 
 The ILSA SensiNact Adapter enables integration with German Integrated Traffic Light Systems ("Integrierte Lichtsignalanlage") through MQTT data feeds. This adapter processes real-time traffic light signal data from devices that directly read the electrical signals from traffic light systems at intersections, transforming this data into SensiNact provider instances for smart city monitoring applications.
@@ -258,7 +260,7 @@ Published as plain number (temperature in Celsius).
 
 The ILSA adapter uses QVTo (Query/View/Transformation Operational) for transforming TLConfiguration to Ilsa providers.
 
-**Transformation File**: `/backend/de.jena.ilsa.sensinact.mmt/transformations/ilsa.qvto`
+**Transformation File**: `/de.jena.ilsa.sensinact.mmt/transformations/ilsa.qvto`
 **Transformation ID**: `TLSTrafficLightToIlsa`
 
 ### Transformation Mappings
@@ -470,11 +472,11 @@ org.gecko.osgi.messaging=INFO
 ### Implementation Reference
 
 **Source Files**:
-- `backend/de.jena.ilsa.sensinact/src/de/jena/ilsa/sensinact/TrafficLight.java:77` - Main component
-- `backend/de.jena.ilsa.sensinact/src/de/jena/ilsa/sensinact/TrafficLightDto.java:33` - DTO structure
-- `backend/de.jena.ilsa.sensinact.model/model/ilsa.ecore:1` - EMF model definition
-- `backend/de.jena.ilsa.sensinact.mmt/transformations/ilsa.qvto:1` - QVTo transformation
-- `backend/de.jena.ilsa.sensinact.mmt/config.json:1` - Example TLConfiguration
+- `de.jena.ilsa.sensinact/src/de/jena/ilsa/sensinact/TrafficLight.java:77` - Main component
+- `de.jena.ilsa.sensinact/src/de/jena/ilsa/sensinact/TrafficLightDto.java:33` - DTO structure
+- `de.jena.ilsa.sensinact.model/model/ilsa.ecore:1` - EMF model definition
+- `de.jena.ilsa.sensinact.mmt/transformations/ilsa.qvto:1` - QVTo transformation
+- `de.jena.ilsa.sensinact.mmt/config.json:1` - Example TLConfiguration
 
 **Key Constants** (TrafficLight.java):
 - Topic base: `"5g/ilsa/"` (line 81)
