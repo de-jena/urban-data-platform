@@ -1,4 +1,3 @@
-com.rabbitmq:amqp-client:5.9.0
 
 #org.eclipse.emf:org.eclipse.emf.ecore.change:2.14.0.v20190528-0725
 #org.eclipse.emf:org.eclipse.emf.compare:3.5.3.201909101346
@@ -31,12 +30,6 @@ com.rabbitmq:amqp-client:5.9.0
 #org.gecko.addons:org.gecko.util.common:2.0.0
 
 
-de.jena:de.jena.udp.trafficos.common.model:${upd.models.version}
-de.jena:de.jena.udp.trafficos.publictransport.model:${upd.models.version}
-de.jena:de.jena.udp.trafficos.publictransport.api.model:${upd.models.version}
-de.jena:de.jena.udp.trafficos.intersection.model:${upd.models.version}
-de.jena:de.jena.udp.trafficos.intersectionsystem.model:${upd.models.version}
-de.jena:de.jena.udp.trafficos.trafficlight.model:${upd.models.version}
 
 de.jena:de.jena.ibis.common.model:1.0.0-SNAPSHOT
 de.jena:de.jena.ibis.customer.info.service.model:1.0.0-SNAPSHOT
@@ -47,29 +40,24 @@ de.jena:de.jena.ibis.gnss.location.service.model:1.0.0-SNAPSHOT
 de.jena:de.jena.ibis.passenger.counting.service.model:1.0.0-SNAPSHOT
 de.jena:de.jena.ibis.ticket.validation.service.model:1.0.0-SNAPSHOT
 
-de.jena.ibis-ip:de.jena.ibis.apis:1.0.0-SNAPSHOT
-de.jena.ibis-ip:de.jena.ibis.components:1.0.0-SNAPSHOT
-de.jena.ibis-ip:de.jena.ibis.event.handlers:1.0.0-SNAPSHOT
-de.jena.ibis-ip:de.jena.ibis.local.config:1.0.0-SNAPSHOT
-de.jena.ibis-ip:de.jena.ibis.raspberry.config:1.0.0-SNAPSHOT
-de.jena.ibis-ip:de.jena.ibis.rest.application:1.0.0-SNAPSHOT
-de.jena.ibis-ip:de.jena.ibis.runtime:1.0.0-SNAPSHOT
-de.jena.ibis-ip:de.jena.ibis.tests:1.0.0-SNAPSHOT
-de.jena.ibis-ip:de.jena.ibis.txw2:4.0.2
 
 
 # Codec
 org.geckoprojects.codec:org.eclipse.fennec.codec:1.1.0-SNAPSHOT
 org.geckoprojects.codec:org.eclipse.fennec.codec.json:1.1.0-SNAPSHOT
 org.geckoprojects.codec:org.eclipse.fennec.codec.jsonschema:1.1.0-SNAPSHOT
-org.geckoprojects.codec:org.eclipse.fennec.codec.csv:1.1.0-SNAPSHOT
 org.geckoprojects.codec:org.eclipse.fennec.codec.info:1.1.0-SNAPSHOT
 org.geckoprojects.codec:org.eclipse.fennec.codec.info.model:1.1.0-SNAPSHOT
 org.geckoprojects.codec:org.eclipse.fennec.codec.constants:1.1.0-SNAPSHOT
 
 #Weather
-org.geckoprojects.weather:org.gecko.weather.dwd.stations:1.1.0-SNAPSHOT
 org.geckoprojects.weather:org.gecko.time4j:1.1.0-SNAPSHOT
 org.geckoprojects.weather:org.gecko.weather.api:1.1.0-SNAPSHOT
 org.geckoprojects.weather:org.gecko.weather.dwd.forecast:1.1.0-SNAPSHOT
 org.geckoprojects.weather:org.gecko.weather.model:1.1.0-SNAPSHOT
+de.jena:de.jena.udp.trafficos.common.model:${upd.models.version}
+de.jena:de.jena.udp.trafficos.publictransport.model:${upd.models.version}
+de.jena:de.jena.udp.trafficos.publictransport.api.model:${upd.models.version}
+de.jena:de.jena.udp.trafficos.intersection.model:${upd.models.version}
+de.jena:de.jena.udp.trafficos.intersectionsystem.model:${upd.models.version}
+de.jena:de.jena.udp.trafficos.trafficlight.model:${upd.models.version}
