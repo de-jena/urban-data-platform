@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  TrafiCam - the camera configuration (5g/config/traficam/<cam>, and the retained copy).
+  Replaces: TrafiCamListener.updateConfig.
+
+  STATUS 2026-11-06
+    DONE  the observedArea service, typed ObservedObjects - the service the adapter builds,
+          with the resources that EClass declares                            (#91 item 8)
+    DONE  its `objects` value: the four scene corners as a GeometryCollection, through a
+          ValueFunction - a computation over a whole EObject                 (#91 item 3)
+    DONE  the admin location. Two plain attributes (location -> latitude/longitude), which
+          the bare *Ref paths already read - TrafiCam needs no item 7 for this, unlike ILSA
+    DONE  the admin friendly name, 'Camera ' + camId                         (#91 item 7)
+    DONE  the admin viewport, through extendAdmin                            (#91 item 8)
+    DONE  the provider id. `CamConfig.camId` exists now - transient, and LAST in the
+          EClass, because TrafiCam uses binary EMF and BinaryResourceImpl identifies a
+          feature by its position. The adapter copies it out of the topic
+
+    DONE  one provider for both TrafiCam flows, through traficam-profile.xmi (UNIFIED)
+
+  This mapping is complete. See traficam-detections-mapping.xmi for the other flow.
+
+  NOT A MAPPING, and not planned to be:
+    - the detections. TrafiCamListener windows them for 2 seconds and reduces them per
+      object id, and `classificationName` reads a classMap from a CamConfig that arrived
+      earlier on another topic. The engine sees one payload and holds no state, within a
+      message or across messages.
+    - the binary EMF format itself. PayloadIngest reads XMI and JSON, so a binary channel
+      reports FORMAT_UNSUPPORTED. An ingress gap, not an engine one.
+-->
+<sensinactMapping:ProviderMapping
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:sensinactMapping="https://fennec.eclipse.org/event.atlas/mapping/1.0"
+    mid="traficam-config"
+    providerTimestamp="true">
+
+  <!-- The camera, which the adapter copies from the topic into the payload. The same value
+       TrafiCamDetections.camId carries, so both flows name one provider. -->
+  <name>
+    <featurePath xsi:type="ecore:EAttribute"
+        href="https://jena.de/models/traficam/1.0#//CamConfig/camId"/>
+  </name>
+
+  <!-- Both TrafiCam mappings name this profile, whose providerStrategy is UNIFIED, so both
+       build the same model and their payloads reach ONE provider. The fragment is the
+       profileId, not "/": that is what ProviderMappingRegistryImpl looks up in the profile
+       registry when the document itself is not reachable - which is the normal case for a
+       mapping delivered from a Model Atlas. -->
+  <profile href="../sensinactprofile/traficam-profile.xmi#traficam"/>
+
+  <providerClasses href="https://jena.de/models/traficam/1.0#//CamConfig"/>
+
+  <!--
+    provider.getServices().put("observedArea", observedArea) with objects := viewport(scene).
+
+    serviceEClass names the very EClass the adapter instantiates, so the twin builds the
+    service from it: `objects` and `classificationName` with the types de.jena.traficam
+    declares, and no eType in the mapping. The block below only says where the value comes
+    from. The four corner points become a GeometryCollection, which is a computation over the
+    whole Scene - so a ValueFunction, the producer form; the UDP side publishes
+    `udp.traficam.viewport` and the mapping names it.
+
+    NOTE. A typed service takes its metadata from the Metadata annotations of its EClass, so
+    `sensorthings.observedArea` is no longer written by this mapping - and ObservedObjects
+    carries no such annotation, while TraficamAdmin.viewport does. One line in traficam.ecore
+    fixes that for the adapter and for this mapping at the same time:
+
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="objects" eType="...EGeoJsonObject">
+        <eAnnotations source="Metadata">
+          <details key="sensorthings.observedArea" value="true"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+
+    Until then drop the serviceEClass line and restate eType plus extraMetadata here, which is
+    what this mapping did before 2026-11-06.
+  -->
+  <services mid="observedArea">
+    <name name="Observed area"/>
+    <serviceEClass href="https://model.data.jena.de/sensinact/traficam/1.0#//ObservedObjects"/>
+    <!-- No `name`: on an untyped service it would become the resource's friendlyName metadata,
+         but a typed service never reaches mapResource - ProviderModelSensinactMapper.mapService
+         returns as soon as it sees the serviceEClass, and warns that name, unit and
+         extraMetadata are dropped. ObservedObjects.objects carries its own Metadata
+         annotations, and those are what the twin publishes. -->
+    <resources mid="objects">
+      <valueMapping functionId="udp.traficam.viewport">
+        <featurePath xsi:type="ecore:EReference"
+            href="https://jena.de/models/traficam/1.0#//CamConfig/scene"/>
+      </valueMapping>
+    </resources>
+  </services>
+
+  <!-- extendAdmin: the viewport below is no resource of sensiNact's Admin, so the engine
+       builds an Admin subclass carrying it and retypes this provider's admin once. -->
+  <admin mid="admin" extendAdmin="true">
+    <name name="Admin"/>
+
+    <!--
+      WORKS TODAY. admin.setLocation(point(config.getLocation())) is two plain attributes:
+      CamConfig.location -> GpsCoordinates.latitude / .longitude. No array, no index - unlike
+      ILSA's geoJson.bbox, which is a Double[] inside one attribute.
+    -->
+    <latitudeRef xsi:type="ecore:EReference"
+        href="https://jena.de/models/traficam/1.0#//CamConfig/location"/>
+    <latitudeRef xsi:type="ecore:EAttribute"
+        href="https://jena.de/models/traficam/1.0#//GpsCoordinates/latitude"/>
+    <longitudeRef xsi:type="ecore:EReference"
+        href="https://jena.de/models/traficam/1.0#//CamConfig/location"/>
+    <longitudeRef xsi:type="ecore:EAttribute"
+        href="https://jena.de/models/traficam/1.0#//GpsCoordinates/longitude"/>
+
+    <!--
+      admin.setFriendlyName("Camera " + camId). A friendlyNameMapping takes the expression;
+      friendlyNameFeature could only have named the attribute.
+    -->
+    <friendlyNameMapping expression="'Camera ' + self.camId"/>
+
+    <!--
+      admin.setViewport(viewport(scene)) - the same function as the observedArea service.
+
+      `viewport` is an attribute of TraficamAdmin, which EXTENDS Admin. The mapping does not
+      name that EClass: with extendAdmin the engine builds its own Admin subclass from these
+      resource mappings, one EAttribute per mid, typed by the eType below.
+
+      KNOW THE LIMIT. sensiNact's `admin` reference is declared by Provider and typed Admin,
+      so this value lives on the instance, not in the model. A direct resource read answers
+      and the history provider sees it; the provider description, filters and SensorThings do
+      not, because they build from snapshots. The TraficamAdmin.viewport annotation
+      `sensorthings.observedArea` therefore cannot have an effect either. The observedArea
+      service above publishes the same geometry and is visible everywhere, which is why it is
+      the one to read northbound.
+    -->
+    <!-- No `name` here either, and this one is dropped silently rather than with a warning:
+         AdminEClassBuilder names the generated EAttribute from the mid and types it from the
+         eType below, and never reads the resource's name. -->
+    <resources mid="viewport">
+      <eType xsi:type="ecore:EDataType"
+          href="https://eclipse.org/sensinact/core/provider/1.0#//EGeoJsonObject"/>
+      <valueMapping functionId="udp.traficam.viewport">
+        <featurePath xsi:type="ecore:EReference"
+            href="https://jena.de/models/traficam/1.0#//CamConfig/scene"/>
+      </valueMapping>
+    </resources>
+  </admin>
+</sensinactMapping:ProviderMapping>

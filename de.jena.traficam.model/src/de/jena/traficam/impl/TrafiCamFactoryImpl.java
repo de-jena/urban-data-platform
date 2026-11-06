@@ -78,6 +78,8 @@ public class TrafiCamFactoryImpl extends EFactoryImpl implements TrafiCamFactory
 			case TrafiCamPackage.FIELD_OF_VIEW: return createFieldOfView();
 			case TrafiCamPackage.SCENE: return createScene();
 			case TrafiCamPackage.CLASS_MAP: return (EObject)createClassMap();
+			case TrafiCamPackage.TRAFI_CAM_DETECTIONS: return createTrafiCamDetections();
+			case TrafiCamPackage.OBSERVED_CLASS: return createObservedClass();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -209,6 +211,28 @@ public class TrafiCamFactoryImpl extends EFactoryImpl implements TrafiCamFactory
 	public Map.Entry<String, String> createClassMap() {
 		ClassMapImpl classMap = new ClassMapImpl();
 		return classMap;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public TrafiCamDetections createTrafiCamDetections() {
+		TrafiCamDetectionsImpl trafiCamDetections = new TrafiCamDetectionsImpl();
+		return trafiCamDetections;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ObservedClass createObservedClass() {
+		ObservedClassImpl observedClass = new ObservedClassImpl();
+		return observedClass;
 	}
 
 	/**

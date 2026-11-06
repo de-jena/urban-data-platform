@@ -107,6 +107,24 @@ public interface TrafiCamFactory extends EFactory {
 	Scene createScene();
 
 	/**
+	 * Returns a new object of class '<em>Detections</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Detections</em>'.
+	 * @generated
+	 */
+	TrafiCamDetections createTrafiCamDetections();
+
+	/**
+	 * Returns a new object of class '<em>Observed Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Observed Class</em>'.
+	 * @generated
+	 */
+	ObservedClass createObservedClass();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

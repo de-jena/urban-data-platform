@@ -468,13 +468,22 @@ public interface TrafiCamPackage extends org.eclipse.emf.ecore.EPackage {
 	int CAM_CONFIG__CLASS_MAP = 4;
 
 	/**
+	 * The feature id for the '<em><b>Cam Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAM_CONFIG__CAM_ID = 5;
+
+	/**
 	 * The number of structural features of the '<em>Cam Config</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAM_CONFIG_FEATURE_COUNT = 5;
+	int CAM_CONFIG_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Cam Config</em>' class.
@@ -715,6 +724,116 @@ public interface TrafiCamPackage extends org.eclipse.emf.ecore.EPackage {
 	int CLASS_MAP_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link de.jena.traficam.impl.TrafiCamDetectionsImpl <em>Detections</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.traficam.impl.TrafiCamDetectionsImpl
+	 * @see de.jena.traficam.impl.TrafiCamPackageImpl#getTrafiCamDetections()
+	 * @generated
+	 */
+	int TRAFI_CAM_DETECTIONS = 9;
+
+	/**
+	 * The feature id for the '<em><b>Cam Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFI_CAM_DETECTIONS__CAM_ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFI_CAM_DETECTIONS__TIME = 1;
+
+	/**
+	 * The feature id for the '<em><b>Classes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFI_CAM_DETECTIONS__CLASSES = 2;
+
+	/**
+	 * The number of structural features of the '<em>Detections</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFI_CAM_DETECTIONS_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Detections</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAFI_CAM_DETECTIONS_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.jena.traficam.impl.ObservedClassImpl <em>Observed Class</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.jena.traficam.impl.ObservedClassImpl
+	 * @see de.jena.traficam.impl.TrafiCamPackageImpl#getObservedClass()
+	 * @generated
+	 */
+	int OBSERVED_CLASS = 10;
+
+	/**
+	 * The feature id for the '<em><b>Class Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OBSERVED_CLASS__CLASS_ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Classification Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OBSERVED_CLASS__CLASSIFICATION_NAME = 1;
+
+	/**
+	 * The feature id for the '<em><b>Objects</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OBSERVED_CLASS__OBJECTS = 2;
+
+	/**
+	 * The number of structural features of the '<em>Observed Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OBSERVED_CLASS_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Observed Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OBSERVED_CLASS_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link de.jena.traficam.MessagType <em>Messag Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -722,7 +841,7 @@ public interface TrafiCamPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see de.jena.traficam.impl.TrafiCamPackageImpl#getMessagType()
 	 * @generated
 	 */
-	int MESSAG_TYPE = 9;
+	int MESSAG_TYPE = 11;
 
 
 	/**
@@ -1106,6 +1225,17 @@ public interface TrafiCamPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getCamConfig_ClassMap();
 
 	/**
+	 * Returns the meta object for the attribute '{@link de.jena.traficam.CamConfig#getCamId <em>Cam Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Cam Id</em>'.
+	 * @see de.jena.traficam.CamConfig#getCamId()
+	 * @see #getCamConfig()
+	 * @generated
+	 */
+	EAttribute getCamConfig_CamId();
+
+	/**
 	 * Returns the meta object for class '{@link de.jena.traficam.Calibration <em>Calibration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1289,6 +1419,92 @@ public interface TrafiCamPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EAttribute getClassMap_Value();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.traficam.TrafiCamDetections <em>Detections</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Detections</em>'.
+	 * @see de.jena.traficam.TrafiCamDetections
+	 * @generated
+	 */
+	EClass getTrafiCamDetections();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.traficam.TrafiCamDetections#getCamId <em>Cam Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Cam Id</em>'.
+	 * @see de.jena.traficam.TrafiCamDetections#getCamId()
+	 * @see #getTrafiCamDetections()
+	 * @generated
+	 */
+	EAttribute getTrafiCamDetections_CamId();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.traficam.TrafiCamDetections#getTime <em>Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Time</em>'.
+	 * @see de.jena.traficam.TrafiCamDetections#getTime()
+	 * @see #getTrafiCamDetections()
+	 * @generated
+	 */
+	EAttribute getTrafiCamDetections_Time();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.jena.traficam.TrafiCamDetections#getClasses <em>Classes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Classes</em>'.
+	 * @see de.jena.traficam.TrafiCamDetections#getClasses()
+	 * @see #getTrafiCamDetections()
+	 * @generated
+	 */
+	EReference getTrafiCamDetections_Classes();
+
+	/**
+	 * Returns the meta object for class '{@link de.jena.traficam.ObservedClass <em>Observed Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Observed Class</em>'.
+	 * @see de.jena.traficam.ObservedClass
+	 * @generated
+	 */
+	EClass getObservedClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.traficam.ObservedClass#getClassId <em>Class Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Class Id</em>'.
+	 * @see de.jena.traficam.ObservedClass#getClassId()
+	 * @see #getObservedClass()
+	 * @generated
+	 */
+	EAttribute getObservedClass_ClassId();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.jena.traficam.ObservedClass#getClassificationName <em>Classification Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Classification Name</em>'.
+	 * @see de.jena.traficam.ObservedClass#getClassificationName()
+	 * @see #getObservedClass()
+	 * @generated
+	 */
+	EAttribute getObservedClass_ClassificationName();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.jena.traficam.ObservedClass#getObjects <em>Objects</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Objects</em>'.
+	 * @see de.jena.traficam.ObservedClass#getObjects()
+	 * @see #getObservedClass()
+	 * @generated
+	 */
+	EReference getObservedClass_Objects();
 
 	/**
 	 * Returns the meta object for enum '{@link de.jena.traficam.MessagType <em>Messag Type</em>}'.
@@ -1614,6 +1830,14 @@ public interface TrafiCamPackage extends org.eclipse.emf.ecore.EPackage {
 		EReference CAM_CONFIG__CLASS_MAP = eINSTANCE.getCamConfig_ClassMap();
 
 		/**
+		 * The meta object literal for the '<em><b>Cam Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CAM_CONFIG__CAM_ID = eINSTANCE.getCamConfig_CamId();
+
+		/**
 		 * The meta object literal for the '{@link de.jena.traficam.impl.CalibrationImpl <em>Calibration</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1756,6 +1980,74 @@ public interface TrafiCamPackage extends org.eclipse.emf.ecore.EPackage {
 		 * @generated
 		 */
 		EAttribute CLASS_MAP__VALUE = eINSTANCE.getClassMap_Value();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.traficam.impl.TrafiCamDetectionsImpl <em>Detections</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.traficam.impl.TrafiCamDetectionsImpl
+		 * @see de.jena.traficam.impl.TrafiCamPackageImpl#getTrafiCamDetections()
+		 * @generated
+		 */
+		EClass TRAFI_CAM_DETECTIONS = eINSTANCE.getTrafiCamDetections();
+
+		/**
+		 * The meta object literal for the '<em><b>Cam Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRAFI_CAM_DETECTIONS__CAM_ID = eINSTANCE.getTrafiCamDetections_CamId();
+
+		/**
+		 * The meta object literal for the '<em><b>Time</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRAFI_CAM_DETECTIONS__TIME = eINSTANCE.getTrafiCamDetections_Time();
+
+		/**
+		 * The meta object literal for the '<em><b>Classes</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRAFI_CAM_DETECTIONS__CLASSES = eINSTANCE.getTrafiCamDetections_Classes();
+
+		/**
+		 * The meta object literal for the '{@link de.jena.traficam.impl.ObservedClassImpl <em>Observed Class</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.jena.traficam.impl.ObservedClassImpl
+		 * @see de.jena.traficam.impl.TrafiCamPackageImpl#getObservedClass()
+		 * @generated
+		 */
+		EClass OBSERVED_CLASS = eINSTANCE.getObservedClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Class Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute OBSERVED_CLASS__CLASS_ID = eINSTANCE.getObservedClass_ClassId();
+
+		/**
+		 * The meta object literal for the '<em><b>Classification Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute OBSERVED_CLASS__CLASSIFICATION_NAME = eINSTANCE.getObservedClass_ClassificationName();
+
+		/**
+		 * The meta object literal for the '<em><b>Objects</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OBSERVED_CLASS__OBJECTS = eINSTANCE.getObservedClass_Objects();
 
 		/**
 		 * The meta object literal for the '{@link de.jena.traficam.MessagType <em>Messag Type</em>}' enum.

@@ -17,9 +17,8 @@ import java.io.IOException;
 import java.lang.System.Logger;
 import java.lang.System.Logger.Level;
 import java.nio.ByteBuffer;
-import java.util.List;
+import java.util.Date;
 import java.util.Map;
-import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -28,11 +27,7 @@ import java.util.concurrent.TimeUnit;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.BinaryResourceImpl;
-import org.eclipse.sensinact.core.push.DataUpdate;
-import org.eclipse.sensinact.gateway.geojson.Geometry;
-import org.eclipse.sensinact.gateway.geojson.FeatureCollection;
-import org.eclipse.sensinact.gateway.geojson.GeometryCollection;
-import org.eclipse.sensinact.gateway.geojson.Point;
+import org.eclipse.fennec.event.atlas.mapping.InstancePusher;
 import org.gecko.osgi.messaging.Message;
 import org.gecko.osgi.messaging.MessagingService;
 import org.osgi.service.component.annotations.Activate;
@@ -43,32 +38,36 @@ import org.osgi.util.pushstream.PushEvent;
 import org.osgi.util.pushstream.PushStream;
 
 import de.jena.traficam.CamConfig;
-import de.jena.traficam.GpsCoordinates;
-import de.jena.traficam.Scene;
+import de.jena.traficam.ObservedClass;
+import de.jena.traficam.TrafiCamDetections;
+import de.jena.traficam.TrafiCamFactory;
 import de.jena.traficam.TrafiCamObject;
 import de.jena.traficam.TrafiCamPackage;
-import de.jena.traficam.sensinact.model.traficamprovider.ObservedObjects;
-import de.jena.traficam.sensinact.model.traficamprovider.TraficamAdmin;
-import de.jena.traficam.sensinact.model.traficamprovider.TraficamProvider;
-import de.jena.traficam.sensinact.model.traficamprovider.TraficamproviderFactory;
 
 /**
  * Subscribes to the TrafiCam topics on the {@code read} gecko messaging service:
  * {@code 5g/traficam/<cam>/<class>} carries one binary EMF {@link TrafiCamObject} per detection,
  * {@code 5g/config/traficam/<cam>} and {@code 5g/traficam/<cam>/config/retained} a binary EMF
- * {@link CamConfig}. Detections are pushed per class every {@link #WINDOW_SECONDS} seconds.
+ * {@link CamConfig}.
+ * <p>
+ * Both flows leave through the same door: the adapter deserializes the payload and hands an
+ * EObject to the {@link InstancePusher}, which finds the mappings registered for its EClass.
+ * What the adapter still does itself is the part a mapping cannot express - the binary EMF
+ * read, the camera and class ids that live in the topic rather than the payload, the
+ * {@link #WINDOW_SECONDS}-second window, and the class name, which comes from a
+ * {@link CamConfig} that arrived earlier on another topic.
  */
 @Component(immediate = true)
 public class TrafiCamListener {
+
+	@Reference
+	InstancePusher pusher;
 
 	private static final Logger logger = System.getLogger(TrafiCamListener.class.getName());
 
 	static final String TOPIC = "5g/traficam/";
 	static final String CONFIG_TOPIC = "5g/config/traficam/";
 	static final long WINDOW_SECONDS = 2;
-
-	@Reference
-	DataUpdate sensiNact;
 
 	@Reference(target = "(id=read)")
 	private MessagingService messaging;
@@ -137,35 +136,64 @@ public class TrafiCamListener {
 		}
 	}
 
+	/**
+	 * Closes every window and pushes one {@link TrafiCamDetections} per camera.
+	 * <p>
+	 * Per camera, not per class: the camera is the provider, and its object classes are
+	 * services of that provider. One aggregate carrying them all reaches the twin as one
+	 * update, and the mapping fans the {@code classes} collection out into the services.
+	 * <p>
+	 * A class whose window has nothing new to say is left out, and a camera all of whose
+	 * classes are quiet is not pushed at all. That is how a partial payload is meant to read:
+	 * the services it does not carry keep the values they had.
+	 */
 	void flushWindows() {
-		long now = System.currentTimeMillis();
-		windows.forEach((camId, classes) -> classes.forEach((classId, window) -> {
-			Optional<FeatureCollection> seen = window.flush();
-			if (seen.isPresent()) {
-				TrafiCamDto dto = new TrafiCamDto(camId, classId, className(camId, classId), seen.get(), now);
-				push(dto, "objects of class " + classId + " of camera " + camId);
+		Date now = new Date();
+		windows.forEach((camId, classes) -> {
+			TrafiCamDetections detections = TrafiCamFactory.eINSTANCE.createTrafiCamDetections();
+			detections.setCamId(camId);
+			detections.setTime(now);
+			classes.forEach((classId, window) -> window.flush().ifPresent(objects -> {
+				ObservedClass observed = TrafiCamFactory.eINSTANCE.createObservedClass();
+				observed.setClassId(classId);
+				observed.setClassificationName(className(camId, classId));
+				// Containment: the objects move out of the resources they were read from,
+				// which have served their purpose.
+				observed.getObjects().addAll(objects);
+				detections.getClasses().add(observed);
+			}));
+			if (detections.getClasses().isEmpty()) {
+				return;
 			}
-		}));
+			int applied = pusher.pushInstance(detections);
+			if (applied == 0) {
+				logger.log(Level.WARNING, "no provider mapping for the detections of camera {0}", camId);
+			} else {
+				logger.log(Level.DEBUG, "pushed {0} detection class(es) of camera {1}",
+						detections.getClasses().size(), camId);
+			}
+		});
 	}
 
 	private void updateConfig(String camId, byte[] payload) throws IOException {
 		CamConfig config = load(payload, CamConfig.class);
+		config.setCamId(camId);
 		configs.put(camId, config);
-		TraficamproviderFactory factory = TraficamproviderFactory.eINSTANCE;
-		TraficamProvider provider = factory.createTraficamProvider();
-		provider.setId(camId);
-		TraficamAdmin admin = factory.createTraficamAdmin();
-		admin.setFriendlyName("Camera " + camId);
-		admin.setLocation(point(config.getLocation()));
-		GeometryCollection viewport = viewport(config.getScene());
-		admin.setViewport(viewport);
-		provider.setAdmin(admin);
-		ObservedObjects observedArea = factory.createObservedObjects();
-		observedArea.setObjects(viewport);
-		provider.getServices().put("observedArea", observedArea);
-		push(provider, "configuration of camera " + camId);
+		int applied = pusher.pushInstance(config);
+		if (applied == 0) {
+			logger.log(Level.WARNING, "no provider mapping for the {0} CamConfig",
+					config.getCamId());
+		} else {
+			logger.log(Level.INFO, "pushed {0} CamConfig", config.getCamId());
+		}
 	}
 
+	/**
+	 * The name the camera gives an object class, from the {@code classMap} of its
+	 * configuration. The lookup crosses messages - the configuration arrived earlier, on
+	 * another topic - so it happens here rather than in the mapping, and the class id stands
+	 * in while no configuration has arrived.
+	 */
 	private String className(String camId, String classId) {
 		CamConfig config = configs.get(camId);
 		if (config == null) {
@@ -176,19 +204,6 @@ public class TrafiCamListener {
 		return name == null ? classId : name;
 	}
 
-	private static GeometryCollection viewport(Scene scene) {
-		if (scene == null || scene.getLeftBottom() == null) {
-			return null;
-		}
-		List<Geometry> corners = List.of(point(scene.getLeftBottom()), point(scene.getRightBottom()),
-				point(scene.getRightTop()), point(scene.getLeftTop()));
-		return new GeometryCollection(corners, null, null);
-	}
-
-	private static Point point(GpsCoordinates gps) {
-		return gps == null ? null : new Point(gps.getLongitude(), gps.getLatitude());
-	}
-
 	@SuppressWarnings("unchecked")
 	private static <T extends EObject> T load(byte[] payload, Class<T> type) throws IOException {
 		Resource resource = new BinaryResourceImpl();
@@ -197,10 +212,5 @@ public class TrafiCamListener {
 			throw new IOException("payload is no " + type.getSimpleName());
 		}
 		return (T) resource.getContents().get(0);
-	}
-
-	private void push(Object update, String what) {
-		sensiNact.pushUpdate(update)
-				.onFailure(e -> logger.log(Level.ERROR, "Error while pushing " + what + " to sensiNact", e));
 	}
 }

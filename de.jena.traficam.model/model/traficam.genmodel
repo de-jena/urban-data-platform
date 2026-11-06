@@ -55,6 +55,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference traficam.ecore#//CamConfig/fieldOfView"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference traficam.ecore#//CamConfig/scene"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference traficam.ecore#//CamConfig/classMap"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute traficam.ecore#//CamConfig/camId"/>
     </genClasses>
     <genClasses ecoreClass="traficam.ecore#//Calibration">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute traficam.ecore#//Calibration/focalDistance"/>
@@ -76,6 +77,16 @@
     <genClasses ecoreClass="traficam.ecore#//ClassMap">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute traficam.ecore#//ClassMap/key"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute traficam.ecore#//ClassMap/value"/>
+    </genClasses>
+    <genClasses ecoreClass="traficam.ecore#//TrafiCamDetections">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute traficam.ecore#//TrafiCamDetections/camId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute traficam.ecore#//TrafiCamDetections/time"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference traficam.ecore#//TrafiCamDetections/classes"/>
+    </genClasses>
+    <genClasses ecoreClass="traficam.ecore#//ObservedClass">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute traficam.ecore#//ObservedClass/classId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute traficam.ecore#//ObservedClass/classificationName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference traficam.ecore#//ObservedClass/objects"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

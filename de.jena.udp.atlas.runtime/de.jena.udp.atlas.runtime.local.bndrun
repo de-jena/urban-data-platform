@@ -3,7 +3,30 @@
 # environment with localhost defaults (Model Atlas :8086, broker :1883, Timescale :5432), so
 # set the EVENTATLAS_* / TIMESCALE_* variables of README.md in the launch where they differ.
 # Resolve the docker bndrun, not this one: it inherits the -runbundles.
--include: de.jena.udp.atlas.runtime.docker.bndrun
+-include: \
+	de.jena.udp.atlas.runtime.docker.bndrun,\
+	secrets.bnd
 
 -runtrace: true
--runvm.local: -Duser.dir=${.}/generated/tmp
+
+# Mappings and profiles from the workspace instead of the container mounts.
+#
+# The image reads them from /opt/eventatlas/runtime/{mappings,profiles}, which does not exist
+# on a dev machine. Both locations in org.eclipse.fennec.event.atlas.mapping.docker.config are
+# $[env:...;default=$[prop:...]] placeholders, so a -D here redirects them with no change to
+# the image and no second config bundle - redefining the PIDs in de.jena.udp.atlas.runtime.config
+# would collide with the ones the Event Atlas config bundle already owns.
+#
+# ONE DIRECTORY EACH, and it must be the leaf: a location is walked RECURSIVELY, so pointing at
+# eventatlas/seed would sweep the profile into the mapping registry, where it has no `mid` to be
+# keyed by. Adding a second adapter's mappings means a second array entry in that config.json,
+# not a longer value here.
+#
+# The profile has to be set whenever the mappings reference one: traficam-config and
+# traficam-detections both name the UNIFIED profile that puts them on one provider, and a
+# mapping whose profile resolves to nothing is skipped at registration rather than registered
+# profile-less.
+-runvm.local: \
+	-Duser.dir=${.}/generated/tmp, \
+	-DEVENTATLAS_MAPPING_DIR=${.}/../de.jena.udp.atlas.traficam/eventatlas/seed/sensinactmapping, \
+	-DEVENTATLAS_PROFILE_DIR=${.}/../de.jena.udp.atlas.traficam/eventatlas/seed/sensinactprofile

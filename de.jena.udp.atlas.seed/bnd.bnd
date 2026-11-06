@@ -9,7 +9,11 @@ Bundle-Version: 1.0.0.SNAPSHOT
 	org.eclipse.emf.ecore,\
 	org.eclipse.emf.ecore.xmi,\
 	org.eclipse.fennec.event.atlas.mapping;version=latest,\
-	org.gecko.weather.model;version=latest
+	org.gecko.weather.model;version=latest,\
+	org.eclipse.sensinact.gateway.core.models.provider;version=latest,\
+	org.eclipse.sensinact.gateway.core.geo-json;version=latest,\
+	de.jena.traficam.model;version=snapshot,\
+	de.jena.traficam.sensinact.model;version=snapshot
 
 -testpath: \
 	junit-jupiter-api,\

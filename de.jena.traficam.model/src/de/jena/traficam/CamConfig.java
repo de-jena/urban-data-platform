@@ -32,6 +32,7 @@ import org.osgi.annotation.versioning.ProviderType;
  *   <li>{@link de.jena.traficam.CamConfig#getFieldOfView <em>Field Of View</em>}</li>
  *   <li>{@link de.jena.traficam.CamConfig#getScene <em>Scene</em>}</li>
  *   <li>{@link de.jena.traficam.CamConfig#getClassMap <em>Class Map</em>}</li>
+ *   <li>{@link de.jena.traficam.CamConfig#getCamId <em>Cam Id</em>}</li>
  * </ul>
  *
  * @see de.jena.traficam.TrafiCamPackage#getCamConfig()
@@ -140,5 +141,30 @@ public interface CamConfig extends EObject {
 	 * @generated
 	 */
 	EMap<String, String> getClassMap();
+
+	/**
+	 * Returns the value of the '<em><b>Cam Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The id of the trafic cam
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Cam Id</em>' attribute.
+	 * @see #setCamId(String)
+	 * @see de.jena.traficam.TrafiCamPackage#getCamConfig_CamId()
+	 * @model transient="true"
+	 * @generated
+	 */
+	String getCamId();
+
+	/**
+	 * Sets the value of the '{@link de.jena.traficam.CamConfig#getCamId <em>Cam Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Cam Id</em>' attribute.
+	 * @see #getCamId()
+	 * @generated
+	 */
+	void setCamId(String value);
 
 } // CamConfig

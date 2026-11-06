@@ -18,8 +18,10 @@ import de.jena.traficam.Coordinates;
 import de.jena.traficam.FieldOfView;
 import de.jena.traficam.GpsCoordinates;
 import de.jena.traficam.MessagType;
+import de.jena.traficam.ObservedClass;
 import de.jena.traficam.Scene;
 import de.jena.traficam.TrafiCam;
+import de.jena.traficam.TrafiCamDetections;
 import de.jena.traficam.TrafiCamFactory;
 import de.jena.traficam.TrafiCamObject;
 import de.jena.traficam.TrafiCamPackage;
@@ -103,6 +105,20 @@ public class TrafiCamPackageImpl extends EPackageImpl implements TrafiCamPackage
 	 * @generated
 	 */
 	private EClass classMapEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass trafiCamDetectionsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass observedClassEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -527,6 +543,16 @@ public class TrafiCamPackageImpl extends EPackageImpl implements TrafiCamPackage
 	 * @generated
 	 */
 	@Override
+	public EAttribute getCamConfig_CamId() {
+		return (EAttribute)camConfigEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getCalibration() {
 		return calibrationEClass;
 	}
@@ -697,6 +723,86 @@ public class TrafiCamPackageImpl extends EPackageImpl implements TrafiCamPackage
 	 * @generated
 	 */
 	@Override
+	public EClass getTrafiCamDetections() {
+		return trafiCamDetectionsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTrafiCamDetections_CamId() {
+		return (EAttribute)trafiCamDetectionsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTrafiCamDetections_Time() {
+		return (EAttribute)trafiCamDetectionsEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getTrafiCamDetections_Classes() {
+		return (EReference)trafiCamDetectionsEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getObservedClass() {
+		return observedClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getObservedClass_ClassId() {
+		return (EAttribute)observedClassEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getObservedClass_ClassificationName() {
+		return (EAttribute)observedClassEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getObservedClass_Objects() {
+		return (EReference)observedClassEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getMessagType() {
 		return messagTypeEEnum;
 	}
@@ -769,6 +875,7 @@ public class TrafiCamPackageImpl extends EPackageImpl implements TrafiCamPackage
 		createEReference(camConfigEClass, CAM_CONFIG__FIELD_OF_VIEW);
 		createEReference(camConfigEClass, CAM_CONFIG__SCENE);
 		createEReference(camConfigEClass, CAM_CONFIG__CLASS_MAP);
+		createEAttribute(camConfigEClass, CAM_CONFIG__CAM_ID);
 
 		calibrationEClass = createEClass(CALIBRATION);
 		createEAttribute(calibrationEClass, CALIBRATION__FOCAL_DISTANCE);
@@ -790,6 +897,16 @@ public class TrafiCamPackageImpl extends EPackageImpl implements TrafiCamPackage
 		classMapEClass = createEClass(CLASS_MAP);
 		createEAttribute(classMapEClass, CLASS_MAP__KEY);
 		createEAttribute(classMapEClass, CLASS_MAP__VALUE);
+
+		trafiCamDetectionsEClass = createEClass(TRAFI_CAM_DETECTIONS);
+		createEAttribute(trafiCamDetectionsEClass, TRAFI_CAM_DETECTIONS__CAM_ID);
+		createEAttribute(trafiCamDetectionsEClass, TRAFI_CAM_DETECTIONS__TIME);
+		createEReference(trafiCamDetectionsEClass, TRAFI_CAM_DETECTIONS__CLASSES);
+
+		observedClassEClass = createEClass(OBSERVED_CLASS);
+		createEAttribute(observedClassEClass, OBSERVED_CLASS__CLASS_ID);
+		createEAttribute(observedClassEClass, OBSERVED_CLASS__CLASSIFICATION_NAME);
+		createEReference(observedClassEClass, OBSERVED_CLASS__OBJECTS);
 
 		// Create enums
 		messagTypeEEnum = createEEnum(MESSAG_TYPE);
@@ -864,6 +981,7 @@ public class TrafiCamPackageImpl extends EPackageImpl implements TrafiCamPackage
 		initEReference(getCamConfig_FieldOfView(), this.getFieldOfView(), null, "fieldOfView", null, 0, 1, CamConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCamConfig_Scene(), this.getScene(), null, "scene", null, 0, 1, CamConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCamConfig_ClassMap(), this.getClassMap(), null, "classMap", null, 0, -1, CamConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCamConfig_CamId(), ecorePackage.getEString(), "camId", null, 0, 1, CamConfig.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(calibrationEClass, Calibration.class, "Calibration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCalibration_FocalDistance(), ecorePackage.getEDouble(), "focalDistance", null, 0, 1, Calibration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -885,6 +1003,16 @@ public class TrafiCamPackageImpl extends EPackageImpl implements TrafiCamPackage
 		initEClass(classMapEClass, Map.Entry.class, "ClassMap", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getClassMap_Key(), ecorePackage.getEString(), "key", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getClassMap_Value(), ecorePackage.getEString(), "value", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(trafiCamDetectionsEClass, TrafiCamDetections.class, "TrafiCamDetections", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTrafiCamDetections_CamId(), ecorePackage.getEString(), "camId", null, 0, 1, TrafiCamDetections.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTrafiCamDetections_Time(), ecorePackage.getEDate(), "time", null, 0, 1, TrafiCamDetections.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTrafiCamDetections_Classes(), this.getObservedClass(), null, "classes", null, 0, -1, TrafiCamDetections.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(observedClassEClass, ObservedClass.class, "ObservedClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getObservedClass_ClassId(), ecorePackage.getEString(), "classId", null, 0, 1, ObservedClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getObservedClass_ClassificationName(), ecorePackage.getEString(), "classificationName", null, 0, 1, ObservedClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getObservedClass_Objects(), this.getTrafiCamObject(), null, "objects", null, 0, -1, ObservedClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(messagTypeEEnum, MessagType.class, "MessagType");
@@ -931,6 +1059,60 @@ public class TrafiCamPackageImpl extends EPackageImpl implements TrafiCamPackage
 		   source,
 		   new String[] {
 			   "basePackage", "de.jena"
+		   });
+		addAnnotation
+		  (getCamConfig_CamId(),
+		   source,
+		   new String[] {
+			   "documentation", "The id of the trafic cam"
+		   });
+		addAnnotation
+		  (trafiCamDetectionsEClass,
+		   source,
+		   new String[] {
+			   "documentation", "One flushed detection window of one camera: everything it saw since the last flush, grouped by object class.\n\nThe camera sends one binary TrafiCamObject per detection on 5g/traficam/<cam>/<class>. TrafiCamListener windows those, reduces them per object id, then fills this object and hands it to the mapping engine. The aggregation stays in the adapter - it is state the engine does not hold - while the provider shaping becomes a mapping over this object.\n\nIt is built in process and never travels on MQTT, so its features carry no positional constraint: unlike CamConfig, where BinaryResourceImpl identifies a feature by its position and a new attribute has to come last, a feature may be added here anywhere."
+		   });
+		addAnnotation
+		  (getTrafiCamDetections_CamId(),
+		   source,
+		   new String[] {
+			   "documentation", "The camera, taken from the third segment of the MQTT topic. The mapping takes the provider id from it, the same value CamConfig.camId carries."
+		   });
+		addAnnotation
+		  (getTrafiCamDetections_Time(),
+		   source,
+		   new String[] {
+			   "documentation", "When the window was flushed, which is the instant the whole provider is stamped with. The engine reads an EDate as a timestamp as it stands, so a TimestampMapping needs no hint."
+		   });
+		addAnnotation
+		  (getTrafiCamDetections_Classes(),
+		   source,
+		   new String[] {
+			   "documentation", "The object classes this window saw, one entry each, and one service of the twin each.\n\nThe fan-out is intrinsic: a service mapping whose referencedResource path ends on this collection, and whose name is produced rather than constant, builds one service per entry. A constant name would keep selecting a single element instead."
+		   });
+		addAnnotation
+		  (observedClassEClass,
+		   source,
+		   new String[] {
+			   "documentation", "The objects of one class that one camera saw in one window: one service of the TrafiCam provider.\n\nThe class appears twice, and the two are not the same thing. classId is what the MQTT topic says and what names the service. classificationName is what the camera calls that class, which the adapter resolves from the classMap of a CamConfig that arrived earlier on another topic - a cross-message lookup, so it is resolved before the engine sees the payload."
+		   });
+		addAnnotation
+		  (getObservedClass_ClassId(),
+		   source,
+		   new String[] {
+			   "documentation", "The object class, from the fourth segment of the MQTT topic. It names the service, and it is the key the classMap of the camera configuration is read with.\n\nA string, not the EShort of TrafiCamObject.classId: the topic segment is what groups the window, and it is what the classMap is keyed by."
+		   });
+		addAnnotation
+		  (getObservedClass_ClassificationName(),
+		   source,
+		   new String[] {
+			   "documentation", "The readable name of the class, resolved by the adapter from the classMap of the camera configuration. It falls back to classId while no configuration for this camera has arrived."
+		   });
+		addAnnotation
+		  (getObservedClass_Objects(),
+		   source,
+		   new String[] {
+			   "documentation", "The objects seen in this window, already reduced to one entry per object id - the first sighting of each, which is what the window keeps.\n\nThe list is not a resource itself. The GeoJSON FeatureCollection the twin publishes is computed from it by a value function, the way the viewport is computed from a Scene."
 		   });
 	}
 

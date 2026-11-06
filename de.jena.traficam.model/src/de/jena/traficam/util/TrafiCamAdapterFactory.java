@@ -116,6 +116,14 @@ public class TrafiCamAdapterFactory extends AdapterFactoryImpl {
 				return createClassMapAdapter();
 			}
 			@Override
+			public Adapter caseTrafiCamDetections(TrafiCamDetections object) {
+				return createTrafiCamDetectionsAdapter();
+			}
+			@Override
+			public Adapter caseObservedClass(ObservedClass object) {
+				return createObservedClassAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -258,6 +266,34 @@ public class TrafiCamAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createClassMapAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.traficam.TrafiCamDetections <em>Detections</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.traficam.TrafiCamDetections
+	 * @generated
+	 */
+	public Adapter createTrafiCamDetectionsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.jena.traficam.ObservedClass <em>Observed Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.jena.traficam.ObservedClass
+	 * @generated
+	 */
+	public Adapter createObservedClassAdapter() {
 		return null;
 	}
 

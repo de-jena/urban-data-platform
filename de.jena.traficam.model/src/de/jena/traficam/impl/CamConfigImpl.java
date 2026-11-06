@@ -47,6 +47,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.jena.traficam.impl.CamConfigImpl#getFieldOfView <em>Field Of View</em>}</li>
  *   <li>{@link de.jena.traficam.impl.CamConfigImpl#getScene <em>Scene</em>}</li>
  *   <li>{@link de.jena.traficam.impl.CamConfigImpl#getClassMap <em>Class Map</em>}</li>
+ *   <li>{@link de.jena.traficam.impl.CamConfigImpl#getCamId <em>Cam Id</em>}</li>
  * </ul>
  *
  * @generated
@@ -101,6 +102,26 @@ public class CamConfigImpl extends MinimalEObjectImpl.Container implements CamCo
 	 * @ordered
 	 */
 	protected EMap<String, String> classMap;
+
+	/**
+	 * The default value of the '{@link #getCamId() <em>Cam Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCamId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CAM_ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getCamId() <em>Cam Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCamId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String camId = CAM_ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -320,6 +341,29 @@ public class CamConfigImpl extends MinimalEObjectImpl.Container implements CamCo
 	 * @generated
 	 */
 	@Override
+	public String getCamId() {
+		return camId;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setCamId(String newCamId) {
+		String oldCamId = camId;
+		camId = newCamId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TrafiCamPackage.CAM_CONFIG__CAM_ID, oldCamId, camId));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case TrafiCamPackage.CAM_CONFIG__CALIBRATION:
@@ -355,6 +399,8 @@ public class CamConfigImpl extends MinimalEObjectImpl.Container implements CamCo
 			case TrafiCamPackage.CAM_CONFIG__CLASS_MAP:
 				if (coreType) return getClassMap();
 				else return getClassMap().map();
+			case TrafiCamPackage.CAM_CONFIG__CAM_ID:
+				return getCamId();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -381,6 +427,9 @@ public class CamConfigImpl extends MinimalEObjectImpl.Container implements CamCo
 				return;
 			case TrafiCamPackage.CAM_CONFIG__CLASS_MAP:
 				((EStructuralFeature.Setting)getClassMap()).set(newValue);
+				return;
+			case TrafiCamPackage.CAM_CONFIG__CAM_ID:
+				setCamId((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -409,6 +458,9 @@ public class CamConfigImpl extends MinimalEObjectImpl.Container implements CamCo
 			case TrafiCamPackage.CAM_CONFIG__CLASS_MAP:
 				getClassMap().clear();
 				return;
+			case TrafiCamPackage.CAM_CONFIG__CAM_ID:
+				setCamId(CAM_ID_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -431,8 +483,26 @@ public class CamConfigImpl extends MinimalEObjectImpl.Container implements CamCo
 				return scene != null;
 			case TrafiCamPackage.CAM_CONFIG__CLASS_MAP:
 				return classMap != null && !classMap.isEmpty();
+			case TrafiCamPackage.CAM_CONFIG__CAM_ID:
+				return CAM_ID_EDEFAULT == null ? camId != null : !CAM_ID_EDEFAULT.equals(camId);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (camId: ");
+		result.append(camId);
+		result.append(')');
+		return result.toString();
 	}
 
 } //CamConfigImpl

@@ -5,21 +5,22 @@ Bundle-Description: TrafiCam adapter for the UDP atlas runtime: reads the binary
 Bundle-Version: 1.0.0.SNAPSHOT
 
 -buildpath: \
-	org.osgi.framework,\
-	org.osgi.service.component,\
-	org.osgi.service.component.annotations,\
-	org.osgi.util.promise,\
-	org.osgi.util.function,\
-	org.eclipse.emf.common,\
-	org.eclipse.emf.ecore,\
-	org.eclipse.sensinact.gateway.core.api,\
-	org.eclipse.sensinact.gateway.core.annotation,\
-	org.eclipse.sensinact.gateway.core.geo-json,\
-	org.eclipse.sensinact.gateway.core.models.provider,\
-	org.gecko.osgi.messaging,\
-	org.osgi.util.pushstream,\
-	de.jena.traficam.model,\
-	de.jena.traficam.sensinact.model
+	org.osgi.framework;version=latest,\
+	org.osgi.service.component;version=latest,\
+	org.osgi.service.component.annotations;version=latest,\
+	org.osgi.util.promise;version=latest,\
+	org.osgi.util.function;version=latest,\
+	org.eclipse.emf.common;version=latest,\
+	org.eclipse.emf.ecore;version=latest,\
+	org.eclipse.sensinact.gateway.core.api;version=latest,\
+	org.eclipse.sensinact.gateway.core.annotation;version=latest,\
+	org.eclipse.sensinact.gateway.core.geo-json;version=latest,\
+	org.eclipse.sensinact.gateway.core.models.provider;version=latest,\
+	org.gecko.osgi.messaging;version=latest,\
+	org.osgi.util.pushstream;version=latest,\
+	de.jena.traficam.model;version=snapshot,\
+	de.jena.traficam.sensinact.model;version=snapshot,\
+	org.eclipse.fennec.event.atlas.mapping;version=latest
 
 -testpath: \
 	junit-jupiter-api,\

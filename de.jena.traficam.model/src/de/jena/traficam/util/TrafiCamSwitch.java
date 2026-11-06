@@ -132,6 +132,18 @@ public class TrafiCamSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case TrafiCamPackage.TRAFI_CAM_DETECTIONS: {
+				TrafiCamDetections trafiCamDetections = (TrafiCamDetections)theEObject;
+				T result = caseTrafiCamDetections(trafiCamDetections);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case TrafiCamPackage.OBSERVED_CLASS: {
+				ObservedClass observedClass = (ObservedClass)theEObject;
+				T result = caseObservedClass(observedClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -268,6 +280,36 @@ public class TrafiCamSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseClassMap(Map.Entry<String, String> object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Detections</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Detections</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTrafiCamDetections(TrafiCamDetections object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Observed Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Observed Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseObservedClass(ObservedClass object) {
 		return null;
 	}
 

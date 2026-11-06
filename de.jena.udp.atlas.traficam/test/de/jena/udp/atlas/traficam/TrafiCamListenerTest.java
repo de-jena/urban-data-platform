@@ -14,6 +14,7 @@ package de.jena.udp.atlas.traficam;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertInstanceOf;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.io.ByteArrayOutputStream;
@@ -26,54 +27,85 @@ import java.util.Map;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.impl.BinaryResourceImpl;
-import org.eclipse.sensinact.core.push.DataUpdate;
-import org.eclipse.sensinact.gateway.geojson.Feature;
-import org.eclipse.sensinact.gateway.geojson.FeatureCollection;
-import org.eclipse.sensinact.gateway.geojson.GeometryCollection;
+import org.eclipse.fennec.event.atlas.mapping.InstancePusher;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.osgi.util.promise.Promise;
-import org.osgi.util.promise.Promises;
 
 import de.jena.traficam.CamConfig;
 import de.jena.traficam.GpsCoordinates;
+import de.jena.traficam.ObservedClass;
 import de.jena.traficam.Scene;
+import de.jena.traficam.TrafiCamDetections;
 import de.jena.traficam.TrafiCamFactory;
 import de.jena.traficam.TrafiCamObject;
-import de.jena.traficam.sensinact.model.traficamprovider.TraficamAdmin;
-import de.jena.traficam.sensinact.model.traficamprovider.TraficamProvider;
 
+/**
+ * What the adapter is still responsible for once the provider shaping is a mapping: the
+ * aggregate it builds. The GeoJSON, the provider and the services are the mapping's business
+ * and are not asserted here.
+ */
 class TrafiCamListenerTest {
 
-	private final List<Object> pushed = new ArrayList<>();
+	private final List<EObject> pushed = new ArrayList<>();
 	private TrafiCamListener listener;
 
 	@BeforeEach
 	void createListener() {
 		listener = new TrafiCamListener();
-		listener.sensiNact = new RecordingDataUpdate(pushed);
+		listener.pusher = new RecordingPusher(pushed);
 	}
 
 	@Test
-	void detectionsOfOneClassAreFlushedAsOneFeatureCollectionWithSpeedAndHeading() throws Exception {
+	void theObjectsOfOneClassBecomeOneEntryPerObjectId() throws Exception {
 		listener.handle("5g/traficam/cam1/2", detection(7L, 11.58, 50.92));
 		listener.handle("5g/traficam/cam1/2", detection(8L, 11.59, 50.93));
 		listener.handle("5g/traficam/cam1/2", detection(7L, 11.58, 50.92));
 
 		listener.flushWindows();
 
-		TrafiCamDto dto = assertInstanceOf(TrafiCamDto.class, pushed.get(0));
-		assertEquals("cam1", dto.camId);
-		assertEquals("2", dto.classification);
-		FeatureCollection objects = assertInstanceOf(FeatureCollection.class, dto.objects);
-		assertEquals(2, objects.features().size());
-		Feature first = objects.features().get(0);
-		assertEquals("7", first.id());
-		assertEquals(Map.of("id", 7L, "speed", 12.0, "heading", 180.0), first.properties());
+		TrafiCamDetections detections = assertInstanceOf(TrafiCamDetections.class, pushed.get(0));
+		assertEquals("cam1", detections.getCamId());
+		assertNotNull(detections.getTime());
+		assertEquals(1, detections.getClasses().size());
+
+		ObservedClass observed = detections.getClasses().get(0);
+		assertEquals("2", observed.getClassId());
+		assertEquals(2, observed.getObjects().size());
+
+		TrafiCamObject first = observed.getObjects().get(0);
+		assertEquals(7L, first.getId());
+		assertEquals(12.0, first.getSpeed());
+		assertEquals(180.0, first.getGpsCoordinates().get(0).getHeading());
 	}
 
 	@Test
-	void aQuietClassReportsEmptyOnceAndThenStaysSilent() throws Exception {
+	void oneCameraPushesOneAggregateCarryingEveryClassItSaw() throws Exception {
+		listener.handle("5g/traficam/cam1/2", detection(7L, 11.58, 50.92));
+		listener.handle("5g/traficam/cam1/3", detection(9L, 11.60, 50.94));
+
+		listener.flushWindows();
+
+		assertEquals(1, pushed.size());
+		TrafiCamDetections detections = assertInstanceOf(TrafiCamDetections.class, pushed.get(0));
+		assertEquals(List.of("2", "3"),
+				detections.getClasses().stream().map(ObservedClass::getClassId).sorted().toList());
+	}
+
+	@Test
+	void aDetectionWithoutCoordinatesIsNoSighting() throws Exception {
+		TrafiCamObject blind = TrafiCamFactory.eINSTANCE.createTrafiCamObject();
+		blind.setId(7L);
+		listener.handle("5g/traficam/cam1/2", binary(blind));
+
+		listener.flushWindows();
+
+		// The window is empty, so it reports empty once - it does not report the object.
+		TrafiCamDetections detections = assertInstanceOf(TrafiCamDetections.class, pushed.get(0));
+		assertTrue(detections.getClasses().get(0).getObjects().isEmpty());
+	}
+
+	@Test
+	void aQuietClassReportsEmptyOnceAndThenTheCameraStaysSilent() throws Exception {
 		listener.handle("5g/traficam/cam1/2", detection(7L, 11.58, 50.92));
 		listener.flushWindows();
 
@@ -81,20 +113,30 @@ class TrafiCamListenerTest {
 		listener.flushWindows();
 
 		assertEquals(2, pushed.size());
-		assertTrue(((FeatureCollection) ((TrafiCamDto) pushed.get(1)).objects).features().isEmpty());
+		TrafiCamDetections empty = assertInstanceOf(TrafiCamDetections.class, pushed.get(1));
+		assertTrue(empty.getClasses().get(0).getObjects().isEmpty());
 	}
 
 	@Test
-	void configurationBecomesTheProviderWithItsViewportAndNamesTheClasses() throws Exception {
+	void theClassNameComesFromAConfigurationThatArrivedEarlier() throws Exception {
 		listener.handle("5g/config/traficam/cam1", configuration());
 		listener.handle("5g/traficam/cam1/2", detection(7L, 11.58, 50.92));
 		listener.flushWindows();
 
-		TraficamProvider provider = assertInstanceOf(TraficamProvider.class, pushed.get(0));
-		assertEquals("cam1", provider.getId());
-		assertEquals("Camera cam1", provider.getAdmin().getFriendlyName());
-		assertEquals(4, ((GeometryCollection) ((TraficamAdmin) provider.getAdmin()).getViewport()).geometries().size());
-		assertEquals("car", ((TrafiCamDto) pushed.get(1)).classificationName);
+		CamConfig config = assertInstanceOf(CamConfig.class, pushed.get(0));
+		assertEquals("cam1", config.getCamId());
+
+		TrafiCamDetections detections = assertInstanceOf(TrafiCamDetections.class, pushed.get(1));
+		assertEquals("car", detections.getClasses().get(0).getClassificationName());
+	}
+
+	@Test
+	void theClassIdStandsInWhileNoConfigurationHasArrived() throws Exception {
+		listener.handle("5g/traficam/cam1/2", detection(7L, 11.58, 50.92));
+		listener.flushWindows();
+
+		TrafiCamDetections detections = assertInstanceOf(TrafiCamDetections.class, pushed.get(0));
+		assertEquals("2", detections.getClasses().get(0).getClassificationName());
 	}
 
 	@Test
@@ -156,11 +198,12 @@ class TrafiCamListenerTest {
 		return out.toByteArray();
 	}
 
-	record RecordingDataUpdate(List<Object> pushed) implements DataUpdate {
+	/** Stands in for the mapping engine: records what the adapter hands it. */
+	record RecordingPusher(List<EObject> pushed) implements InstancePusher {
 		@Override
-		public Promise<?> pushUpdate(Object update) {
-			pushed.add(update);
-			return Promises.resolved(update);
+		public int pushInstance(EObject instance) {
+			pushed.add(instance);
+			return 1;
 		}
 	}
 }
