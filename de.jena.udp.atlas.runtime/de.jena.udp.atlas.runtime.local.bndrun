@@ -3,7 +3,29 @@
 # environment with localhost defaults (Model Atlas :8086, broker :1883, Timescale :5432), so
 # set the EVENTATLAS_* / TIMESCALE_* variables of README.md in the launch where they differ.
 # Resolve the docker bndrun, not this one: it inherits the -runbundles.
--include: de.jena.udp.atlas.runtime.docker.bndrun
+-include: de.jena.udp.atlas.runtime.docker.bndrun,\
+    -secrets.bnd
+
 
 -runtrace: true
 -runvm.local: -Duser.dir=${.}/generated/tmp
+# no interactive gogo shell: without a console it ends the framework (exit 117)
+-runproperties.local: gosh.args=--nointeractive
+
+# The configs read environment variables ($[env:...]); system properties do not reach them.
+# Local settings: Model Atlas on :8086 (local/README.md), ChirpStack uplinks from a broker on
+# :1883, the 5g/* adapters on the city broker (MQTT_READ_*; without them the read client falls
+# back to the EVENTATLAS_MQTT_* values). secrets.bnd (git-ignored) adds its own via secrets.runenv.
+-runenv: \
+	EVENTATLAS_ATLAS_BASE_URI=http://localhost:8086/atlas/rest,\
+	EVENTATLAS_ATLAS_SCOPE=udp,\
+	EVENTATLAS_DOMAIN_NSURI=https://model.data.jena.de/chirpstack/uplink/1.0,\
+	EVENTATLAS_MQTT_PROTOCOL=tcp,\
+	EVENTATLAS_MQTT_HOST=localhost,\
+	EVENTATLAS_MQTT_PORT=1883,\
+	MQTT_READ_PROTOCOL=ssl,\
+	MQTT_READ_HOST=mqttbr.jena.de,\
+	MQTT_READ_PORT=8883,\
+	EVENTATLAS_MQTT_TOPICS="chirpstack/application/+/device/+/event/up",\
+	EVENTATLAS_MQTT_JSON_TOPICS="chirpstack/application/+/device/+/event/up",\
+	${def;secrets.runenv}

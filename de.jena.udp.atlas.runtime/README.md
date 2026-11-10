@@ -36,6 +36,10 @@ TIMESCALE_HOST=localhost
 TIMESCALE_PWD=...
 ```
 
+The configs read these with `$[env:…]`, so a `-D` system property does not reach them: the
+local bndrun passes them with `-runenv`, its secrets from the git-ignored `secrets.bnd`. Running
+against a local Model Atlas, the seed, and the Eclipse caveat: `local/README.md`.
+
 ## Endpoints
 
 Everything is served by one HTTP whiteboard on port 8080 under the `event/` context path:
