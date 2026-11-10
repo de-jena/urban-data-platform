@@ -1,0 +1,21 @@
+{
+  ":configurator:resource-version": 1,
+  ":configurator:symbolic-name": "de.jena.udp.local.modelatlas",
+  ":configurator:version": "1.0.0",
+  ":configurator:policy": "force",
+  ":configurator:ranking": 100,
+
+  /* Local Model Atlas for de.jena.udp.atlas.runtime.local.bndrun: the file-storage runtime of
+   * the server image on port 8086 (the UDP runtime takes 8080), seeded from this repository.
+   * Paths come from system properties the model.atlas launch sets (see README.md here). */
+  "org.apache.felix.http~atlasHtpp": {
+    "org.osgi.service.http.port": "8086",
+    "org.osgi.service.http.host": "0.0.0.0",
+    "org.apache.felix.http.context_path": "atlas/",
+    "org.apache.felix.http.name": "atlas",
+    "org.apache.felix.http.runtime.init.id": "atlasHttp"
+  },
+  "InitialModelLoader": {
+    "initial.models.folder": "$[prop:udp.modelatlas.load]"
+  }
+}
