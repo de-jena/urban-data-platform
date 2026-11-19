@@ -48,16 +48,12 @@
 	org.eclipse.paho.client.mqttv3;version='[1.2.5,1.2.6)',\
 	org.eclipse.emfcloud.emfjson-jackson;version='[2.2.0,2.2.1)',\
 	org.gecko.emf.json;version='[1.5.1,1.5.2)',\
-	com.fasterxml.jackson.core.jackson-annotations;version='[2.22.0,2.22.1)',\
 	com.fasterxml.jackson.core.jackson-core;version='[2.20.0,2.20.1)',\
 	com.fasterxml.jackson.core.jackson-databind;version='[2.20.0,2.20.1)',\
 	com.fasterxml.jackson.dataformat.jackson-dataformat-properties;version='[2.14.1,2.14.2)',\
 	com.fasterxml.jackson.dataformat.jackson-dataformat-yaml;version='[2.20.0,2.20.1)',\
 	com.fasterxml.jackson.datatype.jackson-datatype-jsr310;version='[2.20.0,2.20.1)',\
 	org.apache.felix.cm.json;version='[2.0.6,2.0.7)',\
-	org.eclipse.emf.common;version='[2.44.0,2.44.1)',\
-	org.eclipse.emf.ecore;version='[2.41.0,2.41.1)',\
-	org.eclipse.emf.ecore.xmi;version='[2.39.0,2.39.1)',\
 	org.eclipse.fennec.emf.gecko.compatibility.api;version='[1.1.0,1.1.1)',\
 	org.eclipse.fennec.emf.osgi.component.minimal;version='[1.1.0,1.1.1)',\
 	org.eclipse.fennec.emf.osgi.model.info;version='[1.1.0,1.1.1)',\
@@ -72,7 +68,11 @@
 	org.objectweb.asm.util;version='[9.9.1,9.9.2)',\
 	org.yaml.snakeyaml;version='[2.4.0,2.4.1)',\
 	slf4j.api;version='[2.0.17,2.0.18)',\
-	slf4j.simple;version='[2.0.17,2.0.18)'
+	slf4j.simple;version='[2.0.17,2.0.18)',\
+	com.fasterxml.jackson.core.jackson-annotations;version='[2.23.0,2.23.1)',\
+	org.eclipse.emf.common;version='[2.46.0,2.46.1)',\
+	org.eclipse.emf.ecore;version='[2.43.0,2.43.1)',\
+	org.eclipse.emf.ecore.xmi;version='[2.41.0,2.41.1)'
 
 -runrequires: \
 	bnd.identity;id='de.jena.mqttbridge.runtime',\

@@ -111,20 +111,25 @@ org.eclipse.fennec.model.atlas:org.eclipse.fennec.model.atlas.eobject.provider:0
 org.eclipse.fennec.emf:org.eclipse.fennec.emf.osgi.component.minimal:1.1.0-SNAPSHOT
 org.eclipse.fennec.emf:org.eclipse.fennec.emf.osgi.eobject.registry:1.1.0-SNAPSHOT
 org.eclipse.fennec.emf:org.eclipse.fennec.emf.osgi.metadata:1.1.0-SNAPSHOT
+# EMF the 1.1.0 line imports (the fennecEMF library indexes 2.44 / 2.41 / 2.39).
+org.eclipse.emf:org.eclipse.emf.common:2.46.0
+org.eclipse.emf:org.eclipse.emf.ecore:2.43.0
+org.eclipse.emf:org.eclipse.emf.ecore.xmi:2.41.0
 
 # EMF JSON codec that registers the `json` resource factory for JSON ingest channels.
 org.eclipse.fennec.codec:org.eclipse.fennec.codec:0.1.0-SNAPSHOT
 org.eclipse.fennec.codec:org.eclipse.fennec.codec.api:0.1.0-SNAPSHOT
 org.eclipse.fennec.codec:org.eclipse.fennec.codec.metadata:0.1.0-SNAPSHOT
 org.eclipse.fennec.codec:org.eclipse.fennec.codec.jsonschema:0.1.0-SNAPSHOT
+org.eclipse.fennec.codec:org.eclipse.fennec.codec.jsonschema.model:0.1.0-SNAPSHOT
 
-# The codec imports tools.jackson [3.2,4); jackson-annotations stays on the 2.x line.
-tools.jackson.core:jackson-core:3.2.2
-tools.jackson.core:jackson-databind:3.2.2
-tools.jackson.jakarta.rs:jackson-jakarta-rs-base:3.2.2
-tools.jackson.jakarta.rs:jackson-jakarta-rs-json-provider:3.2.2
-tools.jackson.module:jackson-module-jakarta-xmlbind-annotations:3.2.2
-com.fasterxml.jackson.core:jackson-annotations:2.22
+# The codec imports tools.jackson [3.2,4), the Model Atlas REST client [3.3,4); jackson-annotations stays on the 2.x line.
+tools.jackson.core:jackson-core:3.3.0
+tools.jackson.core:jackson-databind:3.3.0
+tools.jackson.jakarta.rs:jackson-jakarta-rs-base:3.3.0
+tools.jackson.jakarta.rs:jackson-jakarta-rs-json-provider:3.3.0
+tools.jackson.module:jackson-module-jakarta-xmlbind-annotations:3.3.0
+com.fasterxml.jackson.core:jackson-annotations:2.23
 com.fasterxml.jackson.core:jackson-core:2.19.2
 
 # Netty set for the SensorThings MQTT broker (all modules on one version).
