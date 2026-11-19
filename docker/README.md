@@ -2,7 +2,7 @@
 
 Two images are built from this directory by the Jenkins main build (`Jenkinsfile`, stages
 `Prepare UDP Docker` and `Docker … Image build`), each from the exported executable jar of its
-bndrun:
+bndrun. The Jenkins build passes `--pull`, so every build fetches the current base image:
 
 | Directory | Image | Source |
 |---|---|---|

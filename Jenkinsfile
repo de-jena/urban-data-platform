@@ -149,12 +149,12 @@ pipeline  {
                 echo "I am building and publishing a docker image on branch: ${env.GIT_BRANCH}"
                 script {
                     docker.withRegistry('https://registry-git.jena.de', 'github-jena') {
-                        def image = docker.build("registry-git.jena.de/scj/udp/mqtt-bridge:0.1.0.${VERSION}", 'udp/docker/bridge')
+                        def image = docker.build("registry-git.jena.de/scj/udp/mqtt-bridge:0.1.0.${VERSION}", '--pull udp/docker/bridge')
                         image.push()
                         image.push('latest')
                     }
                     docker.withRegistry('https://devel.data-in-motion.biz:6000', 'dim-nexus') {
-                        def image = docker.build("devel.data-in-motion.biz:6000/scj/mqtt-bridge:0.1.0.${VERSION}", 'udp/docker/bridge')
+                        def image = docker.build("devel.data-in-motion.biz:6000/scj/mqtt-bridge:0.1.0.${VERSION}", '--pull udp/docker/bridge')
                         image.push()
                         image.push('latest')
                     }
@@ -169,12 +169,12 @@ pipeline  {
                 echo "I am building and publishing a docker image on branch: ${env.GIT_BRANCH}"
                 script {
                     docker.withRegistry('https://registry-git.jena.de', 'github-jena') {
-                        def image = docker.build("registry-git.jena.de/scj/udp/atlas-runtime:0.1.0.${VERSION}", 'udp/docker/atlas-runtime')
+                        def image = docker.build("registry-git.jena.de/scj/udp/atlas-runtime:0.1.0.${VERSION}", '--pull udp/docker/atlas-runtime')
                         image.push()
                         image.push('latest')
                     }
                     docker.withRegistry('https://devel.data-in-motion.biz:6000', 'dim-nexus') {
-                        def image = docker.build("devel.data-in-motion.biz:6000/scj/udp-atlas-runtime:0.1.0.${VERSION}", 'udp/docker/atlas-runtime')
+                        def image = docker.build("devel.data-in-motion.biz:6000/scj/udp-atlas-runtime:0.1.0.${VERSION}", '--pull udp/docker/atlas-runtime')
                         image.push()
                         image.push('latest')
                     }
