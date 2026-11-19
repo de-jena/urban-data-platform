@@ -16,6 +16,7 @@ import java.lang.System.Logger;
 import java.lang.System.Logger.Level;
 import java.util.Optional;
 
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.fennec.event.atlas.mapping.InstancePusher;
 import org.gecko.weather.dwd.fc.WeatherReportStorageHandler;
 import org.gecko.weather.model.weather.WeatherReports;
@@ -39,7 +40,7 @@ public class DwdReportPusher implements WeatherReportStorageHandler<WeatherRepor
 
 	@Override
 	public <R extends WeatherReports> R saveReport(R reports) {
-		int applied = pusher.pushInstance(reports);
+		int applied = pusher.pushInstance((EObject) reports);
 		if (applied == 0) {
 			logger.log(Level.WARNING, "no provider mapping for the {0} weather reports of station {1}",
 					reports.getReports().size(), reports.getId());

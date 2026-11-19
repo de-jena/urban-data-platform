@@ -12,7 +12,8 @@ Bundle-Version: 1.0.0.SNAPSHOT
 	org.eclipse.emf.ecore,\
 	org.eclipse.fennec.event.atlas.mapping;version=latest,\
 	org.gecko.weather.dwd.forecast;version=latest,\
-	org.gecko.weather.model;version=latest
+	org.gecko.weather.model;version=latest,\
+	io.cloudevents.model
 
 -testpath: \
 	junit-jupiter-api,\

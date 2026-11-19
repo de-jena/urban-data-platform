@@ -31,6 +31,14 @@ import org.eclipse.fennec.emf.osgi.constants.EMFNamespaces;
  */
 public class TraficamproviderEPackageConfigurator implements EPackageConfigurator {
 	
+	/**
+	 * The fingerprint of this model version, computed from the <code>.ecore</code> at build
+	 * time. It identifies the model content, not the artifact - see the <code>emf.fingerprint</code>
+	 * service property.
+	 * @generated
+	 */
+	public static final String FINGERPRINT = "fp1:a27bb4f473a9bb2d1341151d1efd23e2ab50bc976f8f643f56fd21f98d4c7820";
+
 	private TraficamproviderPackage ePackage;
 
 	protected TraficamproviderEPackageConfigurator(TraficamproviderPackage ePackage){
@@ -68,6 +76,7 @@ public class TraficamproviderEPackageConfigurator implements EPackageConfigurato
 		properties.put(EMFNamespaces.EMF_MODEL_REGISTRATION, EMFNamespaces.MODEL_REGISTRATION_PROVIDED);
 		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "traficamprovider");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
+		properties.put(EMFNamespaces.EMF_MODEL_FINGERPRINT, FINGERPRINT);
 		return properties;
 	}
 }

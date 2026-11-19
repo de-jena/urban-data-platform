@@ -1,0 +1,57 @@
+{
+  ":configurator:resource-version": 1,
+  ":configurator:symbolic-name": "de.jena.udp.atlas.runtime.config.traficam",
+  ":configurator:version": "1.0.0",
+
+  /* The TrafiCam flows, envelope-rooted: two MqttCloudEventListener instances read the camera
+   * topics on the `read` broker (MQTTService~read in mqtt.json), wrap each payload in a
+   * CloudEvent and push it through the Event Atlas mappings traficam-detections-ce and
+   * traficam-config-ce. Both bind the same TrafiCamPayloadAggregator, which is what lets the
+   * class names of a configuration reach a detection window they never arrive in.
+   *
+   * ONE FLOW IS ONE PAYLOAD ECLASS, over as many topics as carry it - so the detections and the
+   * configurations are two instances, and the two topics a configuration arrives on are one.
+   *
+   * THE OLD FLOW MUST STAY OFF. de.jena.udp.atlas.traficam.TrafiCamListener (payload-rooted,
+   * @Component commented out) and the seeds in de.jena.udp.atlas.traficam/eventatlas/retired/ write the same
+   * provider, because every TrafiCam mapping names traficam-profile.xmi with
+   * providerStrategy=UNIFIED. Deploy one set or the other, never both. */
+
+  /* The condition target on both flows waits for the payload model: a listener resolves
+   * payload.eclass.uri when it activates, a model bundle registers its EPackage when IT
+   * activates, and nothing orders the two. Every generated model bundle registers a Condition
+   * with osgi.condition.id = its nsURI for this. It has not bitten here yet; it bit ILSA. */
+  "MqttCloudEventListener~traficam-detections": {
+    "name": "traficam-detections",
+    "messaging.target": "(id=read)",
+    "topic": ["5g/traficam/#"],
+
+    /* What the topic filter cannot keep out: the lifesign below the detections, and the
+     * retained configuration, which the configuration flow below reads instead. */
+    "topic.exclude": ".*/(lifesign|config/retained)$",
+
+    "payload.eclass.uri": "https://jena.de/models/traficam/1.0#//TrafiCamObject",
+    "payload.format": "application/octet-stream",
+    "cloud.event.type": "de.jena.traficam.detection",
+
+    /* Windowed: what leaves every 2 seconds is one TrafiCamDetections per camera, built by the
+     * aggregator - so the envelope reports THAT EClass as its dataschema, which is what
+     * traficam-detections-ce-mapping.xmi selects on. */
+    "window.seconds": 2,
+    "aggregator.target": "(aggregator.id=traficam)",
+    "osgi.ds.satisfying.condition.target": "(osgi.condition.id=https://jena.de/models/traficam/1.0)"
+  },
+
+  /* Not windowed: a configuration is pushed as it arrives. It still binds the aggregator, which
+   * reads it for the class names and leaves it to the listener. */
+  "MqttCloudEventListener~traficam-config": {
+    "name": "traficam-config",
+    "messaging.target": "(id=read)",
+    "topic": ["5g/config/traficam/#", "5g/traficam/+/config/retained"],
+    "payload.eclass.uri": "https://jena.de/models/traficam/1.0#//CamConfig",
+    "payload.format": "application/octet-stream",
+    "cloud.event.type": "de.jena.traficam.config",
+    "aggregator.target": "(aggregator.id=traficam)",
+    "osgi.ds.satisfying.condition.target": "(osgi.condition.id=https://jena.de/models/traficam/1.0)"
+  }
+}

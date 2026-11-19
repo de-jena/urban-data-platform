@@ -32,6 +32,14 @@ import org.eclipse.fennec.emf.osgi.constants.EMFNamespaces;
  */
 public class SensinactRefAreaEPackageConfigurator implements EPackageConfigurator {
 	
+	/**
+	 * The fingerprint of this model version, computed from the <code>.ecore</code> at build
+	 * time. It identifies the model content, not the artifact - see the <code>emf.fingerprint</code>
+	 * service property.
+	 * @generated
+	 */
+	public static final String FINGERPRINT = "fp1:7be579e1d8d09da4e8ba80353d903c7bc72a52b144781b51477fb6c2eac88372";
+
 	private SensinactRefAreaPackage ePackage;
 
 	protected SensinactRefAreaEPackageConfigurator(SensinactRefAreaPackage ePackage){
@@ -69,6 +77,7 @@ public class SensinactRefAreaEPackageConfigurator implements EPackageConfigurato
 		properties.put(EMFNamespaces.EMF_MODEL_REGISTRATION, EMFNamespaces.MODEL_REGISTRATION_PROVIDED);
 		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "sensinactrefarea");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
+		properties.put(EMFNamespaces.EMF_MODEL_FINGERPRINT, FINGERPRINT);
 		return properties;
 	}
 }

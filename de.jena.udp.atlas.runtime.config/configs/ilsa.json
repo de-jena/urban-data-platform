@@ -1,0 +1,98 @@
+{
+  ":configurator:resource-version": 1,
+  ":configurator:symbolic-name": "de.jena.udp.atlas.runtime.config.ilsa",
+  ":configurator:version": "1.0.0",
+
+  /*
+   * ILSA, the envelope-rooted flows. One component configuration is one payload EClass, so
+   * the intersection's three flows are three instances - and only one of them is here yet.
+   *
+   * THE TEMPERATURE. The thermal topic carries a bare number, not a serialized object, so
+   * this flow names payload.feature: the text is converted to the type of Thermal.temperature
+   * and set on a fresh Thermal, which is what the envelope then carries and what
+   * ilsa-thermal-ce-mapping.xmi selects on. No window - a temperature is pushed as it
+   * arrives.
+   *
+   * THE TOPIC. The retired listener read 5g/ilsa/# and branched on a `/thermal` suffix, so
+   * the depth of the thermal topic is not written down anywhere; this subscribes to the shape
+   * the adapter's own segment arithmetic implies. If a camera-side change ever makes it
+   * deeper, this filter is what has to follow - the mapping's name expression already does.
+   *
+   * THE OTHER TWO FLOWS are JSON read by the Fennec codec, which needs the key that types a
+   * nested object and, for the signal state, a date format. They are named in
+   * payload.load.options; codec.rootType is not, because the listener passes the EClass that
+   * payload.eclass.uri resolves to.
+   *
+   * CHECK THE EXCLUDES BEFORE TRUSTING THEM. The retired listener told the flows apart by
+   * SNIFFING the payload - anything that was no JSON object was skipped - and a topic filter
+   * cannot do that. The excludes below cover what is known: the retained configuration, the
+   * thermal topic, and the two bare-number shapes the adapter's own tests name
+   * (5g/ilsa/K441/control/df9 and 5g/ilsa/K440/tk1/phase). Any other topic under 5g/ilsa/
+   * carrying a bare number will be read as a TLSignalState, fail, and log once per message -
+   * noise rather than bad data, since the mapping selects on the dataschema of what parsed.
+   *
+   * WHY EACH FLOW NAMES A CONDITION. A listener resolves payload.eclass.uri when it activates,
+   * and a model bundle registers its EPackage when IT activates - there is no order between
+   * the two, so the listener can be first and fail. Every generated model bundle registers a
+   * Condition service with osgi.condition.id = its nsURI, and DS holds a component back until
+   * its satisfying condition is there. That is what these targets do: wait for the model this
+   * flow reads, by name.
+   *
+   * DS allows ONE satisfying condition per configuration, so each names the package of its own
+   * payload.eclass.uri. The further models a JSON payload needs for nested types - TOSCommon,
+   * Geojson - are resolved per message by the codec, through the metadata whiteboard, which
+   * binds EPackage services as they come.
+   */
+  "MqttCloudEventListener~ilsa-thermal": {
+    "name": "ilsa-thermal",
+    "messaging.target": "(id=read)",
+    "topic": ["5g/ilsa/+/thermal"],
+    "cloud.event.type": "de.jena.ilsa.thermal",
+    "payload.eclass.uri": "https://model.data.jena.de/sensinact/ilsa/1.0#//Thermal",
+    "payload.feature": "temperature",
+    "payload.format": "text/plain",
+    "osgi.ds.satisfying.condition.target": "(osgi.condition.id=https://model.data.jena.de/sensinact/ilsa/1.0)"
+  },
+
+  "MqttCloudEventListener~ilsa-signal-state": {
+    "name": "ilsa-signal-state",
+    "messaging.target": "(id=read)",
+    "topic": ["5g/ilsa/#"],
+    "topic.exclude": ".*/(config/retained|thermal|phase)$|.*/control/.*",
+    "cloud.event.type": "de.jena.ilsa.signal",
+    "payload.eclass.uri": "http://jena.de/udp/trafficos/trafficlight/1.1.1#//TLSignalState",
+    "payload.format": "application/json",
+    "payload.load.options": [
+      "codec.typeKey=eClass",
+      "codec.dateFormat=yyyy-MM-dd'T'HH:mm:ss.SSS'Z'zzz"
+    ],
+    "osgi.ds.satisfying.condition.target": "(osgi.condition.id=http://jena.de/udp/trafficos/trafficlight/1.1.1)"
+  },
+
+  /* The intersection configuration: one retained message per intersection, and the only flow
+   * of the three that describes the provider rather than reporting a value.
+   *
+   * THIS ONE WAITS FOR MORE THAN THE MODEL. Its mapping calls at(n) on a bbox, contributed by
+   * GeoJsonArrayOperations in de.jena.udp.atlas.ilsa. The OCL engine binds a provider
+   * dynamically (emf.m2x#431), so one that comes up late still reaches it - but an evaluation
+   * that runs before the bind resolves at() to nothing and leaves the admin location unset
+   * with no more than a FINE log line. A retained message is delivered when the client
+   * subscribes, so that one delivery is the only one there is: subscribing too early loses the
+   * location until an intersection republishes, which may be never.
+   *
+   * DS allows ONE satisfying condition per configuration (OSGi cmpn 112.3.13) and this flow
+   * needs two waits, so MappingReadyCondition in de.jena.udp.atlas.ilsa takes both - the
+   * trafficlight model AND the operations - and publishes the result as the condition named
+   * below. That is why this flow, alone of the three, does not name a model nsURI here: the
+   * one it waits for is a reference in that class. */
+  "MqttCloudEventListener~ilsa-configuration": {
+    "name": "ilsa-configuration",
+    "messaging.target": "(id=read)",
+    "topic": ["5g/ilsa/+/config/retained"],
+    "cloud.event.type": "de.jena.ilsa.config",
+    "payload.eclass.uri": "http://jena.de/udp/trafficos/trafficlight/1.1.1#//TLConfiguration",
+    "payload.format": "application/json",
+    "payload.load.options": ["codec.typeKey=eClass"],
+    "osgi.ds.satisfying.condition.target": "(osgi.condition.id=de.jena.udp.atlas.ilsa.mapping.ready)"
+  }
+}

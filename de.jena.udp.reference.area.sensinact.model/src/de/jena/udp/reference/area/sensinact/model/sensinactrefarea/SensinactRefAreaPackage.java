@@ -43,7 +43,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = SensinactRefAreaPackage.eNS_URI, genModel = "/model/sensinact-refarea.genmodel", genModelSourceLocations = {"model/sensinact-refarea.genmodel","de.jena.udp.reference.area.sensinact.model/model/sensinact-refarea.genmodel"}, ecore = "/model/sensinact-refarea.ecore", ecoreSourceLocations = "/model/sensinact-refarea.ecore")
+@EPackage(uri = SensinactRefAreaPackage.eNS_URI, fingerprint = "fp1:7be579e1d8d09da4e8ba80353d903c7bc72a52b144781b51477fb6c2eac88372", genModel = "/model/sensinact-refarea.genmodel", genModelSourceLocations = {"model/sensinact-refarea.genmodel","de.jena.udp.reference.area.sensinact.model/model/sensinact-refarea.genmodel"}, ecore = "/model/sensinact-refarea.ecore", ecoreSourceLocations = "/model/sensinact-refarea.ecore")
 public interface SensinactRefAreaPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

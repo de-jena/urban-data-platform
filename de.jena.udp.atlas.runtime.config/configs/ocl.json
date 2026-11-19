@@ -1,0 +1,23 @@
+{
+  ":configurator:resource-version": 1,
+  ":configurator:symbolic-name": "de.jena.udp.atlas.runtime.config.ocl",
+  ":configurator:version": "1.0.0",
+
+  /*
+   * The OCL engine the Event Atlas mappings evaluate their expressions on.
+   *
+   * ONE PROPERTY, AND ONLY BECAUSE OF THE ILSA LOCATION. ilsa-configuration-ce-mapping.xmi
+   * reads the admin location with self.data.geoJson.bbox.at(1|2), and `at` is no standard
+   * library operation: bbox is an Array1D, an EDataType over java.lang.Double[], which is one
+   * scalar to OCL. de.jena.udp.atlas.ilsa.GeoJsonArrayOperations contributes the operation as
+   * an OclOperationProvider, and this property is what makes the engine look at contributed
+   * operations at all - ocl.customOperationsEnabled defaults to false on DefaultOclEngine,
+   * and with it false `at` is unknown, so the whole expression evaluates to OCL `invalid`.
+   * OclExpressionEvaluator turns that into no value and a FINE log line, which at the default
+   * log level is nothing at all: no warning, no error, an empty admin/location.
+   *
+   */
+  "DefaultOclEngine": {
+    "ocl.customOperationsEnabled": true
+  }
+}

@@ -25,6 +25,8 @@ import org.gecko.weather.model.weather.WeatherFactory;
 import org.gecko.weather.model.weather.WeatherReports;
 import org.junit.jupiter.api.Test;
 
+import io.cloudevents.model.ce.CloudEvent;
+
 class DwdReportPusherTest {
 
 	private final List<EObject> pushed = new ArrayList<>();
@@ -64,10 +66,7 @@ class DwdReportPusherTest {
 	}
 
 	private InstancePusher recording(int applied) {
-		return instance -> {
-			pushed.add(instance);
-			return applied;
-		};
+		return new RecordingPusher(applied);
 	}
 
 	private static WeatherReports stationReports(String stationId) {
@@ -75,5 +74,26 @@ class DwdReportPusherTest {
 		reports.setId(stationId);
 		reports.getReports().add(WeatherFactory.eINSTANCE.createMOSMIXSWeatherReport());
 		return reports;
+	}
+
+	/** Stands in for the mapping engine: records what the pusher hands it. */
+	private final class RecordingPusher implements InstancePusher {
+
+		private final int applied;
+
+		private RecordingPusher(int applied) {
+			this.applied = applied;
+		}
+
+		@Override
+		public int pushInstance(EObject instance) {
+			pushed.add(instance);
+			return applied;
+		}
+
+		@Override
+		public int pushInstance(CloudEvent cloudEvent) {
+			return pushInstance(cloudEvent.getData());
+		}
 	}
 }

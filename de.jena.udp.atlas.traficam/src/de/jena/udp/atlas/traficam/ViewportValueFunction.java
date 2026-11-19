@@ -28,9 +28,9 @@ import org.osgi.service.component.annotations.Component;
 
 /**
  * Builds a camera's viewport: the four corners of its {@code Scene} as a GeoJSON
- * {@link GeometryCollection}. It replaces {@code TrafiCamListener.viewport(Scene)}, which a
- * mapping cannot express as a feature path - the value is computed from a whole object, which
- * is what a {@link ValueFunction} is for.
+ * {@link GeometryCollection}. A mapping cannot express this as a feature path: the value is
+ * computed from a whole object rather than read out of one, which is what a
+ * {@link ValueFunction} is for.
  * <p>
  * The mapping hands it the {@code Scene}, through the feature path of its
  * {@code valueMapping}. It also accepts the whole {@code CamConfig}, so the same function
@@ -54,7 +54,10 @@ public class ViewportValueFunction implements ValueFunction {
 
 	private static final Logger logger = System.getLogger(ViewportValueFunction.class.getName());
 
-	/** The scene corners, in the order {@code TrafiCamListener.viewport} writes them. */
+	/**
+	 * The scene corners, in ring order - along the bottom edge, up the right side, back along
+	 * the top - so the four points trace the viewport instead of crossing it.
+	 */
 	private static final List<String> CORNERS = List.of("leftBottom", "rightBottom", "rightTop", "leftTop");
 
 	private static final String SCENE = "scene";
@@ -99,7 +102,7 @@ public class ViewportValueFunction implements ValueFunction {
 
 	/**
 	 * A GeoJSON point of one {@code GpsCoordinates}. Longitude first - that is the GeoJSON
-	 * order, and the order {@code TrafiCamListener.point} uses.
+	 * order, and the reverse of how the camera names them.
 	 */
 	private static Point point(EObject gps) {
 		Double longitude = number(gps, LONGITUDE);

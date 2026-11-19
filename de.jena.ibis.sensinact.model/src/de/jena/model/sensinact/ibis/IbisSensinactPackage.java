@@ -42,7 +42,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = IbisSensinactPackage.eNS_URI, genModel = "/model/ibis.genmodel", genModelSourceLocations = {"model/ibis.genmodel","de.jena.ibis.sensinact.model/model/ibis.genmodel"}, ecore = "/model/ibis.ecore", ecoreSourceLocations = "/model/ibis.ecore")
+@EPackage(uri = IbisSensinactPackage.eNS_URI, fingerprint = "fp1:8c974915151b46690695b0afa774f9392bfe6d6505e06a4d837087fe4f78dcc8", genModel = "/model/ibis.genmodel", genModelSourceLocations = {"model/ibis.genmodel","de.jena.ibis.sensinact.model/model/ibis.genmodel"}, ecore = "/model/ibis.ecore", ecoreSourceLocations = "/model/ibis.ecore")
 public interface IbisSensinactPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

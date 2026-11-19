@@ -42,7 +42,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = ChirpstackPackage.eNS_URI, genModel = "/model/chirpstack.genmodel", genModelSourceLocations = {"model/chirpstack.genmodel","de.jena.chirpstack.model/model/chirpstack.genmodel"}, ecore = "/model/chirpstack.ecore", ecoreSourceLocations = "/model/chirpstack.ecore")
+@EPackage(uri = ChirpstackPackage.eNS_URI, fingerprint = "fp1:172095f8d2015cf9a64466b92b9c84ed54c2c263463c50458fd253098ac0616b", genModel = "/model/chirpstack.genmodel", genModelSourceLocations = {"model/chirpstack.genmodel","de.jena.chirpstack.model/model/chirpstack.genmodel"}, ecore = "/model/chirpstack.ecore", ecoreSourceLocations = "/model/chirpstack.ecore")
 public interface ChirpstackPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

@@ -12,6 +12,8 @@
  */
 package de.jena.udp.atlas.traficam;
 
+import java.lang.System.Logger;
+import java.lang.System.Logger.Level;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -34,11 +36,17 @@ import de.jena.traficam.TrafiCamObject;
  */
 class DetectionWindow {
 
+	private static final Logger logger = System.getLogger(DetectionWindow.class.getName());
+
 	private final Map<Long, TrafiCamObject> seen = new LinkedHashMap<>();
 	private boolean emptyReported;
 
 	synchronized void add(TrafiCamObject detection) {
 		if (detection.getGpsCoordinates().isEmpty()) {
+			// A window that drops everything it is offered looks exactly like a window nothing was
+			// offered to - the twin sees an empty collection either way. This is the one line that
+			// tells the two apart.
+			logger.log(Level.DEBUG, "detection {0} dropped: no GPS coordinates", detection.getId());
 			return;
 		}
 		seen.putIfAbsent(detection.getId(), detection);

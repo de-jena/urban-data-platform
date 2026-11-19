@@ -16,6 +16,7 @@
 -resolve.effective: active
 
 -runrequires: \
+    bnd.identity;id='io.cloudevents.model',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
 	bnd.identity;id='org.apache.felix.configurator',\
@@ -54,6 +55,7 @@
 	bnd.identity;id='org.gecko.adapter.mqtt.v5',\
 	bnd.identity;id='de.jena.udp.atlas.ilsa',\
 	bnd.identity;id='de.jena.udp.atlas.traficam',\
+	bnd.identity;id='de.jena.udp.atlas.cloudevent.listener',\
 	bnd.identity;id='de.jena.udp.atlas.ibis',\
 	bnd.identity;id='org.gecko.weather.dwd.forecast',\
 	bnd.identity;id='de.jena.udp.atlas.dwd',\
@@ -64,6 +66,7 @@
 	bnd.identity;id='de.jena.udp.atlas.rules',\
 	bnd.identity;id='de.jena.udp.atlas.conflict',\
 	bnd.identity;id='org.eclipse.fennec.event.atlas.mapping.ocl'
+	
 
 # http.port=-1: the only HTTP whiteboard is the named instance from the docker.config
 # bundle (context path event/, port 8080).
@@ -90,7 +93,6 @@
 	bnd.identity;id='org.eclipse.fennec.codec.constants';version='[1.1.0,2)',\
 	bnd.identity;id='net.opengis.wfs2.model'
 -runbundles: \
-	com.fasterxml.jackson.core.jackson-annotations;version='[2.22.0,2.22.1)',\
 	com.fasterxml.jackson.core.jackson-core;version='[2.20.0,2.20.1)',\
 	de.jena.udp.atlas.runtime.config;version=snapshot,\
 	io.dropwizard.metrics.core;version='[4.2.37,4.2.38)',\
@@ -125,14 +127,10 @@
 	org.apache.felix.http.jetty12;version='[1.0.34,1.0.35)',\
 	org.apache.felix.http.servlet-api;version='[6.1.0,6.1.1)',\
 	org.apache.felix.inventory;version='[1.0.6,1.0.7)',\
-	org.apache.felix.scr;version='[2.2.12,2.2.13)',\
 	org.apache.felix.webconsole;version='[5.0.12,5.0.13)',\
 	org.apache.felix.webconsole.plugins.ds;version='[2.3.0,2.3.1)',\
 	org.apache.felix.webconsole.plugins.event;version='[1.2.0,1.2.1)',\
 	org.apache.felix.webconsole.plugins.memoryusage;version='[1.1.0,1.1.1)',\
-	org.eclipse.emf.common;version='[2.44.0,2.44.1)',\
-	org.eclipse.emf.ecore;version='[2.41.0,2.41.1)',\
-	org.eclipse.emf.ecore.xmi;version='[2.39.0,2.39.1)',\
 	org.eclipse.fennec.emf.osgi.component.minimal;version='[1.1.0,1.1.1)',\
 	org.eclipse.fennec.emf.osgi.eobject.registry;version='[1.1.0,1.1.1)',\
 	org.eclipse.fennec.emf.osgi.metadata;version='[1.1.0,1.1.1)',\
@@ -204,8 +202,6 @@
 	org.postgresql.jdbc;version='[42.7.13,42.7.14)',\
 	slf4j.api;version='[2.0.17,2.0.18)',\
 	slf4j.simple;version='[2.0.17,2.0.18)',\
-	tools.jackson.core.jackson-core;version='[3.2.2,3.2.3)',\
-	tools.jackson.core.jackson-databind;version='[3.2.2,3.2.3)',\
 	tools.jackson.jakarta.rs.jackson-jakarta-rs-base;version='[3.2.2,3.2.3)',\
 	tools.jackson.jakarta.rs.jackson-jakarta-rs-json-provider;version='[3.2.2,3.2.3)',\
 	tools.jackson.module.jackson-module-jakarta-xmlbind-annotations;version='[3.2.2,3.2.3)',\
@@ -220,10 +216,9 @@
 	org.objectweb.asm.tree;version='[9.9.1,9.9.2)',\
 	org.objectweb.asm.tree.analysis;version='[9.9.1,9.9.2)',\
 	org.objectweb.asm.util;version='[9.9.1,9.9.2)',\
-	de.jena.ilsa.sensinact.model;version=snapshot,\
 	de.jena.traficam.model;version=snapshot,\
-	de.jena.traficam.sensinact.model;version=snapshot,\
 	de.jena.udp.atlas.ilsa;version=snapshot,\
+	de.jena.udp.atlas.cloudevent.listener;version=snapshot,\
 	de.jena.udp.atlas.traficam;version=snapshot,\
 	de.jena.udp.trafficos.common.model;version='[1.2.0,1.2.1)',\
 	de.jena.udp.trafficos.trafficlight.model;version='[1.2.0,1.2.1)',\
@@ -287,4 +282,13 @@
 	de.jena.udp.atlas.conflict;version=snapshot,\
 	de.jena.udp.atlas.rules;version=snapshot,\
 	org.eclipse.fennec.event.atlas.mapping.ocl;version='[1.0.0,1.0.1)',\
-	org.osgi.service.cm;version='[1.6.1,1.6.2)'
+	org.osgi.service.cm;version='[1.6.1,1.6.2)',\
+	io.cloudevents.model;version='[1.0.0,1.0.1)',\
+	org.eclipse.fennec.codec.jsonschema.model;version='[0.1.0,0.1.1)',\
+	com.fasterxml.jackson.core.jackson-annotations;version='[2.23.0,2.23.1)',\
+	org.apache.felix.scr;version='[2.3.0,2.3.1)',\
+	org.eclipse.emf.common;version='[2.46.0,2.46.1)',\
+	org.eclipse.emf.ecore;version='[2.43.0,2.43.1)',\
+	org.eclipse.emf.ecore.xmi;version='[2.41.0,2.41.1)',\
+	tools.jackson.core.jackson-core;version='[3.3.0,3.3.1)',\
+	tools.jackson.core.jackson-databind;version='[3.3.0,3.3.1)'

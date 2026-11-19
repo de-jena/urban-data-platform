@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  TrafiCam - the camera configuration, ENVELOPE-ROOTED (topics 5g/config/traficam/<cam> and
+  5g/traficam/<cam>/config/retained).
+
+  The CloudEvent twin of traficam-config-mapping.xmi, which is retired and now sits in
+  eventatlas/retired/. The camera comes out of the topic
+  instead of out of CamConfig.camId, so the transient attribute - which has to sit LAST in
+  the EClass because TrafiCam reads binary EMF and BinaryResourceImpl identifies a feature
+  by position - is no longer needed by the mapping.
+
+  READ THIS FIRST. TrafiCam does NOT go through PayloadIngest: the adapter reads binary EMF
+  itself and calls InstancePusher directly. pushInstance(EObject) builds no envelope, so
+  this mapping applies to nothing until the adapter builds a CloudEvent and calls
+  pushInstance(CloudEvent) with the topic in `source`. That is the one piece of adapter work
+  this version costs, and it replaces the model change the other version costs.
+
+  DEPLOY ONE SET OR THE OTHER. Both TrafiCam mappings name traficam-profile.xmi (UNIFIED),
+  so the twin and the original answer the same provider id and would both write the same
+  resources - see ilsa-signal-state-ce-mapping.xmi for the side-by-side recipe.
+
+  CHECK THE SEGMENT INDEX. A camera publishes its configuration on two topics - the live one
+  and the retained one it serves to a new subscriber - and the camera is a DIFFERENT segment on
+  each: fourth in 5g/config/traficam/<cam>, third in 5g/traficam/<cam>/config/retained. One
+  selector carries both sources, which are ORed, and the name expression asks which of the two
+  it is reading. The detections flow publishes under 5g/traficam/<cam>/<class>, where the
+  camera is the THIRD again - which is exactly why each mapping states its own.
+
+  WHY ONE MAPPING AND NOT TWO. Everything below the name is the same for both topics: same
+  payload, same provider, same resources. Two files would have to be changed in step forever;
+  the segment index is the only difference, and an expression can carry it.
+-->
+<sensinactMapping:ProviderMapping
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:sensinactMapping="https://fennec.eclipse.org/event.atlas/mapping/1.0"
+    mid="traficam-config-ce"
+    providerTimestamp="true">
+
+  <!-- The camera, from whichever of the two configuration topics the message arrived on. The
+       second segment tells them apart: 'config' is the live topic, 'traficam' the retained one. -->
+  <name expression="if self.source.tokenize('/')->at(2) = 'config' then self.source.tokenize('/')->at(4) else self.source.tokenize('/')->at(3) endif"/>
+
+  <profile href="../sensinactprofile/traficam-profile.xmi#traficam"/>
+
+  <providerClasses href="https://cloudevents.io/1.0.2#//CloudEvent"/>
+
+  <!-- Two source filters, not one: `source` is many-valued and an include list reads "only
+       these". The dataschema is what keeps the retained topic out of the detections mapping,
+       whose 5g/traficam/# covers it as well. -->
+  <selector
+      source="5g/config/traficam/# 5g/traficam/+/config/retained"
+      dataschema="https://jena.de/models/traficam/1.0#//CamConfig"/>
+
+  <!-- No referencedResource, so the service source is the root - the envelope. Every path
+       therefore starts with CloudEvent/data. The function still receives a Scene. -->
+  <services mid="observedArea">
+    <name name="Observed area"/>
+    <serviceEClass href="https://model.data.jena.de/sensinact/traficam/1.0#//ObservedObjects"/>
+    <resources name="objects" mid="objects">
+      <valueMapping functionId="udp.traficam.viewport">
+        <featurePath xsi:type="ecore:EReference"
+            href="https://cloudevents.io/1.0.2#//CloudEvent/data"/>
+        <featurePath xsi:type="ecore:EReference"
+            href="https://jena.de/models/traficam/1.0#//CamConfig/scene"/>
+      </valueMapping>
+    </resources>
+  </services>
+
+  <admin mid="admin" extendAdmin="true">
+    <name name="Admin"/>
+
+    <!-- Two plain attributes, as in the original - the bare *Ref paths read them, and they
+         gain the same CloudEvent/data first step. -->
+    <latitudeRef xsi:type="ecore:EReference"
+        href="https://cloudevents.io/1.0.2#//CloudEvent/data"/>
+    <latitudeRef xsi:type="ecore:EReference"
+        href="https://jena.de/models/traficam/1.0#//CamConfig/location"/>
+    <latitudeRef xsi:type="ecore:EAttribute"
+        href="https://jena.de/models/traficam/1.0#//GpsCoordinates/latitude"/>
+    <longitudeRef xsi:type="ecore:EReference"
+        href="https://cloudevents.io/1.0.2#//CloudEvent/data"/>
+    <longitudeRef xsi:type="ecore:EReference"
+        href="https://jena.de/models/traficam/1.0#//CamConfig/location"/>
+    <longitudeRef xsi:type="ecore:EAttribute"
+        href="https://jena.de/models/traficam/1.0#//GpsCoordinates/longitude"/>
+
+    <!-- 'Camera ' + the camera, which is now the topic segment rather than self.camId -
+         the same string, from the place that always had it. It asks which topic it is
+         reading for the same reason the name above does: a configuration arrives on either
+         of two, and the camera is a different segment on each. -->
+    <friendlyNameMapping expression="if self.source.tokenize('/')->at(2) = 'config' then 'Camera ' + self.source.tokenize('/')->at(4) else 'Camera ' + self.source.tokenize('/')->at(3) endif"/>
+
+    <!-- extendAdmin, and the same limits as the original: readable through the resource API
+         and the history provider, invisible to the snapshot consumers. -->
+    <resources name="viewport" mid="viewport">
+      <eType xsi:type="ecore:EDataType"
+          href="https://eclipse.org/sensinact/core/provider/1.0#//EGeoJsonObject"/>
+      <valueMapping functionId="udp.traficam.viewport">
+        <featurePath xsi:type="ecore:EReference"
+            href="https://cloudevents.io/1.0.2#//CloudEvent/data"/>
+        <featurePath xsi:type="ecore:EReference"
+            href="https://jena.de/models/traficam/1.0#//CamConfig/scene"/>
+      </valueMapping>
+    </resources>
+  </admin>
+</sensinactMapping:ProviderMapping>

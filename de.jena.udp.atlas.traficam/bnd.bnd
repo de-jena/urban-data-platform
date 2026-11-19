@@ -20,11 +20,15 @@ Bundle-Version: 1.0.0.SNAPSHOT
 	org.osgi.util.pushstream;version=latest,\
 	de.jena.traficam.model;version=snapshot,\
 	de.jena.traficam.sensinact.model;version=snapshot,\
-	org.eclipse.fennec.event.atlas.mapping;version=latest
-
+	org.eclipse.fennec.event.atlas.mapping;version=latest,\
+	io.cloudevents.model;version=latest,\
+	org.apache.felix.metatype;version=latest,\
+	org.osgi.service.metatype.annotations,\
+	de.jena.udp.atlas.cloudevent.listener
 -testpath: \
 	junit-jupiter-api,\
 	${junit},\
+	org.eclipse.emf.ecore.xmi,\
 	tools.jackson.core.jackson-core,\
 	tools.jackson.core.jackson-databind,\
 	com.fasterxml.jackson.core.jackson-annotations

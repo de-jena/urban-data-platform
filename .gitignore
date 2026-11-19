@@ -15,3 +15,6 @@ cnf/cache/
 
 # MQTT broker state
 **/.moquette_uuid
+
+# bnd local repository index checksum
+cnf/local/index.xml.sha

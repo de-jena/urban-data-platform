@@ -2,8 +2,8 @@
 <!--
   The TrafiCam profile. Its one job is to put both TrafiCam mappings on ONE provider.
 
-  A mapping's model comes from its own fqMid, so traficam-config and traficam-detections would
-  build two models for the one provider name the camera gives them. With
+  A mapping's model comes from its own fqMid, so traficam-config-ce and traficam-detections-ce
+  would build two models for the one provider name the camera gives them. With
   providerStrategy="UNIFIED" the model name comes from this profile's providerId instead, and
   both mappings answer the same model. The provider id itself is unaffected: it is still what
   each mapping's <name> produces, i.e. the camera.

@@ -42,7 +42,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = IlsaPackage.eNS_URI, genModel = "/model/ilsa.genmodel", genModelSourceLocations = {"model/ilsa.genmodel","de.jena.ilsa.sensinact.model/model/ilsa.genmodel"}, ecore = "/model/ilsa.ecore", ecoreSourceLocations = "/model/ilsa.ecore")
+@EPackage(uri = IlsaPackage.eNS_URI, fingerprint = "fp1:8a7e6859c99317edcf1a7db8b192070a45f3fc4da7400f3d3504220f98394324", genModel = "/model/ilsa.genmodel", genModelSourceLocations = {"model/ilsa.genmodel","de.jena.ilsa.sensinact.model/model/ilsa.genmodel"}, ecore = "/model/ilsa.ecore", ecoreSourceLocations = "/model/ilsa.ecore")
 public interface IlsaPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

@@ -1,7 +1,8 @@
 Bundle-Name: UDP :: Atlas Runtime Config
 Bundle-Description: Configurator resources the UDP atlas runtime adds on top of the Event Atlas \
  docker config: the Felix webconsole login, the gecko messaging MQTT client (id read) of the adapters, \
- the DWD station, the KML file, the humidity rules and the conflict detector.
+ the DWD station, the KML file, the humidity rules, the conflict detector and the two TrafiCam \
+ CloudEvent flows.
 
 -resourceonly: true
 -includeresource: OSGI-INF/configurator/=configs/

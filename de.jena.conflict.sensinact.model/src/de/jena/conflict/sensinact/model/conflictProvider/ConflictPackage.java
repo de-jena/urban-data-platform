@@ -42,7 +42,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = ConflictPackage.eNS_URI, genModel = "/model/conflict.genmodel", genModelSourceLocations = {"model/conflict.genmodel","de.jena.conflict.sensinact.model/model/conflict.genmodel"}, ecore = "/model/conflict.ecore", ecoreSourceLocations = "/model/conflict.ecore")
+@EPackage(uri = ConflictPackage.eNS_URI, fingerprint = "fp1:3a1f520bf06d9cff5a40511fe9ae796e99583a6b9a408a014b7c5fbce03fd6f0", genModel = "/model/conflict.genmodel", genModelSourceLocations = {"model/conflict.genmodel","de.jena.conflict.sensinact.model/model/conflict.genmodel"}, ecore = "/model/conflict.ecore", ecoreSourceLocations = "/model/conflict.ecore")
 public interface ConflictPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

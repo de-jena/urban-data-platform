@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ILSA - the intersection temperature, ENVELOPE-ROOTED (topic .../<intersection>/thermal).
+
+  The third ILSA flow, and the one that has no payload model: the topic carries a bare number
+  and nothing else. It used to be pushed by hand, as a GenericDto naming the model, provider,
+  service, resource and type in Java.
+
+  WHAT READS IT. The MQTT CloudEvent listener does, with `payload.feature`: the text is
+  converted to the type of the named attribute and set on a fresh instance of the payload
+  EClass, so what the envelope carries is an ordinary `Thermal` and this mapping is an
+  ordinary mapping. The flow is configured with
+
+    "payload.eclass.uri": "https://model.data.jena.de/sensinact/ilsa/1.0#//Thermal",
+    "payload.feature": "temperature",
+    "payload.format": "text/plain"
+
+  and the ingest reports that EClass as the envelope's dataschema, which is what the selector
+  below matches. Payload EClass and serviceEClass are the same class here - there is no wire
+  model to translate from, only a value to place.
+
+  THE PROVIDER ID. The other two ILSA mappings read the intersection with at(3). This one
+  reads the segment before `thermal` instead, which is what the Java did
+  (`segments[segments.length - 2]`). For a topic 5g/ilsa/<intersection>/thermal the two agree;
+  they part if the thermal topic is ever deeper than that, and this form is the one that
+  survives it.
+-->
+<sensinactMapping:ProviderMapping
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:sensinactMapping="https://fennec.eclipse.org/event.atlas/mapping/1.0"
+    mid="ilsa-thermal-ce"
+    providerTimestamp="false">
+
+  <!-- The segment before `thermal`: tokenize('/') is 1-based, so size() - 1 is the one
+       before the last. -->
+  <name expression="self.source.tokenize('/')->at(self.source.tokenize('/')->size() - 1)"/>
+
+  <profile href="../sensinactprofile/ilsa-profile.xmi#ilsa"/>
+
+  <providerClasses href="https://cloudevents.io/1.0.2#//CloudEvent"/>
+
+  <!-- All three ILSA flows publish under 5g/ilsa/, so the dataschema is what tells them
+       apart. A thermal payload is the only one read as Thermal. -->
+  <selector
+      source="5g/ilsa/#"
+      dataschema="https://model.data.jena.de/sensinact/ilsa/1.0#//Thermal"/>
+
+  <!-- One service, one resource: the service the Ilsa model already has a reference for. -->
+  <services mid="thermal">
+    <name name="thermal"/>
+    <serviceEClass href="https://model.data.jena.de/sensinact/ilsa/1.0#//Thermal"/>
+
+    <resources mid="temperature">
+      <valueMapping>
+        <featurePath xsi:type="ecore:EReference"
+            href="https://cloudevents.io/1.0.2#//CloudEvent/data"/>
+        <featurePath xsi:type="ecore:EAttribute"
+            href="https://model.data.jena.de/sensinact/ilsa/1.0#//Thermal/temperature"/>
+      </valueMapping>
+    </resources>
+  </services>
+
+  <admin mid="admin">
+    <name name="Admin"/>
+  </admin>
+</sensinactMapping:ProviderMapping>

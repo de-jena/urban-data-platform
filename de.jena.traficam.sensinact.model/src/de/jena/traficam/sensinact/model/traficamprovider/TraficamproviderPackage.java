@@ -40,7 +40,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = TraficamproviderPackage.eNS_URI, genModel = "/model/traficam.genmodel", genModelSourceLocations = {"model/traficam.genmodel","de.jena.traficam.sensinact.model/model/traficam.genmodel"}, ecore = "/model/traficam.ecore", ecoreSourceLocations = "/model/traficam.ecore")
+@EPackage(uri = TraficamproviderPackage.eNS_URI, fingerprint = "fp1:a27bb4f473a9bb2d1341151d1efd23e2ab50bc976f8f643f56fd21f98d4c7820", genModel = "/model/traficam.genmodel", genModelSourceLocations = {"model/traficam.genmodel","de.jena.traficam.sensinact.model/model/traficam.genmodel"}, ecore = "/model/traficam.ecore", ecoreSourceLocations = "/model/traficam.ecore")
 public interface TraficamproviderPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

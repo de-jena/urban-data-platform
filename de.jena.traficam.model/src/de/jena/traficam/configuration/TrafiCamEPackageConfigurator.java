@@ -31,6 +31,14 @@ import org.eclipse.fennec.emf.osgi.constants.EMFNamespaces;
  */
 public class TrafiCamEPackageConfigurator implements EPackageConfigurator {
 	
+	/**
+	 * The fingerprint of this model version, computed from the <code>.ecore</code> at build
+	 * time. It identifies the model content, not the artifact - see the <code>emf.fingerprint</code>
+	 * service property.
+	 * @generated
+	 */
+	public static final String FINGERPRINT = "fp1:658540bef6ce2687374b04e99cb5f3ba3c5e5f0ce6d48b3a7adca5422c8cc8ce";
+
 	private TrafiCamPackage ePackage;
 
 	protected TrafiCamEPackageConfigurator(TrafiCamPackage ePackage){
@@ -68,6 +76,7 @@ public class TrafiCamEPackageConfigurator implements EPackageConfigurator {
 		properties.put(EMFNamespaces.EMF_MODEL_REGISTRATION, EMFNamespaces.MODEL_REGISTRATION_PROVIDED);
 		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "traficam");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
+		properties.put(EMFNamespaces.EMF_MODEL_FINGERPRINT, FINGERPRINT);
 		return properties;
 	}
 }
