@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="Local" increment="1795091210036">
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="Local" increment="1795514987554">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="license" value="EPL 2.0;description=&quot;Except for 3rd party content and examples.&quot;;link=&quot;http://www.eclipse.org/legal/epl-2.0&quot;"/>
@@ -244,22 +244,22 @@
       <attribute name="documentation" value="https://github.com/eclipse-fennec/emf.m2x"/>
       <attribute name="description" value="OCL v2.5 evaluator, standard library, and EMF delegate integration"/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="0.1.1.202611191226-SNAPSHOT" type="Version"/>
+      <attribute name="version" value="0.1.1.202611240857-SNAPSHOT" type="Version"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="org.eclipse.emf.common.util,org.eclipse.emf.ecore,org.eclipse.fennec.m2x.model.ocl,org.eclipse.fennec.m2x.ocl.api"/>
       <attribute name="bundle-symbolic-name" value="org.eclipse.fennec.m2x.ocl.engine"/>
-      <attribute name="bundle-version" value="0.1.1.202611191226-SNAPSHOT" type="Version"/>
+      <attribute name="bundle-version" value="0.1.1.202611240857-SNAPSHOT" type="Version"/>
       <attribute name="osgi.wiring.package" value="org.eclipse.fennec.m2x.ocl.engine"/>
       <attribute name="version" value="1.0.0" type="Version"/>
-      <attribute name="bnd.hashes" value="252583980,1142171915,-1632763297,1427416508,-1883264423,-662040781,-1923478059" type="List&lt;Long&gt;"/>
+      <attribute name="bnd.hashes" value="252583980,1142171915,-1632763297,1427416508,-1883264423,-662040781,1478986865,-1923478059" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="0.1.1.202611191226-SNAPSHOT" type="Version"/>
+      <attribute name="bundle-version" value="0.1.1.202611240857-SNAPSHOT" type="Version"/>
       <attribute name="osgi.wiring.bundle" value="org.eclipse.fennec.m2x.ocl.engine"/>
     </capability>
     <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="0.1.1.202611191226-SNAPSHOT" type="Version"/>
+      <attribute name="bundle-version" value="0.1.1.202611240857-SNAPSHOT" type="Version"/>
       <attribute name="osgi.wiring.host" value="org.eclipse.fennec.m2x.ocl.engine"/>
     </capability>
     <capability namespace="org.eclipse.fennec.m2x">
@@ -268,10 +268,10 @@
       <attribute name="version" value="1.0.0" type="Version"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="size" value="265834" type="Long"/>
+      <attribute name="size" value="271039" type="Long"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
       <attribute name="url" value="org.eclipse.fennec.m2x.ocl.engine/org.eclipse.fennec.m2x.ocl.engine-0.1.1.jar"/>
-      <attribute name="osgi.content" value="B294133716AB9A4E99705A25B9E58340CEAD371495B9D4A6B1A377B07B28B8D8"/>
+      <attribute name="osgi.content" value="88CAE38308C930295FA43335B61F71B5A985B38820C1648FEEFADF9966441B4C"/>
     </capability>
     <capability namespace="osgi.service">
       <directive name="uses" value="org.eclipse.emf.ecore"/>
@@ -393,6 +393,10 @@
       <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.fennec.m2x.unit.compile)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
       <attribute name="osgi.wiring.package" value="org.eclipse.fennec.m2x.unit.compile"/>
     </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.10.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework"/>
+    </requirement>
     <requirement namespace="org.eclipse.fennec.m2x">
       <directive name="filter" value="(org.eclipse.fennec.m2x=ocl.parser)"/>
     </requirement>
@@ -421,6 +425,10 @@
       <directive name="effective" value="active"/>
       <directive name="resolution" value="optional"/>
       <directive name="cardinality" value="multiple"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=org.eclipse.fennec.m2x.ocl.engine.OclOperationProviderProvider)"/>
+      <directive name="effective" value="active"/>
     </requirement>
     <requirement namespace="osgi.service">
       <directive name="filter" value="(objectClass=org.eclipse.fennec.m2x.ocl.engine.internal.OclDelegateSupport)"/>

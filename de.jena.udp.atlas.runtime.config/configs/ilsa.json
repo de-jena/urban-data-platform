@@ -72,19 +72,24 @@
   /* The intersection configuration: one retained message per intersection, and the only flow
    * of the three that describes the provider rather than reporting a value.
    *
-   * THIS ONE WAITS FOR MORE THAN THE MODEL. Its mapping calls at(n) on a bbox, contributed by
-   * GeoJsonArrayOperations in de.jena.udp.atlas.ilsa. The OCL engine binds a provider
-   * dynamically (emf.m2x#431), so one that comes up late still reaches it - but an evaluation
-   * that runs before the bind resolves at() to nothing and leaves the admin location unset
-   * with no more than a FINE log line. A retained message is delivered when the client
-   * subscribes, so that one delivery is the only one there is: subscribing too early loses the
-   * location until an intersection republishes, which may be never.
+   * ITS MAPPING NEEDS MORE THAN THE MODEL, but not a second wait here. It calls at(n) on a
+   * bbox, contributed by GeoJsonArrayOperations in de.jena.udp.atlas.ilsa, and an evaluation
+   * that runs before that provider is registered resolves at() to nothing and leaves the admin
+   * location unset with no more than a FINE log line. That wait now sits on the engine:
+   * configs/ocl.json targets operationProvidersReady on DefaultOclEngine at the provider's
+   * name, so no OCL engine - and so no OclExpressionEvaluator - exists until the operations
+   * are there. DS allows ONE satisfying condition per configuration (OSGi cmpn 112.3.13), and
+   * with the operations waited for elsewhere this flow can spend its one slot on the model,
+   * like the other two.
    *
-   * DS allows ONE satisfying condition per configuration (OSGi cmpn 112.3.13) and this flow
-   * needs two waits, so MappingReadyCondition in de.jena.udp.atlas.ilsa takes both - the
-   * trafficlight model AND the operations - and publishes the result as the condition named
-   * below. That is why this flow, alone of the three, does not name a model nsURI here: the
-   * one it waits for is a reference in that class. */
+   * THE LISTENER IS ORDERED AGAINST THE EVALUATOR ELSEWHERE, and it has to be: a retained
+   * message is delivered when the client subscribes, so that one delivery is the only one
+   * there is, and subscribing before the OCL stack is up loses the location until an
+   * intersection republishes - which may be never. InstancePusher binds its ExpressionEvaluator
+   * optionally, so it cannot do that ordering by itself; configs/ocl.json points the pusher's
+   * own satisfying condition at ExpressionEvaluatorReadyCondition, and this listener holds a
+   * mandatory reference to the pusher. That gate is global - read the block there before
+   * changing it. */
   "MqttCloudEventListener~ilsa-configuration": {
     "name": "ilsa-configuration",
     "messaging.target": "(id=read)",
@@ -93,6 +98,6 @@
     "payload.eclass.uri": "http://jena.de/udp/trafficos/trafficlight/1.1.1#//TLConfiguration",
     "payload.format": "application/json",
     "payload.load.options": ["codec.typeKey=eClass"],
-    "osgi.ds.satisfying.condition.target": "(osgi.condition.id=de.jena.udp.atlas.ilsa.mapping.ready)"
+    "osgi.ds.satisfying.condition.target": "(osgi.condition.id=http://jena.de/udp/trafficos/trafficlight/1.1.1)"
   }
 }

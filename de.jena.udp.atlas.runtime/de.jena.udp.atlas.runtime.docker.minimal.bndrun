@@ -199,8 +199,6 @@
 	org.osgi.util.pushstream;version='[1.1.0,1.1.1)',\
 	org.owasp.encoder;version='[1.2.3,1.2.4)',\
 	org.postgresql.jdbc;version='[42.7.13,42.7.14)',\
-	slf4j.api;version='[2.0.17,2.0.18)',\
-	slf4j.simple;version='[2.0.17,2.0.18)',\
 	tools.jackson.jakarta.rs.jackson-jakarta-rs-base;version='[3.2.2,3.2.3)',\
 	tools.jackson.jakarta.rs.jackson-jakarta-rs-json-provider;version='[3.2.2,3.2.3)',\
 	tools.jackson.module.jackson-module-jakarta-xmlbind-annotations;version='[3.2.2,3.2.3)',\
@@ -255,4 +253,6 @@
 	com.fasterxml.jackson.core.jackson-annotations;version='[2.23.0,2.23.1)',\
 	org.apache.felix.scr;version='[2.3.0,2.3.1)',\
 	tools.jackson.core.jackson-core;version='[3.3.0,3.3.1)',\
-	tools.jackson.core.jackson-databind;version='[3.3.0,3.3.1)'
+	tools.jackson.core.jackson-databind;version='[3.3.0,3.3.1)',\
+	slf4j.api;version='[2.0.20,2.0.21)',\
+	slf4j.simple;version='[2.0.20,2.0.21)'

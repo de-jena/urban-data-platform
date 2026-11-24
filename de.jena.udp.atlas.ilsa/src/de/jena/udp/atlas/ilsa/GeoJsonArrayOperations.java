@@ -40,12 +40,21 @@ import de.jena.udp.model.geojson.GeojsonPackage;
  * to OCL {@code invalid} - which the mapping's evaluator turns into no value and a FINE log
  * line, invisible at the default level.
  * <p>
- * <b>Being registered is not the same as being waited for.</b> Since emf.m2x#431 the engine's
- * {@code operationProvider} reference is dynamic, so this provider reaches an engine that is
- * already running - but an evaluation in the gap before the bind still resolves {@code at} to
- * nothing. {@link MappingReadyCondition} is what holds the ILSA configuration flow back until
- * this service is there; the service property below is what it targets, so that the gate waits
- * for THESE operations and not for whichever provider a runtime happens to hold.
+ * <b>Being registered is not the same as being waited for, and {@code provider.name} is what
+ * makes the difference.</b> Since emf.m2x#431 the engine's {@code operationProvider} reference
+ * is dynamic and multiple, so this provider reaches an engine that is already running - but a
+ * multiple reference is satisfied by nothing at all, so the engine is published whether or not
+ * this provider has arrived, and an evaluation in that gap resolves {@code at} to nothing.
+ * <p>
+ * The engine's second reference is the gate. {@code OclOperationProviderProvider} collects the
+ * {@code provider.name} of every registered {@code OclOperationProvider} into its
+ * {@code operationProviderNames} service property and republishes it on every bind and unbind;
+ * {@code DefaultOclEngine} takes that service through {@code operationProvidersReady}, a
+ * mandatory static reference, and {@code configs/ocl.json} points that reference's target at
+ * the name below. So DefaultOclEngine - and with it OclExpressionEvaluator, which takes an
+ * OclEngine the same way - does not exist until THESE operations are registered. A provider
+ * that carries no {@code provider.name} is logged and ignored by that collector, which is why
+ * the property is not decoration.
  * <p>
  * Indices are 1-based, as everywhere in OCL. An index outside the array answers {@code null}
  * rather than throwing: a configuration whose {@code bbox} is absent or short should leave the
@@ -54,8 +63,17 @@ import de.jena.udp.model.geojson.GeojsonPackage;
  * @see GeoJsonValueConverter the other half of what the ILSA mappings need from GeoJSON
  */
 @Component(immediate = true, service = OclOperationProvider.class,
-		property = "ocl.operations=de.jena.udp.atlas.ilsa.geojson")
+		property = "provider.name=" + GeoJsonArrayOperations.PROVIDER_NAME)
 public class GeoJsonArrayOperations implements OclOperationProvider {
+
+	/**
+	 * The name this provider is waited for under - the value of its {@code provider.name}
+	 * service property, and what {@code configs/ocl.json} names in
+	 * {@code operationProvidersReady.target} on PID {@code DefaultOclEngine}. The two have to
+	 * stay in step; nothing checks that they do, and a target that names nothing keeps the
+	 * engine from ever activating.
+	 */
+	static final String PROVIDER_NAME = "de.jena.udp.atlas.ilsa.geojson";
 
 	@Override
 	public List<OclOperation> getOperations() {

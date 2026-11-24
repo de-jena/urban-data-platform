@@ -6,18 +6,68 @@
   /*
    * The OCL engine the Event Atlas mappings evaluate their expressions on.
    *
-   * ONE PROPERTY, AND ONLY BECAUSE OF THE ILSA LOCATION. ilsa-configuration-ce-mapping.xmi
-   * reads the admin location with self.data.geoJson.bbox.at(1|2), and `at` is no standard
-   * library operation: bbox is an Array1D, an EDataType over java.lang.Double[], which is one
-   * scalar to OCL. de.jena.udp.atlas.ilsa.GeoJsonArrayOperations contributes the operation as
-   * an OclOperationProvider, and this property is what makes the engine look at contributed
-   * operations at all - ocl.customOperationsEnabled defaults to false on DefaultOclEngine,
-   * and with it false `at` is unknown, so the whole expression evaluates to OCL `invalid`.
-   * OclExpressionEvaluator turns that into no value and a FINE log line, which at the default
-   * log level is nothing at all: no warning, no error, an empty admin/location.
+   * BOTH PROPERTIES ARE HERE BECAUSE OF THE ILSA LOCATION, and they do different halves of
+   * the same job. ilsa-configuration-ce-mapping.xmi reads the admin location with
+   * self.data.geoJson.bbox.at(1|2), and `at` is no standard library operation: bbox is an
+   * Array1D, an EDataType over java.lang.Double[], which is one scalar to OCL.
+   * de.jena.udp.atlas.ilsa.GeoJsonArrayOperations contributes the operation as an
+   * OclOperationProvider.
    *
+   * ocl.customOperationsEnabled IS WHETHER THE ENGINE LOOKS AT CONTRIBUTED OPERATIONS AT ALL.
+   * It defaults to false on DefaultOclEngine, and with it false `at` is unknown, so the whole
+   * expression evaluates to OCL `invalid`. OclExpressionEvaluator turns that into no value and
+   * a FINE log line, which at the default log level is nothing at all: no warning, no error,
+   * an empty admin/location.
+   *
+   * operationProvidersReady.target IS WHEN THE ENGINE APPEARS. The engine's operationProvider
+   * reference is dynamic and multiple (emf.m2x#431), and a multiple reference is satisfied by
+   * nothing at all - so without this the engine would be published before the provider was
+   * registered, and any evaluation in that gap resolves `at` to nothing, with the same silent
+   * empty location. OclOperationProviderProvider collects the provider.name of every
+   * registered provider into its operationProviderNames service property and republishes it on
+   * every bind and unbind; this filter is the target of operationProvidersReady, a mandatory
+   * static reference of DefaultOclEngine, so the engine - and with it OclExpressionEvaluator,
+   * which takes an OclEngine the same way - does not activate until the GeoJSON operations are
+   * there, and deactivates again if they go.
+   *
+   * THE NAME HAS TO STAY IN STEP with GeoJsonArrayOperations.PROVIDER_NAME, which is the
+   * provider.name that class registers under. Nothing checks that they agree: a filter that
+   * names a provider no bundle registers keeps DefaultOclEngine unsatisfied for good, and with
+   * it every OCL expression in every mapping, not only ILSA's.
    */
   "DefaultOclEngine": {
-    "ocl.customOperationsEnabled": true
+    "ocl.customOperationsEnabled": true,
+    "operationProvidersReady.target": "(operationProviderNames=de.jena.udp.atlas.ilsa.geojson)"
+  },
+
+  /*
+   * The third link, and the one that reaches the listeners.
+   *
+   * The two properties above order the OCL stack against itself: no engine before the
+   * operations, and so - since OclExpressionEvaluator takes an OclEngine as a mandatory static
+   * reference - no ExpressionEvaluator before them either. They do NOT order anything against
+   * the stack. InstancePusherImpl binds its ExpressionEvaluator as an OPTIONAL DYNAMIC
+   * reference, deliberately, because the event.atlas mapping bundle doubles as the metamodel
+   * carrier and has to resolve where no expression language is deployed. So without this the
+   * pusher is satisfied with no evaluator, every listener above it is satisfied too, and a
+   * payload that arrives in the gap is mapped with its expressions producing nothing - the
+   * same silent empty value, one level up from the engine.
+   *
+   * ExpressionEvaluatorReadyCondition in event.atlas is published while an ExpressionEvaluator
+   * is deployed, and every component carries one implicit osgi.ds.satisfying.condition
+   * reference (OSGi cmpn 112.3.13) that configuration can point anywhere. Pointing the
+   * pusher's at that condition holds back everything that pushes - these listeners, the DWD
+   * poller, event.atlas's own MQTT and REST adapters - until expressions can be evaluated.
+   *
+   * THIS IS A GLOBAL GATE, AND IT RUNS BACKWARDS TOO. A static reference whose bound service
+   * ceases to be a target service deactivates the component (112.5.9), so stopping
+   * de.jena.udp.atlas.ilsa takes down the operations, then the engine, then the evaluator,
+   * then this condition, then the pusher, then every adapter. The whole platform stops mapping
+   * because one contributed operation went away. That is the price of ordering it here rather
+   * than per flow; it is a deliberate trade, not an oversight. Delete this block to take the
+   * ordering back and accept the race.
+   */
+  "event.atlas.instance.pusher": {
+    "osgi.ds.satisfying.condition.target": "(osgi.condition.id=org.eclipse.fennec.event.atlas.mapping.expression.evaluator)"
   }
 }
