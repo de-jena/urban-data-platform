@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="Local" increment="1795514987554">
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="Local" increment="1795516828047">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="license" value="EPL 2.0;description=&quot;Except for 3rd party content and examples.&quot;;link=&quot;http://www.eclipse.org/legal/epl-2.0&quot;"/>
@@ -663,26 +663,26 @@
       <attribute name="documentation" value="https://github.com/eclipse-fennec/event.atlas"/>
       <attribute name="description" value="Declarative mapping of domain-specific EMF model instances onto Eclipse SensiNact digital-twin providers: the mapping metamodel, the mapping engine and the OSGi whiteboard registries for provider mappings and mapping profiles."/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="1.0.0.202611181343-SNAPSHOT" type="Version"/>
+      <attribute name="version" value="1.0.0.202611241040-SNAPSHOT" type="Version"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="io.cloudevents.model.ce,org.eclipse.emf.ecore,org.eclipse.fennec.event.atlas.model.mapping,org.eclipse.sensinact.core.model,org.eclipse.sensinact.core.twin"/>
       <attribute name="bundle-symbolic-name" value="org.eclipse.fennec.event.atlas.mapping"/>
-      <attribute name="bundle-version" value="1.0.0.202611181343-SNAPSHOT" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.202611241040-SNAPSHOT" type="Version"/>
       <attribute name="osgi.wiring.package" value="org.eclipse.fennec.event.atlas.mapping"/>
       <attribute name="version" value="1.0.0" type="Version"/>
       <attribute name="bnd.hashes" value="-1536591484,-1332041641,-1337383332,890913302,930495096,-1702967078,-332438216,1109635987,526633132,-2136222810,53889778,-2147309128,-1206582638,-1923478059" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="bundle-symbolic-name" value="org.eclipse.fennec.event.atlas.mapping"/>
-      <attribute name="bundle-version" value="1.0.0.202611181343-SNAPSHOT" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.202611241040-SNAPSHOT" type="Version"/>
       <attribute name="osgi.wiring.package" value="org.eclipse.fennec.event.atlas.mapping.converters"/>
       <attribute name="version" value="1.0.0" type="Version"/>
       <attribute name="bnd.hashes" value="1328673615,-1923478059" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="bundle-symbolic-name" value="org.eclipse.fennec.event.atlas.mapping"/>
-      <attribute name="bundle-version" value="1.0.0.202611181343-SNAPSHOT" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.202611241040-SNAPSHOT" type="Version"/>
       <attribute name="osgi.wiring.package" value="org.eclipse.fennec.event.atlas.mapping.functions"/>
       <attribute name="version" value="1.0.0" type="Version"/>
       <attribute name="bnd.hashes" value="1435080777,-1923478059" type="List&lt;Long&gt;"/>
@@ -690,7 +690,7 @@
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="org.eclipse.emf.common.util,org.eclipse.emf.ecore"/>
       <attribute name="bundle-symbolic-name" value="org.eclipse.fennec.event.atlas.mapping"/>
-      <attribute name="bundle-version" value="1.0.0.202611181343-SNAPSHOT" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.202611241040-SNAPSHOT" type="Version"/>
       <attribute name="osgi.wiring.package" value="org.eclipse.fennec.event.atlas.model.mapping"/>
       <attribute name="version" value="1.0.0" type="Version"/>
       <attribute name="bnd.hashes" value="-1834597437,682457759,-138501396,858645787,-545543158,-1771109032,2068635928,-1792757586,-1503291268,1425955268,-1218470984,-720834277,1322810029,-86979969,-1616839773,1658769702,1064279579,450881400,1360035654,-1917586790,-1271156553,153034988,1961820541,-2014719836,-693044445,1692480492,475502784,2092019833,562053987,-922122504,-1222641015,1670586941,-1923478059" type="List&lt;Long&gt;"/>
@@ -698,7 +698,7 @@
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="org.eclipse.emf.common.notify,org.eclipse.emf.common.util,org.eclipse.emf.ecore,org.eclipse.emf.ecore.impl,org.eclipse.fennec.event.atlas.model.mapping"/>
       <attribute name="bundle-symbolic-name" value="org.eclipse.fennec.event.atlas.mapping"/>
-      <attribute name="bundle-version" value="1.0.0.202611181343-SNAPSHOT" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.202611241040-SNAPSHOT" type="Version"/>
       <attribute name="osgi.wiring.package" value="org.eclipse.fennec.event.atlas.model.mapping.impl"/>
       <attribute name="version" value="1.0.0" type="Version"/>
       <attribute name="bnd.hashes" value="-1968471933,-901519009,-524410068,1901245915,578121034,1500080984,1355796668,486768622,-2107779592,1455931867,-474729875,947669311,-1446557597,1195943014,-1542459685,1364345272,1253458566,-687346726,-652651657,833593644,2055917885,-775190557,-399494100,-2122313984,1931846201,2105394463,389853219,-1969217224,1152422397,-1923478059" type="List&lt;Long&gt;"/>
@@ -706,17 +706,17 @@
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="org.eclipse.emf.common.notify,org.eclipse.emf.common.notify.impl,org.eclipse.emf.common.util,org.eclipse.emf.ecore,org.eclipse.emf.ecore.resource,org.eclipse.emf.ecore.resource.impl,org.eclipse.emf.ecore.util,org.eclipse.emf.ecore.xmi.impl,org.eclipse.fennec.event.atlas.model.mapping"/>
       <attribute name="bundle-symbolic-name" value="org.eclipse.fennec.event.atlas.mapping"/>
-      <attribute name="bundle-version" value="1.0.0.202611181343-SNAPSHOT" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.202611241040-SNAPSHOT" type="Version"/>
       <attribute name="osgi.wiring.package" value="org.eclipse.fennec.event.atlas.model.mapping.util"/>
       <attribute name="version" value="1.0.0" type="Version"/>
       <attribute name="bnd.hashes" value="-639610103,-264393266,596136732,-71460478,-1923478059" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="1.0.0.202611181343-SNAPSHOT" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.202611241040-SNAPSHOT" type="Version"/>
       <attribute name="osgi.wiring.bundle" value="org.eclipse.fennec.event.atlas.mapping"/>
     </capability>
     <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="1.0.0.202611181343-SNAPSHOT" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.202611241040-SNAPSHOT" type="Version"/>
       <attribute name="osgi.wiring.host" value="org.eclipse.fennec.event.atlas.mapping"/>
     </capability>
     <capability namespace="org.eclipse.emf.ecore.generated_package">
@@ -729,10 +729,10 @@
       <attribute name="genModelSourceLocations" value="model/event-atlas-mapping.genmodel,org.eclipse.fennec.event.atlas.mapping/model/event-atlas-mapping.genmodel" type="List&lt;String&gt;"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="size" value="514379" type="Long"/>
+      <attribute name="size" value="518557" type="Long"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
       <attribute name="url" value="org.eclipse.fennec.event.atlas.mapping/org.eclipse.fennec.event.atlas.mapping-1.0.0.jar"/>
-      <attribute name="osgi.content" value="4AED53A78C746CE782B7023EB07A38893B823709603FBE1D9CCF43C50A9046C5"/>
+      <attribute name="osgi.content" value="BC8C55447FE19ECB67828F8E88D7A0B591D6BD11715C3D7D1D593612E54BE599"/>
     </capability>
     <capability namespace="osgi.service">
       <directive name="uses" value="org.eclipse.fennec.emf.osgi.eobject.registry,org.eclipse.fennec.event.atlas.mapping"/>
@@ -763,6 +763,10 @@
       <attribute name="objectClass" value="org.eclipse.fennec.event.atlas.mapping.converters.ValueConverter" type="List&lt;String&gt;"/>
     </capability>
     <capability namespace="osgi.service">
+      <directive name="uses" value="org.osgi.service.condition"/>
+      <attribute name="objectClass" value="org.osgi.service.condition.Condition" type="List&lt;String&gt;"/>
+    </capability>
+    <capability namespace="osgi.service">
       <directive name="uses" value="org.eclipse.emf.ecore,org.eclipse.fennec.event.atlas.model.mapping"/>
       <attribute name="objectClass" value="org.eclipse.fennec.emf.osgi.configurator.EPackageConfigurator" type="List&lt;String&gt;"/>
     </capability>
@@ -777,10 +781,6 @@
     <capability namespace="osgi.service">
       <directive name="uses" value="org.eclipse.emf.ecore.resource,org.eclipse.fennec.event.atlas.model.mapping.util"/>
       <attribute name="objectClass" value="org.eclipse.fennec.event.atlas.model.mapping.util.MappingResourceFactoryImpl, org.eclipse.emf.ecore.resource.Resource$Factory" type="List&lt;String&gt;"/>
-    </capability>
-    <capability namespace="osgi.service">
-      <directive name="uses" value="org.osgi.service.condition"/>
-      <attribute name="objectClass" value="org.osgi.service.condition.Condition" type="List&lt;String&gt;"/>
     </capability>
     <requirement namespace="osgi.wiring.package">
       <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.sensinact.core.command)(version&gt;=0.2.0)(!(version&gt;=1.0.0)))"/>
@@ -883,43 +883,43 @@
       <attribute name="osgi.wiring.package" value="java.util.stream"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.emf.common.notify)(version&gt;=2.44.0)(!(version&gt;=3.0.0)))"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.emf.common.notify)(version&gt;=2.46.0)(!(version&gt;=3.0.0)))"/>
       <attribute name="osgi.wiring.package" value="org.eclipse.emf.common.notify"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.emf.common.notify.impl)(version&gt;=2.44.0)(!(version&gt;=3.0.0)))"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.emf.common.notify.impl)(version&gt;=2.46.0)(!(version&gt;=3.0.0)))"/>
       <attribute name="osgi.wiring.package" value="org.eclipse.emf.common.notify.impl"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.emf.common.util)(version&gt;=2.44.0)(!(version&gt;=3.0.0)))"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.emf.common.util)(version&gt;=2.46.0)(!(version&gt;=3.0.0)))"/>
       <attribute name="osgi.wiring.package" value="org.eclipse.emf.common.util"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.emf.ecore)(version&gt;=2.41.0)(!(version&gt;=3.0.0)))"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.emf.ecore)(version&gt;=2.43.0)(!(version&gt;=3.0.0)))"/>
       <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.emf.ecore.impl)(version&gt;=2.41.0)(!(version&gt;=3.0.0)))"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.emf.ecore.impl)(version&gt;=2.43.0)(!(version&gt;=3.0.0)))"/>
       <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.impl"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.emf.ecore.plugin)(version&gt;=2.41.0)(!(version&gt;=3.0.0)))"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.emf.ecore.plugin)(version&gt;=2.43.0)(!(version&gt;=3.0.0)))"/>
       <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.plugin"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.emf.ecore.resource)(version&gt;=2.41.0)(!(version&gt;=3.0.0)))"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.emf.ecore.resource)(version&gt;=2.43.0)(!(version&gt;=3.0.0)))"/>
       <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.resource"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.emf.ecore.resource.impl)(version&gt;=2.41.0)(!(version&gt;=3.0.0)))"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.emf.ecore.resource.impl)(version&gt;=2.43.0)(!(version&gt;=3.0.0)))"/>
       <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.resource.impl"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.emf.ecore.util)(version&gt;=2.41.0)(!(version&gt;=3.0.0)))"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.emf.ecore.util)(version&gt;=2.43.0)(!(version&gt;=3.0.0)))"/>
       <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.util"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.emf.ecore.xmi.impl)(version&gt;=2.39.0)(!(version&gt;=3.0.0)))"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.emf.ecore.xmi.impl)(version&gt;=2.41.0)(!(version&gt;=3.0.0)))"/>
       <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.xmi.impl"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
@@ -970,6 +970,10 @@
       <directive name="filter" value="(objectClass=org.eclipse.fennec.event.atlas.mapping.ChangeRuleFilter)"/>
       <directive name="effective" value="active"/>
       <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=org.eclipse.fennec.event.atlas.mapping.ExpressionEvaluator)"/>
+      <directive name="effective" value="active"/>
     </requirement>
     <requirement namespace="osgi.service">
       <directive name="filter" value="(objectClass=org.eclipse.fennec.event.atlas.mapping.ExpressionEvaluator)"/>

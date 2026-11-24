@@ -92,8 +92,20 @@ org.objenesis:objenesis:3.3
 # The UDP atlas runtime (de.jena.udp.atlas.runtime) is built on the Event Atlas bundles and
 # their closure as pinned by event.atlas' eventatlas.runtime_docker.bndrun. Snapshots come from
 # central.sonatype.com (second snapshotUrl of this repository).
-org.eclipse.fennec.event.atlas:org.eclipse.fennec.event.atlas.mapping:1.0.0-SNAPSHOT
-org.eclipse.fennec.event.atlas:org.eclipse.fennec.event.atlas.mapping.docker.config:1.0.0-SNAPSHOT
+#
+# org.eclipse.fennec.event.atlas.mapping is DELIBERATELY NOT LISTED HERE. We run a hand-built
+# jar of it from cnf/local (see cnf/local/README.md) carrying changes that are not upstream yet.
+# Both coordinates are the same bsn at 1.0.0, every -buildpath asks for version=latest and every
+# bndrun for [1.0.0,1.0.1), so whichever qualifier sorts higher wins - and upstream's is the
+# wall-clock time of its last CI publish, which overtakes our jar within hours. That is not a
+# resolution we can keep stable, so the upstream snapshot is kept out of the candidate set
+# entirely. Put the line back the day the local jar goes away, not before.
+#
+# org.eclipse.fennec.event.atlas.mapping.docker.config is left out for the same reason. Ours adds
+# the $[prop:...] fallbacks that let a workspace launch point EVENTATLAS_MAPPING_DIR and
+# EVENTATLAS_PROFILE_DIR at seed folders in the source tree with -D, and let an Atlas-less launch
+# set LAZY mode and switch the drift watcher off. Upstream has none of them, so if it won the
+# local bndrun would silently read /opt/eventatlas/runtime and find no mappings at all.
 org.eclipse.fennec.event.atlas:org.eclipse.fennec.event.atlas.deployment:1.0.0-SNAPSHOT
 org.eclipse.fennec.event.atlas:org.eclipse.fennec.event.atlas.southbound.common:1.0.0-SNAPSHOT
 org.eclipse.fennec.event.atlas:org.eclipse.fennec.event.atlas.mqtt.southbound.adapter:1.0.0-SNAPSHOT
@@ -177,7 +189,13 @@ org.eclipse.fennec.m2x:org.eclipse.fennec.m2x.unit.osgi:0.1.1-SNAPSHOT
 org.eclipse.fennec.m2x:org.eclipse.fennec.m2x.ocl.model:0.1.1-SNAPSHOT
 org.eclipse.fennec.m2x:org.eclipse.fennec.m2x.ocl.api:0.1.1-SNAPSHOT
 org.eclipse.fennec.m2x:org.eclipse.fennec.m2x.ocl.parser:0.1.1-SNAPSHOT
-org.eclipse.fennec.m2x:org.eclipse.fennec.m2x.ocl.engine:0.1.1-SNAPSHOT
+#
+# org.eclipse.fennec.m2x.ocl.engine is left out for the same reason as event.atlas.mapping
+# above: cnf/local carries a hand-built one with the OclOperationProviderProvider gate, and the
+# published 0.1.1 snapshot would overtake it on qualifier the next time m2x publishes. Here the
+# failure would be silent - an engine without that reference ignores operationProvidersReady.target
+# in configs/ocl.json, activates before GeoJsonArrayOperations and leaves the ILSA location
+# unset again, with nothing in the log to say so. Put the line back when the gate is published.
 org.eclipse.fennec.m2x:org.eclipse.fennec.m2x.qvt.model:0.1.1-SNAPSHOT
 org.eclipse.fennec.m2x:org.eclipse.fennec.m2x.qvtd.model:0.1.1-SNAPSHOT
 org.eclipse.fennec.m2x:org.eclipse.fennec.m2x.qvtd.api:0.1.1-SNAPSHOT
