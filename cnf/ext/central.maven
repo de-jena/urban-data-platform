@@ -189,13 +189,7 @@ org.eclipse.fennec.m2x:org.eclipse.fennec.m2x.unit.osgi:0.1.1-SNAPSHOT
 org.eclipse.fennec.m2x:org.eclipse.fennec.m2x.ocl.model:0.1.1-SNAPSHOT
 org.eclipse.fennec.m2x:org.eclipse.fennec.m2x.ocl.api:0.1.1-SNAPSHOT
 org.eclipse.fennec.m2x:org.eclipse.fennec.m2x.ocl.parser:0.1.1-SNAPSHOT
-#
-# org.eclipse.fennec.m2x.ocl.engine is left out for the same reason as event.atlas.mapping
-# above: cnf/local carries a hand-built one with the OclOperationProviderProvider gate, and the
-# published 0.1.1 snapshot would overtake it on qualifier the next time m2x publishes. Here the
-# failure would be silent - an engine without that reference ignores operationProvidersReady.target
-# in configs/ocl.json, activates before GeoJsonArrayOperations and leaves the ILSA location
-# unset again, with nothing in the log to say so. Put the line back when the gate is published.
+org.eclipse.fennec.m2x:org.eclipse.fennec.m2x.ocl.engine:0.1.1-SNAPSHOT
 org.eclipse.fennec.m2x:org.eclipse.fennec.m2x.qvt.model:0.1.1-SNAPSHOT
 org.eclipse.fennec.m2x:org.eclipse.fennec.m2x.qvtd.model:0.1.1-SNAPSHOT
 org.eclipse.fennec.m2x:org.eclipse.fennec.m2x.qvtd.api:0.1.1-SNAPSHOT
